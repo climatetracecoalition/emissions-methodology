@@ -1,0 +1,39 @@
+## Permissions and use
+
+All Climate TRACE data is freely available under the
+[Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/),
+unless otherwise noted below.
+
+## Geographic boundaries and names
+
+*Applies to the `iso3_country` data attribute.*
+
+The depiction and use of boundaries, geographic names and related data shown on maps and included
+in lists, tables, documents, and databases on Climate TRACE are generated from the
+[Global Administrative Areas (GADM)](https://gadm.org/) project (Version 4.1, released 16 July 2022)
+along with their corresponding ISO3 codes, with the following adaptations:
+
+- HKG (China, Hong Kong Special Administrative Region) and MAC (China, Macao Special Administrative
+  Region) are reported at GADM level 0 (country/national).
+- Kosovo has been assigned the ISO3 code `XKX`.
+- XCA (Caspian Sea) has been removed from GADM level 0 and the area assigned to countries based on
+  the extent of their territorial waters.
+- XAD (Akrotiri and Dhekelia), XCL (Clipperton Island), XPI (Paracel Islands) and XSP (Spratly
+  Islands) are not included in the Climate TRACE dataset.
+- ZNC name changed to "Turkish Republic of Northern Cyprus" at GADM level 0.
+- The borders between India, Pakistan and China have been assigned to these countries based on GADM
+  codes Z01 to Z09.
+
+The above usage is not warranted to be error free and does not imply the expression of any opinion
+whatsoever on the part of the Climate TRACE Coalition and its partners concerning the legal status
+of any country, area or territory or of its authorities, or concerning the delimitation of its
+borders.
+
+## Disclaimer
+
+The emissions provided are our current best estimates, and we are committed to continually
+increasing the accuracy of the models on all levels. Please review our terms of use and the
+relevant sector methodology documentation before using the data.
+
+If you identify an error or would like to participate in our data validation process, please
+[contact us](mailto:coalition@climatetrace.org).
