@@ -15,11 +15,11 @@ and the API. Each links to the methodology that documents it.
 
 | Subsector | Description | Organization |
 |---|---|---|
-| [`waste_biological-treatment-of-solid-waste-and-biogenic`](«methodology.pdf») | Composting and anaerobic digestion of organic waste | «organization» |
-| [`waste_domestic-wastewater-treatment-and-discharge`](«methodology.pdf») | Treatment and discharge of household sewage | «organization» |
-| [`waste_incineration-and-open-burning-of-waste`](«methodology.pdf») | Waste burned in facilities or in the open | «organization» |
-| [`waste_industrial-wastewater-treatment-and-discharge`](«methodology.pdf») | Treatment and discharge of industrial effluent | «organization» |
-| [`waste_solid-waste-disposal`](«methodology.pdf») | Methane from landfills and dumps | «organization» |
+| [`waste_biological-treatment-of-solid-waste-and-biogenic`](«methodology.pdf») | Composting and anaerobic digestion of organic waste | WattTime |
+| [`waste_domestic-wastewater-treatment-and-discharge`](«methodology.pdf») | Treatment and discharge of household sewage | The Johns Hopkins University Applied Physics Laboratory |
+| [`waste_incineration-and-open-burning-of-waste`](«methodology.pdf») | Waste burned in facilities or in the open | WattTime |
+| [`waste_industrial-wastewater-treatment-and-discharge`](«methodology.pdf») | Treatment and discharge of industrial effluent | The Johns Hopkins University Applied Physics Laboratory |
+| [`waste_solid-waste-disposal`](«methodology.pdf») | Methane from landfills and dumps | RMI |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
 [data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).

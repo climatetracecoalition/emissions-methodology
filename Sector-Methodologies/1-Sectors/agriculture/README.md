@@ -19,18 +19,18 @@ just one link — that's the case for the two cattle-operation subsectors below.
 
 | Subsector | Description | Methodology | Organization |
 |---|---|---|---|
-| `crop-residues` | Burning and decomposition of plant material left after harvest | [View methodology](«methodology.pdf») | «organization» |
-| `cropland-fires` | Fires set or occurring on agricultural land | [View methodology](«methodology.pdf») | «organization» |
-| `enteric-fermentation-cattle-operation` | Methane from cattle digestion in feedlots and managed operations | [View Asset-level methodology](./cattle-operations-asset-level/README.md) · [View Country-level methodology](./cattle-operations-country-level/README.md) | «organization» |
-| `enteric-fermentation-cattle-pasture` | Methane from cattle digestion on pasture and rangeland | [View methodology](./cattle-enteric-fermentation-manure-pasture/README.md) | «organization» |
-| `enteric-fermentation-other` | Methane from digestion in sheep, goats, buffalo and other livestock | [View methodology](«methodology.pdf») | Harvard University |
-| `manure-applied-to-soils` | Emissions from manure spread on fields as fertilizer | [View methodology](«methodology.pdf») | «organization» |
-| `manure-left-on-pasture-cattle` | Emissions from manure deposited directly by grazing cattle | [View methodology](./cattle-enteric-fermentation-manure-pasture/README.md) | «organization» |
-| `manure-management-cattle-operation` | Emissions from stored and treated manure at cattle operations | [View Asset-level methodology](./cattle-operations-asset-level/README.md) · [View Country-level methodology](./cattle-operations-country-level/README.md) | «organization» |
-| `manure-management-other` | Emissions from stored and treated manure for other livestock | [View methodology](«methodology.pdf») | «organization» |
-| `other-agricultural-soil-emissions` | Remaining nitrous oxide emissions from managed soils | [View methodology](«methodology.pdf») | Michigan State University |
+| `crop-residues` | Burning and decomposition of plant material left after harvest | [View methodology](«methodology.pdf») | Michigan State University, Dept. of Earth and Environmental Sciences |
+| `cropland-fires` | Fires set or occurring on agricultural land | [View methodology](./cropland-fires/README.md) | Michigan State University, Dept. of Earth and Environmental Sciences |
+| `enteric-fermentation-cattle-operation` | Methane from cattle digestion in feedlots and managed operations | [View Asset-level methodology](./cattle-operations-asset-level/README.md) · [View Country-level methodology](./cattle-operations-country-level/README.md) | WattTime; Earth Genome; Remote Sensing Lab at Saint Louis University |
+| `enteric-fermentation-cattle-pasture` | Methane from cattle digestion on pasture and rangeland | [View methodology](./cattle-enteric-fermentation-manure-pasture/README.md) | Remote Sensing Lab at Saint Louis University; WattTime |
+| `enteric-fermentation-other` | Methane from digestion in sheep, goats, buffalo and other livestock | [View methodology](«methodology.pdf») | WattTime |
+| `manure-applied-to-soils` | Emissions from manure spread on fields as fertilizer | [View methodology](«methodology.pdf») | Michigan State University, Dept. of Earth and Environmental Sciences |
+| `manure-left-on-pasture-cattle` | Emissions from manure deposited directly by grazing cattle | [View methodology](./cattle-enteric-fermentation-manure-pasture/README.md) | Remote Sensing Lab at Saint Louis University; WattTime |
+| `manure-management-cattle-operation` | Emissions from stored and treated manure at cattle operations | [View Asset-level methodology](./cattle-operations-asset-level/README.md) · [View Country-level methodology](./cattle-operations-country-level/README.md) | WattTime; Earth Genome; Remote Sensing Lab at Saint Louis University |
+| `manure-management-other` | Emissions from stored and treated manure for other livestock | [View methodology](«methodology.pdf») | WattTime |
+| `other-agricultural-soil-emissions` | Remaining nitrous oxide emissions from managed soils | [View methodology](«methodology.pdf») | WattTime |
 | `rice-cultivation` | Methane from flooded rice paddies | [View methodology](«methodology.pdf») | Paddy Watch / UMT |
-| `synthetic-fertilizer-application` | Nitrous oxide from manufactured fertilizer applied to cropland | [View methodology](«methodology.pdf») | Michigan State University |
+| `synthetic-fertilizer-application` | Nitrous oxide from manufactured fertilizer applied to cropland | [View methodology](«methodology.pdf») | Michigan State University, Dept. of Earth and Environmental Sciences |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
 [data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).

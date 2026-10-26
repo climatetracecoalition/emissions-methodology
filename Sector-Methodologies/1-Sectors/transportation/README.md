@@ -16,13 +16,13 @@ and the API. Each links to the methodology that documents it.
 | Subsector | Description | Organization |
 |---|---|---|
 | [`transportation_domestic-aviation`](«methodology.pdf») | Flights beginning and ending within the same country | WattTime |
-| [`transportation_domestic-shipping`](«methodology.pdf») | Vessel movements within a single country's waters | «organization» |
+| [`transportation_domestic-shipping`](«methodology.pdf») | Vessel movements within a single country's waters | OceanMind; Global Fishing Watch |
 | [`transportation_international-aviation`](«methodology.pdf») | Flights between countries | WattTime |
-| [`transportation_international-shipping`](«methodology.pdf») | Vessel movements between countries | «organization» |
-| [`transportation_non-broadcasting-vessels`](«methodology.pdf») | Ships not transmitting AIS transponder data, estimated by other means | «organization» |
-| [`transportation_other-transport`](«methodology.pdf») | Remaining transport not covered by the categories above | «organization» |
-| [`transportation_railways`](«methodology.pdf») | Freight and passenger rail | «organization» |
-| [`transportation_road-transportation`](«methodology.pdf») | Cars, trucks, buses and motorcycles | «organization» |
+| [`transportation_international-shipping`](«methodology.pdf») | Vessel movements between countries | OceanMind; Global Fishing Watch |
+| [`transportation_non-broadcasting-vessels`](«methodology.pdf») | Ships not transmitting AIS transponder data, estimated by other means | Global Fishing Watch |
+| [`transportation_other-transport`](«methodology.pdf») | Remaining transport not covered by the categories above | WattTime |
+| [`transportation_railways`](«methodology.pdf») | Freight and passenger rail | WattTime |
+| [`transportation_road-transportation`](«methodology.pdf») | Cars, trucks, buses and motorcycles | The Johns Hopkins University Applied Physics Laboratory |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
 [data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).

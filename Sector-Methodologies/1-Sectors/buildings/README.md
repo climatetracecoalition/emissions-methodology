@@ -15,9 +15,9 @@ and the API. Each links to the methodology that documents it.
 
 | Subsector | Description | Organization |
 |---|---|---|
-| [`buildings_non-residential-onsite-fuel-usage`](«methodology.pdf») | Fuel burned on site in commercial, institutional and public buildings | Duke University |
-| [`buildings_other-onsite-fuel-usage`](«methodology.pdf») | On-site fuel use in buildings not classified as residential or commercial | Duke University |
-| [`buildings_residential-onsite-fuel-usage`](«methodology.pdf») | Fuel burned on site in homes for heating, hot water and cooking | Duke University |
+| [`buildings_non-residential-onsite-fuel-usage`](«methodology.pdf») | Fuel burned on site in commercial, institutional and public buildings | Duke University, Nicholas Institute for Energy, Environment & Sustainability and Dept. of Electrical & Computer Engineering; University of Missouri, Dept. of Electrical Engineering and Computer Science |
+| [`buildings_other-onsite-fuel-usage`](«methodology.pdf») | On-site fuel use in buildings not classified as residential or commercial | WattTime |
+| [`buildings_residential-onsite-fuel-usage`](«methodology.pdf») | Fuel burned on site in homes for heating, hot water and cooking | Duke University, Nicholas Institute for Energy, Environment & Sustainability and Dept. of Electrical & Computer Engineering; University of Missouri, Dept. of Electrical Engineering and Computer Science |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
 [data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).

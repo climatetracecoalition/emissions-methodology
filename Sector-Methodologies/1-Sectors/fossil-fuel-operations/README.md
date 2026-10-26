@@ -15,12 +15,12 @@ and the API. Each links to the methodology that documents it.
 
 | Subsector | Description | Organization |
 |---|---|---|
-| [`fossil-fuel-operations_coal-mining`](«methodology.pdf») | Methane released from underground and surface coal mines | «organization» |
+| [`fossil-fuel-operations_coal-mining`](«methodology.pdf») | Methane released from underground and surface coal mines | WattTime; Global Energy Monitor |
 | [`fossil-fuel-operations_oil-and-gas-production`](«methodology.pdf») | Emissions and leaks from extracting oil and gas at the wellhead | RMI |
 | [`fossil-fuel-operations_oil-and-gas-refining`](«methodology.pdf») | Emissions from processing crude oil into finished products | RMI |
 | [`fossil-fuel-operations_oil-and-gas-transport`](«methodology.pdf») | Emissions and leaks from pipelines, tankers and storage | RMI |
-| [`fossil-fuel-operations_other-fossil-fuel-operations`](«methodology.pdf») | Remaining fossil fuel activity not covered by the categories above | «organization» |
-| [`fossil-fuel-operations_other-solid-fuels`](«methodology.pdf») | Production and handling of solid fuels other than coal | «organization» |
+| [`fossil-fuel-operations_other-fossil-fuel-operations`](«methodology.pdf») | Remaining fossil fuel activity not covered by the categories above | WattTime |
+| [`fossil-fuel-operations_other-solid-fuels`](«methodology.pdf») | Production and handling of solid fuels other than coal | WattTime |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
 [data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).
