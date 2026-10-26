@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
+<img src="figures/logo.png" width="247" />
 
 ### Transportation sector: Emissions From Non Broadcasting Vessels
 
@@ -22,7 +22,7 @@ Furthermore, in November 2025, the Climate TRACE coalition introduced emissions 
 
 The following section describes the datasets and methodology used to estimate GHG emissions from the shipping industry. The methodology used in this work is presented in more detail in GFW and emLab ([<span class="underline">2026</span>](https://emlab-ucsb.github.io/ocean-ghg/)). The methodology is presented in two parts (and visualized in Figure 1): 1. the AIS-based emissions model and 2. the “dark” vessels emissions model which uses Sentinel-1 (S1) Synthetic Aperture Radar (SAR) imagery to identify these vessels. While the focus of this methodology is to estimate emissions from non-broadcasting vessels, doing so requires three main steps: 1) modeling emissions from AIS-broadcasting vessels, 2) classifying S1 detections as broadcasting or non-broadcasting, and 3) attributing emissions to the non-broadcasting segment based on the broadcasting one. Thus, in this document we present the methodology for modeling emissions from both AIS-broadcasting and non-broadcasting vessels, along with the results for each.
 
-<img src="figures/figure1.png" style="width:7.18167in;height:4.08244in" />
+<img src="figures/figure1.png" width="689" />
 
 **Figure 1.** GFW framework for estimating emissions using the AIS-based emissions model and the non-broadcasting (dark vessel) emissions model.
 
@@ -62,7 +62,7 @@ The dark vessel model uses synthetic aperture radar (SAR) data to estimate non-b
 
 To estimate emissions from the dark fleet, we spatiotemporally extrapolated our AIS-based emissions estimates to the dark fleet based on spatiotemporal vessel detections from S1. For every S1 detection, GFW has determined whether or not the vessel is matched to an AIS vessel that was broadcasting at the same location and time, allowing us to determine the number of broadcasting and non-broadcasting (i.e., dark) vessels in a given location and time. In short, if an S1 vessel detection is matched to an AIS signal, it is classified as a broadcasting vessel. If it cannot be matched to an AIS signal, then it is considered a non-broadcasting, or dark, vessel. We are also able to make this extrapolation disaggregated by vessel type and size, since the GFW S1 model can determine if each dark fleet detection is a fishing or non-fishing vessel, and can also estimate the length of the detected vessel.
 
-<img src="figures/figure2.png" style="width:6.5in;height:4.73611in" />
+<img src="figures/figure2.png" width="624" />
 
 **Figure 2.** Example of SAR scenes showing vessels as bright returns against smoother, darker water, in both open ocean and near land and port infrastructure. Adapted from Chang et al. (2019).
 
@@ -88,7 +88,7 @@ As an example, we can look at a hypothetical 1x1 degree pixel, in a hypothetical
 
 Next, we consider non-fishing vessels (Figure 3, right panel). Here we can see that S1 had 15 detections that we were able to match to AIS-broadcasting vessels, and 5 detections which were unmatched (e.g., these are from non-broadcasting vessels). Therefore, the ratio of dark-to-broadcasting vessels is 5/15 = 0.33, for every \~3 AIS-matched detections, there will be \~1 non-broadcasting vessel. For this pixel, month, size bin, we would therefore take our AIS-broadcasting emissions and multiply it by 0.33 to obtain our non-broadcasting emissions estimate. If our observed AIS-broadcasting emissions were 45 metric tonnes of *CO<sub>2</sub>* for non-fishing vessels, our non-broadcasting emissions would be 45\*0.33 = 15 metric tonnes of *CO<sub>2</sub>*. This calculation is done for each of the nine pollutants.
 
-<img src="figures/figure3.png" style="width:6.5in;height:2.86111in" />
+<img src="figures/figure3.png" width="624" />
 
 **Figure 3:** Hypothetical example showing the Sentinel-1 detections in a given 1x1 degree pixel, month, and for a vessel size bin, disaggregated by vessel type (fishing or non-fishing). For fishing vessels (left image), we observe 2 matched detections, 8 unmatched detections, and therefore have a dark-to-broadcasting ratio of 8/2=4. For nonfishing vessels (right image), we observe 15 matched detections, 5 unmatched detections, and therefore have a dark-to-broadcasting ratio of 5/15=0.33.
 
@@ -108,7 +108,7 @@ Detailed results are presented in the GitHub [<span class="underline">notebook</
 
 To validate the model used to estimate emissions from AIS-broadcasting vessels, we used the CO<sub>2</sub> emissions data from maritime transport provided by the European Maritime Safety Agency (EMSA, [<span class="underline">2025</span>](https://data.europa.eu/data/datasets/co2-emissions-data?locale=en)), which is part of the monitoring, reporting, and verification program of carbon emissions from maritime transport, set by the [<span class="underline">Regulation (EU) 2015/757</span>](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02015R0757-20161216). Vessels with certain characteristics and certain trips made by such vessels operating in the sea ports of the European Economic Area (EEA), must report their emissions on an annual basis. Our model aligned well with the voyage-level EU validation data, achieving an R<sup>2</sup> of 0.84 (Figure 4). Validation results from the EU data are presented in more detail in the GitHub notebook in [<span class="underline">this section</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/ais_model.html#validation-results). We also validated our model against a registered dataset of vessels' main engine fuel consumption, measured during sea trials over a 24 hour period, on a sample of 15,679 vessels, achieving an R<sup>2</sup> of 0.85. Details on this validation are presented in a companion paper currently under peer review.
 
-<img src="figures/figure4.png" style="width:6.5in;height:4.06944in" />
+<img src="figures/figure4.png" width="624" />
 
 **Figure 4.** Comparison of annual vessel-level CO2 emissions estimated using our AIS-based model with published emissions from the EU MRV database (EMSA, 2025). The sample includes 27,657 observations from yearly aggregated vessel trips where hours at sea differ by no more than 15% between our data and the MRV dataset. The dashed line represents the 1:1 line.
 
@@ -122,7 +122,7 @@ The ratio approach has structural limits: it assumes broadcasting vessels repres
 
 First, we look at the total global number of active vessels that are detected broadcasting AIS for which we estimate emissions, per year from 2015-2025 (corresponding to GitHub notebook [<span class="underline">figure 1.10</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/ais_model.html#fig-global-annual-vessels) and [<span class="underline">table 1.7</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/ais_model.html#tbl-global-annual-vessels)).
 
-<img src="figures/figure5.png" style="width:4.83854in;height:3.85847in" />
+<img src="figures/figure5.png" width="464" />
 
 **Figure 5.** Total number of AIS-broadcasting vessels, by year, for which we estimate emissions.
 
@@ -162,7 +162,7 @@ Total annual global emissions for each pollutant over time for all detected vess
 | 2024     | 341,609,976 | 4,275,709 | 527,078   | 3,870   | 216,508 | 16,594  | 162,514  | 149,521    | 201,426    |
 | 2025     | 397,161,771 | 5,082,072 | 612,987   | 4,601   | 256,374 | 19,361  | 191,915  | 176,578    | 240,632    |
 
-<img src="figures/figure6.png" style="width:5.63672in;height:7.51563in" />
+<img src="figures/figure6.png" width="541" />
 
 **Figure 6.** Summary of total global annual emissions over time, by pollutant and fleet. All emissions units are in metric tonnes, disaggregated by the AIS-broadcasting fleet and the dark fleet as detected by S1.
 
@@ -172,7 +172,7 @@ The total CO<sub>2</sub> emissions estimate for 2025 is 1.6 billion metric tonne
 
 Figure 7 shows spatial maps showing the CO<sub>2</sub> emissions globally by the AIS-broadcasting fleet and by the dark fleet. For each 1x1 degree pixel (the spatial resolution of the dark fleet model), we aggregate emissions separately for each pollutant for 2025. Global maps for all pollutants estimated by GFW can be found [<span class="underline">here</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/dark_fleet_model.html#spatial-maps-of-emissions).
 
-<img src="figures/figure7.png" style="width:5.29861in;height:5.29861in" />
+<img src="figures/figure7.png" width="509" />
 
 **Figure 7.** Map of 2025 CO<sub>2</sub> emissions, aggregated across all vessel classes, at 1x1 degree spatial resolution, disaggregated by the dark fleet and AIS-broadcasting fleet.
 

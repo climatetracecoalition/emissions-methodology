@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" width="266" />
 
 ### Agriculture sector: Manure Applied to Soil
 
@@ -122,7 +122,7 @@ Projected national changes between 2023 and 2026 were generally small in absolut
 
 Crop-level emissions were more concentrated than national emissions. In 2023, maize was the largest crop contributor, accounting for 21.5% of global manure-applied-to-soils N₂O emissions, followed by wheat (18.1%), rice (11.3%), and sugarcane (10.1%) (Figure 1C). Together, these four crops accounted for 61.0% of global emissions. Their corresponding emission totals were 0.116 Mt N₂O for maize, 0.098 Mt N₂O for wheat, 0.061 Mt N₂O for rice, and 0.055 Mt N₂O for sugarcane (Table 1). Potatoes, oil palm, sugarbeet, barley, cassava, and cotton completed the ten largest crop contributors, with the ten crops together accounting for approximately 84.5% of global emissions.
 
-<img src="figures/figure1.png" style="width:6.83333in;height:4.77361in" />
+<img src="figures/figure1.png" width="656" />
 
 **Figure 1** Historical and projected global N₂O emissions from manure applied to soils and their national and crop-specific composition. (A) Global manure-applied-to-soils N₂O emissions for the historical period 2015–2023 and projected emissions for 2024–2026. (B) Ten largest national contributors in 2023. (C) Ten largest crop contributors in 2023. (D) Countries with the largest projected absolute increases and decreases in N₂O emissions between 2023 and 2026. Percentage labels in panel D indicate the relative change between 2023 and 2026.
 
@@ -200,7 +200,7 @@ Across Asia, some of the most pronounced emission concentrations occurred in eas
 
 The spatial pattern therefore shows that national manure-associated N₂O emissions are not distributed uniformly within countries. Instead, emissions are concentrated in specific agricultural regions where cropland extent, crop composition, and allocated manure N converge. The 5-arc-minute inventory consequently resolves substantial subnational heterogeneity that is not apparent from country-level totals alone and identifies agricultural regions that contribute disproportionately to national manure-associated N₂O emissions.
 
-<img src="figures/figure2.png" style="width:6.83294in;height:3.99975in" />
+<img src="figures/figure2.png" width="656" />
 
 **Figure 2** Global gridded N₂O emissions from manure applied to soils in 2023 at 5-arc-minute resolution. For visualization, 51 pixels with emissions greater than 66.8 tonnes N₂O pixel⁻¹ yr⁻¹ were masked. Masking was applied only to the displayed map and does not alter the underlying inventory.
 
@@ -214,7 +214,7 @@ In South America, manure N applied to maize was concentrated primarily in major 
 
 The maize map also illustrates an important feature of the allocation framework. A relatively large global manure-N total can be distributed very unevenly within the cropland area of a crop. High-intensity grid cells occur where substantial national manure-N availability overlaps with large or productive maize-growing areas, whereas maize-growing regions with lower allocated manure N appear as more diffuse, lower-intensity patterns. The resulting spatial distribution therefore provides information on where manure N associated with a globally important crop is concentrated within countries, beyond what can be inferred from national or global crop totals alone.
 
-<img src="figures/figure3.png" style="width:6.83314in;height:4.40193in" />
+<img src="figures/figure3.png" width="656" />
 
 **Figure 3** Global distribution of manure N applied to maize cropland in 2023 at 5-arc-minute spatial resolution. A total of 5.648 Mt N yr⁻¹ of manure N was allocated to maize globally. Display values were capped at 50 tonnes N pixel⁻¹ yr⁻¹ to improve visualization of spatial variation.
 

@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
+<img src="figures/logo.png" width="247" />
 
 ### Fossil Fuel Operations Sector: Coal Mining Emissions
 
@@ -16,7 +16,7 @@ Given the global scale of coal mining operations, efforts to quantify emissions 
 
 Global Energy Monitor’s Global Coal Mine Tracker (GCMT; [<span class="underline">https://globalenergymonitor.org/projects/global-coal-mine-tracker/</span>](https://globalenergymonitor.org/projects/global-coal-mine-tracker/)) is an extensive coal mine inventory, with production and capacity data for 4,803 coal mines globally (see Figure 1 for locations). The methane gas content of each mine is also estimated and made available by GCMT. By leveraging these datasets along with mine capacity factors from literature as needed, Climate TRACE estimated annual emissions for every individual coal mine (asset). Note, in Climate TRACE’s 2026 asset-level data release, only methane emissions for only active mines were estimated; emissions from abandoned coal mines were not included.
 
-<img src="figures/figure1.png" style="width:6.5in;height:3.01389in" />
+<img src="figures/figure1.png" width="624" />
 
 ***Figure 1.** Coal mines as reported by Global Energy Monitor’s Coal Mine Tracker (from GEM website). The relative size of the dot scales are related to coal mine production.*
 
@@ -140,7 +140,7 @@ The proportion of the total CMM released fugitively or via venting or incomplete
 
 *Table 1: Emissions sources in coal mines IEA’s Global Methane Tracker Documentation \[8\]*
 
-<img src="figures/figure2.png" style="width:5.53125in;height:1.75142in" />
+<img src="figures/figure2.png" width="531" />
 
 *Technologies*
 
@@ -150,7 +150,7 @@ The strategy is tailored to the type of methane gas release and its specific sou
 
 *Table 2: Abatement potential of different ERS strategies \[8\]*
 
-<img src="figures/figure3.png" style="width:5.58333in;height:3.40007in" />
+<img src="figures/figure3.png" width="536" />
 
 The applicable emissions (percent of total) for each category of mine (from Table 1, *T1*) and the effectiveness factor of the technology (from Table 2, *T2*), were used to arrive at an *Emissions Factor Scaling Ratio* for each ERS strategy, *s*, as shown in Equation 6. The *Emissions Factor Scaling Ratios* can be applied to relevant mines to calculate the potential emissions reduction.
 

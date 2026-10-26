@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" width="266" />
 
 ### Agriculture sector: Direct and Indirect Synthetic Fertilizer N₂O Emissions by Crop
 
@@ -32,7 +32,7 @@ We estimated global nitrous oxide (N₂O) emissions from synthetic nitrogen (N) 
 
 Our framework estimates the crop-specific and spatial distribution of synthetic N fertilizer use by combining national fertilizer-consumption totals with crop production, productivity, harvested area, and crop-specific N demand. Crop production and harvested areas are therefore used as allocation proxies rather than as independent estimates of national fertilizer consumption (Supplementary Text S1). National synthetic N fertilizer use is retained as a country-level constraint, while datasets available at different spatial and temporal resolutions (Section 2.2) are integrated to distribute this total among individual crops and grid cells at 5-arc-minute resolution (Figure 1). This approach preserves consistency with reported national fertilizer use while providing crop-specific and spatially explicit estimates of fertilizer application and associated N₂O emissions.
 
-<img src="figures/figure1.png" style="width:6.83333in;height:3.30069in" />
+<img src="figures/figure1.png" width="656" />
 
 **Figure 1.** Overview of the methodological framework used to estimate crop-specific synthetic nitrogen fertilizer application and associated N₂O emissions at global scale.
 
@@ -145,7 +145,7 @@ Next, we calculated crop-specific harvested nitrogen ($`N_{harv,cro,c,i,j,y}`$) 
 
 where $`\text{Aprod}_{cro,i,j,y}`$ is gridded crop-specific production, and $`\text{N\ content}_{\text{cro}}`$ is the crop-specific nitrogen content (Figure 2).
 
-<img src="figures/figure2.png" style="width:6.83333in;height:1.97292in" />
+<img src="figures/figure2.png" width="656" />
 
 **Figure 2.** Conceptual framework for estimating crop-specific harvested N.
 
@@ -159,7 +159,7 @@ We first allocated national cropland synthetic N fertilizer use among 5-arc-minu
 
 where $`\text{Aharv}_{cro,i,j,y}`$ is annual gridded harvest area for individual crop, and $`\text{\ Totalharv}_{i,j,y}`$ is the annual gridded harvest area combined for all the fertilized crops (n) in the grid, excluding N-fixing crops.
 
-<img src="figures/figure3.png" style="width:6.83333in;height:1.55486in" />
+<img src="figures/figure3.png" width="656" />
 
 **Figure 3.** Example of the spatial allocation of country-level synthetic N fertilizer use to the gridded scale for the United States.
 
@@ -171,7 +171,7 @@ We then distributed total N fertilizer applied within each grid cell ($`N_{fert,
 |-----|--------------------------------------------------------------------------------------------------|-------|
 |     |                                                                                                  |       |
 
-<img src="figures/figure4.png" style="width:6.83333in;height:1.81181in" />
+<img src="figures/figure4.png" width="656" />
 
 **Figure 4.** Allocation of gridded synthetic N fertilizer among individual crops using crop-specific N-harvest weights.
 
@@ -183,7 +183,7 @@ We then derived crop-specific fertilizer application rates by dividing fertilize
 |-----|----------------------------------------------------------------------------------|-------|
 |     | $`\text{Nrate}_{cro,i,j,y} = \frac{N_{fert,cro,i,j,y}}{\text{Aharv}_{cro,i,j,y}}`$ | \(7\) |
 
-<img src="figures/figure5.png" style="width:5.83333in;height:4.02083in" />
+<img src="figures/figure5.png" width="560" />
 
 **Figure 5.** Example of the final gridded crop-specific synthetic N fertilizer application rate for maize in 2024.
 
@@ -277,7 +277,7 @@ Projected national fertilizer use was evaluated from 2023 to 2026 because 2023 r
 
 Fertilizer use allocation was also strongly concentrated within a small number of crops throughout the period (Figure 6C). In 2023 for example, maize was the largest fertilizer-consuming crop, receiving an estimated 27.56 Mt N, accounting for 25.9% of global cropland use. Wheat was a close second, with 27.09 Mt N (25.5%), followed by rice with 18.46 Mt N (17.4%) (Figure 6C). Together, these three crops accounted for 68.7% of global N fertilizer use. The top five crops (that include sugarcane and barley) increased the cumulative contribution to 79.8%, and the top ten accounted for approximately 91.7%.
 
-<img src="figures/figure6.png" style="width:6.81771in;height:5.03066in" />
+<img src="figures/figure6.png" width="655" />
 
 **Figure 6.** Historical and projected global cropland synthetic N fertilizer use and its national and crop-specific composition. (A) Global cropland synthetic N fertilizer used for 2015–2023 and projections for 2024–2026. (B) The ten largest national contributors in 2023. (C) The ten largest crop contributors in 2023. (D) Largest projected national increases and decreases between 2023 and 2026. National totals were constrained prior to allocation across crops and grid cells.
 
@@ -338,7 +338,7 @@ Maize was the largest crop-specific source throughout the period. In 2023 it was
 
 These crop-level results show that past and projected global emissions growth distributed across several major fertilizer-consuming industries is driven primarily by maize. Because crop emissions were calculated using regional and country-specific emission factors, their relative contributions reflect both the amount of fertilizer allocated to each crop and the climatic and geographic conditions of the corresponding production regions. Emission factors, their relative contributions, reflect both the amount of fertilizer allocated to each crop and the climatic and geographic conditions of the corresponding production regions.
 
-<img src="figures/figure7.png" style="width:6.83333in;height:5.20764in" />
+<img src="figures/figure7.png" width="656" />
 
 **Figure 7.** Global N₂O emissions from synthetic nitrogen fertilizer application and their national and crop-specific composition. (A) Historical global emissions for 2015–2023 and projected emissions for 2024–2026. The shaded area denotes the projection period. (B) The ten largest national contributors to global emissions in 2023. Percentages indicate each country’s share of the global total. (C) The ten largest crop contributors in 2023. (D) Largest projected national increases and decreases between 2023 and 2026. N₂O emissions were converted to CO₂ equivalents using a 100-year global warming potential of 273.
 
@@ -377,7 +377,7 @@ The crop–country analysis also illustrates how emission factors modify the fer
 
 N₂O emissions were spatially concentrated in intensively cultivated regions of the globe (Figure 8). Prominent areas include the central and eastern United States, southern Canada, Mexico, southern Brazil and northern Argentina, western and central Europe, the Indo-Gangetic Plain, eastern China, and parts of Southeast Asia and Indonesia. These regions combine substantial fertilizer application with large areas of intensive crop production, and, in many locations, climatic conditions conducive to high N₂O emission factors.
 
-<img src="figures/figure8.png" style="width:5.66747in;height:3.90848in" />
+<img src="figures/figure8.png" width="544" />
 
 **Figure 8.** Global gridded distribution of N₂O direct and indirect emissions from synthetic nitrogen fertilizer application in 2023. Emissions are expressed as tonnes of N₂O per grid cell (pixel) per year and displayed on a logarithmic scale
 
@@ -391,7 +391,7 @@ We compared our national synthetic-fertilizer N₂O estimates with the FAOSTAT T
 
 Both inventories were expressed as CO₂-equivalent emissions using a GWP₁₀₀ of 273. Across all country-year comparisons, the median difference relative to FAOSTAT was −4.6%, although the magnitude and direction of the differences varied substantially among regions (Table 5; Figure 9).
 
-<img src="figures/figure9.png" style="width:6.83333in;height:5.78767in" />
+<img src="figures/figure9.png" width="656" />
 
 **Figure 9.** Comparison of national synthetic-fertilizer N₂O emissions estimated in this study and by the FAOSTAT Tier 1 inventory for 2015–2023. Each point represents one country-year for the highest-emitting countries within each continent where both estimates were available. Emissions are expressed as CO₂ equivalents using GWP₁₀₀ = 273. The dashed line indicates 1:1 agreement and the shaded region represents ±20% difference from FAOSTAT.
 
@@ -527,7 +527,7 @@ Strong positive relationships were observed in several major fertilizer-consumin
 
 China, India, the United States, Brazil, Pakistan, France, and Australia together accounted for approximately 66% of global synthetic fertilizer use (FAOSTAT, 2019). The generally strong relationships observed for these major fertilizer-consuming countries support the use of crop productivity as one component of the allocation procedure. However, because productivity is also influenced by climate, irrigation, crop genetics, soil conditions, and management practices, it was not used as the sole predictor of fertilizer application or N₂O emissions. Instead, it was combined with harvested area, crop production, and crop-specific nitrogen uptake to disaggregate national fertilizer totals among crops and grid cells while ensuring that the allocated fertilizer did not exceed the adjusted country-level total.
 
-<img src="figures/figure10.jpg" style="width:6.40625in;height:7.43236in" />
+<img src="figures/figure10.jpg" width="615" />
 
 **Figure S1.** Correlation graph between country-level N<sub>2</sub>O emissions due to synthetic N fertilizer and crop yield using FAOSTAT data from 1961 to 2023. (Units- y-axis: gigagram, x-axis: tonnes/ha).
 
@@ -667,15 +667,15 @@ The spatial comparison further showed that the reconstructed estimates reproduce
 
 Overall, the comparison provides an independent benchmark of the fertilizer-allocation framework, with particularly strong agreement for several major crops while also identifying crops and regions where uncertainties in crop distributions, harmonization, and spatial allocation remain larger.
 
-<img src="figures/figure11.png" style="width:6.83333in;height:5.44333in" />
+<img src="figures/figure11.png" width="656" />
 
 **Figure S2.** First-level administrative-unit validation of crop-specific synthetic N fertilizer inputs in 2020. Comparison of synthetic N fertilizer amounts estimated in this study with NPKGRIDS (Nguyen et al., 2024) at first-level administrative units (e.g., states or provinces) for 2020.
 
-<img src="figures/figure12.png" style="width:6.5in;height:5.37431in" />
+<img src="figures/figure12.png" width="624" />
 
 **Figure S3.** Second-level administrative-unit validation of crop-specific synthetic N fertilizer inputs in 2020. Comparison of synthetic N fertilizer amounts estimated in this study with NPKGRIDS (Nguyen et al., 2024) at second-level administrative units (e.g., counties, districts or comparable subdivisions) for 2020.
 
-<img src="figures/figure13.png" style="width:6.83032in;height:4.62287in" />
+<img src="figures/figure13.png" width="656" />
 
 **Figure S4.** Grid-scale spatial comparison of maize, wheat and rice synthetic N fertilizer inputs in 2020. Global maps compare the spatial distribution of synthetic N fertilizer estimated in this study with NPKGRIDS (Nguyen et al., 2024) for maize, wheat and rice at the grid-cell level.
 

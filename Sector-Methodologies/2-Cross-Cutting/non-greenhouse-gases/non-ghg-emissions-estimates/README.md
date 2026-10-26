@@ -386,23 +386,23 @@ Thank you to Lekha Sridhar, Ting So, Marisa Hughes, Gavin McCormick for their gu
 | International bunkers                    | 0.95 / 1.16        | 0.78 / 0.71        | 0.96 / 1.11 | 1.09 / 0.60        | 0.12 / 0.19 | 0.71 / –             | 1.30 / 5.56 | 1.31 / 3.78 |
 | All common sectors                       | 0.66 / 0.79        | 0.87 / 0.86        | 1.24 / 1.06 | 0.88 / 0.75        | 1.01 / 0.96 | 0.82 / –             | 0.57 / 0.41 | 0.24 / 0.18 |
 
-<img src="figures/figure1.png" style="width:7.51108in;height:6.90981in" />
+<img src="figures/figure1.png" width="721" />
 
 **Figure 1:** Non-ghg emissions broken down by sectors excluding forestry and land-use sectors.
 
-<img src="figures/figure2.png" style="width:7.4156in;height:6.76563in" />
+<img src="figures/figure2.png" width="712" />
 
 Figure 2: Top ten largest emitter sectors, their total emissions, and remaining emissions for the largest sector for each gas.
 
-<img src="figures/figure3.png" style="width:7.92708in;height:4.00375in" />
+<img src="figures/figure3.png" width="761" />
 
 **Figure 3:** A comparison between Climate TRACE (y-axis) and EDGAR (x-axis) across sectors and gases. The black solid-line is the unit line, with the black dashed-lines displaying one order of magnitude above and below the unit line. All emissions are measured in MT with each dot representing a single country. Normalized root mean squared error (NRMSE) was calculated with the range of the EDGAR emissions as reference. Each dot represents one country and comparison sector. Forestry, land use and fires are excluded, biomass is excluded from EDGAR except in buildings, and international bunkers are not shown.
 
-<img src="figures/figure4.png" style="width:7.93in;height:3.91481in" />
+<img src="figures/figure4.png" width="761" />
 
 **Figure 4:** A comparison between Climate TRACE (y-axis) and CEDS (x-axis) across sectors and gases. The black solid-line is the unit line, with the black dashed-lines displaying one order of magnitude above and below the unit line. All emissions are measured in MT with each dot representing a single country. NRMSE was calculated with the range of the CEDS emissions as reference. Each dot represents one country and comparison sector. Forestry, land use and fires are excluded, biomass is excluded from CEDS except in buildings, and international bunkers are not shown. CEDS does not report PM<sub>2.5</sub>.
 
-<img src="figures/figure5.png" style="width:7.93in;height:3.93489in" />
+<img src="figures/figure5.png" width="761" />
 
 **Figure 5:** A comparison between EDGAR (y-axis) and CEDS (x-axis) across sectors and gases. The black solid-line is the unit line, with the black dashed-lines displaying one order of magnitude above and below the unit line. All emissions are measured in MT with each dot representing a single country. NRMSE was calculated with the range of the CEDS emissions as reference. Each dot represents one country and comparison sector.
 

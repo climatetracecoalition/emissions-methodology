@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.94511in;height:1.27083in" />
+<img src="figures/logo.png" width="283" />
 
 ### Power sector: Emissions from Electricity Generation
 
@@ -47,7 +47,7 @@ Climate TRACE has published monthly electricity generation, carbon emissions, an
 
 We employ three types of methods to estimate electricity generation: reported electricity generation data, baseline country and fuel specific average capacity factor, and remote sensing machine learning derived inference. Each of these are described in the sections below. For any individual power plant asset and month, one or more of these methods may have an estimate and the final activity estimate is an ensemble combining the electricity generation activity estimates. A map of the power plants and the underlying model types is displayed below in Figure 1.
 
-<img src="figures/figure1.png" style="width:6.5in;height:2.66667in" />
+<img src="figures/figure1.png" width="624" />
 
 **Figure 1:** Asset-level Climate TRACE carbon dioxide emissions estimates for January 1, 2025, to December 31, 2025, color-coded by the model types underlying each estimate: emissions based on the baseline country-, and fuel- averages alone (gray), baseline combined with remote sensing inference (yellow), baseline combined with reported data (blue), or baseline combined with both reported data and remote sensing inference (green). Each dot represents one powerplant, sized according to the amount of carbon emissions, ranging from roughly 80 to nearly 33,500,000 metric tons of CO₂.
 
@@ -110,11 +110,11 @@ Climate TRACE’s baseline approach for estimating electricity generation at ind
 
 Climate TRACE leverages remote sensing (RS) proxy signals to estimate power generation at the monthly level for individual power plants. By training machine learning (ML) models to understand the association between electricity generation and water vapor plumes from stacks (in layman’s terms, the exhaust pipes of a power plant) with flue gas desulfurization (a common pollution control for coal; Figure 3), wet natural draft cooling towers (the large hyperbolic structures commonly seen primarily at coal plants; Figure 3), and mechanical draft cooling towers (fan-like structures, common across coal and gas; Figure 4). Figure 2 provides an overview of the remote sensing and machine learning (RS+ML) proxy signal approach employed to estimate individual power plant emissions. Figure 3 provides an example of the RS+ML approach applied to two observations of a particular power plant - detecting vapor plumes from stacks and flue gas desulfurization. For more detailed explanations of this proxy signal approach, referred to as “RS+ML” in this document, please see [<span class="underline">Couture et al. (2024)</span>](https://www.mdpi.com/2072-4292/16/7/1290). Note however that the structures which produce water vapor plume proxy signals do not exist at every power plant in the world. Yet, the 4% of plants worldwide that do have these structures amount to nearly half (43%) of carbon dioxide emissions from all non-biomass combustion (fossil and waste) power generation 2015-2024.
 
-<img src="figures/figure2.png" style="width:6.57149in;height:3.76512in" />
+<img src="figures/figure2.png" width="631" />
 
 **Figure 2**: Diagram of RS+ML-enabled proxy signal modeling for monitoring power plant activity to estimate emissions.
 
-<img src="figures/figure3.png" style="width:6.31771in;height:3.8586in" />
+<img src="figures/figure3.png" width="607" />
 
 **Figure 3**: ML predictions on the James H. Miller Jr. power plant at low vs. high generation on two observation dates, using PlanetScope PSScene imagery. Separate natural draft cooling tower (NDT) and flue gas desulfurization (FGD) models predicted on NDT (blue) and FGD stacks (red) patches. These predictions were ingested by subsequent models to estimate generation, then CO<sub>2</sub>, SO<sub>2</sub>, NO<sub>X</sub>, and PM2.5, for the plant. © 2023 IEEE \[8\].
 
@@ -122,7 +122,7 @@ Climate TRACE leverages remote sensing (RS) proxy signals to estimate power gene
 
 Our final published electricity generation estimates are an ensemble of the reported generation estimates (where available), the baseline method estimate, and the RS/ML-enabled proxy signal estimates (where possible). The ensemble process combines all available sources of reported generation, any applicable RS/ML model inference predictions, and the baseline model in a weighted ensemble. Each prediction has a point estimate, a root mean square error uncertainty converted to a mean squared error (MSE), and a confidence level. Each prediction is combined in a weighted ensemble, where each is weighted proportionally to its inverse mean squared error, normalized by the total inverse mean squared error of all available estimates, show with the two equations here:
 
-<img src="figures/figure4.png" style="width:2.04167in;height:0.73807in" /> <img src="figures/figure5.png" style="width:1.73438in;height:0.67137in" />
+<img src="figures/figure4.png" width="196" /> <img src="figures/figure5.png" width="167" />
 
 The uncertainty and confidence of the final estimate are combined with the same weighting.
 
@@ -156,7 +156,7 @@ While this monthly data offers increased recency and understanding of seasonal p
 
 New to 2024, we added an additional proxy signal, mechanical draft cooling towers, to monitor power plants from satellite imagery. This is the first proxy signal that targets gas plants in addition to coal, given that our existing two proxy signals are largely coal-focused. Mechanical draft cooling towers, like natural draft cooling towers, are evaporative cooling structures used to dissipate heat resulting from the electricity generation process and release steam plumes into the atmosphere (Figure 4). Unlike natural draft cooling towers, mechanical draft is more discreet, simply appearing as large fans on the rooftops of industrial buildings, and the water vapor plume they release is often far fainter and harder to see. Because cooler and wetter ambient conditions produce larger, more visible water vapor plumes, we apply a restricted temperature and humidity filter (stricter than that applied to natural draft). This new signal poses a greater modeling challenge, with our mechanical draft models performing slightly worse than our existing models, yet still well above the country-/fuel-/prime-mover-specific averages model (baseline) described in section 2.2.2.
 
-<img src="figures/figure6.png" style="width:1.73438in;height:1.38965in" /><img src="figures/figure7.png" style="width:0.64583in;height:1.40302in" /><img src="figures/figure8.png" style="width:1.89327in;height:1.3729in" /><img src="figures/figure9.png" style="width:1.42895in;height:1.36248in" />
+<img src="figures/figure6.png" width="167" /><img src="figures/figure7.png" width="62" /><img src="figures/figure8.png" width="182" /><img src="figures/figure9.png" width="137" />
 
 **Figure 4**: Examples of mechanical draft cooling structures (source: Google Maps).
 
@@ -253,7 +253,7 @@ where $`\text{LOAD}`$ is again the existing load supplied by the power plant. No
 
 We apply the solar power generation ERS and the associated CMERs to individual power generation assets by the strategy parameters defined in the Table S4. The solar strategy adds load equal to the existing power generation by setting the “induced\_activity\_conversion\_rate parameter” to -1 so that net emissions are *reduced* by $`R_{\text{Solar}}`$. The distribution of emissions reduced for all assets is shown in Figure 5. We note one exception for an asset in Democratic Republic of the Congo where the solar CMER is low enough that the emissions reductions are negligible (&lt; 3%) when solar generation is added (see Section 5.1). In this single edge case, we suggest shutting down the plant, which zeroes out the plant’s direct emissions, but induces emissions according to a CMER that is weighted with a flat-in-time generation profile rather than a solar generation profile.
 
-<img src="figures/figure10.png" style="width:6.5in;height:3.58333in" />
+<img src="figures/figure10.png" width="624" />
 
 **Figure 5:** Histogram of CO<sub>2</sub> equivalent (100-year GWP) emissions reduced per year for electricity-generation assets under the solar-generation strategy.
 
@@ -353,23 +353,23 @@ $`\Delta Emissions\  = \ (MOER)\Delta W\  + \ Controls`$ ,
 
 where ΔW are changes in the wind generation potential, and the set of controls are chosen to ensure the regression is well-identified. This study found that the MOER measured by the statistical regression technique is consistent with the validation data obtained from the wind regression (see Figure 6).
 
-<img src="figures/figure11.png" style="width:7.85417in;height:2.02083in" />
+<img src="figures/figure11.png" width="754" />
 
 **Figure 6**: Comparison of the MOER measured using a variety of models against natural experiments from wind generation (top); the model used in this ERS is labelled as “Statistical”, and subplots labelled “Heat Rate”, “Dispatch”, “Average”, and “LMP” are alternative MOER models. The close alignment between the “Statistical” model with the empirical data (“Benchmark MEF”) indicates that the Statistical MOER used in this ERS reliably captures real-world emissions impacts. The “Dispatch” model also performed well on this validation test, but can only be utilized in a limited number of grids. See Steinsultz et al., 2024 for details.
 
 Another validation study carried out across several U.S. balancing authorities (TVA, ISONE, DUK, CPLE, CAISO, and FPL; represented by the solid colored bars in Figure 7) further found the MOER model to be consistent with direct observations of emissions changes (Christian et al. 2025a). This study follows a similar approach to Steinsultz et al. (2024), but instead employs nuclear outages as the exogenous shocks. A machine learning model was first trained to predict the emissions of a region with a substantial share of nuclear generation. The model’s predictions (the “Statistical” legend label, grey-hatched bar in Figure 7) were then compared against observed emissions during periods of nuclear outages (solid bars in Figure 7). Because the total generation and load has to remain balanced during the outage, the difference between the prediction and the observed emissions provides an estimate of the emissions change due to a load increase equivalent to the nuclear generation loss. The result of this study, shown in Figure 7, demonstrated that the MOER model (“Statistical” legend label in Figure 7) employed in this ERS is consistent with the MOER measured by this natural experiment.
 
-<img src="figures/figure12.png" style="width:7.24502in;height:2.73438in" />
+<img src="figures/figure12.png" width="696" />
 
 **Figure 7**: Comparison of the MOER measured using a variety of models against natural experiments from nuclear outages; the model used in this ERS is labelled as “Statistical” (Christian et al., 2025a). Empirically observed emissions rate measured during nuclear outages for each balancing authorities are the left-most solid colored bars for each Shock ID that occurred in each Balancing Authority (BA; 95% confidence interval included), separated by the black dashed-lines: TVA = dark blue bar; ISONE = green bar; DUK = purple bar; CPLE = pink bar; CAISO = yellow bar; and FPL = light blue bar. The hatched bars to the right of each solid bar represent different predicted emissions corresponding to different emissions models : Statistical (MOER) model = grey-hatched bar; AVERT = orange-hatched bar; Cambium Mid-case = light blue-hatched bar; and AOER = green-hatched bar.
 
 The CMER constructed using the GHGP weighting parameter method has been validated using a similar method in Christian et al. 2025b, where exogenous load shocks are used to empirically estimate the MOER in PJM, ERCOT, MISO, SPP, ISONE, and NYISO. As shown in Figure 8, the empirical validation signal aligns closely with the CMER (“Model LRMER”), indicating that this formulation of the CMER reliably captures the real-world emissions impacts of load interventions. Christian et al (2025b) also validated the choice of ω=½ recommended by the GHGP guidelines. Comparing a weighting parameter of 0, ½, and 1, this study found that a weighting parameter of 1/2 to be the most consistent with the empirical validation signal and has the lowest error (see Figure 9).
 
-<img src="figures/figure13.png" style="width:5.36979in;height:5.36979in" />
+<img src="figures/figure13.png" width="515" />
 
 **Figure 8**: Comparison of the CMER utilized in this ERS (“Model LRMER”) and the empirical validation dataset of the emissions effect of load interventions (“Empirical Validation”). The close agreement between the CMER and the empirical validation signal demonstrates that the CMER reliably captures the real-world emissions impacts of load interventions. Cambium LRMER and AOER refers to other models for computing emissions (see Christian et al., 2025b for details).
 
-<img src="figures/figure14.png" style="width:3.52604in;height:2.0624in" />
+<img src="figures/figure14.png" width="338" />
 
 **Figure 9**: The error on the measured CMER signal (compared to an empirical validation baseline) for different weighting parameters (Christian et al., 2025b). Blue bar: weight = 1/2 (LRMER Error 29.73 lbs/MWh); Orange bar: weight = 0 (LRMER Error -249.72 lbs/MWh); Green bar: weight = 1 (LRMER Error 309.18 lbs/MWh).
 

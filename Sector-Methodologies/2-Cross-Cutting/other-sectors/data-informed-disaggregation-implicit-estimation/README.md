@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
+<img src="figures/logo.png" width="247" />
 
 ### Data-Informed Disaggregation and Implicit Estimation of Emissions in Other Subsectors
 
@@ -126,7 +126,7 @@ In general, the workflow for generating emissions estimates for sectors within *
 
 The country-level total then serves as the starting point for the asset-level estimates. Facilities identified in public registries and industrial databases are placed into evidence tiers according to how much is known about each. Facilities with their own regulator-reported emissions keep those values; the remaining unattributed portion of the national total is disaggregated across the other known facilities in proportion to independent evidence of relative facility size. Finally, per-facility activity, capacity, emissions factors, non-CO<sub>2</sub> gases, confidence ratings, and uncertain estimates are derived, and the results are reconciled against the country total.
 
-<img src="figures/figure1.png" style="width:6.5in;height:3.88889in" />
+<img src="figures/figure1.png" width="624" />
 
 **Figure 1.** General process of creating country and asset-level emissions, along with associated metadata for each sector. The colors denote the type of information used in each step, with input data in blue, intermediate derived data in pink, and the final output data in green.
 
@@ -244,7 +244,7 @@ For facilities reporting in some years but not others, the previous release's bl
 
 Per country, sector, and year, the residual is the national total minus the sum of all anchored (Tier A/Ac/A′) facilities:
 
-[<img src="figures/figure2.png" style="width:4.56944in;height:0.56944in" alt="\mathit{residual}_{c,s,y} = \max\left(\mathit{national\,total}_{c,s,y} - \sum_{i \in \mathrm{anchored}(c,s,y)} \mathit{Q}_{i},\; 0\right)" />](https://saxarona.github.io/mathjax-viewer/?input=%5Cmathit%7Bresidual%7D_%7Bc%2Cs%2Cy%7D%20%3D%20%5Cmax%5Cleft(%5Cmathit%7Bnational%5C%2Ctotal%7D_%7Bc%2Cs%2Cy%7D%20-%20%5Csum_%7Bi%20%5Cin%20%5Cmathrm%7Banchored%7D(c%2Cs%2Cy)%7D%20%5Cmathit%7BQ%7D_%7Bi%7D%2C%5C%3B%200%5Cright)#0)
+[<img src="figures/figure2.png" width="439" alt="\mathit{residual}_{c,s,y} = \max\left(\mathit{national\,total}_{c,s,y} - \sum_{i \in \mathrm{anchored}(c,s,y)} \mathit{Q}_{i},\; 0\right)" />](https://saxarona.github.io/mathjax-viewer/?input=%5Cmathit%7Bresidual%7D_%7Bc%2Cs%2Cy%7D%20%3D%20%5Cmax%5Cleft(%5Cmathit%7Bnational%5C%2Ctotal%7D_%7Bc%2Cs%2Cy%7D%20-%20%5Csum_%7Bi%20%5Cin%20%5Cmathrm%7Banchored%7D(c%2Cs%2Cy)%7D%20%5Cmathit%7BQ%7D_%7Bi%7D%2C%5C%3B%200%5Cright)#0)
 
 Where, *anchored(c,s,y)* is the set of facilities in country *c* and sector *s* whose year-*y* emissions (Q) of a given gas is established by Tier A, Ac, or A′ (Section 2.1.3.2.3), and *anchored Qᵢ* is that facility's emissions of a gas . The residual is floored at zero; where reported facility values alone meet or exceed the national total, no residual remains to allocate and the exceedance is accepted rather than corrected (Section 2.1.3.2.7).
 
@@ -520,7 +520,7 @@ The goal of the implicit estimation technique is to complement Climate TRACE’s
 
 Figure 4 shows EDGAR and Climate TRACE global totals for 2015-2024. Climate TRACE totals are split into implicitly estimated and measured totals. These totals include only positive differences from the implicit method (see Table 6 and associated text). It should be noted that the Climate TRACE’s global estimates are between 3.8 and 6.8 Gigatonnes higher than EDGAR’s for all years. This is due primarily to 1) RMI’s oil and gas estimates which indicate vast undercounting of methane in current oil and gas estimates and 2) inclusion of non-fossil fuel emissions in the Climate TRACE emissions totals. Table 4 provides the EDGAR and Climate TRACE emission differences.
 
-<img src="figures/figure3.png" style="width:7.45354in;height:2.95036in" />
+<img src="figures/figure3.png" width="716" />
 
 **Figure 4** EDGAR global totals compared to Climate TRACE global totals for years 2015 to 2025. Climate TRACE totals are split into implicitly estimated and all other categories. Blue bars = EDGAR Totals, Red bars = Climate TRACE implicit estimation estimates, and Orange bars = Climate TRACE measured.
 
@@ -542,7 +542,7 @@ Figure 4 shows EDGAR and Climate TRACE global totals for 2015-2024. Climate TRAC
 
 Figure 5 shows EDGAR 2025 totals compared to Climate TRACE V5.11.0 totals for the top 10 highest emitting countries for 2024. China is the highest emitter, \~17.4 Gigatonnes, which is \~2.5 times more emissions than the USA (Table 5). Generally, Climate TRACE total estimates (measured and implicit estimate) result in higher emissions relative to EDGAR emissions.
 
-<img src="figures/figure4.png" style="width:7.48268in;height:2.96189in" />
+<img src="figures/figure4.png" width="718" />
 
 **Figure 5** EDGAR 2025 totals compared to Climate TRACE V5.11.0 totals for the top 10 highest emitting countries for 2024. Blue bars = EDGAR Totals, Red bars = Climate TRACE implicit, and Orange bars = Climate TRACE measured.
 

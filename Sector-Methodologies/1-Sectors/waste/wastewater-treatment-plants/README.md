@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" width="266" />
 
 ### Waste sector: Wastewater Treatment Plant Emissions
 
@@ -46,7 +46,7 @@ National inventories of wastewater treatment data, including the European Enviro
 
 Satellite imagery hosted in the Google Map Statics Application Programming Interface (API) (Google, n.d.) was used for WWTP model training. Google Maps Static API hosts satellite imagery datasets at various zoom levels: from composite imagery provided by the Landsat and Copernicus programs to finer spatial resolutions consisting of Maxar and Airbus imagery (Figure 1). The API returns an image based on a given coordinate, size, scale, zoom, and map type (satellite); size defines the rectangular dimensions of the image in pixels; scale affects the number of pixels returned, with scale = 1 retaining the dimensions defined by the size parameter; zoom defines the zoom level of the map, which determines the magnification level. Using reported WWTPs, images of the locations were extracted using the Maps Static API, then were manually sorted to create the initial training dataset. For this research, the input image from Google Maps Static API is set to a size of 400\*400 pixels (px), which amounts to 583m by 583m for this location, a scale of 1, and a zoom level of 16.
 
-<img src="figures/figure1.png" style="width:3.23438in;height:3.23438in" />
+<img src="figures/figure1.png" width="311" />
 
 **Figure 1.** An example of the Google Maps Static API for the Berlin Water Works wastewater treatment plant, Waßmannsdorf, at 400\*400 pixels, scale 1, and zoom level 16 input image. Coordinates: latitude = 52.3886, longitude = 13.47396.
 
@@ -138,11 +138,11 @@ The HydroWASTE dataset was used to produce a facility-level dataset of WWTP emis
 
 This ViT model was trained to detect WWTP characteristics such as clarifiers in visual (red, blue, and green bands or RGB) satellite imagery with a country-based, Swin Tiny classifier (Liu et al., 2021) – this is shown in Figure 2. The initial training set consisted of previously verified HydroWASTE locations, as well as non-WWTP images from Open Street Maps sampled by land-use category. When applied to a specific region, human verification was used to identify true positives and false positives from the classifier, which were bootstrapped for retraining. This model was first used to verify HydroWASTE locations, and then deployed globally to identify assets previously unaccounted for. Overall, the model verified the locations of approximately 58,000 assets and uncovered approximately 16,600 newly identified candidate domestic wastewater treatment facilities. Importantly, the version of the ViT model described here, while confirming the location of a facility with infrastructure commonly used by WWTPs, does not confirm whether the facility is used for domestic wastewater treatment or for another purpose. Further verification and filtering of this candidate WWTP dataset was performed in subsequent analyses described in Section 2.2.2 and Appendix 4. Figure 3.a. shows the HydroWASTE WWTP locations, Figure 3.b. shows the locations of newly identified candidate WWTPs, and Figure 3.c. shows the combined locations.
 
-<img src="figures/figure2.png" style="width:6.5in;height:2.15278in" />
+<img src="figures/figure2.png" width="624" />
 
 **Figure 2**: A block diagram of the wastewater facility classifier.
 
-<table><thead><tr class="header"><th><img src="figures/figure3.png" style="width:6.5in;height:3.69167in" /></th></tr></thead><tbody><tr class="odd"><td><ol type="a"><li><blockquote><p><strong>HydroWASTE WWTP locations (58,502)</strong></p></blockquote></li></ol></td></tr><tr class="even"><td><img src="figures/figure4.png" style="width:6.5in;height:3.69167in" /></td></tr><tr class="odd"><td><ol start="2" type="a"><li><blockquote><p><strong>All locations detected by the model to be at more than 50 meters’ distance from a HydroWASTE location (~16,600)</strong></p></blockquote></li></ol></td></tr><tr class="even"><td><img src="figures/figure5.png" style="width:6.5in;height:3.69167in" /></td></tr><tr class="odd"><td><ol start="3" type="a"><li><blockquote><p><strong>Combined HydroWASTE and newly detected WWTP locations</strong></p></blockquote></li></ol></td></tr></tbody></table>
+<table><thead><tr class="header"><th><img src="figures/figure3.png" width="624" /></th></tr></thead><tbody><tr class="odd"><td><ol type="a"><li><blockquote><p><strong>HydroWASTE WWTP locations (58,502)</strong></p></blockquote></li></ol></td></tr><tr class="even"><td><img src="figures/figure4.png" width="624" /></td></tr><tr class="odd"><td><ol start="2" type="a"><li><blockquote><p><strong>All locations detected by the model to be at more than 50 meters’ distance from a HydroWASTE location (~16,600)</strong></p></blockquote></li></ol></td></tr><tr class="even"><td><img src="figures/figure5.png" width="624" /></td></tr><tr class="odd"><td><ol start="3" type="a"><li><blockquote><p><strong>Combined HydroWASTE and newly detected WWTP locations</strong></p></blockquote></li></ol></td></tr></tbody></table>
 
 **Figure 3**: A comparison between the 2024 and 2026 candidate asset data.
 
@@ -162,7 +162,7 @@ The 2016 and 2022 EPA Sewersheds datasets include the locations, treatment level
 
 Each centralized WWTP sourced from the HydroWASTE dataset is associated with an estimated population served and technology level. For untreated and decentralized wastewater assets, as well as for centralized WWTPs identified by satellite model, these characteristics were modeled. For all assets, population served and technology level were used with methodologies described in “Chapter 6: Wastewater Treatment and Discharge” in “Volume 5: Waste” of the 2019 Refinement to the *2006 IPCC Guidelines for National Greenhouse Gas Inventories* (Bartram et al., 2019), which will be subsequently referred to by “IPCC” and the “IPCC guidelines”, to estimate the monthly CH<sub>4</sub> and N<sub>2</sub>O emissions. The IPCC methodologies were derived for estimating country-level emissions based on population and demographics and not for individual assets; however, simple modifications were performed to adapt these methods for this level of granularity. All modifications are summarized in the following text and explicitly described in Appendix 1. Figure 4 contains a flow diagram of the methodology used to obtain source-level emissions estimates for WWTPs in the filtered HydroWASTE dataset. Relevant sections are indicated for each part of the emissions model.
 
-<img src="figures/figure6.png" style="width:6.39844in;height:7.92188in" />
+<img src="figures/figure6.png" width="614" />
 
 **Figure 4.** Flow diagram of emissions. HydroWASTE data is filtered based on operationality and location quality. Filtered locations are recovered if identified by machine learning model. Population, technology level, and location are used to develop emissions.
 
@@ -200,7 +200,7 @@ At centralized WWTPs, sludge is the by-product of water treatment and is produce
 
 Wastewater emissions are estimated for the assets included in the current year’s Climate TRACE pulp and paper and steel asset inventories. Figure 5 shows the locations of the 1,027 steel assets and 848 pulp and paper assets for which industrial wastewater emissions were estimated.
 
-<img src="figures/figure7.png" style="width:6.5in;height:3.33333in" />
+<img src="figures/figure7.png" width="624" />
 
 **Figure 5.** Global distribution of steel (gray dots) and pulp and paper (orange x markers) assets for which wastewater emissions were estimated.
 
@@ -226,7 +226,7 @@ As diagrammed in Figure 6, the pathways modeled are *Sewer*, *Septic*, *Latrine*
 
 Two distinguishing features of the Climate TRACE country-level model are that 1., population treated by centralized treatment is appropriately divided into primary, secondary, and advanced treatment categories based on Climate TRACE asset data, and 2., that a monthly climatology model is used to determine latrine emissions factors.
 
-> <img src="figures/figure8.png" style="width:6.39145in;height:3.35139in" />
+> <img src="figures/figure8.png" width="614" />
 >
 > **Figure 6.** Flow diagram of domestic, country-level emissions model.
 
@@ -316,29 +316,29 @@ In all, there are four models that were developed for estimating CH<sub>4</sub> 
 
 The WWTP inventory comprises 59,325 centralized assets for the years 2015 to mid-year 2026, including lagoons and other centralized facilities with primary, secondary, and advanced treatment capabilities. For the year 2025, it is estimated that these centralized sources account for 154.3 MT of CO<sub>2</sub>e. Figure 7. shows the global distribution of centralized WWTPs and their GHG emissions in terms of global warming potential (GWP) over a 100-year period.
 
-<img src="figures/figure9.png" style="width:6.5in;height:3.86111in" />
+<img src="figures/figure9.png" width="624" />
 
 **Figure 7.** Global distribution of centralized domestic wastewater treatment plants colored based on emissions in 2025.
 
 A majority of centralized WWT assets produce less than one kT of CO<sub>2</sub>e annually as shown by Figure 8; however, almost all emissions come from WWT assets producing more than 1 kT of CO<sub>2</sub>e. As emissions are a function of population, it is expected that the higher emissions assets are also assets that serve larger populations, and so reduction in emissions by centralized WWT assets will primarily need to come from adoption of cleaner WWT technologies at larger facilities.
 
-<img src="figures/figure10.png" style="width:6.5in;height:2.65278in" />
+<img src="figures/figure10.png" width="624" />
 
 **Figure 8.** Cumulative distribution of emissions across centralized WWT assets (left) and across centralized WWT asset emissions (right) in 2025. The left plot demonstrates that a majority of WWT assets produce less than one kT (10<sup>3</sup> Tonnes/year or 1000 Tonnes) of CO<sub>2</sub>eq (100-year global warming potential) whereas the plot on the right demonstrates that almost all emissions (roughly 93%) come from assets that produce more than 1 kT of CO<sub>2</sub>eq.
 
 The effect of using country-level population changes to extend the range of centralized WWT asset emissions estimates can be seen in Figure 9. A majority of plants (82%) saw an increase in their emissions between 2015 and 2025. Approximately 57% of those saw more than a 5% increase in emissions. Approximately 18% of plants saw a decrease in emissions which reflects decreased population. Further, approximately 40% of plants saw a &lt;5% absolute change in emissions from 2015 to 2025.
 
-<img src="figures/figure11.png" style="width:6.5in;height:2.65278in" />
+<img src="figures/figure11.png" width="624" />
 
 **Figure 9.** Distribution of change in emissions between 2015 and 2025. 82% of centralized WWT assets saw an increase in emissions whereas approximately 18% saw a decrease. Approximately 40% of WWTPs had &lt;5% absolute change of emissions.
 
 Uncertainty of emissions estimates is very high. For the majority of centralized WWT assets in the inventory, the standard deviation of the emissions distribution derived by Monte Carlo simulation is one or more orders of magnitude greater than the asset’s corresponding emissions estimate as shown by Figure 10. The uncertainty of the emissions from WWT assets whose populations are reported is linearly related to their estimated emissions. For centralized WWT assets where population served is estimated, the standard deviation of the emissions from Monte Carlo is initially constant and becomes aligned with the reported population for WWT assets at around 10,000 people served, as shown in Figure 11.
 
-<img src="figures/figure12.png" style="width:6.0625in;height:3.46744in" />
+<img src="figures/figure12.png" width="582" />
 
 **Figure 10.** Uncertainty of CO<sub>2</sub>eq distributed globally.
 
-<img src="figures/figure13.png" style="width:5.96354in;height:4.94346in" />
+<img src="figures/figure13.png" width="572" />
 
 **Figure 11.** Uncertainty of emissions compared to emissions estimated disaggregated by population type (population served, population equivalent, estimated population) and uncertainty of CO<sub>2</sub>e as a function of population. For lower emissions estimates, uncertainty for emissions of WWTPs with estimated populations is significantly higher than those with reported populations. Overall, uncertainty of emissions is significantly higher than the estimated value.
 
@@ -365,7 +365,7 @@ Overall, the Climate TRACE source-level estimation for the U.S. aligns well with
 
 Parravicini *et al.* utilized IPCC methodologies with chemical-process specific methodologies along with disaggregation of WWTP technologies to produce an estimate of CO2eq emissions for EU countries (Parravicini et al., 2022). Their technological disaggregation was based on the PE of the influent water treated by the plant. Climate TRACE integrated source-level estimates for CO<sub>2</sub>eq 100 year global warming potential estimates align very well with Parravicini *et al.* for all countries as shown in Figure 12 with the exception of Croatia (HRV). However, it should be noted that the values from Parravicini *et al.* were obtained using a plot digitizer. The total estimates for the EU also agree with 33.96 MT CO<sub>2</sub>eq from Climate TRACE and 34.36 MT CO<sub>2</sub>eq from Parravicini *et al.* A labeled country-by-country comparison is shown in Figure A5.1 of Appendix 5.
 
-<img src="figures/figure14.png" style="width:4.67188in;height:2.45035in" />
+<img src="figures/figure14.png" width="449" />
 
 **Figure 12.** A country-by-country comparison of emissions from centralized, domestic WWTPs between Parravicini et al. and integrated Climate TRACE sources. The countries with the highest and lowest emissions from WWTPs are labeled, as well as the EU summation and outliers. All countries align very well with the exception of Croatia (HRV).
 
@@ -377,11 +377,11 @@ In the future, we may be able to verify the construction of new WWTP facilities 
 
 As shown in Figure 13, applying WASH pathway utilization percentages to WorldPop country-level population estimates reveals that, as of the most recent WASH estimates from 2024, most of the world’s domestic wastewater is collected in sewers, by which it is presumably routed to WWTPs for treatment, followed by collection in septic systems, then in latrines and other improved sanitation pathways. Almost 11% of the world’s wastewater is accounted for by open defecation or unimproved sanitation pathways. Figure 14 shows the subsequent emissions for countries for which the Climate TRACE inventory includes decentralized assets (see Appendix 8). In these regions, methane and nitrous oxide emissions from untreated waste and from decentralized assets (latrines and septic systems) compose a majority of the methane emissions from domestic wastewater. Untreated wastewater, which represents the highest GHG source of any wastewater pathway, poses a significant risk to human and agricultural health.
 
-<img src="figures/figure15.png" style="width:4.00521in;height:3.15304in" />
+<img src="figures/figure15.png" width="385" />
 
 **Figure 13.** Global breakdown of wastewater pathways as estimated by the WHO. A plurality of the world’s population is connected to sewers, which leads to reduced emissions and cleaner, safer water systems.
 
-<img src="figures/figure16.png" style="width:6.5in;height:2.70833in" />
+<img src="figures/figure16.png" width="624" />
 
 **Figure 14.** Domestic wastewater emissions are broken down into different pathways. Untreated wastewater contributes significantly to CH<sub>4</sub> and N<sub>2</sub>O emissions (plot above). Note, the y-axes of the two panels have different ranges.
 
@@ -396,17 +396,17 @@ Table 3 shows validation results for the domestic emissions model compared to th
 
 Industrial emissions align well to the EPA’s National Inventory for most sectors as shown in Figure 15. However, EPA does not estimate the nitrous oxide emissions from steel and ethanol production which Climate TRACE estimates to be large contributors to industrial emissions.
 
-<img src="figures/figure17.png" style="width:3.09265in;height:2.35in" /><img src="figures/figure18.png" style="width:3.13767in;height:2.35in" />
+<img src="figures/figure17.png" width="297" /><img src="figures/figure18.png" width="301" />
 
 **Figure 15.** Industrial wastewater comparison with the EPA estimates for 2022 (EPA, 2023).
 
 In comparison to EDGAR (European Commission, 2023), while correlated, Climate TRACE country-level emissions are significantly smaller for methane emissions and significantly larger for nitrous oxide emissions as shown in Figure 16. The discrepancy for methane is difficult to assess given that EDGAR does not differentiate domestic from industrial wastewater emissions, and EDGAR’s methodology description for wastewater lacks the detail necessary to easily recreate the analysis (Janssens-Maenhout et al., 2019). However, the nitrous oxide discrepancy is likely due to EDGAR using the 2006 IPCC guidelines (IPCC, 2006), which has an order of magnitude smaller emissions factor for domestic emissions (de Haas & Andrews, 2022). This is discussed in the Phase 5 methodology document.
 
-<img src="figures/figure19.png" style="width:3.2in;height:2.56404in" /><img src="figures/figure20.png" style="width:3.20399in;height:2.51in" />
+<img src="figures/figure19.png" width="307" /><img src="figures/figure20.png" width="308" />
 
 **Figure 16 cont.**
 
-<img src="figures/figure21.png" style="width:3.2in;height:2.56in" /><img src="figures/figure22.png" style="width:3.19254in;height:2.51in" />
+<img src="figures/figure21.png" width="307" /><img src="figures/figure22.png" width="306" />
 
 **Figure 16.** Country-to-country emissions comparison with EDGAR. Overall, the correlation between Climate TRACE and EDGAR is positive, EDGAR estimates a significantly higher methane emissions estimate, whereas Climate TRACE produces larger nitrous oxide estimates. The former difference is difficult to explain as EDGAR’s emissions estimates are not reproducible, whereas the latter can be explained by EDGAR using outdated methodologies.
 
@@ -853,7 +853,7 @@ where $`\epsilon\ \sim\ N(\bar{e_{P}},\ {\sigma^{2}}_{e_{P}})`$.
 
 The mean (Equation A1.19) and variance (Equation A1.20) of the error estimated population values are used to sample the error of the estimated population using Equation A1.21. In the accompanying HydroWASTE manuscript and supplemental, the approach for estimating missing population served values is applied to all of the WWTPs with reported population served/PE. The performance of the estimation technique is reported and shown in Figure A1.1.
 
-<img src="figures/figure23.png" style="width:2.71875in;height:2.90625in" />
+<img src="figures/figure23.png" width="261" />
 
 **Figure A1.1.** Figure 4.a in (Macedo et al., 2022a). The performance of the population served estimation approach when applied to WWTPs with known population served/PE. The solid line is the unit line (i.e. no error), and the dashed lines represent an order of magnitude difference between the estimated and known populations. $`n`$ is the total number of WWTPs analyzed, $`\text{NRMSE}`$ is the normalized root mean square error, $`\text{PBIAS}`$ is the percent bias, $`R^{2}`$ is the coefficient of determination, $`\text{NSE}`$ is the Nash-Sutcliffe Efficiency, and $`\text{KGE}`$ is the Kling-Gupta efficiency.
 
@@ -879,7 +879,7 @@ where $`RMSE = \ NRMSE \cdot \bar{P}`$.
 
 A convergence study of the Monte Carlo simulation was performed where multiple Monte Carlo simulations were computed with varying sample sizes: 125, 250, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000. Figure A1.2 shows that the Monte Carlo simulation convergences around a sample size of $`O(10^{4})`$. The results of the largest sized Monte Carlo simulation are provided.
 
-<img src="figures/figure24.png" style="width:6.5in;height:2.36111in" />
+<img src="figures/figure24.png" width="624" />
 
 **Figure A1.2** The percent difference of the treatment, effluent, and CO2eq emissions between the largest Monte Carlo simulation and the other Monte Carlo simulations. Convergence occurs around a sample size of $`O(10^{4})`$.
 
@@ -921,17 +921,17 @@ There were 155 total WWTP in SA, out of which 27 were of the particular type of 
 
 HydroWASTE assets are filtered to remove WWTPs which are flagged as “Closed” or “Not Operational”. Further filtering occurs prior to emissions estimates to remove plants whose location was not verified by the ML model described in Section 2.2.1 and which were flagged by the HydroWASTE authors as having a low confidence location.
 
-<img src="figures/figure25.png" style="width:6.5in;height:3.70833in" />
+<img src="figures/figure25.png" width="624" />
 
 **Figure A4.1.** HydroWASTE global distribution of centralized WWTPs identified as not “Closed” or “Not Operational”.
 
-<img src="figures/figure26.png" style="width:4.73438in;height:2.1758in" />
+<img src="figures/figure26.png" width="455" />
 
 **Figure A4.2.** Proportion of WWTPs based on computed population served.
 
 #### Appendix 5: Country-by-country comparison of E.U. emissions estimates
 
-<img src="figures/figure27.png" style="width:3.31444in;height:4.578in" />
+<img src="figures/figure27.png" width="318" />
 
 **Figure A5.1.** A comparison of CO<sub>2</sub>eq between Parravicini *et al.* emissions estimates (CO<sub>2</sub>e 100- year global warming potential) and Climate TRACE. Countries are labeled with their ISO 3166-1 alpha-3 codes. Overall, Climate TRACE and Parravicini *et al.* align well for most countries.
 
@@ -957,7 +957,7 @@ $`P_{2024} = P_{2023} \cdot \frac{P_{2023}}{P_{2022}}`$. Eq. A7.1
 
 An example of this splining for Puerto Rico is shown in Figure A7.1.
 
-<img src="figures/figure28.png" style="width:3.51409in;height:2.63557in" />
+<img src="figures/figure28.png" width="337" />
 
 **Figure A7.1** Spline of Puerto Rico’s population from 2015 to mid-year 2024 which is used to model monthly emissions.
 
@@ -969,7 +969,7 @@ The Holy See was removed from consideration since detailed sanitation data is un
 
 **Table A8.1** Countries with the highest percentage of untreated wastewater, where “Coverage” indicates the percentage of the total population (both urban and rural) producing wastewater that is listed as “unimproved” or “open defecation”.
 
-<img src="figures/figure29.png" style="width:6.19332in;height:2.79972in" />
+<img src="figures/figure29.png" width="595" />
 
 For the purposes of this analysis, each GADM2 region in the set of 20 countries in Table A8.1 (minus the Holy See) is considered an untreated wastewater “asset”. The Democratic Republic of the Congo has two regions (both densely forested) with missing population data: there is no population data for COD.21.10\_1 (Tshumbe) and COD.21.1\_1 (Bena-Dibele) and no 2020 or 2025 population data for COD.21.10\_1 (Tshumbe). Likewise, no WorldPop population is available for the following Philippine GADM2 regions, so emissions for corresponding decentralized “assets” were not calculated: PHL.5.2\_1, PHL.40.10\_1, PHL.40.23\_1, PHL.40.27\_1, and PHL.77.11\_1.
 

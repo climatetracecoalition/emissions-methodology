@@ -16,7 +16,7 @@ This paper sets out the methodology used to estimate plant-level CO<sub>2</sub> 
 
 #### 2. Scope and System Boundary
 
-<table><thead><tr class="header"><th><p><img src="figures/figure1.png" style="width:6.35417in;height:5.23611in" /></p><p><img src="figures/figure2.png" style="width:3.58854in;height:0.34709in" /></p></th></tr></thead><tbody><tr class="odd"><td><strong>Figure 1</strong> High-level overview of the pulp sector describing processes and sources of GHG emissions. The scope of this study, pulp production emissions, is enclosed by a circle.</td></tr></tbody></table>
+<table><thead><tr class="header"><th><p><img src="figures/figure1.png" width="610" /></p><p><img src="figures/figure2.png" width="344" /></p></th></tr></thead><tbody><tr class="odd"><td><strong>Figure 1</strong> High-level overview of the pulp sector describing processes and sources of GHG emissions. The scope of this study, pulp production emissions, is enclosed by a circle.</td></tr></tbody></table>
 
 Pulp production begins with wood fiber — either roundwood harvested directly for pulping, or wood chips and residues from sawmilling — which is processed either mechanically, by grinding or refining the wood to physically separate the fibers while retaining most of the lignin, or chemically, by dissolving the lignin to liberate the cellulose fibers. The dominant chemical process, kraft pulping, cooks wood chips in a pressurized digester with white liquor, dissolving the lignin. The resulting spent cooking liquor (black liquor), rich in dissolved lignin and pulping chemicals, is concentrated and burned in a recovery boiler, which recovers both process energy and the pulping chemicals as an inorganic smelt. This smelt is dissolved and causticized to regenerate fresh white liquor, with the calcium carbonate byproduct calcined in a lime kiln to recover reusable lime — the kraft chemical recovery cycle. Mechanical and semi-chemical pulping, which use little or no cooking chemistry, have no equivalent recovery cycle and are correspondingly more electricity-intensive.
 
@@ -68,7 +68,7 @@ We use publicly available data sources and inventories to estimate pulp emission
 
 #### 4. Method
 
-<img src="figures/figure3.png" style="width:5.74149in;height:7.76791in" />
+<img src="figures/figure3.png" width="551" />
 
 **Figure 2** Flowchart of the methodology to calculate facility-level emissions for pulp plants.
 
@@ -84,7 +84,7 @@ The foundation of our emissions estimates is annual pulp production data from FA
 
 The production calculation applied depends on data availability, following a tiered approach, shown in Figure 3.
 
-<img src="figures/figure4.png" style="width:5.92188in;height:6.62786in" />
+<img src="figures/figure4.png" width="569" />
 
 **Figure 3** Flowchart of the methodology to estimate production from FAO production, FAO capacity and asset capacity. Sources: FAO national capacity, FAO (2022). Capacity factor bounds (65–95%), FAO (2022; 2024a) and CEPI (2023; 2025; 2026). Fallback factors: chemical pulp, FAO (2024b) and Fastmarkets (2024); mechanical pulp, FAO (2024b); non-wood pulp, an assumption informed by FAO (2024b); generic pulp, the average across pulp types (FAO, 2022; 2024a).
 
@@ -92,7 +92,7 @@ National production is not re-imposed after the fallback, so modeled national to
 
 Asset capacity data is sourced from SFI (2024) and IIR (2026) (Figure 4). Facility-level production is then multiplied by the relevant Scope 1 and Scope 2 emission factors to derive point source emissions estimates.
 
-<img src="figures/figure5.png" style="width:6.35417in;height:4in" />
+<img src="figures/figure5.png" width="610" />
 
 **Figure 4** Map of the pulp assets reported in this work. The circle size reflects the plant capacity as shown top left with the smallest circle = 200,000t/year and large circle = 4,000,000t/year.
 
@@ -232,7 +232,7 @@ Under the EU ETS, industrial installations report verified emissions each year (
 
 Figure 5 compares Climate TRACE estimates with EU ETS emissions by country. For most countries, EU ETS totals are higher, as the broader installation boundary would suggest. Where the gap is large, it closes substantially once emissions reported under codes 36 or 20 are included. For Finland and Sweden, Climate TRACE estimates exceed EU ETS pulp-code totals. This is because the model applies a small startup and shutdown fuel factor across biogenic kraft mills in these countries, which report little or no fossil fuel use under the EU ETS (Appendix 11.1).
 
-<img src="figures/figure6.png" style="width:6.35417in;height:4.56944in" />
+<img src="figures/figure6.png" width="610" />
 
 **Figure 5** Comparison of EU ETS verified emissions and Climate TRACE Scope 1 and captive power emissions by country, 2025 (MtCO₂). Each country is shown once, using the activity code under which its Climate TRACE pulp mills report: code 35 (pulp) unless marked. The dashed line indicates exact agreement and the shaded band ±20% of verified emissions; r is calculated on code-35 countries only.
 
@@ -244,7 +244,7 @@ Direct emissions per tonne of pulp agree within 2–4% in 2020–2022, and total
 
 Climate TRACE indirect emissions are 81–141% above the benchmark in 2020–2024. Most of this difference comes from kraft and chemical mills: CEPI reports net purchased electricity, after deducting the electricity mills sell, much of it surplus from kraft pulp mills, whereas Climate TRACE counts each mill’s gross grid purchases, as in facility-level Scope 2 reporting. This approach is consistent with mill-level data for Swedish and Finnish kraft mills (Lipiäinen et al., 2022). Excluding kraft and chemical mills, Climate TRACE indirect emissions are within 26% of the benchmark in every year and within 6% in 2023–2024 (Appendix 11.2).
 
-<img src="figures/figure7.png" style="width:5.73944in;height:4.11489in" />
+<img src="figures/figure7.png" width="551" />
 
 **Figure 6** Climate TRACE pulp emissions in CEPI countries compared with pulp-only benchmarks derived from CEPI sector totals, 2020–2025. The dotted line shows Climate TRACE indirect emissions excluding kraft and chemical pulp mills. CEPI has not published 2025 indirect emissions.
 
@@ -258,7 +258,7 @@ As an additional check, Mercer International reports emissions intensity for fou
 
 Divergence at individual mills has no consistent direction. Most comes from applying fleet-average emission factors and captive fuel splits to mills that differ from the average in kiln efficiency, fuel mix or utilization. Divergence tends to be larger where site data is outdated or a mill has been curtailed. There is one systematic pattern: at several US kraft mills, operators report that 17–32% of total mill energy comes from fossil fuels. This is a different measure from the model’s 5% fossil share of captive fuel, but it suggests that share may be too low for this type of mill. US survey data also show a higher fossil share of fuel at pulp mills (EIA, 2021a), although this includes lime kiln fuel, which Climate TRACE counts separately as Scope 1 process emissions. Individual cases are discussed in Appendix 11.3.
 
-<img src="figures/figure8.png" style="width:6.35417in;height:5.72222in" />
+<img src="figures/figure8.png" width="610" />
 
 **Figure 7** Comparison of asset-level pulp emissions for 39 pulp mills across the EU (2025), Canada (2024), the USA (2023) and New Zealand (2025) against Climate TRACE emissions. Point numbers correspond to the mill list in Table 11 (Appendix 11.3).
 

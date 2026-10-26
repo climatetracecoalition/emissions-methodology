@@ -18,7 +18,7 @@ Cement production emits CO₂ from two main sources: process emissions from lime
 
 Given the lack of asset-level emission data publicly available, a standardized “bottom-up” approach is used to quantify the emissions. This process is characterized by first estimating production levels for each plant before applying an emission factor to generate emissions estimates. Emissions factors are asset-specific, determined as a function of final product characteristics (clinker-to-cement ratio, cement color, type), plant production route (wet, dry, semi-dry) and the use of emissions-reduction technologies (alternative fuels, supplementary cementitious materials, CCS/CCUS).
 
-<img src="figures/figure1.png" style="width:7.86458in;height:1.79782in" />
+<img src="figures/figure1.png" width="755" />
 
 **Figure 1** Flowchart of the methodology to calculate plant level emissions for global cement assets.
 
@@ -30,7 +30,7 @@ Cement production consists of three steps: first limestone is mixed with other m
 
 Figure 2 shows the global distribution of integrated cement plants. China accounts for around half of global production, followed by India at 10% (USGS, 2025).
 
-<img src="figures/figure2.png" style="width:6.5in;height:3.76389in" />
+<img src="figures/figure2.png" width="624" />
 
 **Figure 2** Global map showing integrated cement facilities. Countries included in cement emissions monitoring are shaded. Assets that are monitored with satellites are shown in blue. The circle size represents plant production capacity, with reference scales shown at the top of the figure for 1,200 and 6,000 thousand tonnes per annum (ktpa).
 
@@ -60,7 +60,7 @@ All satellite datasets were sourced and processed using Google Earth Engine (Goo
 
 -   Landsat-8/9: $`TAI\  = \ \frac{(B7\  - \ B6)}{(B5)}`$
 
-<img src="figures/figure3.png" style="width:6.47703in;height:2.9013in" />
+<img src="figures/figure3.png" width="622" />
 
 **Figure 3** Left - high resolution image of Lafarge’s cement plant in Port-la-nouvelle, France with a manually labelled rotary kiln (yellow shaded rectangle). Right - Sentinel-2 image which shows the thermal anomaly over the rotary kiln and surrounding features (red for hot pixel) during 2023. Source: Modified Copernicus data and GEM GCCT.
 
@@ -106,7 +106,7 @@ Two approaches were used to estimate asset- level production. As a priority, sat
 
 Our methodology scours satellite imagery for heat signatures from the operating cement plants. Each clinker-producing kiln, once identified, is outlined with a hand-drawn polygon, as shown in Figure 4.
 
-<img src="figures/figure4.png" style="width:3.52604in;height:3.83921in" />
+<img src="figures/figure4.png" width="338" />
 
 **Figure 4:** Zooming in on an integrated cement plant in Kota Padang, Sumatera Barat, Indonesia. The 5 kilns have been hand labelled (yellow shaded rectangles).
 
@@ -184,11 +184,11 @@ Verification of the modeled ERS varies depending on the strategy and the type of
 
 Figure 5 illustrates the relationship between satellite-derived Thermal Anomaly Index (TAI) and the corresponding emissions for a cement plant in Spain. The data demonstrates that, for most months, estimated emissions (based on production levels) align closely with fluctuations in TAI. For example, both measurements increase prior to after July 2021 and then rapidly increase between July 2021 and Jan 2022, after which both decrease into January 2022. However, further calibration is needed to enhance the model that translates TAI into asset-level production estimates, as TAI data can vary significantly by asset depending on factors like equipment type, age, geographic location, and other operational conditions. The TAI values presented here are derived from the hotspot data shown in Figure 6.
 
-<img src="figures/figure5.png" style="width:7.23004in;height:2.11373in" />
+<img src="figures/figure5.png" width="694" />
 
 **Figure 5** Satellite-based Thermal Anomaly Index (TAI; red solid line) and estimated emissions (blue solid line) at Valderrivas cement plant in Cantabria, Spain during January 2021 - September 2024.
 
-<img src="figures/figure6.png" style="width:3.91667in;height:3.05221in" />
+<img src="figures/figure6.png" width="376" />
 
 **Figure 6** Satellite-detected hotspots over Valderrivas cement plant in Cantabria, Spain during August 2024.
 
@@ -223,7 +223,7 @@ Strategies focused on clinker substitution further complement these reductions. 
 
 Overall, these results show that near-zero emissions in cement production is potentially possible when high-producing assets adopt CCS alongside alternative fuels, while widespread adoption of clinker substitution and fuel switching across smaller facilities can contribute substantially to global decarbonization.
 
-<img src="figures/figure7.png" style="width:3.41667in;height:2.59484in" alt="Chart" />
+<img src="figures/figure7.png" width="328" alt="Chart" />
 
 **Figure 7** Average direct emission factors (tCO₂ per tonne of cement) from calcination and fuel combustion before (yellow bars) and after (blue bars) the application of emission reduction strategies (ERS) across cement assets worldwide.
 
@@ -443,7 +443,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 The cement production process starts with mining and quarrying, where raw materials are extracted from the environment. Then, three main operations are performed. First, raw meals made of an appropriate mix of crushed limestone, calcium, silicon, aluminium and iron oxides are prepared. Second, raw meals are placed into a kiln where a large flame elevates the temperature greatly to allow for formation of clinker by chemical reaction and thereby releasing CO<sub>2</sub>. The thermal energy provided by the kiln originates from the combustion of various types of fuels ranging from traditional fossil fuels like coal and oil to alternative waste fuels and biomass. Third, cooled clinkers are ground and mixed with gypsum to create cement. An overview of this process is highlighted in Figure 7.
 
-<img src="figures/figure8.png" style="width:4.32813in;height:3.24031in" />
+<img src="figures/figure8.png" width="416" />
 
 **Figure 7** Overview of the cement production process (Construction Cost, 2016).
 
@@ -451,6 +451,6 @@ The cement production process starts with mining and quarrying, where raw materi
 
 Figure 8 depicts an example of a cement plant that is not monitored with satellite due to small signal-to-noise ratio limitations. Not only the heat signal is much more diluted around the kiln in comparison to the plant of Figure 3, but we also observe undesired signals originating from reflections on the coal stack.
 
-<img src="figures/figure9.png" style="width:6.08854in;height:1.99048in" />
+<img src="figures/figure9.png" width="584" />
 
 **Figure 8** Left - High resolution image of the Stockertown cement plant in Pennsylvania, United States. Right - composite Sentinel-2 image of the same plant. Heat signals (red areas) are not situated over kiln areas but on the coal stack (dashed circles). Sources: modified Copernicus and USGS data.

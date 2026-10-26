@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.57292in;height:1.11458in" />
+<img src="figures/logo.png" width="247" />
 
 ### Transportation sector: Domestic and International Shipping Emissions
 
@@ -58,7 +58,7 @@ The EU MRV dataset has yearly releases of data but also has continuous updates t
 
 #### Vessel activity and characteristics data from Automatic Identification System (AIS)
 
-<img src="figures/figure1.jpg" style="width:3.25574in;height:2.47436in" alt="A boat on the water Description automatically generated with medium confidence" />
+<img src="figures/figure1.jpg" width="313" alt="A boat on the water Description automatically generated with medium confidence" />
 
 *Figure 1 - Showing the process of vessels relaying AIS messages via an in-land tower (‘AIS Transponders’, n.d.).*
 
@@ -94,7 +94,7 @@ Another method used for verification of OceanMind’s modelled emissions estimat
 
 In addition to estimating vessel emissions, port emissions were estimated by aggregating emissions from vessel trips and port stays. The locations of ports were taken from a multitude of sources. These include the World Port Index (‘Maritime Safety Information’, n.d.), Pew Charitable Trusts (‘The Pew Charitable Trusts’, n.d.), along with a ports database that OceanMind has been building for many years. OceanMind’s Port database is constantly growing and adapting based on new information gained from satellite imagery as well as clustering analysis being carried out on vessel behaviour. An example of port locations and attributions is shown in Figure 2. As of September 2026, OceanMind provides aggregated emissions data for over 12,000 ports globally.
 
-<img src="figures/figure2.png" style="width:5.5625in;height:5.15258in" />
+<img src="figures/figure2.png" width="534" />
 
 *Figure 2 - A) Climate TRACE UI displaying the attribution of 2025 emissions to ports, where each circle represents a port and the size of the circle is dependent on the relative emissions of that port. Red box indicates B) the River Thames with known ports highlighted.*
 
@@ -176,7 +176,7 @@ Another factor that must be accounted for when estimating emissions is the power
 
 Using the combined energy consumption from the above sources, the total energy consumption is then converted to an amount of fuel burnt based on the SFOC values in Table 2, and further into pollutant estimates based on the emissions factors in the same table.
 
-<img src="figures/figure3.jpg" style="width:4.6875in;height:3.81412in" />
+<img src="figures/figure3.jpg" width="450" />
 
 *Figure 3 - Flowchart of the model development process, showing the datasets employed in this stage.*
 
@@ -200,7 +200,7 @@ If a vessel was seen to exhibit behaviour consistent with a port stay in an area
 
 The final level of aggregation available for vessel emissions is at the country level. To achieve this, all emissions that were assigned to ports were also assigned to the country associated with that port. It should be noted that the temporal aggregation is done based on the end time of a trip, so monthly totals are based on trips that ended within that month.
 
-<img src="figures/figure4.jpg" style="width:4.95081in;height:3.99465in" />
+<img src="figures/figure4.jpg" width="475" />
 
 *Figure 4 - Flowchart showing the model deployment process, with the datasets employed at the top and the output reports at the bottom.*
 
@@ -313,7 +313,7 @@ Table 3 shows the comparison values for single voyages carried out by each vesse
 
 Figure 5 shows a box and whisker plot made using the data from Table 3, with 0 on the y-axis referring to when the estimated emissions match the measured emissions exactly. The boxes represent data that falls into the 2<sup>nd</sup> and 3<sup>rd</sup> quartiles, and the whiskers span to the value of the last data point that lies within 1.5 times the interquartile range from the boundary of the box (quartile 1 or 3 boundary) with the small circles representing outliers that lie outside this range. The line within each box represents the median value. Although the 2022 model clearly bought the median value much closer to 0, the variance of the errors was much higher than in model version v310725 which introduced the benefits of incorporating the fuel type used by vessels, which has helped to narrow the variance of emissions estimates. The improved port attribution methods outlined in section 2.4.1 have likely also contributed to these comparisons being improved as the trips are closer matched to the trips reported by Siglar. The two outliers in the most recent model are both from the longest trips observed so proportionally those estimates are within 13% of the true values, but this could be an indicator that the newest model may underestimate the emissions for very long trips on larger vessels.
 
-<img src="figures/figure5.png" style="width:5.09375in;height:3.28629in" />
+<img src="figures/figure5.png" width="489" />
 
 *Figure 5 - Box and whisker plot showing the distribution of the differences between measured emissions values for 12 vessels from Siglar and the emissions estimates of the same vessels from OceanMind mode with versions from 2021, 2022, and 2025 (v310725).*
 
@@ -349,11 +349,11 @@ An important aspect of validating the emissions estimates is not only to underst
 
 A more recent example of these trends being visible in the emissions data is shown in Figure 7, which shows a huge downturn in the emissions which were attributed to the port of Baltimore, Maryland following Francis Scott Key Bridge collapse on March 26, 2024 (vertical dashed line in Figure 7). Previously, port emissions were increasing from mid-2020, which then saw a rapid decrease March 2024, due to ships unable to enter the port. The ability to observe these events can help us to understand the impact of the emissions in the areas surrounding the event.
 
-<img src="figures/figure6.png" style="width:5.52521in;height:2.66069in" />
+<img src="figures/figure6.png" width="530" />
 
 *Figure 6 - Monthly sum of estimated CO2 emissions, in tonnes, from all cruise ships in the OM database from 2018-2025. The black dashed line represents the date that the World Health Organization declared COVID-19 a public health emergency.*
 
-<img src="figures/figure7.png" style="width:4.96471in;height:2.41571in" />
+<img src="figures/figure7.png" width="477" />
 
 *Figure 7 - Monthly emissions totals for the port of Baltimore, Maryland from January 2020 to July 2024 based on the OM emissions model. The black dashed line represents the date of the Francis Scott Key Bridge Collapse (March 26th, 2024).*
 

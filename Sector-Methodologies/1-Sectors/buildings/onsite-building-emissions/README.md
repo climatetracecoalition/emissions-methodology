@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" width="266" />
 
 ### Building sector: Estimating Global, High-resolution Onsite Building Emissions
 
@@ -22,7 +22,7 @@ For a GHG emissions inventory to be valuable, each sector included needs to be a
 
 Some existing GHG inventory approaches include building sector information, but those approaches have limitations around spatial resolution and the availability of subsector information. Existing inventories include IEA’s energy consumption data (which can be translated into emissions), the Open-source Data Inventory for Anthropogenic CO2 (ODIAC) (Oda et al. 2018), the Community Emissions Data System (CEDS) (McDuffie et al. 2020), the Emissions Database for Global Atmospheric Research (EDGAR) (Crippa et al. 2024), the Global Carbon Grid (Tong et al. 2018), and the Global Gridded Daily CO2 Emissions Dataset (GRACED) (Dou et al. 2022). The highest spatial resolution of these datasets are EDGAR and GRACED, which are available at a resolution of about 11 km x 11 km (0.1 degree by 0.1 degree), which for context means about 3 data points for all of the Island of Manhattan (as shown in Figure 1): an insufficient resolution for local decision-making, planning, and monitoring. Similarly, there is limited subsector information, with most inventories grouping all of the building subsectors into one category rather than breaking down the estimates into, for example, residential and non-residential buildings.
 
-<img src="figures/figure1.png" style="width:6.5in;height:3.81944in" />
+<img src="figures/figure1.png" width="624" />
 
 **Figure 1***. Visualization of EDGAR (left subplot), 0.1 degree by 0.1 degree (\~11km-by-11km at the equator) building CO<sub>2</sub> emissions data centered on New York City and the island of Manhattan. In contrast, super-resolved EDGAR (right subplot) is provided at the 30 arc second (\~1km-by-1km at the equator) resolution.*
 
@@ -154,7 +154,7 @@ $`\widehat{E}(r,c,g) = \left\lbrack \frac{\widehat{\text{EN}}(r,c)}{\widehat{\te
 
 This process is shown in Figure 2B using gridded EDGAR data as the source R.
 
-<img src="figures/figure2.png" style="width:6.5in;height:4.09383in" />
+<img src="figures/figure2.png" width="624" />
 
 **Figure 2***. EDGAR disaggregation methodology.*
 
@@ -176,7 +176,7 @@ $`\widehat{E}(r,c,g,m) = \alpha\left\lbrack \frac{HDD(m)}{HDD(m)} \right\rbrack\
 
 Here, $`\alpha = 0.378`$, which is the fraction of variable load. This concept is demonstrated in Figure 3. The grey, baseload emissions are constant throughout the year and are approximately$`\left( 1 - \alpha \right)\frac{\widehat{E}(r,c,g)}{12}`$ each month (the actual value takes into account the number of days in each month relative to the year including leap years). The variable load emissions (the fraction represented by $`\alpha`$) are distributed proportionally to the quantity of HDDs that occurred that month relative to the total for the year: $`\left\lbrack \frac{HDD(m)}{HDD(m)} \right\rbrack\widehat{E}(r,c,g)`$.
 
-<img src="figures/figure3.png" style="width:6.5in;height:1.88208in" />
+<img src="figures/figure3.png" width="624" />
 
 **Figure 3***. Monthly emissions allocation.*
 
@@ -196,15 +196,15 @@ We estimate the potential reduction in building emissions achievable through ene
 
 This retrofit approach is implemented as a percentage reduction in emission factors, representing a decrease in emissions-generating activity. We calculate the resulting fractional decrease in emission factors separately, across space heating, water heating, and cooking for each region as follows, with variable definitions and data sources shown below in Table 4:
 
-[<img src="figures/figure4.png" style="width:3in;height:0.40278in" />](https://saxarona.github.io/mathjax-viewer/?input=%5Calpha_%7Bi%2Cr%7D%20%3D%20s_%7Bi%2Cr%7D%20%5Ctimes%20%5Cleft%5B%20m_%7Bi%2Cr%7D%20%5Ctimes%20%5Cfrac%7BE_%7B%5Ctext%7Bold%7D%2Ci%7D%7D%7BE_%7B%5Ctext%7Bnew%7D%2Ci%7D%7D%20%2B%20%5Cleft(1%20-%20m_%7Bi%2Cr%7D%5Cright)%20%5Cright%5D#0)
+[<img src="figures/figure4.png" width="288" />](https://saxarona.github.io/mathjax-viewer/?input=%5Calpha_%7Bi%2Cr%7D%20%3D%20s_%7Bi%2Cr%7D%20%5Ctimes%20%5Cleft%5B%20m_%7Bi%2Cr%7D%20%5Ctimes%20%5Cfrac%7BE_%7B%5Ctext%7Bold%7D%2Ci%7D%7D%7BE_%7B%5Ctext%7Bnew%7D%2Ci%7D%7D%20%2B%20%5Cleft(1%20-%20m_%7Bi%2Cr%7D%5Cright)%20%5Cright%5D#0)
 
 For each end use, only the portion of technologies eligible for retrofitting (i.e., buildings that do not already have high-efficiency systems) contributes to a reduction in the emission factor. The remaining share retains the existing regional emission factor. Our retrofit scenario models the potential reduction in direct building emissions from switching to higher-efficiency cooking and heating technologies and for improving the building envelope. It does not factor in the potential change in emissions associated with additional electricity demand, in lieu of on-site combustible fuels, that would result from these technology retrofits. On-site combustible fuels (e.g. natural gas, oil, biomass) often have higher emissions factors than grid-supplied electricity, so factoring in fuel switching would likely increase emissions reductions estimates further, but this is dependent on local electricity generation sources. This analysis is planned as a future release.
 
 **Combining emissions reducing strategies**. Strategies are combined according to whether they act on the same share of building activity. Strategies that act on different end uses draw on separate shares of activity (*s<sub>i,r</sub>*) and have their own market shares of pre-retrofit technologies (*m<sub>i,r</sub>*). Their remaining emissions are therefore summed. A combination of strategies that act on the same end use share both (*s<sub>i,r</sub>*) and (*m<sub>i,r</sub>*). Their remaining fractions are therefore multiplied before summing. Space heating is the only end use with more than one strategy: heat pump replacement and building envelope retrofits both reduce emissions from the same space heating demand, and both apply to households still using pre-retrofit technologies. The fraction of emissions remaining across all end uses is:
 
-[<img src="figures/figure5.png" style="width:6.375in;height:0.375in" alt="\alpha_{\text{total},r} = \sum_{i} s_{i,r} \Big[ \big(1 - m_{i,r}\big) + m_{i,r} \Big( \prod_{j \in \mathcal{J}_i} e_{j} \Big) \Big], \qquad i \in \{\text{space heating, water heating, cooking}\}" />](https://saxarona.github.io/mathjax-viewer/?input=%5Calpha_%7B%5Ctext%7Btotal%7D%2Cr%7D%20%3D%20%5Csum_%7Bi%7D%20s_%7Bi%2Cr%7D%20%5CBig%5B%20%5Cbig(1%20-%20m_%7Bi%2Cr%7D%5Cbig)%20%2B%20m_%7Bi%2Cr%7D%20%5CBig(%20%5Cprod_%7Bj%20%5Cin%20%5Cmathcal%7BJ%7D_i%7D%20e_%7Bj%7D%20%5CBig)%20%5CBig%5D%2C%20%5Cqquad%20i%20%5Cin%20%5C%7B%5Ctext%7Bspace%20heating%2C%20water%20heating%2C%20cooking%7D%5C%7D#0)
+[<img src="figures/figure5.png" width="612" alt="\alpha_{\text{total},r} = \sum_{i} s_{i,r} \Big[ \big(1 - m_{i,r}\big) + m_{i,r} \Big( \prod_{j \in \mathcal{J}_i} e_{j} \Big) \Big], \qquad i \in \{\text{space heating, water heating, cooking}\}" />](https://saxarona.github.io/mathjax-viewer/?input=%5Calpha_%7B%5Ctext%7Btotal%7D%2Cr%7D%20%3D%20%5Csum_%7Bi%7D%20s_%7Bi%2Cr%7D%20%5CBig%5B%20%5Cbig(1%20-%20m_%7Bi%2Cr%7D%5Cbig)%20%2B%20m_%7Bi%2Cr%7D%20%5CBig(%20%5Cprod_%7Bj%20%5Cin%20%5Cmathcal%7BJ%7D_i%7D%20e_%7Bj%7D%20%5CBig)%20%5CBig%5D%2C%20%5Cqquad%20i%20%5Cin%20%5C%7B%5Ctext%7Bspace%20heating%2C%20water%20heating%2C%20cooking%7D%5C%7D#0)
 
-[<img src="figures/figure6.png" style="width:4.11111in;height:0.79167in" alt="e_j = \begin{cases} \dfrac{\varepsilon_{\text{old},j}}{\varepsilon_{\text{new},j}} &amp; \text{if } j \text{ is a technology replacement} \\[2ex] \dfrac{D_{\text{new}}}{D_{\text{old}}} &amp; \text{if } j \text{ is the building envelope improvement} \end{cases}" />](https://www.codecogs.com/eqnedit.php?latex=e_j%20%3D%20%5Cbegin%7Bcases%7D%20%5Cdfrac%7B%5Cvarepsilon_%7B%5Ctext%7Bold%7D%2Cj%7D%7D%7B%5Cvarepsilon_%7B%5Ctext%7Bnew%7D%2Cj%7D%7D%20%26%20%5Ctext%7Bif%20%7D%20j%20%5Ctext%7B%20is%20a%20technology%20replacement%7D%20%5C%5C%5B2ex%5D%20%5Cdfrac%7BD_%7B%5Ctext%7Bnew%7D%7D%7D%7BD_%7B%5Ctext%7Bold%7D%7D%7D%20%26%20%5Ctext%7Bif%20%7D%20j%20%5Ctext%7B%20is%20the%20building%20envelope%20improvement%7D%20%5Cend%7Bcases%7D#0)
+[<img src="figures/figure6.png" width="395" alt="e_j = \begin{cases} \dfrac{\varepsilon_{\text{old},j}}{\varepsilon_{\text{new},j}} &amp; \text{if } j \text{ is a technology replacement} \\[2ex] \dfrac{D_{\text{new}}}{D_{\text{old}}} &amp; \text{if } j \text{ is the building envelope improvement} \end{cases}" />](https://www.codecogs.com/eqnedit.php?latex=e_j%20%3D%20%5Cbegin%7Bcases%7D%20%5Cdfrac%7B%5Cvarepsilon_%7B%5Ctext%7Bold%7D%2Cj%7D%7D%7B%5Cvarepsilon_%7B%5Ctext%7Bnew%7D%2Cj%7D%7D%20%26%20%5Ctext%7Bif%20%7D%20j%20%5Ctext%7B%20is%20a%20technology%20replacement%7D%20%5C%5C%5B2ex%5D%20%5Cdfrac%7BD_%7B%5Ctext%7Bnew%7D%7D%7D%7BD_%7B%5Ctext%7Bold%7D%7D%7D%20%26%20%5Ctext%7Bif%20%7D%20j%20%5Ctext%7B%20is%20the%20building%20envelope%20improvement%7D%20%5Cend%7Bcases%7D#0)
 
 **Table 4***. Definitions of variables used in the high-efficiency building energy system retrofits approach.*
 
@@ -242,7 +242,7 @@ One challenge is that both the EDGAR data and our super-resolved data are gridde
 
 At the country level we compare our super-resolved EDGAR emissions against both UNFCCC and CAIT for “total” buildings (i.e., aggregated residential and non-residential buildings). Figure 4 maps the presence of building-related emissions data at the country level for UNFCCC and CAIT, respectively, in the year 2020. Here we compare to CAIT and UNFCCC data acquired in 2023, newer data may be available for those resources.
 
-<img src="figures/figure8.png" style="width:6.35417in;height:3.09722in" />
+<img src="figures/figure8.png" width="610" />
 
 **Figure 4***. The two maps above show the countries containing 2020 onsite direct building emissions data from UNFCCC and CAIT.*
 
@@ -252,7 +252,7 @@ At the country level we compare our super-resolved EDGAR emissions against both 
 
 At the country level, we are able to compare all three primary GHGs (CO<sub>2</sub>, N<sub>2</sub>O, and CH<sub>4</sub>) as well as for two different years (2015 and 2020) at the country-level. It is important to note that while the original EDGAR and our super-resolved EDGAR data are generally identical at the country-level, there are some smaller countries (e.g., Monaco) for which the original EDGAR data and the super-resolved variant differ due to aggregation artifacts. The comparisons for 2020 are shown in Figure 5.
 
-<img src="figures/figure9.png" style="width:6.35417in;height:5.875in" />
+<img src="figures/figure9.png" width="610" />
 
 **Figure 5***. We compare the quantity of direct onsite building emissions (in tonnes) across each of the countries included in the UNFCCC inventory for 2020. We include emissions inventory data from UNFCCC and CAIT for each such country, as well as emissions estimates from our model’s super-resolved version of EDGAR. We show this emissions comparison for CO<sub>2</sub>, N<sub>2</sub>O, and CH<sub>4</sub>.*
 
@@ -266,13 +266,13 @@ Because DPFC does not contain data related to biofuels, we are unable to evaluat
 
 The DPFC data are themselves, estimates, and therefore should be considered uncertain. When comparing the approaches above across all DPFC validation municipalities for CO<sub>2</sub> emissions, we observe that the super-resolved EDGAR data generally results in lower error than the lower-spatial-resolution EDGAR data for a given municipality. This summary is shown in Figure 6 below.
 
-<img src="figures/figure10.png" style="width:6.35417in;height:4.16667in" />
+<img src="figures/figure10.png" width="610" />
 
 **Figure 6***. We summarize the Weighted Absolute Percentage Error (WAPE), top, and Mean Absolute Percentage Error (MAPE), bottom, across all municipalities in DPFC for CO<sub>2</sub> emissions. Our comparison contains both gridded emissions datasets under consideration (EDGAR and our Super-Resolved EDGAR).*
 
 #### 3.2 Visualization of emissions
 
-<img src="figures/figure11.png" style="width:6.5in;height:7.5in" />
+<img src="figures/figure11.png" width="624" />
 
 **Figure 7***. Global and city-level CO<sub>2</sub> emission heatmap. The value of each grid cell is the estimated CO<sub>2</sub> emission from the total building area in that 1km by 1km region in 2024 given by super-resolved EDGAR (unit: metric tonnes). As a shorthand, we use “Total CO<sub>2</sub>” in the plots to denote the whole-year CO<sub>2</sub> emission from the total buildings (the sum of residential and non-residential buildings). From the top left to bottom right, selected cities are NYC, London, Shanghai, Sao Paulo, Delhi, and Cape Town. Places with zero building area (zero building-generated CO<sub>2</sub> emission) are colored in black in the global image and are transparent in the city-level images.*
 
@@ -292,11 +292,11 @@ Here, we include results from our high-efficiency retrofit analysis (see section
 
 **Cooking**: Electric resistance stoves can be 30% more efficient than natural gas-powered ones, using less fuel to deliver the same amount of cooking energy. Replacing natural gas stoves with electric resistance ones can therefore be an effective way to reduce direct building emissions. Our results show that this technology switch has the potential to reduce a country’s residential and non-residential cooking-related direct emissions by an average of 23% and 20%, respectively, depending on cooking energy demand. This equates to a reduction of about 5% of total direct residential emissions (Figures 8 and 9).
 
-<img src="figures/figure12.png" style="width:6.5in;height:3.73611in" />
+<img src="figures/figure12.png" width="624" />
 
 **Figure 8***. Global maps of country-level potential emissions reductions from separately implementing each **residential** building retrofit: (a) space heating, (b) water heating, (c) cooking, and (d) building envelope improvements.*
 
-<img src="figures/figure13.png" style="width:6.5in;height:3.73611in" />
+<img src="figures/figure13.png" width="624" />
 
 **Figure 9***. Global maps of country-level potential emissions reductions from separately implementing each **non-residential** building retrofit: (a) space heating, (b) water heating, (c) cooking, and (d) building envelope improvements.*
 

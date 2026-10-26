@@ -24,7 +24,7 @@ Direct emissions are released during the manufacturing of crude steel, with esti
 
 Given the lack of source-level emission data available publicly, a standardized “bottom-up” approach is used to quantify the emissions. This process is characterized by first estimating production levels at each plant, then subsequently applying a production-specific emissions factor to estimate emissions. Two approaches were used to estimate source level emissions as shown in Figure 1 below.
 
-<img src="figures/figure1.png" style="width:7.70206in;height:2.32576in" />
+<img src="figures/figure1.png" width="739" />
 
 **Figure 1** Flowchart of the methodology to calculate plant-level emissions for global steel assets.
 
@@ -36,7 +36,7 @@ GEM provides facility-level information such as location, owner, capacity, age, 
 
 [Figure](#bookmark=id.ihv636) 2 shows how steel mills are distributed globally with high concentration of sources in China. The map also highlights countries with little to no steel production, mainly concentrated in Sub-Saharan Africa, Latin America and Southeast Asia.
 
-<img src="figures/figure2.png" style="width:6.67188in;height:3.93164in" />
+<img src="figures/figure2.png" width="641" />
 
 **  
 Figure 2** Global map showing operating steel plants as of 2025. Satellite monitored facilities (shown in dark blue) and other facilities (shown in orange). The circle size represents plant production capacity, with reference scales shown at the top of the figure for 1,000 and 20,000 thousand tonnes per annum (ktpa).
@@ -69,9 +69,9 @@ All satellite datasets were sourced and processed using Google Earth Engine (Goo
 
 Where B\# refers to the band number for the specific satellite. This ratio was used to identify thermal anomalies within the temperature range of industrial processes, while eliminating most of the noise from reflectance interference. Pixel values between the Sentinel 2A/B MSI and Landsat OLI were harmonized using NASA’s band pass adjustments allowing the two image collections to be used as if they were a single collection (NASA, 2018). The harmonized dataset ensured higher revisit for time-series surface applications. Partial images (coverage of the steel facility’s boundaries less than 80%) and cloudy images (more than 20% clouds) were excluded. [Figure](#bookmark=id.1hmsyys) 3 shows an example of TAI with identified hotspots at a steel plant.
 
-<img src="figures/figure3.png" style="width:3.33611in;height:1.91966in" />
+<img src="figures/figure3.png" width="320" />
 
-<img src="figures/figure4.png" style="width:3.40923in;height:1.939in" />
+<img src="figures/figure4.png" width="327" />
 
 **Figure 3** Left**:** Identified hotspots at POSCO’s Gwangyang steel plant, South Korea, during different quarters in 2023. Right: Identified sub-assets within the facility based on thermal anomalies. Sources: modified Copernicus and USGS data, ESRI base map.
 
@@ -115,7 +115,7 @@ Two approaches were used to estimate source level production. As a priority, sat
 
 Our methodology scours satellite imagery for heat signatures from the operating steel plants. Each steel production unit is outlined with a hand-drawn polygon as shown in Figure 4. Using the GIST as a foundation, we built a global dataset of blast furnaces, coke oven batteries, sinters and pellet plants with the help of our satellite-based hotspot methodology. The current BF/BOF dataset spans 40 countries and contains the location, shape, crude steel capacity and operation start year for 334 steel plants, along with the location, shape, and type for their associated sub-assets. More details on the methodology and dataset are available on the TransitionZero website ([<span class="underline">https://www.transitionzero.org/insights/steel-data-explainer</span>](https://www.transitionzero.org/insights/steel-data-explainer)).
 
-<img src="figures/figure5.png" style="width:5.44331in;height:3.06771in" />
+<img src="figures/figure5.png" width="523" />
 
 **Figure 4** Zooming in on Hyundai Steel Integrated Steel Works (Dangjin, South Korea), with identified sub-asset polygons.
 
@@ -187,13 +187,13 @@ Verification of the modeled ERS varies depending on the strategy and the type of
 
 Figure 5 illustrates the relationship between satellite-derived Thermal Anomaly Index (TAI) and the corresponding emissions for a steel plant in France. The data demonstrates that, for most months, estimated emissions (based on production levels) align closely with fluctuations in TAI. For example, both peak just after July 2021, followed by a decrease after January 2022.
 
-<img src="figures/figure6.png" style="width:7.65625in;height:2.17546in" />
+<img src="figures/figure6.png" width="735" />
 
 **Figure 5** Satellite-based Thermal Anomaly Index (TAI; red solid line) and estimated emissions (blue solid line) at ArcelorMittal’s Fos-sur-Mer steel plant during January 2021– September 2024.
 
 However, further calibration is needed to enhance the model that translates TAI into asset-level production, as TAI data can vary significantly by asset depending on factors like equipment type, age, geographic location, and other operational conditions. The TAI values presented here are derived from the hotspot data shown in Figure 6.
 
-<img src="figures/figure7.png" style="width:4.13542in;height:3.30208in" />
+<img src="figures/figure7.png" width="397" />
 
 **Figure 6** Satellite-detected hotspots (green boxes in upper centre and centre right) over ArcelorMittal’s Fos-sur-Mer steel plant during Sep. 2024.
 
@@ -230,7 +230,7 @@ For EAF facilities, which already operate at comparatively low direct emissions,
 
 Overall, these results show that while scrap-based EAF offers the lowest direct emissions, scaling global decarbonization will also require CCS retrofits for legacy BF/BOF plants and the deployment of hydrogen-based DRI–EAF.
 
-<img src="figures/figure8.png" style="width:3.66135in;height:3.03646in" alt="Chart" />
+<img src="figures/figure8.png" width="351" alt="Chart" />
 
 **Figure 7** Average emission factors (tCO₂ per tonne of steel) before (yellow bars) and after (blue bars) the application of primary emission reduction solutions (ERS) across major steel production routes worldwide.
 
@@ -430,5 +430,5 @@ The above usage is not warranted to be error free and does not imply the express
 
 The principal inputs to steelmaking today are iron ore, energy, limestone and scrap. Iron ore and scrap are used to provide the metallic charge, with scrap having a much higher metallic concentration than iron ore. Energy inputs provide heat to melt the metallic input, and in the case of iron ore, to chemically remove oxygen. Limestone is used at various stages of the steelmaking process to help remove impurities. [Figure](#bookmark=id.2u6wntf) 8 highlights these main routes to produce steel.
 
-[<img src="figures/figure9.png" style="width:6.4552in;height:4.00521in" />](#bookmark=id.19c6y18)  
+[<img src="figures/figure9.png" width="620" />](#bookmark=id.19c6y18)  
 **Figure 8** Steel production routes - adapted from IEA (2020).

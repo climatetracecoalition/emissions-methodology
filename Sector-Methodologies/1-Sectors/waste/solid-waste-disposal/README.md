@@ -60,7 +60,7 @@ Constructing the facility dataset required pre-processing and integrating a vari
 
 *Global Plastic Watch (GPW)*: This database consists of plastic-containing waste sites identified by a system of neural networks created to analyze spectral, spatial, and temporal components of Sentinel-2 satellite data to find terrestrial waste aggregations (Global Plastic Watch, 2021). Following identification, the footprint of each site was calculated and monitored at monthly intervals. This approach has detected nearly 1,738 waste sites over 1,000 m<sup>2</sup> in 26 countries (Figure 1). The GPW method generated contours to estimate the areas of detected waste aggregations, updated at a monthly cadence from the Sentinel-2 observation period between 2017 and early-2021. As no specific timestamp was available for each site when the data was downloaded to use for this work, all areas were treated as 2021 data.
 
-<img src="figures/figure1.png" style="width:6.44598in;height:3.7442in" alt="A map of a city AI-generated content may be incorrect." />
+<img src="figures/figure1.png" width="619" alt="A map of a city AI-generated content may be incorrect." />
 
 **Figure 1.** An example of a large waste site in Indonesia as shown on GPW, showing available site attributes when selected (top left corner of the image) and the countries with locations identified in yellow (inset right).
 
@@ -92,7 +92,7 @@ The Carbon Mapper Open Data Portal provides plume detections from various sensor
 
 *IMEO*: We ingested 195 additional EnMAP (Environmental Mapping and Analysis Program) plumes from the International Methane Emissions Observatory (IMEO) data portal, with 21 identified as coal mining, 171 oil & gas, and 3 from solid waste (UNEP, 2021; [<span class="underline">https://www.unep.org/topics/energy/methane/international-methane-emissions-observatory</span>](https://www.unep.org/topics/energy/methane/international-methane-emissions-observatory)). The data spans from 3/19/2023-12/26/2024. Plumes were only used if spatially matched to a known waste site.
 
-<img src="figures/figure2.png" style="width:6.5in;height:3.20833in" />
+<img src="figures/figure2.png" width="624" />
 
 **Figure 2.** A methane plume example from a waste site (landfill) in Senegal from the Carbon Mapper website.
 
@@ -104,7 +104,7 @@ In order to create a harmonized SWDS inventory, sources reporting direct emissio
 
 OSM sites smaller than 10,000 square meters were excluded to filter out potential false positives. The threshold for GPW sites was set lower—1,000 square meters—due to the greater reliability of GPW’s remote-sensing techniques. Further refinement on OSM data required first decoding Unicode contents in the JSON labels and translating non-English labels. Sites were removed based on a list of keywords for non-MSW identifiers, such as “construction” or “tailings”.
 
-<img src="figures/figure3.png" style="width:6.5in;height:3.01181in" />
+<img src="figures/figure3.png" width="624" />
 
 **Figure 3.** Global Solid Waste Sites by Type: green dots = sanitary landfill, orange dots = dumpsites, and purple dots = controlled dumpsite.
 
@@ -118,7 +118,7 @@ Where more than one source reported an area for the same site, a single canonica
 
 An overview of the Climate TRACE solid waste methane emissions estimation process is illustrated in Figure 4. Beginning at the top of the flow chart, if the source datasets for the site included reported emissions, those emission estimates were projected to a time series using average country-level historical and projected future population growth rates. This modeling pathway will be referred to as the no-FOD pathway (top-right of flowchart), with FOD standing for first-order decay. Details of the projection methodology are provided in Section 2.2.1.
 
-<img src="figures/figure4.png" style="width:6.5in;height:4.82222in" />
+<img src="figures/figure4.png" width="624" />
 
 **Figure 4.** Waste emission modeling flowchart.
 
@@ -177,7 +177,7 @@ At every site with enough matched plume observations, we used a Bayesian scale f
 
 Specifics of the scale factor fusion model are explained in Supplemental Information SI.3. The final fused emissions time series estimate is $`\widehat{K}Q_{t}^{\text{base}}`$, where $`Q_{t}^{\text{base}}`$ is the baseline emissions time series predicted by the FOD model and $`\widehat{K}`$ is a scale factor predicted with satellite data and the fusion model. Figure 5 displays the locations where the fusion method was and wasn’t applied.
 
-<img src="figures/figure5.png" style="width:6.5in;height:3.01181in" />
+<img src="figures/figure5.png" width="624" />
 
 **Figure 5.** Global Solid Waste Sites by Emission Estimation Methodology Type.
 
@@ -264,7 +264,7 @@ Across all sites, the average methane emission rate was approximately 986 t CH�
 
 When satellite plume measurements were used to improve initial emissions estimates, the adjustments tended to be large. The median scale factor K̂ from the scale factor fusion pathway was 1.8, meaning that at a typical one of the 149 sites that qualified for that analytical strategy, the inclusion of satellite data roughly doubled our emissions estimate; the fusion raised the estimate at 123 of the 149. The distribution is strongly right-skewed — the interquartile range is 1.2 to 4.2 and the largest scale factor is near 148 — so the mean of 11.8 is not representative. Figure 6 is an example of how scale factors influence methane emission time series, along with the corresponding satellite data used in the fusion. Figure 6 shows the Environmental Complex Norte III C module, a large landfill in Buenos Aires often featured in waste methane discussions.
 
-<img src="figures/figure6.png" style="width:6.5in;height:3.94444in" />
+<img src="figures/figure6.png" width="624" />
 
 **Figure 6.** Fusion of satellite observations and modeled data for Environmental Complex Norte III C Module in Argentina. The green curve represents the final fused emission estimates, integrating modeling results (blue curve) and satellite-based observations (yellow dots).
 
@@ -272,7 +272,7 @@ When satellite plume measurements were used to improve initial emissions estimat
 
 The country-level dataset includes methane emissions estimates for 215 countries and territories from 2015 to 2026. The values are shown in Figure 7. The full Climate TRACE roster contains 252 countries; 37 have neither site data nor an EDGAR value and therefore have no published estimate. 157 countries contain at least one Climate TRACE site. Across the 3,024 country-years covered, the published value was the aggregated site total in 377, EDGAR in 2,203, and neither was available in 444. The mean annual methane emission was 175,504 t CH4 yr-1, while the median value was 22,042 t CH4 yr-1. Summed over all countries, the 13,656 inventoried sites account for roughly a third of the published country-level total: 13.6 of 40.0 Mt CH₄ in 2024 (34%), and between 34% and 36% in every year from 2015 to 2026. The remainder comes from EDGAR, used in the country-years where its estimate exceeds the sum of assets.
 
-<img src="figures/figure7.png" style="width:6.35938in;height:3.6148in" alt="A map of the world AI-generated content may be incorrect." />
+<img src="figures/figure7.png" width="611" alt="A map of the world AI-generated content may be incorrect." />
 
 **Figure 7.** Map of country-level methane emissions.
 
@@ -282,7 +282,7 @@ For years and countries where both EDGAR and asset-aggregated estimates existed,
 
 In the Climate TRACE data release for September 2026, we recommended an ERS for each SWDS based on available data, including location, income level of the country a given SWDS is in, and other site-specific information, such as GCCS availability, gas collection, and flaring efficiency. Each ERS is either a compound strategy combining both diversion and disposal-site interventions or a single strategy approach of either diversion or disposal-site interventions. *Note: A range of strategies from rank 1 to 5 are provided for assets on the Climate TRACE website.*
 
-<img src="figures/figure8.png" style="width:6.5in;height:5.5625in" alt="A graph with red and blue dots AI-generated content may be incorrect." />
+<img src="figures/figure8.png" width="624" alt="A graph with red and blue dots AI-generated content may be incorrect." />
 
 **Figure 8.** Country-level methane emissions estimates generated by aggregating Climate TRACE assets ( y-axis) compared against EDGAR estimates (x-axis). Each country dot is labeled as HIC = High Income Country (dark blue dots); UMC = Upper Middle Income Country (light blue dots); LMC = Lower Middle Income Country (orange dots); LIC = Low Income Country (red dots).
 
@@ -430,7 +430,7 @@ The heavy-tailed Student’s *t* distribution reduces the influence of outliers
 
 The model is implemented in PyMC (Abril-Pla et al., 2023) and sampled with the No-U-Turn Sampler (Hoffman & Gelman, 2014), an adaptive Hamiltonian Monte Carlo variant that is widely used as a default for general-purpose Bayesian inference. Posterior distributions for the parameters were obtained via Markov chain Monte Carlo sampling. Posterior predictive simulations were then used to estimate incoming waste for landfills with known area but missing incoming waste data. Most such landfills do not appear in the fitting data at all and therefore have no intercept of their own. Rather than assign them an improvised site term, these sites draw their site effect from the shared prior, which carries the population-level spread of site intercepts into the prediction without asserting site-specific knowledge the data does not contain. For each landfill, we calculated the posterior predictive median along with 89% credible intervals (central highest density intervals). To summarize uncertainty as a single metric, we converted these bounds to an approximate one-sigma coefficient of variation (relative uncertainty) under a log-normal approximation to the posterior predictive distribution (Limpert et al., 2001; Proost, 2019). Figure S1 compares the model's predictions with reported values for each income group.
 
-<img src="figures/figure9.png" style="width:6.51966in;height:5.00521in" />
+<img src="figures/figure9.png" width="626" />
 
 **Figure S1:** Plots of area vs incoming waste showing reported values and predictions from the area-to-incoming-waste model. a) High income countries, b) Upper middle income, c) Lower middle income, d) Lower income.
 

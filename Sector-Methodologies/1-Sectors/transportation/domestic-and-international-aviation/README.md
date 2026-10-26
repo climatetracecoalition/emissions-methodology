@@ -50,7 +50,7 @@ Since SAF usage is not directly measured in our original datasets, we rely on in
 
 Figure 1 provides an overview of the model applied by Climate TRACE along with the main data sources to calculate GHG emissions by domestic and international aviation.
 
-<img src="figures/figure1.png" style="width:7.67708in;height:2.59975in" />
+<img src="figures/figure1.png" width="737" />
 
 **Figure 1** Flow of inputs and outputs to generate aviation emissions. Steps are described in section 2.3.
 
@@ -66,7 +66,7 @@ Next, the CEMs fuel tables and the ICAO fuel consumption tables were used to est
 
 Finally, the resulting GHG emissions were either attributed fully to a country, if the route was domestic, or divided in half between countries in case of an international route. For airport source level emissions attribution, the GHG was divided in half between airports and the trip was classified into domestic or international category. The emissions for each country and airport were then aggregated by year and month to give the total aviation emissions by country and airport for 2015-2025. Figure 2 provides an example of the airport coverage and relative emissions generated at each one.
 
-<img src="figures/figure2.png" style="width:6.50521in;height:3.56669in" />
+<img src="figures/figure2.png" width="625" />
 
 **Figure 2:** Visualization of global airport coverage. Size of circle represents annual total CO<sub>2</sub>e 100-year Global Warming Potential (GWP<sub>100</sub>) emissions in 2024.
 

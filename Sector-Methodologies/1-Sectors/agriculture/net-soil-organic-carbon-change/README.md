@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" width="266" />
 
 ### Agriculture sector: Net Soil Organic Carbon Change
 
@@ -36,7 +36,7 @@ We simulate annual soil organic carbon (SOC) stock change and the associated CO�
 
 For each grid cell, SALUS simulations are conducted using input forcing as provided in Table 1. Annual differences in simulated SOC stocks are used to estimate the delta SOC change. Positive differences indicate greater soil carbon storage, whereas negative values indicate lower SOC. Carbon-stock differences are converted to CO₂ mass using the molecular-weight ratio between CO₂ and carbon. For the emission-reduction scenarios, annual mitigation benefits were calculated relative to the paired baseline simulation. Detailed equations, units, sign conventions, annual accounting definitions, and the distinction between annual SOC change, CO₂ flux, and annual mitigation benefit are provided in Supplementary Text S1. These definitions should be considered when interpreting the SOC and CO₂ results presented below.
 
-<img src="figures/figure1.png" style="width:5.48438in;height:3.32208in" />
+<img src="figures/figure1.png" width="527" />
 
 **Figure 1** Process-based SALUS schematic (Basso et al., 2025b).
 
@@ -100,7 +100,7 @@ At each stage of decomposition, only a portion of carbon is retained within the 
 
 The rates of these transformations are dynamically regulated by environmental and soil conditions, including soil temperature, soil water content, clay content, nitrogen availability, residue quality, and soil depth. As a result, the same quantity of residue input or the same management intervention can produce different SOC responses among locations because decomposition and stabilization are controlled by local climate, soil properties, crop productivity, and residue characteristics.
 
-<img src="figures/figure2.png" style="width:7.33854in;height:4.19497in" />
+<img src="figures/figure2.png" width="704" />
 
 **Figure 2** SALUS Soil Organic Carbon dynamics (Basso et al. 2015; Basso et al. 2025b).
 
@@ -160,15 +160,15 @@ At the national scale, the largest modeled baseline emissions were concentrated 
 
 These results establish the reference trajectory against which the no-till, cover-crop, and combined emission-reduction scenarios reported in the following sections are evaluated: a large but gradually narrowing global cropland carbon source under current management practice.
 
-<img src="figures/figure3.png" style="width:7.21875in;height:4.10415in" />
+<img src="figures/figure3.png" width="693" />
 
 **Figure 3** Baseline SOC change (Mg C ha⁻¹; negative = net source or a loss of carbon), for 2016-2025 average.
 
-<img src="figures/figure4.jpg" style="width:5.43821in;height:2.92189in" />
+<img src="figures/figure4.jpg" width="522" />
 
 **Figure 4** Global baseline net SOC emissions, 2016–2025 (Gt CO₂).
 
-<img src="figures/figure5.png" style="width:5.30729in;height:3.24722in" />
+<img src="figures/figure5.png" width="509" />
 
 **Figure 5** Top 10 countries by baseline net SOC emissions, 2016-2025 (Mt CO₂).
 
@@ -184,7 +184,7 @@ Applying no-till and cover cropping together produced the largest additional SOC
 
 The combined response was slightly greater than the summed benefits of the two individual scenarios over the full study period. No-till and cover cropping applied independently produced cumulative benefits of 1.584 and 1.988 Gt C, respectively, corresponding to 3.572 Gt C when summed, compared with 3.718 Gt C under the combined scenario. The combined response was therefore approximately 4.1% greater than the simple additive expectation over 2016–2025. However, this difference varied among years, indicating that the interaction between the two management practices was not consistently additive through time.
 
-<img src="figures/figure6.png" style="width:7.13021in;height:6.81404in" />
+<img src="figures/figure6.png" width="685" />
 
 **Figure 6** Annual soil organic carbon (SOC) benefit of alternative management scenarios relative to paired baseline management during 2016–2025. Values represent the difference in annual SOC change between each ERS simulation and its corresponding baseline simulation, rather than absolute SOC change under the ERS. Positive values indicate that more SOC was retained under the ERS than under baseline management; because the baseline simulations generally exhibited net SOC losses, a positive benefit can represent a reduction in SOC loss rather than an absolute increase in SOC stock. Each ERS was simulated independently from the same initial SOC conditions as its paired baseline. (a) No-till relative to baseline tillage. (b) Cover cropping with baseline tillage retained. (c) Combined no-till and cover cropping relative to baseline management. Values below each panel summarize the annual benefit in 2016 and 2025, the change between those years, and cumulative additional SOC retained during 2016–2025.
 
@@ -194,7 +194,7 @@ Cover cropping produced a broader and more spatially consistent response, with p
 
 The combined no-till + cover-crop scenario produced both the largest per-area SOC gain and the greatest spatial consistency (Figure 7c). Positive responses occurred in 98.4% of evaluated grid cells, with a global mean annual benefit of 363 kg C ha⁻¹ and a median of 362 kg C ha⁻¹. The close agreement between the mean and median, together with the high proportion of positive grid cells, indicates that the greater global benefit of the combined scenario was distributed broadly across the modeled cropland area rather than being driven only by a small number of high-response locations.
 
-<img src="figures/figure7.png" style="width:6.17708in;height:8.58335in" />
+<img src="figures/figure7.png" width="593" />
 
 **Figure 7** Spatial distribution of mean annual SOC benefit for (a) no-till, (b) cover cropping, and (c) no-till + cover cropping relative to baseline management, averaged across 2016–2025. Positive values indicate additional SOC retention and therefore an emission-reduction benefit. Values are expressed as kg C ha⁻¹ yr⁻¹.
 
@@ -206,11 +206,11 @@ Under the combined scenario, the United States became the largest national contr
 
 Overall, the results show a clear ranking among the evaluated management strategies. Cover cropping produced a larger and more temporally stable global SOC benefit than no-till alone, whereas their combined implementation generated the greatest and most spatially consistent increase in SOC retention. However, the magnitude of the response varied substantially among regions and countries, emphasizing the importance of representing management effects within their local soil, climate, and cropping-system context
 
-<img src="figures/figure8.png" style="width:6.74479in;height:5.49657in" />
+<img src="figures/figure8.png" width="647" />
 
 **Figure 8** Ten largest national SOC benefits in 2025 under (a) no-till, (b) cover cropping, and (c) no-till + cover cropping relative to baseline management. Values are expressed as Mt CO₂ yr⁻¹.
 
-<img src="figures/figure9.png" style="width:7.25in;height:7.07866in" />
+<img src="figures/figure9.png" width="696" />
 
 **Figure 9** Annual SOC benefits for the ten largest cumulative national contributors under (a) no-till, (b) cover cropping, and (c) no-till + cover cropping during 2016–2025. Values are expressed as Mt CO₂ yr⁻¹. Positive values represent additional SOC retained relative to baseline management.
 

@@ -16,7 +16,7 @@ Point-source visibility for the sector is poor. Production is fiercely competiti
 
 Figure 1 details the aluminium sector processes, from bauxite mining, through to manufacture and use. The emissions estimated in this study correspond only to the processes within the circle. A breakdown of the emissions within scope is described in Section 2.1.
 
-<img src="figures/figure1.png" style="width:6.35417in;height:2.54167in" />
+<img src="figures/figure1.png" width="610" />
 
 **Figure 1** High-level overview of the aluminum sector describing processes and sources of GHG emissions. The scope of this study, primary aluminum production emissions, is enclosed by a circle.
 
@@ -70,7 +70,7 @@ We use publicly available data sources and inventories to estimate primary alumi
 
 #### 4. Method
 
-<img src="figures/figure2.png" style="width:5.26323in;height:7.28527in" />
+<img src="figures/figure2.png" width="505" />
 
 **Figure 2** Flowchart of the methodology to calculate facility-level emissions for aluminum smelters and alumina refineries.
 
@@ -86,7 +86,7 @@ The foundation of our emissions estimates is monthly alumina and aluminum produc
 
 Asset capacity data is sourced from IIR (2026) and LMA (R. Pawlek, 2026). Facility-level production is then multiplied by the relevant Scope 1 and Scope 2 emissions factors to derive point source emissions estimates.
 
-<img src="figures/figure3.png" style="width:6.35417in;height:3.75in" />
+<img src="figures/figure3.png" width="610" />
 
 **Figure 3** Visual representation of the primary aluminum assets used in this work. Refinery assets are represented by blue circles, whilst smelting assets are represented by orange circles, and integrated assets are represented by dark blue circles. The circle size reflects the plant capacity as shown top left with the smallest circle = 250,000 and large circle = 5,000,000.
 
@@ -198,7 +198,7 @@ The EU ETS is a highly regulated cap-and-trade market where industrial installat
 
 -   Includes all combustion within the facility (electrolysis + casting + baking + 100% of on-site backup/combustion generation).
 
-<img src="figures/figure4.png" style="width:5.98958in;height:4.75in" />
+<img src="figures/figure4.png" width="575" />
 
 **Figure 4** Comparison of ETS and Climate TRACE Scope 1 and captive power emissions for 2025 (tonnes) for the countries reported by ETS with non-zero emissions. The dashed line indicates exact agreement and the shaded band ±20% of verified emissions.
 
@@ -222,7 +222,7 @@ To facilitate a comparative analysis, we have mapped our calculated asset-level 
 
 The Climate TRACE framework deliberately maintains the asset-gate boundary: forcing upstream alumina emissions into every smelting asset's footprint would require top-down regional trade assumptions, as alumina is a highly traded global commodity. By isolating the smelting stage, our model preserves the 'clean signal' of local decarbonization efforts - such as low-carbon PPAs and localized grid optimizations without diluting it with the fossil-thermal footprint of offshore alumina refining.
 
-<img src="figures/figure5.png" style="width:5.98958in;height:4.88002in" />
+<img src="figures/figure5.png" width="575" />
 
 **Figure 5** Country-level comparison of Climate TRACE and GEI primary aluminum emissions ratings, 2023.
 

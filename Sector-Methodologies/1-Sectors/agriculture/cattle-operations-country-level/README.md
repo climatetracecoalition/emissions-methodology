@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" width="266" />
 
 ### Agriculture sector- Cattle Operations- Country-level Enteric Fermentation and Manure Management Emissions
 
@@ -28,7 +28,7 @@ To improve country-level emission estimates for beef and dairy cattle in operati
 
 Figure 1 displays the overall process used to estimate country-level enteric fermentation and manure management emissions from cattle operations. FAOSTAT and USDA datasets were used to estimate emissions from cattle in operations at the country level (FAOSTAT) or the U.S. state level (USDA) then summed to the U.S. country total. Here, we define an operation as any facility that raises cattle, including but not limited to animal feeding operations (AFOs), feedlots, ranches, farms, dairies, and cow-calf operations (Rotz et al., 2019). Because FAOSTAT and USDA report cattle differently, each required its own sequence of steps to identify the animals held in operations (Figure 1, Box 1). Where Climate TRACE had deployed AI models to identify individual cattle operations, asset-level totals were summed by country and used to replace a subset of the FAOSTAT or USDA beef and dairy cattle in each country or U.S. state, improving the representation of cattle in operations. Once the datasets were combined, emissions were estimated using the Tier 2 emission factors and equations of the 2019 IPCC Refinement (Figure 1, Box 2). Enteric fermentation drew on Chapter 10 (Emissions from Livestock and Manure Management); manure management drew on Chapter 10 and Chapter 11 (N₂O Emissions from Managed Soils, and CO₂ Emissions from Lime and Urea Application) (IPCC, 2019a; IPCC, 2019b). Country-level climate zones generated from CRU TS v4.10 determined which climate-dependent factors applied. The resulting per-year estimates constituted the final country-level emissions (Figure 1, Box 3). A description of each dataset and application to these emitting sectors are described in section 2.1. below.
 
-<img src="figures/figure1.png" style="width:4.76605in;height:4.27334in" />
+<img src="figures/figure1.png" width="458" />
 
 **Figure 1.** Flowchart of the process used to generate country-level enteric fermentation and manure management emissions from cattle operations. Box 1: FAOSTAT (by country) and USDA (by U.S. state) data were used to define the cattle held in operations; where Climate TRACE has identified individual cattle operations, asset-level totals were summed by country and replaced a subset of the FAOSTAT or USDA beef and dairy cattle. Box 2: IPCC (2019) Chapter 10 and Chapter 11 emission factors and equations, together with country-level climate zones generated from CRU TS, were applied to those cattle totals to estimate manure management and enteric fermentation emissions for each quarter per year. Box 3: The resulting per-year estimates constituted the final country-level emissions. See the following section for detail on each box and dataset used.
 
@@ -78,7 +78,7 @@ Enteric fermentation emissions were estimated using the Tier 2 approach in Secti
 
 The updated 2019 IPCC guidelines require climate zones to estimate CH₄ emissions by manure management system, an update from the 2006 guidelines, which relied on temperature-based emission factors (Figure 2). To derive climate-zone-specific methane conversion factors (MCF) (Table 10.17) to estimate manure management emissions, we used the Climatic Research Unit gridded Time Series (CRU TS) v4.10 NetCDF files (version June 7, 2026) from the University of East Anglia (Harris et al., 2020).
 
-<img src="figures/figure2.png" style="width:6.5in;height:3.36111in" />
+<img src="figures/figure2.png" width="624" />
 
 **Figure 2** IPCC 2019 major climate zones identified (image taken from IPCC 2019 Chapter 3, volume 4; IPCC, 2019a).
 
@@ -116,7 +116,7 @@ Where “Producing Animals/Slaughtered” exceeded “Cattle, non-dairy,” a re
 
 USDA reports specific "Data Items" (hereafter cattle subtypes) in its Cattle Inventory (https://www.nass.usda.gov/Surveys/Guide\_to\_NASS\_Surveys/). Not all of these subtypes represent cattle in an operation, and for those that do end up on feed, only a percentage is allocated to an operation. Figure 3 shows the subtypes considered to be in an operation for each U.S. state, and the identification process is described below (numbering follows Figure 3).
 
-<img src="figures/figure3.png" style="width:6.45313in;height:4.63271in" />
+<img src="figures/figure3.png" width="620" />
 
 **Figure 3** USDA NASS cattle subtypes considered to be in an operation. Parallelograms (subtypes 1, 2, and 8) are the subtypes carried forward and combined with Climate TRACE asset-level cattle operations to estimate state- and country-level emissions (circle); rectangles are intermediate subtypes. Solid lines represent the dairy system and dashed lines the beef system. Subtypes 1 and 2 — replacement heifers and milk cows — were assumed to be 100% in a dairy operation. On the beef side, all of subtypes 4 and 5 and an unknown percentage of subtype 3 enter the “Cattle for Beef System,” a grouping that is not itself a reported NASS Data Item; a portion of these are placed in a feedlot on feed and reported as subtypes 6 and 7, which together compose subtype 8. Subtype 8 is Cattle on feed – inventory capacity.
 
@@ -267,7 +267,7 @@ Country boundaries came from the Global Administrative Areas (GADM) project, ver
 
 The monthly climate zones were then used to select methane conversion factors (MCF) from IPCC (2019b) Table 10.17 by manure management system and climate region, applied separately to dairy cattle and non-dairy cattle. The resulting monthly MCF values were then averaged to quarterly MCF values for 2015 through 2025. The same disaggregated climate zones were used to select EF<sub>4</sub> from Table 11.3 — N volatilisation and re-deposition, in kg N₂O–N per kg (NH<sub>3</sub>–N + NO<sub>X</sub>–N volatilised) — for wet or dry climate zones. For EF₅ (leaching/runoff, kg N₂O–N (kg N leaching/runoff)<sup>-1</sup>, a default value was used since there is no difference between wet and dry climates.
 
-<img src="figures/figure4.png" style="width:6.53125in;height:2.51042in" />
+<img src="figures/figure4.png" width="627" />
 
 **Figure 4** Illustrative example of the monthly-to-quarterly MCF derivation. Step 1 - a single GADM level 0 centroid per country gives one climate zone per month. Step 2 - each monthly climate zone selects an MCF from IPCC 2019 Table 10.17 by manure management system (from Table 10A.6 AWMS) and climate zone, applied separately to dairy and non-dairy cattle. Step 3 - the three monthly MCF values are averaged to a quarterly value - July, August, and September MCFs become quarter 3 MCF.
 

@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" width="266" />
 
 ### Agriculture sector: Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions
 
@@ -28,13 +28,13 @@ Once individual operations were identified, the total head of cattle was estimat
 
 #### 2. Materials and Methods
 
-<img src="figures/figure1.png" style="width:6.49732in;height:3.53078in" />
+<img src="figures/figure1.png" width="624" />
 
 **Figure 1** Countries with cattle operation emissions, shaded by region, based on version 5.11. Climate TRACE data release. Emissions were estimated for 41 countries. The number of cattle operations identified varies by country, see Tables 5 and 6.
 
 Figure 1 displays the current country coverage from Climate TRACE data release v5.11. To find these individual cattle operations within a specific country required identifying seed data (known cattle operations) to train AI models to find similar features in remote sensing imagery, either Sentinel-2 or PlanetScope imagery. Once operations were identified, another set of models were trained to identify those with wet manure management systems - liquid/slurry and anaerobic lagoons, hereafter 'manure ponds' - which flagged high-productivity operations and determined which IPCC 2019 manure management emission factors were applied. The total head of cattle at each operation was then estimated using reported cattle numbers, country- or sub-country-level mean values, or, where the operation's area footprint could be delineated, regression modelling. These inputs were used with IPCC 2019 EFs and equations to estimate enteric fermentation and manure management emissions quarterly for years 2015 to 2025 (Figure 2). Quarterly emissions data were generated because some of the major cattle producing countries — the U.S., Canada, and Australia — produce quarterly cattle reports every year, and the aim of this work was to match a similar quarterly reporting structure.
 
-<img src="figures/figure2.png" style="width:6.99479in;height:4.99948in" />
+<img src="figures/figure2.png" width="671" />
 
 **Figure 2** Overview of the approach used to identify individual cattle operations and estimate their emissions. (1) Seed data — known cattle operations — were combined with Sentinel-2 or PlanetScope satellite imagery to train AI detection models, which identified the location and, where possible, the area footprint of individual cattle operations. (2) A convolutional neural network (CNN) then identified operations with wet manure management systems (liquid/slurry and anaerobic lagoons, hereafter ‘manure ponds’); the presence of these systems flagged high-productivity operations and determined which IPCC 2019 manure management and enteric fermentation EFs were applied. (3) Assign attributes for modeling - country default assigned where no manure pond was detected, cattle type (beef or dairy), total head of cattle, capacity and death and loss factors, and quarterly climate zones - were assigned to all operations. A subset of locations were used for regression modelling using the delineated footprint area. (4) IPCC 2019 EFs and equations were then applied to estimate manure management CH₄ (Tier 2) and N₂O (Tier 1), and enteric fermentation CH₄ (Tier 2), for each quarter from 2015 to 2025 for every cattle operation. More detailed information can be found in the following sections.
 
@@ -50,9 +50,9 @@ Second, for non-U.S. countries, country-specific research was performed to ident
 
 This involved identifying high-confidence seed locations for both the Earth Index and TDX models. Publicly available high-resolution basemaps (Google Maps, Bing Maps, and Mapbox) and ancillary tools such as Google Street View were used to visually confirm cattle operations, including verifying publicly listed farm types where available. At sub-meter resolution, individual cattle are often directly visible and can typically be distinguished from other livestock such as horses, sheep, or poultry, whose operations may share similar structural features. Additional region-specific indicators were also used, including characteristic CAFO infrastructure, manure lagoons, anaerobic digesters, hay storage, feeding troughs, open shade structures, building skylights, cattle pathways from pens to pasture, and, in particular, the presence of dark, manure-rich soil surfaces (Figure 3).
 
-<img src="figures/figure3.png" style="width:5.625in;height:4.64962in" />
+<img src="figures/figure3.png" width="540" />
 
-<img src="figures/figure4.png" style="width:5.59375in;height:3.17708in" />
+<img src="figures/figure4.png" width="537" />
 
 **Figure 3** Cattle operations identified in A) Pakistan, a cattle colony with B) a close-up (green box) where the cattle are housed. Note, the cattle colony has mixed buffalo and cows in this area. C) An Irish dairy farm, where cattle can be seen in the lower right corner. D) A dairy farm in China and E) in India. F) A feedlot in Paraguay with G) a close-up of the pens (purple box) where the cattle occupy the lower left corner of the pen.
 
@@ -64,7 +64,7 @@ Cattle operations were detected using two AI models - Earth Index and TerraDetec
 
 The Earth Index model is a digital platform developed by Earth Genome (https://www.earthgenome.org/earth-index) for detecting objects on the Earth’s surface using AI foundation models and satellite imagery. It supports a human-in-the-loop workflow for building locally tuned models and datasets iteratively. The Earth Index system processes the satellite composites through an AI foundation computer vision model, yielding embedding vectors that encode numerical representations of the topography on each small patch of the Earth’s surface. These vector representations are then passed to a target-specific classifier, trained by a user with successively larger labeled datasets, which produces detections across a region with quantifiable accuracy metrics (Figure 4).
 
-<img src="figures/figure5.jpg" style="width:6.5in;height:1.90278in" />
+<img src="figures/figure5.jpg" width="624" />
 
 **Figure 4** Schematic Earth Index workflow for cattle facility detection.
 
@@ -130,7 +130,7 @@ The Dept. of Earth, Environmental and Geospatial Science, Saint Louis University
 
 The CNN architecture consisted of successive convolutional layers to extract increasingly complex spatial patterns. Each convolutional layer is followed with a max-pooling layer to progressively condense the information creating a convolutional block. The convolutional blocks provide a hierarchy of learned features, ranging from location textures to higher-level representations. After feature extraction, the network flattens the output of the convolutional blocks and passes them through fully connected layers, ultimately reaching a SoftMax classification layer providing a probability distribution of whether the cattle operation has a pond present in its premises or not. The CNN generated a binary output that classifies feedlots as either containing a pond or not. This output produced an interpretable, map-based product that can be applied across diverse geographies.
 
-<img src="figures/figure6.png" style="width:4.86458in;height:5.24592in" />
+<img src="figures/figure6.png" width="467" />
 
 **Figure 5** CNN-Based Manure Pond Detection Workflow. Convolutional Neural Networks (CNNs), trained on Earth Index multispectral and Vision Transformer (ViT) embeddings, classify cattle operations as pond-present or pond-absent, indicating the presence of a manure lagoon management system. The workflow consists of: 1) Embedding Acquisition: Retrieve Earth Index embedding vectors for the country or region of interest. 2) Training Sample Preparation: Crop embeddings to the cattle operation boundaries previously identified in the feedlot detection stage. 3) Model Training: Train a custom CNN classifier to distinguish operations with and without manure ponds. 4) Visualization: Map model outputs using class-specific symbology—yellow boundaries denote operations with ponds; green boundaries indicate no pond.
 
@@ -158,7 +158,7 @@ Model optimization targets the foreground (pond) channel using a compound object
 
 The models learn with a weighted sum of these losses to ensure balanced optimization. Gradients flow only through the pond channel to “learn” from the satellite image what pixels belong to a manure pond and the background channel, anything else that isn’t a manure pond, is implicitly modeled (Figure 6).
 
-<img src="figures/figure7.png" style="width:1.93418in;height:1.85in" /><img src="figures/figure8.png" style="width:2.24028in;height:1.85in" /><img src="figures/figure9.png" style="width:2.17708in;height:1.85in" />
+<img src="figures/figure7.png" width="186" /><img src="figures/figure8.png" width="215" /><img src="figures/figure9.png" width="209" />
 
 **Figure 6** TerraDetect Pond Model Segmentation Outputs for various cattle operations globally. Red bounding boxes indicate what the model determined was a pond. Note that the red bounding boxes’ extent are based on PlanetScope imagery, not the Google map imagery shown in this figure.
 
@@ -218,7 +218,7 @@ Section 3.2.2 describes the multiple MMS and approach to estimate manure emissio
 
 The updated 2019 IPCC guidelines require climate zones to estimate CH₄ emissions by manure management system, an update from the 2006 guidelines, which relied on temperature-based emission factors (Figure 7). To derive climate-zone-specific methane conversion factors (MCF) (Table 10.17) to estimate manure management emissions, we used the Climatic Research Unit gridded Time Series (CRU TS) v4.10 NetCDF files (version June 7, 2026) from the University of East Anglia (Harris et al., 2020).
 
-<img src="figures/figure10.png" style="width:6.5in;height:3.36111in" />
+<img src="figures/figure10.png" width="624" />
 
 **Figure 7** IPCC 2019 major climate zones identified (image taken from IPCC 2019 Chapter 3, volume 4; IPCC, 2019a).
 
@@ -274,7 +274,7 @@ Reported cattle numbers were also used to assign multiple MMS along with if a ma
 
 <table><thead><tr class="header"><th><strong>Region (ISO3)</strong></th><th><strong>Cattle type</strong></th><th><strong>Condition</strong></th><th><p><strong>MMS combination applied</strong></p><p><strong>(based on IPCC naming)</strong></p></th><th><strong>Multiple MMS key</strong></th></tr></thead><tbody><tr class="odd"><td><strong>New Zealand (NZL)</strong></td><td>All</td><td>Pond detected</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Pasture/range/paddock; Uncovered anaerobic lagoon</td><td><strong>pst1</strong></td></tr><tr class="even"><td></td><td>All</td><td>No pond</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Pasture/range/paddock; Solid storage</td><td><strong>pst2</strong></td></tr><tr class="odd"><td><strong>Japan, Korea (JPN, KOR)</strong></td><td>All</td><td>Pond detected</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Composting — static pile (forced aeration)</td><td><p><strong>modified</strong></p><p><strong>wet3</strong></p></td></tr><tr class="even"><td></td><td>Mature dairy</td><td>No pond</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Composting — static pile (forced aeration)</td><td><p><strong>modified</strong></p><p><strong>wet3</strong></p></td></tr><tr class="odd"><td></td><td>Other (beef)</td><td>No pond</td><td>Solid storage; Composting — static pile (forced aeration)</td><td><p><strong>modified</strong></p><p><strong>wet3</strong></p></td></tr><tr class="even"><td><strong>Western and Eastern Europe <sup>a</sup></strong></td><td>All</td><td>Pond detected</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Pasture/range/paddock; Solid storage</td><td><strong>pst2</strong></td></tr><tr class="odd"><td></td><td>All</td><td>Dry lot or solid storage</td><td>Dry lot; Solid storage</td><td><strong>dry2</strong></td></tr><tr class="even"><td><strong>AUS, CAN, USA, ZAF, BWA <sup>b</sup></strong></td><td>Mature dairy</td><td>Pond detected or ≥200 head — dry climate operation <sup>c</sup></td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Uncovered anaerobic lagoon; Dry lot</td><td><strong>wet1</strong></td></tr><tr class="odd"><td></td><td>Mature dairy</td><td>Pond detected or ≥200 head — all other climates</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Uncovered anaerobic lagoon</td><td><strong>wet2</strong></td></tr><tr class="even"><td></td><td>Mature dairy</td><td>Pond detected — wet climate operation <sup>c</sup>, U.S. only</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Uncovered anaerobic lagoon</td><td><strong>wet4</strong></td></tr><tr class="odd"><td></td><td>Mature dairy</td><td>No pond and &lt;200 head</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Pasture/range/paddock; Solid storage</td><td><strong>pst2</strong></td></tr><tr class="even"><td></td><td>Other (beef)</td><td>Pond detected</td><td>Uncovered anaerobic lagoon; Dry lot; Solid storage</td><td><strong>dry1</strong></td></tr><tr class="odd"><td></td><td>Other (beef)</td><td>No pond</td><td>Dry lot; Solid storage</td><td><strong>dry2</strong></td></tr><tr class="even"><td><strong>ROW <sup>d</sup></strong></td><td>All</td><td>Pond detected</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Uncovered anaerobic lagoon</td><td><strong>wet2</strong></td></tr><tr class="odd"><td></td><td>All</td><td>Dry lot or solid storage</td><td>Dry lot; Solid storage</td><td><strong>dry2</strong></td></tr></tbody></table>
 
-<img src="figures/figure11.png" style="width:3.55208in;height:2.15246in" /> <img src="figures/figure12.png" style="width:3.55883in;height:2.2in" />
+<img src="figures/figure11.png" width="341" /> <img src="figures/figure12.png" width="342" />
 
 **Figure 8** Assignment of multiple manure management systems (MMS) to two detected cattle operations: left, a dairy operation assigned the wet1 multiple MMS, and, right, a beef operation assigned dry1. The dairy operation was assigned wet1 because a manure pond was detected and the operation falls in a dry climate; the beef operation was assigned dry1 because a manure pond was detected. Each system in a multiple MMS is given a fraction of manure ($`\text{Mfrac}`$), which allocates the manure produced, and the resulting volatile solids and total nitrogen excreted, across systems and sums to 1. Multiple MMS assignments by region and cattle type are given in Table 3, and $`\text{Mfrac}`$ values in Table 4 (image modified from Owen and Silver, 2015).
 
@@ -282,7 +282,7 @@ Reported cattle numbers were also used to assign multiple MMS along with if a ma
 
 The monthly climate zones, assigned cattle types, and multiple MMS were used to select each system's methane conversion factor (MCF) from Table 10.17 (IPCC 2019b). Operations with a detected pond were assigned the condition ‘pond’ and allocated across multiple MMS based on country research, while operations without a detected pond were assigned their country’s estimated common manure management system (Table 3). Each MMS assigned to an operation carries its own MCF. The resulting monthly MCF values by MMS were then averaged to quarterly values for 2015 through 2025. The same climate zones were used to select EF₄ from Table 11.3 — N volatilisation and re-deposition, in kg N₂O–N per kg (NH₃–N + NOₓ–N volatilised) — for wet or dry climate zones. For EF₅ (leaching and runoff, in kg N₂O–N per kg N leaching or running off), a default value was used, since IPCC does not distinguish between wet and dry climates for this factor. Figures 8 and 9 provide examples of this assignment.
 
-<img src="figures/figure13.png" style="width:7.5in;height:3.13929in" />
+<img src="figures/figure13.png" width="720" />
 
 **Figure 9** An example of deriving quarterly methane conversion factors (MCF) for a beef cattle operation, using an Australian feedlot in Q1 2021 as an example. (1) For an individual cattle operation identified by the AI detection models, the centroid per operation returned a (2) CRU TS climate zone for each month: warm temperate dry in January and February, cool temperate dry in March. (3) Cattle attributes assigned to the operation — beef, 1,000 head, manure pond detected — determine the multiple MMS assumed to be in use. (4) Cattle type, manure management system, and monthly climate zone together select an MCF from IPCC (2019) Table 10.17. (5) The three monthly values for each system were averaged to a quarterly MCF.
 
@@ -856,15 +856,15 @@ To estimate total head of cattle using area footprints relies on the relationshi
 
 Figures S1 to S3 display the relationship between beef and dairy footprint area to total head of cattle. For all regions, as the total area increases, so does the total head of cattle. Beef operations have relatively higher R2 values compared to dairy operations, ranging between 0.65 to 0.91 (p&lt;.001; Figures S1 and S3). Additionally, beef operations tend to have larger cattle populations than dairies. In Figures S2 and S3, dairy R2 values vary between 0.22 (not statistically significant) to 0.57 (p&lt;.001). Dairy operations tend to have relatively smaller cattle populations compared to beef operations. The lower R2 values for dairy operations also suggest there may be a density factor occurring. Based on literature describing dairy farm design, the stall width and length requirements allocate less space to dairy cows, \~2.8m2 to \~3.2m2, compared to beef, \~2.3m2 to \~14m2 (Euken et al., 2015; McFarland and Tyson 2016; Krekelberg 2020). Less area is allocated to dairy cows suggesting more cows are packed into an area, a density factor currently not captured here. However, based on the Spearman correlation analysis, and the scatter plots with R2 values, does support our hypothesis that beef or dairy operation footprint area can be used as a useful predictor of the total head of cattle.
 
-<img src="figures/figure14.png" style="width:6in;height:4.9901in" />
+<img src="figures/figure14.png" width="576" />
 
 **Figure S1** The relationship between U.S. beef operation footprint areas to total head of cattle for A) West, B) Plains, C) Pacific, and D) Midwest, Number of operations, R<sup>2</sup> values, and statistical significance are included for each U.S. region. Note, the x- and y-axis ranges differ for each plot.
 
-<img src="figures/figure15.png" style="width:5.90625in;height:4.79167in" />
+<img src="figures/figure15.png" width="567" />
 
 **Figure S2** The relationship between U.S. dairy operation footprint areas to total head of cattle for A) West, B) Plains, C) Pacific, and D) Midwest, Number of operations, R<sup>2</sup> values, and statistical significance are included for each U.S. region. Note, the x- and y-axis ranges differ for each plot.
 
-<img src="figures/figure16.png" style="width:2.86458in;height:2.31317in" /><img src="figures/figure17.png" style="width:2.84375in;height:2.28192in" />
+<img src="figures/figure16.png" width="275" /><img src="figures/figure17.png" width="273" />
 
 **Figure S3** The relationship between A) Australia beef operation footprint areas and B) China dairy operation footprint areas to total head of cattle. Number of operations, R<sup>2</sup> values, and statistical significance are included for each country. Note, the x- and y-axis ranges differ for each plot.
 
@@ -872,9 +872,9 @@ Figures S1 to S3 display the relationship between beef and dairy footprint area 
 
 Figure S4 displays each linear regression model’s performance relative to estimate the total head of cattle. The *U.S.-AUS Beef* model has the largest RMSE at 22,590 followed by the *U.S.-AUS Dairy* at 3,605, and, lastly, *Dairy China at 1,467*. R<sup>2</sup> values range between 0.197 to 0.474 (*p*&lt;.001). The *U.S.-AUS Beef* and *Dairy* tend to underpredict when the total head of cattle is 55,000 and 10,000, respectively. The *Dairy China model* tends to underpredict when the total head of cattle is \~2,000. This underprediction is due Climate TRACE seeking to identify the largest emitters in each sector. For this sector, we focused on the largest emitting cattle operations based on size. For the AI models discussed in section 2.2, it was easier to identify large cattle operations since they stand out relative to the background. Smaller operations, which could be a single barn and no other defining features, were harder to identify. As a result, our sample training data for the regression models are slightly biased. As a result, extremes in estimating total head of cattle can exist.
 
-<img src="figures/figure18.png" style="width:3.26268in;height:3in" /> <img src="figures/figure19.png" style="width:3.48761in;height:3in" />
+<img src="figures/figure18.png" width="313" /> <img src="figures/figure19.png" width="335" />
 
-<img src="figures/figure20.png" style="width:3.30702in;height:3in" />
+<img src="figures/figure20.png" width="317" />
 
 **Figure S4** Scatter plots comparing reported total head of cattle (x-axis) to estimated (modeled) total head of cattle (y-axis). The models are as follows: Top left) U.S and Australia Beef Operations; Top right) U.S and Australia Dairy Operations; Bottom left) China Dairy Operations. Blue vertical lines are 95% confidence intervals.
 
@@ -926,7 +926,7 @@ The demand-side reduction is the same as described above and follows Project Dra
 
 The second strategy replaces a single manure management system (MMS) within an operation's multiple MMS with a lower-emitting system, classified as a retrofit. As described in Section 2.6, we estimate emissions from each individual system in the assigned multiple MMS. To reduce emissions, we introduce a scenario in which one system in the multiple MMS is replaced with a lower-emitting system, as shown in Figure S5. The change from a higher- to a lower-emitting source gives a new ratio factor. This approach addresses CH₄ only, since CH₄ accounts for the majority of manure management emissions relative to N₂O.
 
-<img src="figures/figure21.png" style="width:3.53125in;height:2.33639in" /><img src="figures/figure22.png" style="width:3.711in;height:2.5in" />
+<img src="figures/figure21.png" width="339" /><img src="figures/figure22.png" width="356" />
 
 **Figure S5** An example of replacing a single manure system in a multiple MMS. Left image, the original multiple MMS identified as ‘*wet1*’ with the following systems: liquid/slurry or pit storage (*lp*), dry lot (*dl*), solid storage (*ss*), and uncovered anaerobic lagoon (*ual*), creating the key combo lp\_dl\_ss\_ual. Right image, to reduce emissions, the solid storage system is replaced with composting intensive windrow (*ss5; blue arrow*) creating the new key *lp\_dl\_ss5\_ual* (**(image modified from** Dentel and Qi, 2014 and Owen and Silver, 2015).
 

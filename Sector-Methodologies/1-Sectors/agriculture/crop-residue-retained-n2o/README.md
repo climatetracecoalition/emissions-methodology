@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" width="266" />
 
 ### Agriculture sector: Crop Residue Retention- Direct and Indirect Nitrous Oxide Emissions
 
@@ -160,7 +160,7 @@ Using the C:N thresholds adopted for the ERS analysis, only about 3.6–3.8% of 
 
 This design allows differences among simulations to be attributed specifically to residue-management practices rather than to differences in environmental forcing, crop activity, or residue supply. Accordingly, the SALUS results should be interpreted as relative management responses and not as an alternative estimate of the Climate TRACE IPCC Tier 1 baseline emissions.
 
-<img src="figures/figure1.png" style="width:6.85938in;height:5.15552in" />
+<img src="figures/figure1.png" width="659" />
 
 **Figure 1** Spatial distribution and area-weighted frequency distribution of crop-residue carbon-to-nitrogen (C:N) ratios used as inputs to the SALUS residue-management simulations. (a) Mean crop-residue C:N ratio across cropland for 2016–2025, calculated from the annual residue inputs supplied to SALUS. Colors indicate the spatial variation in mean residue C:N ratio across cropland grid cells. (b) Area-weighted distribution of the 2016–2025 mean residue C:N ratio. Dashed vertical lines at C:N ratios of 30 and 60 indicate the thresholds used to classify residues into low (&lt;30), medium (30–60), and high (≥60) C:N categories for the ERS analysis. The area-weighted median C:N ratio was 59.6.
 
@@ -221,7 +221,7 @@ share (%)</strong></th><th><strong>Emission Change<br />
 2015–2024</strong></th><th><strong>Emission Change<br />
 2024–2026 (%)</strong></th></tr></thead><tbody><tr class="odd"><td>USA</td><td>18.17</td><td>17.99</td><td>15.7</td><td>−0.17</td><td>−1.6</td></tr><tr class="even"><td>China</td><td>15.25</td><td>16.48</td><td>14.4</td><td>+1.24</td><td>+0.4</td></tr><tr class="odd"><td>Russia</td><td>7.78</td><td>11.29</td><td>9.9</td><td>+3.51</td><td>+7.3</td></tr><tr class="even"><td>Ukraine</td><td>4.48</td><td>4.86</td><td>4.2</td><td>+0.38</td><td>+3.9</td></tr><tr class="odd"><td>Brazil</td><td>3.43</td><td>4.85</td><td>4.2</td><td>+1.42</td><td>+9.2</td></tr><tr class="even"><td>Argentina</td><td>3.57</td><td>4.84</td><td>4.2</td><td>+1.28</td><td>−4.3</td></tr><tr class="odd"><td>France</td><td>4.62</td><td>4.70</td><td>4.1</td><td>+0.08</td><td>−0.8</td></tr><tr class="even"><td>Germany</td><td>2.75</td><td>4.04</td><td>3.5</td><td>+1.29</td><td>−1.5</td></tr><tr class="odd"><td>Indonesia</td><td>3.54</td><td>3.98</td><td>3.5</td><td>+0.44</td><td>+1.6</td></tr><tr class="even"><td>India</td><td>3.13</td><td>3.34</td><td>2.9</td><td>+0.21</td><td>+3.8</td></tr></tbody></table>
 
-<img src="figures/figure2.png" style="width:6.8in;height:5.16538in" />
+<img src="figures/figure2.png" width="653" />
 
 **Figure 2.** Historical and projected N₂O emissions from crop residue retained on agricultural land and their national and continental composition. (A) Global annual emissions, 2015–2026; filled symbols denote FAOSTAT-based years (2015–2024), and open symbols and shading denote projected years (2025–2026). (B) The ten largest national contributors in 2024; values in parentheses are shares of the global total. (C) Annual emissions by continent, 2015–2026; hatched bars and shading denote projected years (2025–2026). Russia and Cyprus are included in Europe, and Türkiye, Kazakhstan and the South Caucasus countries in Asia. (D) The five largest projected national increases and the five largest projected decreases between 2024 and 2026, ranked by absolute change; values in parentheses give the percentage change. Emissions are the combined direct and indirect total, expressed as CO₂e using GWP₁₀₀ = 273.
 
@@ -240,7 +240,7 @@ share (%)</strong></th><th><strong>Emission Change<br />
 2015–2024</strong></th><th><strong>Emission Change<br />
 2024–2026 (%)</strong></th></tr></thead><tbody><tr class="odd"><td>Sugar beet</td><td>17.35</td><td>21.17</td><td>18.5</td><td>+3.82</td><td>−3.8</td></tr><tr class="even"><td>Maize</td><td>18.61</td><td>20.89</td><td>18.3</td><td>+2.28</td><td>+3.2</td></tr><tr class="odd"><td>Wheat</td><td>15.14</td><td>15.73</td><td>13.8</td><td>+0.59</td><td>+1.2</td></tr><tr class="even"><td>Rice</td><td>12.82</td><td>13.17</td><td>11.5</td><td>+0.35</td><td>+0.8</td></tr><tr class="odd"><td>Soybean</td><td>9.13</td><td>10.90</td><td>9.5</td><td>+1.78</td><td>−2.2</td></tr><tr class="even"><td>Sunflower</td><td>6.30</td><td>8.46</td><td>7.4</td><td>+2.16</td><td>+13.2</td></tr><tr class="odd"><td>Barley</td><td>3.51</td><td>3.36</td><td>2.9</td><td>−0.15</td><td>+3.1</td></tr><tr class="even"><td>Cassava</td><td>2.13</td><td>2.89</td><td>2.5</td><td>+0.77</td><td>+4.6</td></tr><tr class="odd"><td>Potatoes</td><td>2.53</td><td>2.55</td><td>2.2</td><td>+0.02</td><td>−0.9</td></tr><tr class="even"><td>Oil palm</td><td>1.47</td><td>2.30</td><td>2.0</td><td>+0.83</td><td>+7.1</td></tr></tbody></table>
 
-<img src="figures/figure3.png" style="width:6.8in;height:5.37327in" />
+<img src="figures/figure3.png" width="653" />
 
 **Figure 3** Crop contributions to N₂O emissions from retained crop residue. (A) The twelve largest crop contributors in 2024; values in parentheses are shares of the global total. (B) Emissions by crop group, 2015–2026; hatched bars and shading denote projected years (2025–2026). Soybean and groundnut are included in oil crops. (C) Crops with the largest absolute changes between 2015 and 2024 (solid bars; labels give the percentage change relative to 2015), and the corresponding projected changes between 2024 and 2026 (hatched bars). Colours denote crop groups. Emissions are the combined direct and indirect total, expressed as CO₂e using GWP₁₀₀ = 273.
 
@@ -294,7 +294,7 @@ The spatial pattern for N₂O was more heterogeneous. Surface retention of resid
 
 The practice that had the lowest SOC-derived CO₂ emissions did not always have the lowest N₂O emissions. The practice with the lowest SOC-derived CO₂ emissions and lowest N₂O emissions differed across 35.0% of the comparable area, a divergence indicating that residue management can produce trade-offs between SOC accrual and N₂O emissions increases, supporting the evaluation of the combined greenhouse-gas response rather than either component in isolation.
 
-<img src="figures/figure4.png" style="width:6.1824in;height:8.74135in" />
+<img src="figures/figure4.png" width="594" />
 
 **Figure 4 cont.**
 
@@ -310,7 +310,7 @@ The same overall pattern was observed for the individual components. Median SOC-
 
 The annual normalized ranges also showed that these relative differences were sustained through time. For total CO₂e, the ratio relative to moldboard incorporation ranged from 0.525 to 0.620 for surface retention, from 0.530 to 0.627 for shallow incorporation, and from 0.648 to 0.774 for residue removal.
 
-<img src="figures/figure5.png" style="width:6.81771in;height:3.83069in" />
+<img src="figures/figure5.png" width="655" />
 
 **Figure 5** Temporal variation in modeled emissions under alternative crop-residue management practices relative to deep residue incorporation using moldboard-plow. Annual global emissions for surface retention under no-till, shallow incorporation to approximately 10 cm, and 70% residue removal were normalized to the corresponding annual value under moldboard-plow incorporation to approximately 25 cm, which was assigned a value of 1.0 in each year. Results are shown separately for SOC-derived CO₂, N₂O emissions expressed as CO₂ equivalents, and total CO₂e for 2016–2025. Each box summarizes the ten annual normalized ratios; boxes indicate the interquartile range, white lines indicate medians, whiskers span the full annual range, and points represent individual years. Values below 1 indicate lower modeled emissions than the moldboard-plow reference. Moldboard incorporation is used here only as a common reference for comparing the four SALUS management scenarios and does not represent the baseline of the Climate TRACE IPCC Tier 1 crop-residue inventory.
 
@@ -324,7 +324,7 @@ For high-C:N residues, the ordering changed slightly. Shallow incorporation prod
 
 Most of the mapped area remained below the moldboard-plow reference across all three alternative management scenarios. For total CO₂e, the area with lower emissions than moldboard incorporation ranged from 96.7% to 98.8% under surface retention, from 96.2% to 98.0% under shallow incorporation, and from 92.7% to 97.2% under residue removal across the three C:N classes. The high-C:N residue-removal category was the only total-emission distribution whose 95th percentile extended above the moldboard reference, indicating that this treatment increased emissions in part of the high-C:N domain. N₂O responses showed greater spatial variability, with positive upper tails in several C:N-management combinations.
 
-<img src="figures/figure6.png" style="width:6.81771in;height:2.96233in" />
+<img src="figures/figure6.png" width="655" />
 
 **Figure 6** Effect of residue C:N ratio on the relative response of modeled emissions to crop-residue management. Percentage changes in 2016–2025 mean annual grid-cell emissions are shown for surface retention under no-till, shallow incorporation to approximately 10 cm, and 70% residue removal relative to moldboard-plow incorporation to approximately 25 cm. Results are presented separately for (a) SOC-derived CO₂, (b) N₂O emissions expressed as CO₂ equivalents, and (c) total CO₂e, and stratified by mean residue C:N ratio as low (&lt;30), medium (30–&lt;60), and high (≥60). Boxes show cosine-of-latitude-weighted interquartile ranges, white lines indicate weighted medians, and whiskers represent weighted 5th–95th percentiles. Negative percentage values indicate lower modeled emissions than moldboard-plow references, whereas positive values indicate higher emissions.
 

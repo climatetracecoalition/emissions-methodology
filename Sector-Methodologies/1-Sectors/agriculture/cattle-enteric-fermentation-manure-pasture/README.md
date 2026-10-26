@@ -1,4 +1,4 @@
-<img src="figures/logo.png" style="width:2.77222in;height:1.19931in" />
+<img src="figures/logo.png" width="266" />
 
 ### Agriculture sector- Cattle Emissions from Enteric Fermentation and Manure Left on Pasture
 
@@ -20,7 +20,7 @@ This methodology describes the approach to estimate cattle emissions from enteri
 
 We assemble country livestock statistics (FAOSTAT), Gridded Livestock Watch (GLW) cattle-density data, Global Pasture Watch (GPW) pasture-fraction layers, seasonal Gross Primary Production (GPP) layers, and administrative boundaries (GADM) to map pasture-supported cattle activity globally, as summarized in Figure 1. Using the IPCC 2019 Tier 2 methodology (Ch. 10–11), we compute pixel-level CH₄ (enteric, manure) and N₂O (manure on pasture) emissions at 1 km spatial resolution with region-specific parameters, then aggregate to country totals. Outputs include GeoTIFF rasters (EPSG:4326) and country-level CSV tables for 2015–2025, with accompanying uncertainty layers.
 
-<img src="figures/figure1.jpg" style="width:3.98958in;height:2.72083in" alt="A diagram of a country AI-generated content may be incorrect." />
+<img src="figures/figure1.jpg" width="383" alt="A diagram of a country AI-generated content may be incorrect." />
 
 ***Figure 1** Methodology Flowchart to estimate emissions from cattle on pasture based on IPCC 2019 Tier 2.*
 
@@ -42,7 +42,7 @@ Next, we used Global Pasture Watch (GPW) pasture data instead of NASA SEDAC past
 
 Finally, GADM data (GADM, 2024) was used to obtain country boundaries for mapping the GPW pasture fraction, GLW cattle-density weights, GPP productivity layers, activity, and emissions outputs to a country. The GADM boundary dataset was formatted as a geojson provided by WattTime.
 
-<img src="figures/figure2.png" style="width:7.32813in;height:3.4763in" />
+<img src="figures/figure2.png" width="704" />
 
 ***Figure 2** Global Pasture Watch (GPW) pasture fraction data used to represent pasture-supported areas in the updated 1 km workflow for the year 2025.*
 
@@ -62,7 +62,7 @@ This three-part formulation is essential because it links national cattle statis
 
 For obtaining any emissions arising from cattle on pasture, the first necessity is to obtain pasture-supported cattle activity spatially. The goal is to distribute country-level cattle numbers from FAOSTAT to a global 1 km grid based on mapped pasture fraction, vegetation productivity, and cattle-density patterns. The updated workflow replaces the previous NASA SEDAC pasture allocation and “non-dairy cattle minus slaughtered cattle” logic with a spatial pasture-support approach based on GPW, GPP, GLW, and FAOSTAT total cattle stocks. Figure 3 shows the summary of the steps used to generate pasture-supported activity layers.
 
-<img src="figures/figure3.png" style="width:2.77604in;height:3.32952in" />
+<img src="figures/figure3.png" width="266" />
 
 ***Figure 3** Workflow summary for estimating pasture-supported cattle activity*
 
@@ -140,7 +140,7 @@ $`GWP100year = CH4Emissions \ast \left( 27.2 \pm 11 \right) + N2OEmissions \ast 
 
 We define capacity as the pasture-support potential of a grid cell. In the updated methodology, capacity is derived from the Global Pasture Watch (GPW) pasture fraction and seasonal Gross Primary Production (GPP), which together represent the ability of each 1 km grid cell to support grazing cattle. Capacity factor represents the cattle-pressure component within each grid cell and is derived from Gridded Livestock Watch (GLW) cattle-density data scaled using annual FAOSTAT total cattle counts. Emission factors have a 20% uncertainty, and capacity has a 20% uncertainty according to the IPCC (Dong, 2006). To obtain the capacity factor uncertainty, we use convolution to assess the amount of local spatial variation around each grid cell. The convolution-based local variance is used to calculate the capacity factor uncertainty, reflecting how stable or variable cattle pressure is around a given pixel. This is illustrated in Figure 4.
 
-<img src="figures/figure4.png" style="width:3.13889in;height:1.61528in" />
+<img src="figures/figure4.png" width="301" />
 
 ***Figure 4** Capacity uncertainty calculation*
 
@@ -185,7 +185,7 @@ We provide GeoTIFFs for pasture-supported cattle activity, uncertainties, and em
 
 The CH₄ emissions from manure left on pasture are shown in Figure 5 and exhibit spatial patterns that follow the distribution of pasture-supported cattle activity. Higher emissions are observed in major pasture-cattle regions of South America, East Africa, parts of Sub-Saharan Africa, and Australia. These areas contain a stronger overlap between mapped pasture, cattle-density weights, and national cattle totals. This spatial pattern is consistent with previous livestock system and livestock density studies showing that grazing systems are important in Central and South America, Sub-Saharan Africa, and Australia, and that high cattle-density areas occur in middle/eastern Africa and South America (Steinfeld and Mӓki-Hokkonen, 1996; FAO 2026; Du et al., 2025). Lower values are observed in regions where pasture area, cattle density, or pasture productivity is limited. Overall, the observed spatial pattern results from the combined influence of GPW pasture fraction, seasonal GPP, GLW cattle-density weights, and annual FAOSTAT cattle totals.
 
-<img src="figures/figure5.png" style="width:7.6548in;height:3.66146in" />
+<img src="figures/figure5.png" width="735" />
 
 |                                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -193,25 +193,25 @@ The CH₄ emissions from manure left on pasture are shown in Figure 5 and exhibi
 
 CH₄ emissions from enteric fermentation, which account for the majority of pasture-supported cattle emissions worldwide, are shown in Figure 6. The strongest hotspots occur in Brazil and other parts of South America, East Africa, parts of the Sahel, Australia, and selected pasture-supported regions of North America. Localized annual emissions reach more than 40 tons CH₄ yr⁻¹ per grid cell in the highest-emitting pixels. The spatial pattern reflects the updated activity model, where emissions are concentrated in areas where GPW pasture fraction, seasonal GPP, GLW cattle density, and FAOSTAT cattle totals overlap.
 
-<img src="figures/figure6.png" style="width:7.65in;height:3.64382in" />
+<img src="figures/figure6.png" width="734" />
 
 ***Figure 6** Enteric Fermentation CH<sub>4</sub> Estimates 2025, reported as kg CH₄ yr⁻¹ per grid cell. The color scale is log transformed to improve visualization.*
 
 Figure 7 shows the spatial distribution of N₂O emissions from manure left on pasture. The highest values are concentrated in many of the same pasture-supported cattle regions identified for CH₄ emissions, including South America, East Africa, parts of Sub-Saharan Africa, and Australia. This similarity is expected because enteric CH₄, manure left on pasture CH₄, and manure left on pasture N₂O are all driven by the same pasture-supported cattle activity layer. Differences among gases reflect the Tier 2 emission-factor calculations and gas-specific pathways rather than a different spatial allocation of cattle.
 
-<img src="figures/figure7.png" style="width:7.65in;height:3.64382in" />
+<img src="figures/figure7.png" width="734" />
 
 ***Figure 7** Manure left on pasture N<sub>2</sub>O Estimates 2025, reported as g N₂O yr⁻¹ per grid cell. The color scale is log transformed to improve visualization.*
 
 Under the Tier 2 methodology, the temporal trends of global emissions from enteric fermentation and manure left on pasture are shown in Figure 8. Global emissions generally increased from 2015 to 2024, followed by a slight decrease in 2025. Enteric fermentation CH₄ increased from approximately 19.85 Mt CH₄ yr⁻¹ in 2015 to 21.68 Mt CH₄ yr⁻¹ in 2024, then decreased slightly to 21.45 Mt CH₄ yr⁻¹ in 2025. Manure left on pasture CH₄ increased from approximately 0.383 Mt CH₄ yr⁻¹ in 2015 to 0.421 Mt CH₄ yr⁻¹ in 2024, then decreased to 0.416 Mt CH₄ yr⁻¹ in 2025. Manure left on pasture N₂O increased from approximately 0.580 Mt N₂O yr⁻¹ in 2015 to 0.628 Mt N₂O yr⁻¹ in 2024, then decreased to 0.622 Mt N₂O yr⁻¹ in 2025. These temporal patterns reflect the combined influence of the input datasets used to generate the emissions maps, including FAOSTAT cattle totals, GPW pasture fraction, GLW cattle-density weights, and seasonal GPP pasture-support scores. Because emissions are calculated from modeled pasture-supported cattle activity rather than from FAOSTAT cattle totals alone, changes in the ability of mapped pasture areas to support cattle can shift the emissions trend. The slight decrease in 2025 is therefore attributed to lower seasonal GPP-based pasture productivity, which reduced the modeled ability of mapped pasture areas to support cattle during that year.
 
-<img src="figures/figure8.png" style="width:6.20833in;height:3.80208in" />
+<img src="figures/figure8.png" width="596" />
 
 ***Figure 8** Global Tier 2 emission trends for pasture-supported cattle during 2015-2025. Emissions are reported in megatonnes per year (Mt yr⁻¹). a) Enteric Fermentation CH₄ emissions. b) Manure left on pasture CH₄ and N₂O emissions*.
 
 Regional dominance is evident in the national-level emission trends shown in Figure 9. The top five emitting countries were selected directly from the 2025 country-level results for each gas and sector. For enteric fermentation CH₄, the top five countries were Brazil, Ethiopia, the United States, Tanzania, and Australia. For manure left on pasture CH₄, the top five countries were also Brazil, Ethiopia, the United States, Tanzania, and Australia. For manure left on pasture N₂O, the top five countries were Brazil, Ethiopia, the United States, Tanzania, and Argentina. Brazil was the largest contributor across all three emission components, while Ethiopia consistently ranked second. This pattern reflects the combination of large cattle populations, pasture availability, and the spatial overlap between cattle density and pasture-supported areas.
 
-<img src="figures/figure9.png" style="width:6.5in;height:4.41667in" />
+<img src="figures/figure9.png" width="624" />
 
 ***Figure 9** Top five emitting countries from the Tier 2 pasture-supported cattle workflow during 2015-2025. Emissions are reported in megatonnes per year (Mt yr⁻¹). a) Enteric Fermentation CH₄ emissions. b) Manure left on pasture CH₄ emissions. c) Manure left on pasture N₂O emissions.*
 
@@ -219,7 +219,7 @@ Regional dominance is evident in the national-level emission trends shown in Fig
 
 Figure 9 presents the top ten countries ranked by absolute GPW pasture area and by GPW pasture %, based on the processed Global Pasture Watch (GPW) pasture-fraction inputs. Large land-rich countries such as Australia, Russia, Canada, the United States, Brazil, Kazakhstan, China, Argentina, Ethiopia, and South Africa dominate in terms of total GPW pasture area, while countries such as Botswana, Burkina Faso, South Sudan, Ethiopia, Kenya, Senegal, Kazakhstan, Lesotho, Australia, and Ireland appear more prominently when considering GPW pasture %. These rankings reflect the spatial distribution of the processed GPW pasture classes rather than actual livestock populations or official national pasture-area statistics. In this methodology, GPW classes 1, 2, and 3 were used to define pasture-supported land, including cultivated grassland, natural or semi-natural grassland, and open shrubland. Therefore, Figure 9 should be interpreted as a diagnostic of the GPW-derived pasture input layer used by the emissions model rather than as a replacement for official country-level pasture inventories. This distinction is important because countries such as Botswana can show very high GPW pasture % in the processed layer, likely due to the inclusion of extensive grazing-compatible grassland and open shrubland systems.
 
-<img src="figures/figure10.png" style="width:4in;height:5.40139in" />
+<img src="figures/figure10.png" width="384" />
 
 ***Figure 9** a) Top 10 Countries by GPW-Derived Pasture-Support Share (km²) and b) Top 10 Countries by GPW-Derived Pasture-Support Share (%), both are based on GPW data.*
 
