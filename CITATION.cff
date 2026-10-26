@@ -1,17 +1,25 @@
 cff-version: 1.2.0
 title: Climate TRACE Emissions Methodology
-message: If you use these methodologies or the Climate TRACE dataset, please cite as below.
+message: >-
+  If you use the Climate TRACE dataset or this repository as a whole,
+  please cite it as below. If you use data from a specific sector
+  methodology, please cite it using the "Data citation format" provided
+  in each methodology's README or pdf.
 type: dataset
 authors:
   - name: Climate TRACE Coalition
     website: https://climatetrace.org
-repository-code: https://github.com/climatetracecoalition/methodology
+abstract: >-
+  Methodology documents, changelogs, and archived methodologies describing
+  how Climate TRACE estimates greenhouse gas and non-greenhouse gas emissions
+  across sectors using satellite observations, remote sensing, and AI.
+repository-code: https://github.com/climatetracecoalition/emissions-methodology
 url: https://climatetrace.org/approach
-license: «SPDX identifier, e.g. CC-BY-4.0 — must match the LICENSE file»
-version: 5.10.0
-date-released: 2026-08-27
+license: CC-BY-4.0
+version: no version number since sector version varies. Use access date instead. 
 keywords:
   - greenhouse gas emissions
+  - emissions methodology
   - remote sensing
   - MRV
   - climate data
