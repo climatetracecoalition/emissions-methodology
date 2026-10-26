@@ -44,17 +44,17 @@ Countries are matched according to ISO3 codes. Where a ratio is missing from one
 
 #### Emissions Model
 
-As Climate TRACE estimates emissions at the facility-level, multiple sources of emissions at a given facility are combined to form a single estimate. In Phase 8, the emissions of pollutant *g* from asset *a* are the sum of the emissions of the asset’s emission streams *k*, where $K_{s}$ is the set of streams (such as combustion, fugitive leakage, and dusting) defined for the asset’s sector *s* (Section 2.4):
+As Climate TRACE estimates emissions at the facility-level, multiple sources of emissions at a given facility are combined to form a single estimate. In Phase 8, the emissions of pollutant *g* from asset *a* are the sum of the emissions of the asset’s emission streams *k*, where $`K_{s}`$ is the set of streams (such as combustion, fugitive leakage, and dusting) defined for the asset’s sector *s* (Section 2.4):
 
-$Em_{a}^{g} = \text{Em}_{a,k}^{g}$ (Eq. 1)
+$`Em_{a}^{g} = \text{Em}_{a,k}^{g}`$ (Eq. 1)
 
-Each stream is estimated with one of two models (Section 2.5). In the co-pollutant ratio model, a ratio $r$ is applied to the dominant GHG emissions $Em^{a,D_{k}}$ of a given asset or sector to estimate the non-GHG emissions. This operation is expressed with:
+Each stream is estimated with one of two models (Section 2.5). In the co-pollutant ratio model, a ratio $`r`$ is applied to the dominant GHG emissions $`Em^{a,D_{k}}`$ of a given asset or sector to estimate the non-GHG emissions. This operation is expressed with:
 
-$Em_{a,k}^{g} = r_{s,c,k}^{g,D_{k}} \cdot Em^{a,D_{k}}$ (Eq. 2)
+$`Em_{a,k}^{g} = r_{s,c,k}^{g,D_{k}} \cdot Em^{a,D_{k}}`$ (Eq. 2)
 
 In the activity-based model, stream emissions are estimated using a bottom-up approach wherein activities for these emissions are modeled and multiplied by corresponding emission factors:
 
-$Em_{a,k}^{g} = A_{a,k} \cdot EF_{k}^{g}$ (Eq. 3)
+$`Em_{a,k}^{g} = A_{a,k} \cdot EF_{k}^{g}`$ (Eq. 3)
 
 This formulation generalizes that of Phase 7, in which the emissions of each were divided into combustion-related and process-related components only. Combustion and process remain as stream types, alongside fugitive, flaring, fugitive-dust, agricultural and waste, and combined streams. The emissions formula of a sector follows from listing its streams and the model used for each (Section 2.6).
 
@@ -90,17 +90,17 @@ The total pollutant emissions at a given facility can be composed of multiple di
 
 1.  ### Co-Pollutant Ratio Model
 
-For non-GHGs, emissions factors for a given emissions stream are dependent on asset-level pollution controls, and many sectors have asset-level pollution control data needed for determining these emissions factors. However, for other sectors and many regions globally, pollution control data is difficult to access; hence these emissions factors have to be estimated. To do so, national-level emissions factors are estimated using a fusion of emissions estimates from EDGAR and CEDS. Primarily, co-pollutant ratios are developed such that the dominant GHG estimates of a given sector $Em_{s,c,k}^{D_{k}}$ can be translated to pollution values. For a stream built from inventory data, the ratio for sector *s*, country *c* and stream *k* is,
+For non-GHGs, emissions factors for a given emissions stream are dependent on asset-level pollution controls, and many sectors have asset-level pollution control data needed for determining these emissions factors. However, for other sectors and many regions globally, pollution control data is difficult to access; hence these emissions factors have to be estimated. To do so, national-level emissions factors are estimated using a fusion of emissions estimates from EDGAR and CEDS. Primarily, co-pollutant ratios are developed such that the dominant GHG estimates of a given sector $`Em_{s,c,k}^{D_{k}}`$ can be translated to pollution values. For a stream built from inventory data, the ratio for sector *s*, country *c* and stream *k* is,
 
-$r_{s,c,k}^{g,D} = \frac{\text{Em}_{s,c,k}^{g}}{Em_{s,c,k}^{D_{k}}}$ (Eq. 4)
+$`r_{s,c,k}^{g,D} = \frac{\text{Em}_{s,c,k}^{g}}{Em_{s,c,k}^{D_{k}}}`$ (Eq. 4)
 
 where *E* denotes the inventory emissions of the categories mapped to the stream (Tables 5 and 6), summed where several categories map to one stream. The dominant GHG is CO<sub>2</sub> for fuel-combustion and industrial-process sectors, CH<sub>4</sub> for biogenic and fugitive sectors, and N<sub>2</sub>O for nitrogen-cycle soil sectors (Table 2).
 
-Prior to Phase 7, these ratios were estimated purely from either EDGAR or CEDS for a given sector $(s$) and country ($c)$; however, to improve upon national-level estimates a harmonic average is used to mix ratios arising from these datasets – expressed for the combustion fraction with,
+Prior to Phase 7, these ratios were estimated purely from either EDGAR or CEDS for a given sector $`(s`$) and country ($`c)`$; however, to improve upon national-level estimates a harmonic average is used to mix ratios arising from these datasets – expressed for the combustion fraction with,
 
-$r_{\text{comb}}^{g} \approx r_{s,c,comb}^{g,\ EDGAR/CEDS} = \frac{2}{\left( r_{s,c,comb}^{g,EDGAR} \right)^{- 1} + \left( r_{s,c,comb}^{g,CEDS} \right)^{- 1}}$ (Eq. 5),
+$`r_{\text{comb}}^{g} \approx r_{s,c,comb}^{g,\ EDGAR/CEDS} = \frac{2}{\left( r_{s,c,comb}^{g,EDGAR} \right)^{- 1} + \left( r_{s,c,comb}^{g,CEDS} \right)^{- 1}}`$ (Eq. 5),
 
-with $r_{s,c,comb}^{g,EDGAR}$ and $r_{s,c,comb}^{g,CEDS}$ defined with Equation 4 using EDGAR and CEDS, respectively. A similar expression is used for the process ratio. Section 2.5.1.4 discusses how using this approach reduces bias in the model.
+with $`r_{s,c,comb}^{g,EDGAR}`$ and $`r_{s,c,comb}^{g,CEDS}`$ defined with Equation 4 using EDGAR and CEDS, respectively. A similar expression is used for the process ratio. Section 2.5.1.4 discusses how using this approach reduces bias in the model.
 
 The outcome of this approach, although having uniform emissions factors across all facilities from the same sector and in the same nation, is that the estimated national pollution intensity is preserved and distributed based on facility-level activity and location directly as opposed to spatial proxies. In addition, the use of the dominant greenhouse gas to anchor the co-pollutant ratio results in pollution estimates with higher confidence than if they were estimated with the composite CO2-equivalent as previously. Generally, the GHG emissions from most sectors are dominated by a single gas, and the uncertainty carried by CO<sub>2</sub> equivalent is higher than any single gas. Hence, constructing and applying ratios for a single gas instead of a composite of gases yields a lower uncertainty for the resulting pollutant.
 
@@ -108,19 +108,19 @@ Carbon monoxide (CO), ammonia (NH<sub>3</sub>), non-methane volatile organic com
 
 An additional conversion step was needed to produce PM<sub>2.5</sub> and PM<sub>10</sub> estimates from CEDS as it only provides estimates of the speciated BC and OC pollutants. It is assumed that the mitigation of BC is equally effective for mitigating PM<sub>2.5</sub> since BC is a subspecies of PM<sub>2.5</sub>. Thus, a conversion of CEDS BC emissions to PM<sub>2.5</sub> emissions can be made with,
 
-$\text{Em}_{a}^{PM2.5,CEDS} = \rho_{\text{BC}} \cdot Em_{a}^{BC,CEDS}$, (Eq. 6),
+$`\text{Em}_{a}^{PM2.5,CEDS} = \rho_{\text{BC}} \cdot Em_{a}^{BC,CEDS}`$, (Eq. 6),
 
-where $\rho_{\text{BC}} = \frac{1}{\%\ of\ PM2.5\ that\ is\ BC}$. A conversion from PM<sub>2.5</sub> emissions to PM<sub>10</sub> emissions is made with a similar expression:
+where $`\rho_{\text{BC}} = \frac{1}{\%\ of\ PM2.5\ that\ is\ BC}`$. A conversion from PM<sub>2.5</sub> emissions to PM<sub>10</sub> emissions is made with a similar expression:
 
-$\text{Em}_{a}^{PM10,CEDS} = \rho_{PM10} \cdot Em_{a}^{PM2.5,CEDS}$ (Eq. 7).
+$`\text{Em}_{a}^{PM10,CEDS} = \rho_{PM10} \cdot Em_{a}^{PM2.5,CEDS}`$ (Eq. 7).
 
-The values of $\rho_{\text{BC}}$ and $\rho_{PM10}$ are computed for most sectors with the EMEP/EEA Air Pollutant Emission Inventory Guidebook \[7\], with the only exception being aviation where EPA SmartWay is used \[8\]. For sectors where these values are unavailable in these resources an estimation is made with EDGAR, defined with
+The values of $`\rho_{\text{BC}}`$ and $`\rho_{PM10}`$ are computed for most sectors with the EMEP/EEA Air Pollutant Emission Inventory Guidebook \[7\], with the only exception being aviation where EPA SmartWay is used \[8\]. For sectors where these values are unavailable in these resources an estimation is made with EDGAR, defined with
 
-$\rho_{\text{BC}} \approx \frac{Em_{s,c}^{PM2.5,EDGAR}}{Em_{s,c}^{BC,EDGAR}}$
+$`\rho_{\text{BC}} \approx \frac{Em_{s,c}^{PM2.5,EDGAR}}{Em_{s,c}^{BC,EDGAR}}`$
 
 and
 
-$\rho_{PM10} \approx \frac{Em_{s,c}^{PM10,EDGAR}}{Em_{s,c}^{PM2.5,EDGAR}}$.
+$`\rho_{PM10} \approx \frac{Em_{s,c}^{PM10,EDGAR}}{Em_{s,c}^{PM2.5,EDGAR}}`$.
 
 For iron and steel, single global values are used, ρ<sub>BC</sub> = 14.59 and ρ<sub>PM10</sub> = 1.459. These are the 2018–2022 medians of the ratios of global EDGAR iron and steel emissions, taken as the EDGAR 1.A.2 and 2.C emissions multiplied by the iron and steel shares of global CEDS BC in 1A2 and 2C, respectively.
 
@@ -130,59 +130,59 @@ After all emissions estimates are produced, gap-filling of zero and NaN emission
 
 *Pulp-and-paper*, *food-beverage-and-tobacco*, and *wood-and-wood-products* share a single process sector in both inventories (EDGAR 2.H and CEDS 2H), which reports no process GHG, so a process ratio cannot be formed. The three industries also have different co-pollutant profiles. The shared process emissions are therefore disaggregated with the EMEP/EEA Tier 1 emission factors for *pulp-and-paper* \[7\] (CO 5.5, NMVOC 2, PM<sub>2.5</sub> 0.6 and PM<sub>10</sub> 0.8 kg per Mg air-dried pulp). *Pulp-and-paper* is taken as the sole process source of CO, NO<sub>x</sub>, SO<sub>2</sub> and BC in 2.H; its NMVOC, PM<sub>2.5</sub> and PM<sub>10</sub> are obtained by scaling the EDGAR 2.H CO by the Tier 1 ratios to CO. The remaining NMVOC is assigned to food, beverage and tobacco, and the remaining PM to wood products, with residuals bounded below by zero. OC and NH<sub>3</sub> are not reported in 2.H and are set to zero. EDGAR 1.A.2 combustion emissions are divided among the three sectors by each sector’s share of CEDS industrial combustion emissions of the same species. The combined ratio for sector *s* is then
 
-$r_{s,c}^{g,CO_{2}} = \frac{w_{s,c}^{g}\, E_{c,1.A.2}^{g} + P_{s,c}^{g}}{w_{s,c}^{CO_{2}}\, E_{c,1.A.2}^{CO_{2}}},\quad\quad w_{s,c}^{g} = \frac{C_{s,c}^{g}}{C_{s^{'},c}^{g}}$ (Eq. 8)
+$`r_{s,c}^{g,CO_{2}} = \frac{w_{s,c}^{g}\, E_{c,1.A.2}^{g} + P_{s,c}^{g}}{w_{s,c}^{CO_{2}}\, E_{c,1.A.2}^{CO_{2}}},\quad\quad w_{s,c}^{g} = \frac{C_{s,c}^{g}}{C_{s^{'},c}^{g}}`$ (Eq. 8)
 
-where *E* and *C* denote EDGAR and CEDS emissions and $P_{s,c}^{g}$ is the process emission assigned to sector *s* above.
+where *E* and *C* denote EDGAR and CEDS emissions and $`P_{s,c}^{g}`$ is the process emission assigned to sector *s* above.
 
 #### 2.5.1.2 Flaring Ratio Derivation
 
 The flaring streams of oil and gas refining and petrochemical steam cracking use a fixed ratio derived from the EMEP/EEA refinery flaring emission factors \[7\]. These are expressed per unit of energy, and converted to a ratio to CO<sub>2</sub> with the IPCC default CO<sub>2</sub> emission factor for refinery gas \[9\]:
 
-$r_{\text{flare}}^{g,CO_{2}} = \frac{EF_{\text{flare}}^{g}\ \left\lbrack g/GJ \right\rbrack}{57\, 600\ \left\lbrack \text{g C}O_{2}/GJ \right\rbrack}$ (Eq. 9)
+$`r_{\text{flare}}^{g,CO_{2}} = \frac{EF_{\text{flare}}^{g}\ \left\lbrack g/GJ \right\rbrack}{57\, 600\ \left\lbrack \text{g C}O_{2}/GJ \right\rbrack}`$ (Eq. 9)
 
 SO<sub>2</sub> from flaring is computed from the flare-gas sulfur content, for which a default of 236 ppm by mass, based on the U.S. New Source Performance Standards limit for refinery fuel gas, is used \[10\].
 
 #### 2.5.1.3 Fire Ratios
 
-Co-pollutant ratios for the fire sectors are derived from the GFED emission factors \[11\], which are given per vegetation class in grams per kilogram of dry matter burned. Because both factors refer to the same mass of dry matter, the ratio of pollutant *g* to CO<sub>2</sub> for vegetation class $v$ is
+Co-pollutant ratios for the fire sectors are derived from the GFED emission factors \[11\], which are given per vegetation class in grams per kilogram of dry matter burned. Because both factors refer to the same mass of dry matter, the ratio of pollutant *g* to CO<sub>2</sub> for vegetation class $`v`$ is
 
-$r_{v}^{g,CO_{2}} = \frac{EF_{v}^{g}}{EF_{v}^{CO_{2}}}$ (Eq. 10)
+$`r_{v}^{g,CO_{2}} = \frac{EF_{v}^{g}}{EF_{v}^{CO_{2}}}`$ (Eq. 10)
 
-*Shrubgrass-fires*, *wetland-fires* and *cropland-fires* use the GFED *shrub*, *wetland* and *agricultural* classes, each with a single global ratio. Forest-land-fires use the GFED *tropical*, *temperate* or *boreal forest* class according to the IPCC climate zone $Z\left( x \right)$ of each 0.1° land cell $x$,
+*Shrubgrass-fires*, *wetland-fires* and *cropland-fires* use the GFED *shrub*, *wetland* and *agricultural* classes, each with a single global ratio. Forest-land-fires use the GFED *tropical*, *temperate* or *boreal forest* class according to the IPCC climate zone $`Z\left( x \right)`$ of each 0.1° land cell $`x`$,
 
-$r_{\text{forest}}^{g,CO_{2}}\left( x \right) = r_{v\left( Z\left( x \right) \right)}^{g,CO_{2}}$ (Eq. 11).
+$`r_{\text{forest}}^{g,CO_{2}}\left( x \right) = r_{v\left( Z\left( x \right) \right)}^{g,CO_{2}}`$ (Eq. 11).
 
 Climate zones are assigned with the IPCC decision tree \[12\], as for Climate TRACE reservoir emissions \[13\] but at 0.1° rather than 0.5°. Mean annual temperature, mean annual precipitation and the test for all months below 10 °C are computed from ERA5-Land monthly means \[14\] over the 31 years ending in the target year. Frost days and potential evapotranspiration (PET) are taken from CRU TS 4.09 \[15\], averaged at 0.5° over the same period (ending in 2024, the last CRU year), and assigned to the 0.1° grid with bilinear interpolation; elevation is GMTED2010 \[16\] resampled to 0.1°.
 
 #### 2.5.1.4 Harmonic Mean of Ratio Error Analysis for Co-Pollution Ratio Model
 
-The use of a harmonic average reduces the biases caused by either individual dataset. Consider only one emissions co-pollutant ratio which differs from the “true” conversion ratio ($\rho$) with some error $\epsilon$, such that
+The use of a harmonic average reduces the biases caused by either individual dataset. Consider only one emissions co-pollutant ratio which differs from the “true” conversion ratio ($`\rho`$) with some error $`\epsilon`$, such that
 
-$r_{1} = \rho\left( 1 + \epsilon_{1} \right)$, (Eq. 12),
+$`r_{1} = \rho\left( 1 + \epsilon_{1} \right)`$, (Eq. 12),
 
-for inventory $1$ (e.g. CEDS) and similarly defined for inventory $2$ (e.g. EDGAR). The relative error between the estimated emissions and the true emissions can be shown to be $\epsilon_{i}$, with
+for inventory $`1`$ (e.g. CEDS) and similarly defined for inventory $`2`$ (e.g. EDGAR). The relative error between the estimated emissions and the true emissions can be shown to be $`\epsilon_{i}`$, with
 
-$Em_{\text{true}} = \rho \cdot Em^{D}$,
+$`Em_{\text{true}} = \rho \cdot Em^{D}`$,
 
-$E{m^{1}}_{\text{estimated}} = r_{1} \cdot Em^{D} = \rho\left( 1 + \epsilon_{1} \right) \cdot Em^{D},$
+$`E{m^{1}}_{\text{estimated}} = r_{1} \cdot Em^{D} = \rho\left( 1 + \epsilon_{1} \right) \cdot Em^{D},`$
 
-$\Rightarrow \frac{{E^{1}}_{\text{estimated}} - E_{\text{true}}}{E_{\text{true}}} = \epsilon_{1}$ (Eq. 13).
+$`\Rightarrow \frac{{E^{1}}_{\text{estimated}} - E_{\text{true}}}{E_{\text{true}}} = \epsilon_{1}`$ (Eq. 13).
 
 Hence, for a single inventory, the discrepancy between the inventory and the true co-pollutant ratio is directly proportional to the error of the emissions estimate. Now consider using two emissions ratios that are combined with a harmonic mean such that the emissions estimate is
 
-$\text{Em}_{\text{estimated}}^{\text{harmonic}} = r^{\text{harmonic}} \cdot Em^{D}$, (Eq. 14).
+$`\text{Em}_{\text{estimated}}^{\text{harmonic}} = r^{\text{harmonic}} \cdot Em^{D}`$, (Eq. 14).
 
 Substituting Equation 12 into Equation 5 and expanding yields,
 
-$r^{\text{harmonic}} = \rho\frac{2\left( 1 + \epsilon_{1} \right)\left( 1 + \epsilon_{2} \right)}{2 + \epsilon_{1} + \epsilon_{2}},$
+$`r^{\text{harmonic}} = \rho\frac{2\left( 1 + \epsilon_{1} \right)\left( 1 + \epsilon_{2} \right)}{2 + \epsilon_{1} + \epsilon_{2}},`$
 
 and hence the relative error of the emissions estimate in Equation 14 is
 
-$\frac{\text{Em}_{\text{estimated}}^{\text{harmonic}} - E_{\text{true}}}{E_{\text{true}}} = \frac{\epsilon_{1} + \epsilon_{2} + 2\epsilon_{1}\epsilon_{2}}{2 + \epsilon_{1} + \epsilon_{2}}$, (Eq. 15).
+$`\frac{\text{Em}_{\text{estimated}}^{\text{harmonic}} - E_{\text{true}}}{E_{\text{true}}} = \frac{\epsilon_{1} + \epsilon_{2} + 2\epsilon_{1}\epsilon_{2}}{2 + \epsilon_{1} + \epsilon_{2}}`$, (Eq. 15).
 
-When the biases of $1$ and $2$ are opposed, these errors largely cancel, and when they are aligned, assuming small errors, ${|\epsilon}_{1}|,|\epsilon_{2}| \ll 1$, the error reduces to
+When the biases of $`1`$ and $`2`$ are opposed, these errors largely cancel, and when they are aligned, assuming small errors, $`{|\epsilon}_{1}|,|\epsilon_{2}| \ll 1`$, the error reduces to
 
-$\frac{\text{Em}_{\text{estimated}}^{\text{harmonic}} - E_{\text{true}}}{E_{\text{true}}} \approx \frac{\epsilon_{1} + \epsilon_{2}}{2}$, (Eq. 16).
+$`\frac{\text{Em}_{\text{estimated}}^{\text{harmonic}} - E_{\text{true}}}{E_{\text{true}}} \approx \frac{\epsilon_{1} + \epsilon_{2}}{2}`$, (Eq. 16).
 
 Hence using a harmonic mean of two inventories results in biases either canceling out, or the bias of the estimate lying between the biases of the two datasets. Because the magnitude and signs of the individual biases of CEDS and EDGAR are uncertain, the harmonic mean offers a more robust centralized estimate than choosing either inventory alone.
 
@@ -190,7 +190,7 @@ Hence using a harmonic mean of two inventories results in biases either cancelin
 
 The co-pollutant ratio model (Equation 2) works well for most sectors, and even with sectors which lack either combustion or process emissions – e.g. the combustion-only textile industry or enteric fermentation, which has neither. However, the process streams of *aluminum* and *chemicals* and the dust stream of non-coal mining and quarrying, required special treatment related to the process component of the emissions due to the asset lacking GHG emissions from process-related activities (e.g. blasting of rock), or because the inventories report negligible process GHG for the sector, which leaves the process ratio undefined. Conveniently, emission factors from \[7\] (Table 7) can be used directly with the activities in these sectors to produce stream-related emissions, resulting in
 
-$Em_{s}^{g} = A_{s}^{g} \cdot EF_{s}^{g}$(Eq. 17)
+$`Em_{s}^{g} = A_{s}^{g} \cdot EF_{s}^{g}`$(Eq. 17)
 
 which is used for the process or dust streams of these sectors. The emission factors are added to the combustion stream because the corresponding guidebook methods exclude fuel combustion.
 
@@ -281,23 +281,23 @@ Thank you to Lekha Sridhar, Ting So, Marisa Hughes, Gavin McCormick for their gu
 
 | **Climate TRACE sectors**                                                                                                                                                                                                                                                                                                                         | **Asset emissions of pollutant g**                                                                                                         | **Dominant GHG D** |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
-| heat-plants, electricity-generation, other-energy-use, domestic- and international-aviation, domestic- and international-shipping, railways, other-transport, residential-, non-residential- and other-onsite-fuel-usage, textiles-leather-apparel, incineration-and-open-burning-of-waste; mining and quarrying sectors when no asset data exist | $Em_{a}^{g} = r_{s,c}^{g,D_{s}}\text{ E}m_{a}^{D_{s}}$                                                                                     | CO<sub>2</sub>     |
-| enteric-fermentation (3 sectors), manure-management-cattle-operation, manure-management-other, rice-cultivation, solid-waste-disposal, biological-treatment-of-solid-waste-and-biogenic, domestic- and industrial-wastewater-treatment-and-discharge                                                                                              | $Em_{a}^{g} = r_{s,c}^{g,D_{s}}\text{ E}m_{a}^{D_{s}}$                                                                                     | CH<sub>4</sub>     |
-| manure-left-on-pasture-cattle, synthetic-fertilizer-application, manure-applied-to-soils, crop-residues, other-agricultural-soil-emissions                                                                                                                                                                                                        | $Em_{a}^{g} = r_{s,c}^{g,D_{s}}\text{ E}m_{a}^{D_{s}}$                                                                                     | N<sub>2</sub>O     |
-| other-manufacturing                                                                                                                                                                                                                                                                                                                               | $Em_{a}^{g} = r_{comb + proc}^{g,CO_{2}}\text{ E}m_{a}^{CO_{2}}$                                                                           | CO<sub>2</sub>     |
-| pulp-and-paper, food-beverage-tobacco, wood-and-wood-products                                                                                                                                                                                                                                                                                     | $Em_{a}^{g} = r_{s,c}^{g,CO_{2}}\text{ E}m_{a}^{CO_{2}}$                                                                                   | CO<sub>2</sub>     |
-| road-transportation                                                                                                                                                                                                                                                                                                                               | $Em_{a}^{g} = r_{c,k}^{g,D}\text{ E}m_{a}^{D}$                                                                                             | CO<sub>2</sub>     |
-| cement                                                                                                                                                                                                                                                                                                                                            | $r_{\text{comb}}^{g}\,\theta_{a}A_{a} + r_{\text{proc}}^{g}\,\left( Em_{a}^{CO_{2}} - \theta_{a}A_{a} \right)$                             | CO<sub>2</sub>     |
-| lime, glass                                                                                                                                                                                                                                                                                                                                       | $r_{\text{comb}}^{g}\, 0.62\, Em_{a}^{CO_{2}} + r_{\text{proc}}^{g}\, 0.38\, Em_{a}^{CO_{2}}$                                              | CO<sub>2</sub>     |
-| other-chemicals                                                                                                                                                                                                                                                                                                                                   | $r_{\text{comb}}^{g}\, 0.68\, Em_{a}^{CO_{2}} + r_{\text{proc}}^{g}\, 0.32\, Em_{a}^{CO_{2}}$                                              | CO<sub>2</sub>     |
-| iron-and-steel                                                                                                                                                                                                                                                                                                                                    | $r_{\text{steel}}^{g}\text{ E}m_{a}^{CO_{2}}$                                                                                              | CO<sub>2</sub>     |
-| aluminum                                                                                                                                                                                                                                                                                                                                          | $r_{\text{comb}}^{g}\, p_{a}\text{ E}m_{a}^{CO_{2}} + \delta_{a}A_{a}\text{ E}F_{2.C.3}^{g}$                                               | CO<sub>2</sub>     |
-| chemicals                                                                                                                                                                                                                                                                                                                                         | $r_{\text{comb}}^{g}\, 0.68\, Em_{a}^{CO_{2}} + A_{a}\text{ E}F_{\text{type}\left( a \right)}^{g}$                                         | CO<sub>2</sub>     |
-| sand-quarrying, rock-quarrying, bauxite-mining, iron-mining, copper-mining, other-mining-quarrying                                                                                                                                                                                                                                                | $r_{\text{comb}}^{g}\text{ E}m_{a}^{CO_{2}} + A_{a}\text{ E}F_{2.A.5.a}^{g}$                                                               | CO<sub>2</sub>     |
-| other-metals                                                                                                                                                                                                                                                                                                                                      | $r_{\text{nf}}^{g}\text{ E}m_{a}^{CO_{2}}$                                                                                                 | CO<sub>2</sub>     |
-| oil-and-gas-refining, petrochemical-steam-cracking                                                                                                                                                                                                                                                                                                | $\left( r_{\text{comb}}^{g}p_{a}^{c} + r_{\text{fug}}^{g}p_{a}^{f} + r_{\text{flare}}^{g}p_{a}^{\text{fl}} \right)\text{ E}m_{a}^{CO_{2}}$ | CO<sub>2</sub>     |
-| oil-and-gas-production, oil-and-gas-transport                                                                                                                                                                                                                                                                                                     | $r_{\text{fug}}^{g,CH_{4}}\text{ E}m_{a}^{CH_{4}}$                                                                                         | CH<sub>4</sub>     |
-| coal-mining                                                                                                                                                                                                                                                                                                                                       | $r_{\text{comb}}^{g,CO_{2}}\, Q_{a} + r_{\text{fug}}^{g,CH_{4}}\text{ E}m_{a}^{CH_{4}}$                                                    | CH<sub>4</sub>     |
+| heat-plants, electricity-generation, other-energy-use, domestic- and international-aviation, domestic- and international-shipping, railways, other-transport, residential-, non-residential- and other-onsite-fuel-usage, textiles-leather-apparel, incineration-and-open-burning-of-waste; mining and quarrying sectors when no asset data exist | $`Em_{a}^{g} = r_{s,c}^{g,D_{s}}\text{ E}m_{a}^{D_{s}}`$                                                                                     | CO<sub>2</sub>     |
+| enteric-fermentation (3 sectors), manure-management-cattle-operation, manure-management-other, rice-cultivation, solid-waste-disposal, biological-treatment-of-solid-waste-and-biogenic, domestic- and industrial-wastewater-treatment-and-discharge                                                                                              | $`Em_{a}^{g} = r_{s,c}^{g,D_{s}}\text{ E}m_{a}^{D_{s}}`$                                                                                     | CH<sub>4</sub>     |
+| manure-left-on-pasture-cattle, synthetic-fertilizer-application, manure-applied-to-soils, crop-residues, other-agricultural-soil-emissions                                                                                                                                                                                                        | $`Em_{a}^{g} = r_{s,c}^{g,D_{s}}\text{ E}m_{a}^{D_{s}}`$                                                                                     | N<sub>2</sub>O     |
+| other-manufacturing                                                                                                                                                                                                                                                                                                                               | $`Em_{a}^{g} = r_{comb + proc}^{g,CO_{2}}\text{ E}m_{a}^{CO_{2}}`$                                                                           | CO<sub>2</sub>     |
+| pulp-and-paper, food-beverage-tobacco, wood-and-wood-products                                                                                                                                                                                                                                                                                     | $`Em_{a}^{g} = r_{s,c}^{g,CO_{2}}\text{ E}m_{a}^{CO_{2}}`$                                                                                   | CO<sub>2</sub>     |
+| road-transportation                                                                                                                                                                                                                                                                                                                               | $`Em_{a}^{g} = r_{c,k}^{g,D}\text{ E}m_{a}^{D}`$                                                                                             | CO<sub>2</sub>     |
+| cement                                                                                                                                                                                                                                                                                                                                            | $`r_{\text{comb}}^{g}\,\theta_{a}A_{a} + r_{\text{proc}}^{g}\,\left( Em_{a}^{CO_{2}} - \theta_{a}A_{a} \right)`$                             | CO<sub>2</sub>     |
+| lime, glass                                                                                                                                                                                                                                                                                                                                       | $`r_{\text{comb}}^{g}\, 0.62\, Em_{a}^{CO_{2}} + r_{\text{proc}}^{g}\, 0.38\, Em_{a}^{CO_{2}}`$                                              | CO<sub>2</sub>     |
+| other-chemicals                                                                                                                                                                                                                                                                                                                                   | $`r_{\text{comb}}^{g}\, 0.68\, Em_{a}^{CO_{2}} + r_{\text{proc}}^{g}\, 0.32\, Em_{a}^{CO_{2}}`$                                              | CO<sub>2</sub>     |
+| iron-and-steel                                                                                                                                                                                                                                                                                                                                    | $`r_{\text{steel}}^{g}\text{ E}m_{a}^{CO_{2}}`$                                                                                              | CO<sub>2</sub>     |
+| aluminum                                                                                                                                                                                                                                                                                                                                          | $`r_{\text{comb}}^{g}\, p_{a}\text{ E}m_{a}^{CO_{2}} + \delta_{a}A_{a}\text{ E}F_{2.C.3}^{g}`$                                               | CO<sub>2</sub>     |
+| chemicals                                                                                                                                                                                                                                                                                                                                         | $`r_{\text{comb}}^{g}\, 0.68\, Em_{a}^{CO_{2}} + A_{a}\text{ E}F_{\text{type}\left( a \right)}^{g}`$                                         | CO<sub>2</sub>     |
+| sand-quarrying, rock-quarrying, bauxite-mining, iron-mining, copper-mining, other-mining-quarrying                                                                                                                                                                                                                                                | $`r_{\text{comb}}^{g}\text{ E}m_{a}^{CO_{2}} + A_{a}\text{ E}F_{2.A.5.a}^{g}`$                                                               | CO<sub>2</sub>     |
+| other-metals                                                                                                                                                                                                                                                                                                                                      | $`r_{\text{nf}}^{g}\text{ E}m_{a}^{CO_{2}}`$                                                                                                 | CO<sub>2</sub>     |
+| oil-and-gas-refining, petrochemical-steam-cracking                                                                                                                                                                                                                                                                                                | $`\left( r_{\text{comb}}^{g}p_{a}^{c} + r_{\text{fug}}^{g}p_{a}^{f} + r_{\text{flare}}^{g}p_{a}^{\text{fl}} \right)\text{ E}m_{a}^{CO_{2}}`$ | CO<sub>2</sub>     |
+| oil-and-gas-production, oil-and-gas-transport                                                                                                                                                                                                                                                                                                     | $`r_{\text{fug}}^{g,CH_{4}}\text{ E}m_{a}^{CH_{4}}`$                                                                                         | CH<sub>4</sub>     |
+| coal-mining                                                                                                                                                                                                                                                                                                                                       | $`r_{\text{comb}}^{g,CO_{2}}\, Q_{a} + r_{\text{fug}}^{g,CH_{4}}\text{ E}m_{a}^{CH_{4}}`$                                                    | CH<sub>4</sub>     |
 | other-fossil-fuel-operations                                                                                                                                                                                                                                                                                                                      | CO<sub>2</sub> only; no co-pollutants estimated                                                                                            | —                  |
 
 **Table 5.** Mapping of country-level Climate TRACE sectors and combined streams to EDGAR and CEDS sectors. “+” denotes sectors summed before the ratio is formed. The last column gives the CEDS PM synthesis factors (PM<sub>2.5</sub>/BC; PM<sub>10</sub>/PM<sub>2.5</sub>) where specified; elsewhere they are inferred from EDGAR.

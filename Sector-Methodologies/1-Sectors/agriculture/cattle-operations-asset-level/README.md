@@ -210,7 +210,7 @@ Equations and emission factors (EFs) were drawn from Chapter 10 (Emissions from 
 
 Enteric fermentation emissions were estimated using the Tier 2 approach described in Chapter 10, Section 10.3, for both dairy and other cattle (beef) CH₄.
 
-To better represent manure management at each individual cattle operation, emissions were estimated across multiple manure management systems (MMS) rather than a single system per operation, described in Chapter 10, Section 10.4.2, under the Tier 2 description (IPCC, 2019a). Manure CH₄ was estimated using the Tier 2 approach and manure N₂O used the Tier 1 approach in Section 10.5, both applied across the multiple MMS. Indirect N₂O from volatilisation and leaching/runoff used EF₄ and EF₅, respectively, from Chapter 11, Table 11.3. As suggested by IPCC (2019a) for MMS, the fraction of manure () entering each management system was estimated by cattle type and by the systems employed within each climate zone, using Marklein et al. (2021 and M. Stoermann (personal communication, June 2026).$M_{\text{frac}}$
+To better represent manure management at each individual cattle operation, emissions were estimated across multiple manure management systems (MMS) rather than a single system per operation, described in Chapter 10, Section 10.4.2, under the Tier 2 description (IPCC, 2019a). Manure CH₄ was estimated using the Tier 2 approach and manure N₂O used the Tier 1 approach in Section 10.5, both applied across the multiple MMS. Indirect N₂O from volatilisation and leaching/runoff used EF₄ and EF₅, respectively, from Chapter 11, Table 11.3. As suggested by IPCC (2019a) for MMS, the fraction of manure () entering each management system was estimated by cattle type and by the systems employed within each climate zone, using Marklein et al. (2021 and M. Stoermann (personal communication, June 2026).$`M_{\text{frac}}`$
 
 Section 3.2.2 describes the multiple MMS and approach to estimate manure emissions. Table 3 lists the multiple MMS applied to operations by region and cattle type, and Table 4 gives the values for each multiple MMS. Figure 8 illustrates how a dairy and beef operation are assigned each.
 
@@ -236,7 +236,7 @@ Three strategies are provided for manure management. The first is the same deman
 
 #### 3. Methods to estimate emissions
 
-This section describes the steps used to estimate CH₄ from enteric fermentation and CH₄ and N₂O from manure management, based the assigned cattle attributes at each identified cattle operation (Figure 2, box 4). Enteric fermentation CH₄ was estimated using the Tier 2 approach described in Chapter 10 of IPCC (2019a). Manure CH₄ and N₂O were estimated using the Tier 2 and Tier 1 approaches but modified to account for multiple manure management systems (MMS) and the fraction of manure ($\text{Mfrac}$) entering each system. Emissions were reported per operation in metric tonnes (t), at quarterly resolution from 2015 to 2025.
+This section describes the steps used to estimate CH₄ from enteric fermentation and CH₄ and N₂O from manure management, based the assigned cattle attributes at each identified cattle operation (Figure 2, box 4). Enteric fermentation CH₄ was estimated using the Tier 2 approach described in Chapter 10 of IPCC (2019a). Manure CH₄ and N₂O were estimated using the Tier 2 and Tier 1 approaches but modified to account for multiple manure management systems (MMS) and the fraction of manure ($`\text{Mfrac}`$) entering each system. Emissions were reported per operation in metric tonnes (t), at quarterly resolution from 2015 to 2025.
 
 #### 3.1 From AI-detected operations and manure ponds to emissions inputs
 
@@ -270,13 +270,13 @@ Most operations were assigned ‘dairy cattle’, hereafter ‘MatureDairyCattle
 
 Reported cattle numbers were also used to assign multiple MMS along with if a manure pond was detected. Where the seed data described in Sections 2.1 to 2.2 supplied a total head of cattle for an operation, that count was used alongside the manure pond detections to determine which MMS combination the operation received. For dairy operations in Australia, Canada, the United States, South Africa, and Botswana, a reported herd of 200 head or more was taken to indicate a wet manure management system, and the operation was assigned the same MMS combination as an operation with a detected pond, on the basis that dairies at or above this size typically handle manure as a liquid rather than as a solid (U.S. Environmental Protection Agency, 2023). Dairy operations in these countries below this threshold and with no detected pond were instead assigned liquid/slurry and pit storage, pasture/range/paddock, and solid storage. Reported head of cattle was not used to assign MMS for beef operations, nor in other regions, where assignment relied on the detected pond and the reported manure management type alone.
 
-**Table 3** Manure management system (MMS) combinations assigned to cattle operations by region, cattle type, and manure pond detection status, used to select methane conversion factors from IPCC (2019a) Table 10.17. The Multiple MMS key column gives the corresponding $\text{Mfrac}$ combination in Table 4. Note: (a) Western and Eastern Europe are assigned the same MMS combinations. (b) These countries are grouped because they employ comparable manure management systems. (c) An operation was classified as a dry climate where at least 60 monthly climate-zone assignments over 2015–2025 fell in a dry zone, and as wet climate where more than 50 fell in a wet zone, both self-defined definitions. (d) Includes China, South America, and all countries not listed above. (e) manure management systems with pasture have their emissions skipped and are reported in *Cattle Emissions from Enteric Fermentation and Manure Left on Pasture* in the [<span class="underline">Climate TRACE GitHub repo</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture).
+**Table 3** Manure management system (MMS) combinations assigned to cattle operations by region, cattle type, and manure pond detection status, used to select methane conversion factors from IPCC (2019a) Table 10.17. The Multiple MMS key column gives the corresponding $`\text{Mfrac}`$ combination in Table 4. Note: (a) Western and Eastern Europe are assigned the same MMS combinations. (b) These countries are grouped because they employ comparable manure management systems. (c) An operation was classified as a dry climate where at least 60 monthly climate-zone assignments over 2015–2025 fell in a dry zone, and as wet climate where more than 50 fell in a wet zone, both self-defined definitions. (d) Includes China, South America, and all countries not listed above. (e) manure management systems with pasture have their emissions skipped and are reported in *Cattle Emissions from Enteric Fermentation and Manure Left on Pasture* in the [<span class="underline">Climate TRACE GitHub repo</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture).
 
 <table><thead><tr class="header"><th><strong>Region (ISO3)</strong></th><th><strong>Cattle type</strong></th><th><strong>Condition</strong></th><th><p><strong>MMS combination applied</strong></p><p><strong>(based on IPCC naming)</strong></p></th><th><strong>Multiple MMS key</strong></th></tr></thead><tbody><tr class="odd"><td><strong>New Zealand (NZL)</strong></td><td>All</td><td>Pond detected</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Pasture/range/paddock; Uncovered anaerobic lagoon</td><td><strong>pst1</strong></td></tr><tr class="even"><td></td><td>All</td><td>No pond</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Pasture/range/paddock; Solid storage</td><td><strong>pst2</strong></td></tr><tr class="odd"><td><strong>Japan, Korea (JPN, KOR)</strong></td><td>All</td><td>Pond detected</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Composting — static pile (forced aeration)</td><td><p><strong>modified</strong></p><p><strong>wet3</strong></p></td></tr><tr class="even"><td></td><td>Mature dairy</td><td>No pond</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Composting — static pile (forced aeration)</td><td><p><strong>modified</strong></p><p><strong>wet3</strong></p></td></tr><tr class="odd"><td></td><td>Other (beef)</td><td>No pond</td><td>Solid storage; Composting — static pile (forced aeration)</td><td><p><strong>modified</strong></p><p><strong>wet3</strong></p></td></tr><tr class="even"><td><strong>Western and Eastern Europe <sup>a</sup></strong></td><td>All</td><td>Pond detected</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Pasture/range/paddock; Solid storage</td><td><strong>pst2</strong></td></tr><tr class="odd"><td></td><td>All</td><td>Dry lot or solid storage</td><td>Dry lot; Solid storage</td><td><strong>dry2</strong></td></tr><tr class="even"><td><strong>AUS, CAN, USA, ZAF, BWA <sup>b</sup></strong></td><td>Mature dairy</td><td>Pond detected or ≥200 head — dry climate operation <sup>c</sup></td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Uncovered anaerobic lagoon; Dry lot</td><td><strong>wet1</strong></td></tr><tr class="odd"><td></td><td>Mature dairy</td><td>Pond detected or ≥200 head — all other climates</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Uncovered anaerobic lagoon</td><td><strong>wet2</strong></td></tr><tr class="even"><td></td><td>Mature dairy</td><td>Pond detected — wet climate operation <sup>c</sup>, U.S. only</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Uncovered anaerobic lagoon</td><td><strong>wet4</strong></td></tr><tr class="odd"><td></td><td>Mature dairy</td><td>No pond and &lt;200 head</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Pasture/range/paddock; Solid storage</td><td><strong>pst2</strong></td></tr><tr class="even"><td></td><td>Other (beef)</td><td>Pond detected</td><td>Uncovered anaerobic lagoon; Dry lot; Solid storage</td><td><strong>dry1</strong></td></tr><tr class="odd"><td></td><td>Other (beef)</td><td>No pond</td><td>Dry lot; Solid storage</td><td><strong>dry2</strong></td></tr><tr class="even"><td><strong>ROW <sup>d</sup></strong></td><td>All</td><td>Pond detected</td><td>Liquid/slurry &amp; pit storage below animal confinements (12 mo); Solid storage; Uncovered anaerobic lagoon</td><td><strong>wet2</strong></td></tr><tr class="odd"><td></td><td>All</td><td>Dry lot or solid storage</td><td>Dry lot; Solid storage</td><td><strong>dry2</strong></td></tr></tbody></table>
 
 <img src="figures/figure11.png" style="width:3.55208in;height:2.15246in" /> <img src="figures/figure12.png" style="width:3.55883in;height:2.2in" />
 
-**Figure 8** Assignment of multiple manure management systems (MMS) to two detected cattle operations: left, a dairy operation assigned the wet1 multiple MMS, and, right, a beef operation assigned dry1. The dairy operation was assigned wet1 because a manure pond was detected and the operation falls in a dry climate; the beef operation was assigned dry1 because a manure pond was detected. Each system in a multiple MMS is given a fraction of manure ($\text{Mfrac}$), which allocates the manure produced, and the resulting volatile solids and total nitrogen excreted, across systems and sums to 1. Multiple MMS assignments by region and cattle type are given in Table 3, and $\text{Mfrac}$ values in Table 4 (image modified from Owen and Silver, 2015).
+**Figure 8** Assignment of multiple manure management systems (MMS) to two detected cattle operations: left, a dairy operation assigned the wet1 multiple MMS, and, right, a beef operation assigned dry1. The dairy operation was assigned wet1 because a manure pond was detected and the operation falls in a dry climate; the beef operation was assigned dry1 because a manure pond was detected. Each system in a multiple MMS is given a fraction of manure ($`\text{Mfrac}`$), which allocates the manure produced, and the resulting volatile solids and total nitrogen excreted, across systems and sums to 1. Multiple MMS assignments by region and cattle type are given in Table 3, and $`\text{Mfrac}`$ values in Table 4 (image modified from Owen and Silver, 2015).
 
 #### 3.2.3 Deriving MCFs
 
@@ -290,17 +290,17 @@ The monthly climate zones, assigned cattle types, and multiple MMS were used to 
 
 The actual head of cattle held at an operation in a given quarter was derived from the potential head, the maximum the operation can house, by applying a capacity factor,
 
-$N_{o,c,s,t}^{\text{ACT}} = N_{o,c}^{\text{POT}}\text{x\ }\text{CF}_{s,c,t}$(Equation 1)
+$`N_{o,c,s,t}^{\text{ACT}} = N_{o,c}^{\text{POT}}\text{x\ }\text{CF}_{s,c,t}`$(Equation 1)
 
 Where:
 
-$N_{o,c,s,t}^{\text{ACT}}$ = actual head of cattle held at operation *o,* in country *c*, for the cattle type *s*, in quarter *t* (head)
+$`N_{o,c,s,t}^{\text{ACT}}`$ = actual head of cattle held at operation *o,* in country *c*, for the cattle type *s*, in quarter *t* (head)
 
-$N_{o,c}^{\text{POT}}$ = potential head of cattle at operation *o*, the maximum it can house, from reported values, mean values, or regression modeling (head) in country *c*;
+$`N_{o,c}^{\text{POT}}`$ = potential head of cattle at operation *o*, the maximum it can house, from reported values, mean values, or regression modeling (head) in country *c*;
 
-$\text{CF}_{s,c,t}$ = capacity factor for cattle type *s* in country *c* in quarter *t* (proportion, typically 0 to 1). Supplemental section S.3 and equations S1 and S2 provide more information on deriving $\text{CF}$ values.
+$`\text{CF}_{s,c,t}`$ = capacity factor for cattle type *s* in country *c* in quarter *t* (proportion, typically 0 to 1). Supplemental section S.3 and equations S1 and S2 provide more information on deriving $`\text{CF}`$ values.
 
-$N_{o,c}^{\text{POT}}$ represent the potential maximum head of cattle an operation can house during a given time and varies by type. Three approaches were used to estimate it: reported values, mean values, and regression modeling. Depending on the country, seed data provided reported the total head of cattle in some cases. Most identified operations used a mean country or sub-country value. Tables S1 and S2 list the U.S. state CAFO data and the country-specific mean dairy and beef head per farm, respectively. Not all state CAFO records give cattle values, but most do.
+$`N_{o,c}^{\text{POT}}`$ represent the potential maximum head of cattle an operation can house during a given time and varies by type. Three approaches were used to estimate it: reported values, mean values, and regression modeling. Depending on the country, seed data provided reported the total head of cattle in some cases. Most identified operations used a mean country or sub-country value. Tables S1 and S2 list the U.S. state CAFO data and the country-specific mean dairy and beef head per farm, respectively. Not all state CAFO records give cattle values, but most do.
 
 Some operations had their area footprint delineated, which allowed the size of a dairy or beef operation to be linked to the head of cattle. This led to a regression model developed based on the hypothesis that operation area, in hectares, can serve as a predictor of potential total head of cattle (see Supplemental section S.3**).** To generate the models, AI-identified operations with area footprints were spatially joined to U.S. reported cattle operations (Table S1), the Australia Farm Transparency Project map, and researched locations. Footprints that returned total head of cattle were used to develop two linear regression models:
 
@@ -312,15 +312,15 @@ A third model, the China Dairy Model, was developed for operations delineated in
 
 All three models follow the general relationship in Equation 2 (see Figures S1 to S3),
 
-$N_{o,s,c}^{\text{POT}} = m_{o,s,c} \times Area + B_{s,c}$ (Equation 2)
+$`N_{o,s,c}^{\text{POT}} = m_{o,s,c} \times Area + B_{s,c}`$ (Equation 2)
 
 Where,
 
-$N_{o,s,c}^{\text{POT}}$ = potential head of cattle at operation *o*, the maximum it can house (head) by cattle type *s* (head) in country *c*;
+$`N_{o,s,c}^{\text{POT}}`$ = potential head of cattle at operation *o*, the maximum it can house (head) by cattle type *s* (head) in country *c*;
 
-$\text{Area}$ = the size of the beef or dairy operation footprint, in hectares;
+$`\text{Area}`$ = the size of the beef or dairy operation footprint, in hectares;
 
-$m$ = the slope of the regression line, describing how the total head of cattle changes with footprint area. This slope is specific to cattle operation type, beef or dairy, in a given country;
+$`m`$ = the slope of the regression line, describing how the total head of cattle changes with footprint area. This slope is specific to cattle operation type, beef or dairy, in a given country;
 
 B = the country-specific constant for that cattle operation type.
 
@@ -342,29 +342,29 @@ In all, CH₄ emissions from manure management are estimated in the following eq
 
 Estimate total volatile solids generated in a quarter by cattle type,
 
-$VS_{\left( s,q \right)} = VS_{\left( s \right)} \times D_{\left( q \right)}$ (Equation 3)
+$`VS_{\left( s,q \right)} = VS_{\left( s \right)} \times D_{\left( q \right)}`$ (Equation 3)
 
 Where,
 
-$VS_{\left( s,q \right)}$= total volatile solids excreted per cattle type *s* over quarter *q*;
+$`VS_{\left( s,q \right)}`$= total volatile solids excreted per cattle type *s* over quarter *q*;
 
-$VS_{\left( s \right)}$= daily volatile solids excreted for livestock category T. Note- $VS_{\left( s \right)}$is based on 1000 kg of animal and was adjusted by Table 10A.5 (Default values for live weights for animal categories, kg);
+$`VS_{\left( s \right)}`$= daily volatile solids excreted for livestock category T. Note- $`VS_{\left( s \right)}`$is based on 1000 kg of animal and was adjusted by Table 10A.5 (Default values for live weights for animal categories, kg);
 
-$D_{\left( q \right)} = \ $number of days in quarter q, based on year.
+$`D_{\left( q \right)} =`$number of days in quarter q, based on year.
 
-Where the Tier 2 method in Equation 10.23 assumes a single manure management system, or a fixed allocation across systems for a national herd, this methodology applies the multiple MMS combinations assigned to each individual operation in Section 3.2.2. Rather than routing all of an operation’s manure through one system, or $VS_{\left( s,q \right)}$, total volatile solids generated in a quarter is apportioned across the systems in that operation’s combination, and each system contributes its own CH₄ according to its own MCF. The fraction of manure entering each system is denoted $M_{\text{frac}}$ and applied to estimate the fraction of $VS_{\left( s,q \right)}$entering each system,
+Where the Tier 2 method in Equation 10.23 assumes a single manure management system, or a fixed allocation across systems for a national herd, this methodology applies the multiple MMS combinations assigned to each individual operation in Section 3.2.2. Rather than routing all of an operation’s manure through one system, or $`VS_{\left( s,q \right)}`$, total volatile solids generated in a quarter is apportioned across the systems in that operation’s combination, and each system contributes its own CH₄ according to its own MCF. The fraction of manure entering each system is denoted $`M_{\text{frac}}`$ and applied to estimate the fraction of $`VS_{\left( s,q \right)}`$entering each system,
 
-$VS_{\text{frac}\left( s,q,m \right)} = VS_{\left( s,q \right)} \times M_{\text{frac}\left( m \right)}$ (Equation 4)
+$`VS_{\text{frac}\left( s,q,m \right)} = VS_{\left( s,q \right)} \times M_{\text{frac}\left( m \right)}`$ (Equation 4)
 
 Where,
 
-$VS_{\text{frac}\left( s,q,m \right)}$= the fraction of total volatile solids (manure) excreted per cattle type *s* over quarter *q* entering manure management system *m*;
+$`VS_{\text{frac}\left( s,q,m \right)}`$= the fraction of total volatile solids (manure) excreted per cattle type *s* over quarter *q* entering manure management system *m*;
 
-$VS_{\left( s,q \right)}$= total volatile solids excreted per cattle type *s* over quarter *q*;
+$`VS_{\left( s,q \right)}`$= total volatile solids excreted per cattle type *s* over quarter *q*;
 
-$M_{\text{frac}\left( m \right)}$= the fraction of manure entering system *m*, based on Table 4.
+$`M_{\text{frac}\left( m \right)}`$= the fraction of manure entering system *m*, based on Table 4.
 
-**Table 4** Fraction of manure ($M_{\text{frac}}$) entering each manure management system for the multiple manure system combinations applied to cattle operations, identified by their MMS key. Em dashes denote systems not included in that combination. MMS keys with a ‘^’ indicate manure was assigned to pasture but not used to estimate final emissions. MMS keys with asterisk indicates the MMS key and fractions were modified for Korea and Japan to account for composting.
+**Table 4** Fraction of manure ($`M_{\text{frac}}`$) entering each manure management system for the multiple manure system combinations applied to cattle operations, identified by their MMS key. Em dashes denote systems not included in that combination. MMS keys with a ‘^’ indicate manure was assigned to pasture but not used to estimate final emissions. MMS keys with asterisk indicates the MMS key and fractions were modified for Korea and Japan to account for composting.
 
 | **Multiple MMS key**  | **Solid storage** | **Uncovered anaerobic lagoon** | **Dry lot** | **Liquid/slurry or pit storage** | **Pasture/range/paddock** |
 |-----------------------|-------------------|--------------------------------|-------------|----------------------------------|---------------------------|
@@ -377,39 +377,39 @@ $M_{\text{frac}\left( m \right)}$= the fraction of manure entering system *m*, b
 | **wet3 \***           | 0.750             | —                              | —           | 0.250                            | —                         |
 | **wet4**              | —                 | 0.680                          | —           | 0.320                            | —                         |
 
-Which multiple MMSs appear at an operation’s— and therefore which $\text{MCF}$and $\text{Mfrac}$ values apply — follows directly from the manure pond detection or using country defaults. Operations with a detected pond were assigned a wet-system combination; operations without were assigned the common combination for their region and cattle type (Table 3). If a multiple MMS has a pasture system within it, then pasture emissions were not included in the total emissions, only non-pasture were included. This was purposely since pasture emissions are reported under the Climate TRACE enteric fermentation and manure left on pasture sector.
+Which multiple MMSs appear at an operation’s— and therefore which $`\text{MCF}`$and $`\text{Mfrac}`$ values apply — follows directly from the manure pond detection or using country defaults. Operations with a detected pond were assigned a wet-system combination; operations without were assigned the common combination for their region and cattle type (Table 3). If a multiple MMS has a pasture system within it, then pasture emissions were not included in the total emissions, only non-pasture were included. This was purposely since pasture emissions are reported under the Climate TRACE enteric fermentation and manure left on pasture sector.
 
-With total $VS_{\text{frac}\left( s,q,m \right)}$ derived, we estimate CH₄ EFs for each manure management system,
+With total $`VS_{\text{frac}\left( s,q,m \right)}`$ derived, we estimate CH₄ EFs for each manure management system,
 
-$EF_{\left( s,q,m \right)} = VS_{\text{frac}\left( s,q,m \right)} \times \left\lbrack B_{0\left( s \right)} \times 0.67 \times \frac{\text{MC}F_{\left( q,m \right)}}{100} \right\rbrack$ (Equation 5)
+$`EF_{\left( s,q,m \right)} = VS_{\text{frac}\left( s,q,m \right)} \times \left\lbrack B_{0\left( s \right)} \times 0.67 \times \frac{\text{MC}F_{\left( q,m \right)}}{100} \right\rbrack`$ (Equation 5)
 
 Where,
 
-$EF_{\left( s,q,m \right)}$= CH₄ emission factor for cattle type *s* in quarter *q* from manure management system *m*, kg CH₄ animal⁻¹ quarter⁻¹;
+$`EF_{\left( s,q,m \right)}`$= CH₄ emission factor for cattle type *s* in quarter *q* from manure management system *m*, kg CH₄ animal⁻¹ quarter⁻¹;
 
-$VS_{\text{frac}\left( s,q,m \right)}$= volatile solids excreted by cattle type *s* over quarter *q* and apportioned to manure management system *m*, kg dry matter animal⁻¹ quarter⁻¹;
+$`VS_{\text{frac}\left( s,q,m \right)}`$= volatile solids excreted by cattle type *s* over quarter *q* and apportioned to manure management system *m*, kg dry matter animal⁻¹ quarter⁻¹;
 
-$B_{0\left( s \right)}$= maximum methane producing capacity for manure produced by cattle type *s*, m³ CH₄ kg⁻¹ of VS excreted;
+$`B_{0\left( s \right)}`$= maximum methane producing capacity for manure produced by cattle type *s*, m³ CH₄ kg⁻¹ of VS excreted;
 
-$B_{0\left( s \right)}$= methane conversion factor for manure management system m in quarter q, averaged over the monthly climate zones within the quarter, %;
+$`B_{0\left( s \right)}`$= methane conversion factor for manure management system m in quarter q, averaged over the monthly climate zones within the quarter, %;
 
 0.67 = conversion factor of m³ CH₄ to kg CH₄, kg m⁻³;
 
-100 = conversion of $\text{MC}F_{\left( q,m \right)}$from a percentage to a fraction.
+100 = conversion of $`\text{MC}F_{\left( q,m \right)}`$from a percentage to a fraction.
 
 Total manure management CH₄ at an operation in a given quarter is the product of that emission factor and the estimated total head of cattle, summed across all manure management systems applied to that operation,
 
-$CH_{4\left( s,q \right)} = N_{o,c,s,t}^{\text{ACT}} \times EF_{\left( s,q,m \right)}$ (Equation 6)
+$`CH_{4\left( s,q \right)} = N_{o,c,s,t}^{\text{ACT}} \times EF_{\left( s,q,m \right)}`$ (Equation 6)
 
 Where:
 
-$CH_{4\left( s,q \right)}$ = total manure management CH₄ emissions from cattle type *s* in quarter *q* at an operation, kg CH₄ quarter⁻¹;
+$`CH_{4\left( s,q \right)}`$ = total manure management CH₄ emissions from cattle type *s* in quarter *q* at an operation, kg CH₄ quarter⁻¹;
 
-$N_{\left( s,q \right)}$ = actual head of cattle held at operation in quarter *t*, from Equation 1 (head);
+$`N_{\left( s,q \right)}`$ = actual head of cattle held at operation in quarter *t*, from Equation 1 (head);
 
-$EF_{\left( s,q,m \right)}$= CH₄ emission factor for cattle type *s* in quarter *q* from manure management system *m*, kg CH₄ animal⁻¹ quarter⁻¹, from Equation 5;
+$`EF_{\left( s,q,m \right)}`$= CH₄ emission factor for cattle type *s* in quarter *q* from manure management system *m*, kg CH₄ animal⁻¹ quarter⁻¹, from Equation 5;
 
-$m$ = manure management systems in the multiple MMS, shown in Table 4.
+$`m`$ = manure management systems in the multiple MMS, shown in Table 4.
 
 #### 3.4.2 Manure management N₂O
 
@@ -417,87 +417,87 @@ Manure management N₂O was estimated using the Tier 1 approach described in IPC
 
 Where manure CH₄ begins from volatile solids, manure N₂O begins from nitrogen excretion. Total nitrogen excreted in a quarter was estimated by cattle type,
 
-$N_{\text{ex}\left( s,q \right)} = N_{\text{rate}\left( s \right)} \times D_{\left( q \right)}\ $(Equation 7)
+$`N_{\text{ex}\left( s,q \right)} = N_{\text{rate}\left( s \right)} \times D_{\left( q \right)}`$(Equation 7)
 
 Where,
 
-$N_{\text{ex}\left( s,q \right)}$= total nitrogen excreted per cattle type *s* over quarter q, kg N animal⁻¹ quarter⁻¹;
+$`N_{\text{ex}\left( s,q \right)}`$= total nitrogen excreted per cattle type *s* over quarter q, kg N animal⁻¹ quarter⁻¹;
 
-$N_{\text{rate}\left( s \right)}$= daily nitrogen excretion rate for cattle type *s*, taken from Table 10.19. Note - $N_{\text{rate}\left( s \right)}$ is based on 1000 kg of animal and was adjusted by Table 10A.5 (Default values for live weights for animal categories, kg);
+$`N_{\text{rate}\left( s \right)}`$= daily nitrogen excretion rate for cattle type *s*, taken from Table 10.19. Note - $`N_{\text{rate}\left( s \right)}`$ is based on 1000 kg of animal and was adjusted by Table 10A.5 (Default values for live weights for animal categories, kg);
 
-$D_{\left( q \right)}$= number of days in quarter q, based on year.
+$`D_{\left( q \right)}`$= number of days in quarter q, based on year.
 
-As with volatile solids, total nitrogen excreted was apportioned across the systems in an operation's multiple MMS combination using the same fraction of manure, $M_{\text{frac}}$}, given in Table 4,
+As with volatile solids, total nitrogen excreted was apportioned across the systems in an operation's multiple MMS combination using the same fraction of manure, $`M_{\text{frac}}`$}, given in Table 4,
 
-$N_{\text{frac}\left( s,q,m \right)} = N_{\text{ex}\left( s,q \right)} \times M_{\text{frac}\left( m \right)\ }$(Equation 8)
+$`N_{\text{frac}\left( s,q,m \right)} = N_{\text{ex}\left( s,q \right)} \times M_{\text{frac}\left( m \right)\ }`$(Equation 8)
 
 Where,
 
-$N_{\text{frac}\left( s,q,m \right)}$ = nitrogen excreted by cattle type s over quarter q and apportioned to manure management system m, kg N animal⁻¹ quarter⁻¹;
+$`N_{\text{frac}\left( s,q,m \right)}`$ = nitrogen excreted by cattle type s over quarter q and apportioned to manure management system m, kg N animal⁻¹ quarter⁻¹;
 
-$N_{\text{ex}\left( s,q \right)}$ = total nitrogen excreted per cattle type s over quarter q, kg N animal⁻¹ quarter⁻¹;
+$`N_{\text{ex}\left( s,q \right)}`$ = total nitrogen excreted per cattle type s over quarter q, kg N animal⁻¹ quarter⁻¹;
 
-$M_{\text{frac}\left( m \right)}$ = the fraction of manure entering system m, based on Table 4.
+$`M_{\text{frac}\left( m \right)}`$ = the fraction of manure entering system m, based on Table 4.
 
-Applying the same $M_{\text{frac}\left( m \right)}\ $to both volatile solids and nitrogen excretion rate keeps the gases consistent: manure routed to a given system carries both its organic matter and its nitrogen. Systems within a combination that contained pasture did not have pasture emissions estimated, as those emissions are reported under the Climate TRACE enteric fermentation and manure left on pasture sector. For each source of N2) emissions, we used IPCC equations 10.25 to 10.29. Ones with the variable $N_{cdg(s)}$ or the amount of nitrogen from co-digestates added to biogas plants such as food wastes or purpose grown crops, had that variable is ignored since N₂O emissions are being estimated at a cattle operation, not at the country-level.
+Applying the same $`M_{\text{frac}\left( m \right)}`$to both volatile solids and nitrogen excretion rate keeps the gases consistent: manure routed to a given system carries both its organic matter and its nitrogen. Systems within a combination that contained pasture did not have pasture emissions estimated, as those emissions are reported under the Climate TRACE enteric fermentation and manure left on pasture sector. For each source of N2) emissions, we used IPCC equations 10.25 to 10.29. Ones with the variable $`N_{cdg(s)}`$ or the amount of nitrogen from co-digestates added to biogas plants such as food wastes or purpose grown crops, had that variable is ignored since N₂O emissions are being estimated at a cattle operation, not at the country-level.
 
 Direct N₂O–N was estimated for each manure management system,
 
-$N_{2}O_{D\left( s,q,m \right)} = N_{\left( s,q \right)} \times N_{\text{frac}\left( s,q,m \right)} \times EF_{3\left( m \right)} \times \frac{44}{28}$ (Equation 9)
+$`N_{2}O_{D\left( s,q,m \right)} = N_{\left( s,q \right)} \times N_{\text{frac}\left( s,q,m \right)} \times EF_{3\left( m \right)} \times \frac{44}{28}`$ (Equation 9)
 
 Where,
 
-$N_{2}O_{D\left( s,q,m \right)}$= direct N₂O emissions from cattle type s in quarter q in manure management system m at an operation, kg N₂O quarter⁻¹;
+$`N_{2}O_{D\left( s,q,m \right)}`$= direct N₂O emissions from cattle type s in quarter q in manure management system m at an operation, kg N₂O quarter⁻¹;
 
-$N_{\left( s,q \right)}$ = actual head of cattle held at operation in quarter q, from Equation 1 (head);
+$`N_{\left( s,q \right)}`$ = actual head of cattle held at operation in quarter q, from Equation 1 (head);
 
-$N_{\text{frac}\left( s,q,m \right)}$= nitrogen excreted by cattle type s over quarter q and apportioned to manure management system m, kg N animal⁻¹ quarter⁻¹;
+$`N_{\text{frac}\left( s,q,m \right)}`$= nitrogen excreted by cattle type s over quarter q and apportioned to manure management system m, kg N animal⁻¹ quarter⁻¹;
 
-$EF_{3\left( m \right)}$ = direct N₂O emission factor for manure management system m, kg N₂O–N per kg N in system m, from Table 10.21;
+$`EF_{3\left( m \right)}`$ = direct N₂O emission factor for manure management system m, kg N₂O–N per kg N in system m, from Table 10.21;
 
 44/28 = conversion of N₂O–N to N₂O.
 
-By ignoring $N_{cdg(s)}$, the approach to estimate indirect N₂O from volatilisation and from leaching and runoff is simplified. The nitrogen lost by each pathway is,
+By ignoring $`N_{cdg(s)}`$, the approach to estimate indirect N₂O from volatilisation and from leaching and runoff is simplified. The nitrogen lost by each pathway is,
 
-$N_{2}O_{V\left( s,q,m \right)} = N_{\left( s,q \right)} \times N_{\text{frac}\left( s,q,m \right)} \times \text{Fra}c_{\text{GasMS}\left( m \right)} \times EF_{4} \times \frac{44}{28}$ (Equation 10)
+$`N_{2}O_{V\left( s,q,m \right)} = N_{\left( s,q \right)} \times N_{\text{frac}\left( s,q,m \right)} \times \text{Fra}c_{\text{GasMS}\left( m \right)} \times EF_{4} \times \frac{44}{28}`$ (Equation 10)
 
-$N_{2}O_{L\left( s,q,m \right)} = N_{\left( s,q \right)} \times N_{\text{frac}\left( s,q,m \right)} \times \text{Fra}c_{\text{LeachMS}\left( m \right)} \times EF_{5} \times \frac{44}{28}$(Equation 11)
+$`N_{2}O_{L\left( s,q,m \right)} = N_{\left( s,q \right)} \times N_{\text{frac}\left( s,q,m \right)} \times \text{Fra}c_{\text{LeachMS}\left( m \right)} \times EF_{5} \times \frac{44}{28}`$(Equation 11)
 
 Where,
 
-$N_{2}O_{V\left( s,q,m \right)}$ = indirect N₂O emissions from volatilisation for cattle type s in quarter q in manure management system m at an operation, kg N₂O quarter⁻¹;
+$`N_{2}O_{V\left( s,q,m \right)}`$ = indirect N₂O emissions from volatilisation for cattle type s in quarter q in manure management system m at an operation, kg N₂O quarter⁻¹;
 
-$N_{2}O_{L\left( s,q,m \right)}$ = indirect N₂O emissions from leaching and runoff for cattle type s in quarter q in manure management system m at an operation, kg N₂O quarter⁻¹;
+$`N_{2}O_{L\left( s,q,m \right)}`$ = indirect N₂O emissions from leaching and runoff for cattle type s in quarter q in manure management system m at an operation, kg N₂O quarter⁻¹;
 
-$N_{\left( s,q \right)}$ = actual head of cattle held at operation in quarter q, from Equation 1 (head);
+$`N_{\left( s,q \right)}`$ = actual head of cattle held at operation in quarter q, from Equation 1 (head);
 
-$N_{\text{frac}\left( s,q,m \right)}$ = nitrogen excreted by cattle type s over quarter q and apportioned to manure management system m, kg N animal⁻¹ quarter⁻¹;
+$`N_{\text{frac}\left( s,q,m \right)}`$ = nitrogen excreted by cattle type s over quarter q and apportioned to manure management system m, kg N animal⁻¹ quarter⁻¹;
 
-$\text{Fra}c_{\text{GasMS}\left( m \right)}$ = fraction of managed nitrogen in system m volatilised as NH₃ and NOₓ, from Table 10.22;
+$`\text{Fra}c_{\text{GasMS}\left( m \right)}`$ = fraction of managed nitrogen in system m volatilised as NH₃ and NOₓ, from Table 10.22;
 
-$\text{Fra}c_{\text{LeachMS}\left( m \right)}$ = fraction of managed nitrogen in system m lost through leaching and runoff, from Table 10.22;
+$`\text{Fra}c_{\text{LeachMS}\left( m \right)}`$ = fraction of managed nitrogen in system m lost through leaching and runoff, from Table 10.22;
 
-$EF_{4}$= emission factor for N₂O from atmospheric deposition of nitrogen on soils and water surfaces, kg N₂O–N per kg (NH₃–N + NOₓ–N volatilised), selected for wet or dry climate zone from Table 11.3 as described in Section 3.2.3;
+$`EF_{4}`$= emission factor for N₂O from atmospheric deposition of nitrogen on soils and water surfaces, kg N₂O–N per kg (NH₃–N + NOₓ–N volatilised), selected for wet or dry climate zone from Table 11.3 as described in Section 3.2.3;
 
-$EF_{5}$ = emission factor for N₂O from nitrogen leaching and runoff, kg N₂O–N per kg N leached, from Table 11.3. A default value was used, since IPCC does not distinguish between wet and dry climates for this factor;
+$`EF_{5}`$ = emission factor for N₂O from nitrogen leaching and runoff, kg N₂O–N per kg N leached, from Table 11.3. A default value was used, since IPCC does not distinguish between wet and dry climates for this factor;
 
 44/28 = conversion of N₂O–N to N₂O.
 
 Total manure management N₂O at an operation is the sum of the three pathways across all systems in the operation's combination,
 
-$N_{2}O_{\left( s,q \right)} = \left\lbrack N_{2}O_{D\left( s,q,m \right)} + N_{2}O_{V\left( s,q,m \right)} + N_{2}O_{L\left( s,q,m \right)} \right\rbrack$(Equation 12)
+$`N_{2}O_{\left( s,q \right)} = \left\lbrack N_{2}O_{D\left( s,q,m \right)} + N_{2}O_{V\left( s,q,m \right)} + N_{2}O_{L\left( s,q,m \right)} \right\rbrack`$(Equation 12)
 
 Where,
 
-$N_{2}O_{\left( s,q \right)}$= total manure management N₂O emissions from cattle type s in quarter q at an operation, kg N₂O quarter⁻¹;
+$`N_{2}O_{\left( s,q \right)}`$= total manure management N₂O emissions from cattle type s in quarter q at an operation, kg N₂O quarter⁻¹;
 
-$N_{2}O_{D\left( s,q,m \right)}$= direct N₂O emissions from manure management system m, kg N₂O quarter⁻¹;
+$`N_{2}O_{D\left( s,q,m \right)}`$= direct N₂O emissions from manure management system m, kg N₂O quarter⁻¹;
 
-$N_{2}O_{V\left( s,q,m \right)}$ = indirect N₂O emissions from volatilisation in system m, kg N₂O quarter⁻¹;
+$`N_{2}O_{V\left( s,q,m \right)}`$ = indirect N₂O emissions from volatilisation in system m, kg N₂O quarter⁻¹;
 
-$N_{2}O_{L\left( s,q,m \right)}$ = indirect N₂O emissions from leaching and runoff in system m, kg N₂O quarter⁻¹;
+$`N_{2}O_{L\left( s,q,m \right)}`$ = indirect N₂O emissions from leaching and runoff in system m, kg N₂O quarter⁻¹;
 
-$m$= manure management systems in the multiple MMS, shown in Table 4.
+$`m`$= manure management systems in the multiple MMS, shown in Table 4.
 
 #### 3.4.3 Enteric fermentation CH₄
 
@@ -507,31 +507,31 @@ The productivity class assigned to an operation therefore determines both variab
 
 The enteric fermentation emission factor was calculated following IPCC (2019a) Equation 10.21A (New), with the annual term replaced by the number of days in the quarter,
 
-$EF_{\left( s,q \right)} = \frac{MY_{\left( s \right)} \times DMI_{\left( s \right)} \times D_{\left( q \right)}}{1000}$ (Equation 13)
+$`EF_{\left( s,q \right)} = \frac{MY_{\left( s \right)} \times DMI_{\left( s \right)} \times D_{\left( q \right)}}{1000}`$ (Equation 13)
 
 Where,
 
-$EF_{\left( s,q \right)}$ = enteric fermentation CH₄ emission factor for cattle type *s* in quarter *q*, kg CH₄ animal⁻¹ quarter⁻¹;
+$`EF_{\left( s,q \right)}`$ = enteric fermentation CH₄ emission factor for cattle type *s* in quarter *q*, kg CH₄ animal⁻¹ quarter⁻¹;
 
-$MY_{\left( s \right)}$= methane yield for cattle type *s*, g CH₄ kg⁻¹ dry matter intake, from IPCC (2019a) Table 10.12 for the feeding description assigned to the operation's region and cattle type;
+$`MY_{\left( s \right)}`$= methane yield for cattle type *s*, g CH₄ kg⁻¹ dry matter intake, from IPCC (2019a) Table 10.12 for the feeding description assigned to the operation's region and cattle type;
 
-$\text{DM}I_{\left( s \right)}$= dry matter intake for cattle type *s*, kg dry matter animal⁻¹ day⁻¹, from section 10B.4;
+$`\text{DM}I_{\left( s \right)}`$= dry matter intake for cattle type *s*, kg dry matter animal⁻¹ day⁻¹, from section 10B.4;
 
-$D_{\left( q \right)}$= number of days in quarter *q*, based on year;
+$`D_{\left( q \right)}`$= number of days in quarter *q*, based on year;
 
-$1000$= conversion of g CH₄ to kg CH₄.
+$`1000`$= conversion of g CH₄ to kg CH₄.
 
 Total enteric fermentation CH₄ at an operation in a given quarter is the product of that emission factor and the actual head of cattle held,
 
-$CH_{4\left( s,q \right)} = N_{\left( s,q \right)} \times EF_{\left( s,q \right)}$ (Equation 14)
+$`CH_{4\left( s,q \right)} = N_{\left( s,q \right)} \times EF_{\left( s,q \right)}`$ (Equation 14)
 
 Where,
 
-$CH_{4\left( s,q \right)}$ = total enteric fermentation CH₄ emissions from cattle type s in quarter q at an operation, kg CH₄ quarter⁻¹;
+$`CH_{4\left( s,q \right)}`$ = total enteric fermentation CH₄ emissions from cattle type s in quarter q at an operation, kg CH₄ quarter⁻¹;
 
-$N_{\left( s,q \right)}$ = actual head of cattle held at operation in quarter q, from Equation 1 (head);
+$`N_{\left( s,q \right)}`$ = actual head of cattle held at operation in quarter q, from Equation 1 (head);
 
-$EF_{\left( s,q \right)}$ = enteric fermentation CH₄ emission factor for cattle type s in quarter q, kg CH₄ animal⁻¹ quarter⁻¹.
+$`EF_{\left( s,q \right)}`$ = enteric fermentation CH₄ emission factor for cattle type s in quarter q, kg CH₄ animal⁻¹ quarter⁻¹.
 
 Unlike manure management, enteric fermentation is not apportioned across systems: the emission factor depends only on the animal and its diet, so a single factor applies to all cattle of a given type at an operation regardless of how their manure is subsequently handled. Emissions were converted from kilograms to metric tonnes (t) for reporting.
 
@@ -752,7 +752,7 @@ Emissions estimates were generated quarterly for years 2015 to 2025 with the Cli
 **Table M2** Beef and dairy cattle operation metadata description for confidence and uncertainty for enteric fermentation and manure management emissions. The standard deviation is represented by σ.
 
 <table><thead><tr class="header"><th><strong>Data attributes</strong></th><th><strong>Confidence Definitions</strong></th><th><strong>Uncertainty Definitions</strong></th></tr></thead><tbody><tr class="odd"><td><strong>location</strong></td><td><p><em>Low:</em> either the operations’ location wasn’t QC’ed or reported locations where greater than &gt;1km away from actual location;</p><p><em>Medium:</em> a subset of locations in a country or U.S. state were QC’ed and found to be with 1km of the actual operations location;</p><p><em>High:</em> if an operations’ location was visually confirmed in a GIS program</p></td><td>Not used; N/A</td></tr><tr class="even"><td><strong>type</strong></td><td><p><em>Low</em>: if operation has features similar to a cattle operation but no additional information to confirm;</p><p><em>Medium</em>: if operation has visible features are available to confirm operation type;</p><p><em>High</em>: if type is reported or researched and confirmed</p></td><td>Not used; N/A</td></tr><tr class="odd"><td><strong>capacity_description</strong></td><td><p><em>Low</em>: if the estimated type was “<em>fill</em>” (mean value used based on country-level information), “<em>floor</em>”, or ”<em>ceiling</em>”;</p><p><em>Medium</em>: capacity derived by “<em>lnr_model”</em>, capacity based on an operation’s ha size by livestock type;</p><p><em>High</em>: if estimate type was from “<em>reported”</em></p></td><td><p>In the asset-level emissions csv, the “other2” column describes the asset’s capacity derived by:</p><p><em>'mean</em>: the σ normalized to the mean value based on each country’s mean total head of cattle reported. mean value reported for the country’;</p><p>“<em>lnr_model</em>”, “<em>floor</em>”, or ”<em>ceiling</em>”: the σ is model-based;</p><p>“<em>reported_capacity</em>”: no σ estimated and set to 0</p></td></tr><tr class="even"><td><p><strong>capacity_factor_</strong></p><p><strong>description</strong></p></td><td><p><em><span class="underline">Low</span></em></p><p><em>Beef operations:</em> if capacity factor is a fixed value, fill-in, or an average for all years</p><p><em><span class="underline">Medium</span></em></p><p><em>Beef operations:</em> if capacity utilization rate derived from USDA or FAS based on country or regional-level information; <em>Dairy operations:</em> assumed 100% or capacity factor =1.0</p><p><em><span class="underline">High</span></em></p><p>All operations- farm-level specific capacity factor</p></td><td>Assumed ±10% for all operations</td></tr><tr class="odd"><td><strong>activity_description</strong></td><td><p><em>Low</em>: if activity value was filled-in (mean value), or a floor (min) or ceiling (max) value was used based on reported data;</p><p><em>Medium</em>: activity derived with linear model;</p><p><em>High:</em> permit/reported total head of cattle for that operation</p></td><td>Use “capacity” and “capacity factor” uncertainty values to generate activity uncertainty</td></tr><tr class="even"><td><p><strong>CO2_emissions_</strong></p><p><strong>factor</strong></p></td><td>Not estimated based on IPCC definition</td><td></td></tr><tr class="odd"><td><strong>CH4_emissions_<br />
-factor</strong></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> Tier 2 default is ± 20%;</p><p><em>Manure Mgmt:</em> Tier 1 default is ± 30%</p></td></tr><tr class="even"><td><p><strong>N2O_emissions_</strong></p><p><strong>factor</strong></p></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> N/A;</p><p><em>Manure Mgmt:</em> A derived factor from:</p><p><span class="math inline">$\frac{N2O\ emissions\ uncertainty}{\text{activity}}$</span></p></td></tr><tr class="odd"><td><strong>other_gas_emissions_factor</strong></td><td>Not used; N/A</td><td></td></tr><tr class="even"><td><strong>CO2_emissions</strong></td><td>Not estimated based on IPCC definition</td><td></td></tr><tr class="odd"><td><strong>CH4_emissions</strong></td><td><em>Medium</em>: based on IPCC emissions factors</td><td>Uncertainty is the cumulative of each variables’ uncertainty applied to the original emissions value</td></tr><tr class="even"><td><strong>N2O_emissions</strong></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> N/A;</p><p><em>Manure Mgmt</em>: Uncertainty is the cumulative of each variables’ uncertainty applied to the original emissions value</p></td></tr><tr class="odd"><td><strong>other_gas_emissions</strong></td><td>Not used; N/A</td><td></td></tr><tr class="even"><td><p><strong>total_CO2e_</strong></p><p><strong>100yrGWP</strong></p></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> the CH4_emissions uncertainty value <em>x</em> 100yr GWP;</p><p><em>Manure Mgmt:</em> the CH4_emissions uncertainty value <em>x</em> 100yr GW;</p><p>N2O_emissions_uncertainty <em>x</em> 100yr GWP</p></td></tr><tr class="odd"><td><p><strong>total_CO2e_</strong></p><p><strong>20yrGWP</strong></p></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> the CH4_emissions uncertainty value <em>x</em> 20yr GWP;</p><p><em>Manure Mgmt:</em> the CH4_emissions uncertainty value <em>x</em> 20yr GW;</p><p>N2O_emissions_uncertainty <em>x</em> 20yr GWP</p></td></tr></tbody></table>
+factor</strong></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> Tier 2 default is ± 20%;</p><p><em>Manure Mgmt:</em> Tier 1 default is ± 30%</p></td></tr><tr class="even"><td><p><strong>N2O_emissions_</strong></p><p><strong>factor</strong></p></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> N/A;</p><p><em>Manure Mgmt:</em> A derived factor from:</p><p><span class="math inline">$`\frac{N2O\ emissions\ uncertainty}{\text{activity}}`$</span></p></td></tr><tr class="odd"><td><strong>other_gas_emissions_factor</strong></td><td>Not used; N/A</td><td></td></tr><tr class="even"><td><strong>CO2_emissions</strong></td><td>Not estimated based on IPCC definition</td><td></td></tr><tr class="odd"><td><strong>CH4_emissions</strong></td><td><em>Medium</em>: based on IPCC emissions factors</td><td>Uncertainty is the cumulative of each variables’ uncertainty applied to the original emissions value</td></tr><tr class="even"><td><strong>N2O_emissions</strong></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> N/A;</p><p><em>Manure Mgmt</em>: Uncertainty is the cumulative of each variables’ uncertainty applied to the original emissions value</p></td></tr><tr class="odd"><td><strong>other_gas_emissions</strong></td><td>Not used; N/A</td><td></td></tr><tr class="even"><td><p><strong>total_CO2e_</strong></p><p><strong>100yrGWP</strong></p></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> the CH4_emissions uncertainty value <em>x</em> 100yr GWP;</p><p><em>Manure Mgmt:</em> the CH4_emissions uncertainty value <em>x</em> 100yr GW;</p><p>N2O_emissions_uncertainty <em>x</em> 100yr GWP</p></td></tr><tr class="odd"><td><p><strong>total_CO2e_</strong></p><p><strong>20yrGWP</strong></p></td><td><em>Medium</em>: based on IPCC emissions factors</td><td><p><em>Enteric fermentation:</em> the CH4_emissions uncertainty value <em>x</em> 20yr GWP;</p><p><em>Manure Mgmt:</em> the CH4_emissions uncertainty value <em>x</em> 20yr GW;</p><p>N2O_emissions_uncertainty <em>x</em> 20yr GWP</p></td></tr></tbody></table>
 
 **Table M3** Other columns metadata provided in the enteric fermentation and/or manure management asset-level file.
 
@@ -836,11 +836,11 @@ Outputs include per-pond and per-image GeoJSONs containing pond count, total are
 
 For beef operations in U.S., USDA provided the following data to estimate the capacity factor (utilization rate) of feedlots for states that contain them:
 
-$CF_{\left( c,q \right)} = \frac{CATTLE,\ ON\ FEED\  - \ INVENTORY,\ CAPACITY:\ (1,000\ OR\ MORE\ HEAD)}{CATTLE,\ ON\ FEED\  - \ INVENTORY,\ TOTAL}$ (Equation S1)
+$`CF_{\left( c,q \right)} = \frac{CATTLE,\ ON\ FEED\  - \ INVENTORY,\ CAPACITY:\ (1,000\ OR\ MORE\ HEAD)}{CATTLE,\ ON\ FEED\  - \ INVENTORY,\ TOTAL}`$ (Equation S1)
 
 For ROW, USDA Foreign Agricultural Service (FAS) Production, Supply, and Distribution (PSD reports were used (https://apps.fas.usda.gov/psdonline/app/index.html\#/app/home). If country data reported beef cattle data, then the following was used to generate capacity factors per quarter per year:
 
-$CF_{\left( c,q \right)} = \frac{\text{Cow~Slaughter} + \text{Total~Slaughter}}{\text{Beef~Cows~Beg.~Stocks}}$ (Equation S2)
+$`CF_{\left( c,q \right)} = \frac{\text{Cow~Slaughter} + \text{Total~Slaughter}}{\text{Beef~Cows~Beg.~Stocks}}`$ (Equation S2)
 
 Countries lacking information used the mean values of the two capacity factors above.
 

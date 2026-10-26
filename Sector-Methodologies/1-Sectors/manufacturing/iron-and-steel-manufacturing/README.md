@@ -63,9 +63,9 @@ Satellite-derived production estimates make use of multispectral imagery from tw
 
 All satellite datasets were sourced and processed using Google Earth Engine (Google Earth Engine, 2025a, 2025b, 2025c). From each satellite dataset, we relied on the surface reflectance products and computed the ratio of the difference between two SWIR bands and near infrared (NIR) bands of each satellite. This is based on the study to detect high-temperature anomalies from Sentinel-2 MSI images where a tri-spectral thermal anomaly index (TAI) that jointly uses the two high-temperature sensitive SWIR bands and the high-temperature-insensitive NIR band to enhance High Temperature Anomalies (Yongxue et al., 2021). For the respective satellite collections, we infer the TAI through the following equations:
 
--   Sentinel-2A/B: $TAI\  = \ \frac{(B12\  - \ B11)}{(B8a)}$
+-   Sentinel-2A/B: $`TAI\  = \ \frac{(B12\  - \ B11)}{(B8a)}`$
 
--   Landsat-8/9: $TAI\  = \ \frac{(B7\  - \ B6)}{(B5)}$
+-   Landsat-8/9: $`TAI\  = \ \frac{(B7\  - \ B6)}{(B5)}`$
 
 Where B\# refers to the band number for the specific satellite. This ratio was used to identify thermal anomalies within the temperature range of industrial processes, while eliminating most of the noise from reflectance interference. Pixel values between the Sentinel 2A/B MSI and Landsat OLI were harmonized using NASA’s band pass adjustments allowing the two image collections to be used as if they were a single collection (NASA, 2018). The harmonized dataset ensured higher revisit for time-series surface applications. Partial images (coverage of the steel facility’s boundaries less than 80%) and cloudy images (more than 20% clouds) were excluded. [Figure](#bookmark=id.1hmsyys) 3 shows an example of TAI with identified hotspots at a steel plant.
 
@@ -133,17 +133,17 @@ Facility-level direct and indirect emissions were estimated through application 
 
 <table><thead><tr class="header"><th><strong>Production Route</strong></th><th><strong>Direct Emission Factor (t-CO<sub>2</sub>/t-steel)</strong></th><th><p><strong>Electricity Use Factor</strong></p><p><strong>(MWh/t-steel)</strong></p></th><th><p><strong>Process Emissions Factors</strong></p><p><strong>(t-CO<sub>2</sub>/t-steel)</strong></p></th></tr></thead><tbody><tr class="odd"><td>BF/BOF</td><td>1.9</td><td>0.83</td><td>1.71</td></tr><tr class="even"><td>DRI-EAF</td><td>1.0</td><td>0.87</td><td>0.62</td></tr><tr class="odd"><td>EAF</td><td>0.08</td><td>0.87</td><td>0.08</td></tr></tbody></table>
 
-In the case of EAF production, the proportion of scrap in the feedstock mix was used to refine the estimation of emission factors. To calculate the effective emission factor $E_{a}(EAF)$ based on the actual feedstock composition, the following weighted average formula was applied:
+In the case of EAF production, the proportion of scrap in the feedstock mix was used to refine the estimation of emission factors. To calculate the effective emission factor $`E_{a}(EAF)`$ based on the actual feedstock composition, the following weighted average formula was applied:
 
-$E_{a}(EAF)\  = \ {E_{a}}^{\text{scrap}}\text{\ \ x\ \ \ p}c_{\text{scrap}}\  + \ {E_{a}}^{\text{DRI}}\text{\ x\ \ p}c_{\text{DRI}}\  + \ {E_{a}}^{\text{pig\ iron}}\text{\ x\ \ p}c_{pig\_ iron} + \ {E_{a}}^{\text{DRI}}\text{\ x\ \ p}c_{other\_ iron}$
+$`E_{a}(EAF)\  = \ {E_{a}}^{\text{scrap}}\text{\ \ x\ \ \ p}c_{\text{scrap}}\  + \ {E_{a}}^{\text{DRI}}\text{\ x\ \ p}c_{\text{DRI}}\  + \ {E_{a}}^{\text{pig\ iron}}\text{\ x\ \ p}c_{pig\_ iron} + \ {E_{a}}^{\text{DRI}}\text{\ x\ \ p}c_{other\_ iron}`$
 
 Where:
 
-${E_{a}}^{\text{scrap}}$= 0.08 (IPCC 2006) , ${E_{a}}^{\text{DRI}}\  = \ 1.0$ (IEA, 2020)​, and ${E_{a}}^{\text{pig\ iron}}$​ = 1.71 (IPCC, 2006) represent the emission factors for EAF production using 100% scrap, DRI, and pig iron, respectively.
+$`{E_{a}}^{\text{scrap}}`$= 0.08 (IPCC 2006) , $`{E_{a}}^{\text{DRI}}\  = \ 1.0`$ (IEA, 2020)​, and $`{E_{a}}^{\text{pig\ iron}}`$​ = 1.71 (IPCC, 2006) represent the emission factors for EAF production using 100% scrap, DRI, and pig iron, respectively.
 
-$\text{\ p}c_{\text{scrap}}$​, $pc_{\text{DRI}}$, $pc_{pig\_ iron}$​, and $pc_{other\_ iron}$ are the corresponding proportions of each feedstock type used.
+$`\text{\ p}c_{\text{scrap}}`$​, $`pc_{\text{DRI}}`$, $`pc_{pig\_ iron}`$​, and $`pc_{other\_ iron}`$ are the corresponding proportions of each feedstock type used.
 
-Emissions from other sources of iron were assumed to be equal to those from DRI. When the percentage of scrap ($\text{\ p}c_{\text{scrap}}$) was not available in the database, it was assumed to be equal to the average $\text{\ p}c_{\text{scrap}}$ of the assets where this value was below 100%, based on the assumption that assets using 100% scrap would report this openly owing to the ‘green’ credentials associated. To determine the proportion of each feedstock used at a given asset, a weighted average was calculated based on the capacities of its EAF units.
+Emissions from other sources of iron were assumed to be equal to those from DRI. When the percentage of scrap ($`\text{\ p}c_{\text{scrap}}`$) was not available in the database, it was assumed to be equal to the average $`\text{\ p}c_{\text{scrap}}`$ of the assets where this value was below 100%, based on the assumption that assets using 100% scrap would report this openly owing to the ‘green’ credentials associated. To determine the proportion of each feedstock used at a given asset, a weighted average was calculated based on the capacities of its EAF units.
 
 Indirect emissions factors were calculated using the average electricity use for different production routes (MPP contributors, 2024) and the regional grid intensity (Ember contributors, 2025). These factors were adjusted to obtain an global average per production route matching the values reported by other sources (WSA, 2024b; IEA 2020). These values can be found in Table 1.
 

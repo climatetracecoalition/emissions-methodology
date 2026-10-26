@@ -62,7 +62,7 @@ Only the retained-residue pathway is considered in the N₂O calculations descri
 
 #### 2.5 Dry-matter conversion and nitrogen returned to soil
 
-Retained aboveground crop residue was converted to a dry-matter basis before estimating the amount of residue N returned to the soil. Crop-specific dry-matter fractions were derived primarily from Table 11.1A (New), Chapter 11, Volume 4: Agriculture, Forestry and Other Land Use, of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. Table 11.1A provides default values for the dry-matter fraction of harvested product ($\text{DRY}$) for major crops and crop groups. Crop-specific IPCC values were used where available, while representative crop-group values or literature-based proxies were applied where a direct value was unavailable. The complete dry-matter parameterization and proxy assignments are provided in Supplementary Table S2.
+Retained aboveground crop residue was converted to a dry-matter basis before estimating the amount of residue N returned to the soil. Crop-specific dry-matter fractions were derived primarily from Table 11.1A (New), Chapter 11, Volume 4: Agriculture, Forestry and Other Land Use, of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. Table 11.1A provides default values for the dry-matter fraction of harvested product ($`\text{DRY}`$) for major crops and crop groups. Crop-specific IPCC values were used where available, while representative crop-group values or literature-based proxies were applied where a direct value was unavailable. The complete dry-matter parameterization and proxy assignments are provided in Supplementary Table S2.
 
 Nitrogen contained in retained crop residues was then estimated by applying crop-specific residue N concentrations to the dry residue mass. Residue N-content values were derived primarily from Table 5.5B (New), Chapter 5: Cropland, Volume 4: Agriculture, Forestry and Other Land Use, of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. Table 5.5B provides default N contents of crop residues for major crops and crop groups. For crops not represented in the IPCC table, residue N concentrations were supplemented using Table 15, “Nutrient content of harvested product, crop residues, and removal factors for crop residues,” in the FAO publication Scaling Soil Nutrient Balances: Enabling Mesolevel Applications for African Realities (FAO, 2004).
 
@@ -114,19 +114,19 @@ Annual SOC stock change from SALUS was converted to an equivalent atmospheric CO
 
 |     |                                                                           |       |
 |-----|---------------------------------------------------------------------------|-------|
-|     | $E_{SOC - CO_{2},i,t} = \  - \Delta\text{SO}C_{i,t} \times \frac{44}{12}$ | \(1\) |
+|     | $`E_{SOC - CO_{2},i,t} = \  - \Delta\text{SO}C_{i,t} \times \frac{44}{12}`$ | \(1\) |
 
 SALUS N₂O outputs were converted to CO₂ equivalents using a 100-year global warming potential of 273 (IPCC 2021).
 
 |     |                                                    |       |
 |-----|----------------------------------------------------|-------|
-|     | $E_{N_{2}O,CO_{2}e,i,t} = N_{2}O_{i,t} \times 273$ | \(2\) |
+|     | $`E_{N_{2}O,CO_{2}e,i,t} = N_{2}O_{i,t} \times 273`$ | \(2\) |
 
 Total modeled greenhouse-gas emissions were then calculated as the sum of SOC-derived CO₂ and N₂O expressed as CO₂ equivalents:
 
 |     |                                                                 |       |
 |-----|-----------------------------------------------------------------|-------|
-|     | $E_{total,i,t} = E_{SOC - CO_{2},i,t} + E_{N_{2}O,CO_{2}e,i,t}$ | \(3\) |
+|     | $`E_{total,i,t} = E_{SOC - CO_{2},i,t} + E_{N_{2}O,CO_{2}e,i,t}`$ | \(3\) |
 
 All quantities were retained as signed values. Consequently, lower values represent lower atmospheric emissions, and negative values indicate modeled net removal.
 
@@ -136,9 +136,9 @@ Second, temporal consistency among management responses was evaluated at the glo
 
 |     |                                        |       |
 |-----|----------------------------------------|-------|
-|     | $R_{s,t} = \frac{E_{s,t}}{E_{MP25,t}}$ | \(4\) |
+|     | $`R_{s,t} = \frac{E_{s,t}}{E_{MP25,t}}`$ | \(4\) |
 
-where $R_{s,t}$ is the normalized annual emission for management scenario $s$ in year $t,\ \ E_{s,t}$ is the corresponding global emission total, and $E_{MP25,t}\ $is the global total emission for 25-cm moldboard-plow incorporation. Moldboard incorporation therefore has a normalized value of 1.0 in every year. This scenario was used only as a common reference for comparison among the four SALUS treatments and should not be interpreted as the Climate TRACE inventory baseline.
+where $`R_{s,t}`$ is the normalized annual emission for management scenario $`s`$ in year $`t,\ \ E_{s,t}`$ is the corresponding global emission total, and $`E_{MP25,t}`$is the global total emission for 25-cm moldboard-plow incorporation. Moldboard incorporation therefore has a normalized value of 1.0 in every year. This scenario was used only as a common reference for comparison among the four SALUS treatments and should not be interpreted as the Climate TRACE inventory baseline.
 
 Third, management responses were evaluated according to residue quality. Annual residue C:N ratios and annual emissions were first averaged across 2016–2025 within each grid cell. Mean residue C:N ratios were then classified as low (&lt;30), medium (30–&lt;60), or high (≥60). These classes represented 3.63%, 47.72%, and 48.66% of the area-weighted C:N analysis domain (Figure 1), respectively.
 
@@ -146,7 +146,7 @@ For each component and grid cell, the percentage difference from moldboard incor
 
 |     |                                                                                                       |       |
 |-----|-------------------------------------------------------------------------------------------------------|-------|
-|     | $\Delta E_{s,i}\left( \% \right) = 100 \times \frac{E_{s,i} - E_{MP25,i}}{\left| E_{MP25,i} \right|}$ | \(5\) |
+|     | $`\Delta E_{s,i}\left( \% \right) = 100 \times \frac{E_{s,i} - E_{MP25,i}}{\left| E_{MP25,i} \right|}`$ | \(5\) |
 
 Using the absolute denominator preserves a consistent sign interpretation for the small number of grid cells where the moldboard-plow scenario produced negative emissions. Negative percentage values therefore indicate lower emissions than moldboard incorporation, whereas positive values indicate higher emissions. Grid cells with moldboard values extremely close to zero were excluded to prevent unstable percentage changes; this affected 32 cells for SOC-derived CO₂, 56 for N₂O, and 16 for total CO₂e.
 
@@ -415,9 +415,9 @@ For each crop, grid cell, and year, crop yield was calculated as crop production
 
 |     |                                                       |      |
 |-----|-------------------------------------------------------|------|
-|     | $Y_{cro,i,j,y} = \frac{P_{cro,i,j,y}}{A_{cro,i,j,y}}$ | (S1) |
+|     | $`Y_{cro,i,j,y} = \frac{P_{cro,i,j,y}}{A_{cro,i,j,y}}`$ | (S1) |
 
-where $Y_{cro,i,j,y}$is crop yield, $P_{cro,i,j,y}$ is crop production, and $A_{cro,i,j,y}$ is harvested area for crop in grid cell (i,j) and year y. Grid cells with zero harvested area were assigned a crop yield of zero.
+where $`Y_{cro,i,j,y}`$is crop yield, $`P_{cro,i,j,y}`$ is crop production, and $`A_{cro,i,j,y}`$ is harvested area for crop in grid cell (i,j) and year y. Grid cells with zero harvested area were assigned a crop yield of zero.
 
 **S2.2 Yield-dependent residue-production functions**
 
@@ -425,15 +425,15 @@ For barley, maize, rice, wheat, millet, sorghum, and other cereals, aboveground 
 
 |     |                                                                                                       |      |
 |-----|-------------------------------------------------------------------------------------------------------|------|
-|     | $R_{cro,i,j,y} = a_{\text{cro}}Y_{cro,i,j,y}\exp\exp\ \left( - b_{\text{cro}}Y_{cro,i,j,y} \right)\ $ | (S2) |
+|     | $`R_{cro,i,j,y} = a_{\text{cro}}Y_{cro,i,j,y}\exp\exp\ \left( - b_{\text{cro}}Y_{cro,i,j,y} \right)`$ | (S2) |
 
-where $R_{cro,i,j,y}$is aboveground residue yield and $a_{\text{cro}}$ and $b_{\text{cro}}$ are crop-specific coefficients (Table S1).
+where $`R_{cro,i,j,y}`$is aboveground residue yield and $`a_{\text{cro}}`$ and $`b_{\text{cro}}`$ are crop-specific coefficients (Table S1).
 
 |     |                                                          |      |
 |-----|----------------------------------------------------------|------|
-|     | $M_{res,cro,i,j,y} = R_{cro,i,j,y} \times A_{cro,i,j,y}$ | (S3) |
+|     | $`M_{res,cro,i,j,y} = R_{cro,i,j,y} \times A_{cro,i,j,y}`$ | (S3) |
 
-where $A_{cro,i,j,y}$ is the harvest area for the crop, and $M_{res,cro,i,j,y}$ is total aboveground crop-residue production within the grid cell. The crop-specific a and b coefficients used in the inventory are provided in Supplementary Table S1.
+where $`A_{cro,i,j,y}`$ is the harvest area for the crop, and $`M_{res,cro,i,j,y}`$ is total aboveground crop-residue production within the grid cell. The crop-specific a and b coefficients used in the inventory are provided in Supplementary Table S1.
 
 **S2.3 Harvest-index approach**
 
@@ -441,17 +441,17 @@ For crop groups without a yield-dependent residue relationship, aboveground resi
 
 |     |                                                                            |      |
 |-----|----------------------------------------------------------------------------|------|
-|     | $R_{cro,i,j,y} = \frac{1 - HI_{\text{cro}}}{HI_{\text{cro}}}Y_{cro,i,j,y}$ | (S4) |
+|     | $`R_{cro,i,j,y} = \frac{1 - HI_{\text{cro}}}{HI_{\text{cro}}}Y_{cro,i,j,y}`$ | (S4) |
 
-where $HI_{\text{cro}}$ is the harvest index of the corresponding crop (Table S1). The harvest index represents the fraction of total aboveground biomass contained in the harvested product. Crop-specific harvest-index values were used where available; a value of 0.40 was used as the default for crop groups for which a specific value was unavailable.
+where $`HI_{\text{cro}}`$ is the harvest index of the corresponding crop (Table S1). The harvest index represents the fraction of total aboveground biomass contained in the harvested product. Crop-specific harvest-index values were used where available; a value of 0.40 was used as the default for crop groups for which a specific value was unavailable.
 
 Total aboveground residue production was subsequently calculated as:
 
 |     |                                                          |      |
 |-----|----------------------------------------------------------|------|
-|     | $M_{res,cro,i,j,y} = R_{cro,i,j,y} \times A_{cro,i,j,y}$ | (S5) |
+|     | $`M_{res,cro,i,j,y} = R_{cro,i,j,y} \times A_{cro,i,j,y}`$ | (S5) |
 
-where $M_{res,cro,i,j,y}$is total aboveground crop-residue production within the grid cell. The residue estimates represent aboveground crop residues only; belowground root biomass was not included in this calculation.
+where $`M_{res,cro,i,j,y}`$is total aboveground crop-residue production within the grid cell. The residue estimates represent aboveground crop residues only; belowground root biomass was not included in this calculation.
 
 **Table S1** Crop-specific parameters used to estimate aboveground crop-residue production.
 
@@ -497,9 +497,9 @@ The retained aboveground residue mass was calculated as:
 
 |     |                                                              |       |
 |-----|--------------------------------------------------------------|-------|
-|     | $M_{ret,cro,i,j,y} = M_{res,cro,i,j,y} \times f_{ret,i,j,y}$ | \(6\) |
+|     | $`M_{ret,cro,i,j,y} = M_{res,cro,i,j,y} \times f_{ret,i,j,y}`$ | \(6\) |
 
-where $M_{ret,cro,i,j,y}$ is the mass of crop residue is retained on agricultural land, $M_{res,cro,i,j,y}$ is total aboveground residue production, and $f_{ret,i,j,y}$ is the fraction of residue retained in grid cell ($i,j$) and year $y$.
+where $`M_{ret,cro,i,j,y}`$ is the mass of crop residue is retained on agricultural land, $`M_{res,cro,i,j,y}`$ is total aboveground residue production, and $`f_{ret,i,j,y}`$ is the fraction of residue retained in grid cell ($`i,j`$) and year $`y`$.
 
 An important limitation is that the residue-management fractions reported by Smerald et al. (2023) were developed for cereal residues rather than for the full range of crop groups represented in the Climate TRACE inventory. Because globally consistent, spatially explicit residue-management fractions were not available for non-cereal crops, we assumed that the residue-management pattern represented by the Smerald et al dataset was also applicable to the other crop groups within the same location. Consequently, the same grid-cell-level retention fraction was applied to all crops present within a given grid cell. This assumption allows residue management to vary spatially while maintaining a consistent global framework, but it does not capture crop-specific differences in residue removal, retention, or other management practices.
 
@@ -511,9 +511,9 @@ Retained aboveground crop residue was converted to a dry-matter basis before the
 
 |     |                                                              |       |
 |-----|--------------------------------------------------------------|-------|
-|     | $M_{ret,DM,cro,i,j,y} = M_{ret,cro,i,j,y} \times f_{DM,cro}$ | \(7\) |
+|     | $`M_{ret,DM,cro,i,j,y} = M_{ret,cro,i,j,y} \times f_{DM,cro}`$ | \(7\) |
 
-where $M_{ret,DM,cro,i,j,y}$is the dry mass of retained aboveground residue, $M_{ret,cro,i,j,y}$ is the retained residue mass prior to dry-matter conversion, and $f_{DM,cro}$ is the crop-specific dry-matter fraction.
+where $`M_{ret,DM,cro,i,j,y}`$is the dry mass of retained aboveground residue, $`M_{ret,cro,i,j,y}`$ is the retained residue mass prior to dry-matter conversion, and $`f_{DM,cro}`$ is the crop-specific dry-matter fraction.
 
 Dry-matter fractions were derived primarily from Table 11.1A (New), in Chapter 11, “N₂O Emissions from Managed Soils, and CO₂ Emissions from Lime and Urea Application,” Volume 4: Agriculture, Forestry and Other Land Use, of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. Crop-specific IPCC values were used where available. Where a direct value was unavailable, the corresponding IPCC crop-group value or another representative crop was used as a proxy.
 
@@ -523,17 +523,17 @@ Nitrogen returned to the soil was subsequently calculated as:
 
 |     |                                                             |       |
 |-----|-------------------------------------------------------------|-------|
-|     | $N_{res,cro,i,j,y} = M_{ret,DM,cro,i,j,y} \times f_{N,cro}$ | \(8\) |
+|     | $`N_{res,cro,i,j,y} = M_{ret,DM,cro,i,j,y} \times f_{N,cro}`$ | \(8\) |
 
-where $N_{res,cro,i,j,y}$ is the amount of N contained in retained crop residue and $f_{N,cro}$ is the crop-specific residue N concentration expressed as a mass fraction.
+where $`N_{res,cro,i,j,y}`$ is the amount of N contained in retained crop residue and $`f_{N,cro}`$ is the crop-specific residue N concentration expressed as a mass fraction.
 
 For reporting purposes, residue N concentrations are expressed in Supplementary Table S3 as kg N Mg⁻¹ residue. The corresponding values were converted to mass fractions for the calculations:
 
 |     |                                      |       |
 |-----|--------------------------------------|-------|
-|     | $f_{N,cro} = \frac{C_{N,cro}}{1000}$ | \(9\) |
+|     | $`f_{N,cro} = \frac{C_{N,cro}}{1000}`$ | \(9\) |
 
-where $C_{N,cro}$ is the crop-specific residue N concentration in kg N Mg⁻¹ residue.
+where $`C_{N,cro}`$ is the crop-specific residue N concentration in kg N Mg⁻¹ residue.
 
 The primary source of crop-residue N concentrations was Table 5.5B (New), “Default values for nitrogen and lignin contents in crops for the Steady-State Method,” in Chapter 5, “Cropland,” Volume 4: Agriculture, Forestry and Other Land Use, of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. This table provides crop-residue N concentrations for major crop groups, including generic crops, generic grains, wheat, barley, maize, rice, millet, sorghum, beans and pulses, soybean, peanuts, and potatoes and tubers. For example, the values used in the Climate TRACE inventory include 0.0063 kg N kg⁻¹ residue for maize, 0.0090 for barley, 0.0070 for rice and millet, and 0.0080 for beans and pulses and soybean.
 
@@ -576,7 +576,7 @@ Where neither source contained a direct value for a Climate TRACE crop group, a 
 
 **Supplementary Text S5. Calculation of direct and indirect N₂O emissions from retained crop residue**
 
-The amount of N returned to agricultural soils in retained aboveground crop residues, calculated as described in Supplementary Text S4, was used as the activity variable for estimating direct and indirect N₂O emissions. For each crop, grid cell, and year, residue N was represented as $N_{res,cro,i,j,y}$ , which is the mass of N contained in the retained crop residue for crop $\text{cro}$, grid cell ($i,j$), and year $y$.
+The amount of N returned to agricultural soils in retained aboveground crop residues, calculated as described in Supplementary Text S4, was used as the activity variable for estimating direct and indirect N₂O emissions. For each crop, grid cell, and year, residue N was represented as $`N_{res,cro,i,j,y}`$ , which is the mass of N contained in the retained crop residue for crop $`\text{cro}`$, grid cell ($`i,j`$), and year $`y`$.
 
 **S5.1 Direct N₂O emissions**
 
@@ -584,15 +584,15 @@ Direct N₂O–N emissions were calculated using the IPCC Tier 1 direct emission
 
 |     |                                                                  |        |
 |-----|------------------------------------------------------------------|--------|
-|     | $E_{direct,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times EF_{1}$ | \(10\) |
+|     | $`E_{direct,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times EF_{1}`$ | \(10\) |
 
-where $E_{direct,N2O - N,cro,i,j,y}$ is direct N₂O–N emission and $EF_{1}$ is the direct emission factor.
+where $`E_{direct,N2O - N,cro,i,j,y}`$ is direct N₂O–N emission and $`EF_{1}`$ is the direct emission factor.
 
 The Tier 1 value applied in the Climate TRACE crop-residue inventory was
 
 |     |                 |        |
 |-----|-----------------|--------|
-|     | $EF_{1} = 0.01$ | \(11\) |
+|     | $`EF_{1} = 0.01`$ | \(11\) |
 
 corresponding to 1% of residue N returned to the soil being emitted directly as N₂O–N. The same factor was applied across all crops, countries, grid cells, and years. This value follows the Tier 1 framework in Chapter 11, Volume 4 of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. Computational implementation uses this constant value directly in the annual residue-emission calculation.
 
@@ -602,39 +602,39 @@ Indirect N₂O emissions associated with N leaching and runoff were estimated in
 
 |     |                                                                                  |        |
 |-----|----------------------------------------------------------------------------------|--------|
-|     | $N_{leach,cro,i,j,y} = N_{res,cro,i,j,y} \times Frac_{LEACH - \left( H \right)}$ | \(12\) |
+|     | $`N_{leach,cro,i,j,y} = N_{res,cro,i,j,y} \times Frac_{LEACH - \left( H \right)}`$ | \(12\) |
 
-where $\text{Fra}c_{\text{LEACH}}\ $represents the fraction of N additions lost through leaching and runoff.
+where $`\text{Fra}c_{\text{LEACH}}`$represents the fraction of N additions lost through leaching and runoff.
 
 The value used was:
 
 |     |                                     |        |
 |-----|-------------------------------------|--------|
-|     | $\text{Fra}c_{\text{LEACH}} = 0.24$ | \(13\) |
+|     | $`\text{Fra}c_{\text{LEACH}} = 0.24`$ | \(13\) |
 
 The resulting N lost through leaching and runoff was multiplied by the IPCC indirect emission factor:
 
 |     |                                                                      |        |
 |-----|----------------------------------------------------------------------|--------|
-|     | $E_{indirect,N2O - N,cro,i,j,y} = N_{leach,cro,i,j,y} \times EF_{5}$ | \(14\) |
+|     | $`E_{indirect,N2O - N,cro,i,j,y} = N_{leach,cro,i,j,y} \times EF_{5}`$ | \(14\) |
 
 where:
 
 |     |                  |        |
 |-----|------------------|--------|
-|     | $EF_{5} = 0.011$ | \(15\) |
+|     | $`EF_{5} = 0.011`$ | \(15\) |
 
 Combining these two terms gives:
 
 |     |                                                                               |        |
 |-----|-------------------------------------------------------------------------------|--------|
-|     | $E_{indirect,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times 0.24 \times 0.011$ | \(16\) |
+|     | $`E_{indirect,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times 0.24 \times 0.011`$ | \(16\) |
 
 or equivalently:
 
 |     |                                                                     |        |
 |-----|---------------------------------------------------------------------|--------|
-|     | $E_{indirect,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times 0.00264$ | \(17\) |
+|     | $`E_{indirect,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times 0.00264`$ | \(17\) |
 
 Thus, the effective emission factor for the leaching/runoff pathway was 0.00264 kg N₂O–N per kg residue N returned to the soil.
 
@@ -644,7 +644,7 @@ Total residue-derived N₂O–N emissions were calculated as the sum of direct a
 
 |     |                                                                                               |        |
 |-----|-----------------------------------------------------------------------------------------------|--------|
-|     | $E_{total,N2O - N,cro,i,j,y} = E_{direct,N2O - N,cro,i,j,y} + E_{indirect,N2O - N,cro,i,j,y}$ | \(18\) |
+|     | $`E_{total,N2O - N,cro,i,j,y} = E_{direct,N2O - N,cro,i,j,y} + E_{indirect,N2O - N,cro,i,j,y}`$ | \(18\) |
 
 Under the Tier 1 factors used here, this can be expressed as:
 
@@ -652,7 +652,7 @@ Under the Tier 1 factors used here, this can be expressed as:
 
 |     |                                                                                        |        |
 |-----|----------------------------------------------------------------------------------------|--------|
-|     | $E_{total,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times \left( 0.01 + 0.00264 \right)$ | \(19\) |
+|     | $`E_{total,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times \left( 0.01 + 0.00264 \right)`$ | \(19\) |
 
 **Table S5** Assignment of countries to continents used for continental aggregation. The 159 countries with emission estimates are listed alphabetically within each continent, with ISO 3166-1 alpha-3 codes in parentheses. Transcontinental countries were assigned to a single continent: Russia and Cyprus to Europe, and Türkiye, Kazakhstan, Armenia, Azerbaijan and Georgia to Asia.
 

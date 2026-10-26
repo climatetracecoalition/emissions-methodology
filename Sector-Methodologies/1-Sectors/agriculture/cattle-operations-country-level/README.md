@@ -148,23 +148,23 @@ Cattle subtypes 1, 2, and 8 were used in combination with individual cattle oper
 
 Where individual cattle operations were identified using the AI detection model or reported, the mean total head of beef or dairy cattle was estimated at each operation and summed by country to produce a Climate TRACE operation country total using Equation 1,
 
-$N_{c,t,s}^{\text{CT}} = {\bar{n}}_{i,t,s}$ (Equation 1)
+$`N_{c,t,s}^{\text{CT}} = {\bar{n}}_{i,t,s}`$ (Equation 1)
 
 Where,
 
-$N_{c,t,s}^{\text{CT}}$ = total head of cattle type *s* in country *c* in year *t*, derived from Climate TRACE identified cattle operations (head);
+$`N_{c,t,s}^{\text{CT}}`$ = total head of cattle type *s* in country *c* in year *t*, derived from Climate TRACE identified cattle operations (head);
 
-${\bar{n}}_{i,t,s}$= mean total head of cattle type *s* at identified cattle operation *i* in year t (head);
+$`{\bar{n}}_{i,t,s}`$= mean total head of cattle type *s* at identified cattle operation *i* in year t (head);
 
-$O_{c}$ = number of individual cattle operations identified in country *c* (count);
+$`O_{c}`$ = number of individual cattle operations identified in country *c* (count);
 
-$i$ = an individual identified cattle operation, numbered 1 through $O_{c}$;
+$`i`$ = an individual identified cattle operation, numbered 1 through $`O_{c}`$;
 
-$c$ = the country for which the total is calculated;
+$`c`$ = the country for which the total is calculated;
 
-$t$ = the year for which the total is calculated; and
+$`t`$ = the year for which the total is calculated; and
 
-$s$ = the cattle type, beef or dairy.
+$`s`$ = the cattle type, beef or dairy.
 
 Climate TRACE derived totals were then incorporated into the country-level populations derived from FAOSTAT or USDA data, described in section 2.2.1.4. Tables 3 and 4 provide totals per country and U.S. state, respectively.
 
@@ -223,33 +223,33 @@ Sections 2.2.1.1 and 2.2.1.2 produced estimated beef and dairy populations in op
 
 The substitution was applied independently for each country, year, and cattle type. For each country where individual operations were identified, the Climate TRACE operations country total was calculated by summing the mean head at every identified operation (Equation 1). That total then was subtracted from the corresponding reported population, and the remaining reported head were carried forward unchanged (Equation 2),
 
-$N_{c,t,s}^{\text{REM}} = N_{c,t,s}^{\text{REP}} - N_{c,t,s}^{\text{CT}}$ (Equation 2)
+$`N_{c,t,s}^{\text{REM}} = N_{c,t,s}^{\text{REP}} - N_{c,t,s}^{\text{CT}}`$ (Equation 2)
 
 Where,
 
-$N_{c,t,s}^{\text{REP}}$= total head of cattle type *s* in operations reported by FAOSTAT for country *c*, or by USDA for U.S. *c*, in year *t* (head);
+$`N_{c,t,s}^{\text{REP}}`$= total head of cattle type *s* in operations reported by FAOSTAT for country *c*, or by USDA for U.S. *c*, in year *t* (head);
 
-$N_{c,t,s}^{\text{CT}}$= total head of cattle type *s* derived from Climate TRACE identified cattle operations, from Equation 1 (head);
+$`N_{c,t,s}^{\text{CT}}`$= total head of cattle type *s* derived from Climate TRACE identified cattle operations, from Equation 1 (head);
 
-$N_{c,t,s}^{\text{REM}}$ = remaining head of cattle type *s* in operations in country *c* in year *t*, after the Climate TRACE identified operations have been subtracted from the reported population; these head were assigned to manure management systems using IPCC (2019) Table 10A.6 regional averages described in section 2.2.2.1;
+$`N_{c,t,s}^{\text{REM}}`$ = remaining head of cattle type *s* in operations in country *c* in year *t*, after the Climate TRACE identified operations have been subtracted from the reported population; these head were assigned to manure management systems using IPCC (2019) Table 10A.6 regional averages described in section 2.2.2.1;
 
-$c$ = the country for which the total is calculated;
+$`c`$ = the country for which the total is calculated;
 
-$t$ = the year for which the total is calculated;
+$`t`$ = the year for which the total is calculated;
 
-$s$ = the cattle type, beef or dairy.
+$`s`$ = the cattle type, beef or dairy.
 
-Where no operations were identified in a country, or the country is an island with limited land area for raising cattle, $N_{c,t,s}^{\text{REM}} = N_{c,t,s}^{\text{REP}}$. Lastly, the annual total dairy cattle were assigned to each quarter for *c* and *t*, since dairy cattle are kept alive throughout the year. The annual beef cattle total was divided by four and assigned to each quarter for *c* and *t*, to present the flow-through system that occurs at beef operations.
+Where no operations were identified in a country, or the country is an island with limited land area for raising cattle, $`N_{c,t,s}^{\text{REM}} = N_{c,t,s}^{\text{REP}}`$. Lastly, the annual total dairy cattle were assigned to each quarter for *c* and *t*, since dairy cattle are kept alive throughout the year. The annual beef cattle total was divided by four and assigned to each quarter for *c* and *t*, to present the flow-through system that occurs at beef operations.
 
-The subtracted Climate TRACE cattle operation portion carries the asset-level attributes of each identified operation, while the remainder retains the country-level characteristics applied in Section 2.2.2. Because the two components sum to the reported total ($N_{c,t,s}^{\text{CT}}$ + $N_{c,t,s}^{\text{REM}}$ = $N_{c,t,s}^{\text{REP}}$), the population carried into the emissions calculation is unchanged in magnitude; what changes is the proportion of that population described by reported and AI-detected operations rather than by regional averages.
+The subtracted Climate TRACE cattle operation portion carries the asset-level attributes of each identified operation, while the remainder retains the country-level characteristics applied in Section 2.2.2. Because the two components sum to the reported total ($`N_{c,t,s}^{\text{CT}}`$ + $`N_{c,t,s}^{\text{REM}}`$ = $`N_{c,t,s}^{\text{REP}}`$), the population carried into the emissions calculation is unchanged in magnitude; what changes is the proportion of that population described by reported and AI-detected operations rather than by regional averages.
 
-The extent of $N_{c,t,s}^{\text{CT}}$ substitution varies by country and U.S. state. Where the detection model has tens of thousands of identified operations, most of the reported population is described by summed Climate TRACE assets; where coverage is partial or absent, the reported FAOSTAT or USDA population is the primary coverage. Generally, for non-U.S. countries, individual cattle operations replaced between 0.0008% to 21.0% of total heads of cattle. For U.S. states, 0.013% to 100% of the total head of cattle, where 100% replacement means that summing up individual cattle operations in the state is considered either to have found all of the cattle operations, or that the estimated heads of cattle equal or exceed the USDA reported numbers for that state. The resulting remainder population, $N_{c,t,s}^{\text{REM}}$, whether substituted in whole, in part, or not at all, is the input to the emission factors and climate zone assignment described in Section 2.2.4 (Figure 1, Box 2).
+The extent of $`N_{c,t,s}^{\text{CT}}`$ substitution varies by country and U.S. state. Where the detection model has tens of thousands of identified operations, most of the reported population is described by summed Climate TRACE assets; where coverage is partial or absent, the reported FAOSTAT or USDA population is the primary coverage. Generally, for non-U.S. countries, individual cattle operations replaced between 0.0008% to 21.0% of total heads of cattle. For U.S. states, 0.013% to 100% of the total head of cattle, where 100% replacement means that summing up individual cattle operations in the state is considered either to have found all of the cattle operations, or that the estimated heads of cattle equal or exceed the USDA reported numbers for that state. The resulting remainder population, $`N_{c,t,s}^{\text{REM}}`$, whether substituted in whole, in part, or not at all, is the input to the emission factors and climate zone assignment described in Section 2.2.4 (Figure 1, Box 2).
 
 #### 2.2.2 Assigning manure management systems
 
 #### 2.2.2.1 FAOSTAT and USDA populations
 
-Once the population of dairy and beef cattle in an operation had been determined for each country from FAOSTAT or USDA data, after accounting for summed operations identified with an AI detection model, the remainder population ($N_{c,t,s}^{\text{REM}})$ was distributed across manure management systems using IPCC (2019) Table 10A.6, “Animal Waste Management System (AWMS) Regional Averages for Cattle and Buffalo”.
+Once the population of dairy and beef cattle in an operation had been determined for each country from FAOSTAT or USDA data, after accounting for summed operations identified with an AI detection model, the remainder population ($`N_{c,t,s}^{\text{REM}})`$ was distributed across manure management systems using IPCC (2019) Table 10A.6, “Animal Waste Management System (AWMS) Regional Averages for Cattle and Buffalo”.
 
 Cattle allocated to the “Pasture/Range/Paddock” system were excluded from the total manure management emissions and considered reported in the Climate TRACE pasture sector. Any cattle allocated to the “Burned for Fuel” system were likewise excluded from these country-level estimates, as those emissions are accounted for in the Climate TRACE residential onsite fuel usage sector.
 
@@ -279,15 +279,15 @@ Manure management CH₄ and N₂O emissions were estimated from the same populat
 
 The general approach to estimate emissions for enteric fermentation and manure management is shown in Equation 3,
 
-$E_{c,t,s,g}^{\text{REM}} = N_{c,t,s}^{\text{REM}}\text{\ x\ }\text{EF}_{c,t,s,g}^{}$(Equation 3)
+$`E_{c,t,s,g}^{\text{REM}} = N_{c,t,s}^{\text{REM}}\text{\ x\ }\text{EF}_{c,t,s,g}`$(Equation 3)
 
 Where,
 
-$E_{c,t,s,g}^{\text{REM}}$ = total emissions of gas *g* from the remaining head of cattle type *s* in country *c* in year *t* (kg yr⁻¹);
+$`E_{c,t,s,g}^{\text{REM}}`$ = total emissions of gas *g* from the remaining head of cattle type *s* in country *c* in year *t* (kg yr⁻¹);
 
-$N_{c,t,s}^{\text{REM}}$ = remaining head of cattle type *s* in country *c* in year *t*, after the Climate TRACE identified operations have been subtracted from the reported population, from Equation 2 (head);
+$`N_{c,t,s}^{\text{REM}}`$ = remaining head of cattle type *s* in country *c* in year *t*, after the Climate TRACE identified operations have been subtracted from the reported population, from Equation 2 (head);
 
-$\text{EF}_{c,t,s,g}^{}$= emission factor for gas *g* for cattle type *s* in country *c* in year *t*, derived from the IPCC (2019) Tier 2 equations using the Table 10A.6 regional-average manure management system distribution described in Section 2.2.2.1 (kg gas head⁻¹ yr⁻¹);
+$`\text{EF}_{c,t,s,g}`$= emission factor for gas *g* for cattle type *s* in country *c* in year *t*, derived from the IPCC (2019) Tier 2 equations using the Table 10A.6 regional-average manure management system distribution described in Section 2.2.2.1 (kg gas head⁻¹ yr⁻¹);
 
 *c* = the country for which the total is calculated;
 
@@ -301,11 +301,11 @@ For AI detected cattle operations, manure management CH₄ and N₂O emissions w
 
 To incorporate the Climate TRACE identified operations into the country-level estimates, asset-level emissions were summed to a country total for each year, cattle type, and gas. The population attributed to those operations was subtracted from the reported FAOSTAT or USDA population in Section 2.2.1.4 with Equation 2. The country total is the sum of the two components, represented as,
 
-$E_{c,t,s,g}^{} = \sum\text{\ E}_{c,t,s,g}^{\text{CT}} + E_{c,t,s,g}^{\text{REM}}$ (Equation 4)
+$`E_{c,t,s,g} = \sum\text{\ E}_{c,t,s,g}^{\text{CT}} + E_{c,t,s,g}^{\text{REM}}`$ (Equation 4)
 
 Where,
 
-$\sum$ $E_{c,t,s,g}^{\text{CT}}$ = is the sum of emissions of gas *g* from Climate TRACE identified operations of cattle type *s* in country *c* in year *t*, summed across quarters (kg yr⁻¹, converted to metric tonnes or mt). If no Climate TRACE operations, $\text{\ E}_{c,t,s,g}^{\text{CT}}$, were identified in a country, then $E_{c,t,s,g}^{}$= $E_{c,t,s,g}^{\text{REM}}$.
+$`\sum`$ $`E_{c,t,s,g}^{\text{CT}}`$ = is the sum of emissions of gas *g* from Climate TRACE identified operations of cattle type *s* in country *c* in year *t*, summed across quarters (kg yr⁻¹, converted to metric tonnes or mt). If no Climate TRACE operations, $`\text{\ E}_{c,t,s,g}^{\text{CT}}`$, were identified in a country, then $`E_{c,t,s,g}`$= $`E_{c,t,s,g}^{\text{REM}}`$.
 
 #### 2.3 Final Country-level Emissions
 

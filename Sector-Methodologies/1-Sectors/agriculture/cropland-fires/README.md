@@ -84,17 +84,17 @@ For each crop, grid cell, and year, burned dry matter was calculated as:
 
 |     |                                                    |       |
 |-----|----------------------------------------------------|-------|
-|     | $DM_{burn,c,i,t} = R_{burn,c,i,t} \times f_{DM,c}$ | \(1\) |
+|     | $`DM_{burn,c,i,t} = R_{burn,c,i,t} \times f_{DM,c}`$ | \(1\) |
 
-where $DM_{burn,c,i,t}$is the burned residue dry matter for crop $c$, grid cell $i$, and year $t;R_{burn,c,i,t}$ is the residue mass allocated to open-field burning; and $f_{DM,c}$ is the crop-specific dry-matter fraction. The complete dry-matter parameterization is common to the retained-residue methodology and is therefore not repeated here.
+where $`DM_{burn,c,i,t}`$is the burned residue dry matter for crop $`c`$, grid cell $`i`$, and year $`t;R_{burn,c,i,t}`$ is the residue mass allocated to open-field burning; and $`f_{DM,c}`$ is the crop-specific dry-matter fraction. The complete dry-matter parameterization is common to the retained-residue methodology and is therefore not repeated here.
 
 Annual emissions of N₂O, CH₄, and primary PM₂.₅ were then calculated by applying pollutant-specific emission factors to the estimated burned dry matter:
 
 |     |                                               |       |
 |-----|-----------------------------------------------|-------|
-|     | $E_{p,c,i,t} = DM_{burn,c,i,t} \times EF_{p}$ | \(2\) |
+|     | $`E_{p,c,i,t} = DM_{burn,c,i,t} \times EF_{p}`$ | \(2\) |
 
-where $E_{p,c,i,t}$ represents emissions of pollutant $p$ and $EF_{p}$is the corresponding emission factor per unit of dry matter burned.
+where $`E_{p,c,i,t}`$ represents emissions of pollutant $`p`$ and $`EF_{p}`$is the corresponding emission factor per unit of dry matter burned.
 
 For N₂O and CH₄, default emission factors for agricultural-residue burning were obtained from Volume 4, Chapter 2, Table 2.5 of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories (IPCC 2019). The emission factors were 0.07 g N₂O kg⁻¹ dry matter burned and 2.7 g CH₄ kg⁻¹ dry matter burned.
 
@@ -110,13 +110,13 @@ For the 100-year time horizon,
 
 |     |                                                                  |       |
 |-----|------------------------------------------------------------------|-------|
-|     | $E_{CO_{2}e,100} = 273 \times E_{N_{2}O} + 27 \times E_{CH_{4}}$ | \(3\) |
+|     | $`E_{CO_{2}e,100} = 273 \times E_{N_{2}O} + 27 \times E_{CH_{4}}`$ | \(3\) |
 
 For the 20-year time horizon,
 
 |     |                                                                   |       |
 |-----|-------------------------------------------------------------------|-------|
-|     | $E_{CO_{2}e,20} = 273 \times E_{N_{2}O} + 79.7 \times E_{CH_{4}}$ | \(4\) |
+|     | $`E_{CO_{2}e,20} = 273 \times E_{N_{2}O} + 79.7 \times E_{CH_{4}}`$ | \(4\) |
 
 PM₂.₅ was reported separately as pollutant mass and was not converted to CO₂ equivalents.
 
@@ -130,17 +130,17 @@ For each grid cell, the monthly burned-area values were converted to temporal we
 
 |     |                                             |       |
 |-----|---------------------------------------------|-------|
-|     | $w_{i,m.t} = \frac{BA_{i,m,t}}{BA_{i,m,t}}$ | \(5\) |
+|     | $`w_{i,m.t} = \frac{BA_{i,m,t}}{BA_{i,m,t}}`$ | \(5\) |
 
-where $w_{i,m,t}$ is the monthly temporal weight for grid cell $i$, month $m$, and year $t$, and $BA_{i,m,t}$ is the corresponding GloCAB burned-area value. The resulting 12 monthly weights sum to one for each grid cell.
+where $`w_{i,m,t}`$ is the monthly temporal weight for grid cell $`i`$, month $`m`$, and year $`t`$, and $`BA_{i,m,t}`$ is the corresponding GloCAB burned-area value. The resulting 12 monthly weights sum to one for each grid cell.
 
 Monthly emissions were then calculated by multiplying independently estimated annual emissions by the corresponding monthly weight:
 
 |     |                                                            |       |
 |-----|------------------------------------------------------------|-------|
-|     | $E_{p,i,m,t} = E_{p,i,t}^{\text{annual}} \times w_{i,m,t}$ | \(6\) |
+|     | $`E_{p,i,m,t} = E_{p,i,t}^{\text{annual}} \times w_{i,m,t}`$ | \(6\) |
 
-where $E_{p,i,m,t}$ is the monthly emission of pollutant $p$ and $E_{p,i,t}^{\text{annual}}$ is the annual crop-residue burning emission for the same grid cell and year. This procedure was applied identically to N₂O, CH₄, and PM₂.₅ and therefore preserves the annual emission total exactly while allocating it among months according to the GloCAB seasonal pattern.
+where $`E_{p,i,m,t}`$ is the monthly emission of pollutant $`p`$ and $`E_{p,i,t}^{\text{annual}}`$ is the annual crop-residue burning emission for the same grid cell and year. This procedure was applied identically to N₂O, CH₄, and PM₂.₅ and therefore preserves the annual emission total exactly while allocating it among months according to the GloCAB seasonal pattern.
 
 In some grid cells, the crop-residue inventory estimated non-zero annual burning emissions even though GloCAB contained no burned area in any month. This can occur because the annual inventory is derived from crop production and residue-management information rather than directly from satellite fire detections. Small or short-duration agricultural fires may not be detected, and differences can also occur between the cropland distributions represented by the two datasets. For these grid cells, annual emissions were distributed uniformly across the year, assigning one twelfth of the annual total to each month.
 

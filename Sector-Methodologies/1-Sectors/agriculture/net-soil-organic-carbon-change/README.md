@@ -359,11 +359,11 @@ Annual SOC change was calculated as the difference between the simulated SOC sto
 
 |     |                                                            |       |
 |-----|------------------------------------------------------------|-------|
-|     | $\Delta\text{SO}C_{s,i,t} = SOC_{s,i,t} - SOC_{s,i,t - 1}$ | \(1\) |
+|     | $`\Delta\text{SO}C_{s,i,t} = SOC_{s,i,t} - SOC_{s,i,t - 1}`$ | \(1\) |
 
-where $\text{SO}C_{s,i,t}$is the simulated SOC stock in the 0-30 cm soil profile (Mg C ha⁻¹), s represents the management scenario, $i$ represents the grid-cell and crop combination, and t represents the simulation year. Annual SOC change $\left( \Delta\text{SOC} \right)\ $is therefore expressed as Mg C ha⁻¹ yr⁻¹.
+where $`\text{SO}C_{s,i,t}`$is the simulated SOC stock in the 0-30 cm soil profile (Mg C ha⁻¹), s represents the management scenario, $`i`$ represents the grid-cell and crop combination, and t represents the simulation year. Annual SOC change $`\left( \Delta\text{SOC} \right)`$is therefore expressed as Mg C ha⁻¹ yr⁻¹.
 
-Under this convention, a positive $\Delta\text{SOC\ }$represents an increase in SOC stock during the annual accounting period, whereas a negative value represents SOC loss. For example, the SOC change assigned to 2016 represents the difference between the SOC stocks at the corresponding annual accounting points in 2016 and 2015.
+Under this convention, a positive $`\Delta\text{SOC\ }`$represents an increase in SOC stock during the annual accounting period, whereas a negative value represents SOC loss. For example, the SOC change assigned to 2016 represents the difference between the SOC stocks at the corresponding annual accounting points in 2016 and 2015.
 
 **S1.2 Conversion of annual SOC change to CO₂ flux**
 
@@ -371,7 +371,7 @@ Annual SOC stock change was converted to an equivalent atmospheric CO₂ flux us
 
 |     |                                                                      |       |
 |-----|----------------------------------------------------------------------|-------|
-|     | $F_{CO_{2},s,i,t} = - \Delta\text{SO}C_{s,i,t} \times \frac{44}{12}$ | \(2\) |
+|     | $`F_{CO_{2},s,i,t} = - \Delta\text{SO}C_{s,i,t} \times \frac{44}{12}`$ | \(2\) |
 
 For spatially aggregated reporting, grid-cell at 5 arc-minute CO₂ fluxes were multiplied by the corresponding cropland area and summed across the reporting domain. Country-level totals were reported in Mt CO₂ yr⁻¹, whereas global totals were reported in Gt CO₂ yr⁻¹.
 
@@ -385,9 +385,9 @@ The annual SOC benefit of each ERS was calculated as the difference between the 
 
 |     |                                                                              |       |
 |-----|------------------------------------------------------------------------------|-------|
-|     | $B_{SOC,s,i,t} = \Delta\text{SO}C_{s,i,t} - \Delta\text{SO}C_{baseline,i,t}$ | \(4\) |
+|     | $`B_{SOC,s,i,t} = \Delta\text{SO}C_{s,i,t} - \Delta\text{SO}C_{baseline,i,t}`$ | \(4\) |
 
-where $B_{SOC,s,i,t}$ is the annual SOC benefit of management scenario s relative to the baseline, expressed as Mg C ha⁻¹ yr⁻¹.
+where $`B_{SOC,s,i,t}`$ is the annual SOC benefit of management scenario s relative to the baseline, expressed as Mg C ha⁻¹ yr⁻¹.
 
 A positive value indicates that the ERS retained more SOC than the baseline during that year, whereas a negative value indicates that the ERS retained less SOC than the baseline. Importantly, a positive ERS benefit does not necessarily mean that SOC increased in absolute terms. Both the baseline and ERS scenarios may experience SOC loss, but the ERS is considered beneficial when the magnitude of SOC loss is smaller than under the baseline.
 
@@ -395,7 +395,7 @@ For example, if the baseline loses 0.50 Mg C ha⁻¹ yr⁻¹ and the ERS loses 0
 
 |     |                                                                                                          |       |
 |-----|----------------------------------------------------------------------------------------------------------|-------|
-|     | $B_{\text{SOC}} = \left( - 0.30 \right) - \left( - 0.50 \right) = 0.20\ Mg\ C\ ha^{- 1}\text{~y}r^{- 1}$ | \(5\) |
+|     | $`B_{\text{SOC}} = \left( - 0.30 \right) - \left( - 0.50 \right) = 0.20\ Mg\ C\ ha^{- 1}\text{~y}r^{- 1}`$ | \(5\) |
 
 The ERS therefore provides a positive SOC benefit of 0.20 Mg C ha⁻¹ yr⁻¹ even though the soil remains an absolute net carbon source during that year.
 
@@ -405,9 +405,9 @@ The corresponding annual CO₂ benefit was calculated from the annual SOC benefi
 
 |     |                                                         |       |
 |-----|---------------------------------------------------------|-------|
-|     | $B_{CO_{2},s,i,t} = B_{SOC,s,i,t} \times \frac{44}{12}$ | \(6\) |
+|     | $`B_{CO_{2},s,i,t} = B_{SOC,s,i,t} \times \frac{44}{12}`$ | \(6\) |
 
-where $B_{CO_{2},s,i,t}$ is expressed as Mg CO₂ ha⁻¹ yr⁻¹. Annual ERS benefits were reported in Mt CO₂ yr⁻¹ at the country scale and Gt CO₂ yr⁻¹ at the global scale. Under this convention, a positive value represents avoided CO₂ emissions or additional CO₂ removal relative to the baseline. This quantity represents a relative management benefit and is therefore distinct from the absolute CO₂ source or sink calculated independently for each scenario.
+where $`B_{CO_{2},s,i,t}`$ is expressed as Mg CO₂ ha⁻¹ yr⁻¹. Annual ERS benefits were reported in Mt CO₂ yr⁻¹ at the country scale and Gt CO₂ yr⁻¹ at the global scale. Under this convention, a positive value represents avoided CO₂ emissions or additional CO₂ removal relative to the baseline. This quantity represents a relative management benefit and is therefore distinct from the absolute CO₂ source or sink calculated independently for each scenario.
 
 #### Supplementary Text S2. Crop-level SALUS simulations and spatial aggregation
 
@@ -419,21 +419,21 @@ This approach produced an independent SOC trajectory for each crop × grid-cell 
 
 **S2.2 Harvested-area weighting of crop-specific SOC**
 
-After completing the crop-specific SALUS simulations, SOC stocks were aggregated within each grid cell using crop harvested area as the weighting variable. For year $t$, the harvested-area weight of crop $c$ within grid cell $i$ was calculated as:
+After completing the crop-specific SALUS simulations, SOC stocks were aggregated within each grid cell using crop harvested area as the weighting variable. For year $`t`$, the harvested-area weight of crop $`c`$ within grid cell $`i`$ was calculated as:
 
 |     |                                           |       |
 |-----|-------------------------------------------|-------|
-|     | $w_{c,i,t} = \frac{A_{c,i,t}}{A_{c,i,t}}$ | \(7\) |
+|     | $`w_{c,i,t} = \frac{A_{c,i,t}}{A_{c,i,t}}`$ | \(7\) |
 
-where $A_{c,i,t}$is the harvested area of crop c in grid cell$i$ and year $t$, and the weights across all crops present within a grid cell sum to one.
+where $`A_{c,i,t}`$is the harvested area of crop c in grid cell$`i`$ and year $`t`$, and the weights across all crops present within a grid cell sum to one.
 
 The area-weighted SOC stock for each management scenario was then calculated as:
 
 |     |                                                                         |       |
 |-----|-------------------------------------------------------------------------|-------|
-|     | $\text{SO}C_{s,i,t}^{\text{weighted}} = w_{c,i,t} \times SOC_{s,c,i,t}$ | \(8\) |
+|     | $`\text{SO}C_{s,i,t}^{\text{weighted}} = w_{c,i,t} \times SOC_{s,c,i,t}`$ | \(8\) |
 
-where $\text{SO}C_{s,c,i,t}$is the simulated 0-30 cm SOC stock for scenario $s$, crop $c$, grid cell $i$, and year $t$.
+where $`\text{SO}C_{s,c,i,t}`$is the simulated 0-30 cm SOC stock for scenario $`s`$, crop $`c`$, grid cell $`i`$, and year $`t`$.
 
 This procedure produced one representative cropland SOC stock per grid cell and scenario while retaining the contribution of individual crops according to their relative harvested area. SALUS SOC output was expressed on an area basis and was subsequently reported in Mg C ha⁻¹ after unit conversion where required.
 

@@ -82,7 +82,7 @@ For mines where only capacity was provided, Climate TRACE used the capacity as p
 
 The emissions factor for each mine, *Coal EF*, represents the amount of greenhouse gases (GHGs) released during mining per amount of coal produced. The GHGs originate either a) as naturally occurring methane directly from the mine shaft and coal seams and pillars, and b) from the combustion of fuel to power excavators and hauling equipment used during the mining process. For simplicity Climate TRACE will refer to (a) as fugitive emissions and (b) as combustion emissions. Each type of emissions has an associated emissions factor, *Coal EF fugitive* and *Coal EF combustion,* which when combined, reflect the total emissions per unit coal production for a mine.
 
-$\ \text{\ Coal\ EF}_{mine,\ gas\ type} = \text{Coal\ EF\ fugitive}_{mine,\ gas\ type}\  + \text{Coal\ EF\ combustion}_{mine,\ gas\ type}\text{\ \ }$
+$`\ \text{\ Coal\ EF}_{mine,\ gas\ type} = \text{Coal\ EF\ fugitive}_{mine,\ gas\ type}\  + \text{Coal\ EF\ combustion}_{mine,\ gas\ type}\text{\ \ }`$
 
 (Eq. 1)
 
@@ -96,7 +96,7 @@ Climate TRACE represents the emissions factor for fugitive emissions as *Coal EF
 
 The methane gas content multiplied by the emissions factor coefficient yields the fugitive emissions factor for each mine, as given by Equation 2:
 
-$\text{Coal\ EF\ fugitive}_{\text{mine}} = (\ \text{Methane\ gas\ content\ per\ tonne\ of\ coal}_{\text{mine}}\ /\ 1.4703e3)\  \times$ $\text{Emissions\ factor\ coefficient}$
+$`\text{Coal\ EF\ fugitive}_{\text{mine}} = (\ \text{Methane\ gas\ content\ per\ tonne\ of\ coal}_{\text{mine}}\ /\ 1.4703e3)\  \times`$ $`\text{Emissions\ factor\ coefficient}`$
 
 (Eq. 2)
 
@@ -108,17 +108,17 @@ Excavators and hauling equipment used during mining are powered by fuel combusti
 
 The following metadata was used to estimate carbon dioxide, methane, and nitrous oxide emission factors for gas, liquid, and solid fuels combusted during coal mining. Using UNFCCC Biennial Transparency Report data on GHG emissions or the IPCC sector, 1.A.1.c.i. Manufacture of solid fuels, Climate TRACE determined the ratio of fuel combusted to coal produced for countries with coal mining, in units of tonnes of fuel combusted to tonnes of coal produced (Equation 3). For countries without fuel type data, the median ratio of all countries was used.
 
-${Ratio\ of\ fuel\ :coal\ }_{country,\ fuel\ type} = \text{Fuel\ combusted\ }_{country,\ fuel\ type}\ /\text{\ Coal\ produced}_{country,\ fuel\ type}$ (Eq. 3)
+$`{Ratio\ of\ fuel\ :coal\ }_{country,\ fuel\ type} = \text{Fuel\ combusted\ }_{country,\ fuel\ type}\ /\text{\ Coal\ produced}_{country,\ fuel\ type}`$ (Eq. 3)
 
 The emissions factor of the fuel is specific to the fuel type combusted and the gas type emitted, as indicated by the subscripts in Equation 4. The units for the *Fuel EF* are tonnes of CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O : tonnes of fuel.
 
-$\text{Fuel\ EF}_{gas\ type,\ fuel\ type} = \text{Emissions\ }_{\text{gas\ type}}\ /{\ \text{Fuel\ combusted\ }_{\text{fuel\ type}}}_{}$
+$`\text{Fuel\ EF}_{gas\ type,\ fuel\ type} = \text{Emissions\ }_{\text{gas\ type}}\ /{\ \text{Fuel\ combusted\ }_{\text{fuel\ type}}}`$
 
 (Eq. 4)
 
 The product of Equations 3 and 4 yield the emissions factor for emissions from fuel combustion during coal mining, referred to as *Coal EF combustion*. Like *Coal EF fugitive*, *Coal EF combustion* has units of tonnes of CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O emitted per tonnes of coal produced.
 
-$\text{Coal\ EF\ combustion}_{country,\ gas\ type,\ fuel\ type} = \ {{Ratio\ of\ fuel\ :coal\ }_{country,\ fuel\ type}\ }_{}$ $\ {\times \text{\ \ }\text{Fuel\ EF}_{gas\ type,\ fuel\ type}}_{}$
+$`\text{Coal\ EF\ combustion}_{country,\ gas\ type,\ fuel\ type} = \ {{Ratio\ of\ fuel\ :coal\ }_{country,\ fuel\ type}\ }`$ $`\ {\times \text{\ \ }\text{Fuel\ EF}_{gas\ type,\ fuel\ type}}`$
 
 (Eq. 5)
 
@@ -154,19 +154,19 @@ The strategy is tailored to the type of methane gas release and its specific sou
 
 The applicable emissions (percent of total) for each category of mine (from Table 1, *T1*) and the effectiveness factor of the technology (from Table 2, *T2*), were used to arrive at an *Emissions Factor Scaling Ratio* for each ERS strategy, *s*, as shown in Equation 6. The *Emissions Factor Scaling Ratios* can be applied to relevant mines to calculate the potential emissions reduction.
 
-$\text{Emissions\ Factor\ Scaling\ Ratio}_{s}\  = \ 1 - ($${\%\ of\ total\ emissions\ for\ CH4\ source}_{T1} \times \ $
+```math
+\text{Emissions Factor Scaling Ratio}_{s} = 1 - \left( \%\ \text{of total emissions for CH4 source}_{T1} \times \%\ \text{abatement potential for ERS}_{T2,s} \right)
+```
 
-> ${\ \ \ \ \%\ \text{abatement\ potential\ for\ ERS}}_{T2,s}$)
->
-> (Eq. 6)
+(Eq. 6)
 
 For example, if the strategy VAM Oxidation (strategy\_id: vam001) is applied to underground mines, the emissions factor scaling ratio for this solution would be:
 
-$\text{Emissions\ Factor\ Scaling\ Ratio}_{vam001}\  = \ 1\  - \ (0.60*0.67)\  = \ 0.598$
+$`\text{Emissions\ Factor\ Scaling\ Ratio}_{vam001}\  = \ 1\  - \ (0.60*0.67)\  = \ 0.598`$
 
 (Eq. 7)
 
-where, ${\%\ of\ total\ emissions\ for\ CH4\ source}_{T1}$= 0.60 (from the “Specific Source” row for ventilation systems in the “Underground” column of Table 1) and ${\%\ \text{abatement\ potential\ for\ ERS}}_{T2,s}$= 0.67 (from the “Abatement Potential” column in Table 2).
+where, $`{\%\ of\ total\ emissions\ for\ CH4\ source}_{T1}`$= 0.60 (from the “Specific Source” row for ventilation systems in the “Underground” column of Table 1) and $`{\%\ \text{abatement\ potential\ for\ ERS}}_{T2,s}`$= 0.67 (from the “Abatement Potential” column in Table 2).
 
 For mines that are associated with the ‘vam001’ strategy\_id, one can then multiply the CH<sub>4</sub> emissions factor by 0.60 in order to arrive at the new potential emissions factor if this mitigation strategy was applied at this mine.
 
@@ -176,7 +176,7 @@ For mines that are associated with the ‘vam001’ strategy\_id, one can then m
 
 Climate TRACE calculated emissions for each asset (mine) by multiplying the production for a given mine (in tonnes of coal) by the emissions factor for that mine (in tonnes CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O per tonne of coal). The result is emissions (tonnes of CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O) per mine, as shown in Equation 8.
 
-$\ \text{Emissions}_{mine,\ gas\ type} = \text{\ Coal\ EF}_{mine,\ gas\ type}\  \times \ \text{Production}_{\text{mine}}$
+$`\ \text{Emissions}_{mine,\ gas\ type} = \text{\ Coal\ EF}_{mine,\ gas\ type}\  \times \ \text{Production}_{\text{mine}}`$
 
 (Eq. 8)
 
@@ -186,7 +186,7 @@ Equation 8 was applied to 4,803 coal mines globally to estimate their emissions 
 
 Climate TRACE calculated the potential methane emissions reductions for each asset (mine) by multiplying the emissions for a given mine by the emissions factor scaling ratio for the appropriate ERS. The result is emissions reduced (tonnes of CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O emissions per mine), as shown in Equation 9.
 
-$\ \text{Reductions}_{mine,\ gas\ type} = \text{Emissions}_{mine,\ gas\ type}\  \times \ \text{Emissions\ Factor\ Scaling\ Ratio}_{s,\ gas\ type}$
+$`\ \text{Reductions}_{mine,\ gas\ type} = \text{Emissions}_{mine,\ gas\ type}\  \times \ \text{Emissions\ Factor\ Scaling\ Ratio}_{s,\ gas\ type}`$
 
 (Eq. 9)
 

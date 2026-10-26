@@ -195,7 +195,7 @@ An emissions mitigation intervention, such as that employed by an emission reduc
 
 When the interventions in question are changes in load, or the total electricity demand at a point in time, the first pathway is encapsulated in the marginal operating emissions rate (*MOER*), which is defined as the change in emissions per load keeping the grid structure constant, and the second in the marginal build emissions rate (*MBER*), which is the change in emissions per load due to structural changes in the grid. The total emissions change due to an intervention is in general a nontrivial combined effect of the *MOER* and the *MBER*. The Greenhouse Gas Protocol (GHGP) in the Guidelines for Grid-Connected Electricity Projects proposed a method to estimate this combined effect through the formula (Broekhoff et al., 2007),
 
-$CMER\  = \ \omega MBER\  + \ (1 - \omega)MOER\ ,$
+$`CMER\  = \ \omega MBER\  + \ (1 - \omega)MOER\ ,`$
 
 Where *CMER* is the combined marginal emissions rate, capturing both the operational, *MOER,* and structural, *MBER*, effects of the ERS on the grid, while ω is a weighting parameter. While in principle different interventions could warrant different values of ω, the GHGP recommended that a single ω=½ be used uniformly across all regions, project types, and time periods.
 
@@ -207,21 +207,21 @@ Regardless of the ERS chosen, a CMER dataset for each region at a monthly cadenc
 
 The MOER dataset used to quantify the grid response in this ERS is obtained from the WattTime API at a 5-minutes cadence, which is then aggregated monthly (https://docs.watttime.org/). The main component of a MOER model is a regression estimator of the increase in emissions in a particular region due to a change in electrical load, assuming that no structural changes in the power grid occurs (Siler-Evans, Azevedo, & Morgan, 2012; Deetjen & Azevedo, 2019; Callaway, Fowlie, & McCormick, 2018). This component, which is referred to as the Short-Run Marginal Emissions Rate (*SRMER*), can be estimated by a regression model:
 
-$\Delta Emissions = \ (SRMER)(\text{ΔLoad})\  + \ Controls\ ,$
+$`\Delta Emissions = \ (SRMER)(\text{ΔLoad})\  + \ Controls\ ,`$
 
 where *ΔEmissions* is the change in emissions and *ΔLoad* is the change in electricity load in a particular region. The set of *Controls* are variables that are chosen to ensure that the *SRMER* is well-identified, i.e., that the *SRMER* is indeed a measure of the rate of change of emissions *due to* the change in load (and not due to unrelated factors such as changes in temperature). Examples of these variables include the locational marginal pricing (LMP) of electricity, generation by fuel type, and weather data. In more sophisticated models, the implementation of the control variables can also be extended from mere additional constants to nonlinear functions, such as pre-binning the dataset to slices based on the control variables.
 
 In data-rich regions, it is also possible to train a curtailment model - when energy consumption is purposely reduced - that augments the model with curtailment predictions. For example, low LMP is often indicative of available curtailed energy. In these regions, a curtailment probability model can be trained, and the MOER can then be estimated as:
 
-$MOER\  = \ (1 - P)SRMER$ ,
+$`MOER\  = \ (1 - P)SRMER`$ ,
 
 Where *P* is the probability for curtailment. In regions where no curtailment model is available, *P* is set to 0 as a default value.
 
 In regions where emissions datasets are unavailable, this regression can be modified to be:
 
-$\Delta\text{Generatio}n_{\text{fuel}} = \ \beta_{\text{fuel}}(\text{ΔLoad})\  + \ Controls\ ,$
+$`\Delta\text{Generatio}n_{\text{fuel}} = \ \beta_{\text{fuel}}(\text{ΔLoad})\  + \ Controls\ ,`$
 
-where $\Delta$*Generation<sub>fuel</sub>* is the change in generation for a particular fuel type, and β*<sub>fuel</sub>* a measure of the change in the generation of said fuel type due to the change in load. Since the emissions per load of a particular fuel type (the carbon intensity of the fuel type) is known, once the regressions are done for all the main fuel types in the region, the SRMER can then be constructed from the β*<sub>fuel</sub>*’s measured.
+where $`\Delta`$*Generation<sub>fuel</sub>* is the change in generation for a particular fuel type, and β*<sub>fuel</sub>* a measure of the change in the generation of said fuel type due to the change in load. Since the emissions per load of a particular fuel type (the carbon intensity of the fuel type) is known, once the regressions are done for all the main fuel types in the region, the SRMER can then be constructed from the β*<sub>fuel</sub>*’s measured.
 
 In regions where historical generation by fuel type datasets are not available, the MOER can still be produced by leveraging the principle that similar grids evolve similarly. The annual fuel mix percentages of electricity generation and the electricity demand can be used to group similar grids together. From each group, a representative data-rich power grid can then be chosen to serve as a proxy for the behavior of other grids in the group. In the WattTime implementation of this algorithm, this technique is used for Brazil, Chile, India, Japan, Korea, Malaysia, Nicaragua, Peru, The Philippines, Singapore and Turkey. For regions that lack electricity load data, the real-time load is modelled using weather data via the approach detailed in Mattsson et al (2021).
 
@@ -245,13 +245,13 @@ This method can be modified from annual to hourly by changing the period in step
 
 For the case where clean generation is added to the grid, we consider solar power generation sources and assume they are (a) co-located with the existing power plant, and (b) match the generation of the power plant. Here, the existing power plant is not retired, but the addition of non-fossil generation will lower the emissions in aggregate of the power grid. The net emissions reduction is:
 
-$R_{\text{Solar}} = \ (CMER)\  \times LOAD\ ,\ $
+$`R_{\text{Solar}} = \ (CMER)\  \times LOAD\ ,`$
 
-where $\text{LOAD}$ is again the existing load supplied by the power plant. Note that in principle, the amount of clean generation to be added to the grid is independent of the parameters of the existing power plant, and could be an arbitrary fraction of the load of the highly-emitting asset in question. The hourly CMER is aggregated monthly using typical solar generation profiles. In regions where historical renewable profiles are not available, these are generated by physics-informed simulations with weather data reanalysis as inputs (see implementation at [<span class="underline">renewables.ninja</span>](https://www.renewables.ninja/) for simulations of solar power generation globally). Future work may include ERS other than solar such as wind or shutting down fossil-fuel plants.
+where $`\text{LOAD}`$ is again the existing load supplied by the power plant. Note that in principle, the amount of clean generation to be added to the grid is independent of the parameters of the existing power plant, and could be an arbitrary fraction of the load of the highly-emitting asset in question. The hourly CMER is aggregated monthly using typical solar generation profiles. In regions where historical renewable profiles are not available, these are generated by physics-informed simulations with weather data reanalysis as inputs (see implementation at [<span class="underline">renewables.ninja</span>](https://www.renewables.ninja/) for simulations of solar power generation globally). Future work may include ERS other than solar such as wind or shutting down fossil-fuel plants.
 
 #### 2.3.5.1.5 Applying ERS to Power Plants to Estimate Emissions Reduction
 
-We apply the solar power generation ERS and the associated CMERs to individual power generation assets by the strategy parameters defined in the Table S4. The solar strategy adds load equal to the existing power generation by setting the “induced\_activity\_conversion\_rate parameter” to -1 so that net emissions are *reduced* by $R_{\text{Solar}}$. The distribution of emissions reduced for all assets is shown in Figure 5. We note one exception for an asset in Democratic Republic of the Congo where the solar CMER is low enough that the emissions reductions are negligible (&lt; 3%) when solar generation is added (see Section 5.1). In this single edge case, we suggest shutting down the plant, which zeroes out the plant’s direct emissions, but induces emissions according to a CMER that is weighted with a flat-in-time generation profile rather than a solar generation profile.
+We apply the solar power generation ERS and the associated CMERs to individual power generation assets by the strategy parameters defined in the Table S4. The solar strategy adds load equal to the existing power generation by setting the “induced\_activity\_conversion\_rate parameter” to -1 so that net emissions are *reduced* by $`R_{\text{Solar}}`$. The distribution of emissions reduced for all assets is shown in Figure 5. We note one exception for an asset in Democratic Republic of the Congo where the solar CMER is low enough that the emissions reductions are negligible (&lt; 3%) when solar generation is added (see Section 5.1). In this single edge case, we suggest shutting down the plant, which zeroes out the plant’s direct emissions, but induces emissions according to a CMER that is weighted with a flat-in-time generation profile rather than a solar generation profile.
 
 <img src="figures/figure10.png" style="width:6.5in;height:3.58333in" />
 
@@ -349,7 +349,7 @@ Since asset-level reporting mechanisms do not include power plants below a certa
 
 The CMER used in the emissions estimates has been demonstrated to be consistent with direct observations of emissions changes obtained from natural experiments. The MOER was validated in ERCOT using changes in the potential of wind generation in Steinsultz et al. (2024). As wind output fluctuates, the other fuel types in the region adjust to maintain the balance between load and generation, producing a net effect comparable to random variations in load. By treating wind fluctuations as exogenous shocks, the MOER can be estimated empirically without the need of a true randomized controlled trial on the power grid. In this case, the estimation was performed by the following regression:
 
-$\Delta Emissions\  = \ (MOER)\Delta W\  + \ Controls$ ,
+$`\Delta Emissions\  = \ (MOER)\Delta W\  + \ Controls`$ ,
 
 where ΔW are changes in the wind generation potential, and the set of controls are chosen to ensure the regression is well-identified. This study found that the MOER measured by the statistical regression technique is consistent with the validation data obtained from the wind regression (see Figure 6).
 

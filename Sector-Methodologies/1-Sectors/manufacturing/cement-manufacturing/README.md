@@ -56,9 +56,9 @@ Satellite-derived production estimates make use of multispectral imagery from tw
 
 All satellite datasets were sourced and processed using Google Earth Engine (Google Earth Engine 2025a, 2025b, 2025c). From each satellite dataset, we relied on the surface reflectance products and computed the ratio of the difference between two SWIR bands and NIR bands of each satellite. This is based on the study to detect high-temperature anomalies from Sentinel-2 MSI images where a tri-spectral thermal anomaly index (TAI) that jointly uses the two high-temperature sensitive SWIR bands and the high-temperature-insensitive NIR band to enhance High Temperature Anomalies (Yongxue et al., 2021). For the respective satellite collections, we infer the TAI through the following equations:
 
--   Sentinel-2A/B: $TAI\  = \ \frac{(B12\  - \ B11)}{(B8a)}$
+-   Sentinel-2A/B: $`TAI\  = \ \frac{(B12\  - \ B11)}{(B8a)}`$
 
--   Landsat-8/9: $TAI\  = \ \frac{(B7\  - \ B6)}{(B5)}$
+-   Landsat-8/9: $`TAI\  = \ \frac{(B7\  - \ B6)}{(B5)}`$
 
 <img src="figures/figure3.png" style="width:6.47703in;height:2.9013in" />
 

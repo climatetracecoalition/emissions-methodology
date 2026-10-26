@@ -78,11 +78,11 @@ Total emissions for each asset are the sum of Scope 1 and Scope 2 CO<sub>2</sub>
 
 #### 4.1 Production Estimates
 
-The foundation of our emissions estimates is monthly alumina and aluminum production data from IAI (2026). To estimate the production at the facility level, a disaggregation method was applied: for each facility, we computed its share of regional capacity to derive the facility’s contribution to the regional production for the given timeframe (Figure 2 Section 1) . See below for an illustrative example of a country with two plants A and B (of capacities $C_{A}\ $and $C_{B}$ respectively) and a total production $P_{\text{\ m}}$ for a region in a given month m. The production estimates for these two plants are respectively $P_{A,\ m}$ and $P_{B,\ m}$:
+The foundation of our emissions estimates is monthly alumina and aluminum production data from IAI (2026). To estimate the production at the facility level, a disaggregation method was applied: for each facility, we computed its share of regional capacity to derive the facility’s contribution to the regional production for the given timeframe (Figure 2 Section 1) . See below for an illustrative example of a country with two plants A and B (of capacities $`C_{A}`$and $`C_{B}`$ respectively) and a total production $`P_{\text{\ m}}`$ for a region in a given month m. The production estimates for these two plants are respectively $`P_{A,\ m}`$ and $`P_{B,\ m}`$:
 
--   $P_{A,\ m} = \ \frac{C_{A}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}$
+-   $`P_{A,\ m} = \ \frac{C_{A}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}`$
 
--   $P_{B,\ m} = \ \frac{C_{B}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}$
+-   $`P_{B,\ m} = \ \frac{C_{B}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}`$
 
 Asset capacity data is sourced from IIR (2026) and LMA (R. Pawlek, 2026). Facility-level production is then multiplied by the relevant Scope 1 and Scope 2 emissions factors to derive point source emissions estimates.
 

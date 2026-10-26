@@ -76,11 +76,11 @@ Total emissions for each asset are the sum of Scope 1 and Scope 2 CO<sub>2</sub>
 
 #### 4.1 Production estimates
 
-The foundation of our emissions estimates is annual pulp production data from FAO (FAO, 2024a). The latest published ‘Pulp for paper’ data is from 2024, so data is forward-filled to the current year. Monthly national production is the annual value multiplied by the month’s share of days in the year. Facility-level production is estimated using a capacity-shared disaggregation method: for each country, a facility’s estimated production in a given month is calculated as its share of national asset capacity multiplied by national production for that month. For a country with two plants A and B (with capacities $C_{A}\ $and $C_{B}$ respectively) and a total production $P_{\text{\ m}}$ for a given month *m*, the capacity-based production estimates for these two plants are (respectively $P_{A,\ m}$ and $P_{B,\ m}$):
+The foundation of our emissions estimates is annual pulp production data from FAO (FAO, 2024a). The latest published ‘Pulp for paper’ data is from 2024, so data is forward-filled to the current year. Monthly national production is the annual value multiplied by the month’s share of days in the year. Facility-level production is estimated using a capacity-shared disaggregation method: for each country, a facility’s estimated production in a given month is calculated as its share of national asset capacity multiplied by national production for that month. For a country with two plants A and B (with capacities $`C_{A}`$and $`C_{B}`$ respectively) and a total production $`P_{\text{\ m}}`$ for a given month *m*, the capacity-based production estimates for these two plants are (respectively $`P_{A,\ m}`$ and $`P_{B,\ m}`$):
 
--   $P_{A,\ m} = \ \frac{C_{A}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}$
+-   $`P_{A,\ m} = \ \frac{C_{A}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}`$
 
--   $P_{B,\ m} = \ \frac{C_{B}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}$
+-   $`P_{B,\ m} = \ \frac{C_{B}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}`$
 
 The production calculation applied depends on data availability, following a tiered approach, shown in Figure 3.
 
@@ -492,11 +492,11 @@ CEPI's annual Key Statistics report direct CO₂ emissions (fossil fuel burned a
 
 If paper and board production (*P*) has *k* times the emissions per tonne of pulp production (*T*), CEPI's sector total *E* is:
 
-$E = e_{p}(T + kP)$
+$`E = e_{p}(T + kP)`$
 
 so pulp emissions per tonne are
 
-$e_{p} = E/(T + kP)$
+$`e_{p} = E/(T + kP)`$
 
 and pulp emissions are this intensity multiplied by *T*. *T* and *P* are CEPI's production figures for each year, so the split is recalculated annually and no parameter is fitted to Climate TRACE estimates.
 

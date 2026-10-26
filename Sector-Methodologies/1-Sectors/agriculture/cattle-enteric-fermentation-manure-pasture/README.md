@@ -78,31 +78,31 @@ Step 4: Gridded Livestock Watch (GLW) cattle-density data was used to represent 
 
 Step 5: The pasture-supported cattle activity was calculated for each pixel and quarter by combining pasture fraction, seasonal GPP support, GLW cattle-density weighting, and FAOSTAT total cattle counts. For each country c, pixel i, quarter q, and year t, the GPW pasture fraction was first combined with the quarterly GPP score to calculate the pixel-level pasture-support capacity as shown in Equation (1):
 
-$\text{Capacity}_{i,q,t} = PF{}_{i} \ast \text{GPPScore}{}_{i,q,t}$ (1)
+$`\text{Capacity}_{i,q,t} = PF_{i} \ast \text{GPPScore}_{i,q,t}`$ (1)
 
 where PF<sub>i</sub> is the GPW pasture fraction in pixel i, and GPPScore<sub>i,q,t</sub> is the normalized seasonal GPP score for pixel i, quarter q, and year t.
 
 The GLW cattle-density layer was then normalized within each country to calculate the spatial cattle-density weight using Equation (2):
 
-$\text{GLW\ Weight}{}_{i,c}^{} = \frac{\text{GLW}_{i,c}}{\text{GLW}_{i,c}}{}^{}$ (2)
+$`\text{GLW\ Weight}_{i,c} = \frac{\text{GLW}_{i,c}}{\text{GLW}_{i,c}}`$ (2)
 
 where GLW Weight<sub>i,c</sub> is the GLW cattle-density value in pixel i within country c. This normalized weight was then multiplied by the annual FAOSTAT total cattle count to estimate the cattle-pressure capacity factor for each pixel as shown in Equation (3):
 
-$\text{CapacityFactor}{}_{i,c,t} = \text{GLW\ Weight}_{i,c} \ast \text{FAOSTATCattle}_{c,t}^{}$ (3)
+$`\text{CapacityFactor}_{i,c,t} = \text{GLW\ Weight}_{i,c} \ast \text{FAOSTATCattle}_{c,t}`$ (3)
 
 where FAOSTATCattle<sub>c,t</sub> is the annual FAOSTAT total cattle count for country c and year t.
 
 Finally, quarterly pasture-supported cattle activity was calculated using Equation (4):
 
-$\text{Activity}{}_{i,q,t} = Capacity{}_{i,q,t} \ast \text{CapacityFactor}{}_{i,c,t}$ (4)
+$`\text{Activity}_{i,q,t} = Capacity_{i,q,t} \ast \text{CapacityFactor}_{i,c,t}`$ (4)
 
 Equation (5) shows an equivalent way to calculate the activity:
 
-$\text{Activity}{}_{i,q,t} = PF{}_{i} \ast \text{GPPScore}{}_{i,q,t} \ast \text{GLW\ Weight}{}_{i,c} \ast \text{FAOSTATCattle}{}_{c,t}$(5)
+$`\text{Activity}_{i,q,t} = PF_{i} \ast \text{GPPScore}_{i,q,t} \ast \text{GLW\ Weight}_{i,c} \ast \text{FAOSTATCattle}_{c,t}`$(5)
 
 The resulting activity layer represents pasture-supported cattle head-equivalents per pixel per quarter. Annual activity was calculated as the mean of the four quarterly activity layers using Equation (6):
 
-$\text{Activity}_{i,q,t}^{\text{annual}} = \frac{\text{Activity}_{i,Q1,t} + \text{Activity}_{i,Q2,t} + \text{Activity}_{i,Q3,t} + \text{Activity}_{i,Q4,t}}{4}$ (6)
+$`\text{Activity}_{i,q,t}^{\text{annual}} = \frac{\text{Activity}_{i,Q1,t} + \text{Activity}_{i,Q2,t} + \text{Activity}_{i,Q3,t} + \text{Activity}_{i,Q4,t}}{4}`$ (6)
 
 Annual activity was calculated as a mean rather than a sum because cattle activity is treated as a stock or intensity measure rather than a cumulative flow. This updated approach avoids negative cattle-on-pasture estimates produced by the previous subtraction method and provides a spatially explicit estimate of cattle activity constrained by pasture availability, vegetation productivity, and observed cattle-density patterns.
 
@@ -130,11 +130,11 @@ To calculate the GWP for enteric fermentation and manure left on pasture over di
 
 For a 20-year time horizon we used Equation (7):
 
-$GWP20year = CH4Emissions \ast \left( 80.8 \pm 25.8 \right) + N2OEmissions \ast \left( 273 \pm 118 \right)$ (7)
+$`GWP20year = CH4Emissions \ast \left( 80.8 \pm 25.8 \right) + N2OEmissions \ast \left( 273 \pm 118 \right)`$ (7)
 
 For a 100-year time horizon we used Equation (8):
 
-$GWP100year = CH4Emissions \ast \left( 27.2 \pm 11 \right) + N2OEmissions \ast \left( 273 \pm 130 \right)$ (8)
+$`GWP100year = CH4Emissions \ast \left( 27.2 \pm 11 \right) + N2OEmissions \ast \left( 273 \pm 130 \right)`$ (8)
 
 **Estimating Uncertainties**
 
@@ -337,7 +337,7 @@ In this sector, detailed descriptions of emission calculations are provided in t
 
 Enteric-fermentation CH₄ emission was calculated using the energy balance Tier 2 approach an Enteric-fermentation CH₄ emission factor for each animal category following IPCC 2019 Equation 10.21:
 
-$C{H4}_{\text{enteric}}\left( \text{kgh}d^{- 1}\text{yr}d^{- 1} \right) = \frac{{\text{GEI} \ast Y}_{m}}{55.65} \ast 365\ IPCC\ Equation\ \left( 10.21 \right)$
+$`C{H4}_{\text{enteric}}\left( \text{kgh}d^{- 1}\text{yr}d^{- 1} \right) = \frac{{\text{GEI} \ast Y}_{m}}{55.65} \ast 365\ IPCC\ Equation\ \left( 10.21 \right)`$
 
 Where:
 
@@ -351,7 +351,7 @@ The factor 55.65 (MJ/kg CH4) is the energy content of methane
 
 We can measure GEI based on the Equation as shown below. Its requirement is derived based on the summed net energy requirements and the energy availability characteristics of the feed(s):
 
-$\text{GEI}\  = \frac{\frac{NEm\  + \ NEa + NEl\  + \ NEwork\  + \ NEp}{\text{REM}}\  + \ \frac{NEg\  + \ NEwool}{\text{REG}}}{\text{DE}}\ $IPCC Equation (10.16)
+$`\text{GEI}\  = \frac{\frac{NEm\  + \ NEa + NEl\  + \ NEwork\  + \ NEp}{\text{REM}}\  + \ \frac{NEg\  + \ NEwool}{\text{REG}}}{\text{DE}}`$IPCC Equation (10.16)
 
 Where:
 
@@ -383,9 +383,9 @@ In our Tier 2 inventory the Gross Energy Intake (GEI) equation is intentionally 
 
 Annual enteric CH₄ emissions were calculated by multiplying the annual emission factor by the corresponding pasture-supported cattle activity as shown in Supplementary Equation (S1) and Supplementary Equation (S2). Quarterly emissions were calculated by applying one-quarter of the annual emission factor to the quarterly activity layer, and annual emissions were calculated as the sum of the four quarterly emission rasters.
 
-$\text{EntericCH}4_{i,q,t} = \text{Activity}_{i},q,t \times \frac{{EF\ CH4}_{\text{enteric}}}{4}$ (S1)
+$`\text{EntericCH}4_{i,q,t} = \text{Activity}_{i},q,t \times \frac{{EF\ CH4}_{\text{enteric}}}{4}`$ (S1)
 
-$\text{EntericCH}4_{i,t} = \text{EntericCH}4_{i,q,t}$ (S2)
+$`\text{EntericCH}4_{i,t} = \text{EntericCH}4_{i,q,t}`$ (S2)
 
 #### 6.2 Manure Left On Pasture
 
@@ -395,7 +395,7 @@ Manure left on pasture CH₄ and N₂O emissions were estimated using the IPCC 2
 
 Methane (CH₄) emissions from manure left on pasture were estimated using the IPCC 2019 Tier 2 volatile-solids approach. The annual manure CH₄ emission factor was calculated from volatile solids excretion, the maximum methane-producing capacity of manure, and the methane conversion factor for the pasture/range/paddock system. The annual CH₄ emission factor for manure left on pasture was calculated using IPCC 2019 Equation 10.23:
 
-$EFCH4 = \frac{\text{VS} \ast \text{Bo} \ast \text{MCF} \ast 0.67 \ast 365}{100}\text{\ IPCC\ Equation\ }\left( 10.23 \right)$
+$`EFCH4 = \frac{\text{VS} \ast \text{Bo} \ast \text{MCF} \ast 0.67 \ast 365}{100}\text{\ IPCC\ Equation\ }\left( 10.23 \right)`$
 
 Where:
 
@@ -411,7 +411,7 @@ MCF = methane conversion factor for the manure management system, % (adjusted fo
 
 Volatile solids (VS) were calculated from feed intake, digestibility, and ash content using the IPCC 2019 refinement equation:
 
-$VS = \left\lbrack \text{GEI} \ast \left( 1 - \frac{\text{DE}}{100} \right) \ast \left( 1 - \frac{\text{Ash}}{100} \right) \right\rbrack \ast 0.45\ Equation\ \left( 10.24 \right)$
+$`VS = \left\lbrack \text{GEI} \ast \left( 1 - \frac{\text{DE}}{100} \right) \ast \left( 1 - \frac{\text{Ash}}{100} \right) \right\rbrack \ast 0.45\ Equation\ \left( 10.24 \right)`$
 
 Where:
 
@@ -431,7 +431,7 @@ Additionally, data is in the form of GeoTIFF files following EPSG 4326 standards
 
 Nitrous oxide (N₂O) emissions from manure left on pasture were estimated from nitrogen excreted by grazing cattle. Nitrogen deposited on pasture was calculated as:
 
-$F_{\text{PRP}} = \Sigma\left\lbrack N\left( T \right) \times \text{Nex}\left( T \right) \times \text{MS}\left( T,PRP \right) \right\rbrack\text{\ IPCC\ Equation\ }\left( 11.5 \right)$
+$`F_{\text{PRP}} = \Sigma\left\lbrack N\left( T \right) \times \text{Nex}\left( T \right) \times \text{MS}\left( T,PRP \right) \right\rbrack\text{\ IPCC\ Equation\ }\left( 11.5 \right)`$
 
 Where:
 
@@ -443,9 +443,9 @@ MS: the fraction of excreted N deposited on pasture
 
 Direct N₂O-N from grazing deposition was:
 
-$N2O - N_{\text{Direct}} = F_{\text{PRP}} \times EF3PRP\ IPCC\ Equation\ \left( 11.5 \right)$
+$`N2O - N_{\text{Direct}} = F_{\text{PRP}} \times EF3PRP\ IPCC\ Equation\ \left( 11.5 \right)`$
 
-$N2O_{\text{Direct}} = N2O - N_{\text{Direct}} \times \left( \frac{44}{28} \right)\text{\ IPCC\ Equation\ }\left( 11.5 \right)$
+$`N2O_{\text{Direct}} = N2O - N_{\text{Direct}} \times \left( \frac{44}{28} \right)\text{\ IPCC\ Equation\ }\left( 11.5 \right)`$
 
 Where:
 
@@ -455,9 +455,9 @@ EF3PRP (cattle) default =0.004 kg N₂O-N per kg N deposited (0.4%) (Table 11.11
 
 Indirect N₂O emissions via volatilization and leaching/runoff were estimated using IPCC Equations 11.10, Equations 11.11, Table 11.3 and Table 11.11, applying system-specific emission factors (EF₄, EF₅) and fractions of nitrogen lost via volatilization (FracGASM) and leaching (FracLEACH).
 
-$N2O - N_{\text{ATD}} = F_{\text{PRP}} \times \text{FracGASM} \times EF4 \times \left( \frac{44}{28} \right)\text{\ IPCC\ Equation\ }\left( 11.11 \right)$
+$`N2O - N_{\text{ATD}} = F_{\text{PRP}} \times \text{FracGASM} \times EF4 \times \left( \frac{44}{28} \right)\text{\ IPCC\ Equation\ }\left( 11.11 \right)`$
 
-$N2O - N_{L} = \left( F_{\text{PRP}} \times FracLEACH - H \right) \times EF5 \times \left( \frac{44}{28} \right)\text{\ IPCC\ Equation\ }\left( 11.10 \right)$
+$`N2O - N_{L} = \left( F_{\text{PRP}} \times FracLEACH - H \right) \times EF5 \times \left( \frac{44}{28} \right)\text{\ IPCC\ Equation\ }\left( 11.10 \right)`$
 
 Where:
 

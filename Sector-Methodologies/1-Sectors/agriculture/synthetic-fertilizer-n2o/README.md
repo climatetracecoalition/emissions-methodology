@@ -111,13 +111,13 @@ Country-level synthetic N fertilizer consumption reported by IFASTAT includes fe
 
 |     |                                                                                  |       |
 |-----|----------------------------------------------------------------------------------|-------|
-|     | $N_{fert,c,y}^{\text{cropland}} = N_{fert,c,y}^{\text{total}}\ (1 - G_{frac,c})$ | \(1\) |
+|     | $`N_{fert,c,y}^{\text{cropland}} = N_{fert,c,y}^{\text{total}}\ (1 - G_{frac,c})`$ | \(1\) |
 
 Where,
 
-$N_{fert,c,y}^{\text{cropland}}$ is the fertilizer applied to cropland only
+$`N_{fert,c,y}^{\text{cropland}}`$ is the fertilizer applied to cropland only
 
-$G_{frac,c}$ is the grassland fraction of total fertilizer applied.
+$`G_{frac,c}`$ is the grassland fraction of total fertilizer applied.
 
 ###
 
@@ -131,19 +131,19 @@ We harmonized annual (y), crop-specific (cro) SPAM and FAOSTAT data at the count
 
 |     |                                                                                                                       |       |
 |-----|-----------------------------------------------------------------------------------------------------------------------|-------|
-|     | $A_{cro,i,j,y} = A_{cro,i,j,y}^{\text{SPAM}}\  \times \ \frac{A_{cro,c,y}^{\text{FAO}}}{A_{cro,i,j,y}^{\text{SPAM}}}$ | \(2\) |
+|     | $`A_{cro,i,j,y} = A_{cro,i,j,y}^{\text{SPAM}}\  \times \ \frac{A_{cro,c,y}^{\text{FAO}}}{A_{cro,i,j,y}^{\text{SPAM}}}`$ | \(2\) |
 
-Where $A_{cro,i,j,y}$ is a harmonized production ($\text{Aprod}_{cro,i,j,y}$) or harvest area ($\text{Aharv}_{cro,i,j,y}$), preserving SPAM’s spatial pattern but forcing grid sums at country scale to equal FAOSTAT by crop and year. $A_{cro,c,y}^{\text{FAO}}$ is the national scale crop-specific production/harvest area, and $A_{cro,i,j,y}^{\text{SPAM}}$ is the gridded crop-specific production and harvest area for year 2020.
+Where $`A_{cro,i,j,y}`$ is a harmonized production ($`\text{Aprod}_{cro,i,j,y}`$) or harvest area ($`\text{Aharv}_{cro,i,j,y}`$), preserving SPAM’s spatial pattern but forcing grid sums at country scale to equal FAOSTAT by crop and year. $`A_{cro,c,y}^{\text{FAO}}`$ is the national scale crop-specific production/harvest area, and $`A_{cro,i,j,y}^{\text{SPAM}}`$ is the gridded crop-specific production and harvest area for year 2020.
 
 *Step 2*
 
-Next, we calculated crop-specific harvested nitrogen ($N_{harv,cro,c,i,j,y}$) at the grid scale at 5-arc minute:
+Next, we calculated crop-specific harvested nitrogen ($`N_{harv,cro,c,i,j,y}`$) at the grid scale at 5-arc minute:
 
 |     |                                                                                             |       |
 |-----|---------------------------------------------------------------------------------------------|-------|
-|     | $N_{harv,cro,i,j,y} = \ \text{Aprod}_{cro,i,j,y}\  \times \ \text{N\ content}_{\text{cro}}$ | \(3\) |
+|     | $`N_{harv,cro,i,j,y} = \ \text{Aprod}_{cro,i,j,y}\  \times \ \text{N\ content}_{\text{cro}}`$ | \(3\) |
 
-where $\text{Aprod}_{cro,i,j,y}$ is gridded crop-specific production, and $\text{N\ content}_{\text{cro}}$ is the crop-specific nitrogen content (Figure 2).
+where $`\text{Aprod}_{cro,i,j,y}`$ is gridded crop-specific production, and $`\text{N\ content}_{\text{cro}}`$ is the crop-specific nitrogen content (Figure 2).
 
 <img src="figures/figure2.png" style="width:6.83333in;height:1.97292in" />
 
@@ -153,11 +153,11 @@ where $\text{Aprod}_{cro,i,j,y}$ is gridded crop-specific production, and $\text
 
 We first allocated national cropland synthetic N fertilizer use among 5-arc-minute grid cells according to each grid cell's share of total harvested area within the country (Figure 3). This step determines the spatial distribution of the national fertilizer total but does not yet distinguish fertilizer use among individual crops:
 
-|     | $N_{fert,i,j,y} = N_{fert,c,y}^{\text{cropland}}\  \times \ \frac{\text{Totalharv}_{i,j,y}}{\text{Totalharv}_{i,j,y}}$ | \(4\) |
+|     | $`N_{fert,i,j,y} = N_{fert,c,y}^{\text{cropland}}\  \times \ \frac{\text{Totalharv}_{i,j,y}}{\text{Totalharv}_{i,j,y}}`$ | \(4\) |
 |-----|------------------------------------------------------------------------------------------------------------------------|-------|
-|     | $\text{Totalharv}_{i,j,y} = \ \text{Aharv}_{cro,i,j,y}$                                                                | \(5\) |
+|     | $`\text{Totalharv}_{i,j,y} = \ \text{Aharv}_{cro,i,j,y}`$                                                                | \(5\) |
 
-where $\text{Aharv}_{cro,i,j,y}$ is annual gridded harvest area for individual crop, and $\text{\ Totalharv}_{i,j,y}$ is the annual gridded harvest area combined for all the fertilized crops (n) in the grid, excluding N-fixing crops.
+where $`\text{Aharv}_{cro,i,j,y}`$ is annual gridded harvest area for individual crop, and $`\text{\ Totalharv}_{i,j,y}`$ is the annual gridded harvest area combined for all the fertilized crops (n) in the grid, excluding N-fixing crops.
 
 <img src="figures/figure3.png" style="width:6.83333in;height:1.55486in" />
 
@@ -165,9 +165,9 @@ where $\text{Aharv}_{cro,i,j,y}$ is annual gridded harvest area for individual c
 
 *Step 4*
 
-We then distributed total N fertilizer applied within each grid cell ($N_{fert,i,j,y})$ between the growing crops (Figure 4). We apportion $N_{fert,i,j,y}$ across crop based on their N requirement ($N_{harv,cro,i,j,y}$) shares using following equation:
+We then distributed total N fertilizer applied within each grid cell ($`N_{fert,i,j,y})`$ between the growing crops (Figure 4). We apportion $`N_{fert,i,j,y}`$ across crop based on their N requirement ($`N_{harv,cro,i,j,y}`$) shares using following equation:
 
-|     | $N_{fert,cro,\ i,j,y} = N_{fert,i,j,y}\  \times \ \frac{N_{harv,cro,i,j,y}}{N_{harv,cro,i,j,y}}$ | \(6\) |
+|     | $`N_{fert,cro,\ i,j,y} = N_{fert,i,j,y}\  \times \ \frac{N_{harv,cro,i,j,y}}{N_{harv,cro,i,j,y}}`$ | \(6\) |
 |-----|--------------------------------------------------------------------------------------------------|-------|
 |     |                                                                                                  |       |
 
@@ -181,7 +181,7 @@ We then derived crop-specific fertilizer application rates by dividing fertilize
 
 |     |                                                                                  |       |
 |-----|----------------------------------------------------------------------------------|-------|
-|     | $\text{Nrate}_{cro,i,j,y} = \frac{N_{fert,cro,i,j,y}}{\text{Aharv}_{cro,i,j,y}}$ | \(7\) |
+|     | $`\text{Nrate}_{cro,i,j,y} = \frac{N_{fert,cro,i,j,y}}{\text{Aharv}_{cro,i,j,y}}`$ | \(7\) |
 
 <img src="figures/figure5.png" style="width:5.83333in;height:4.02083in" />
 
@@ -193,29 +193,29 @@ We evaluated the reconstructed crop-specific synthetic N fertilizer estimates fo
 
 #### 2.4 Nitrous oxide emission
 
-N<sub>2</sub>O fluxes in each grid cell (i,j), crop, and year y are calculated using the following formulas by applying the derived crop-specific fertilizer application rates, $\text{Nrate}$, for each emissions pathway.
+N<sub>2</sub>O fluxes in each grid cell (i,j), crop, and year y are calculated using the following formulas by applying the derived crop-specific fertilizer application rates, $`\text{Nrate}`$, for each emissions pathway.
 
 Direct emissions:
 
 |     |                                                                                           |       |
 |-----|-------------------------------------------------------------------------------------------|-------|
-|     | $\text{DEmission}_{cro,i,j,y} = \ \text{Nrate}_{cro,i,j,y}\  \times \ \text{EF}_{1i,j,y}$ | \(8\) |
+|     | $`\text{DEmission}_{cro,i,j,y} = \ \text{Nrate}_{cro,i,j,y}\  \times \ \text{EF}_{1i,j,y}`$ | \(8\) |
 
 Indirect emissions:
 
 |     |                                                                                                                               |       |
 |-----|-------------------------------------------------------------------------------------------------------------------------------|-------|
-|     | $\text{IEmission}_{cro,i,j,y} = \ \text{Nrate}_{cro,i,j,y}\  \times \text{Frac}_{\text{leach}}\  \times \ \text{EF}_{5i,j,y}$ | \(9\) |
+|     | $`\text{IEmission}_{cro,i,j,y} = \ \text{Nrate}_{cro,i,j,y}\  \times \text{Frac}_{\text{leach}}\  \times \ \text{EF}_{5i,j,y}`$ | \(9\) |
 
 Total emissions:
 
 |     |                                                                                                      |        |
 |-----|------------------------------------------------------------------------------------------------------|--------|
-|     | $\text{Emission}_{cro,i,j,y} = \ \ \text{DEmission}_{cro,i,j,y} + \text{IEmission}_{cro,i,j,y}$ $\ $ | \(10\) |
+|     | $`\text{Emission}_{cro,i,j,y} = \ \ \text{DEmission}_{cro,i,j,y} + \text{IEmission}_{cro,i,j,y}`$ $``$ | \(10\) |
 
-Where, $\text{Frac}_{\text{leach}}$ is fraction of applied N entering the leaching/runoff pathway (Section 2.2.3), $\text{EF}_{1i,j,y}$ is the direct N₂O emission factor, and $\text{EF}_{5i,j,y}$ is the indirect N₂O emission factor.
+Where, $`\text{Frac}_{\text{leach}}`$ is fraction of applied N entering the leaching/runoff pathway (Section 2.2.3), $`\text{EF}_{1i,j,y}`$ is the direct N₂O emission factor, and $`\text{EF}_{5i,j,y}`$ is the indirect N₂O emission factor.
 
-Because the EF datasets are at a country or regional-scale, we harmonized it to a 5-arc-minute modeling grid in two steps. First, auxiliary lookup rasters were generated so that every grid cell carries the ISO-3 country code required to link to the relevant tabulated EF. Second, the appropriate factor was assigned to each cell-crop combination: EF at country or regional values were joined via the identifier raster (country ISO-3 mask) to get $\text{EF}_{1i,j,y}$. $\text{EF}_{5i,j,y}\ $is a constant value applied at all grids (Section 2.2.3).
+Because the EF datasets are at a country or regional-scale, we harmonized it to a 5-arc-minute modeling grid in two steps. First, auxiliary lookup rasters were generated so that every grid cell carries the ISO-3 country code required to link to the relevant tabulated EF. Second, the appropriate factor was assigned to each cell-crop combination: EF at country or regional values were joined via the identifier raster (country ISO-3 mask) to get $`\text{EF}_{1i,j,y}`$. $`\text{EF}_{5i,j,y}`$is a constant value applied at all grids (Section 2.2.3).
 
 #### 2.5 Final synthetic N fertilizer and N₂O emission dataset
 

@@ -168,7 +168,7 @@ Each centralized WWTP sourced from the HydroWASTE dataset is associated with an 
 
 HydroWASTE reports three separate types of “population served” estimations, and since population served affects all calculations, it is important to describe these differences here. Population data that was sourced from authoritative bodies was either labeled as “population served” or “population equivalent” (PE). The first are numbers of people who live in areas where the sewer system connects to the corresponding WWTP. For example, almost all of U.S. data in HydroWASTE comes from the EPA which reports “population served”. The second are population estimates arising from (typically) normalization of measurements of the biological oxygen demand (BOD) in untreated wastewater (influent), according to,
 
-$PE\  = \ \ \frac{\text{g\ BOD}}{54\ g\ BOD/\ capita}$ (Eq. 1).
+$`PE\  = \ \ \frac{\text{g\ BOD}}{54\ g\ BOD/\ capita}`$ (Eq. 1).
 
 As this is a measured quantity, *PE* of a WWTP may include waste from industrial/commercial sources that entered sewer systems and may therefore be larger than the population that resides in the region served by the corresponding WWTP. To account for this, all additional scaling factors for industrial waste were treated as a unit value when PE is reported. Finally, HydroWASTE estimated the population served by WWTPs that have no reported population from authoritative bodies. These values were treated like “population served”; however, they have a significantly higher level of uncertainty.
 
@@ -214,15 +214,15 @@ Decentralized treatment constitutes the majority of wastewater emissions, where 
 
 Like other inventories (e.g., EDGAR and CEDS), Climate TRACE’s country-level domestic wastewater emissions were estimated by partitioning country-level populations into separate treatment pathways and applying pathway-specific emissions factors. This is expressed for methane and country by,
 
-$Em_{c} = \Sigma_{\rho}{(\alpha}_{\rho} \cdot P_{c} \cdot BOD_{c} - S_{\rho}) \cdot \text{EF}_{CH4,\rho} - R_{\rho}$, (Eq. 2),
+$`Em_{c} = \Sigma_{\rho}{(\alpha}_{\rho} \cdot P_{c} \cdot BOD_{c} - S_{\rho}) \cdot \text{EF}_{CH4,\rho} - R_{\rho}`$, (Eq. 2),
 
-where $\rho$ is a specific wastewater pathway, $P_{c}$ is the population of country $c$, and $\text{BO}D_{c}$ is the per capita biochemical oxygen demand of the wastewater of country $c$. For all pathways, $R_{\rho} = 0$ which is the IPCC Tier 1 default. Nitrous oxide emissions were modeled with,
+where $`\rho`$ is a specific wastewater pathway, $`P_{c}`$ is the population of country $`c`$, and $`\text{BO}D_{c}`$ is the per capita biochemical oxygen demand of the wastewater of country $`c`$. For all pathways, $`R_{\rho} = 0`$ which is the IPCC Tier 1 default. Nitrous oxide emissions were modeled with,
 
-$Em_{c} = \Sigma_{\rho}\alpha_{\rho} \cdot P_{c} \cdot N_{c} \cdot EF_{N2O,\ \rho} \cdot \frac{44}{28}\ $, (Eq. 3),
+$`Em_{c} = \Sigma_{\rho}\alpha_{\rho} \cdot P_{c} \cdot N_{c} \cdot EF_{N2O,\ \rho} \cdot \frac{44}{28}`$, (Eq. 3),
 
-where $N_{c}$ is the per capita nitrogen content of wastewater, $EF_{N2O,\ \rho}$ is the nitrous oxide emission factor, and $\frac{44}{28}$ is a nitrogen to nitrous oxide mass-balance factor. The per capita nitrogen content is computed in an identical way as it is for asset-level emissions wherein protein per capita and other country-dependent factors are used. Wastewater effluent emissions were also modeled in the same manner as described earlier.
+where $`N_{c}`$ is the per capita nitrogen content of wastewater, $`EF_{N2O,\ \rho}`$ is the nitrous oxide emission factor, and $`\frac{44}{28}`$ is a nitrogen to nitrous oxide mass-balance factor. The per capita nitrogen content is computed in an identical way as it is for asset-level emissions wherein protein per capita and other country-dependent factors are used. Wastewater effluent emissions were also modeled in the same manner as described earlier.
 
-As diagrammed in Figure 6, the pathways modeled are *Sewer*, *Septic*, *Latrine*, and *No Treatment* and the proportion of each population that is served by each pathway $\alpha_{\rho}$ was determined by the product of the country-level population and a proportion estimated by WASH.
+As diagrammed in Figure 6, the pathways modeled are *Sewer*, *Septic*, *Latrine*, and *No Treatment* and the proportion of each population that is served by each pathway $`\alpha_{\rho}`$ was determined by the product of the country-level population and a proportion estimated by WASH.
 
 Two distinguishing features of the Climate TRACE country-level model are that 1., population treated by centralized treatment is appropriately divided into primary, secondary, and advanced treatment categories based on Climate TRACE asset data, and 2., that a monthly climatology model is used to determine latrine emissions factors.
 
@@ -731,157 +731,157 @@ The above usage is not warranted to be error free and does not imply the express
 
 #### Appendix 1.a.: Estimating the Effect of Treatment and Effluent Emissions:
 
-Aerobic and anaerobic treatment all result in CH<sub>4</sub> emissions as natural and induced biochemical processes consumes organics in the wastewater, resulting in emissions. Hence, the total organics in the influent wastewater $\text{TOW}$ and how it is treated are the main drivers of CH<sub>4</sub> emissions. The effect of treatment on methane emissions is represented by the amount of organic waste removed in the form of sludge from the wastewater $S$, the amount of emissions removed from flaring or recovered $R$, and the treatment emission factor $EF_{CH4,\ Treat\ }$, based on Equation 6.1 from the IPCC guidelines:
+Aerobic and anaerobic treatment all result in CH<sub>4</sub> emissions as natural and induced biochemical processes consumes organics in the wastewater, resulting in emissions. Hence, the total organics in the influent wastewater $`\text{TOW}`$ and how it is treated are the main drivers of CH<sub>4</sub> emissions. The effect of treatment on methane emissions is represented by the amount of organic waste removed in the form of sludge from the wastewater $`S`$, the amount of emissions removed from flaring or recovered $`R`$, and the treatment emission factor $`EF_{CH4,\ Treat\ }`$, based on Equation 6.1 from the IPCC guidelines:
 
-$CH_{4}\text{Emission}s_{\text{Treat}}\  = \ \lbrack(TOW - S) \cdot EF_{CH4,Treat} - R\rbrack \cdot 0.001$ (Eq. A1.1),
+$`CH_{4}\text{Emission}s_{\text{Treat}}\  = \ \lbrack(TOW - S) \cdot EF_{CH4,Treat} - R\rbrack \cdot 0.001`$ (Eq. A1.1),
 
-where $0.001$ is a conversion from $\text{kg}$ to $T$.
+where $`0.001`$ is a conversion from $`\text{kg}`$ to $`T`$.
 
-An emission factor of $EF_{CH4,\ Treat\ } = 0.018\ (kg\ CH_{4}/kg\ BOD)$ was used which is the Tier 2 method from Table 6.3 in the IPCC guidelines. Flaring and recovery amounts were not estimated, and there is no differentiation between aerobic and anaerobic treatment.
+An emission factor of $`EF_{CH4,\ Treat\ } = 0.018\ (kg\ CH_{4}/kg\ BOD)`$ was used which is the Tier 2 method from Table 6.3 in the IPCC guidelines. Flaring and recovery amounts were not estimated, and there is no differentiation between aerobic and anaerobic treatment.
 
-When discharged into a body of water, remaining organics in the wastewater are consumed by microorganisms, resulting in further emissions. The methane emissions from the discharge of treated wastewater is primarily a function of the remaining organic waste in the effluent water $\text{TO}W_{\text{Eff}}\ $after sludge removal and biological treatment, and is defined by,
+When discharged into a body of water, remaining organics in the wastewater are consumed by microorganisms, resulting in further emissions. The methane emissions from the discharge of treated wastewater is primarily a function of the remaining organic waste in the effluent water $`\text{TO}W_{\text{Eff}}`$after sludge removal and biological treatment, and is defined by,
 
-$CH_{4}\text{Emission}s_{\text{Eff}}\  = \ TOW_{\text{Eff}}\text{\ E}F_{CH4,Eff} \cdot 0.001$ (Eq. A1.2),
+$`CH_{4}\text{Emission}s_{\text{Eff}}\  = \ TOW_{\text{Eff}}\text{\ E}F_{CH4,Eff} \cdot 0.001`$ (Eq. A1.2),
 
-where the Tier 1 estimate of $EF_{CH4,Eff} = 0.068\ \ (kg\ CH_{4}/kg\ BOD)$ from Table 6.3 of the IPCC guidelines is used and $0.001$ is the conversion factor for $\text{kg}$ to $T$.
+where the Tier 1 estimate of $`EF_{CH4,Eff} = 0.068\ \ (kg\ CH_{4}/kg\ BOD)`$ from Table 6.3 of the IPCC guidelines is used and $`0.001`$ is the conversion factor for $`\text{kg}`$ to $`T`$.
 
 The total emissions from CH<sub>4</sub> for each WWTP is the summation of treatment and effluent emissions, according to,
 
-$CH_{4}\text{Emission}s_{\text{WWTP}}\  = CH_{4}\text{Emission}s_{\text{Treat}} + CH_{4}\text{Emission}s_{\text{Eff}}\ $ (Eq. A1.3).
+$`CH_{4}\text{Emission}s_{\text{WWTP}}\  = CH_{4}\text{Emission}s_{\text{Treat}} + CH_{4}\text{Emission}s_{\text{Eff}}`$ (Eq. A1.3).
 
-Likewise, N<sub>2</sub>O emissions from a WWTP can be disaggregated into treatment and discharge pathways. In treatment, nitrification and denitrification processes both result in the production of N<sub>2</sub>O. The total nitrogen content in influent wastewater $\text{TN}_{\inf}(kg)$ is the primary quantity that drives N<sub>2</sub>O emissions at centralized WWTPs, defined in the IPCC guidelines by,
+Likewise, N<sub>2</sub>O emissions from a WWTP can be disaggregated into treatment and discharge pathways. In treatment, nitrification and denitrification processes both result in the production of N<sub>2</sub>O. The total nitrogen content in influent wastewater $`\text{TN}_{\inf}(kg)`$ is the primary quantity that drives N<sub>2</sub>O emissions at centralized WWTPs, defined in the IPCC guidelines by,
 
-$N_{2}\text{O\ Emission}s_{\text{Treat}} = \text{TN}_{\inf}\text{\ E}F_{N2O,Treat}\ \frac{44}{28} \cdot 0.001$ (Eq. A1.4),
+$`N_{2}\text{O\ Emission}s_{\text{Treat}} = \text{TN}_{\inf}\text{\ E}F_{N2O,Treat}\ \frac{44}{28} \cdot 0.001`$ (Eq. A1.4),
 
-where $EF_{N2O,Treat} = 0.016\ (kg\ N_{2}O\ N/kg\ N)\ $ is the emission factor, $\frac{44}{28}\ (kg\ N_{2}O/kg\ N_{2}ON)$ is the mass-balance factor for atomic N and N<sub>2</sub>O, and $0.001$ is the conversion from $\text{kg}$ to $T$.
+where $`EF_{N2O,Treat} = 0.016\ (kg\ N_{2}O\ N/kg\ N)`$ is the emission factor, $`\frac{44}{28}\ (kg\ N_{2}O/kg\ N_{2}ON)`$ is the mass-balance factor for atomic N and N<sub>2</sub>O, and $`0.001`$ is the conversion from $`\text{kg}`$ to $`T`$.
 
-The nitrogen in the treated effluent $N_{\text{Eff}}$ produces N<sub>2</sub>O from biochemical nitrification in the receiving body of water that it is discharged into. This pathway was modeled with,
+The nitrogen in the treated effluent $`N_{\text{Eff}}`$ produces N<sub>2</sub>O from biochemical nitrification in the receiving body of water that it is discharged into. This pathway was modeled with,
 
-$N_{2}\text{O\ Emission}s_{\text{Eff}}\  = \ N_{\text{Eff}}\text{\ E}F_{N2O,\ Eff}\ \frac{44}{28} \cdot 0.001$ (Eq. A1.5),
+$`N_{2}\text{O\ Emission}s_{\text{Eff}}\  = \ N_{\text{Eff}}\text{\ E}F_{N2O,\ Eff}\ \frac{44}{28} \cdot 0.001`$ (Eq. A1.5),
 
-where $EF_{N2O,\ Eff} = 0.005\ (kg\ N_{2}O\ N/kg\ N)$ was used (Tier 1).
+where $`EF_{N2O,\ Eff} = 0.005\ (kg\ N_{2}O\ N/kg\ N)`$ was used (Tier 1).
 
 As with CH<sub>4</sub>, the total N<sub>2</sub>O emissions for each WWTP is the summation of treatment and effluent emissions, according to
 
-$N_{2}\text{O\ Emission}s_{\text{WWTP}}\  = N_{2}\text{O\ Emission}s_{\text{Treat}} + N_{2}\text{O\ Emission}s_{\text{Eff}}\ $ (Eq. A1.6)
+$`N_{2}\text{O\ Emission}s_{\text{WWTP}}\  = N_{2}\text{O\ Emission}s_{\text{Treat}} + N_{2}\text{O\ Emission}s_{\text{Eff}}`$ (Eq. A1.6)
 
 #### Appendix 1.b.: Waste Model
 
-Using the IPCC methodology, the amount of waste (organics and nitrogen) in the influent water entering a centralized WWTP is primarily a function of population served and demographics (i.e. diet, behaviors, and local laws). The total organics in the influent wastewater $\text{TOW}$ drives the CH<sub>4</sub> emissions as these organics are readily consumable by microorganisms whose resulting methane can be released in settling basins, anaerobic pockets, as well as when wastewater is aerated in upstream sewer lines.
+Using the IPCC methodology, the amount of waste (organics and nitrogen) in the influent water entering a centralized WWTP is primarily a function of population served and demographics (i.e. diet, behaviors, and local laws). The total organics in the influent wastewater $`\text{TOW}`$ drives the CH<sub>4</sub> emissions as these organics are readily consumable by microorganisms whose resulting methane can be released in settling basins, anaerobic pockets, as well as when wastewater is aerated in upstream sewer lines.
 
-In the IPCC guidelines, the $\text{TOW}$ ($kg/year$) in Eq. A1.1 is a function of the number of people served $P$ by the WWTP and the amount of $\text{BOD}$ they generate, defined by,
+In the IPCC guidelines, the $`\text{TOW}`$ ($`kg/year`$) in Eq. A1.1 is a function of the number of people served $`P`$ by the WWTP and the amount of $`\text{BOD}`$ they generate, defined by,
 
-$TOW\  = \ P \cdot BOD_{c} \cdot I \cdot 0.001 \cdot days$ (Eq. A1.7),
+$`TOW\  = \ P \cdot BOD_{c} \cdot I \cdot 0.001 \cdot days`$ (Eq. A1.7),
 
-where $\text{BO}D_{c}$ is the production ($g/day/capita$) of $\text{BOD}$ of a person living in country $c$, $I = 1.25$ is a factor that accounts for industrial wastewater that enters the sewer system linked to the WWTP, and $\text{days}$ is the corresponding data per month. Population-served is estimated at the half-month of a given month with splines described in Appendix 7. As mentioned earlier, HydroWASTE provides three separated definitions for “population served”: number of people, population equivalent (PE), and an estimated population served. For WWTPs where the number of people or estimated population served is provided, $\text{BO}D_{c}$ is obtained from Table 6.4 in the IPCC guidelines. For WWTPs where a PE quantity is given, $\text{BO}D_{c} = 54\ g/day/capita$ is used. Further, since PE is obtained from sampling of the influent wastewater, the influence of industrial run-off is already accounted for in the reported PE, and thereby $I = 1.0$ is used.
+where $`\text{BO}D_{c}`$ is the production ($`g/day/capita`$) of $`\text{BOD}`$ of a person living in country $`c`$, $`I = 1.25`$ is a factor that accounts for industrial wastewater that enters the sewer system linked to the WWTP, and $`\text{days}`$ is the corresponding data per month. Population-served is estimated at the half-month of a given month with splines described in Appendix 7. As mentioned earlier, HydroWASTE provides three separated definitions for “population served”: number of people, population equivalent (PE), and an estimated population served. For WWTPs where the number of people or estimated population served is provided, $`\text{BO}D_{c}`$ is obtained from Table 6.4 in the IPCC guidelines. For WWTPs where a PE quantity is given, $`\text{BO}D_{c} = 54\ g/day/capita`$ is used. Further, since PE is obtained from sampling of the influent wastewater, the influence of industrial run-off is already accounted for in the reported PE, and thereby $`I = 1.0`$ is used.
 
-In the IPCC guidelines, population $P$ in Eq. A1.7 is a country/region-level population and $\text{TOW}$ is disaggregated into separated pathways for each wastewater treatment technology (e.g. septic tanks, latrines, centralized treatment, etc.) based on regional economic demographics; however, this disaggregation was not needed here as we are only examining populations served by centralized WWTPs.
+In the IPCC guidelines, population $`P`$ in Eq. A1.7 is a country/region-level population and $`\text{TOW}`$ is disaggregated into separated pathways for each wastewater treatment technology (e.g. septic tanks, latrines, centralized treatment, etc.) based on regional economic demographics; however, this disaggregation was not needed here as we are only examining populations served by centralized WWTPs.
 
-The total nitrogen in the influent wastewater $\text{TN}_{\inf}\ $(see Eq. A1.4) drives N<sub>2</sub>O emissions and typically comes in the form of urea, proteins, and ammonia which can be attributed to human diet and waste, disposal of food waste and cleaning products into sewers, and industrial run-off. The IPCC guidelines estimate this quantity with the population served and their protein consumption and behavioral characteristics, according to,
+The total nitrogen in the influent wastewater $`\text{TN}_{\inf}`$(see Eq. A1.4) drives N<sub>2</sub>O emissions and typically comes in the form of urea, proteins, and ammonia which can be attributed to human diet and waste, disposal of food waste and cleaning products into sewers, and industrial run-off. The IPCC guidelines estimate this quantity with the population served and their protein consumption and behavioral characteristics, according to,
 
-$TN_{\inf} = \ P\  \cdot Protein\  \cdot F_{\text{NR}}\  \cdot N_{\text{HH}} \cdot F_{NON - CON} \cdot F_{IND - COM} \cdot 0.001$ (Eq. A1.8),
+$`TN_{\inf} = \ P\  \cdot Protein\  \cdot F_{\text{NR}}\  \cdot N_{\text{HH}} \cdot F_{NON - CON} \cdot F_{IND - COM} \cdot 0.001`$ (Eq. A1.8),
 
-where $\text{Protein}$ is the protein consumption rate in $grams/capita/day$, $F_{\text{NR}} = 0.16\ $ is the fraction of protein that is nitrogen, $N_{\text{HH}}$ is a factor for nitrogen in wastewater from the disposal of household products into sewers, $F_{NON - CON}$ is a factor for nitrogen in wastewater from the disposal of non-consumed food waste into sewers, $F_{IND - COM}$ is a factor for industrial run-off, and $0.001$ is a conversion for $g$ to $\text{kg}$.
+where $`\text{Protein}`$ is the protein consumption rate in $`grams/capita/day`$, $`F_{\text{NR}} = 0.16`$ is the fraction of protein that is nitrogen, $`N_{\text{HH}}`$ is a factor for nitrogen in wastewater from the disposal of household products into sewers, $`F_{NON - CON}`$ is a factor for nitrogen in wastewater from the disposal of non-consumed food waste into sewers, $`F_{IND - COM}`$ is a factor for industrial run-off, and $`0.001`$ is a conversion for $`g`$ to $`\text{kg}`$.
 
 The amount of protein consumed is estimated from the region/national supply of protein obtained from FAOSTAT (FAO, n.d.) and regional estimates of the fraction of supplied protein consumed in Table 6.10A of the IPCC:
 
-$Protein\  = \ Protein_{\text{supply}}\  \cdot FPC$ (Eq. A1.9).
+$`Protein\  = \ Protein_{\text{supply}}\  \cdot FPC`$ (Eq. A1.9).
 
 The remaining quantities in Eq. A1.8 were obtained using IPCC Table 6.10A.
 
 #### Appendix 1.c.: Technological Treatment Model
 
-At centralized WWTPs, sludge and biological treatment affect emissions via two mechanisms: removing waste quantities ($\text{TOW}$ and $\text{TN}$) from the water that will become effluent discharge downstream and inherently releasing emissions from their own processes. For CH<sub>4</sub>, the collection of solid sludge directly removes BOD from influent water, and the biological treatment of influent water also removes $\text{TOW}$ prior to discharge.
+At centralized WWTPs, sludge and biological treatment affect emissions via two mechanisms: removing waste quantities ($`\text{TOW}`$ and $`\text{TN}`$) from the water that will become effluent discharge downstream and inherently releasing emissions from their own processes. For CH<sub>4</sub>, the collection of solid sludge directly removes BOD from influent water, and the biological treatment of influent water also removes $`\text{TOW}`$ prior to discharge.
 
-The total mass of dry sludge $S_{\text{mass}}$ produced at a WWTP is estimated to be $30\ g/day/capita$ (Turovskiy & Mathai, 2006), and the total BOD removed by the WWTP is defined in the IPCC with
+The total mass of dry sludge $`S_{\text{mass}}`$ produced at a WWTP is estimated to be $`30\ g/day/capita`$ (Turovskiy & Mathai, 2006), and the total BOD removed by the WWTP is defined in the IPCC with
 
-$S\  = \ S_{\text{mass}}{\  \cdot K}_{\text{rem}}$ (Eq. A1.10),
+$`S\  = \ S_{\text{mass}}{\  \cdot K}_{\text{rem}}`$ (Eq. A1.10),
 
-where $\text{\ K}_{\text{rem}}$ is the *sludge factor* – a quantity that reflects the amount of $\text{kg\ BOD}$ removed per $\text{kg}$ of sludge. $\text{\ K}_{\text{rem}}$ is dependent on technology level and is given by Table 6.6A in the IPCC guidelines. This is used in Eq. A1.1.
+where $`\text{\ K}_{\text{rem}}`$ is the *sludge factor* – a quantity that reflects the amount of $`\text{kg\ BOD}`$ removed per $`\text{kg}`$ of sludge. $`\text{\ K}_{\text{rem}}`$ is dependent on technology level and is given by Table 6.6A in the IPCC guidelines. This is used in Eq. A1.1.
 
-Accounting for both sludge and biological treatment, the $\text{TOW}$ carried by effluent water in Eq. A1.2 is determined with
+Accounting for both sludge and biological treatment, the $`\text{TOW}`$ carried by effluent water in Eq. A1.2 is determined with
 
-$\text{TO}W_{\text{Eff}} = TOW \cdot (1 - TOW_{\text{rem}})$ (Eq. A1.11),
+$`\text{TO}W_{\text{Eff}} = TOW \cdot (1 - TOW_{\text{rem}})`$ (Eq. A1.11),
 
-where $\text{TO}W_{\text{rem}}\ (kg\ BOD)$ is the amount of organic waste removed by the WWTP and is determined with Table 6.6B based on technology level.
+where $`\text{TO}W_{\text{rem}}\ (kg\ BOD)`$ is the amount of organic waste removed by the WWTP and is determined with Table 6.6B based on technology level.
 
-The remaining Nitrogen in effluent discharged $N_{\text{Eff}}\ (kg)$ in Eq. A1.5 was derived from $TN_{\inf}$ , according to
+The remaining Nitrogen in effluent discharged $`N_{\text{Eff}}\ (kg)`$ in Eq. A1.5 was derived from $`TN_{\inf}`$ , according to
 
-$N_{\text{Eff}} = TN_{\inf}(1 - N_{\text{rem}})$ (Eq. A1.12),
+$`N_{\text{Eff}} = TN_{\inf}(1 - N_{\text{rem}})`$ (Eq. A1.12),
 
-where $N_{\text{rem}}$ is the fraction of protein removed from the treatment of wastewater and is obtained from Table 6.10C based on the technology level of the WWTP.
+where $`N_{\text{rem}}`$ is the fraction of protein removed from the treatment of wastewater and is obtained from Table 6.10C based on the technology level of the WWTP.
 
 #### Appendix 1.d.: Modified Capacity and Emissions Factors
 
-Climate TRACE sources are reported in terms of capacity, capacity factor ($\text{CF}$), activity, and emissions factor ($\text{EF}$), wherein
+Climate TRACE sources are reported in terms of capacity, capacity factor ($`\text{CF}`$), activity, and emissions factor ($`\text{EF}`$), wherein
 
-$Activity\  = \ Capacity\  \cdot CF$ (Eq. A1.13),
+$`Activity\  = \ Capacity\  \cdot CF`$ (Eq. A1.13),
 
-$Emissions\  = \ Activity\  \cdot EF$ (Eq. A1.14),
+$`Emissions\  = \ Activity\  \cdot EF`$ (Eq. A1.14),
 
-and where the CH<sub>4</sub> and N<sub>2</sub>O emissions share the same capacity, $\text{CF}$, and activity but differing $\text{EF}$s. However, the approaches for CH<sub>4</sub> and N<sub>2</sub>O emissions are not immediately amenable to this formulation as they are each composed of two separate capacities and activities. Hence, the capacity is chosen to be the “Population Served” quantity $P$, the $\text{CF}$ is a constant unit value, and the revised emissions factors are,
+and where the CH<sub>4</sub> and N<sub>2</sub>O emissions share the same capacity, $`\text{CF}`$, and activity but differing $`\text{EF}`$s. However, the approaches for CH<sub>4</sub> and N<sub>2</sub>O emissions are not immediately amenable to this formulation as they are each composed of two separate capacities and activities. Hence, the capacity is chosen to be the “Population Served” quantity $`P`$, the $`\text{CF}`$ is a constant unit value, and the revised emissions factors are,
 
-$EF_{CH4} = \frac{CH_{4}\text{\ \ Emission}s_{\text{WWTP}}}{P}$ (Eq. A1.15),
+$`EF_{CH4} = \frac{CH_{4}\text{\ \ Emission}s_{\text{WWTP}}}{P}`$ (Eq. A1.15),
 
-$EF_{N2O} = \frac{N_{2}\text{O\ Emission}s_{\text{WWTP}}}{P}$ (Eq. A1.16).
+$`EF_{N2O} = \frac{N_{2}\text{O\ Emission}s_{\text{WWTP}}}{P}`$ (Eq. A1.16).
 
 #### Appendix 1.e.: Uncertainty Quantification & Confidence
 
-A Monte Carlo approach was used for estimating the uncertainty of the emissions wherein each variable was sampled stochastically, and the standard deviation of the distribution of the capacity, $\text{CF}$, activity, $\text{EF}$, emissions, and CO<sub>2</sub> equivalents (20-year and 100-year) were reported. Each variable in the above formulations is assumed to have a normal distribution whose mean is the value used in the analysis. To obtain the variance of the distribution of each variable, a conversion from reported confidence intervals (assumed to be 95%) to standard deviation is made, according to,
+A Monte Carlo approach was used for estimating the uncertainty of the emissions wherein each variable was sampled stochastically, and the standard deviation of the distribution of the capacity, $`\text{CF}`$, activity, $`\text{EF}`$, emissions, and CO<sub>2</sub> equivalents (20-year and 100-year) were reported. Each variable in the above formulations is assumed to have a normal distribution whose mean is the value used in the analysis. To obtain the variance of the distribution of each variable, a conversion from reported confidence intervals (assumed to be 95%) to standard deviation is made, according to,
 
-$\sigma\  = \ \text{\ \ }\frac{upper\ limit\  - \ lower\ limit}{3.92}$ (Eq. A1.17),
+$`\sigma\  = \ \text{\ \ }\frac{upper\ limit\  - \ lower\ limit}{3.92}`$ (Eq. A1.17),
 
-where $N$ is the number of sources used to obtain the reported value. An assumed sample size of 30 is used across the board to simplify analysis.
+where $`N`$ is the number of sources used to obtain the reported value. An assumed sample size of 30 is used across the board to simplify analysis.
 
-All quantities in the IPCC guidelines have an associated confidence interval. For HydroWASTE population values, an assumed $\pm 5\%$ confidence interval was used if the population served is reported by an authoritative body (i.e., numbers of people and PE values). There is no associated confidence interval for the estimated population served values. Instead, the error (whose mean and standard deviation is derived from information in the HydroWASTE supplemental (Macedo et al., 2022b) is sampled and used to adjust estimated population served in the Monte Carlo analysis. Here the error $e_{P}$ in the estimated population served is defined by,
+All quantities in the IPCC guidelines have an associated confidence interval. For HydroWASTE population values, an assumed $`\pm 5\%`$ confidence interval was used if the population served is reported by an authoritative body (i.e., numbers of people and PE values). There is no associated confidence interval for the estimated population served values. Instead, the error (whose mean and standard deviation is derived from information in the HydroWASTE supplemental (Macedo et al., 2022b) is sampled and used to adjust estimated population served in the Monte Carlo analysis. Here the error $`e_{P}`$ in the estimated population served is defined by,
 
-$e_{P} = \widetilde{P} - P$ (Eq. A1.18),
+$`e_{P} = \widetilde{P} - P`$ (Eq. A1.18),
 
-where $\widetilde{P}$ is the estimated population served (i.e. HydroWASTE estimated value) and $P$ is the true, but unknown, population served. The mean error $\bar{e_{P}}$ and variance ${\sigma^{2}}_{P}$ of the estimated populations are
+where $`\widetilde{P}`$ is the estimated population served (i.e. HydroWASTE estimated value) and $`P`$ is the true, but unknown, population served. The mean error $`\bar{e_{P}}`$ and variance $`{\sigma^{2}}_{P}`$ of the estimated populations are
 
-$\bar{e_{P}} = - \frac{PBIAS \cdot \bar{P}}{100}$ (Eq. A1.19),
+$`\bar{e_{P}} = - \frac{PBIAS \cdot \bar{P}}{100}`$ (Eq. A1.19),
 
-${\sigma^{2}}_{e_{P}} = RMSE^{2} - {{\bar{e}}^{2}}_{P}$ (Eq. A1.20),
+$`{\sigma^{2}}_{e_{P}} = RMSE^{2} - {{\bar{e}}^{2}}_{P}`$ (Eq. A1.20),
 
-where $\text{PBIAS}$ and RMSE are the percent bias and root mean square error of the the estimation approach when applied to the set of known population served and $\bar{P}$ is the mean population served of that set. $\text{PBIAS}$ and the normalized RMSE are provided in the HydroWASTE supplemental (Macedo et al., 2022b), and $\bar{P}$ was recreated.
+where $`\text{PBIAS}`$ and RMSE are the percent bias and root mean square error of the the estimation approach when applied to the set of known population served and $`\bar{P}`$ is the mean population served of that set. $`\text{PBIAS}`$ and the normalized RMSE are provided in the HydroWASTE supplemental (Macedo et al., 2022b), and $`\bar{P}`$ was recreated.
 
-The adjusted population served used in Monte Carlo for HydroWASTE facility $i$ with estimated population served ${\widetilde{P}}_{i}$ is,
+The adjusted population served used in Monte Carlo for HydroWASTE facility $`i`$ with estimated population served $`{\widetilde{P}}_{i}`$ is,
 
-$P_{i,\ adj}\  = \max_{}({\widetilde{P}}_{i}\  - \epsilon\ ,\ 0)$ (Eq. A1.21),
+$`P_{i,\ adj}\  = \max({\widetilde{P}}_{i}\  - \epsilon\ ,\ 0)`$ (Eq. A1.21),
 
-where $\epsilon\ \sim\ N(\bar{e_{P}},\ {\sigma^{2}}_{e_{P}})\ $.
+where $`\epsilon\ \sim\ N(\bar{e_{P}},\ {\sigma^{2}}_{e_{P}})`$.
 
 The mean (Equation A1.19) and variance (Equation A1.20) of the error estimated population values are used to sample the error of the estimated population using Equation A1.21. In the accompanying HydroWASTE manuscript and supplemental, the approach for estimating missing population served values is applied to all of the WWTPs with reported population served/PE. The performance of the estimation technique is reported and shown in Figure A1.1.
 
 <img src="figures/figure23.png" style="width:2.71875in;height:2.90625in" />
 
-**Figure A1.1.** Figure 4.a in (Macedo et al., 2022a). The performance of the population served estimation approach when applied to WWTPs with known population served/PE. The solid line is the unit line (i.e. no error), and the dashed lines represent an order of magnitude difference between the estimated and known populations. $n$ is the total number of WWTPs analyzed, $\text{NRMSE}$ is the normalized root mean square error, $\text{PBIAS}$ is the percent bias, $R^{2}$ is the coefficient of determination, $\text{NSE}$ is the Nash-Sutcliffe Efficiency, and $\text{KGE}$ is the Kling-Gupta efficiency.
+**Figure A1.1.** Figure 4.a in (Macedo et al., 2022a). The performance of the population served estimation approach when applied to WWTPs with known population served/PE. The solid line is the unit line (i.e. no error), and the dashed lines represent an order of magnitude difference between the estimated and known populations. $`n`$ is the total number of WWTPs analyzed, $`\text{NRMSE}`$ is the normalized root mean square error, $`\text{PBIAS}`$ is the percent bias, $`R^{2}`$ is the coefficient of determination, $`\text{NSE}`$ is the Nash-Sutcliffe Efficiency, and $`\text{KGE}`$ is the Kling-Gupta efficiency.
 
 Using Equation A1.18 as the definition of estimated population error, the mean of the error is easily determined by the percent bias, according to,
 
-$PBIAS\  = \ 100\  \cdot \frac{\Sigma\ (P_{i} - {\widetilde{P}}_{i})}{\Sigma P_{i}}$ (Eq. A1.22),
+$`PBIAS\  = \ 100\  \cdot \frac{\Sigma\ (P_{i} - {\widetilde{P}}_{i})}{\Sigma P_{i}}`$ (Eq. A1.22),
 
-$\bar{e_{p}} = - \frac{PBIAS\  \cdot \ \bar{P}}{100}\ $ (Eq. A1.23).
+$`\bar{e_{p}} = - \frac{PBIAS\  \cdot \ \bar{P}}{100}`$ (Eq. A1.23).
 
-The mean known population served/PE ($\bar{P}$) was recalculated for this analysis. The variance of the error is defined by
+The mean known population served/PE ($`\bar{P}`$) was recalculated for this analysis. The variance of the error is defined by
 
-${\sigma^{2}}_{e_{P}} = \frac{\Sigma(e_{i} - \bar{e})^{2}}{N}$ (Eq. A1.24),
+$`{\sigma^{2}}_{e_{P}} = \frac{\Sigma(e_{i} - \bar{e})^{2}}{N}`$ (Eq. A1.24),
 
-where $N$ is the number of WWTPs with known population served/PE. Expansion of the additive quantities in Equation A1.24 yields
+where $`N`$ is the number of WWTPs with known population served/PE. Expansion of the additive quantities in Equation A1.24 yields
 
-${\sigma^{2}}_{e_{P}} = \frac{\Sigma{e_{i}}^{2} - 2e_{i}\bar{e} + {\bar{e}}^{2}}{N}$ (Eq. A1.25).
+$`{\sigma^{2}}_{e_{P}} = \frac{\Sigma{e_{i}}^{2} - 2e_{i}\bar{e} + {\bar{e}}^{2}}{N}`$ (Eq. A1.25).
 
 Separate integration of each term shows that the first term is the square of the root mean square error and the second and third terms combine, yielding,
 
-${\sigma^{2}}_{e_{P}} = RMSE^{2} - {\bar{e}}^{2}$ (Eq. A1.26),
+$`{\sigma^{2}}_{e_{P}} = RMSE^{2} - {\bar{e}}^{2}`$ (Eq. A1.26),
 
-where $RMSE = \ NRMSE \cdot \bar{P}$.
+where $`RMSE = \ NRMSE \cdot \bar{P}`$.
 
-A convergence study of the Monte Carlo simulation was performed where multiple Monte Carlo simulations were computed with varying sample sizes: 125, 250, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000. Figure A1.2 shows that the Monte Carlo simulation convergences around a sample size of $O(10^{4})$. The results of the largest sized Monte Carlo simulation are provided.
+A convergence study of the Monte Carlo simulation was performed where multiple Monte Carlo simulations were computed with varying sample sizes: 125, 250, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000. Figure A1.2 shows that the Monte Carlo simulation convergences around a sample size of $`O(10^{4})`$. The results of the largest sized Monte Carlo simulation are provided.
 
 <img src="figures/figure24.png" style="width:6.5in;height:2.36111in" />
 
-**Figure A1.2** The percent difference of the treatment, effluent, and CO2eq emissions between the largest Monte Carlo simulation and the other Monte Carlo simulations. Convergence occurs around a sample size of $O(10^{4})$.
+**Figure A1.2** The percent difference of the treatment, effluent, and CO2eq emissions between the largest Monte Carlo simulation and the other Monte Carlo simulations. Convergence occurs around a sample size of $`O(10^{4})`$.
 
 Confidence of reported emissions is determined by the methodology that was used to obtain inputs and how inputs are combined. As mentioned repeatedly, HydroWASTE has both reported and estimated population served values. As reported population served values are obtained from authoritative bodies, they are assigned a high confidence, whereas estimated populations served are given a medium confidence. Linear scaling degrades confidence as population served values are extended before 2022. These confidences reduce by one level for the years 2021 to 2019, then another for years prior to 2018 – i.e. reported population served goes from high to medium to low and estimated population served goes from medium to low to very low. HydroWASTE obtains technology levels from either authoritative sources or by estimation with regional economic development level. Hence, confidence in reported technology levels is considered high, whereas confidence in estimated technology levels is considered medium. A medium confidence is assigned to emissions factors and table quantities found in the IPCC. Finally, as flaring/recovery is not estimated in Equation 2, it is assigned a very low confidence.
 
@@ -891,15 +891,15 @@ As emissions estimates are derived from the combination of several values, the m
 
 Treatment of CH<sub>4</sub> emissions were modeled by,
 
-$Em_{I} = (\ T_{I} \cdot W_{I} \cdot COD_{I} - S) \cdot \text{EF}_{CH4} - R$, (Eq. A.1.26),
+$`Em_{I} = (\ T_{I} \cdot W_{I} \cdot COD_{I} - S) \cdot \text{EF}_{CH4} - R`$, (Eq. A.1.26),
 
-where $T_{I}$ is the tonnes of product $I$ produced in a given month, $W_{I}$ is the wastewater produced by the industrial process, $\text{CO}D_{I}$ is the chemical oxygen demand of the wastewater, $S$ is the organics removed from the wastewater in the form of sludge, $\text{EF}_{CH4}$ is the emission factor, and $R$ is methane emissions removed by flaring. By default, $R = 0$ for IPCC Tier 1 estimates. Similarly, nitrous oxide emissions were modeled by,
+where $`T_{I}`$ is the tonnes of product $`I`$ produced in a given month, $`W_{I}`$ is the wastewater produced by the industrial process, $`\text{CO}D_{I}`$ is the chemical oxygen demand of the wastewater, $`S`$ is the organics removed from the wastewater in the form of sludge, $`\text{EF}_{CH4}`$ is the emission factor, and $`R`$ is methane emissions removed by flaring. By default, $`R = 0`$ for IPCC Tier 1 estimates. Similarly, nitrous oxide emissions were modeled by,
 
-$Em_{I} = \ T_{I} \cdot W_{I} \cdot N_{I} \cdot \text{EF}_{N2O} \cdot \frac{44}{28}$, (Eq. A.1.27),
+$`Em_{I} = \ T_{I} \cdot W_{I} \cdot N_{I} \cdot \text{EF}_{N2O} \cdot \frac{44}{28}`$, (Eq. A.1.27),
 
-where $N_{I}$ is the per capita nitrogen content of wastewater for product $I$, $EF_{N2O}$ is the nitrous oxide emission factor, and $\frac{44}{28}$ is a nitrogen to nitrous oxide mass-balance factor. The emissions from the disposal of effluent wastewater are similar to those for domestic wastewater and are described in the Phase 5 methodology document.
+where $`N_{I}`$ is the per capita nitrogen content of wastewater for product $`I`$, $`EF_{N2O}`$ is the nitrous oxide emission factor, and $`\frac{44}{28}`$ is a nitrogen to nitrous oxide mass-balance factor. The emissions from the disposal of effluent wastewater are similar to those for domestic wastewater and are described in the Phase 5 methodology document.
 
-For all assets, it is assumed that aerobic treatment was used, which is IPCC’s Tier 1 default. In addition, it was assumed that advanced treatment was used to process and remove sludge. This is done in order to produce conservative estimates of emissions, as this metadata is not available to the same level as it is for domestic assets. The IPCC values for $W_{I}$, $\text{COD}_{I}$, and $N_{I}$ were used dependent on the industry.
+For all assets, it is assumed that aerobic treatment was used, which is IPCC’s Tier 1 default. In addition, it was assumed that advanced treatment was used to process and remove sludge. This is done in order to produce conservative estimates of emissions, as this metadata is not available to the same level as it is for domestic assets. The IPCC values for $`W_{I}`$, $`\text{COD}_{I}`$, and $`N_{I}`$ were used dependent on the industry.
 
 #### Appendix 2: Intelligent Management Strategies for Advanced Wastewater Treatment Systems
 
@@ -953,7 +953,7 @@ Wastewater emissions are provided at a monthly scale. Studies on seasonal variat
 
 A cubic spline of WorldPop annual mid-year population data is used to estimate month-to-month populations of each country. Mid-year population data is estimated assuming a geometric growth rate, expressed by,
 
-$P_{2024} = P_{2023} \cdot \frac{P_{2023}}{P_{2022}}$. Eq. A7.1
+$`P_{2024} = P_{2023} \cdot \frac{P_{2023}}{P_{2022}}`$. Eq. A7.1
 
 An example of this splining for Puerto Rico is shown in Figure A7.1.
 

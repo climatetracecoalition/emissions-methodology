@@ -132,7 +132,7 @@ This satellite stage is described in detail in section 2.2.4.
 
 Where emissions were reported in official government sources like the U.S. EPA, they were assumed to be more accurate than emissions estimated with the FOD pathway due to our lack of comprehensive activity data for many sites. Climate TRACE publishes monthly emissions estimates from 2015-2026, and many landfills either lacked reported emissions for some of the timeframe or the last reported values were dated before the starting year of Climate TRACE data, so in some cases it was desirable to project reported emissions estimates through time. Simple carry-forward and carry-backward methods were used to do so: the earliest reported value was repeated backwards in time to the landfill opening date, and also carried forward to the date of the second reported value, after which the second value was carried forward until the date of the third value, etc.
 
-Where landfill closure dates were available, site-specific exponential decay rates *k* were estimated with the method described in Wang et al. (2024). For sites with emissions reported after the reported closure date, we assumed exponential decay of the waste remaining at the time of closure and re-estimated a new decay rate $k$ by fitting an exponential decay model to the reported post-closure emissions using least-squares. This was justified by our assumption that reported emissions provide a more accurate representation of post-closure landfill behavior than decay rates estimated from waste characteristics and environmental parameters.
+Where landfill closure dates were available, site-specific exponential decay rates *k* were estimated with the method described in Wang et al. (2024). For sites with emissions reported after the reported closure date, we assumed exponential decay of the waste remaining at the time of closure and re-estimated a new decay rate $`k`$ by fitting an exponential decay model to the reported post-closure emissions using least-squares. This was justified by our assumption that reported emissions provide a more accurate representation of post-closure landfill behavior than decay rates estimated from waste characteristics and environmental parameters.
 
 **2.2.2 Predicting annual incoming waste from the area** **(FOD pathway)**
 
@@ -154,14 +154,14 @@ After running the area-to-incoming-waste model, all sites in the FOD pathway (i.
 
 |                                                                   |         |
 |-------------------------------------------------------------------|---------|
-| Let $S_{c}\left( i \right) = \ k_{c}\left( u \right)\Delta t_{u}$ | (Eq. 1) |
+| Let $`S_{c}\left( i \right) = \ k_{c}\left( u \right)\Delta t_{u}`$ | (Eq. 1) |
 
 The decay factor *D<sub>c</sub>*(*i*,*j*) represents the fraction of waste of component *c* disposed in month j that remains undecomposed, and contributes to methane generation in a later month *i* ≥ *j*:
 
-| $D_{c\left( i,j \right)} = \exp( - \left\lbrack S_{c}(i - 1) - S_{c}(j - 1) - 1/2k_{c}(j) \right\rbrack,\ i \geq j\ ,$                                                    | (Eq.2)  |
+| $`D_{c\left( i,j \right)} = \exp( - \left\lbrack S_{c}(i - 1) - S_{c}(j - 1) - 1/2k_{c}(j) \right\rbrack,\ i \geq j\ ,`$                                                    | (Eq.2)  |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| $Q_{c}\left( i \right) = \ \left\lbrack L_{0,c}w_{j,c}D_{c\left( i,j \right)} \right\rbrack\left( k_{c}\left( i \right)\Delta t_{i} \right)\text{MCF}\left( i \right)\ ,$ | (Eq. 3) |
-| $E(i) = {Q_{c}(i)\left\lbrack 1 - g(i)f(i) \right\rbrack\left\lbrack 1 - OX(i) \right\rbrack}_{}$                                                                         | (Eq. 4) |
+| $`Q_{c}\left( i \right) = \ \left\lbrack L_{0,c}w_{j,c}D_{c\left( i,j \right)} \right\rbrack\left( k_{c}\left( i \right)\Delta t_{i} \right)\text{MCF}\left( i \right)\ ,`$ | (Eq. 3) |
+| $`E(i) = {Q_{c}(i)\left\lbrack 1 - g(i)f(i) \right\rbrack\left\lbrack 1 - OX(i) \right\rbrack}`$                                                                         | (Eq. 4) |
 
 A tonne of waste cannot release more methane in a single year than it will ever produce over its lifetime. Summed over the waste components, that lifetime potential gives an upper bound of 0.1434 t CH<sub>4</sub> per tonne of waste, and the published site emission factor — annual methane divided by waste in place — is capped there. Where a site exceeded the ceiling, the emissions estimate was treated as the trustworthy quantity and the waste-in-place estimate as the under-counted one, so waste in place was inflated until the ceiling was satisfied and the emissions were held fixed. Affected sites therefore carry a larger reported activity and capacity factor, and are flagged as such in the published files.
 
@@ -175,7 +175,7 @@ Advances in air- and spaceborne hyperspectral sensors have enabled high-spatial-
 
 At every site with enough matched plume observations, we used a Bayesian scale factor estimation model to combine information from both 1) “bottom-up” reported/FOD-modeled emissions estimates, and 2) “top-down” satellite measurements, into a single predicted emissions time series for that landfill.
 
-Specifics of the scale factor fusion model are explained in Supplemental Information SI.3. The final fused emissions time series estimate is $\widehat{K}Q_{t}^{\text{base}}$, where $Q_{t}^{\text{base}}$ is the baseline emissions time series predicted by the FOD model and $\widehat{K}$ is a scale factor predicted with satellite data and the fusion model. Figure 5 displays the locations where the fusion method was and wasn’t applied.
+Specifics of the scale factor fusion model are explained in Supplemental Information SI.3. The final fused emissions time series estimate is $`\widehat{K}Q_{t}^{\text{base}}`$, where $`Q_{t}^{\text{base}}`$ is the baseline emissions time series predicted by the FOD model and $`\widehat{K}`$ is a scale factor predicted with satellite data and the fusion model. Figure 5 displays the locations where the fusion method was and wasn’t applied.
 
 <img src="figures/figure5.png" style="width:6.5in;height:3.01181in" />
 
@@ -384,19 +384,19 @@ Source datasets did not contain annual incoming waste values for all landfills, 
 
 We assume that the expected incoming waste for a landfill grows proportionally with area. To reflect this proportionality, the model is specified on the logarithmic scale: the logarithm of incoming waste is modeled as an income-group-specific intercept plus an income-group-specific slope multiplying the logarithm of area, with a site-level intercept drawn from a shared zero-mean normal distribution. Both the slopes and the intercepts are given normal priors, each centered on a shared population mean with a shared spread, so that income groups pool partially towards one another rather than being fitted independently. A slope of 1 corresponds to incoming waste growing in direct proportion to area, and the prior is centered there. The observational model uses a Student’s t likelihood on the log scale, which has heavier tails than a Gaussian distribution and is therefore less sensitive to outliers (Gelman & Hill, 2006; Lange et al., 1989).
 
-Let *A<sub>i\ </sub>*denote the area of a landfill where *i* is an index of all combinations of area and annual incoming waste values, *Y<sub>i</sub>*​ the observed annual incoming waste, *g<sub>i</sub>*<sub>​</sub> the World Bank income-group index, and *s<sub>i</sub>* the landfill index. Each landfill $\text{s\ }$can have multiple indices denoted by $i$ corresponding to different years.
+Let *A<sub>i\ </sub>*denote the area of a landfill where *i* is an index of all combinations of area and annual incoming waste values, *Y<sub>i</sub>*​ the observed annual incoming waste, *g<sub>i</sub>*<sub>​</sub> the World Bank income-group index, and *s<sub>i</sub>* the landfill index. Each landfill $`\text{s\ }`$can have multiple indices denoted by $`i`$ corresponding to different years.
 
-**Slopes and intercepts by income group.** Each income group $g = 1,\ \ldots,\ N_{\text{income}}$ has its own log-space slope $\kappa_{g}$ and intercept $\alpha_{g}$. Define the slope group-level priors as
+**Slopes and intercepts by income group.** Each income group $`g = 1,\ \ldots,\ N_{\text{income}}`$ has its own log-space slope $`\kappa_{g}`$ and intercept $`\alpha_{g}`$. Define the slope group-level priors as
 
 |                                                                                                                                                                |      |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| $\mu_{\kappa}\ \sim\ N\left( 1\ ,\ 1 \right),\ \ $$\sigma_{\kappa}\sim\ HN\left( 1 \right)\ ,$ $\kappa_{g}\sim N\left( \mu_{\kappa},\ \sigma_{\kappa} \right)$ | (S1) |
+| $`\mu_{\kappa}\ \sim\ N\left( 1\ ,\ 1 \right),`$ $`\sigma_{\kappa}\sim\ HN\left( 1 \right)\ ,`$ $`\kappa_{g}\sim N\left( \mu_{\kappa},\ \sigma_{\kappa} \right)`$ | (S1) |
 
 Compute an initial estimate ​*β*<sub>0</sub> as the median ratio of incoming waste to area in the training data. Define the intercept group-level priors as
 
 |                                                                                                                                                                                                 |      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| $\mu_{\alpha}\ \sim\ N\left( \log\ \beta_{0}\ ,\ 0.5 \right)\ ,$ ${\ \sigma}_{\alpha}\sim\ HN\left( 0.5 \right)\ ,$${\text{\ \ }\alpha}_{g}\sim N\left( \mu_{\alpha},\ \sigma_{\alpha} \right)$ | (S2) |
+| $`\mu_{\alpha}\ \sim\ N\left( \log\ \beta_{0}\ ,\ 0.5 \right)\ ,`$ $`{\ \sigma}_{\alpha}\sim\ HN\left( 0.5 \right)\ ,`$ $`{\text{\ \ }\alpha}_{g}\sim N\left( \mu_{\alpha},\ \sigma_{\alpha} \right)`$ | (S2) |
 
 The group-level priors allow each income group its own slope and intercept while pooling them towards a common mean, capturing differences in waste density between income groups without fitting each group in isolation.
 
@@ -404,7 +404,7 @@ The group-level priors allow each income group its own slope and intercept while
 
 |                                                                                                                                                    |      |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| $\alpha_{\text{site}\left\lbrack s \right\rbrack}\ \sim\ N\left( 0,\ \tau_{\text{site}} \right)$, $\tau_{\text{site}}\sim\ HN\left( 0.4 \right)\ $ | (S3) |
+| $`\alpha_{\text{site}\left\lbrack s \right\rbrack}\ \sim\ N\left( 0,\ \tau_{\text{site}} \right)`$, $`\tau_{\text{site}}\sim\ HN\left( 0.4 \right)`$ | (S3) |
 
 These terms are included for each site *s*. They preserve the boundary condition that zero area implies zero waste, because the multiplicative factors vanish when *A<sub>i</sub>* = 0.
 
@@ -412,19 +412,19 @@ These terms are included for each site *s*. They preserve the boundary condition
 
 |                                                                                                                                                                     |      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| $\log\ \mu_{i} = \alpha_{g}\  + \ \ \kappa_{g_{i}}\log\ \left( A_{i} + \ \epsilon \right) + \ \alpha_{\text{site}\left\lbrack s_{i} \right\rbrack}\ \text{\ \ \ },$ | (S4) |
+| $`\log\ \mu_{i} = \alpha_{g}\  + \ \ \kappa_{g_{i}}\log\ \left( A_{i} + \ \epsilon \right) + \ \alpha_{\text{site}\left\lbrack s_{i} \right\rbrack}\ \text{\ \ \ },`$ | (S4) |
 
 where ϵ = 10<sup>-12</sup> is a small constant to avoid taking the logarithm of zero. On the original scale, this becomes
 
 |                                                                                                                                                  |      |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| $\mu_{i} = \ {exp(\alpha}_{g_{i}})\ \left( A_{i} + \ \epsilon \right)^{\kappa_{g_{i}}}exp(\alpha_{\text{site}\left\lbrack s_{i} \right\rbrack})$ | (S5) |
+| $`\mu_{i} = \ {exp(\alpha}_{g_{i}})\ \left( A_{i} + \ \epsilon \right)^{\kappa_{g_{i}}}exp(\alpha_{\text{site}\left\lbrack s_{i} \right\rbrack})`$ | (S5) |
 
 **Likelihood.** Model the observations with a Student’s *t* distribution on the log scale:
 
 |                                                                                                                                                                                                                                                                                                                                       |      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| $\log\ Y_{i}\sim\ \ \mathsf{S}\mathsf{t}\mathsf{u}\mathsf{d}\mathsf{e}\mathsf{n}\mathsf{t}\mathsf{T}(\nu,\log\ \mu_{i},\ \sigma)$, $\ \nu\ \sim\mathsf{E}\mathsf{x}\mathsf{p}\mathsf{o}\mathsf{n}\mathsf{e}\mathsf{n}\mathsf{t}\mathsf{i}\mathsf{a}\mathsf{l}\left( \frac{1}{10} \right) + 2$, $\ \sigma\ \sim\ HN\left( 0.3 \right)$ | (S6) |
+| $`\log\ Y_{i}\sim\ \ \mathsf{S}\mathsf{t}\mathsf{u}\mathsf{d}\mathsf{e}\mathsf{n}\mathsf{t}\mathsf{T}(\nu,\log\ \mu_{i},\ \sigma)`$, $`\ \nu\ \sim\mathsf{E}\mathsf{x}\mathsf{p}\mathsf{o}\mathsf{n}\mathsf{e}\mathsf{n}\mathsf{t}\mathsf{i}\mathsf{a}\mathsf{l}\left( \frac{1}{10} \right) + 2`$, $`\ \sigma\ \sim\ HN\left( 0.3 \right)`$ | (S6) |
 
 The heavy-tailed Student’s *t* distribution reduces the influence of outliers.
 
@@ -439,15 +439,15 @@ The model is implemented in PyMC (Abril-Pla et al., 2023) and sampled with the N
 The following paragraphs explain the mathematical arrangement of the Bayesian scale factor fusion model.
 
 **Definition of the posterior model.**  
-Let $Q_{t}^{\text{base}}$ denote the baseline model emissions at month *t* from either the FOD or no-FOD pathway, and *y<sub>t</sub>* be the plume-derived emissions measurement at month *t*. We seek a multiplicative scale factor *K* such that the scaled emissions $KQ_{t}^{\text{base}}$ include information from both mechanistic “bottom-up” FOD modeling and also “top-down” satellite measurements (Gelman et al., 2013; Kennedy & O’Hagan, 2001; Poole & Raftery, 2000).
+Let $`Q_{t}^{\text{base}}`$ denote the baseline model emissions at month *t* from either the FOD or no-FOD pathway, and *y<sub>t</sub>* be the plume-derived emissions measurement at month *t*. We seek a multiplicative scale factor *K* such that the scaled emissions $`KQ_{t}^{\text{base}}`$ include information from both mechanistic “bottom-up” FOD modeling and also “top-down” satellite measurements (Gelman et al., 2013; Kennedy & O’Hagan, 2001; Poole & Raftery, 2000).
 
-The arrangement of the model is explained in the following paragraphs. Define the parameters$\Theta\  = (\log K\ ,\log s)\ ,$ where s &gt; 0 is the standard deviation, on the log scale, of the scatter between the scaled model and the measurements beyond each measurement's reported error.
+The arrangement of the model is explained in the following paragraphs. Define the parameters$`\Theta\  = (\log K\ ,\log s)\ ,`$ where s &gt; 0 is the standard deviation, on the log scale, of the scatter between the scaled model and the measurements beyond each measurement's reported error.
 
 **Baseline mean.** For each observation month *t,* the pre-satellite modeled baseline mean on the log scale is
 
 |                                            |      |
 |--------------------------------------------|------|
-| $\mu_{t} = \log\ (K\ Q_{t}^{\text{base}})$ | (S7) |
+| $`\mu_{t} = \log\ (K\ Q_{t}^{\text{base}})`$ | (S7) |
 
 We treat emissions as strictly positive. Modeling log emissions as Gaussian ensures positivity of the emissions and yields a lognormal distribution on the original scale.
 
@@ -455,7 +455,7 @@ We treat emissions as strictly positive. Modeling log emissions as Gaussian ensu
 
 |                                                                                                          |      |
 |----------------------------------------------------------------------------------------------------------|------|
-| $\log\ K\ \ \sim\ N\left( m_{0},s_{0}^{2} \right)\ ,$ $\ s\sim\ HN\left( \sigma_{\text{prior}} \right)$, | (S8) |
+| $`\log\ K\ \ \sim\ N\left( m_{0},s_{0}^{2} \right)\ ,`$ $`\ s\sim\ HN\left( \sigma_{\text{prior}} \right)`$, | (S8) |
 
 meaning the density of *s* is proportional to a normal density with mean zero and standard deviation *σ*<sub>prior</sub>, truncated to *s* &gt; 0. We use m₀ = 0, so that K = 1 (no rescaling) is the prior expectation, s₀ = log 2, and *σ*<sub>prior</sub> = 0.7.
 
@@ -463,55 +463,55 @@ meaning the density of *s* is proportional to a normal density with mean zero an
 
 |                                                |      |
 |------------------------------------------------|------|
-| $\log\ y_{t}\ \sim N(\mu_{t},\ s^{2} + v_{t})$ | (S9) |
+| $`\log\ y_{t}\ \sim N(\mu_{t},\ s^{2} + v_{t})`$ | (S9) |
 
 Here *v<sub>t</sub>* is the measurement variance on the log scale approximated by the delta method (van der Vaart, 1998),
 
 |                                                                                                                       |       |
 |-----------------------------------------------------------------------------------------------------------------------|-------|
-| $v_{t} = \mathsf{V}\mathsf{a}\mathsf{r}\left( \log\ y_{t}\  \right) \approx \left( \frac{SE_{t}}{y_{t}} \right)^{2},$ | (S10) |
+| $`v_{t} = \mathsf{V}\mathsf{a}\mathsf{r}\left( \log\ y_{t}\  \right) \approx \left( \frac{SE_{t}}{y_{t}} \right)^{2},`$ | (S10) |
 
 where SE*<sub>t</sub>* is the reported standard error of the plume measurement. The contribution of a detected observation to the negative log-likelihood is
 
 |                                                                                                                                                                           |       |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
-| $l_{\text{detect}}\left( \Theta \right) = \frac{1}{2}\frac{\left( \log\ y_{t}\  - \mu_{t} \right)^{2}}{s_{eff,\ t}^{2}} + \log\ s_{eff,t}\  + \frac{1}{2}\log\ 2\pi\ \ ,$ | (S11) |
+| $`l_{\text{detect}}\left( \Theta \right) = \frac{1}{2}\frac{\left( \log\ y_{t}\  - \mu_{t} \right)^{2}}{s_{eff,\ t}^{2}} + \log\ s_{eff,t}\  + \frac{1}{2}\log\ 2\pi\ \ ,`$ | (S11) |
 
-with $s_{eff,\ t}^{2} = s^{2} + v_{t}$.
+with $`s_{eff,\ t}^{2} = s^{2} + v_{t}`$.
 
 **Likelihood for non-detections**. When a satellite images a landfill but no methane plume is detected, we do not know that emissions were 0; we only know that emissions were below the detection limit *L*. We treat this as left-censored data from a log-normal distribution (Helsel, 2012). For a non-detection, the likelihood contribution is the log of the cumulative distribution function (CDF):
 
 |                                                                                  |       |
 |----------------------------------------------------------------------------------|-------|
-| $l_{non - detect}\left( \Theta \right) = \  - \log\ \Phi\left( c_{t} \right)\ ,$ | (S12) |
+| $`l_{non - detect}\left( \Theta \right) = \  - \log\ \Phi\left( c_{t} \right)\ ,`$ | (S12) |
 
 where
 
 |                                                            |       |
 |------------------------------------------------------------|-------|
-| $c_{t} = \ \frac{\log\ L_{t} - \ \mu_{t}\ }{s_{eff,t}}\ ,$ | (S13) |
+| $`c_{t} = \ \frac{\log\ L_{t} - \ \mu_{t}\ }{s_{eff,t}}\ ,`$ | (S13) |
 
 and Φ is the standard normal CDF (Amemiya, 1984).
 
 **Total negative log posterior.** Combining the priors and likelihood contributions across all observation months, the negative log posterior is:
 
-<table><tbody><tr class="odd"><td><p><span class="math inline">$\text{NLP}\left( \Theta \right) = \frac{1}{2}\frac{\left( \log\ K\  - m_{0} \right)^{2}}{s_{0}^{2}} + \log\ s_{0}\  + \frac{1}{2}\log\ 2\pi\  + \ \lbrack l_{\text{𝖽𝖾𝗍𝖾𝖼𝗍}}\left( \Theta \right)\rbrack$</span></p><blockquote><p><span class="math inline">$\ \  + \lbrack l_{\mathsf{n}\mathsf{o}\mathsf{n} - \mathsf{d}\mathsf{e}\mathsf{t}\mathsf{e}\mathsf{c}\mathsf{t}}\left( \Theta \right)\rbrack\ \ \  + \frac{1}{2}\left( \frac{s}{\sigma_{\text{prior}}} \right)^{2} - \log\text{s\ }$</span></p></blockquote></td><td>(S14)</td></tr></tbody></table>
+<table><tbody><tr class="odd"><td><p><span class="math inline">$`\text{NLP}\left( \Theta \right) = \frac{1}{2}\frac{\left( \log\ K\  - m_{0} \right)^{2}}{s_{0}^{2}} + \log\ s_{0}\  + \frac{1}{2}\log\ 2\pi\  + \ \lbrack l_{\text{𝖽𝖾𝗍𝖾𝖼𝗍}}\left( \Theta \right)\rbrack`$</span></p><blockquote><p><span class="math inline">$`\ \  + \lbrack l_{\mathsf{n}\mathsf{o}\mathsf{n} - \mathsf{d}\mathsf{e}\mathsf{t}\mathsf{e}\mathsf{c}\mathsf{t}}\left( \Theta \right)\rbrack\ \ \  + \frac{1}{2}\left( \frac{s}{\sigma_{\text{prior}}} \right)^{2} - \log\text{s\ }`$</span></p></blockquote></td><td>(S14)</td></tr></tbody></table>
 
 The final −log *s* term arises because the optimization is carried out over log *s* rather than *s*.
 
-**Maximum a posteriori estimation.** We obtain the maximum a posteriori (MAP) estimate $\widehat{\Theta} = \left( \log\ \widehat{K},\log\ \widehat{s}\text{\ \ } \right)$ by minimizing the negative log posterior (Eq. S14) with the L-BFGS-B algorithm, with log *K* bounded to \[−5, 5\] and log *s* to \[−5, 3\] (Nocedal & Wright, 2006). Let
+**Maximum a posteriori estimation.** We obtain the maximum a posteriori (MAP) estimate $`\widehat{\Theta} = \left( \log\ \widehat{K},\log\ \widehat{s}\text{\ \ } \right)`$ by minimizing the negative log posterior (Eq. S14) with the L-BFGS-B algorithm, with log *K* bounded to \[−5, 5\] and log *s* to \[−5, 3\] (Nocedal & Wright, 2006). Let
 
 |                                                                                                                                        |       |
 |----------------------------------------------------------------------------------------------------------------------------------------|-------|
-| $H = \frac{\partial^{2}\mathsf{N}\mathsf{L}\mathsf{P}(\Theta)}{\partial(\log\text{\ K})^{2}}$ evaluated at $\Theta = \widehat{\Theta}$ | (S15) |
+| $`H = \frac{\partial^{2}\mathsf{N}\mathsf{L}\mathsf{P}(\Theta)}{\partial(\log\text{\ K})^{2}}`$ evaluated at $`\Theta = \widehat{\Theta}`$ | (S15) |
 
-be the curvature of the negative log posterior with respect to log *K* at the MAP, holding log *s* at its MAP value. Under the Laplace (normal) approximation, the posterior of log *K* is approximately normal with standard deviation sd(log *K*) ≈ $1/$ (Bishop, 2006; Tierney & Kadane, 1986). This aligns with asymptotic likelihood theory, where the inverse observed information gives the variance (van der Vaart, 1998). Exponentiating the log-scale endpoints gives an approximate 95% interval for K:
+be the curvature of the negative log posterior with respect to log *K* at the MAP, holding log *s* at its MAP value. Under the Laplace (normal) approximation, the posterior of log *K* is approximately normal with standard deviation sd(log *K*) ≈ $`1/`$ (Bishop, 2006; Tierney & Kadane, 1986). This aligns with asymptotic likelihood theory, where the inverse observed information gives the variance (van der Vaart, 1998). Exponentiating the log-scale endpoints gives an approximate 95% interval for K:
 
 |                                                                                                                                                                                     |       |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
-| $\text{K\ }\epsilon\ \left\lbrack \widehat{K} \cdot \exp( - 1.96\ \mathsf{s}\mathsf{d}(\log\ K\ )),\ \widehat{K} \cdot \exp(1.96\ \mathsf{s}\mathsf{d}(\log\ K\ ))\  \right\rbrack$ | (S16) |
+| $`\text{K\ }\epsilon\ \left\lbrack \widehat{K} \cdot \exp( - 1.96\ \mathsf{s}\mathsf{d}(\log\ K\ )),\ \widehat{K} \cdot \exp(1.96\ \mathsf{s}\mathsf{d}(\log\ K\ ))\  \right\rbrack`$ | (S16) |
 
-The final scaled estimated emissions time series is then calculated with $\widehat{K}Q_{t}^{\text{base}}$.
+The final scaled estimated emissions time series is then calculated with $`\widehat{K}Q_{t}^{\text{base}}`$.
 
 #### References
 
