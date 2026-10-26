@@ -25,7 +25,7 @@ Folder and sector names changed between releases. Use this when following an old
 | `Asset ownership` | `asset-ownership` |
 | `Fossil fuel operations` | `fossil-fuel-operations` |
 | `Other and non-Climate TRACE Estimated Sectors` | `other-sectors` |
-| `Post Processing for Global Emissions and Metadata Completeness` | `post-processing` |
+| `Post Processing for Global Emissions and Metadata Completeness` | `spatial-disaggregation`, `temporal-disaggregation`, `completeness-metadata`, `emissions-reducing-solutions` |
 
 ## Documents that moved
 

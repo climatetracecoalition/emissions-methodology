@@ -17,7 +17,7 @@ Old URLs continue to resolve; that repository is archived read-only, not deleted
 | `2025/Asset Ownership/...` | [`2-Cross-Cutting/asset-ownership/`](../2-Cross-Cutting/asset-ownership/) |
 | `2025/Non Greenhouse Gases/...` | [`2-Cross-Cutting/non-greenhouse-gases/`](../2-Cross-Cutting/non-greenhouse-gases/) |
 | `2025/Other Sectors/...` | [`2-Cross-Cutting/other-sectors/`](../2-Cross-Cutting/other-sectors/) |
-| `2025/Post Processing for Global.../...` | [`2-Cross-Cutting/post-processing/`](../2-Cross-Cutting/post-processing/) |
+| `2025/Post Processing for Global.../...` | [`2-Cross-Cutting/`](../2-Cross-Cutting/): `spatial-disaggregation/`, `temporal-disaggregation/`, `completeness-metadata/`, `emissions-reducing-solutions/` |
 | `2025/CHANGELOG/`, `2026/CHANGELOG/` | [`Changelogs/`](../../Changelogs/) |
 | `2024/`, `2023/`, `2022/` | [`3-Archive/`](./) |
 
