@@ -19,6 +19,10 @@ state of these documents rather than a moving `main` branch.
 
 Changelogs for each release are in [`Changelogs/`](../Changelogs/).
 
+## AI Use Disclosure
+
+OpenAI’s ChatGPT and Anthropic’s Claude assisted with methodology documentation, including reviewing, editing, converting methodology documents to Markdown, and organizing the repository structure. All AI-assisted content was reviewed and validated by the authors and reviewers.
+
 ---
 
 [← Home](https://github.com/climatetracecoalition/emissions-methodology/tree/main) · [FAQ](https://climatetrace.org/faqs) · [Report an error](https://climatetrace.org/contact)
