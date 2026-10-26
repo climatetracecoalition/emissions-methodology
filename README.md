@@ -22,6 +22,9 @@
 | **[Changelogs](./Changelogs/)** | What changed in each data release<br>[Current Changelog in V5.X](./Changelogs/V5.X/) |
 | **[Publications-and-References](./Publications-and-References/)** | Publications, peer-reviewed articles, and mentions of Climate TRACE research and members |
 ---
+## AI Use Disclosure
+
+OpenAI’s ChatGPT and Anthropic’s Claude assisted with methodology documentation, including reviewing, editing, converting methodology documents to Markdown, and organizing the repository structure. All AI-assisted content was reviewed and validated by the authors and reviewers.
 
 ## **New to Climate TRACE? Start here:**
 
