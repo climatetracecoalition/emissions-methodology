@@ -19,6 +19,11 @@ _**<h6>Last updated: August 19, 2026</h6>**_
 ---
 
 ### Agriculture: Rice Emissions (Paddy Watch/Universiti Malaysia Terengganu)
+- Fatchurrachman, Rudiyanto, Ginting, F.I., Soh, N.C., Shah, R.M., Giap, S.G.E., Setiawan, B.I., Powell, V., Hsu, M., Schiller, S., Davitt, A., Setia, R. and Minasny, B., 2026.  
+  **SARice: A 10 m rice extent and cropping-frequency dataset for South Asia derived from Sentinel-1 and Sentinel-2 time series.**  
+  *Scientific Data*.  
+  https://doi.org/10.1038/s41597-026-08416-4
+
 - Ginting, F.I., Shah, R.M., Soh, N.C., Giap, S.G.E., Fiantis, D., Setiawan, B.I., Powell, V., Hsu, M., Schiller, S., Davitt, A. and Minasny, B., 2026.  
   **High-resolution mapping of rice cropping pattern, intensity, calendar, and ecosystem type across Southeast Asia.**  
   *Remote Sensing Applications: Society and Environment*, p.102143.  
