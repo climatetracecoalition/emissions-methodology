@@ -330,7 +330,7 @@ The authors would like to express their sincere gratitude to Ebun Ayandele from 
 
 The above usage is not warranted to be error free and does not imply the expression of any opinion whatsoever on the part of Climate TRACE Coalition and its partners concerning the legal status of any country, area or territory or of its authorities, or concerning the delimitation of its borders.
 
-> **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our [<span class="underline">terms of use</span>](https://climatetrace.org/terms) and the sector-specific [<span class="underline">methodology documentation</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025) before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
+> **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our [<span class="underline">terms of use</span>](https://climatetrace.org/terms) and the sector-specific [<span class="underline">methodology documentation</span>](https://github.com/climatetracecoalition/emissions-methodology/tree/main/Sector-Methodologies) before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
 #### Supplementary Information
 
