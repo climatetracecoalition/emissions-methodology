@@ -1,4 +1,6 @@
-**Agriculture sector: Crop Residue Retention- Direct and Indirect Nitrous Oxide Emissions**<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+
+### Agriculture sector: Crop Residue Retention- Direct and Indirect Nitrous Oxide Emissions
 
 **Prateek Sharma<sup>\*1</sup>, Rajvi Trivedi<sup>1</sup>, Adity Manuraj<sup>1</sup>, Mukta Sharma<sup>1</sup>, Neville Millar<sup>1</sup>, Sam Schiller<sup>2</sup>, Mike Hsu<sup>2</sup> and Bruno Basso<sup>\*1</sup>**
 
@@ -8,7 +10,7 @@
 
 *<sup>\*</sup>Corresponding Author: basso@msu.edu; sharm165@msu.edu*
 
-**1. Introduction**
+#### 1. Introduction
 
 Agricultural soils are a major anthropogenic source of nitrous oxide (N₂O), a long-lived and radiatively important greenhouse gas that also contributes to stratospheric ozone depletion (Ravishankara et al. 2009; Prather et al. 2012; IPCC 2021). Soil N₂O is produced primarily through microbial nitrification and denitrification, and emissions are strongly influenced by the availability of reactive nitrogen (N) in soil (Robertson and Groffman 2024). In addition to synthetic and organic fertilizers, crop residues returned to agricultural soils represent an important source of N because residue decomposition releases N that can subsequently undergo nitrification and denitrification. Crop-residue N is therefore explicitly included as a source of direct N₂O emissions from managed soils in the IPCC greenhouse-gas inventory framework (Hergoualc’h et al. 2019).
 
@@ -24,15 +26,15 @@ As a second component of the analysis, we evaluate how alternative crop-residue 
 
 The primary objective of this study is to provide a consistent, crop-specific and spatially explicit inventory of greenhouse-gas emissions associated with crop residues across global cropland. The resulting Climate TRACE dataset provides annual and monthly estimates of crop-residue production, residue-derived N₂O emissions, and associated management pathways at 5-arc-minute resolution for 2015–2026, covering 40 crop groups across more than 150 countries. A secondary objective is to quantify the N₂O emission-reduction potential of alternative residue-management practices—including residue removal, surface retention, shallow incorporation, and deep incorporation—and to evaluate the associated changes in SOC and CO₂ relative to baseline management. Together, these datasets provide a consistent framework for identifying major crop- and region-specific sources of residue-related emissions and for evaluating potential trade-offs between N₂O mitigation and soil carbon retention under alternative residue-management strategies.
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
-**2.1 Methodological overview and scope**
+#### 2.1 Methodological overview and scope
 
 We estimate direct and indirect N₂O emissions from crop residues retained on agricultural land globally for 2015–2026. The inventory covers 40 crop groups and produces annual estimates at 5-arc-minute resolutions, which are subsequently disaggregated to monthly time steps. Unlike the synthetic N fertilizer inventory, N-fixing crops are retained in the crop-residue analysis because residues from both N-fixing and non-N-fixing crops return nitrogen to the soil.
 
 The calculation follows a sequential workflow. Annual crop production and harvested areas are first harmonized spatially using SPAM 2020 as the common crop-distribution framework. Crop-specific aboveground residue production is then estimated from crop yield using yield-dependent residue functions where available and harvest-index relationships for the remaining crops. Residue production is partitioned according to spatially explicit residue-management fractions, and the retained residue is converted to dry matter before crop-specific nitrogen concentrations are applied. The resulting residue N returned to soil is used to estimate direct and indirect N₂O emissions following the IPCC Tier 1 framework. Annual emissions are subsequently distributed to monthly values using the temporal distribution of soil N₂O emissions from EDGAR. Detailed equations, crop-specific coefficients, and data harmonization procedures are provided in Supplementary Text S1–S5.
 
-**2.2 Crop production, harvested area, and spatial harmonization**
+#### 2.2 Crop production, harvested area, and spatial harmonization
 
 Annual crop production and harvested-area data were compiled at the country scale and harmonized with SPAM 2020 to generate spatially explicit crop activity data at 5-arc-minute resolution. SPAM 2020 was used to define the within-country spatial distribution of each crop, while annual national crop statistics constrained the corresponding country totals. This approach preserves the spatial pattern of crop production and harvested area represented by SPAM while maintaining consistency with annual national statistics.
 
@@ -40,7 +42,7 @@ For recent years in which finalized crop-production data were unavailable, proje
 
 All crop-activity layers were harmonized to the same 5-arc-minute spatial grid before residue production was calculated. This common grid provides the spatial basis for combining crop production, harvested area, residue-management information, crop-specific residue characteristics, and subsequent N₂O emission calculations.
 
-**2.3 Aboveground crop-residue production**
+#### 2.3 Aboveground crop-residue production
 
 Aboveground crop-residue production was estimated independently for each crop, grid cell, and year. Crop yield was first calculated from gridded crop production and harvested area. Residue production was then estimated using one of two approaches depending on crop type.
 
@@ -48,7 +50,7 @@ For barley, maize, rice, wheat, millet, sorghum, and other cereals, we used yiel
 
 The resulting residue yield was multiplied by the corresponding harvested area to obtain total aboveground residue production for each crop and grid cell. Root biomass was not included in this residue-production calculation. Full equations and crop-specific parameters are provided in Supplementary Text S2 and Supplementary Table S1.
 
-**2.4 Partitioning crop residue among management pathways**
+#### 2.4 Partitioning crop residue among management pathways
 
 Not all aboveground crop residue produced in a grid cell is returned to the soil. We therefore used the spatially explicit crop-residue management dataset of Smerald et al. (2023) to estimate the fraction of residue retained on agricultural land. The dataset distinguishes residue retained in the field from residue allocated to other management pathways, including open-field burning, livestock use, and other off-field uses.
 
@@ -58,7 +60,7 @@ Annual residue-management information was used through 2023. For 2024–2026, th
 
 Only the retained-residue pathway is considered in the N₂O calculations described in this methodology. Residue subjected to open-field burning is quantified separately in the Climate TRACE Crop Residue Burning Methodology and is excluded from the retained-residue N₂O calculation to avoid double counting. Residues allocated to livestock use or other off-field uses are likewise not treated as soil N inputs within this component of the inventory.
 
-**2.5 Dry-matter conversion and nitrogen returned to soil**
+#### 2.5 Dry-matter conversion and nitrogen returned to soil
 
 Retained aboveground crop residue was converted to a dry-matter basis before estimating the amount of residue N returned to the soil. Crop-specific dry-matter fractions were derived primarily from Table 11.1A (New), Chapter 11, Volume 4: Agriculture, Forestry and Other Land Use, of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. Table 11.1A provides default values for the dry-matter fraction of harvested product ($\text{DRY}$) for major crops and crop groups. Crop-specific IPCC values were used where available, while representative crop-group values or literature-based proxies were applied where a direct value was unavailable. The complete dry-matter parameterization and proxy assignments are provided in Supplementary Table S2.
 
@@ -66,7 +68,7 @@ Nitrogen contained in retained crop residues was then estimated by applying crop
 
 Where a direct crop-specific parameter was unavailable, an appropriate crop-group value was used as a proxy. The resulting residue-N estimates represent the amount of N returned to agricultural soils through retained aboveground crop residues and provide the activity data for the subsequent direct and indirect N₂O emission calculations. Detailed equations, parameter sources, and proxy assignments are provided in Supplementary Text S4 and Supplementary Tables S2 and S3.
 
-**2.6 Direct and indirect N₂O emission calculation**
+#### 2.6 Direct and indirect N₂O emission calculation
 
 Direct and indirect N₂O emissions from retained crop residues were estimated from the amount of residue N returned to soil using the Tier 1 methodology of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 4, Chapter 11, “N₂O Emissions from Managed Soils, and CO₂ Emissions from Lime and Urea Application.” Crop-residue N was treated as an organic N input to managed agricultural soils.
 
@@ -74,7 +76,7 @@ Direct N₂O emissions were calculated using the IPCC Tier 1 direct emission fac
 
 Direct and indirect emissions were calculated independently for each crop and 5-arc-minute grid cell and subsequently summed to obtain total residue-derived N₂O emissions. Emissions expressed as N₂O–N were converted to N₂O using the molecular-weight ratio of 44/28. Detailed equations, units, and emission-factor definitions are provided in Supplementary Text S5.
 
-### **2.7 Monthly disaggregation of annual N₂O emissions**
+#### 2.7 Monthly disaggregation of annual N₂O emissions
 
 Annual crop-residue-derived N₂O emissions were disaggregated to monthly estimates using the same temporal allocation framework applied in the Climate TRACE Synthetic N Fertilizer Methodology. Monthly N₂O emissions from the Emissions Database for Global Atmospheric Research (EDGAR) were used to characterize the intra-annual distribution of emissions. For each location and year, the 12 monthly EDGAR N₂O estimates were summed to obtain an annual total, and the contribution of each month to that annual total was calculated as a monthly fraction.
 
@@ -82,7 +84,7 @@ Because EDGAR and the Climate TRACE crop-residue inventory have different spatia
 
 This procedure preserves the annual Climate TRACE N₂O total for each grid cell while providing monthly estimates that reflect the temporal distribution represented by EDGAR. The EDGAR dataset, calculation of monthly fractions, spatial matching procedure, and normalization approach are described in detail in the Climate TRACE [<span class="underline">Synthetic N Fertilizer Methodology</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture), Section 2.2.4, and are therefore not repeated here.
 
-**2.8 Final crop-residue N and N₂O emission dataset**
+#### 2.8 Final crop-residue N and N₂O emission dataset
 
 The final Climate TRACE crop-residue dataset provides annual and monthly, spatially explicit estimates of crop-residue N returned to agricultural soils, and associated N₂O emissions for global cropland from 2015 to 2026. The dataset covers 40 harmonized crop groups across more than 150 countries and is available at both 5-arc-minute gridded resolution and country scale.
 
@@ -92,8 +94,7 @@ The emissions component provides crop-specific direct, indirect, and total N₂O
 
 The resulting data product therefore includes, for 2015–2026: (1) residue N returned to soil, (2) direct N₂O emissions, (3) indirect N₂O emissions from leaching and runoff, and (4) total residue-derived N₂O emissions. These outputs are provided consistently across 40 crop groups, 5-arc-minute grid cells, countries, and annual and monthly reporting periods.
 
-**3. Emission Reduction Solutions (ERS)**
-=========================================
+#### 3. Emission Reduction Solutions (ERS)
 
 Here we outline the rationale and approach we used to investigate and quantify the potential of crop residue management options to mitigate N<sub>2</sub>O emissions and enhance SOC stocks. The ERS strategies are outlined in Table 1. The Climate TRACE emissions reduction roadmap is located at: [<span class="underline">https://climatetrace.org/reduce/countries/all/Global</span>](https://climatetrace.org/reduce/countries/all/Global).
 
@@ -107,7 +108,7 @@ For this reason, the crop-residue ERS analysis was conducted separately using th
 
 The general SALUS configuration, including the global cropland domain, weather and soil inputs, model initialization, crop parameterization, SOC accounting, and other common model inputs, is described in detail in the Climate TRACE Net Soil Organic Carbon Change methodology. Those common components are not repeated here. The present section focuses on the residue-management scenarios that differ from the Net SOC methodology.
 
-**3.1 Derivation of ERS estimates**
+#### 3.1 Derivation of ERS estimates
 
 Annual SOC stock change from SALUS was converted to an equivalent atmospheric CO₂ flux using the molecular mass ratio of CO₂ to C. The sign was reversed so that increasing SOC represents atmospheric CO₂ removal and declining SOC represents a positive CO₂ emission:
 
@@ -149,7 +150,7 @@ For each component and grid cell, the percentage difference from moldboard incor
 
 Using the absolute denominator preserves a consistent sign interpretation for the small number of grid cells where the moldboard-plow scenario produced negative emissions. Negative percentage values therefore indicate lower emissions than moldboard incorporation, whereas positive values indicate higher emissions. Grid cells with moldboard values extremely close to zero were excluded to prevent unstable percentage changes; this affected 32 cells for SOC-derived CO₂, 56 for N₂O, and 16 for total CO₂e.
 
-**3.2 Incorporating ERS into the model**
+#### 3.2 Incorporating ERS into the model
 
 Four residue-management scenarios were evaluated using SALUS: surface retention under no-till, shallow incorporation, deep incorporation, and partial residue removal (Table 1). Crop residue was supplied to SALUS as an explicit organic input containing both carbon (C) and nitrogen (N), consistent with the residue-input framework described in the Climate TRACE Net Soil Organic Carbon Change methodology. The quantity of residue supplied to the scenario analysis was first determined using the existing crop-residue management fraction described in Sections 2.4 and 2.5. Consequently, the residue pool used in the SALUS simulations represents the crop residue that would otherwise remain on the field after application of the existing residue-management fraction.
 
@@ -174,13 +175,13 @@ This design allows differences among simulations to be attributed specifically t
 
 Note: Percentages refer to the residue pool remaining after application of the existing spatial residue-management fraction, not to total aboveground crop residue production.
 
-**4. Results and Discussion**
+#### 4. Results and Discussion
 
-**4.1 N₂O emissions from retained crop residue**
+#### 4.1 N₂O emissions from retained crop residue
 
 This section presents direct and indirect N₂O emissions associated with crop residues retained on agricultural land for 2015–2026 using IPCC Tier 1 methodology. Estimates for 2015–2024 are based on FAOSTAT crop-production and harvested-area statistics, whereas estimates for 2025 and 2026 are based on projected crop activity. Accordingly, national and crop-level distributions are described primarily for 2024, the most recent year based on FAOSTAT crop statistics, and projected changes are presented separately. Emissions are reported as the combined direct and indirect N₂O total and expressed as CO₂ equivalents using a 100-year global warming potential of 273. Depending on year, the inventory includes 157–159 countries.
 
-**4.1.1 Global emissions between 2015 and 2026**
+#### 4.1.1 Global emissions between 2015 and 2026
 
 Global N₂O emissions from retained crop residue increased from 99.1 Mt CO₂e yr⁻¹ in 2015 to 114.4 Mt CO₂e yr⁻¹ in 2024, corresponding to an absolute increase of 15.3 Mt CO₂e yr⁻¹, or 15.5% (Table 2; Figure 2A). Expressed as N₂O mass, emissions increased from 0.363 to 0.419 Mt N₂O yr⁻¹ over the same period. The corresponding compound annual growth rate was 1.6%. Given that our post-harvest crop residues inputs are a sub-set of the total crop residues applied to cropland annually, the magnitude of emissions compares well with the limited prior global estimates; Mosier et al. (1998) estimated 0.4 Mt of N<sub>2</sub>O–N annually from crop residues in 1989, corresponding to 0.63 Mt N₂O yr⁻¹ with an EF of 1.0 %, and for 2020, Olesen et al. (2023) reported emissions derived from FAOSTAT data of 1.13 Mt N₂O.
 
@@ -205,7 +206,7 @@ For the projected period, global emissions increased to 121.6 Mt CO₂e yr⁻¹ 
 | 2025     | 445.3             | 121.56             | +7.17                | +6.3           |
 | 2026     | 427.3             | 116.66             | −4.90                | −4.0           |
 
-**4.1.2 Country-scale distribution and changes**
+#### 4.1.2 Country-scale distribution and changes
 
 National emissions from retained crop residue were concentrated in a relatively small number of countries. In 2024, the USA was the largest contributor, with 17.99 Mt CO₂e yr⁻¹ (15.7% of the global total), followed by China at 16.48 Mt CO₂e yr⁻¹ (14.4%) and Russia at 11.29 Mt CO₂e yr⁻¹ (9.9%) (Table 3; Figure 2B). Together, these three countries accounted for 40.0% of global emissions. The five largest contributors accounted for 48.5%, the ten largest for 66.8%, and the twenty largest for 82.2% of the global total. In contrast, 91 countries each contributed less than 0.1 Mt CO₂e yr⁻¹ and collectively accounted for only 2.0% of global emissions.
 
@@ -224,7 +225,7 @@ share (%)</strong></th><th><strong>Emission Change<br />
 
 **Figure 2.** Historical and projected N₂O emissions from crop residue retained on agricultural land and their national and continental composition. (A) Global annual emissions, 2015–2026; filled symbols denote FAOSTAT-based years (2015–2024), and open symbols and shading denote projected years (2025–2026). (B) The ten largest national contributors in 2024; values in parentheses are shares of the global total. (C) Annual emissions by continent, 2015–2026; hatched bars and shading denote projected years (2025–2026). Russia and Cyprus are included in Europe, and Türkiye, Kazakhstan and the South Caucasus countries in Asia. (D) The five largest projected national increases and the five largest projected decreases between 2024 and 2026, ranked by absolute change; values in parentheses give the percentage change. Emissions are the combined direct and indirect total, expressed as CO₂e using GWP₁₀₀ = 273.
 
-**4.1.3 Individual crop contributions**
+#### 4.1.3 Individual crop contributions
 
 Emissions from retained crop residue were concentrated in a relatively small number of crop groups. In 2024, sugar beet was the largest crop-specific source, contributing 21.17 Mt CO₂e yr⁻¹ (18.5% of the global total), followed closely by maize at 20.89 Mt CO₂e yr⁻¹ (18.3%). Wheat, rice, soybean, and sunflower contributed 15.73, 13.17, 10.90, and 8.46 Mt CO₂e yr⁻¹, respectively (Table 4; Figure 3A). Together, the three largest crops accounted for 50.5% of global emissions, the five largest for 71.6%, and the ten largest for 88.7%. When aggregated into broader crop groups (Table S4), cereals were the dominant source in 2024, contributing 54.5 Mt CO₂e yr⁻¹ (47.6% of the global total), followed by oil crops at 27.3 Mt CO₂e yr⁻¹ (23.8%), sugar crops at 21.3 Mt CO₂e yr⁻¹ (18.6%), and roots and tubers at 6.9 Mt CO₂e yr⁻¹ (6.1%). Pulses, fruits and vegetables, and the combined fibres, beverages, and other-crops category together contributed the remaining 3.9%. Soybean and groundnut were included in the oil-crop category for this aggregation (Figure 3B).
 
@@ -243,7 +244,7 @@ share (%)</strong></th><th><strong>Emission Change<br />
 
 **Figure 3** Crop contributions to N₂O emissions from retained crop residue. (A) The twelve largest crop contributors in 2024; values in parentheses are shares of the global total. (B) Emissions by crop group, 2015–2026; hatched bars and shading denote projected years (2025–2026). Soybean and groundnut are included in oil crops. (C) Crops with the largest absolute changes between 2015 and 2024 (solid bars; labels give the percentage change relative to 2015), and the corresponding projected changes between 2024 and 2026 (hatched bars). Colours denote crop groups. Emissions are the combined direct and indirect total, expressed as CO₂e using GWP₁₀₀ = 273.
 
-**4.1.4 Crop–country distribution of emissions**
+#### 4.1.4 Crop–country distribution of emissions
 
 The leading national contributors differed substantially among crops, reflecting the geographic concentration of crop production and retained-residue N inputs (Table 5). In 2024, global maize-residue emissions were dominated by the USA (33.3%) and China (25.7%). Soybean emissions were even more geographically concentrated, with the USA (44.5%), Brazil (22.6%), and Argentina (16.4%) together contributing 83.5% of the global total. Oil-palm emissions were dominated by Indonesia (65.8%) and Malaysia (21.0%), while sunflower emissions were concentrated primarily in Russia (39.0%) and Ukraine (23.1%).
 
@@ -266,7 +267,7 @@ These crop-specific geographic patterns also explain much of the national compos
 | Potatoes (2.5)        | China 21.3%     | Ukraine 10.1%   | USA 9.8%        | Russia 7.0%    | Germany 6.3%   |
 | Oil palm (2.3)        | Indonesia 65.8% | Malaysia 21.0%  | Thailand 4.1%   | Nigeria 2.4%   | Ghana 1.1%     |
 
-**4.1.5 Continental distribution**
+#### 4.1.5 Continental distribution
 
 For regional comparison, country-level emissions were aggregated into six continental groups: Africa, Asia, Europe, North America, South America, and Oceania. The country assignments used for each continental group are provided in Supplementary Table S5. Europe and Asia were the largest continental contributors to N₂O emissions from retained crop residue throughout the study period (Table 6; Figure 2C). Asia was the largest source in 2015, contributing 33.0 Mt CO₂e yr⁻¹ (33.3% of the global total), whereas Europe became the largest contributor in 2024 at 37.2 Mt CO₂e yr⁻¹ (32.5%). In 2024, Asia contributed 35.7 Mt CO₂e yr⁻¹ (31.2%), followed by North America at 21.3 Mt CO₂e yr⁻¹ (18.6%), South America at 10.5 Mt CO₂e yr⁻¹ (9.2%), Africa at 7.1 Mt CO₂e yr⁻¹ (6.2%), and Oceania at 2.6 Mt CO₂e yr⁻¹ (2.3%). Europe showed the largest absolute increase between 2015 and 2024, rising by 6.50 Mt CO₂e yr⁻¹ (+21.2%). Approximately half of this increase was associated with Russia; when Russia was excluded, emissions from the remainder of Europe increased by 3.00 Mt CO₂e yr⁻¹ (+13.1%). South America and Africa also showed substantial increases of 36.0% and 48.0%, respectively, increasing their combined contribution to the global total from 12.7% in 2015 to 15.4% in 2024. In contrast, North American emissions changed little (+0.3%), resulting in a decline in its global share from 21.5% to 18.6%. Projected changes from 2024 to 2026 were relatively modest compared with the historical changes. Africa showed the largest proportional increase (+6.6%), followed by Oceania (+5.7%), while Europe, South America, and Asia were also projected to increase. North America was the only continent projected to decline, by 1.2%. These regional totals describe the distribution of aggregate emissions and should not be interpreted as differences in emission intensity per unit of cropland or harvested area.
 
@@ -279,13 +280,13 @@ share (%)</strong></th><th><strong>Change<br />
 share (%)</strong></th><th><strong>Change<br />
 2024–2026 (%)</strong></th></tr></thead><tbody><tr class="odd"><td>Europe</td><td>30.64</td><td>37.15</td><td>32.5</td><td>+6.50</td><td>+21.2</td><td>33.0</td><td>+3.6</td></tr><tr class="even"><td>Asia</td><td>32.97</td><td>35.68</td><td>31.2</td><td>+2.71</td><td>+8.2</td><td>30.9</td><td>+1.1</td></tr><tr class="odd"><td>North America</td><td>21.26</td><td>21.32</td><td>18.6</td><td>+0.06</td><td>+0.3</td><td>18.1</td><td>−1.2</td></tr><tr class="even"><td>South America</td><td>7.73</td><td>10.52</td><td>9.2</td><td>+2.78</td><td>+36.0</td><td>9.2</td><td>+2.0</td></tr><tr class="odd"><td>Africa</td><td>4.81</td><td>7.11</td><td>6.2</td><td>+2.31</td><td>+48.0</td><td>6.5</td><td>+6.6</td></tr><tr class="even"><td>Oceania</td><td>1.66</td><td>2.61</td><td>2.3</td><td>+0.95</td><td>+57.2</td><td>2.4</td><td>+5.7</td></tr></tbody></table>
 
-**4.2 Emission Reduction Solutions for crop-residue management using SALUS**
+#### 4.2 Emission Reduction Solutions for crop-residue management using SALUS
 
 While appropriate for constructing a globally consistent emissions inventory, the Tier 1 N<sub>2</sub>O EF approach does not explicitly simulate how changes in residue placement and removal, tillage intensity, and residue incorporation depth alter N₂O emissions or SOC stock change through time. For this reason, the crop-residue ERS analysis was conducted separately using the process-based Systems Approach to Land Use Sustainability (SALUS) model. This provides a mechanistically based comparison of alternative residue-management scenarios (practices).
 
-#### **4.2.1 Spatial differences among residue-management scenarios**
+#### 4.2.1 Spatial differences among residue-management scenarios
 
-#### 
+####
 
 The residue-management practices with the lowest modeled emissions varied spatially and differed among SOC-derived CO₂, N₂O, and their combined (CO₂e) total (Figure 4). For total CO₂e, surface retention of residue under no-till was the lowest-emission practice across 45.9% of the area, while shallow (10 cm) incorporation of residue was lowest across 43.5%. Moldboard plow incorporation of residue (25 cm) and residue removal (70%) were lowest across only 1.6% and 1.3% of the area, respectively, while 7.7% of the area was classified as tied. For SOC-derived CO₂, surface retention and shallow incorporation again dominated, accounting for 45.5% and 43.5% of the area considered, respectively.
 
@@ -299,7 +300,7 @@ The practice that had the lowest SOC-derived CO₂ emissions did not always have
 
 **Figure 4** Spatial distribution of the lowest-emission crop-residue management practice across global cropland. The residue-management practice with the lowest 2016–2025 mean emissions was identified independently for (a) SOC-derived CO₂, (b) N₂O emissions expressed as CO₂ equivalents, and (c) total CO₂e, calculated as the sum of SOC-derived CO₂ and N₂O CO₂e. The practices are surface retention under no-till, shallow incorporation to approximately 10 cm using a chisel plow, deep incorporation to approximately 25 cm using a moldboard plow, and 70% residue removal with the remaining 30% retained on the soil surface under no-till. Colors identify the scenario with the minimum signed mean emission at each grid cell; gray indicates numerical ties and uncolored areas indicate locations without common valid data across all scenarios and years. The map identifies the lowest modeled scenario among the four counterfactual treatments and does not indicate the magnitude of the difference among scenarios or comparison with the independent Climate TRACE IPCC Tier 1 inventory.
 
-#### **4.2.2 Temporal consistency relative to moldboard incorporation**
+#### 4.2.2 Temporal consistency relative to moldboard incorporation
 
 The relative differences among residue-management scenarios were persistent over 2016–2025 (Figure 5). For every year and for each emission component, surface retention, shallow incorporation, and residue removal remained below the corresponding moldboard-plow reference.
 
@@ -313,7 +314,7 @@ The annual normalized ranges also showed that these relative differences were su
 
 **Figure 5** Temporal variation in modeled emissions under alternative crop-residue management practices relative to deep residue incorporation using moldboard-plow. Annual global emissions for surface retention under no-till, shallow incorporation to approximately 10 cm, and 70% residue removal were normalized to the corresponding annual value under moldboard-plow incorporation to approximately 25 cm, which was assigned a value of 1.0 in each year. Results are shown separately for SOC-derived CO₂, N₂O emissions expressed as CO₂ equivalents, and total CO₂e for 2016–2025. Each box summarizes the ten annual normalized ratios; boxes indicate the interquartile range, white lines indicate medians, whiskers span the full annual range, and points represent individual years. Values below 1 indicate lower modeled emissions than the moldboard-plow reference. Moldboard incorporation is used here only as a common reference for comparing the four SALUS management scenarios and does not represent the baseline of the Climate TRACE IPCC Tier 1 crop-residue inventory.
 
-#### **4.2.3 Influence of residue C:N ratio**
+#### 4.2.3 Influence of residue C:N ratio
 
 The relative response to residue management varied with residue C:N ratio (Figure 6). Low-C:N residues (&lt;30) represented 3.63% of the area-weighted analysis domain, while medium-C:N residues (30–&lt;60) and high-C:N residues (≥60) accounted for 47.72% and 48.66%, respectively.
 
@@ -327,7 +328,7 @@ Most of the mapped area remained below the moldboard-plow reference across all t
 
 **Figure 6** Effect of residue C:N ratio on the relative response of modeled emissions to crop-residue management. Percentage changes in 2016–2025 mean annual grid-cell emissions are shown for surface retention under no-till, shallow incorporation to approximately 10 cm, and 70% residue removal relative to moldboard-plow incorporation to approximately 25 cm. Results are presented separately for (a) SOC-derived CO₂, (b) N₂O emissions expressed as CO₂ equivalents, and (c) total CO₂e, and stratified by mean residue C:N ratio as low (&lt;30), medium (30–&lt;60), and high (≥60). Boxes show cosine-of-latitude-weighted interquartile ranges, white lines indicate weighted medians, and whiskers represent weighted 5th–95th percentiles. Negative percentage values indicate lower modeled emissions than moldboard-plow references, whereas positive values indicate higher emissions.
 
-#### **4.2.4 Overall ERS response**
+#### 4.2.4 Overall ERS response
 
 Across the spatial, temporal, and C:N-stratified comparisons, surface retention under no-till and shallow incorporation consistently produced the lowest relative greenhouse-gas outcomes among the four SALUS management scenarios. Surface retention showed the largest relative reductions for low- and medium-C:N residues, whereas shallow incorporation had a small advantage for high-C:N residues. Residue removal also reduced emissions relative to moldboard incorporation, but the magnitude of the reduction was consistently smaller than for the two full-retention strategies.
 
@@ -335,7 +336,7 @@ The results also show that no single residue-management practice minimized both 
 
 The comparison is restricted to modeled field-level SOC-derived CO₂ and N₂O responses under the four SALUS scenarios. It does not include machinery emissions, transport or subsequent use of removed residue, displaced products, or other off-field effects. In addition, moldboard incorporation is used only as a common reference for relative comparison among the SALUS scenarios and should not be interpreted as the baseline of the Climate TRACE IPCC Tier 1 crop-residue inventory.
 
-**5. Conclusion**
+#### 5. Conclusion
 
 This study provides a globally consistent assessment of N₂O emissions associated with crop residues retained on agricultural land and evaluates how alternative residue-management practices can modify both N₂O emissions and SOC-related CO₂ fluxes. Global residue-derived N₂O emissions increased from 99.1 Mt CO₂e yr⁻¹ in 2015 to 114.4 Mt CO₂e yr⁻¹ in 2024, although the increase was not uniform through time. Emissions were concentrated in a relatively small number of countries and crops, with the USA, China, and Russia among the largest national contributors and sugar beet, maize, wheat, rice, soybean, and sunflower dominating crop-specific totals. Cereals remained the largest crop group, while oil crops showed a particularly strong increase over the study period.
 
@@ -347,8 +348,7 @@ Taken together, the inventory and ERS analyses provide complementary information
 
 Overall, the results demonstrate that crop-residue management is not only a question of how much residue remains on the field, but also how and where that residue is placed in the soil system. Incorporating residue-management practices and residue quality into global emissions assessments can therefore improve identification of context-specific mitigation opportunities while preserving the trade-offs between SOC retention and N₂O emissions that are otherwise obscured by fixed-factor approaches.
 
-**6. Metadata Information**
-===========================
+#### 6. Metadata Information
 
 Direct and indirect N₂O emissions from retained crop residue are provided on the Climate TRACE website at country and asset (gridded) resolution. The dataset covers crop residue left on agricultural land after harvest and excludes emissions from open burning of crop residue, which are reported separately (Table 7). Emissions are reported at monthly and annual resolution and expressed using IPCC AR6 global warming potentials. Confidence and uncertainty definitions for each reported data attribute are given in Table 8.
 
@@ -391,15 +391,15 @@ Direct and indirect N₂O emissions from retained crop residue are provided on t
 
 -   The borders between India, Pakistan and China have been assigned to these countries based on GADM codes Z01 to Z09.
 
--   
+-
 
 The above usage is not warranted to be error free and does not imply the expression of any opinion whatsoever on the part of Climate TRACE Coalition and its partners concerning the legal status of any country, area or territory or of its authorities, or concerning the delimitation of its borders.
 
 **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us.</span>](mailto:coalition@climatetrace.org)
 
-**7. Supplementary information**
+#### 7. Supplementary information
 
-**Supplementary Text S1. Crop activity data and spatial harmonization**
+#### Supplementary Text S1. Crop activity data and spatial harmonization
 
 Annual crop-specific production and harvested-area data were assembled for 2015–2026 and spatially harmonized using SPAM 2020 as the common 5-arc-minute crop-distribution framework. For each crop and year, the national production and harvested-area totals were distributed spatially while preserving the within-country crop pattern represented by SPAM.
 
@@ -407,7 +407,7 @@ Where annual observed crop statistics were available, these data were used direc
 
 All crop layers were aligned to the same geographic grid and spatial extent before residue calculations were performed. The resulting annual crop-production and harvested-area arrays formed the basis for estimating crop yield and aboveground residue production.
 
-**Supplementary Text S2. Calculation of aboveground crop-residue production**
+#### Supplementary Text S2. Calculation of aboveground crop-residue production
 
 **S2.1 Crop yield**
 
@@ -481,7 +481,7 @@ where $M_{res,cro,i,j,y}$is total aboveground crop-residue production within the
 | Sunflower                                    | Harvest index               | HI = 0.27            |
 | Other crop groups without a crop-specific HI | Harvest index               | HI = 0.40            |
 
-**Supplementary Text S3. Spatial allocation of crop-residue management**
+#### Supplementary Text S3. Spatial allocation of crop-residue management
 
 **S3.1 Residue-management fractions**
 
@@ -505,7 +505,7 @@ An important limitation is that the residue-management fractions reported by Sme
 
 Residues not retained on agricultural land were not included as N inputs to soil in this component of the inventory. Open-field burning emissions are estimated independently in the Climate TRACE Crop Residue Burning Methodology. Separating these pathways prevents residue burned or removed from the field from also being counted as residue N returned to agricultural soils.
 
-**Supplementary Text S4. Dry-matter conversion and nitrogen returned to soil**
+#### Supplementary Text S4. Dry-matter conversion and nitrogen returned to soil
 
 Retained aboveground crop residue was converted to a dry-matter basis before the amount of residue N returned to the soil was estimated. For each crop, grid cell, and year, dry retained residue was calculated as:
 
@@ -648,11 +648,13 @@ Total residue-derived N₂O–N emissions were calculated as the sum of direct a
 
 Under the Tier 1 factors used here, this can be expressed as:
 
+**Table S4** Assignment of the 40 crops to crop groups used for crop-group aggregation. Crops are listed alphabetically within each group. Soybean and groundnut are included in oil crops.
+
 |     |                                                                                        |        |
 |-----|----------------------------------------------------------------------------------------|--------|
 |     | $E_{total,N2O - N,cro,i,j,y} = N_{res,cro,i,j,y} \times \left( 0.01 + 0.00264 \right)$ | \(19\) |
 
-**Table S4** Assignment of the 40 crops to crop groups used for crop-group aggregation. Crops are listed alphabetically within each group. Soybean and groundnut are included in oil crops.
+**Table S5** Assignment of countries to continents used for continental aggregation. The 159 countries with emission estimates are listed alphabetically within each continent, with ISO 3166-1 alpha-3 codes in parentheses. Transcontinental countries were assigned to a single continent: Russia and Cyprus to Europe, and Türkiye, Kazakhstan, Armenia, Azerbaijan and Georgia to Asia.
 
 | **Crop group**              | **Number of crops** | **Crops**                                                                                |
 |-----------------------------|---------------------|------------------------------------------------------------------------------------------|
@@ -664,8 +666,6 @@ Under the Tier 1 factors used here, this can be expressed as:
 | Fruits and vegetables       | 5                   | Banana, Plantain, Temperate fruits, Tropical fruits, Vegetables                          |
 | Fibres, beverages and other | 7                   | Cocoa, Coffee, Cotton, Other fibres, Rest of crops, Tea, Tobacco                         |
 
-**Table S5** Assignment of countries to continents used for continental aggregation. The 159 countries with emission estimates are listed alphabetically within each continent, with ISO 3166-1 alpha-3 codes in parentheses. Transcontinental countries were assigned to a single continent: Russia and Cyprus to Europe, and Türkiye, Kazakhstan, Armenia, Azerbaijan and Georgia to Asia.
-
 | **Continent** | **Countries**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Africa        | Algeria (DZA), Angola (AGO), Benin (BEN), Botswana (BWA), Burkina Faso (BFA), Burundi (BDI), Cameroon (CMR), Central African Republic (CAF), Chad (TCD), Congo (COG), Côte d'Ivoire (CIV), DR Congo (COD), Egypt (EGY), Eritrea (ERI), Eswatini (SWZ), Ethiopia (ETH), Gabon (GAB), Gambia (GMB), Ghana (GHA), Guinea (GIN), Guinea-Bissau (GNB), Kenya (KEN), Lesotho (LSO), Liberia (LBR), Libya (LBY), Madagascar (MDG), Malawi (MWI), Mali (MLI), Mauritania (MRT), Morocco (MAR), Mozambique (MOZ), Namibia (NAM), Niger (NER), Nigeria (NGA), Rwanda (RWA), Senegal (SEN), Sierra Leone (SLE), Somalia (SOM), South Africa (ZAF), South Sudan (SSD), Sudan (SDN), Tanzania (TZA), Togo (TGO), Tunisia (TUN), Uganda (UGA), Zambia (ZMB), Zimbabwe (ZWE) |
@@ -675,7 +675,7 @@ Under the Tier 1 factors used here, this can be expressed as:
 | Oceania       | Australia (AUS), New Caledonia (NCL), New Zealand (NZL), Papua New Guinea (PNG), Solomon Islands (SLB), Vanuatu (VUT)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | South America | Argentina (ARG), Bolivia (BOL), Brazil (BRA), Chile (CHL), Colombia (COL), Ecuador (ECU), Guyana (GUY), Paraguay (PRY), Peru (PER), Uruguay (URY), Venezuela (VEN)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-**References**
+#### References
 
 1.  Abalos, D., Recous, S., Butterbach-Bahl, K., De Notaris, C., Rittl, T.F., Topp, C.F., Petersen, S.O., Hansen, S., Bleken, M.A., Rees, R.M. and Olesen, J.E., 2022a. A review and meta-analysis of mitigation measures for nitrous oxide emissions from crop residues. *Science of the Total Environment*, *828*, p.154388. DOI: 10.1016/j.scitotenv.2022.154388.
 

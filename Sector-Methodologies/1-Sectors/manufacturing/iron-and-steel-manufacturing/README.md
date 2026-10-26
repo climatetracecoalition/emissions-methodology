@@ -1,11 +1,10 @@
-**Manufacturing and Industrial Processes sector: Iron & Steel Manufacturing Emissions**
+### Manufacturing and Industrial Processes sector: Iron & Steel Manufacturing Emissions
 
-***Verity Crane and George Ebri***
+**Verity Crane and George Ebri**
 
 *Authors affiliated with TransitionZero and Climate TRACE*
 
-**1. Introduction**
-===================
+#### 1. Introduction
 
 Steel production is a major industrial source of energy demand and carbon emissions, accounting for roughly 8% of global energy use and 7% of energy-sector CO₂ emissions (IEA, 2020). These emissions stem largely from the sector’s reliance on coal, particularly in primary steelmaking. Global demand for steel is expected to grow beyond two billion tonnes per year by 2030 (GEM, 2025), with production concentrated in a few countries: China (over 50%), India (7.4%), Japan (4.6%), and the U.S. (4.3%) (WSA, 2024).
 
@@ -17,8 +16,7 @@ This work addresses both temporal and spatial gaps in traditional steel producti
 
 Given its contribution to global emissions, steel production requires targeted emissions reduction solutions (ERS). In this study, ERS are applied to assets based on the production technology in use, including blast furnace–basic oxygen furnace (BF/BOF), electric arc furnace (EAF), and direct reduced iron–EAF (DRI–EAF) routes. The solutions include strategies such as maximizing scrap use in EAF facilities, substituting natural gas with green hydrogen in DRI–EAF plants, integrating carbon capture and storage (CCUS) into BF/BOF operations, and phasing out or replacing high-emission blast furnaces with hydrogen-based DRI–EAF routes. Each strategy represents a pathway to reduce emissions, either by lowering direct process emissions, substituting carbon-intensive inputs, or phasing out high-emission technologies. Together, these strategies reflect both incremental and transformative options for emission reduction in the steel sector, capturing the diversity of regional conditions and technological readiness levels.
 
-**2. Materials and Methods**
-============================
+#### 2. Materials and Methods
 
 This section provides a high-level overview of the datasets and associated pipelines used to derive emission estimates for a steel plant.
 
@@ -30,35 +28,36 @@ Given the lack of source-level emission data available publicly, a standardized 
 
 **Figure 1** Flowchart of the methodology to calculate plant-level emissions for global steel assets.
 
-**2.1. Materials**
-------------------
+#### 2.1. Materials
 
-### **2.1.1. Steel inventory dataset**
+#### 2.1.1. Steel inventory dataset
 
 GEM provides facility-level information such as location, owner, capacity, age, product type and technology type via the GIST that includes every iron and steel plant currently operating with a capacity of more than 500 thousand tonnes. The GIST also includes all plants meeting that capacity threshold that have been proposed or under construction since 2017 and retired or mothballed since 2020. In total there are 1,205 unique steel facilities with an annual production capacity of 3.5 billion tonnes across 89 countries. We manually validated the position of all the plants using geolocation data from Google Maps API (Google Maps, 2025) and OpenStreetMap (OpenStreetMap, 2025).
 
 [Figure](#bookmark=id.ihv636) 2 shows how steel mills are distributed globally with high concentration of sources in China. The map also highlights countries with little to no steel production, mainly concentrated in Sub-Saharan Africa, Latin America and Southeast Asia.
 
-<img src="figures/figure2.png" style="width:6.67188in;height:3.93164in" />**  
+<img src="figures/figure2.png" style="width:6.67188in;height:3.93164in" />
+
+**  
 Figure 2** Global map showing operating steel plants as of 2025. Satellite monitored facilities (shown in dark blue) and other facilities (shown in orange). The circle size represents plant production capacity, with reference scales shown at the top of the figure for 1,000 and 20,000 thousand tonnes per annum (ktpa).
 
-### **2.1.2. Remote sensing datasets**
+#### 2.1.2. Remote sensing datasets
 
 Satellite-derived production estimates make use of multispectral imagery from two different collections:
 
 -   The European Space Agency (ESA) Copernicus Sentinel mission with a resolution of 20 m and a combined 5-day equator revisit with two satellites:
 
-    -   Sentinel 2A: with imagery available since 2015 (ESA, 2025).
+-   Sentinel 2A: with imagery available since 2015 (ESA, 2025).
 
-    -   Sentinel 2B: with imagery available since 2017 (ESA, 2025).
+-   Sentinel 2B: with imagery available since 2017 (ESA, 2025).
 
 > Both Sentinel-2 satellites have a MultiSpectral Instrument (MSI) that can measure wavelengths from \~443 to \~2190 nm (blue to shortwave infrared (SWIR)) at 10-60 m spatial resolutions.
 
 -   The U.S. Geological Survey (USGS) and National Aeronautics and Space Administration (NASA) Landsat program with a resolution of 30 m and a combined 8-day revisit:
 
-    -   Landsat-8: with imagery available since 2013 (NASA and USGS, 2025a).
+-   Landsat-8: with imagery available since 2013 (NASA and USGS, 2025a).
 
-    -   Landsat-9: with historical images available from 2021 (NASA and USGS, 2025b).
+-   Landsat-9: with historical images available from 2021 (NASA and USGS, 2025b).
 
 > Both Landsat-8 and Landsat-9 have an Operational Land Imager (OLI) that can measure wavelengths from \~435 to \~1384 nm (blue to thermal infrared) at 15-100 m spatial resolutions.
 
@@ -70,21 +69,25 @@ All satellite datasets were sourced and processed using Google Earth Engine (Goo
 
 Where B\# refers to the band number for the specific satellite. This ratio was used to identify thermal anomalies within the temperature range of industrial processes, while eliminating most of the noise from reflectance interference. Pixel values between the Sentinel 2A/B MSI and Landsat OLI were harmonized using NASA’s band pass adjustments allowing the two image collections to be used as if they were a single collection (NASA, 2018). The harmonized dataset ensured higher revisit for time-series surface applications. Partial images (coverage of the steel facility’s boundaries less than 80%) and cloudy images (more than 20% clouds) were excluded. [Figure](#bookmark=id.1hmsyys) 3 shows an example of TAI with identified hotspots at a steel plant.
 
-**Figure 3** Left**:** Identified hotspots at POSCO’s Gwangyang steel plant, South Korea, during different quarters in 2023. Right: Identified sub-assets within the facility based on thermal anomalies. Sources: modified Copernicus and USGS data, ESRI base map.<img src="figures/figure3.png" style="width:3.33611in;height:1.91966in" /><img src="figures/figure4.png" style="width:3.40923in;height:1.939in" />
+<img src="figures/figure3.png" style="width:3.33611in;height:1.91966in" />
 
-### **2.1.3. Production datasets**
+<img src="figures/figure4.png" style="width:3.40923in;height:1.939in" />
+
+**Figure 3** Left**:** Identified hotspots at POSCO’s Gwangyang steel plant, South Korea, during different quarters in 2023. Right: Identified sub-assets within the facility based on thermal anomalies. Sources: modified Copernicus and USGS data, ESRI base map.
+
+#### 2.1.3. Production datasets
 
 National-level steel production data used in our models is primarily sourced from the World Steel Association (WSA), based on monthly reporting.
 
-### **2.1.4. Emissions factors dataset**
+#### 2.1.4. Emissions factors dataset
 
 The direct emissions factors and electricity consumption for different steel production routes were sourced from multiple references, including the World Steel Association (WSA, 2024b), the IPCC (2006), the Mission Possible Partnership’s Steel Transition Strategy (MPP, 2024), and the International Energy Agency (IEA, 2020), providing global average values specific to each production route.
 
-**2.1.5. Percentage of scrap used in EAF**
+#### 2.1.5. Percentage of scrap used in EAF
 
 The composition of the feedstock mix used in EAF production was provided by GEM, including the percentages of scrap, DRI, sponge iron, pig iron and other sources of iron. This data was used to adjust the emission factor for the EAF production route.
 
-**2.1.6 Emissions Reduction Solutions**
+#### 2.1.6 Emissions Reduction Solutions
 
 Each ERS is applied to steelmaking assets according to their technology, feedstock mix, and operational context. Each ERS has a strategy that was analysed in this study:
 
@@ -104,16 +107,16 @@ Each ERS is applied to steelmaking assets according to their technology, feedsto
 
 *Note: Only rank 1 strategies are provided for assets on the Climate TRACE website and additional strategies will be made available in future releases.*
 
-**2.2. Methods**
-----------------
+#### 2.2. Methods
 
-### **2.2.1. Production methodology**
+#### 2.2.1. Production methodology
 
 Two approaches were used to estimate source level production. As a priority, satellite-derived production estimates were used whenever a facility released enough heat to be captured by a satellite’s sensor that can measure short-wave infrared (SWIR) and near infrared (NIR) wavelengths (Zhou *et al.*, 2018; Marchese *et al.*, 2019; Liangrocapart, Khetkeeree and Petchthaweetham, 2020). This is the case for BF-BOF facilities which have several units that function at temperatures higher than 1,200<sup>o</sup>C. These hotspots include signals from BFs, coke ovens, sinter plants, pellet plants and BOFs.
 
 Our methodology scours satellite imagery for heat signatures from the operating steel plants. Each steel production unit is outlined with a hand-drawn polygon as shown in Figure 4. Using the GIST as a foundation, we built a global dataset of blast furnaces, coke oven batteries, sinters and pellet plants with the help of our satellite-based hotspot methodology. The current BF/BOF dataset spans 40 countries and contains the location, shape, crude steel capacity and operation start year for 334 steel plants, along with the location, shape, and type for their associated sub-assets. More details on the methodology and dataset are available on the TransitionZero website ([<span class="underline">https://www.transitionzero.org/insights/steel-data-explainer</span>](https://www.transitionzero.org/insights/steel-data-explainer)).
 
-<img src="figures/figure5.png" style="width:5.44331in;height:3.06771in" />  
+<img src="figures/figure5.png" style="width:5.44331in;height:3.06771in" />
+
 **Figure 4** Zooming in on Hyundai Steel Integrated Steel Works (Dangjin, South Korea), with identified sub-asset polygons.
 
 The intensity of the hotspot above each identified unit is calibrated against the monthly country-level data source from WSA (2024) to estimate plant activity in each month.
@@ -122,7 +125,7 @@ For BF/BOF plants without usable hotspot signals, we estimate production using a
 
 For all the other production routes (e.g. EAFs) for which hotspots are not currently measured, we applied a regional average utilization rate based on historical national production and aggregated capacity. These combined techniques, applied to operating plants sourced from the GIST database, yield a total of 951 facilities monitored monthly for production and CO₂ emissions.
 
-### **2.2.2. Emissions methodology**
+#### 2.2.2. Emissions methodology
 
 Facility-level direct and indirect emissions were estimated through application of emissions factors accounting for the technology type and input materials, where known (IPCC, 2006; WSA 2024b; IEA, 2020). In particular, for direct emissions, the following emission factors were considered depending on the production route for the crude steel (Table 1).
 
@@ -148,12 +151,11 @@ For plants with multiple steel production routes, the emissions factor was calcu
 
 Direct emissions can be divided into process emissions (IPPU) and emissions from fuel combustion used to provide energy to the process. To estimate process emissions, the guidance provided by the IPCC (2006) was followed, which specifies direct emission factors for different steel technologies. This information was complemented with factors from Fan et al. (2021) to estimate the IPPU emissions of the DRI–EAF route. The factors used to calculate IPPU can be found in Table 1.
 
-**2.3. Coverage**
------------------
+#### 2.3. Coverage
 
 Based on 2024 data, asset-level emissions estimates accounted for 83% (3.0 Gt-CO2) of the sector emissions. While satellite-monitored steel facilities represent around 41% of total sources, these plants contributed to about 87% of the total asset level emissions.
 
-**2.4. Incorporating ERS**
+#### 2.4. Incorporating ERS
 
 To integrate emissions reduction solutions (ERS) into facility-level emissions estimates, we applied a consistent method across all strategies. In general, the method involves identifying the set of assets eligible for a given ERS. For each ERS, eligible assets were identified based on their technology and feedstock mix using the Global Energy Monitor’s Global Iron and Steel Tracker (GEM, 2025). Their facility’s emissions were then adjusted according to either literature-based emission factors or assumed percentage reductions, and then recalculated under the ERS scenario.
 
@@ -161,28 +163,27 @@ The following subsections describe each ERS strategy.
 
 **-** **Strategy 0 – Continue Current Operation (Scrap-EAF at 100%):** This strategy was applied to facilities already operating Electric Arc Furnaces (EAF) with 100% scrap as feedstock. Because these assets represent the most decarbonized pathway currently available in terms of direct process emissions, no additional reductions were applied to their emissions factors (IEA, 2020). Their remaining carbon footprint is largely linked to indirect emissions from electricity use, which were not explicitly adjusted here but are recognized as dependent on the decarbonization of the grid. In this way, Strategy 0 serves as a baseline condition rather than an additional mitigation pathway.
 
-### **- Strategy 1 – Increase Scrap Share to 100% in EAF:** This strategy was applied to EAF facilities that operate with less than 100% scrap feedstock (GEM, 2025). In these cases, we assumed that the share of scrap could be increased to full utilization, thereby reducing emissions associated with virgin iron inputs such as direct reduced iron (DRI) or pig iron. Emission reductions were applied proportionally, with the greatest reductions occurring in facilities with low baseline scrap use, where reductions could reach up to 80% (IPCC, 2006; IEA, 2020). Facilities that already use high scrap shares saw correspondingly smaller reductions. This approach reflects both theoretical assumptions and widespread real-world practice, as scrap-EAF is a mature and widely adopted technology.
+- **Strategy 1 – Increase Scrap Share to 100% in EAF:** This strategy was applied to EAF facilities that operate with less than 100% scrap feedstock (GEM, 2025). In these cases, we assumed that the share of scrap could be increased to full utilization, thereby reducing emissions associated with virgin iron inputs such as direct reduced iron (DRI) or pig iron. Emission reductions were applied proportionally, with the greatest reductions occurring in facilities with low baseline scrap use, where reductions could reach up to 80% (IPCC, 2006; IEA, 2020). Facilities that already use high scrap shares saw correspondingly smaller reductions. This approach reflects both theoretical assumptions and widespread real-world practice, as scrap-EAF is a mature and widely adopted technology.
 
-### **- Strategy 2 – Hydrogen-based DRI–EAF (100% green hydrogen)**
+- **Strategy 2 – Hydrogen-based DRI–EAF (100% green hydrogen)**
 
 -   ### **Hydrogen-based DRI–EAF (100% green hydrogen):** This strategy was applied to DRI–EAF facilities that currently rely on natural gas as a reductant. We replaced their existing emissions factors with hydrogen-based benchmarks, which estimates an emissions factor of 0.27 tCO₂ per tonne of steel when hydrogen is produced entirely from renewable electricity (Millner, 2021; Trinca 2023). The difference between current natural gas-based emissions and this hydrogen benchmark was applied as the emissions reduction for eligible facilities.
 
 -   **Replace BF with H2-DRI/EAF\_100%\_green:** This strategy represents a long-term solution to decarbonize BF/BOF steel production. Existing BF/BOF units are replaced with hydrogen-based DRI–EAF facilities powered entirely by renewable hydrogen, achieving near-zero direct emissions (Millner, 2021; Trinca, 2023). While adoption is limited by green hydrogen availability, cost, and high capital requirements, rising demand for low-carbon steel and falling renewable energy costs could accelerate deployment. The resulting reductions represent the full decarbonization potential for primary steel production at the affected facilities, achieving emission cuts of up to 85–100% of Scope 1 emissions relative to conventional BF/BOF production.
 
-### **- Strategy 3 – Carbon Capture, Utilization, and Storage (CCUS):** This strategy was applied to blast furnace–basic oxygen furnace (BF/BOF) assets that are unlikely to be shut down in the near term (see Strategy 4). For these facilities, we assumed that carbon capture technologies could be retrofitted to reduce process emissions. Based on reported capture rates from demonstration projects, we applied an average 59% reduction to direct emissions from eligible facilities (MPP, 2024). This reflects typical capture efficiencies in the range of 50–60% found in literature.
+- **Strategy 3 – Carbon Capture, Utilization, and Storage (CCUS):** This strategy was applied to blast furnace–basic oxygen furnace (BF/BOF) assets that are unlikely to be shut down in the near term (see Strategy 4). For these facilities, we assumed that carbon capture technologies could be retrofitted to reduce process emissions. Based on reported capture rates from demonstration projects, we applied an average 59% reduction to direct emissions from eligible facilities (MPP, 2024). This reflects typical capture efficiencies in the range of 50–60% found in literature.
 
-### **- Strategy 4 – Shutdown of BF/BOF Plants with Low Production:** This strategy was applied to BF/BOF facilities characterized by relatively low production volumes, specifically those in China producing less than 4 million tonnes of steel per year. For these assets, emissions were set to zero to reflect complete retirement of production. The underlying rationale is that concentrating steel output in fewer, larger facilities may facilitate the application of CCUS or accelerate the shift to alternative technologies. While in reality, production would likely be reallocated to other routes such as scrap-EAF or hydrogen-based DRI, this framework focuses only on the elimination of direct emissions from the retired plants. The method is therefore a theoretical assumption, but it is supported by real-world examples of enforced closures of inefficient and small BF/BOF facilities in China. For instance, in 2023, China retired 25 million tonnes per annum (mtpa) of blast furnace capacity—slightly more than the 20 mtpa of new capacity that came online—highlighting the net reduction in older, less efficient units (GEM, 2024).
+- **Strategy 4 – Shutdown of BF/BOF Plants with Low Production:** This strategy was applied to BF/BOF facilities characterized by relatively low production volumes, specifically those in China producing less than 4 million tonnes of steel per year. For these assets, emissions were set to zero to reflect complete retirement of production. The underlying rationale is that concentrating steel output in fewer, larger facilities may facilitate the application of CCUS or accelerate the shift to alternative technologies. While in reality, production would likely be reallocated to other routes such as scrap-EAF or hydrogen-based DRI, this framework focuses only on the elimination of direct emissions from the retired plants. The method is therefore a theoretical assumption, but it is supported by real-world examples of enforced closures of inefficient and small BF/BOF facilities in China. For instance, in 2023, China retired 25 million tonnes per annum (mtpa) of blast furnace capacity—slightly more than the 20 mtpa of new capacity that came online—highlighting the net reduction in older, less efficient units (GEM, 2024).
 
-### **- Strategy 5 – Shift Production from BF/BOF to EAF:** This strategy was applied to facilities operating both BF/BOF and EAF technologies. We assumed that these assets could migrate BF/BOF production to the EAF route, to existing units where these are below full capacity, or to new units. To capture the full emissions reduction potential, we have assumed 100% scrap feedstock. Depending on the current share of EAF versus BF/BOF production at each facility, the resulting emission reductions varied, with a maximum reduction of up to 95% of Scope 1 emissions compared to full BF/BOF operation (IEA, 2020; IPCC, 2006). This method reflects real-world practice in some facilities in China that have shifted production towards EAF under policy incentives.
+- **Strategy 5 – Shift Production from BF/BOF to EAF:** This strategy was applied to facilities operating both BF/BOF and EAF technologies. We assumed that these assets could migrate BF/BOF production to the EAF route, to existing units where these are below full capacity, or to new units. To capture the full emissions reduction potential, we have assumed 100% scrap feedstock. Depending on the current share of EAF versus BF/BOF production at each facility, the resulting emission reductions varied, with a maximum reduction of up to 95% of Scope 1 emissions compared to full BF/BOF operation (IEA, 2020; IPCC, 2006). This method reflects real-world practice in some facilities in China that have shifted production towards EAF under policy incentives.
 
-**2.5 Verifying modeled ERS emissions estimates**
+#### 2.5 Verifying modeled ERS emissions estimates
 
 Verification of the modeled ERS varies depending on the strategy and the type of change assumed. For scrap-based strategies (Strategies 0–1), implementation could in principle be monitored through company reports, trade statistics, and updates to facility feedstock data in the Global Iron and Steel Tracker (GEM, 2025), although these sources may not provide real-time confirmation. Hydrogen-based DRI (Strategy 2 and 6) and CCUS retrofits (Strategy 3) are not directly observable from satellite data but can be tracked through company disclosures, pilot project announcements, and regulatory filings. In contrast, strategies involving the shutdown of low-production BF/BOF assets (Strategy 4) can be verified more robustly through satellite-based activity monitoring, which allows for direct observation of whether a facility has ceased operation. Finally, the prioritization of EAF production over BF/BOF at dual-technology sites (Strategy 5) could also be partially confirmed through satellite activity data, as a sustained reduction in BF/BOF operations would be observable.
 
-**3. Results and analysis**
-===========================
+#### 3. Results and analysis
 
-**3.1 TAI and Emissions**
+#### 3.1 TAI and Emissions
 
 Figure 5 illustrates the relationship between satellite-derived Thermal Anomaly Index (TAI) and the corresponding emissions for a steel plant in France. The data demonstrates that, for most months, estimated emissions (based on production levels) align closely with fluctuations in TAI. For example, both peak just after July 2021, followed by a decrease after January 2022.
 
@@ -217,37 +218,35 @@ Tables 2 and 3 show the biggest producers and emitters in the steel industry at 
 
 <table><thead><tr class="header"><th>Plant name</th><th>Country</th><th>Plant capacity (Mt)</th><th><p>CO<sub>2</sub> emissions</p><p>(MtCO<sub>2</sub>)</p></th></tr></thead><tbody><tr class="odd"><td>POSCO Gwangyang steel plant</td><td>S Korea</td><td>23</td><td>33.6</td></tr><tr class="even"><td>Angang Steel Co Ltd.</td><td>China</td><td>20.6</td><td>30.3</td></tr><tr class="odd"><td>Wuhan Iron and Steel Co., Ltd.</td><td>China</td><td>15.9</td><td>26.1</td></tr><tr class="even"><td>Ma'anshan Iron &amp; Steel Co Ltd</td><td>China</td><td>17.3</td><td>25.6</td></tr><tr class="odd"><td>Inner Mongolia BaoTou Steel Union Co Ltd</td><td>China</td><td>15.6</td><td>25.5</td></tr><tr class="even"><td>Baoshan Iron and Steel Co Ltd H</td><td>China</td><td>19.2</td><td>24.3</td></tr><tr class="odd"><td>POSCO Pohang steel plant</td><td>S Korea</td><td>17.6</td><td>23.5</td></tr><tr class="even"><td>Zhangjiagang Hongchang Steel Co Ltd</td><td>China</td><td>17.6</td><td>22.2</td></tr><tr class="odd"><td>Shougang Jingtang United Iron &amp; Steel Co Ltd</td><td>China</td><td>13.7</td><td>21.3</td></tr><tr class="even"><td>NLMK Lipetsk steel plant</td><td>Russia</td><td>14.4</td><td>20.7</td></tr></tbody></table>
 
-**3.2 ERS Emissions Estimates**
+#### 3.2 ERS Emissions Estimates
 
-### Applying ERS strategies to the main steel production routes demonstrates the significant mitigation potential of technological and operational shifts. Figure 7 presents the change in emission factors before and after applying each ERS to their specific BF/BOF, DRI-EAF, or EAF production route.
+Applying ERS strategies to the main steel production routes demonstrates the significant mitigation potential of technological and operational shifts. Figure 7 presents the change in emission factors before and after applying each ERS to their specific BF/BOF, DRI-EAF, or EAF production route.
 
-### For the BF/BOF route in Figure 7, which is the most carbon-intensive, average emission factors were reduced from 2.43 tCO₂/t steel to \~1.0 tCO₂/t steel under Strategy 3, primarily through the application of carbon capture and storage (CCS). While not fully eliminating emissions, this reduction highlights the role of CCS as an important transitional option for existing blast furnace infrastructure. Plants that have both BF/BOF and EAF facilities were assigned Strategy 5, allowing migration of production to the EAF route where possible, considering limitations in scrap supply and the fact that these plants might have already started transitioning to cleaner steel production. The long-term solution for fully decarbonizing the BF/BOF route is Strategy 6, which replaces conventional BF/BOF production with hydrogen-based DRI–EAF facilities powered entirely by green hydrogen. This is why CCS is proposed here as a primary strategy to provide significant near-term emission reductions while enabling the gradual transition toward the ultimate hydrogen-based pathway.
+For the BF/BOF route in Figure 7, which is the most carbon-intensive, average emission factors were reduced from 2.43 tCO₂/t steel to \~1.0 tCO₂/t steel under Strategy 3, primarily through the application of carbon capture and storage (CCS). While not fully eliminating emissions, this reduction highlights the role of CCS as an important transitional option for existing blast furnace infrastructure. Plants that have both BF/BOF and EAF facilities were assigned Strategy 5, allowing migration of production to the EAF route where possible, considering limitations in scrap supply and the fact that these plants might have already started transitioning to cleaner steel production. The long-term solution for fully decarbonizing the BF/BOF route is Strategy 6, which replaces conventional BF/BOF production with hydrogen-based DRI–EAF facilities powered entirely by green hydrogen. This is why CCS is proposed here as a primary strategy to provide significant near-term emission reductions while enabling the gradual transition toward the ultimate hydrogen-based pathway.
 
-### For DRI–EAF facilities, shifting from natural gas to green hydrogen (Strategy 2) lowers average emission factors from 0.80 tCO₂/t steel to 0.26 tCO₂/t steel. This represents one of the deepest potential cuts in the sector and illustrates how hydrogen-based pathways could provide a near-zero emissions solution if renewable hydrogen is available at scale.
+For DRI–EAF facilities, shifting from natural gas to green hydrogen (Strategy 2) lowers average emission factors from 0.80 tCO₂/t steel to 0.26 tCO₂/t steel. This represents one of the deepest potential cuts in the sector and illustrates how hydrogen-based pathways could provide a near-zero emissions solution if renewable hydrogen is available at scale.
 
-### For EAF facilities, which already operate at comparatively low direct emissions, further reductions can be achieved by increasing the scrap share to 100% (Strategy 1). In such cases, emissions linked to the production of virgin iron inputs are eliminated, making EAF the lowest-emission pathway currently available.
+For EAF facilities, which already operate at comparatively low direct emissions, further reductions can be achieved by increasing the scrap share to 100% (Strategy 1). In such cases, emissions linked to the production of virgin iron inputs are eliminated, making EAF the lowest-emission pathway currently available.
 
-### Overall, these results show that while scrap-based EAF offers the lowest direct emissions, scaling global decarbonization will also require CCS retrofits for legacy BF/BOF plants and the deployment of hydrogen-based DRI–EAF.
+Overall, these results show that while scrap-based EAF offers the lowest direct emissions, scaling global decarbonization will also require CCS retrofits for legacy BF/BOF plants and the deployment of hydrogen-based DRI–EAF.
 
 <img src="figures/figure8.png" style="width:3.66135in;height:3.03646in" alt="Chart" />
-=====================================================================================
 
 **Figure 7** Average emission factors (tCO₂ per tonne of steel) before (yellow bars) and after (blue bars) the application of primary emission reduction solutions (ERS) across major steel production routes worldwide.
 
-**4. Discussion**
-=================
+#### 4. Discussion
 
-**4.1 Emissions Estimates**
+#### 4.1 Emissions Estimates
 
 The use of satellite-derived Thermal Anomaly Index (TAI) provides a promising approach to estimate steel production at the asset level on a monthly basis. By calibrating TAI against production data, it is possible to derive capacity factors that, when combined with route-specific process parameters, enable CO₂ emission estimates for individual plants. This approach offers a more temporally resolved and consistent method for monitoring emissions compared to traditional reporting, particularly for regions or assets with limited disclosure.
 
 However, the accuracy of TAI-based estimates depends on asset-specific characteristics, including equipment type, age, and operational practices, which can influence thermal signatures. Further calibration across different technologies and geographies is therefore essential to improve reliability. Despite these challenges, integrating satellite observations with process-based emission modeling provides a scalable framework for tracking steel sector emissions and supporting decarbonization strategies at both plant and country levels.
 
-**4.2 ERS Application and Challenges**
+#### 4.2 ERS Application and Challenges
 
 Steel emissions depend fundamentally on the iron reduction method and the source of energy used. The conventional BF/BOF route remains the most carbon-intensive, while DRI–EAF can approach near-zero emissions if powered by renewable electricity and green hydrogen. Scrap-based EAF avoids ore reduction altogether, relying mainly on electricity, but its further growth is constrained by high recycling rates (\~80–85%) and material quality requirements (IStructE, 2025). Below, each strategy is discussed in terms of practicality and deployment.
 
-**4.2.1 EAF and DRI–EAF Routes**
+#### 4.2.1 EAF and DRI–EAF Routes
 
 EAF and DRI–EAF strategies primarily focus on reducing emissions by increasing scrap use, switching to low-carbon feedstocks, or adopting hydrogen-based production. These approaches leverage mature technologies for near-term reductions while also providing pathways for deep decarbonization where renewable electricity and green hydrogen are available.
 
@@ -257,7 +256,7 @@ Strategy 1 (Increase Scrap Share in EAF) shows large potential reductions—up t
 
 Strategy 2 (Hydrogen-based DRI–EAF) highlights one of the most transformative pathways, reducing emissions factors from \~0.8 to 0.26 tCO₂/t steel. Early pilots such as HYBRIT (Sweden) and SALCOS (Germany) have demonstrated technical feasibility, and several projects are moving towards industrial scale (HYBRIT, 2024; Salzgitter AG, 2022). Adoption, however, is constrained by the cost and availability of green hydrogen and the need for substantial investment in renewables and electrolysis capacity (Bhaskar, 2022). With supportive policy and falling renewable costs, this route could play a central role in a net-zero steel sector by mid-century.
 
-**4.2.2 BF/BOF Route**
+#### 4.2.2 BF/BOF Route
 
 BF/BOF strategies focus on transitional and long-term solutions to mitigate emissions from primary steel production. While incremental improvements, such as implementation of CCS or increasing EAF participation, can achieve some reductions, deep decarbonization relies on technology shifts, including full replacement with hydrogen-based DRI–EAF.
 
@@ -269,8 +268,7 @@ Strategy 5 (Shift Production from BF/BOF to EAF) is particularly relevant for hy
 
 Strategy 6 (Replace BF/BOF with H₂-DRI/EAF) represents the long-term solution for fully decarbonizing the BF/BOF route. By replacing conventional blast furnaces with hydrogen-based DRI–EAF facilities powered entirely by green hydrogen, near-zero direct emissions can be achieved. While current adoption is limited by the availability and cost of green hydrogen and the need for substantial capital investment, this pathway provides the ultimate reduction potential for primary steel production and serves as the benchmark toward which transitional strategies like CCUS or partial shifts to EAF should converge.
 
-**5. Conclusions**
-==================
+#### 5. Conclusions
 
 In this work a new approach has been implemented to estimate steel production and emissions at facility level on a monthly basis for 890 operating steel plants in 81 countries in the GEM contributors (2025) database.
 
@@ -282,8 +280,7 @@ In this study, we also developed and systematically applied a set of emissions r
 
 Overall, the analysis underscores that decarbonising steel will require a portfolio of strategies tailored to regional conditions, with careful consideration of technological readiness, infrastructure needs, and material constraints. Emerging technologies, such as direct electrolysis of iron ore, may also play a role in the longer term, though they remain at an early stage of development.
 
-**6. Supplementary metadata section** 
-=====================================
+#### 6. Supplementary metadata section
 
 Steel sector CO<sub>2</sub> emissions have been reported for individual sources from January 2021. The emissions described here represent a subset of specific country-level emissions estimates from the Climate TRACE manufacturing sector. All data is freely available on the Climate TRACE website ([<span class="underline">https://climatetrace.org/</span>](https://climatetrace.org/)). A detailed description of what is available is described in Tables 4 - 6.
 
@@ -361,8 +358,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 > **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**6. References**
-=================
+#### 6. References
 
 1.  Ember (2025) ‘*Regional grid intensity retrieved from: Monthly Electricity Data’*, Ember. Available at: [<span class="underline">https://ember-energy.org/data/monthly-electricity-data/</span>](https://ember-energy.org/data/monthly-electricity-data/)
 
@@ -428,11 +424,9 @@ The above usage is not warranted to be error free and does not imply the express
 
 32. GEM (2024). Pedal to the Metal 2024: Building Momentum for Iron and Steel Decarbonization. Global Energy Monitor. Available at: [<span class="underline">https://globalenergymonitor.org/wp-content/uploads/2024/07/GEM-Pedal-to-the-Metal-2024-steel-iron-report.pdf</span>](https://globalenergymonitor.org/wp-content/uploads/2024/07/GEM-Pedal-to-the-Metal-2024-steel-iron-report.pdf). (Accessed: 25 September 2025).
 
-**7. Appendices**
-=================
+#### 7. Appendices
 
-**7.1. Appendix 1: Overview of the steel production process**
--------------------------------------------------------------
+#### 7.1. Appendix 1: Overview of the steel production process
 
 The principal inputs to steelmaking today are iron ore, energy, limestone and scrap. Iron ore and scrap are used to provide the metallic charge, with scrap having a much higher metallic concentration than iron ore. Energy inputs provide heat to melt the metallic input, and in the case of iron ore, to chemically remove oxygen. Limestone is used at various stages of the steelmaking process to help remove impurities. [Figure](#bookmark=id.2u6wntf) 8 highlights these main routes to produce steel.
 

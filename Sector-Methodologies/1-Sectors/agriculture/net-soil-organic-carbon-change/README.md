@@ -1,4 +1,6 @@
-**Agriculture sector: Net Soil Organic Carbon Change**<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+
+### Agriculture sector: Net Soil Organic Carbon Change
 
 **Prateek Sharma<sup>\*1</sup>, Rajvi Trivedi<sup>1</sup>, Adity Manuraj<sup>1</sup>, Mukta Sharma<sup>1</sup>, Neville Millar<sup>1</sup>, Sam Schiller<sup>2</sup>, Mike Hsu<sup>2</sup>, Aaron Davitt<sup>3</sup>, and Bruno Basso<sup>\*1</sup>**
 
@@ -6,7 +8,7 @@
 
 *<sup>\*</sup>Corresponding Author: basso@msu.edu; sharm165@msu.edu*
 
-**1. Introduction**
+#### 1. Introduction
 
 Soil organic carbon (SOC) is a major component of the terrestrial carbon cycle and plays an important role in soil fertility, water retention, nutrient cycling, and agricultural productivity. Globally, soils store considerably more carbon than either the atmosphere or terrestrial vegetation, meaning that relatively small changes in SOC stocks can influence atmospheric carbon dioxide (CO₂) concentrations and the global carbon balance (Batjes 1996; Friedlingstein et al. 2020). Agricultural soils are particularly dynamic because conversion to cropland and subsequent management alter both the quantity of carbon entering the soil and the processes controlling its decomposition and stabilization.
 
@@ -28,7 +30,7 @@ As a second application of this framework, we evaluate how alternative managemen
 
 The resulting Climate TRACE dataset provides annual, spatially explicit estimates of net SOC change and the associated CO₂ sink or source across 40 crop groups and more than 170 countries for 2016–2025. The baseline dataset identifies the magnitude and spatial distribution of ongoing cropland SOC losses and gains, while the ERS analysis quantifies where no-till, cover cropping, or their combination could reduce SOC losses or increase carbon retention relative to those baseline trajectories. Together, these outputs provide a consistent framework for agricultural SOC emissions accounting while explicitly representing variation across crops, countries, management systems, and environmental conditions.
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
 We simulate annual soil organic carbon (SOC) stock change and the associated CO₂ emissions or removals for global cropland from 2016 to 2025 using the process-based System Approach for Land Use Sustainability (SALUS) model (Basso et al. 2025b; Figure 1). SALUS couples crop growth with soil water, nutrient, and carbon cycling and represents the processes controlling the production, decomposition, and stabilization of organic matter in agricultural soils (Section 2.2). Simulations were conducted for 40 crop groups across the global 5-arc-minute cropland domain, with SOC stocks evaluated for the upper 0–30 cm soil profile for each grid cell, crop, management scenario, and simulation year from 2016-2025. Annual changes in SOC stocks were subsequently converted to the corresponding CO₂ source or sink.
 
@@ -38,7 +40,7 @@ For each grid cell, SALUS simulations are conducted using input forcing as provi
 
 **Figure 1** Process-based SALUS schematic (Basso et al., 2025b).
 
-**2.1 Model inputs**
+#### 2.1 Model inputs
 
 To run the SALUS biogeochemical model globally, we assembled spatially explicit datasets describing weather, soil properties, crop-residue inputs, and tillage management (Table 1). These datasets were harmonized (Section 2.1.1) to provide consistent environmental and management inputs for the SOC simulations across all grid cells, crops, and years.
 
@@ -52,7 +54,7 @@ To run the SALUS biogeochemical model globally, we assembled spatially explicit 
 | Tillage practices        | 5 arc-min                      | Representative baseline management; held constant for 2005 | Porwollik et al. 2019                                                          | Yes               |
 | Residue retained on soil | 0.5°                           | Annual, 1997–2021 in source dataset                        | Smerald et al. 2023                                                            | No                |
 
-**2.1.1 Cropland mask and spatial harmonization**
+#### 2.1.1 Cropland mask and spatial harmonization
 
 A global cropland mask was developed to define the spatial domain and reference grid for all SALUS simulations. We used the SPAM 2020 dataset, derived from the Global Spatially Disaggregated Crop Production Statistics Data for 2020, version 2.0, release 2 (IFPRI, 2026), at 5-arc-minute resolution (\~10 km<sup>2</sup> spatial resolution). Harvested area was summed across all crop groups represented in SPAM, and grid cells with total harvested area greater than zero were retained as cropland simulation cells. Grid cells with no reported harvested area were excluded from the SALUS simulation domain.
 
@@ -60,17 +62,17 @@ The resulting 5-arc-minute cropland mask served as the spatial backbone for asse
 
 This procedure ensured that every SALUS simulation location had a consistent set of environmental, crop, residue, and management inputs referenced to the same cropland mask. The mask was therefore not derived from the ancillary input datasets; rather, it defined the simulation locations to which all other datasets were assigned. The cropland mask was held constant throughout the simulation period and across the baseline and emission-reduction scenarios.
 
-**2.1.2 Weather inputs**
+#### 2.1.2 Weather inputs
 
 Daily weather variables required by SALUS were obtained from the NASA Prediction of Worldwide Energy Resources (NASA/POWER) project maintained by the NASA Langley Research Center (NASA LaRC, 2024). The meteorological inputs included daily maximum and minimum air temperature, accumulated precipitation, downward surface shortwave radiation, wind speed, and maximum and minimum relative humidity. These variables provide the atmospheric forcing required by SALUS to simulate soil biogeochemical processes. The NASA/POWER data were processed and harmonized to a common 1° spatial grid (\~10,000 km<sup>2</sup> spatial resolution, depending on latitude) for global simulations. Daily weather inputs were assigned to each simulation grid point and year, and identical weather forcing was used across the baseline and emission-reduction scenarios so that differences in simulated SOC could be attributed to management rather than to climate forcing.
 
-**2.1.3 Soil inputs**
+#### 2.1.3 Soil inputs
 
 Soil properties required by SALUS were derived from SoilGrids (Poggio et al. 2021) a globally consistent soil dataset. The primary soil variables supplied to the model included bulk density, sand, silt and clay content, coarse-fragment content, soil organic carbon, total nitrogen, and pH for individual soil-profile layers. These properties describe the soil’s initial physical and biogeochemical state and influence water storage and movement, aeration, root growth, residue decomposition, and SOC turnover.
 
 Additional hydraulic properties required by SALUS were derived from available soil information, including the drained upper and lower limits of soil water availability following Ritchie et al. (1999), and saturated hydraulic conductivity following Suleiman and Ritchie (2001). Soil organic carbon and nitrogen information were used to initialize the soil C and N pools represented by SALUS (Section 2.2), while soil texture and bulk density contributed to the calculation of soil-water and transport properties. Soil profile information was spatially harmonized with the global simulation grid before being supplied to SALUS.
 
-**2.1.4 Crop residue retained in soil**
+#### 2.1.4 Crop residue retained in soil
 
 Crop residues represent an important source of carbon entering the soil and were therefore explicitly included in the SALUS biogeochemistry simulations. Crop-residue production was estimated from the corresponding crop-production framework (crop-residue N₂O emissions methodology; in the [<span class="underline">Agriculture GitHub folder</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture)), and the fraction of aboveground crop residue retained on the field was derived from crop-specific residue-retention coefficients reported by Smerald et al. (2023), which provides annual, spatially explicit estimates of residue management at 0.5° resolution for 1997–2021. For simulation years beyond 2021, the 2021 residue-retention fraction was held constant and applied through 2025.
 
@@ -82,13 +84,13 @@ Cover-crop carbon inputs were treated separately from these prescribed main-crop
 
 Because main-crop residue production was prescribed from the external crop-production framework rather than recalculated in response to each ERS scenario, management-induced changes in main-crop productivity were not used to modify the prescribed main-crop residue input.
 
-**2.1.5 Tillage practice**
+#### 2.1.5 Tillage practice
 
 Baseline tillage management was derived from the global gridded tillage dataset developed by Porwollik et al. (2019). Tillage refers to the mechanical disturbance of soil for crop production, such as plowing, disking, or other operations used to prepare the seedbed, control weeds, and incorporate crop residues. Different tillage systems vary in the intensity and frequency of soil disturbance and therefore can influence soil structure, residue placement, aeration, water dynamics, and SOC decomposition. The dataset provides crop-specific estimates of tillage systems at 5-arc-minute resolution and represents global management conditions around 2005. Porwollik et al. (2019) classified globally relevant tillage practices into six systems: no-tillage within Conservation Agriculture, traditional annual tillage, traditional rotational tillage, rotational tillage, reduced tillage, and conventional annual tillage. The dataset assigns a specific tillage system to each crop-specific 5-arc-minute grid cell using a rule-based allocation framework; therefore, no global or regional mean tillage value was applied in our simulations. The allocation considers crop type, water-management regime, field size, water erosion, income, aridity, and reported national Conservation Agriculture area. For example, conventional annual tillage is generally associated with mechanized annual-crop systems, traditional annual tillage with smaller-scale annual cropping systems, and rotational or traditional rotational tillage with perennial cropping systems, while reduced tillage is assigned under specific soil-depth constraints and Conservation Agriculture is spatially downscaled from reported national areas. Full definitions, parameterization, allocation rules, and global spatial distributions of the six tillage systems are provided by Porwollik et al. (2019).
 
 For the SALUS simulations, the Porwollik et al. (2019) tillage information was spatially harmonized with the cropland mask (Section 2.1.1) and used to define the baseline tillage condition for each simulated crop and grid cell. The assigned tillage system determines the level of soil disturbance represented in SALUS and thereby affects residue incorporation, soil mixing, soil-water and temperature conditions, and SOC decomposition.
 
-**2.2 SALUS soil organic carbon dynamics**
+#### 2.2 SALUS soil organic carbon dynamics
 
 SALUS represents SOC dynamics by tracking the movement of carbon from fresh plant material into progressively more stable soil organic matter pools (Figure 2). Aboveground crop residues and root biomass enter the model as fresh organic matter. These inputs are partitioned according to residue quality into rapidly decomposing soluble compounds, intermediate cellulose and hemicellulose fractions, and more resistant lignin-rich material. This initial partitioning controls how quickly residue carbon becomes available for decomposition and transfer into soil organic matter.
 
@@ -102,7 +104,7 @@ The rates of these transformations are dynamically regulated by environmental an
 
 **Figure 2** SALUS Soil Organic Carbon dynamics (Basso et al. 2015; Basso et al. 2025b).
 
-**2.3 Management scenarios and analytical framework**
+#### 2.3 Management scenarios and analytical framework
 
 SALUS simulations were initialized using the SOC stock derived from SoilGrids for the soil profile in each cropland grid cell. The initial SOC stock was partitioned among the SALUS soil organic matter pools using the model’s default initialization fractions: 50% of SOC was assigned to the resistant pool, 46% to the SLOW pool, and 4% to the ACTIVE pool. This initialization establishes the starting distribution of carbon among pools with contrasting turnover rates before the annual simulations begin.
 
@@ -130,13 +132,13 @@ In addition to the baseline SOC trajectory, the dataset includes three counterfa
 
 The final dataset therefore contains two complementary types of information: (1) annual baseline cropland SOC change and associated CO₂ emissions or removals under reconstructed current management, and (2) annual additional SOC retention and associated CO₂ mitigation potential under the three modeled management scenarios.
 
-**3. Emission Reduction Solution**
+#### 3. Emission Reduction Solution
 
-**3.1 Derivation of ERS estimates**
+#### 3.1 Derivation of ERS estimates
 
 The SOC benefit of each emission-reduction solution (ERS) was quantified relative to the paired baseline simulation. Annual SOC change was calculated from year-to-year differences in simulated SOC stocks, and the annual ERS benefit was calculated as the difference between the annual SOC change under the ERS and the corresponding baseline for the same grid cell and year. Positive values indicate greater SOC retention under the ERS relative to the baseline, whereas negative values indicate lower SOC retention. Because both the baseline and ERS scenarios may be losing SOC, the sign of the benefit reflects the difference between scenarios rather than the absolute direction of the CO₂ flux. Detailed equations, units, sign conventions, crop-level aggregation, and the distinction between annual and cumulative benefits are provided in Supplementary Text S1 and S2.
 
-**3.2 Incorporate ERS into the model**
+#### 3.2 Incorporate ERS into the model
 
 Four management scenarios were simulated: baseline, no-till, cover crop, and no-till + cover crop (Table 2). Paired scenarios used the same weather, soil properties, crop characteristics, and prescribed main-crop residue inputs, while tillage and cover-crop management were modified according to the scenario. This design allows differences in modeled SOC to be attributed to the management intervention rather than differences in environmental forcing or prescribed main-crop inputs.
 
@@ -144,9 +146,9 @@ The baseline retained the crop- and grid-specific tillage management prescribed 
 
 SALUS was run separately for the 40 crop groups represented within the global cropland domain for 2016–2025. Crop-specific SOC outputs were aggregated within each grid cell using harvested-area weighting before annual SOC changes and ERS benefits were calculated. Further details on scenario implementation, crop aggregation, and SOC accounting are provided in Supplementary Text S1 and S2.
 
-**4. Results**
+#### 4. Results
 
-**4.1 Net Soil Organic Carbon Change (Baseline Scenario)**
+#### 4.1 Net Soil Organic Carbon Change (Baseline Scenario)
 
 Under the baseline scenario, modeled cropland soils were a persistent net source of CO₂ to the atmosphere throughout the study period. The baseline reflects each grid cell's tillage practice, as characterized by the rule-based global gridded tillage dataset of Porwollik et al. (2019), rather than an assumed uniform conventional-tillage condition. A net loss of soil organic carbon occurred across approximately 99% of evaluated grid cells every year from 2016 to 2025 (Figure 3), a far more spatially uniform signal than any of the emission-reduction scenarios, consistent with the absence of an offsetting management-change practice in this scenario.
 
@@ -162,14 +164,15 @@ These results establish the reference trajectory against which the no-till, cove
 
 **Figure 3** Baseline SOC change (Mg C ha⁻¹; negative = net source or a loss of carbon), for 2016-2025 average.
 
- <img src="figures/figure4.jpg" style="width:5.43821in;height:2.92189in" />
+<img src="figures/figure4.jpg" style="width:5.43821in;height:2.92189in" />
 
 **Figure 4** Global baseline net SOC emissions, 2016–2025 (Gt CO₂).
 
-<img src="figures/figure5.png" style="width:5.30729in;height:3.24722in" />  
+<img src="figures/figure5.png" style="width:5.30729in;height:3.24722in" />
+
 **Figure 5** Top 10 countries by baseline net SOC emissions, 2016-2025 (Mt CO₂).
 
-**4.2 SOC benefits of emission reduction solutions**
+#### 4.2 SOC benefits of emission reduction solutions
 
 All three emission reduction solutions increased SOC retention relative to baseline management across most of the global cropland area evaluated, although the magnitude and temporal behavior differed among scenarios (Figure 6). The values shown in Figure 6 represent the annual difference in SOC change between each ERS scenario and its corresponding baseline simulation, rather than the absolute annual change in SOC under the ERS (Section S1.3). Positive values therefore indicate that more SOC was retained under the ERS than under baseline management. Because the baseline simulations generally showed net SOC losses, this benefit often represents a reduction in the rate of SOC loss rather than an absolute increase in SOC stock. Each ERS was simulated independently from the same initial SOC conditions as its paired baseline, with only the specified management practice altered.
 
@@ -211,7 +214,7 @@ Overall, the results show a clear ranking among the evaluated management strateg
 
 **Figure 9** Annual SOC benefits for the ten largest cumulative national contributors under (a) no-till, (b) cover cropping, and (c) no-till + cover cropping during 2016–2025. Values are expressed as Mt CO₂ yr⁻¹. Positive values represent additional SOC retained relative to baseline management.
 
-**4.3 Verifying modeled emissions estimates**
+#### 4.3 Verifying modeled emissions estimates
 
 SALUS has previously been evaluated against field measurements and long-term agricultural experiments under a range of soil, climate, and management conditions. In long-term experiments in the U.S. Corn Belt, Senthilkumar et al. (2009) evaluated SALUS against measured changes in soil carbon over 18–21 years under conventional tillage, no-till, nitrogen fertilization, and cover-crop-based management and reported close agreement between modeled and observed SOC changes. Similarly, field measurements from eight farms in northern Italy were used to calibrate and validate SALUS under conventional and no-till management, with the model reproducing differences in SOC dynamics associated with tillage intensity (Pezzuolo et al. 2017).
 
@@ -233,7 +236,7 @@ The mean response when no-till and cover crops were simulated simultaneously was
 
 Taken together, the modeled ERS responses fall within the broad range reported by field-based syntheses and regional modeling studies. However, differences in baseline management, soil depth, study duration, climate, soils, cropping systems, and analytical methods prevent direct one-to-one comparison among estimates. The literature benchmarks, therefore, provide an evaluation of the direction and plausible magnitude of the modeled SOC responses rather than an independent validation of a single global sequestration rate.
 
-**5. Discussion**
+#### 5. Discussion
 
 The baseline simulations indicate that global cropland soils remained a persistent net source of CO₂ throughout 2016–2025 under existing management conditions. This persistent baseline carbon loss is consistent with the broader evidence that historical cultivation has generated a substantial SOC debt and that many cropland soils continue to approach lower carbon equilibria following land-use conversion and long-term agricultural management (Sanderman et al. 2017; Karstens et al. 2022). Importantly, the baseline used here does not represent a uniform conventional-tillage system. Instead, it incorporates the tillage practice assigned to each grid cell from the global tillage dataset of Porwollik et al. (2019). The resulting trajectory therefore represents modeled SOC change under existing tillage patterns rather than a hypothetical intensively tilled global cropland system.
 
@@ -261,7 +264,7 @@ Several uncertainties should be considered when interpreting the estimates. The 
 
 Despite these limitations, the analysis provides a consistent framework for comparing agricultural SOC mitigation opportunities across management strategies, crops, countries, and years. By preserving common environmental and crop conditions between the baseline and ERS simulations, the paired-scenario design isolates the modeled effect of management while retaining the spatial heterogeneity of the underlying agricultural system. This enables Climate TRACE to move beyond uniform sequestration factors and identify where specific management interventions are most likely to produce meaningful reductions in net CO₂ emissions from cropland soils.
 
-**6. Conclusion**
+#### 6. Conclusion
 
 Global cropland soils remained a substantial net source of CO₂ under baseline management throughout 2016–2025, with modeled emissions declining from approximately 1.80 Gt CO₂ yr⁻¹ in 2016 to 1.51 Gt CO₂ yr⁻¹ in 2025. Approximately 99% of evaluated grid cells experienced annual SOC losses, and cumulative baseline emissions reached approximately 16.38 Gt CO₂ over the study period.
 
@@ -271,7 +274,7 @@ The combined no-till + cover-crop scenario therefore produced the largest and mo
 
 The strong variation among regions, countries, years, and management strategies demonstrates the importance of estimating SOC responses within their local environmental and agricultural context. By applying SALUS consistently across 40 crop groups and more than 170 countries, the Climate TRACE framework provides a spatially explicit basis for identifying where agricultural management changes can most effectively reduce SOC-related CO₂ emissions and for evaluating future regenerative management strategies.
 
-**7. Metadata Information**
+#### 7. Metadata Information
 
 Net SOC change and the associated CO₂ sink or source are provided on the Climate TRACE website at the gridded and country level. All data are freely available under the Creative Commons Attribution 4.0 International Public License.
 
@@ -344,9 +347,9 @@ The above usage is not warranted to be error free and does not imply the express
 
 **Disclaimer**: The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models at all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org) ([<span class="underline">coalition@climatetrace.org</span>](mailto:coalition@climatetrace.org)).
 
-**8. Supplementary Information**
+#### 8. Supplementary Information
 
-**Supplementary Text S1. Calculation of annual SOC change, CO₂ flux, and ERS benefits**
+#### Supplementary Text S1. Calculation of annual SOC change, CO₂ flux, and ERS benefits
 
 SALUS was used to simulate soil organic carbon (SOC) stocks in the upper 0–30 cm soil profile for each grid cell, crop, management scenario, and year. SOC stocks were expressed as Mg C ha⁻¹. To ensure consistency among the baseline and emission-reduction-solution (ERS) scenarios, all paired simulations were initialized using the same environmental and crop conditions, and SOC changes were evaluated using the same annual accounting interval.
 
@@ -406,7 +409,7 @@ The corresponding annual CO₂ benefit was calculated from the annual SOC benefi
 
 where $B_{CO_{2},s,i,t}$ is expressed as Mg CO₂ ha⁻¹ yr⁻¹. Annual ERS benefits were reported in Mt CO₂ yr⁻¹ at the country scale and Gt CO₂ yr⁻¹ at the global scale. Under this convention, a positive value represents avoided CO₂ emissions or additional CO₂ removal relative to the baseline. This quantity represents a relative management benefit and is therefore distinct from the absolute CO₂ source or sink calculated independently for each scenario.
 
-**Supplementary Text S2. Crop-level SALUS simulations and spatial aggregation**
+#### Supplementary Text S2. Crop-level SALUS simulations and spatial aggregation
 
 **S2.1 Crop-specific simulations**
 
@@ -464,7 +467,7 @@ Crop-specific SOC stocks from the combined scenario were aggregated using the sa
 
 <table><thead><tr class="header"><th>Practice</th><th>Study</th><th>Soil depth</th><th>Reported SOC response</th></tr></thead><tbody><tr class="odd"><td>No-till</td><td>This study</td><td>0-30 cm</td><td>0.159 Mg C ha⁻¹ yr⁻¹ (annual means: 0.130–0.192)</td></tr><tr class="even"><td></td><td>West and Post 2002</td><td>Variable; predominantly surface soil</td><td>0.57 ± 0.14 Mg C ha⁻¹ yr⁻¹</td></tr><tr class="odd"><td></td><td>Ogle et al. 2019</td><td>≥0–30 cm; deeper where significant responses occurred</td><td>Up to 0.54 Mg C ha⁻¹ yr⁻¹; highly variable among climate–soil combinations</td></tr><tr class="even"><td></td><td>Nicoloso and Rice 2021</td><td>0–60 cm for baseline-based sequestration analysis</td><td>0.42 ± 0.17 Mg C ha⁻¹ yr⁻¹</td></tr><tr class="odd"><td></td><td>Mondal et al. 2023</td><td>0–30 cm</td><td>approximately 0.664 Mg C ha⁻¹ yr⁻¹ for the ≤10-year adoption category</td></tr><tr class="even"><td></td><td>Novara et al. 2021</td><td></td><td>0.21 Mg C ha⁻¹ yr⁻¹ on flat areas; 0.32 Mg C ha⁻¹ yr⁻¹ on sloping areas</td></tr><tr class="odd"><td>Cover crop</td><td>This study</td><td>0-30 cm</td><td>0.186 Mg C ha⁻¹ yr⁻¹ (annual means: 0.162–0.204)</td></tr><tr class="even"><td></td><td>Poeplau and Don 2015</td><td>Mean depth 22 cm</td><td><table><tbody><tr class="odd"><td>0.32 ± 0.08 Mg C ha⁻¹ yr⁻¹</td></tr></tbody></table></td></tr><tr class="odd"><td></td><td>Jian et al. 2020</td><td>0-30 cm</td><td>0.56 Mg C ha⁻¹ yr⁻¹</td></tr><tr class="even"><td></td><td><table><tbody><tr class="odd"><td>Joshi et al. 2023</td></tr></tbody></table></td><td>0-30 cm</td><td>0.88 Mg C ha⁻¹ yr⁻¹</td></tr><tr class="odd"><td>No-till + cover crop</td><td>This study</td><td>0-30 cm</td><td>0.362 Mg C ha⁻¹ yr⁻¹ (annual means: 0.318–0.409)</td></tr><tr class="even"><td></td><td>Basso et al. 2025a</td><td>0-30 cm</td><td><table><tbody><tr class="odd"><td>0.36 ± 0.12 Mg C ha⁻¹ yr⁻¹</td></tr></tbody></table></td></tr></tbody></table>
 
-**References**
+#### References
 
 1.  Basso, B., Ritchie, J.T., Grace, P.R. and Sartori, L., 2006. Simulation of tillage systems impact on soil biophysical properties using the SALUS model, *Italian Journal of Agronomy*, 1(4), pp. 677–688. DOI:10.4081/ija.2006.677.
 

@@ -1,10 +1,12 @@
-**Transportation sector: Emissions From Non Broadcasting Vessels** <img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
+<img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
+
+### Transportation sector: Emissions From Non Broadcasting Vessels
 
 **Gavin McDonald, David Kroodsma, Pol Carbo-Mestre, Mark Powell, and Zihan Wei**
 
 *All authors affiliated with Global Fishing Watch, emLab, and Climate TRACE*
 
-**1. Introduction**
+#### 1. Introduction
 
 Shipping is a large and growing source of greenhouse gases and air pollutants. The Fourth IMO GHG Study estimated that total shipping—international, domestic and fishing—emitted 1,076 million tonnes of CO₂e in 2018, or about 2.9% of global anthropogenic GHG emissions, up from 2.76% in 2012 (Faber et al., 2020). Every global inventory behind figures like these, including Climate TRACE's, ultimately rests on the Automatic Identification System (AIS): a vessel is counted because it broadcasts its position. This makes the inventory only as complete as the broadcast, and satellite imagery shows the shortfall is substantial. Mapping coastal waters with Sentinel-1 (S1) Synthetic Aperture Radar (SAR) from 2017 to 2021, Paolo et al. (2024) found that 72-76% of industrial fishing vessels and 21-30% of transport and energy vessel activity did not appear in public tracking systems. These "dark" vessels burn fuel and emit in the same way as any other ship, but because they are invisible to AIS their emissions have been absent from published shipping inventories. The magnitude of that omission is unknown, and so is its trend: if the dark fleet is changing at a different rate than the tracked fleet, an inventory built on AIS alone will misstate not only the level of global shipping emissions but the direction they are moving. Closing this gap requires a detection source that does not depend on a vessel choosing to be seen.
 
@@ -16,13 +18,15 @@ This methodology here presents a high level summary of the data used, approach, 
 
 Furthermore, in November 2025, the Climate TRACE coalition introduced emissions reduction solutions (ERS) for each emitting sector. For shipping, loitering outside ports was identified as a source of 'wasted' emissions, and mitigation options for this behavior were assessed. Specifically, a vessel speed reduction scenario was evaluated, in which vessels reduce cruising speed so that time otherwise spent loitering is instead absorbed into the voyage. The potential for alternative fuels and energy sources to reduce shipping emissions was also considered. Refer to OceanMind's methodology for further detail on the ERS applied to this sector.
 
-**2. Methodology**
+#### 2. Methodology
 
 The following section describes the datasets and methodology used to estimate GHG emissions from the shipping industry. The methodology used in this work is presented in more detail in GFW and emLab ([<span class="underline">2026</span>](https://emlab-ucsb.github.io/ocean-ghg/)). The methodology is presented in two parts (and visualized in Figure 1): 1. the AIS-based emissions model and 2. the “dark” vessels emissions model which uses Sentinel-1 (S1) Synthetic Aperture Radar (SAR) imagery to identify these vessels. While the focus of this methodology is to estimate emissions from non-broadcasting vessels, doing so requires three main steps: 1) modeling emissions from AIS-broadcasting vessels, 2) classifying S1 detections as broadcasting or non-broadcasting, and 3) attributing emissions to the non-broadcasting segment based on the broadcasting one. Thus, in this document we present the methodology for modeling emissions from both AIS-broadcasting and non-broadcasting vessels, along with the results for each.
 
-<img src="figures/figure1.png" style="width:7.18167in;height:4.08244in" />**Figure 1.** GFW framework for estimating emissions using the AIS-based emissions model and the non-broadcasting (dark vessel) emissions model.
+<img src="figures/figure1.png" style="width:7.18167in;height:4.08244in" />
 
-### **2.1 AIS-based emissions model description**
+**Figure 1.** GFW framework for estimating emissions using the AIS-based emissions model and the non-broadcasting (dark vessel) emissions model.
+
+#### 2.1 AIS-based emissions model description
 
 The methodology uses an engineering bottom-up approach, based on vessel activity data from ships’ automatic identification system (AIS), which is required as a safety feature for most large vessels. Compliance issues and inadequate message reception can limit the availability of AIS data on vessel activity. Models also rely on vessel characteristic information, such as vessel type and main engine power, which is obtained from a variety of sources (see [<span class="underline">notebook</span>](https://emlab-ucsb.github.io/ocean-ghg/)), and a range of emission factors. Here we describe the model, how it is applied to GFW activity and vessel characteristics data, and any deviations made from the published methodologies. This approach closely follows the methodology described in the 2020 International Maritime Organization’s (IMO) “Fourth Greenhouse Gas Study” (Faber et al., [2020](https://emlab-ucsb.github.io/ocean-ghg/references.html#ref-FourthIMOGHGStudy2020)) and the 2017 ICCT “Greenhouse Gas Emissions From Global Shipping” study (Olmer et al., [2017](https://emlab-ucsb.github.io/ocean-ghg/references.html#ref-Olmer2017Greenhouse)). Here, in overview, is how emissions using AIS data, where available, are calculated:
 
@@ -36,21 +40,21 @@ The methodology uses an engineering bottom-up approach, based on vessel activity
 
 These data are then delivered to OceanMind, who integrates the low-information vessels absent from their shipping dataset before final delivery to Climate TRACE.
 
-### **2.2 AIS-based emissions model data**
+#### 2.2 AIS-based emissions model data
 
-#### **2.2.1 Individual AIS messages**
+#### 2.2.1 Individual AIS messages
 
 For AIS data, GFW relies on an automated process for parsing, cleaning, augmenting, and publishing of raw AIS data (Kroodsma et al., [2018](https://emlab-ucsb.github.io/ocean-ghg/references.html#ref-kroodsma2018tracking)). This process provides data from 2015 to present, with the most recent date provided in the ‘non-broadcasting-vessels’ changelog hosted on the Climate TRACE GitHub repo. We currently leverage the most advanced V4 version of GFW data processing pipeline from February 2026 (GFW, [<span class="underline">2026</span>](https://globalfishingwatch.org/platform-update/version-4-data-pipeline-release/)). Using these data as our starting point, we are able to estimate emissions from all analyzed pollutants for every single AIS message starting in 2015. These ping-level emissions can then later be aggregated as desired (e.g., by vessel, by voyage, by destination or arrival port, by time, by space, etc.).
 
-#### **2.2.2 Vessel characteristics**
+#### 2.2.2 Vessel characteristics
 
 GFW has a comprehensive vessel characteristics database. These data were used by the IMO in their 4th GHG Study (Faber et al., 2020). The GFW vessel database provides metadata for all vessels detected by GFW. The information for each vessel is based on: 1) data purchased from S&P Global, a commercial provider of vessel registry and characteristics data; 2) where S&P Global data are not available, official registry information when available (Park et al., [2023](https://emlab-ucsb.github.io/ocean-ghg/references.html#ref-park2023tracking)); or 3) algorithm-derived vessel characteristics such as vessel class, engine power, maximum speed, and gross tonnage, when S&P or registry data are not available (Kroodsma et al., [2018](https://emlab-ucsb.github.io/ocean-ghg/references.html#ref-kroodsma2018tracking)). The GFW vessel characteristics database leverages extensive work that has been done to scrape and aggregate many publicly available vessel registries (Park et al., [2023](https://emlab-ucsb.github.io/ocean-ghg/references.html#ref-park2023tracking)). We are currently using a cutting edge version of this database, which uses a new random forest algorithm for inferring certain vessel characteristics when they are not available in S&P data or official vessel registries (vessel class, main engine power, maximum speed, length, gross tonnage, design speed, engine type, engine build-year).
 
-#### **2.2.3 Voyages and port stays**
+#### 2.2.3 Voyages and port stays
 
 GFW also produces a dataset that contains information for port-to-port voyages made by vessels. This table leverages extensive work done by the GFW team to: 1) define ports, 2) determine when vessels arrive at or depart from a port, 3) determine port stays that are defined as the period between a port arrival and port departure, and 4) determine voyages that are defined by a port departure and a port arrival (GFW, 2021). From 2015-01-01 to 2025-06-30, we had 123,251,770 unique port visits across 786,670 unique vessels, and 166,310,424 unique voyages across 790,482 unique vessels. These port visit trips occurred in 14,703 unique ports across 209 unique countries.
 
-### **2.3 Non-broadcasting ‘dark fleet’ emissions model**
+#### 2.3 Non-broadcasting ‘dark fleet’ emissions model
 
 We have developed a new model to estimate emissions from so-called “dark” vessels that do not broadcast AIS signals, and therefore are not captured in AIS-based datasets (Rowlands et al., 2019). These vessels have not been included in previous shipping emissions estimates, including Climate TRACE’s database, and their activity and emissions are now revealed with this new model.
 
@@ -88,19 +92,19 @@ Next, we consider non-fishing vessels (Figure 3, right panel). Here we can see t
 
 **Figure 3:** Hypothetical example showing the Sentinel-1 detections in a given 1x1 degree pixel, month, and for a vessel size bin, disaggregated by vessel type (fishing or non-fishing). For fishing vessels (left image), we observe 2 matched detections, 8 unmatched detections, and therefore have a dark-to-broadcasting ratio of 8/2=4. For nonfishing vessels (right image), we observe 15 matched detections, 5 unmatched detections, and therefore have a dark-to-broadcasting ratio of 5/15=0.33.
 
-These data are shared directly with Climate TRACE as a single global non-broadcasting emissions estimate for each of our nine pollutants (unlike our AIS-broadcasting emissions estimates, which are first delivered to OceanMind who combines our estimates with theirs before delivering the final AIS-broadcasting emissions estimates to Climate TRACE.  
-  
+These data are shared directly with Climate TRACE as a single global non-broadcasting emissions estimate for each of our nine pollutants (unlike our AIS-broadcasting emissions estimates, which are first delivered to OceanMind who combines our estimates with theirs before delivering the final AIS-broadcasting emissions estimates to Climate TRACE.
+
 The dark fleet emissions modeling approach presented here reflects the current methodology and dataset delivered to Climate TRACE. An updated machine learning approach that supersedes the current method is presented in a companion paper currently under peer review. Following publication, the updated methodology and associated emissions dataset will be incorporated into Climate TRACE releases.
 
-### **2.4 Emissions Reduction Strategy**
+#### 2.4 Emissions Reduction Strategy
 
 The emissions reduction strategy for this sector focuses on port loitering to show the potential emissions benefits of "Just in Time" arrivals, which could decrease global emissions by as much as 7.15%. A modeled speed reduction scenario, in which vessels slow their cruising speed so that part of the time otherwise spent loitering is absorbed into the voyage, would avoid 32.7% of loitering emissions—2.34% of the sector total. See [<span class="underline">our</span> <span class="underline">methodology</span>](https://emlab-ucsb.github.io/ocean-ghg-ct-ers/) for more details. Similarly, OceanMind estimates "Just in Time" using their approach and the two are combined into a final estimate. Refer to OceanMind's methodology and results for further detail on the ERS applied to this sector.
 
-### **3. Results**
+#### 3. Results
 
 Detailed results are presented in the GitHub [<span class="underline">notebook</span>](https://emlab-ucsb.github.io/ocean-ghg/). The AIS-based emissions estimates correspond to version v20260714, while the non-broadcasting emissions model corresponds to version v20250701. An overview of our results is presented below.
 
-**3.1 AIS emissions model validation**
+#### 3.1 AIS emissions model validation
 
 To validate the model used to estimate emissions from AIS-broadcasting vessels, we used the CO<sub>2</sub> emissions data from maritime transport provided by the European Maritime Safety Agency (EMSA, [<span class="underline">2025</span>](https://data.europa.eu/data/datasets/co2-emissions-data?locale=en)), which is part of the monitoring, reporting, and verification program of carbon emissions from maritime transport, set by the [<span class="underline">Regulation (EU) 2015/757</span>](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02015R0757-20161216). Vessels with certain characteristics and certain trips made by such vessels operating in the sea ports of the European Economic Area (EEA), must report their emissions on an annual basis. Our model aligned well with the voyage-level EU validation data, achieving an R<sup>2</sup> of 0.84 (Figure 4). Validation results from the EU data are presented in more detail in the GitHub notebook in [<span class="underline">this section</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/ais_model.html#validation-results). We also validated our model against a registered dataset of vessels' main engine fuel consumption, measured during sea trials over a 24 hour period, on a sample of 15,679 vessels, achieving an R<sup>2</sup> of 0.85. Details on this validation are presented in a companion paper currently under peer review.
 
@@ -108,13 +112,13 @@ To validate the model used to estimate emissions from AIS-broadcasting vessels, 
 
 **Figure 4.** Comparison of annual vessel-level CO2 emissions estimated using our AIS-based model with published emissions from the EU MRV database (EMSA, 2025). The sample includes 27,657 observations from yearly aggregated vessel trips where hours at sea differ by no more than 15% between our data and the MRV dataset. The dashed line represents the 1:1 line.
 
-**3.2 Dark fleet emissions model validation**
+#### 3.2 Dark fleet emissions model validation
 
 There is no existing validation dataset for measured dark fleet emission (i.e., those vessels that do not use AIS). We therefore assessed the likely performance of the S1 dark fleet model by simulation, using the AIS-broadcasting fleet for which emissions are known from our AIS-based model as a stand-in. Within each 1x1 degree pixel, month, vessel type, and size class, we randomly designated a subset of AIS-broadcasting vessels as "dark" and withheld them, drawing each vessel's designation with probability equal to the empirically observed S1 detection fraction for its vessel type and size class, so that the simulated dark share matched the share observed in the S1 data. We then applied the model exactly as described above and compared the resulting estimate against the known emissions of the withheld vessels. This yielded an R² of 0.99, indicating the model's performance in recovering a simulated dark fleet drawn from the AIS sample, not its accuracy against actual dark fleet emissions.
 
 The ratio approach has structural limits: it assumes broadcasting vessels represent dark vessels within a size class, which no available data can test; outside the S1 footprint it assigns ratios on spatial proximity alone, ignoring distance to shore, ports, routes and vessel characteristics; and it estimates no dark activity where broadcasting vessels are absent. These limits point to a method that learns the drivers of dark activity rather than interpolating between observations of it. The approach presented here is therefore superseded by a fully developed machine learning approach, presented in a companion paper currently under peer review.
 
-### **3.3 AIS-broadcasting fleet time series trend**
+#### 3.3 AIS-broadcasting fleet time series trend
 
 First, we look at the total global number of active vessels that are detected broadcasting AIS for which we estimate emissions, per year from 2015-2025 (corresponding to GitHub notebook [<span class="underline">figure 1.10</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/ais_model.html#fig-global-annual-vessels) and [<span class="underline">table 1.7</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/ais_model.html#tbl-global-annual-vessels)).
 
@@ -140,7 +144,7 @@ Next, we look at total annual global emissions (metric tonnes, MT) for each poll
 | 2024     | 1,139,197,974 | 17,866,397 | 1,749,804 | 15,131  | 830,746 | 57,062  | 615,808  | 566,544    | 834,948    |
 | 2025     | 1,189,412,753 | 18,473,718 | 1,829,501 | 15,760  | 864,984 | 59,523  | 640,958  | 589,681    | 867,643    |
 
-### **3.4 Estimates with dark fleet emissions included**
+#### 3.4 Estimates with dark fleet emissions included
 
 Total annual global emissions for each pollutant over time for all detected vessels, including AIS detections and S1 dark fleet detections are shown in Figure 6, and Tables 1 and 2 (corresponding to GitHub notebook [<span class="underline">figure 2.5.</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/dark_fleet_model.html#fig-global-annual-emissions-summary-dark) and [<span class="underline">table 2.2</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/dark_fleet_model.html#tbl-global-annual-emissions-summary-dark)). We observe an increase in total emissions over time, as shown by the sum of emissions for AIS-detected vessels and dark vessels detected only by S1 SAR.
 
@@ -164,15 +168,15 @@ Total annual global emissions for each pollutant over time for all detected vess
 
 The total CO<sub>2</sub> emissions estimate for 2025 is 1.6 billion metric tonnes, including 1.19 billion metric tonnes from AIS-broadcasting vessels and 397 million metric tonnes from dark vessels detected by S1. Other pollutants follow trends similar to those of CO<sub>2</sub> , with the exception of sulphur-bearing pollutants. SOx declines sharply in 2020 and remains well below its pre-2020 level, reflecting the IMO 2020 global sulphur cap. PM10 and PM2.5 exhibit a similar step change, although less pronounced, since only a portion of particulate matter originates from fuel sulphur. Both subsequently resume their upward trends as activity increases.
 
-### **3.5 Spatial maps of emissions**
+#### 3.5 Spatial maps of emissions
 
-### Figure 7 shows spatial maps showing the CO<sub>2</sub> emissions globally by the AIS-broadcasting fleet and by the dark fleet. For each 1x1 degree pixel (the spatial resolution of the dark fleet model), we aggregate emissions separately for each pollutant for 2025. Global maps for all pollutants estimated by GFW can be found [<span class="underline">here</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/dark_fleet_model.html#spatial-maps-of-emissions). 
+Figure 7 shows spatial maps showing the CO<sub>2</sub> emissions globally by the AIS-broadcasting fleet and by the dark fleet. For each 1x1 degree pixel (the spatial resolution of the dark fleet model), we aggregate emissions separately for each pollutant for 2025. Global maps for all pollutants estimated by GFW can be found [<span class="underline">here</span>](https://emlab-ucsb.github.io/ocean-ghg/qmd/dark_fleet_model.html#spatial-maps-of-emissions).
 
-### <img src="figures/figure7.png" style="width:5.29861in;height:5.29861in" />
+<img src="figures/figure7.png" style="width:5.29861in;height:5.29861in" />
 
 **Figure 7.** Map of 2025 CO<sub>2</sub> emissions, aggregated across all vessel classes, at 1x1 degree spatial resolution, disaggregated by the dark fleet and AIS-broadcasting fleet.
 
-**4. Discussion and Conclusion**
+#### 4. Discussion and Conclusion
 
 Our model provides unprecedented coverage of global shipping, including vessels with little information publicly available. This includes vessels that broadcast AIS but are not found in public vessel information databases, and vessels that are not detected using AIS (“dark” vessels). Our model can provide results in near real time for vessels broadcasting AIS, and our sector-leading vessel characteristics database allows maximal coverage of low information vessels. Future refinements discussed below should improve the accuracy and vessel coverage of estimated emissions.
 
@@ -184,7 +188,7 @@ Some of our key findings so far include:
 
 -   The vast majority of emissions were by vessels that use AIS to broadcast their positions (75% in 2025), but understanding dark vessel activity is critical to estimating the total emissions and especially to estimating the change in emissions. Emissions from dark vessels (i.e., those not mapped by AIS) increased by about 9% over 2017-2025, while emissions from vessels with AIS increased by about 44% over the same time period. The larger increase in AIS-based emissions relative to dark-fleet emissions may partly reflect improved AIS carriage and reception, whereas the increase in dark-fleet emissions more directly reflects a change in the actual activity detected.
 
-### **4.1 AIS-based model, areas of potential model refinement**
+#### 4.1 AIS-based model, areas of potential model refinement
 
 We have identified a number of areas for potential model refinement. They are all related to the need for improved vessel characteristics metadata:
 
@@ -204,7 +208,7 @@ We have identified a number of areas for potential model refinement. They are al
 
 8.  Vessel-class-weighted fuel mix: The blend is applied uniformly to every oil/reciprocating vessel, from trawlers to VLCCs. A natural refinement is to weight the blend components by vessel class and size (large ocean-going classes skew residual fuel pre-2020 and VLSFO post-2020; fishing vessels and small craft skew distillate), or by a registry-based fuel-type assignment once a trusted source is available.
 
-### **4.2 Dark fleet model-areas of potential refinement**
+#### 4.2 Dark fleet model-areas of potential refinement
 
 We have identified an area for potential refinement of the dark fleet emissions model
 
@@ -212,7 +216,7 @@ We have identified an area for potential refinement of the dark fleet emissions 
 
 2.  Sentinel-2 data: Currently, we use S1 SAR data for our dark fleet emissions estimates. We tested extending this methodology to also incorporate Sentinel-2 (S2) optical imagery data. However, differences in detection capacity, coverage and noise, prevent a direct integration of S2 with S1. Future work should focus on combining both datasets to complement each other’s strengths.
 
-**Supplemental Metadata**
+#### Supplemental Metadata
 
 **Table 3.** General dataset information for Emissions from Non Broadcasting Vessels. There are two types of low information vessels: 1) vessels that transmit activity through the Automatic Identification System (AIS) but have little information publicly available on vessel characteristics such as size and engine power, and 2) non-broadcasting vessels that have no detectable AIS signals or registry information and are therefore not detectable through traditional means of detection.
 
@@ -247,7 +251,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**References**
+#### References
 
 1.  Chang, Y. L., Anagaw, A., Chang, L., Wang, Y. C., Hsiao, C. Y., & Lee, W. H. (2019). Ship detection based on YOLOv2 for SAR imagery. *Remote Sensing*, *11*(7), 786.
 

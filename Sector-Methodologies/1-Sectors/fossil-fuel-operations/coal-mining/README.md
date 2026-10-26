@@ -1,12 +1,12 @@
-**Fossil Fuel Operations Sector: Coal Mining Emissions** <img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
+<img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
 
-**Amy Piscopo<sup>1,3</sup>, Ryan Driskell Tate<sup>2,3</sup>,**
+### Fossil Fuel Operations Sector: Coal Mining Emissions
 
-**Dorothy Lan Mei<sup>2,3</sup>, and Christy Lewis<sup>1,3</sup>**
+**Amy Piscopo<sup>1,3</sup>, Ryan Driskell Tate<sup>2,3</sup>, Dorothy Lan Mei<sup>2,3</sup>, and Christy Lewis<sup>1,3</sup>**
 
 *1) WattTime, 2) Global Energy Monitor, 3) Climate TRACE*
 
-**1. Introduction**
+#### 1. Introduction
 
 The geological processes that produce coal also produce the potent greenhouse gas (GHG), methane (CH<sub>4</sub>), which remains trapped in underground coal seams until the coal is mined. During coal mining, methane is released into the atmosphere, and it may continue to diffuse from abandoned mines long after mining operations have ceased \[1\]. Carbon dioxide (CO<sub>2</sub>) is also emitted during mining when coal seams containing sulfide minerals yield sulfuric acid that then reacts with carbonate rocks. As such, coal mine emissions are classified by the Intergovernmental Panel on Climate Change (IPCC) under *1.B Fugitive Emissions from Fuels.*
 
@@ -22,13 +22,13 @@ Global Energy Monitor’s Global Coal Mine Tracker (GCMT; [<span class="underlin
 
 Climate TRACE’s comprehensive inventory of asset-level emissions provides the foundation for assessing pathways to reduce emissions from coal mining worldwide. For fugitive emissions, the reduction in emissions, or abatement, for this sector can broadly be described as either transforming methane into a less potent greenhouse gas (e.g., CO<sub>2</sub>) or using methane nearby as an energy source. For combustion emissions, abatement takes the form of electrifying equipment. For each mine in our database, Climate TRACE has compiled “emissions reducing solutions” (ERSs) as catalogued by the International Energy Agency (IEA) to evaluate possible emissions reductions from the coal mining sector. Details on ERS and their effectiveness by mine type and methane release source are discussed in Section 2.
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
 Estimating GHG emissions from coal mining and the associated reductions in emissions from implementing abatement strategies would not be possible without extensive datasets from organizations including Global Energy Monitor, International Energy Agency, and the United Nations Framework Convention on Climate Change. With these datasets, Climate TRACE is able to produce emissions (and reductions) estimates for years 2015-2025 at 4,803 coal mines globally.
 
-**2.1 Datasets**
+#### 2.1 Datasets
 
-**2.1.1 Global Energy Monitor \| Global Coal Mine Tracker (GCMT)**
+#### 2.1.1 Global Energy Monitor \| Global Coal Mine Tracker (GCMT)
 
 The Global Energy Monitor’s Global Coal Mine Tracker (GCMT) is a worldwide dataset of coal mines and proposed projects. The tracker is updated annually and provides source level details on ownership structure, development stage and status, coal type, production at operating mines, capacity at proposed mines, workforce size, reserves and resources, geolocation, and other categories.
 
@@ -36,17 +36,17 @@ The tracker includes data from publicly available sources: (1) government data, 
 
 The information was collected by an international team of researchers, with fluencies in Chinese, Russian, Spanish, and Turkish. Whenever possible, Global Energy Monitor circulates data for vetting and review to researchers familiar with local mining conditions. Input data from this tracker was used to estimate emissions, described in the sections below.
 
-**2.1.2 International Energy Agency \| Global Methane Tracker**
+#### 2.1.2 International Energy Agency \| Global Methane Tracker
 
 The International Energy Agency’s (IEA) Global Methane Tracker offers country and regional estimates of fugitive methane emissions and ERS across various sectors, including coal mining. These estimates are updated annually and developed within the framework of the IEA’s Global Energy and Climate Model (GEC) \[2\]. The underlying data used in the GEC Model is drawn from IEA’s own energy databases, collaborators, and external sources, as documented in \[2\]. Climate TRACE leveraged the IEA’s ERS options and associated metadata for the coal mining sector in combination with our asset-level emissions estimates to calculate the total potential for methane reductions from the coal mining sector worldwide.
 
-**2.1.3 United Nations Framework Convention on Climate Change \| National Inventory Data**
+#### 2.1.3 United Nations Framework Convention on Climate Change \| National Inventory Data
 
 Under the Paris Agreement, specifically its Enhanced Transparency framework, participating countries submit inventories of their GHGemissions every two years, according to the reporting framework described in [<span class="underline">https://unfccc.int/first-biennial-transparency-reports</span>](https://unfccc.int/first-biennial-transparency-reports). The reporting framework requires detailing quantities of fuel consumption by fuel type (solid, liquid, gas). Climate Trace uses this information, along with coal mining production data to estimate emissions from fuel combustion.
 
-**2.2 Metadata**
+#### 2.2 Metadata
 
-**2.2.1 Mine Metadata**
+#### 2.2.1 Mine Metadata
 
 *Coal Mine Data*
 
@@ -78,7 +78,7 @@ In some cases production (or capacity) data was only available for a subset of t
 
 For mines where only capacity was provided, Climate TRACE used the capacity as provided. If production was provided in GEM’s GCMT, capacity was calculated by dividing the production by the capacity factors described above. Capacity values were backfilled to the year that the mine opened.
 
-**2.2.2 Emissions Factor**
+#### 2.2.2 Emissions Factor
 
 The emissions factor for each mine, *Coal EF*, represents the amount of greenhouse gases (GHGs) released during mining per amount of coal produced. The GHGs originate either a) as naturally occurring methane directly from the mine shaft and coal seams and pillars, and b) from the combustion of fuel to power excavators and hauling equipment used during the mining process. For simplicity Climate TRACE will refer to (a) as fugitive emissions and (b) as combustion emissions. Each type of emissions has an associated emissions factor, *Coal EF fugitive* and *Coal EF combustion,* which when combined, reflect the total emissions per unit coal production for a mine.
 
@@ -86,7 +86,7 @@ $\ \text{\ Coal\ EF}_{mine,\ gas\ type} = \text{Coal\ EF\ fugitive}_{mine,\ gas\
 
 (Eq. 1)
 
-**2.2.2.1 Emissions Factor for Fugitive Methane**
+#### 2.2.2.1 Emissions Factor for Fugitive Methane
 
 Climate TRACE represents the emissions factor for fugitive emissions as *Coal EF fugitive* (tonnes of emissions emitted per tonnes of coal produced). *Coal EF fugitive* depends on the methane gas of the mined coal and the methane from adjacent coal seams and pillars. The methane gas of the mined coal is directly estimated, whereas the methane from adjacent coal seams and pillars is estimated by applying an *emission factor coefficient*.
 
@@ -102,7 +102,7 @@ $\text{Coal\ EF\ fugitive}_{\text{mine}} = (\ \text{Methane\ gas\ content\ per\ 
 
 Where the emissions factor coefficient used in this work is 1.65, the average of the coefficient range from Ju et al (2016) \[7\].
 
-**2.2.2.2 Emissions Factor for GHGs from Combustion**
+#### 2.2.2.2 Emissions Factor for GHGs from Combustion
 
 Excavators and hauling equipment used during mining are powered by fuel combustion, which results in carbon dioxide, methane, and nitrous oxide emissions. Climate TRACE refers to the emissions factor for these combustion emissions as *Coal EF combustion*.
 
@@ -122,7 +122,7 @@ $\text{Coal\ EF\ combustion}_{country,\ gas\ type,\ fuel\ type} = \ {{Ratio\ of\
 
 (Eq. 5)
 
-**2.2.3 Emissions Reducing Solutions**
+#### 2.2.3 Emissions Reducing Solutions
 
 The following metadata was used to estimate the abatement potential for individual ERS strategies in the coal mining sector. *Note: Only rank 1 strategies are provided for assets on the Climate TRACE website and additional strategies will be made available in future releases.*
 
@@ -170,9 +170,9 @@ where, ${\%\ of\ total\ emissions\ for\ CH4\ source}_{T1}$= 0.60 (from the “Sp
 
 For mines that are associated with the ‘vam001’ strategy\_id, one can then multiply the CH<sub>4</sub> emissions factor by 0.60 in order to arrive at the new potential emissions factor if this mitigation strategy was applied at this mine.
 
-**2.3 Model**
+#### 2.3 Model
 
-**2.3.1 Emissions**
+#### 2.3.1 Emissions
 
 Climate TRACE calculated emissions for each asset (mine) by multiplying the production for a given mine (in tonnes of coal) by the emissions factor for that mine (in tonnes CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O per tonne of coal). The result is emissions (tonnes of CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O) per mine, as shown in Equation 8.
 
@@ -182,7 +182,7 @@ $\ \text{Emissions}_{mine,\ gas\ type} = \text{\ Coal\ EF}_{mine,\ gas\ type}\  
 
 Equation 8 was applied to 4,803 coal mines globally to estimate their emissions for years 2015 to 2025. To convert annual values to monthly values, refer to the Climate TRACE methodology “*Temporal Disaggregation of Emissions Data for the Climate TRACE Inventory*” in the GitHub repository [<span class="underline">Post Processing for Global Emissions and Metadata Completeness</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Post%20Processing%20for%20Global%20Emissions%20and%20Metadata%20Completeness).
 
-**2.3.2 Emissions Reductions**
+#### 2.3.2 Emissions Reductions
 
 Climate TRACE calculated the potential methane emissions reductions for each asset (mine) by multiplying the emissions for a given mine by the emissions factor scaling ratio for the appropriate ERS. The result is emissions reduced (tonnes of CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O emissions per mine), as shown in Equation 9.
 
@@ -190,17 +190,17 @@ $\ \text{Reductions}_{mine,\ gas\ type} = \text{Emissions}_{mine,\ gas\ type}\  
 
 (Eq. 9)
 
-**3. Climate TRACE Reporting of Emissions**
+#### 3. Climate TRACE Reporting of Emissions
 
 Coal mining emissions data for this sector is hosted in the Climate TRACE website: [<span class="underline">https://climatetrace.org/</span>](https://climatetrace.org/). Emissions for CH<sub>4</sub>, CO<sub>2</sub>, and N<sub>2</sub>O were estimated for each of the 4,803 coal mines identified globally for years 2015 to 2025. This emissions sector is equivalent to the United Nations Framework Convention on Climate Change (UNFCCC) sector “Fossil Fuel Operations 1.B.1.a - Coal Mining and Handling”. Climate TRACE default emissions values were reported as CH<sub>4</sub>, and CO<sub>2</sub> equivalent 20- and 100-year global warming potential (CO<sub>2</sub>e 20yr and 100yr GWP).
 
-**4. Results**
+#### 4. Results
 
 Asset level GHG emissions were estimated for 4,803 coal mines for years 2015 through 2025, as discussed in Section 3. In prior versions of ClimateTRACE data, emissions from fuel combustion during mining operations were not incorporated. Since their inclusion in V5.9.0 of the ClimateTRACE data, our dataset represents a more complete representation of GHG emissions in this sector.
 
 Coal mining is one of the top emitting sectors globally with nearly 2.4 billion tonnes of CO<sub>2</sub>e 100yr GWP emitted in 2025. The vast majority of these emissions (65%) come from China, trailed by India and the United States of America (both around 6% of global totals). By applying emissions reducing solutions, such as on-site recovery and reuse and VAM oxidation, up to 900M tonnes of CO<sub>2</sub>e 100yr GWP could be mitigated per year.
 
-**5. Supplementary Metadata**
+#### 5. Supplementary Metadata
 
 This dataset provides emissions estimates for active coal mines. Metadata information is provided in the tables below.
 
@@ -396,7 +396,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 > **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**References**
+#### References
 
 1.  Boettcher, C., Garg A., Mbuthi, P., Oliver, S.J., Quadrelli, R., Randles, C.A., Rodrigues de Souza, R., Singh, A., Strogies, M., Tadlya, K., Uvarova, N., Watterson, J.D., Weitz M., Yamba, F.,, Yu, S., and Zhu, S., 2019. *Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. Chapter 4, Fugitive Emissions.* [<span class="underline">https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/2\_Volume2/19R\_V2\_4\_Ch04\_Fugitive\_Emissions.pdf</span>](https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/2_Volume2/19R_V2_4_Ch04_Fugitive_Emissions.pdf)
 

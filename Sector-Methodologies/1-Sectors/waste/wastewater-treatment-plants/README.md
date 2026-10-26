@@ -1,10 +1,12 @@
-**Waste sector: Wastewater Treatment Plant Emissions** <img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+
+### Waste sector: Wastewater Treatment Plant Emissions
 
 **Shelby Anderson<sup>1,4</sup>, Alex Chen<sup>1,4</sup>, Karl Otness<sup>1,4</sup>, Shriyan Reyya<sup>1,4</sup>, Jason Lee<sup>1,4</sup>, Shannon Wasko<sup>1,4</sup>, Gary Collins<sup>1,4</sup>, Paul Tulloch<sup>2,4</sup>, Lekha Sridhar<sup>3,4</sup>, Christine Piatko<sup>1,4</sup>, and Elizabeth Reilly<sup>1,4</sup>**
 
 *1) The Johns Hopkins University Applied Physics Laboratory, 2) Machine Learning and Env., Applied Research Consultant - Ottawa, Canada, 3) WattTime, 4) Climate TRACE*
 
-**1. Introduction**
+#### 1. Introduction
 
 Wastewater is water that has been used for domestic or industrial purposes. In domestic settings, wastewater contains human waste, food scraps and residue, and household chemicals. In industrial settings, wastewater may contain a broad range of contaminants resulting from activities such as mining, oil and gas extraction, steelmaking, pulp and paper production, food processing, textile manufacturing, and chemical and pharmaceutical manufacturing (UNESCO, 2017). For the purposes of this analysis, a wastewater treatment plant (WWTP) is defined as a centralized wastewater treatment system used to treat either domestic or industrial wastewater. WWTPs may include any or all treatment processes (primary, secondary, and advanced) that occur onsite between inflow of untreated wastewater and outflow of treated wastewater (i.e., effluent). WWTPs that conduct primary treatment utilize mechanical processes, such as screening, grit removal, and sedimentation, to remove larger solids from the wastewater. Secondary treatment harnesses biological processes to break down contaminants with the help of microorganisms. Advanced wastewater treatment builds upon the biological processes used in secondary treatment to further purify the water through enhanced biological nutrient removal (nitrification and denitrification) or through advanced physical and chemical processes. Untreated wastewater or raw sewage must be treated before release to the environment in order to mitigate the spread of disease (UNICEF, 2022) and environmental pollutants.
 
@@ -26,13 +28,13 @@ Meanwhile, the industrial asset- and country-level models use Climate TRACE asse
 
 Lastly, for every WWTP in the dataset, one or more Emissions Reduction Strategies (ERS) was assigned, depending on the plant’s technology level. The ERS demonstrates how WWTP emissions could be lowered if different treatment processes were applied. For example, if a WWTP that uses only primary treatment processes were retrofitted to be capable of secondary treatment, and the change in technology level results in emissions with a lower CO<sub>2</sub> Equivalent (CO<sub>2</sub>e) for 100-year Global Warming Potential (GWP), the WWTP will be assigned a Primary to Secondary ERS. When more than one ERS is applicable to a WWTP, each ERS is assigned a ranking based on the CO<sub>2</sub> Equivalent for 100-year Global Warming Potential (GWP). There are ten different ERS, each of which is described in greater detail in section 2.1.9. All ten of these strategies apply to domestic WWTPs, while only Intelligent Management applies to industrial WWTPs.
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
 The following datasets and methods were employed to (a) locate and identify wastewater WWT assets (b) estimate wastewater CH<sub>4</sub> and N<sub>2</sub>O emissions for individual domestic and industrial WWT assets globally for years 2015 to mid-year 2026, at a monthly time scale, (c) estimate wastewater emissions at a country level, incorporating both centralized and decentralized treatment, and (d) assign one or more ranked ERS for each WWTP. Section 2.6 provides a summary of asset and country-level emissions data produced.
 
-**2.1 Datasets employed**
+#### 2.1 Datasets employed
 
-**2.1.1 Wastewater treatment plants data collection**
+#### 2.1.1 Wastewater treatment plants data collection
 
 The HydroWASTE dataset provided by HydroSHED (HydroWASTE, 2022) was used to source images required for training the binary classification machine learning model. HydroWASTE provides spatially explicit locations and estimates for the population served, level of technology used, and outfall location for 58,502 centralized WWTPs around the globe (Macedo et al., 2022a). These asset-level metadata on population served and technology level were used to estimate GHG emissions. Figure A4.1 of Appendix 4 contains the distribution of all centralized WWTPs in HydroWASTE that are not labeled “Closed” or “Not Operational”.
 
@@ -40,19 +42,19 @@ The HydroWASTE database was developed by combining national and regional WWTP re
 
 National inventories of wastewater treatment data, including the European Environment Agency’s (EEA) Urban Waste Water Treatment Directive reported data (EEA, 2023) and the United States Environmental Protection Agency (EPA) National Sewershed Dataset (EPA, 2022a) were utilized for asset inventory verification and augmentation purposes (see Section 2.2.2). The EEA dataset includes all the urban wastewater treatment plants as reported by the Member States on the implementation of the directive from the European Commission. The German subset was used to compare the model results to reported data in the top 80 cities, by population, in Germany (see Section 3.1).
 
-**2.1.2 Satellite Imagery**
+#### 2.1.2 Satellite Imagery
 
 Satellite imagery hosted in the Google Map Statics Application Programming Interface (API) (Google, n.d.) was used for WWTP model training. Google Maps Static API hosts satellite imagery datasets at various zoom levels: from composite imagery provided by the Landsat and Copernicus programs to finer spatial resolutions consisting of Maxar and Airbus imagery (Figure 1). The API returns an image based on a given coordinate, size, scale, zoom, and map type (satellite); size defines the rectangular dimensions of the image in pixels; scale affects the number of pixels returned, with scale = 1 retaining the dimensions defined by the size parameter; zoom defines the zoom level of the map, which determines the magnification level. Using reported WWTPs, images of the locations were extracted using the Maps Static API, then were manually sorted to create the initial training dataset. For this research, the input image from Google Maps Static API is set to a size of 400\*400 pixels (px), which amounts to 583m by 583m for this location, a scale of 1, and a zoom level of 16.
 
-> <img src="figures/figure1.png" style="width:3.23438in;height:3.23438in" />
+<img src="figures/figure1.png" style="width:3.23438in;height:3.23438in" />
 
 **Figure 1.** An example of the Google Maps Static API for the Berlin Water Works wastewater treatment plant, Waßmannsdorf, at 400\*400 pixels, scale 1, and zoom level 16 input image. Coordinates: latitude = 52.3886, longitude = 13.47396.
 
-**2.1.3 IPCC emission factors**
+#### 2.1.3 IPCC emission factors
 
 Emissions factors (EFs) from “Chapter 6: Wastewater Treatment and Discharge” in “Volume 5: Waste” of the 2019 Refinement to the *2006 IPCC Guidelines for National Greenhouse Gas Inventories* were used for estimating emissions for WWT assets (Bartram et al., 2019). For each WWTP, both the treatment of influent wastewater and the discharge of treated effluent yield emissions, and different pathways have different emissions factors for CH<sub>4</sub> and N<sub>2</sub>O. For both species, Tier 2 approaches are used for estimating the emissions from treatment, whereas Tier 1 approaches were used for discharge (see IPCC Tables 6.3 and 6.8A for CH<sub>4</sub> and N<sub>2</sub>O, respectively). Country-specific population behavior and demographics and asset-specific technology levels were used to estimate the total amount of waste in the influent wastewater treated at a WWT asset, which denotes Tier 2. No differentiation between discharge receiving water bodies (i.e., rivers, lakes, hypoxic/nutrient-impacted) is made, which denotes Tier 1.
 
-**2.1.4 Population Data**
+#### 2.1.4 Population Data
 
 Regional population data is used to scale HydroWASTE or government-reported population served data for centralized WWT assets for use across the full data period, to generate population served estimates for WWT assets for which this information is not reported in the datasets described in Section 2.1.1, and to estimate country-level emissions. Year-to-year regional population estimates are obtained from WorldPop 2025, which covers 242 countries (Bondarenko et al., 2025). Regional population estimates for locations not covered by WorldPop data were estimated as 0, and decentralized asset emissions were not calculated for these regions (see Appendix 8 for details). Monthly temporalization is discussed in Appendix 7.
 
@@ -62,75 +64,75 @@ The HydroWASTE dataset authors created assets within the U.S. and EU using the E
 
 The WHO/UNICEF Joint Monitoring Programme for Water Supply, Sanitation, and Hygiene WASH data was used to estimate the population within subnational regions whose waste is left untreated or managed via a decentralized pathway, specifically, by septic system or latrine (WHO/UNICEF, 2023). These estimates enabled the creation of untreated and decentralized region-level “assets” whose GHG emissions could be modeled and added to those of centralized assets to obtain a more accurate global total (see Section 2.3.1).
 
-**2.1.5 Technology Level Data**
+#### 2.1.5 Technology Level Data
 
 The incorporation of publicly available information on the percentage of waste being managed using different pathways (i.e., septic, latrine, sewer, untreated) within urban regions was trialed using a deep dive into major Philippine cities. Statistics from the Republic of the Philippines Philippine Statistics Authority (Philippine Statistics Authority, 2023b, 2023a), as well as from the Manila water utility and contractor (Manila Water Company, Inc., n.d.; The WABAG Group, n.d.) were used to supplement the country-level wastewater pathway percentages from WHO/JMP WASH data. Administrative boundaries for Philippine cities were pulled from the Humanitarian Data Exchange (HDX) (HDX, 2026).
 
 For WWTPs newly identified through the satellite imagery-based ML model, wastewater treatment level (i.e., primary, secondary, or advanced) was estimated using the same basic approach determined through statistical analysis by the HydroWASTE datasets authors in Section 2.1.4 of their 2022 paper (Macedo et al., 2022a). Specifically, the treatment level for a WWTP is assigned based on the World Bank’s Gross National Income (GNI) levels and the plant’s population served (World Bank Group, 2025). For plants located within high-income countries, if the population served is greater than 3,000 people, the treatment level is set to advanced; if the population served is less than 3,000, the treatment level is set to secondary. For plants located within lower-middle- or upper-middle-income countries, the treatment level is set to secondary. Finally, plants within low-income countries are assumed to operate at a primary treatment level. These assumptions are preliminary, especially in the case of low-income countries for which government-reported data on treatment level for WWTPs is lacking.
 
-**2.1.6 Additional Datasets used for the Country-Level Model**
+#### 2.1.6 Additional Datasets used for the Country-Level Model
 
 For the new country-level model, WorldPop 2025 population data (Bondarenko et al., 2025) are combined with WHO/UNICEF Joint Monitoring Programme WASH data to determine the country-level population treated by different wastewater pathways, as well as the country-level population whose waste is untreated or the result of open defecation (WHO/UNICEF, 2023). Industrial wastewater was determined at a country-level by using FAOSTAT estimates for various food and alcohol production (Food and Agriculture Organization of the United Nations (FAO), n.d.).
 
-**2.1.7 Climate TRACE Data Used**
+#### 2.1.7 Climate TRACE Data Used
 
 Climate TRACE data for steel and pulp and paper production are used as the source of location and activity information for industrial wastewater treatment assets. Asset-level data for wastewater associated with other industries is not currently modeled.
 
-**2.1.8 Gap-filling and Forward-filling**
+#### 2.1.8 Gap-filling and Forward-filling
 
 Regions with low WASH data coverage (less than 5% of the population assigned a sanitation category) were mapped to other regions with similar geographical, historical, or cultural ties or assigned a fixed estimate. For example, Åland, an autonomous region of Finland, is not covered by WASH and was mapped to Finland. Appendix 9 contains the complete mapping. For each country, years without WASH data were filled by linear interpolation and values were then forward- and backward-filled as needed to complete data ranges for years from 2015 through 2026.
 
-**2.1.9 Datasets for Emissions Verification**
+#### 2.1.9 Datasets for Emissions Verification
 
 U.S. and E.U. WWTPs’ emissions estimates were verified with the most recent emissions inventory by the U.S. Environmental Protection Agency (EPA) (EPA, 2023) and national-level emissions estimates for E.U. countries (Parravicini et al., 2022).
 
-**2.1.10 ERS Context and Sourcing**
+#### 2.1.10 ERS Context and Sourcing
 
 EFs from Tables 6.3 and 6.8A of “Chapter 6: Wastewater Treatment and Discharge” in “Volume 5: Waste” of the 2019 Refinement to the *2006 IPCC Guidelines for National Greenhouse Gas Inventories* were used for estimating CH<sub>4</sub> and N<sub>2</sub>O emissions, respectively, for WWT assets to which ERS had been applied (Bartram et al., 2019). Brief descriptions of each ERS, as well as context surrounding the current use of these strategies in practice, are provided below:
 
-#### ***UP: Untreated to Primary***
+#### UP: Untreated to Primary
 
 This strategy involves constructing one or more centralized WWTPs with at least primary treatment capability in order to manage the currently untreated wastewater within a region.
 
-#### ***CL: Covered Lagoon***
+#### CL: Covered Lagoon
 
 This strategy is applied to domestic assets and represents an effective, low-cost approach to reducing the large amounts of methane produced in lagoons, also known as waste stabilization ponds, where waste is digested anaerobically. The U.S. EPA recommends covering municipal wastewater treatment lagoons in its 2022 compliance advisory (EPA, 2022).
 
-#### ***VL: Ventilated Latrine***
+#### VL: Ventilated Latrine
 
 This strategy involves retrofitting all pit latrines within a region with ventilation systems.
 
-#### ***SP: Septic to Primary***
+#### SP: Septic to Primary
 
 This strategy involves bypassing all septic tanks within a region and connecting to sewer systems for treatment in a centralized WWTP with at least primary treatment capability.
 
-#### ***SS: Septic to Secondary***
+#### SS: Septic to Secondary
 
 This strategy involves bypassing all septic tanks within a region and connecting to sewer systems for treatment in a centralized WWTP with at least secondary treatment capability.
 
-#### ***SA: Septic to Advanced***
+#### SA: Septic to Advanced
 
 This strategy involves bypassing all septic tanks within a region and connecting to sewer systems for treatment in a centralized WWTP with advanced treatment capability.
 
-#### ***PS: Primary to Secondary***
+#### PS: Primary to Secondary
 
-#### This strategy is applied to domestic assets and involves constructing secondary treatment structures (e.g., trickling filters, aeration tanks, secondary clarifiers) and connecting them with the existing primary treatment effluent. 
+This strategy is applied to domestic assets and involves constructing secondary treatment structures (e.g., trickling filters, aeration tanks, secondary clarifiers) and connecting them with the existing primary treatment effluent.
 
-#### ***PA: Primary to Advanced***
+#### PA: Primary to Advanced
 
 This strategy is applied to domestic assets and involves constructing advanced treatment structures (e.g., denitrifying filters) and connecting them with the existing primary treatment effluent.
 
-#### ***2A: Secondary to Advanced***
+#### 2A: Secondary to Advanced
 
 This strategy is applied to domestic assets and involves constructing secondary treatment structures (e.g., aeration tanks) and advanced treatment structures (e.g., denitrifying filters) and connecting them with the existing primary treatment effluent.
 
-#### ***IM: Intelligent Management***
+#### IM: Intelligent Management
 
 Adopting intelligent management technologies which optimize chemical dosing and biological oxygen levels can increase treatment efficiency and reduce emissions (see Appendix 2 for further details). This strategy is applied to both domestic and industrial assets.
 
-**2.2 Methods**
+#### 2.2 Methods
 
-**2.2.1. Machine Learning for Verifying and Detecting Wastewater Treatment Facilities**
+#### 2.2.1. Machine Learning for Verifying and Detecting Wastewater Treatment Facilities
 
 The HydroWASTE dataset was used to produce a facility-level dataset of WWTP emissions for Phase 5 of Climate TRACE; however, the confidence level with which the dataset’s authors rated facility location coordinates varied from asset to asset. In order to verify HydroWASTE locations and detect unidentified WWTPs, a vision transformer (ViT) machine learning model was developed.
 
@@ -150,13 +152,13 @@ The spectral component uses Sentinel-2 satellite imagery to characterize water p
 
 The geographic component incorporates population wastewater catchment areas constructed by combining Kontur population estimates on an H3 hexagonal grid with Global Human Settlement Layer (GHSL) settlement information (Kontur, 2020; Pesaresi et al., 2024). Contiguous populated cells and connected settlement areas define proxy wastewater service areas, linked to the global population framework through GADM level-2 administrative units. Wastewater catchment area membership, proximity, and population provide contextual evidence for candidate classification and guide deployment around smaller towns and villages. Segmentation, spectral, and geographic evidence are combined to refine wastewater lagoon predictions. Testing uses geographically separated evaluation datasets to assess the individual and combined contributions of these components to detection precision and recall.
 
-**2.2.2 Validating and updating HydroWASTE WWTP characteristics**
+#### 2.2.2 Validating and updating HydroWASTE WWTP characteristics
 
 In order to improve the accuracy of country-level emissions estimates, analyses were conducted to validate the characteristics of WWTPs in the HydroWASTE dataset. 87 assets were identified for which the ISO3 value and the country were misaligned. Reasons for this misalignment may include shifting geopolitical borders or inaccurate reporting of the WWTP coordinates in the original dataset. For example, in some regions, the site of the effluent outfall may have been reported as the WWTP location, leading to coordinates in bodies of waters along international boundary lines. For each of the misaligned assets, a visual inspection of the satellite imagery for the asset’s coordinates was conducted in order to clarify which country the asset was located in. The satellite imagery provided sufficient information to correct 82 of these assets, leaving 5 which require further investigation. Asset locations for 66 assets provided by HydroWASTE contained integer values for at least one of the coordinates and were likewise investigated; in 53 cases, satellite imagery and known characteristics such as WWTP name provided sufficient information to increase the precision of the WWTP coordinates; l3 cases require further investigation.
 
 The 2016 and 2022 EPA Sewersheds datasets include the locations, treatment level, and population served for WWTPs and lagoons in U.S. states and territories (EPA, 2022a). These government-reported data were used to update the U.S. assets, originally sourced from the HydroWASTE dataset: 1,989 new U.S. assets with associated metadata were added to the inventory, and 115 assets were determined to be closed and removed from the inventory. The EPA dataset provides a snapshot view of the state of U.S. WWTPs between dataset publication years (2012, 2016, 2022), and so the dates for asset operating and closure events noted in the Climate TRACE event file are set as multi-year ranges.
 
-**2.3 Estimating Asset-level Domestic Emissions**
+#### 2.3 Estimating Asset-level Domestic Emissions
 
 Each centralized WWTP sourced from the HydroWASTE dataset is associated with an estimated population served and technology level. For untreated and decentralized wastewater assets, as well as for centralized WWTPs identified by satellite model, these characteristics were modeled. For all assets, population served and technology level were used with methodologies described in “Chapter 6: Wastewater Treatment and Discharge” in “Volume 5: Waste” of the 2019 Refinement to the *2006 IPCC Guidelines for National Greenhouse Gas Inventories* (Bartram et al., 2019), which will be subsequently referred to by “IPCC” and the “IPCC guidelines”, to estimate the monthly CH<sub>4</sub> and N<sub>2</sub>O emissions. The IPCC methodologies were derived for estimating country-level emissions based on population and demographics and not for individual assets; however, simple modifications were performed to adapt these methods for this level of granularity. All modifications are summarized in the following text and explicitly described in Appendix 1. Figure 4 contains a flow diagram of the methodology used to obtain source-level emissions estimates for WWTPs in the filtered HydroWASTE dataset. Relevant sections are indicated for each part of the emissions model.
 
@@ -172,7 +174,7 @@ As this is a measured quantity, *PE* of a WWTP may include waste from industrial
 
 All population data in HydroWASTE were valid for 2022 and thus need to be extended back to 2015 in order to provide emissions over time. This was achieved with linear scaling based on country-level population changes within the country where a WWTP is located. Country-level population values were taken from WorldPop (see section 2.1.4).
 
-**2.3.1 Decentralized Asset Inventory**
+#### 2.3.1 Decentralized Asset Inventory
 
 A proof of concept was conducted to estimate CH<sub>4</sub> and N<sub>2</sub>O emissions from untreated and decentralized wastewater at the GADM2 level, beginning with the Philippines, for which 69% of wastewater is treated by septic system, and with all countries in the WHO/UNICEF WASH data for which over 50% of wastewater is untreated and which have sufficient population and sanitation data to support interpolation (Appendix 8) (WHO/UNICEF, 2023).
 
@@ -182,19 +184,19 @@ The population whose waste is managed through decentralized treatment or left un
 
 Assets with a treatment level of “Untreated” were assigned a value of zero for the following model parameters: wastewater treatment nitrogen removal fraction and fraction of total wastewater organics removed during wastewater treatment. These untreated assets were then combined with the set of domestic assets for emissions calculation.
 
-**2.3.2 Emissions Estimates**
+#### 2.3.2 Emissions Estimates
 
 Generally speaking, there are two sources of emissions from WWTPs: 1., the treatment of the water to remove suspended solids and hazardous by-products of waste and industry; and 2., the discharge of treated water (effluent) with some remaining waste into water systems, where biochemical reactions that release emissions occur. The IPCC guidelines provide methods for estimating the emissions of these individual pathways for both CH<sub>4</sub> and N<sub>2</sub>O. See Appendix 1 for a detailed explanation of the methodology and formulae used, including a discussion of uncertainty quantification and confidence (Appendix 1.e.).
 
-**2.3.3 Waste Model**
+#### 2.3.3 Waste Model
 
 Uniting the treatment and discharge pathways are models predicting the amount of organic waste and nitrogen in the influent water treated by centralized WWTPs (the *Waste Model*; Figure 4) and how that treatment influences the emissions based on the technology level of a plant (the *Technological Treatment Model*; Figure 4). See Appendix 1.b. for further details.
 
-**2.3.4 Technological Treatment Model**
+#### 2.3.4 Technological Treatment Model
 
 At centralized WWTPs, sludge is the by-product of water treatment and is produced at each level of treatment (primary, secondary, advanced). In addition, different forms of biological treatments are available at plants at different levels of treatment. For a detailed explanation of the Technological Treatment Model, see Appendix 1.c.
 
-**2.4 Estimating Asset-level Industrial Emissions**
+#### 2.4 Estimating Asset-level Industrial Emissions
 
 Wastewater emissions are estimated for the assets included in the current year’s Climate TRACE pulp and paper and steel asset inventories. Figure 5 shows the locations of the 1,027 steel assets and 848 pulp and paper assets for which industrial wastewater emissions were estimated.
 
@@ -204,11 +206,11 @@ Wastewater emissions are estimated for the assets included in the current year�
 
 Conveniently, the activity for industrial wastewater emissions – tonnes of product – is the same as that for the emissions from the industrial process. As is the case for domestic wastewater, industrial wastewater produces GHGs during both treatment and in disposal. See Appendix 1.f. for the formulae used in modeling treatment of CH<sub>4</sub> and N<sub>2</sub>O emissions.
 
-**2.5 Estimating Country-Level Emissions**
+#### 2.5 Estimating Country-Level Emissions
 
 Decentralized treatment constitutes the majority of wastewater emissions, where precise spatial identification of emissions is difficult. For this reason, a country-level approach which models both centralized and decentralized emissions is needed to reach a holistic understanding of the total wastewater emissions.
 
-**2.5.1 Domestic Wastewater**
+#### 2.5.1 Domestic Wastewater
 
 Like other inventories (e.g., EDGAR and CEDS), Climate TRACE’s country-level domestic wastewater emissions were estimated by partitioning country-level populations into separate treatment pathways and applying pathway-specific emissions factors. This is expressed for methane and country by,
 
@@ -236,11 +238,11 @@ The IPCC guidelines differentiate latrines’ emissions based on wet versus dry 
 
 The IPCC guidelines also differentiate emissions from latrines in dry climates based on whether the latrine is communal or serves a small family of three to five persons. The model currently assumes all latrines are communal.
 
-**2.5.2 Industrial Wastewater**
+#### 2.5.2 Industrial Wastewater
 
 Industrial wastewater treatment emissions were estimated at a country level along with effluent disposal emissions for several industries: meat production, pulp and paper, petroleum refinery and petrochemical manufacturing, steel production, fruit and vegetable production, beer production, and ethanol refining. All values are obtained from FAOStat with the exception of steel, pulp and paper, and petroleum refining, which all used Climate TRACE production estimates. It is assumed that aerobic advanced treatment is used, as with the asset-level estimates.
 
-**2.5.3 Incorporating ERS into model**
+#### 2.5.3 Incorporating ERS into model
 
 This section details the method used to generate emissions for each of the 10 ERS described in section 2.1.10. *Note: Only rank 1 strategies are provided for assets on the Climate TRACE website and additional strategies will be made available in future releases.*
 
@@ -248,7 +250,7 @@ The methods are based on the theoretical assumption that more advanced wastewate
 
 In order for an ERS to be considered appropriate for a particular WWTP, it must assume an initial treatment level corresponding with that of the plant and result in CO2e emissions with reduced 100-yr GWP.
 
-#### ***UP: Untreated to Primary***
+#### UP: Untreated to Primary
 
 Emissions factors for this ERS were generated by changing the treatment level from *Untreated* to *Primary*, running the model as usual, dividing the output CH<sub>4</sub> and N<sub>2</sub>O emissions estimates for these plants at the *Untreated* level from the emissions estimates for these plants at the *Primary* level, and taking the median value.
 
@@ -256,61 +258,61 @@ Importantly, nitrous oxide may be generated during wastewater treatment in centr
 
 All assets with a treatment level of *Untreated* are assigned the *UP* ERS for the strategy ID.
 
-#### ***VL: Ventilated Latrine***
+#### VL: Ventilated Latrine
 
 The CH4 emission factor for this ERS was based on the results of a 2025 study of methane emissions from pit latrines in Malawi, which found that the installation of a ventilation pipe reduced methane emissions by 95% (Sande et al., 2025). Malawi has a high water table, and it is important to note that the amount of methane reduced may vary in regions and cases where groundwater does not reach the pit. Further analysis is required to confirm the effect of ventilation on GHG emissions in different environments. Nitrous oxide is not considered by this ERS.
 
 All assets with a treatment level of Latrine are assigned the VL ERS for the strategy ID.
 
-#### ***SP: Septic to Primary***
+#### SP: Septic to Primary
 
 Emissions factors for this ERS were generated by changing the treatment level from *Septic* to *Primary*, running the model as usual, dividing the output CH<sub>4</sub> and N<sub>2</sub>O emissions estimates for these plants at the *Septic* level from the emissions estimates for these plants at the *Primary* level, and taking the median value.
 
 All assets with a treatment level of *Septic* are assigned the *Septic to Primary* ERS, the *Septic to Secondary* ERS and the *Septic to Advanced* ERS. The priority ranking for each of these three strategies is determined by multiplying the CH<sub>4</sub> and N<sub>2</sub>O emissions factor ratios by the asset’s CH<sub>4</sub> and N<sub>2</sub>O emissions factors, respectively, as well as by the asset’s activity value, then converting the results to their CO<sub>2</sub>e (100-yr GWP) and summing them together to get the total CO<sub>2</sub>e reduction value for each ERS. The ERS are then assigned priority levels 1, 2, and 3, with the ERS leading to the highest CO<sub>2</sub>e reduction value given a priority of 1.
 
-#### ***SS: Septic to Secondary***
+#### SS: Septic to Secondary
 
 Emissions factors for this ERS were generated by changing the treatment level from *Septic* to *Secondary*, running the model as usual, dividing the output CH<sub>4</sub> and N<sub>2</sub>O emissions estimates for these plants at the *Septic* level from the emissions estimates for these plants at the *Secondary* level, and taking the median value.
 
-#### ***SA: Septic to Advanced***
+#### SA: Septic to Advanced
 
 Emissions factors for this ERS were generated by changing the treatment level from *Septic* to *Advanced*, running the model as usual, dividing the output CH<sub>4</sub> and N<sub>2</sub>O emissions estimates for these plants at the *Septic* level from the emissions estimates for these plants at the *Advanced* level, and taking the median value.
 
-#### ***CL: Covered Lagoon***
+#### CL: Covered Lagoon
 
 The CH<sub>4</sub> emission factor for this ERS was based on the theoretical assumption that recapturing biogas is 100% effective. However, it is important to note that, due to fugitive emissions, it is expected that 10% of the methane produced from covered lagoons will leak (United Nations Framework Convention on Climate Change, n.d.). Nitrous oxide is not considered by this ERS.
 
 All assets with a treatment level of *Lagoon* are assigned the *CL* ERS for the strategy ID.
 
-#### ***PS: Primary to Secondary***
+#### PS: Primary to Secondary
 
 Emissions factors for this ERS were generated by changing the treatment level from *Primary* to *Secondary*, running the model as usual, dividing the output CH<sub>4</sub> and N<sub>2</sub>O emissions estimates for these plants at the *Primary* level from the emissions estimates for these plants at the *Secondary* level, and taking the median value.
 
 All assets with a treatment level of *Primary* are assigned both the *Primary to Secondary* ERS and the *Primary to Advanced* ERS. The priority ranking for each of these two strategies is determined by multiplying the CH<sub>4</sub> and N<sub>2</sub>O emissions factor ratios by the asset’s CH<sub>4</sub> and N<sub>2</sub>O emissions factors, respectively, as well as by the asset’s activity value, then converting the results to their CO<sub>2</sub>e (100-yr GWP) and summing them together to get the total CO<sub>2</sub>e reduction value for each ERS. The ERS with the highest CO<sub>2</sub>e reduction value is given a priority of 1, while the ERS with the lower CO<sub>2</sub>e reduction value is given a priority of 2.
 
-#### ***PA: Primary to Advanced***
+#### PA: Primary to Advanced
 
 Emissions factors for this ERS were generated by changing the treatment level from *Primary* to *Advanced*, running the model as usual, dividing the output CH<sub>4</sub> and N<sub>2</sub>O emissions estimates for these plants at the *Primary* level from the emissions estimates for these plants at the *Advanced* level, and taking the median value.
 
-#### ***2A: Secondary to Advanced***
+#### 2A: Secondary to Advanced
 
 Emissions factors for this ERS were generated by changing the treatment level from *Secondary* to *Advanced*, running the model as usual, dividing the output CH<sub>4</sub> and N<sub>2</sub>O emissions estimates for these plants at the *Secondary* level from the emissions estimates for these plants at the *Advanced* level, and taking the median value.
 
 All assets with a treatment level of *Secondary* are assigned the *2A* ERS for the strategy ID.
 
-#### ***IM: Intelligent Management***
+#### IM: Intelligent Management
 
 This strategy, based on calculations from a 2024 assessment of GHG mitigation strategies for 3,444 WWTPs in China (Tong et al., 2024), assumes the implementation of both intelligent aeration technology and intelligent dosing technology. This study calculates the mitigation potential of direct GHG emissions when applying intelligent aeration and dosing technology to be 60% (see Table S4 in Tong et al.). The average nitrous oxide reductions for intelligent aeration and intelligent dosing are 62.5% and 60%, respectively, as given by Tong et al., which notes that “over 60% of N<sub>2</sub>O productions were determined to be reduced by the controlled supplies of chemicals in some laboratory studies”, and as calculated by taking the average of the 35- 90% range provided by Duan et al. for intelligent aeration (Duan et al., 2021; Tong et al., 2024). An average CH<sub>4</sub> emissions retention percentage of 53.72% can then be extrapolated given the average percentage of carbon dioxide equivalent (CO<sub>2</sub>e) accounted for by CH<sub>4</sub> within our dataset’s subset of advanced WWTPs (65%).
 
 All assets with a treatment level of *Advanced* are assigned the *IM* ERS for the strategy ID.
 
-**2.6. Summary**
+#### 2.6. Summary
 
 In all, there are four models that were developed for estimating CH<sub>4</sub> and N<sub>2</sub>O emissions from wastewater from 2015 to mid-year 2026 at a monthly time-scale: two asset-level models and two country-level models for domestic and industrial wastewater. The domestic asset-level model used locations and metadata which were sourced from HydroWASTE, identified by satellite, and modeled, with emissions calculated per IPCC guidelines, whereas the industrial asset-level model estimated emissions for Climate TRACE assets using IPCC guidelines. The domestic country-level model used sanitization statistics from the WHO/UNICEF WASH data, whereas the industrial country-level model combined Climate TRACE industrial data along with FAOSTAT food production statistics. Year-to-year population data were splined to produce population estimates for wastewater assets at a monthly scale.
 
-**3. Results**
+#### 3. Results
 
-**3.1. Domestic WWTPs emissions estimates**
+#### 3.1. Domestic WWTPs emissions estimates
 
 The WWTP inventory comprises 59,325 centralized assets for the years 2015 to mid-year 2026, including lagoons and other centralized facilities with primary, secondary, and advanced treatment capabilities. For the year 2025, it is estimated that these centralized sources account for 154.3 MT of CO<sub>2</sub>e. Figure 7. shows the global distribution of centralized WWTPs and their GHG emissions in terms of global warming potential (GWP) over a 100-year period.
 
@@ -340,11 +342,11 @@ Uncertainty of emissions estimates is very high. For the majority of centralized
 
 **Figure 11.** Uncertainty of emissions compared to emissions estimated disaggregated by population type (population served, population equivalent, estimated population) and uncertainty of CO<sub>2</sub>e as a function of population. For lower emissions estimates, uncertainty for emissions of WWTPs with estimated populations is significantly higher than those with reported populations. Overall, uncertainty of emissions is significantly higher than the estimated value.
 
-**3.2. Verification of results**
+#### 3.2. Verification of results
 
 The country-level integrations of the GHG emissions from asset-level centralized WWTPs was compared to U.S. and E.U. GHG inventories. This allows for the verification of the emissions model for WWTPs where population served and *PE* is provided, as U.S. WWTPs are mostly associated with population served values and EU WWTPs mostly associated with *PE* values in HydroWASTE. A verification of emissions for WWTPs where estimated population served quantities were provided was not performed, as these have very high uncertainties. Model limitations which may impact how well Climate TRACE asset-level data align with emissions estimates for the U.S. and EU are discussed in Section 4.
 
-**3.2.1 Comparison of Estimated Emissions to U.S. and EU Inventories**
+#### 3.2.1 Comparison of Estimated Emissions to U.S. and EU Inventories
 
 The EPA produces annual emissions estimates for the entirety of the U.S. using IPCC methodology. For verification, a comparison for CH<sub>4</sub> and N<sub>2</sub>O emissions from centralized WWTP in 2021 was made using the EPA inventory published in 2023 (EPA, 2023). The EPA disaggregates domestic wastewater treatment into 4 categories: Septic Systems, Centrally-Treated Aerobic Systems, Centrally-Treated Anaerobic Systems, and Centrally-Treated Wastewater Effluent. For this comparison, the Centrally-Treated Aerobic and Centrally-Treated Anaerobic Systems emissions were combined and compared to treatment emissions from the Climate TRACE sources, and the effluent emissions from the EPA inventory were compared to the effluent emissions from the Climate TRACE sources. The Septic Systems emissions are not used for comparison here. Table 2 has the comparisons for both treatment and effluent emissions, as well as the CO<sub>2</sub> equivalent (CO<sub>2</sub>e) 100 year global warming potential in kilotonnes.
 
@@ -367,11 +369,11 @@ Parravicini *et al.* utilized IPCC methodologies with chemical-process specific 
 
 **Figure 12.** A country-by-country comparison of emissions from centralized, domestic WWTPs between Parravicini et al. and integrated Climate TRACE sources. The countries with the highest and lowest emissions from WWTPs are labeled, as well as the EU summation and outliers. All countries align very well with the exception of Croatia (HRV).
 
-**3.2.2 Satellite verification of ERS implementation**
+#### 3.2.2 Satellite verification of ERS implementation
 
 In the future, we may be able to verify the construction of new WWTP facilities or the upgrading of WWTP infrastructure at the asset level using satellite imagery. While this method of verification likely will not allow us to determine whether certain technology, such as intelligent chemical dosing systems, has been implemented, it does grant us the opportunity to check for the existence of new structures, lagoon covers, etc. in accordance with an ERS. Where ERS implementation cannot necessarily be verified by satellite, further information may become available at the asset, regional, or national level in the form of reports issued by governments or other institutions. In these cases, caution will need to be taken to disambiguate the terms used by various sources to describe treatment levels and technologies.
 
-**3.3 Emissions estimates for Country-level emissions**
+#### 3.3 Emissions estimates for Country-level emissions
 
 As shown in Figure 13, applying WASH pathway utilization percentages to WorldPop country-level population estimates reveals that, as of the most recent WASH estimates from 2024, most of the world’s domestic wastewater is collected in sewers, by which it is presumably routed to WWTPs for treatment, followed by collection in septic systems, then in latrines and other improved sanitation pathways. Almost 11% of the world’s wastewater is accounted for by open defecation or unimproved sanitation pathways. Figure 14 shows the subsequent emissions for countries for which the Climate TRACE inventory includes decentralized assets (see Appendix 8). In these regions, methane and nitrous oxide emissions from untreated waste and from decentralized assets (latrines and septic systems) compose a majority of the methane emissions from domestic wastewater. Untreated wastewater, which represents the highest GHG source of any wastewater pathway, poses a significant risk to human and agricultural health.
 
@@ -408,7 +410,7 @@ In comparison to EDGAR (European Commission, 2023), while correlated, Climate TR
 
 **Figure 16.** Country-to-country emissions comparison with EDGAR. Overall, the correlation between Climate TRACE and EDGAR is positive, EDGAR estimates a significantly higher methane emissions estimate, whereas Climate TRACE produces larger nitrous oxide estimates. The former difference is difficult to explain as EDGAR’s emissions estimates are not reproducible, whereas the latter can be explained by EDGAR using outdated methodologies.
 
-**3.3.1 ERS impact on emissions**
+#### 3.3.1 ERS impact on emissions
 
 Comparing the average CH<sub>4</sub> and N<sub>2</sub>O emissions reductions for WWTPs before and after the simulated application of ERS can help us understand the impact of the ERS. Table 4 lists the average emissions reduction percentage for methane and nitrous oxide for each ERS for all assets identified for this sector. *Note: Only rank 1 strategies are provided for assets on the Climate TRACE website and additional strategies will be made available in future releases.*
 
@@ -433,7 +435,7 @@ As of 2025, the T. E. Maxson Wastewater Treatment Facility (TEMWTF) in Memphis, 
 
 A July 2024 paper examined the potential benefits of implementing intelligent management strategies for wastewater treatment in China, which possesses the world’s largest municipal wastewater treatment infrastructure (Tong et al., 2024). The analysis concludes that WWTPs which adopt intelligent aeration and dosing technology can expect a 60% reduction in direct greenhouse gas (GHG) emissions, specifically N<sub>2</sub>O and CH<sub>4</sub>.
 
-**4. Limitations and Future Directions**
+#### 4. Limitations and Future Directions
 
 The largest limitations in the methane analysis described in Appendix 1 are that the model does not distinguish between aerobic and anaerobic digestion and that Equation 2 does not include flaring/recovery estimates. Anaerobic digestion produces significantly higher CH<sub>4</sub> emissions than aerobic digestion; and although anaerobic digestion is only used at a small percentage of plants, these plants are often treating large volumes of wastewater. In the U.S., only 10% of WWTPs use anaerobic digestion, yet these plants account for 55% of all centralized treated wastewater (Song et al., 2023). Further, there is no approach for estimating flaring/recovery of collected CH<sub>4</sub> which is expected to be substantial at larger plants.
 
@@ -447,7 +449,7 @@ Latrine and septic system emissions are both highly dependent on environmental c
 
 Practical challenges to the implementation of all ERS include the upfront cost associated with the construction of more advanced treatment structures or the implementation of new technology such as intelligent chemical dosing systems. In the case of the *Untreated to Primary* ERS, the *Septic to Primary* ERS, the *Septic to Secondary* ERS, and the *Septic to Advanced* ERS, although the upfront cost is likely to be significant, centralizing wastewater treatment carries economic benefits (e.g., through the reuse of wastewater in agriculture, industry, or even as drinking water, depending on the sanitation level ultimately achieved), which may help offset this cost.
 
-**5. Conclusion**
+#### 5. Conclusion
 
 HydroWASTE – a global dataset of WWTPs published in 2022 – was used to obtain population served estimates, treatment technologies, and locations for a set of centralized WWTPs that was filtered to exclude facilities which failed validation checks. These asset-specific metadata were then used with modified IPCC methodologies in order to derive emissions estimates. Country-level population trends were used to create emissions estimates from 2022 back to 2015 and extend forward to mid-year 2026. Overall, emissions estimates align well with country-level estimates for the U.S. and the E.U. However, the uncertainty in emissions estimates is very high. A Monte Carlo approach was used to estimate the uncertainty of emissions estimates, and for most WWT assets, the standard deviation of the Monte Carlo samples was an order of magnitude higher than the actual emissions estimate.
 
@@ -455,7 +457,7 @@ Despite the high uncertainty, the emissions estimation methodology presented her
 
 The Emissions Reduction Strategies described in this document represent a data-driven attempt to estimate the impact of system and process advancements in WWT assets around the globe, regardless of their current technology level. These ERS align with current government and community initiatives aimed at improving sanitation and protecting natural resources. For example, the need to protect local groundwater reserves is driving the conversion of wastewater treatment from decentralized to centralized processes in some regions of the world (Copenhaver, 2023; Pinellas County, 2026), and retrofitting simple pit latrines with a ventilation pipe is typically done to improve the comfort of facility users and reduce health risks (Reed, 2014; Vasudeva & Parikh, 2025). Adoption of intelligent management strategies may be accelerated by national policies aimed at decreasing GHG emissions, as in China (Tong et al., 2024).
 
-**Supplementary materials**
+#### Supplementary materials
 
 Table S2 describes the source-level data for WWTPs. These data are in the form of comma separated values files with names “source-climate-trace\_waste-water-treatment\_MMDDYY.csv” where MMDDYY is the month-day-year of the starting date of the annual emissions estimate for centralized WWTPs. For example, “010122” is the annual emissions estimate for centralized WWTPs for 2022. Table S3 describes how confidence and uncertainty data is provided. Appendix 1.e describes the methodology used to produce uncertainty and confidence values. These files are named “confidence/uncertainty-climate-trace\_waste-water-treatment\_MMDDYY.csv” where MMDDYY is the date when the files were created.
 
@@ -725,9 +727,9 @@ The above usage is not warranted to be error free and does not imply the express
 
 > **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**Appendix 1: Detailed Explanation of Emissions Estimation Methodology**
+#### Appendix 1: Detailed Explanation of Emissions Estimation Methodology
 
-**Appendix 1.a.: Estimating the Effect of Treatment and Effluent Emissions:**
+#### Appendix 1.a.: Estimating the Effect of Treatment and Effluent Emissions:
 
 Aerobic and anaerobic treatment all result in CH<sub>4</sub> emissions as natural and induced biochemical processes consumes organics in the wastewater, resulting in emissions. Hence, the total organics in the influent wastewater $\text{TOW}$ and how it is treated are the main drivers of CH<sub>4</sub> emissions. The effect of treatment on methane emissions is represented by the amount of organic waste removed in the form of sludge from the wastewater $S$, the amount of emissions removed from flaring or recovered $R$, and the treatment emission factor $EF_{CH4,\ Treat\ }$, based on Equation 6.1 from the IPCC guidelines:
 
@@ -763,7 +765,7 @@ As with CH<sub>4</sub>, the total N<sub>2</sub>O emissions for each WWTP is the 
 
 $N_{2}\text{O\ Emission}s_{\text{WWTP}}\  = N_{2}\text{O\ Emission}s_{\text{Treat}} + N_{2}\text{O\ Emission}s_{\text{Eff}}\ $ (Eq. A1.6)
 
-**Appendix 1.b.: Waste Model**
+#### Appendix 1.b.: Waste Model
 
 Using the IPCC methodology, the amount of waste (organics and nitrogen) in the influent water entering a centralized WWTP is primarily a function of population served and demographics (i.e. diet, behaviors, and local laws). The total organics in the influent wastewater $\text{TOW}$ drives the CH<sub>4</sub> emissions as these organics are readily consumable by microorganisms whose resulting methane can be released in settling basins, anaerobic pockets, as well as when wastewater is aerated in upstream sewer lines.
 
@@ -787,7 +789,7 @@ $Protein\  = \ Protein_{\text{supply}}\  \cdot FPC$ (Eq. A1.9).
 
 The remaining quantities in Eq. A1.8 were obtained using IPCC Table 6.10A.
 
-**Appendix 1.c.: Technological Treatment Model**
+#### Appendix 1.c.: Technological Treatment Model
 
 At centralized WWTPs, sludge and biological treatment affect emissions via two mechanisms: removing waste quantities ($\text{TOW}$ and $\text{TN}$) from the water that will become effluent discharge downstream and inherently releasing emissions from their own processes. For CH<sub>4</sub>, the collection of solid sludge directly removes BOD from influent water, and the biological treatment of influent water also removes $\text{TOW}$ prior to discharge.
 
@@ -809,7 +811,7 @@ $N_{\text{Eff}} = TN_{\inf}(1 - N_{\text{rem}})$ (Eq. A1.12),
 
 where $N_{\text{rem}}$ is the fraction of protein removed from the treatment of wastewater and is obtained from Table 6.10C based on the technology level of the WWTP.
 
-**Appendix 1.d.: Modified Capacity and Emissions Factors**
+#### Appendix 1.d.: Modified Capacity and Emissions Factors
 
 Climate TRACE sources are reported in terms of capacity, capacity factor ($\text{CF}$), activity, and emissions factor ($\text{EF}$), wherein
 
@@ -823,7 +825,7 @@ $EF_{CH4} = \frac{CH_{4}\text{\ \ Emission}s_{\text{WWTP}}}{P}$ (Eq. A1.15),
 
 $EF_{N2O} = \frac{N_{2}\text{O\ Emission}s_{\text{WWTP}}}{P}$ (Eq. A1.16).
 
-**Appendix 1.e.: Uncertainty Quantification & Confidence**
+#### Appendix 1.e.: Uncertainty Quantification & Confidence
 
 A Monte Carlo approach was used for estimating the uncertainty of the emissions wherein each variable was sampled stochastically, and the standard deviation of the distribution of the capacity, $\text{CF}$, activity, $\text{EF}$, emissions, and CO<sub>2</sub> equivalents (20-year and 100-year) were reported. Each variable in the above formulations is assumed to have a normal distribution whose mean is the value used in the analysis. To obtain the variance of the distribution of each variable, a conversion from reported confidence intervals (assumed to be 95%) to standard deviation is made, according to,
 
@@ -899,7 +901,7 @@ where $N_{I}$ is the per capita nitrogen content of wastewater for product $I$, 
 
 For all assets, it is assumed that aerobic treatment was used, which is IPCC’s Tier 1 default. In addition, it was assumed that advanced treatment was used to process and remove sludge. This is done in order to produce conservative estimates of emissions, as this metadata is not available to the same level as it is for domestic assets. The IPCC values for $W_{I}$, $\text{COD}_{I}$, and $N_{I}$ were used dependent on the industry.
 
-**Appendix 2: Intelligent Management Strategies for Advanced Wastewater Treatment Systems**
+#### Appendix 2: Intelligent Management Strategies for Advanced Wastewater Treatment Systems
 
 During treatment, wastewater is often aerated to provide oxygen to microorganisms that digest organic compounds in the water. Oxygen levels that are too low may inhibit treatment efficiency by hampering the growth and reproduction of microorganisms; on the other hand, over-aerating wastes energy. Intelligent aeration systems optimize the oxygen supply in biochemical pools, lowering direct and indirect GHG emissions by reducing energy consumption and nitrous oxide emissions.
 
@@ -907,7 +909,7 @@ Certain chemicals are sometimes also added to wastewater during treatment to rem
 
 Intelligent management processes become especially important in the context of <span class="underline">industrial wastewater treatment</span>, where highly variable wastewater loads make it more difficult to manually balance oxygen and chemical levels (Huber Technology, n.d.). The composition of industrial wastewater varies widely depending on the industry which generates it (e.g., pulp and paper, steel production, food processing) and may contain toxic compounds, extreme pH, or organic loads higher than those in domestic wastewater. In order to account for higher concentrations of pollutants, as well as other factors such as increased effluent corresponding to production cycles, industrial wastewater treatment often requires more specialized equipment and processes than domestic wastewater treatment.
 
-**Appendix 3: Grid search method deployed in test region South Africa (SA).**
+#### Appendix 3: Grid search method deployed in test region South Africa (SA).
 
 There were 155 total WWTP in SA, out of which 27 were of the particular type of wastewater treatment plants that are of interest, and 20 of them were in the bounds in which the model was running over. A combination of offset, batch\_size, and epochs uniquely identifies a model. Each row is a unique model. The current best model got 80% of the WWTP \[16/20\]. Out of the four missed, two were not clear due to the color and resolution, one due to alignment.
 
@@ -915,7 +917,7 @@ There were 155 total WWTP in SA, out of which 27 were of the particular type of 
 
 <table><thead><tr class="header"><th>Offset</th><th>Batch_Size</th><th>Epochs</th><th>Total Positives [Out of 34000]</th><th><p>Total Matches</p><p>[Out of 20]</p></th><th><p>True</p><p>Positives</p><p>[%]</p></th><th><p>False Positives</p><p>[%]</p></th><th><p>Average Accuracy</p><p>[%]</p></th></tr></thead><tbody><tr class="odd"><td>F</td><td>32</td><td>80</td><td>129</td><td>12</td><td>60</td><td>0.34</td><td>79.83</td></tr><tr class="even"><td>F</td><td>32</td><td>100</td><td>32</td><td>8</td><td>40</td><td>0.07</td><td>69.96</td></tr><tr class="odd"><td>F</td><td>32</td><td>120</td><td>66</td><td>9</td><td>45</td><td>0.17</td><td>72.42</td></tr><tr class="even"><td>F</td><td>64</td><td>80</td><td>61</td><td>11</td><td>55</td><td>0.15</td><td>77.43</td></tr><tr class="odd"><td>F</td><td>64</td><td>100</td><td>60</td><td>11</td><td>55</td><td>0.14</td><td>77.43</td></tr><tr class="even"><td>P</td><td>32</td><td>80</td><td>135</td><td>16</td><td>80</td><td>0.35</td><td>89.83</td></tr><tr class="odd"><td>P</td><td>32</td><td>100</td><td>50</td><td>12</td><td>60</td><td>0.11</td><td>79.94</td></tr><tr class="even"><td>P</td><td>32</td><td>120</td><td>84</td><td>13</td><td>65</td><td>0.21</td><td>82.40</td></tr><tr class="odd"><td>P</td><td>64</td><td>80</td><td>72</td><td>16</td><td>80</td><td>0.16</td><td>89.92</td></tr><tr class="even"><td>P</td><td>64</td><td>100</td><td>74</td><td>16</td><td>80</td><td>0.17</td><td>89.91</td></tr></tbody></table>
 
-**Appendix 4: HydroWASTE Dataset Statistics**
+#### Appendix 4: HydroWASTE Dataset Statistics
 
 HydroWASTE assets are filtered to remove WWTPs which are flagged as “Closed” or “Not Operational”. Further filtering occurs prior to emissions estimates to remove plants whose location was not verified by the ML model described in Section 2.2.1 and which were flagged by the HydroWASTE authors as having a low confidence location.
 
@@ -927,13 +929,13 @@ HydroWASTE assets are filtered to remove WWTPs which are flagged as “Closed”
 
 **Figure A4.2.** Proportion of WWTPs based on computed population served.
 
-**Appendix 5: Country-by-country comparison of E.U. emissions estimates**
+#### Appendix 5: Country-by-country comparison of E.U. emissions estimates
 
 <img src="figures/figure27.png" style="width:3.31444in;height:4.578in" />
 
 **Figure A5.1.** A comparison of CO<sub>2</sub>eq between Parravicini *et al.* emissions estimates (CO<sub>2</sub>e 100- year global warming potential) and Climate TRACE. Countries are labeled with their ISO 3166-1 alpha-3 codes. Overall, Climate TRACE and Parravicini *et al.* align well for most countries.
 
-**Appendix 6: Hyperparameters used to train the WWTP identification network**
+#### Appendix 6: Hyperparameters used to train the WWTP identification network
 
 **Table A6.1**
 
@@ -945,7 +947,7 @@ HydroWASTE assets are filtered to remove WWTPs which are flagged as “Closed”
 | Batch size                       | 64                               |
 | Epochs                           | 100                              |
 
-**Appendix 7. Month seasonality**
+#### Appendix 7. Month seasonality
 
 Wastewater emissions are provided at a monthly scale. Studies on seasonal variation based on temperature (Asadi & McPhedran, 2021; Daelman et al., 2015; Demir & Yapıcıoğlu, 2019; Gruber et al., 2021) generally find a correlation between ambient temperature and methane emissions, as well as a lagging anticorrelation of ambient temperature and nitrous oxide emissions. However, modeling these trends is difficult, as they are often dependent on the presence of specific WWTP technologies. Papers disagree on the level of correlation between ambient temperature and emissions, as well as on emissions per influent volume rate at the same temperature. Also, there is a greater dependence on influent water temperature, which is influenced by many latent factors other than ambient temperature. Hence, for Phase 6, only population trends are used for modeling monthly changes in wastewater emissions.
 
@@ -959,7 +961,7 @@ An example of this splining for Puerto Rico is shown in Figure A7.1.
 
 **Figure A7.1** Spline of Puerto Rico’s population from 2015 to mid-year 2024 which is used to model monthly emissions.
 
-**Appendix 8. Decentralized wastewater asset set formation**
+#### Appendix 8. Decentralized wastewater asset set formation
 
 Wastewater emissions from decentralized treatment sources (latrines, septic systems, and untreated) was calculated for a subset of countries which served as a proof of concept.
 
@@ -971,7 +973,7 @@ The Holy See was removed from consideration since detailed sanitation data is un
 
 For the purposes of this analysis, each GADM2 region in the set of 20 countries in Table A8.1 (minus the Holy See) is considered an untreated wastewater “asset”. The Democratic Republic of the Congo has two regions (both densely forested) with missing population data: there is no population data for COD.21.10\_1 (Tshumbe) and COD.21.1\_1 (Bena-Dibele) and no 2020 or 2025 population data for COD.21.10\_1 (Tshumbe). Likewise, no WorldPop population is available for the following Philippine GADM2 regions, so emissions for corresponding decentralized “assets” were not calculated: PHL.5.2\_1, PHL.40.10\_1, PHL.40.23\_1, PHL.40.27\_1, and PHL.77.11\_1.
 
-**Appendix 9. Mapping of Unlisted Countries to Proxy Country in WASH Data**
+#### Appendix 9. Mapping of Unlisted Countries to Proxy Country in WASH Data
 
 **Table A9.1.** Missing country mapping for proxy data. WASH data for each ISO3 country code below is handled by sourcing missing values from another country’s WASH data or by using a fixed estimate. Proxies of “zero” indicate that the country’s wastewater treatment coverage and population served is estimated as zero for all categories. The “full” proxy is for countries which are estimated as having complete sewer coverage.
 
@@ -1001,7 +1003,7 @@ For the purposes of this analysis, each GADM2 region in the set of 20 countries 
 | VAT         | full              |
 | XKX         | SRB               |
 
-**References**
+#### References
 
 1.  Asadi, M., & McPhedran, K. (2021). Estimation of greenhouse gas and odour emissions from a cold region municipal biological nutrient removal wastewater treatment plant. *Journal of Environmental Management*, *281*, 111864.
 

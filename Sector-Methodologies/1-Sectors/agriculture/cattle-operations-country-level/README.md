@@ -1,16 +1,14 @@
-**Agriculture sector-**<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
 
-**Cattle Operations- Country-level Enteric Fermentation and Manure Management Emissions**
+### Agriculture sector- Cattle Operations- Country-level Enteric Fermentation and Manure Management Emissions
 
 **Aaron Davitt<sup>1,2</sup>, Andrew Tulloch<sup>2</sup>, Peter Thomas<sup>1,2</sup>, and Amy Piscopo<sup>1,2</sup>**
 
 *1) WattTime, 2) Climate TRACE*
 
-**1. Introduction**
-===================
+#### 1. Introduction
 
 Cattle are the largest contributors of greenhouse gas (GHG) emissions in the livestock sector. Overall, livestock agrifood systems accounted for approximately 6.2 Gt CO₂eq in 2015, around 12% of all anthropogenic GHG emissions, and cattle — meat and milk combined — account for roughly 62% of that total, or about 7% of anthropogenic emissions (FAO, 2023). Emissions from beef and dairy cattle arise from two sources. The first is enteric fermentation - methane (CH<sub>4</sub>) produced during microbial digestion in the rumen. The second is manure management, which generates CH₄ through anaerobic decomposition and nitrous oxide (N<sub>2</sub>O) through the microbially driven processes of nitrification and denitrification (Waldrip et al., 2016; Waldrip et al., 2020). Manure management emissions occur both within the storage facilities common to beef and dairy systems and in-field, where manure is applied as fertilizer or deposited directly by grazing animals. See the ‘Supporting Information on Enteric Fermentation and Manure Management’ supplement in the [<span class="underline">GitHub Agriculture folder</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture) for more information on how enteric fermentation and manure management systems generate emissions.
-==================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 FAOSTAT is the primary global source of cattle data, reporting stocks (total animals) and emissions at the country level with a two to three year latency (depending on data set). While it provides global coverage with a long time series of emissions estimates, the dataset has four limitations for this purpose:
 
@@ -26,8 +24,7 @@ In all, these limitations make it difficult to separate the emissions of beef an
 
 To improve country-level emission estimates for beef and dairy cattle in operations, we combine FAOSTAT with USDA data and with AI-based detections of individual cattle operations from satellite imagery. To account for global shifts in commercial cattle breeding and production practices, we replace default emission factors with the Tier 2 approach of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories: Chapter 10 (Emissions from Livestock and Manure Management) for enteric fermentation and manure management, and Chapter 11 (N₂O Emissions from Managed Soils, and CO₂ Emissions from Lime and Urea Application) for N₂O from manure applied to or deposited on soils. The result is a set of country-level enteric fermentation and manure management emission estimates at quarterly resolution from 2015 through 2025 that distinguishes cattle in operations from cattle on pasture and reflects current production practices.
 
-**2. Materials and Methods**
-============================
+#### 2. Materials and Methods
 
 Figure 1 displays the overall process used to estimate country-level enteric fermentation and manure management emissions from cattle operations. FAOSTAT and USDA datasets were used to estimate emissions from cattle in operations at the country level (FAOSTAT) or the U.S. state level (USDA) then summed to the U.S. country total. Here, we define an operation as any facility that raises cattle, including but not limited to animal feeding operations (AFOs), feedlots, ranches, farms, dairies, and cow-calf operations (Rotz et al., 2019). Because FAOSTAT and USDA report cattle differently, each required its own sequence of steps to identify the animals held in operations (Figure 1, Box 1). Where Climate TRACE had deployed AI models to identify individual cattle operations, asset-level totals were summed by country and used to replace a subset of the FAOSTAT or USDA beef and dairy cattle in each country or U.S. state, improving the representation of cattle in operations. Once the datasets were combined, emissions were estimated using the Tier 2 emission factors and equations of the 2019 IPCC Refinement (Figure 1, Box 2). Enteric fermentation drew on Chapter 10 (Emissions from Livestock and Manure Management); manure management drew on Chapter 10 and Chapter 11 (N₂O Emissions from Managed Soils, and CO₂ Emissions from Lime and Urea Application) (IPCC, 2019a; IPCC, 2019b). Country-level climate zones generated from CRU TS v4.10 determined which climate-dependent factors applied. The resulting per-year estimates constituted the final country-level emissions (Figure 1, Box 3). A description of each dataset and application to these emitting sectors are described in section 2.1. below.
 
@@ -35,10 +32,9 @@ Figure 1 displays the overall process used to estimate country-level enteric fer
 
 **Figure 1.** Flowchart of the process used to generate country-level enteric fermentation and manure management emissions from cattle operations. Box 1: FAOSTAT (by country) and USDA (by U.S. state) data were used to define the cattle held in operations; where Climate TRACE has identified individual cattle operations, asset-level totals were summed by country and replaced a subset of the FAOSTAT or USDA beef and dairy cattle. Box 2: IPCC (2019) Chapter 10 and Chapter 11 emission factors and equations, together with country-level climate zones generated from CRU TS, were applied to those cattle totals to estimate manure management and enteric fermentation emissions for each quarter per year. Box 3: The resulting per-year estimates constituted the final country-level emissions. See the following section for detail on each box and dataset used.
 
-**2.1 Datasets employed**
--------------------------
+#### 2.1 Datasets employed
 
-**2.1.1 FAOSTAT**
+#### 2.1.1 FAOSTAT
 
 To estimate cattle in operations for all countries except the U.S., two FAOSTAT items (cattle subtypes) were used from the “Crops and livestock products” domain:
 
@@ -54,7 +50,7 @@ The “Crops and livestock products” domain was selected because, at the time 
 
 A country-level dataset was also produced from "[<span class="underline">Agriculture sector Emissions from Enteric Fermentation and Manure Left on Pasture from Cattle</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture)", which identified countries with reporting discrepancies in beef cattle populations by comparing the "Cattle, non-dairy" stock item against "Producing Animals/Slaughtered, Meat of cattle with the bone, fresh or chilled." Countries presumed to have no operations devoted exclusively to beef were filtered out on this basis, as described in Sections 2.2.1.1 and Table S1.
 
-**2.1.2 USDA**
+#### 2.1.2 USDA
 
 Emissions for the U.S. were estimated from U.S. Department of Agriculture (USDA) National Agricultural Statistics Service (NASS) Quick Stats data, using the agricultural statistics large dataset ‘qs.animals\_products\_20260701’ (July 1, 2026 release; [<span class="underline">https://www.nass.usda.gov/datasets/</span>](https://www.nass.usda.gov/datasets/)). For each U.S. state, the following Data Items (hereafter *cattle subtypes*) were selected to represent cattle in operations:
 
@@ -66,19 +62,19 @@ Emissions for the U.S. were estimated from U.S. Department of Agriculture (USDA)
 
 Section 2.2.2 explains in more detail the USDA subtypes considered to represent cattle in operations.
 
-**2.1.3 Climate TRACE cattle operation asset data**
+#### 2.1.3 Climate TRACE cattle operation asset data
 
 The Climate TRACE database includes specific locations of individual cattle operations, either identified using artificial intelligence (AI) detection models with remote sensing data or reported. In addition, this database contains individual cattle operation estimates of total heads of beef or dairy cattle and the associated enteric fermentation and manure management emissions estimates. In total, an estimated 285,824 beef and dairy operations have been identified across 41 countries (Tables 3 and 4).
 
 For this work, where Climate TRACE identified individual cattle operations the mean total head of beef or dairy cattle was estimated at each operation and summed by country (for non-U.S. countries) or by U.S. state to produce a country or state total to be combined with FAOSTAT or USDA data, discussed further in section 2.2.1.3.
 
-**2.1.4 IPCC 2019 Refinement — Equations and Emission Factors**
+#### 2.1.4 IPCC 2019 Refinement — Equations and Emission Factors
 
 Equations and emission factors (EFs) were drawn from Chapter 10 (Emissions from Livestock and Manure Management) and Chapter 11 (N₂O Emissions from Managed Soils, and CO₂ Emissions from Lime and Urea Application) of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories, and applied to the FAOSTAT and USDA cattle populations described above (IPCC, 2019a; IPCC, 2019b). Default "Other Cattle" and "Dairy Cows" EFs, selected by region, climate zone, and manure management system, were applied to the "Producing Animals/Slaughtered, Meat of cattle with the bone, fresh or chilled" and "Milk animals, Raw milk of cattle" populations, respectively.
 
 Enteric fermentation emissions were estimated using the Tier 2 approach in Section 10.3, for both dairy and other cattle CH₄. Manure management emissions were estimated using the Tier 2 approach in Sections 10.4 and 10.5, together with Table 10A.6 (Animal Waste Management System (AWMS) Regional Averages for Cattle and Buffalo) and Table 11.3 from Chapter 11.
 
-**2.1.5 Climate Zones - Climatic Research Unit Gridded Time Series**
+#### 2.1.5 Climate Zones - Climatic Research Unit Gridded Time Series
 
 The updated 2019 IPCC guidelines require climate zones to estimate CH₄ emissions by manure management system, an update from the 2006 guidelines, which relied on temperature-based emission factors (Figure 2). To derive climate-zone-specific methane conversion factors (MCF) (Table 10.17) to estimate manure management emissions, we used the Climatic Research Unit gridded Time Series (CRU TS) v4.10 NetCDF files (version June 7, 2026) from the University of East Anglia (Harris et al., 2020).
 
@@ -90,9 +86,9 @@ CRU TS provides monthly climate data for global land areas, excluding Antarctica
 
 For the purpose of this work, monthly climate zones were generated for each country's latitude and longitude centroid and climate zones were used to derive the MCF values by livestock type per month, then averaged to quarterly MCF values for years 2015 to 2025.
 
-**2.2 Methods**
+#### 2.2 Methods
 
-**2.2.1.1 FAOSTAT**
+#### 2.2.1.1 FAOSTAT
 
 As stated above, the FAOSTAT items "Producing Animals/Slaughtered" and "Milk animals" were treated as representing cattle raised for beef and for dairy production, respectively, as reported by each country.
 
@@ -116,7 +112,7 @@ Some countries had their “Producing Animals/Slaughtered, Meat of cattle with t
 
 Where “Producing Animals/Slaughtered” exceeded “Cattle, non-dairy,” a representative population for meat production could not be identified: the remaining “Cattle, non-dairy” animals would consist of non-producing cattle — stockers, heifers, steers, and bulls — which are typically raised on pasture and accounted for elsewhere (see Section 2.1.1). Beef operation emissions were therefore not generated for these countries; only dairy emissions were estimated. Their “Producing Animals/Slaughtered” populations were instead reported under the Climate TRACE sector “Emissions from Enteric Fermentation and Manure Left on Pasture from Cattle,” since these cattle were considered to be foraging on pasture.
 
-**2.2.1.2 USDA**
+#### 2.2.1.2 USDA
 
 USDA reports specific "Data Items" (hereafter cattle subtypes) in its Cattle Inventory (https://www.nass.usda.gov/Surveys/Guide\_to\_NASS\_Surveys/). Not all of these subtypes represent cattle in an operation, and for those that do end up on feed, only a percentage is allocated to an operation. Figure 3 shows the subtypes considered to be in an operation for each U.S. state, and the identification process is described below (numbering follows Figure 3).
 
@@ -148,7 +144,7 @@ The final beef subtype considered to be in an operation was 8) CATTLE, ON FEED �
 
 Cattle subtypes 1, 2, and 8 were used in combination with individual cattle operations identified in “[*<span class="underline">Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions</span>*](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture)” to estimate updated U.S. country-level emissions, discussed in section 2.2.4.1.
 
-**2.2.1.3 Climate TRACE identified cattle operations**
+#### 2.2.1.3 Climate TRACE identified cattle operations
 
 Where individual cattle operations were identified using the AI detection model or reported, the mean total head of beef or dairy cattle was estimated at each operation and summed by country to produce a Climate TRACE operation country total using Equation 1,
 
@@ -221,7 +217,7 @@ Climate TRACE derived totals were then incorporated into the country-level popul
 |               |          |           | *Nebraska*    | Beef     | 5,890,438 |                  | Dairy    | 2,741,829 |                  |          |           |
 |               |          |           |               | Dairy    | 24,148    |                  |          |           |                  |          |           |
 
-**2.2.1.4 Final country totals: combining total country cattle numbers**
+#### 2.2.1.4 Final country totals: combining total country cattle numbers
 
 Sections 2.2.1.1 and 2.2.1.2 produced estimated beef and dairy populations in operations for each country from FAOSTAT and, for the U.S., for each state from USDA summed to a country total. Where Climate TRACE had also identified individual cattle operations through the AI detection model, those asset-level totals were used in place of a subset of the reported population rather than added to it (Figure 1, Box 1). This substitution avoids double-counting the same animals, since an operation detected by the AI detection model is considered represented within the FAOSTAT country or USDA U.S. total in which the operation exists.
 
@@ -249,15 +245,15 @@ The subtracted Climate TRACE cattle operation portion carries the asset-level at
 
 The extent of $N_{c,t,s}^{\text{CT}}$ substitution varies by country and U.S. state. Where the detection model has tens of thousands of identified operations, most of the reported population is described by summed Climate TRACE assets; where coverage is partial or absent, the reported FAOSTAT or USDA population is the primary coverage. Generally, for non-U.S. countries, individual cattle operations replaced between 0.0008% to 21.0% of total heads of cattle. For U.S. states, 0.013% to 100% of the total head of cattle, where 100% replacement means that summing up individual cattle operations in the state is considered either to have found all of the cattle operations, or that the estimated heads of cattle equal or exceed the USDA reported numbers for that state. The resulting remainder population, $N_{c,t,s}^{\text{REM}}$, whether substituted in whole, in part, or not at all, is the input to the emission factors and climate zone assignment described in Section 2.2.4 (Figure 1, Box 2).
 
-**2.2.2 Assigning manure management systems**
+#### 2.2.2 Assigning manure management systems
 
-**2.2.2.1 FAOSTAT and USDA populations**
+#### 2.2.2.1 FAOSTAT and USDA populations
 
 Once the population of dairy and beef cattle in an operation had been determined for each country from FAOSTAT or USDA data, after accounting for summed operations identified with an AI detection model, the remainder population ($N_{c,t,s}^{\text{REM}})$ was distributed across manure management systems using IPCC (2019) Table 10A.6, “Animal Waste Management System (AWMS) Regional Averages for Cattle and Buffalo”.
 
 Cattle allocated to the “Pasture/Range/Paddock” system were excluded from the total manure management emissions and considered reported in the Climate TRACE pasture sector. Any cattle allocated to the “Burned for Fuel” system were likewise excluded from these country-level estimates, as those emissions are accounted for in the Climate TRACE residential onsite fuel usage sector.
 
-**2.2.3 Deriving methane conversion factors by climate zone**
+#### 2.2.3 Deriving methane conversion factors by climate zone
 
 Manure management methane emissions are driven by the amount of manure produced, the system in which that manure is handled, and the climate conditions — particularly temperature and moisture — that determine whether emissions are produced under anaerobic or aerobic conditions (IPCC, 2019b; see Supplemental Section S.1 for further detail on anaerobic and aerobic conditions). The 2019 Refinement requires climate zones to estimate CH₄ emissions by manure management system, a departure from the 2006 Guidelines, which relied on annual-temperature-based emission factors.
 
@@ -271,9 +267,11 @@ Country boundaries came from the Global Administrative Areas (GADM) project, ver
 
 The monthly climate zones were then used to select methane conversion factors (MCF) from IPCC (2019b) Table 10.17 by manure management system and climate region, applied separately to dairy cattle and non-dairy cattle. The resulting monthly MCF values were then averaged to quarterly MCF values for 2015 through 2025. The same disaggregated climate zones were used to select EF<sub>4</sub> from Table 11.3 — N volatilisation and re-deposition, in kg N₂O–N per kg (NH<sub>3</sub>–N + NO<sub>X</sub>–N volatilised) — for wet or dry climate zones. For EF₅ (leaching/runoff, kg N₂O–N (kg N leaching/runoff)<sup>-1</sup>, a default value was used since there is no difference between wet and dry climates.
 
-<img src="figures/figure4.png" style="width:6.53125in;height:2.51042in" />**Figure 4** Illustrative example of the monthly-to-quarterly MCF derivation. Step 1 - a single GADM level 0 centroid per country gives one climate zone per month. Step 2 - each monthly climate zone selects an MCF from IPCC 2019 Table 10.17 by manure management system (from Table 10A.6 AWMS) and climate zone, applied separately to dairy and non-dairy cattle. Step 3 - the three monthly MCF values are averaged to a quarterly value - July, August, and September MCFs become quarter 3 MCF.
+<img src="figures/figure4.png" style="width:6.53125in;height:2.51042in" />
 
-**2.2.4 Emissions estimates**
+**Figure 4** Illustrative example of the monthly-to-quarterly MCF derivation. Step 1 - a single GADM level 0 centroid per country gives one climate zone per month. Step 2 - each monthly climate zone selects an MCF from IPCC 2019 Table 10.17 by manure management system (from Table 10A.6 AWMS) and climate zone, applied separately to dairy and non-dairy cattle. Step 3 - the three monthly MCF values are averaged to a quarterly value - July, August, and September MCFs become quarter 3 MCF.
+
+#### 2.2.4 Emissions estimates
 
 Enteric fermentation methane emissions were estimated for all countries with cattle populations reported in FAOSTAT and USDA data, following the Tier 2 approach in IPCC (2019b) Chapter 10, Section 10.3. Dry matter intake (DMI, kg day<sup>-1</sup>) was estimated for dairy cows and steers, and enteric fermentation CH₄ EFs were derived using the Tier 2 formulation (Equation 10.21a), in which DMI is multiplied by the methane conversion factors (Table 10.12, g CH₄ kg DMI<sup>-1</sup>) to produce EFs for beef and dairy cattle. These EFs were then multiplied by the total dairy and beef cattle populations and summed to give total enteric CH₄ emissions by country and year.
 
@@ -309,14 +307,13 @@ Where,
 
 $\sum$ $E_{c,t,s,g}^{\text{CT}}$ = is the sum of emissions of gas *g* from Climate TRACE identified operations of cattle type *s* in country *c* in year *t*, summed across quarters (kg yr⁻¹, converted to metric tonnes or mt). If no Climate TRACE operations, $\text{\ E}_{c,t,s,g}^{\text{CT}}$, were identified in a country, then $E_{c,t,s,g}^{}$= $E_{c,t,s,g}^{\text{REM}}$.
 
-**2.3 Final Country-level Emissions**
--------------------------------------
+#### 2.3 Final Country-level Emissions
 
 Country-level enteric fermentation CH<sub>4</sub> and manure management CH<sub>4</sub> and N<sub>2</sub>O emissions estimates were generated and reported as separate sub-sectors on the Climate TRACE website ([<span class="underline">https://climatetrace.org/</span>](https://climatetrace.org/)). To generate CO<sub>2</sub> equivalent (CO<sub>2</sub>e) for 20 year and 100 year global warming potentials (GWPs), 79.7 (20 year) and 27.0 (100 year) Methane - non fossil values were applied to total country-level CH<sub>4</sub> emissions for each year. For total country-level N<sub>2</sub>O emissions, a 273 value was applied for each 20 and 100 year GWPs. The manure management sub-sector summed each CH<sub>4</sub> and N<sub>2</sub>O emissions into 20 and 100 year GWPs emissions values. Additional information on specific data fields and values are described in the Metadata and Supplementary sections below.
 
 Of the 250 countries and administrative regions reported for this sector, 190 had emissions estimated generated for years 2015 to 2025. The remaining 61 countries and administrative regions (i.e., Bermuda, Palau, and Tuvalu) either do not report cattle information in FAOSTAT, or were assumed to have cattle on pasture based on section 2.2.1 and shown in Table S1.
 
-**3. Results**
+#### 3. Results
 
 Country-level enteric fermentation and manure management emissions were estimated for 190 countries and administrative regions for 2015 through 2025, as described in Section 2.2.5.
 
@@ -324,7 +321,7 @@ Because FAOSTAT and USDA report cattle consistently from one release to the next
 
 Release-to-release differences in this sector should therefore be read as changes in asset-level detection rather than as changes in reported cattle populations or in the methodology itself. See "*Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions*" for the current detection results.
 
-**4. Discussion and conclusion**
+#### 4. Discussion and conclusion
 
 Combining FAOSTAT and USDA population data with Climate TRACE AI-identified operations produces a more representative population of dairy and beef cattle in operations, and therefore a more representative attribution of emissions by cattle type. Incorporating USDA data improved coverage of cattle in U.S. operations, and restricting the FAOSTAT population to the category "Producing Animals/Slaughtered, Meat of cattle with the bone, fresh or chilled" yielded a beef population more representative of commercial beef production.
 
@@ -342,8 +339,7 @@ However, there are four limitations with this approach that need to be addressed
 
 In all, the methods applied to country-level enteric fermentation and manure management emissions estimates from cattle operations represent a meaningful step toward emissions estimates that reflect where and how cattle are actually raised. Combining reported population data with individually identified operations, and deriving climate-dependent factors at monthly resolution, moves the estimates closer to observed conditions while remaining anchored in the IPCC (2019) Tier 2 framework and therefore keeping these two sectors comparable with national inventories. The limitations described above make clear that this is a starting point rather than a finished product, and each of the five avenues identified offers a tractable path to refinement, and in turn to better targeted emission reductions.
 
-**5. Metadata Section**
-=======================
+#### 5. Metadata Section
 
 The Agriculture sector: *Country-level Enteric Fermentation and Manure Management Emissions Estimates from Cattle Operations* sector reports the following data on the Climate TRACE website:
 
@@ -391,8 +387,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 > **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**6. References**
-=================
+#### 6. References
 
 1.  Alemu, A.W., Pekrul, L.K., Shreck, A.L., Booker, C.W., McGinn, S.M., Kindermann, M. and Beauchemin, K.A., 2021. 3-Nitrooxypropanol decreased enteric methane production from growing beef cattle in a commercial feedlot: implications for sustainable beef cattle production. *Frontiers in Animal Science*, *2*, p.641590.
 
@@ -476,7 +471,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 41. Vyas, D., Alemu, A.W., McGinn, S.M., Duval, S.M., Kindermann, M. and Beauchemin, K.A., 2018. The combined effects of supplementing monensin and 3-nitrooxypropanol on methane emissions, growth rate, and feed conversion efficiency in beef cattle fed high-forage and high-grain diets. *Journal of animal science*, *96*(7), pp.2923-2938.
 
-**7. Supplemental section**
+#### 7. Supplemental section
 
 **Table S1.** Cattle population 2023 data in countries where the “Producing Animals/Slaughtered, Meat of cattle with the bone, fresh or chilled” populations are larger than “Cattle, non-dairy” population. Negative values indicate years where all “Producing Animals/Slaughtered, Meat of cattle with the bone, fresh or chilled” were interpreted to mean that no beef operations generated emissions at the country-level.
 

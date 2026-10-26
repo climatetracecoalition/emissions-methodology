@@ -1,10 +1,12 @@
-**Data-Informed Disaggregation and Implicit Estimation of Emissions in Other Subsectors**<img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
+<img src="figures/logo.png" style="width:2.56771in;height:1.1101in" />
+
+### Data-Informed Disaggregation and Implicit Estimation of Emissions in Other Subsectors
 
 **Dan Moore, Christy Lewis, Lekha Sridhar, Amy Piscopo, Lauren Betz, Krsna Raniga, Zoheyr Doctor, and Gavin McCormick**
 
 *All authors are affiliated with WattTime and Climate TRACE*
 
-**1. Introduction**
+#### 1. Introduction
 
 Greenhouse gas (GHG) emissions inventories are crucial tools for setting mitigation targets, measuring progress toward goals and for accountability within the context of national and international commitments. There are several organizations – governments, academia and commercial entities – that are involved in data collection and preparation of inventories.
 
@@ -82,15 +84,15 @@ These subsectors together accounted for approximately 17% of global emissions in
 
 The overall approach, followed by specific methods for quantifying country-level and asset-level emissions are presented in Section 2. Section 3 outlines the results from this analysis, while in Section 4, the implications and future considerations are discussed. Furthermore, starting in November 2025, Climate TRACE is now providing emission reduction solutions (ERSs) to each sector to understand how sector mitigation strategies can be used to reduce emissions. ERS is discussed further in Section 5 below.
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
 Here, we describe the two approaches, the **Data-informed Emissions Disaggregation** and
 
 **Implicit Estimation,** used to estimate emissions for the other subsectors. Emissions using these methods were estimated at the country- and asset- levels for years 2015 through 2025 at annual temporal resolution. Data were downscaled to monthly resolution using methods described in Raniga et al. (2024).
 
-**2.1 Data-informed Emissions Disaggregation**
+#### 2.1 Data-informed Emissions Disaggregation
 
-**2.1.1 Datasets employed**
+#### 2.1.1 Datasets employed
 
 To identify manufacturing facilities and to generate emissions estimates, various emissions inventories, asset location and emissions data, capacity and production data, and economic data were employed. This includes:
 
@@ -98,27 +100,27 @@ To identify manufacturing facilities and to generate emissions estimates, variou
 
 2.  Asset location, emissions, and other metadata were obtained from the following databases/locations.
 
-    1.  *European Pollutant Release and Transfer Register (EPRTR)* (European Environment Agency, 2023)*;*
+1.  *European Pollutant Release and Transfer Register (EPRTR)* (European Environment Agency, 2023)*;*
 
-    2.  *Israel Pollutant Release and Transfer Register (Israel PRTR)* (Israel Environmental Licensing and Risks Prevention Division, 2024)*;*
+2.  *Israel Pollutant Release and Transfer Register (Israel PRTR)* (Israel Environmental Licensing and Risks Prevention Division, 2024)*;*
 
-    3.  *US EPA Facility Level Information on Greenhouse gases Tool (FLIGHT)* (US EPA Office of Atmospheric Protection, 2024)*;*
+3.  *US EPA Facility Level Information on Greenhouse gases Tool (FLIGHT)* (US EPA Office of Atmospheric Protection, 2024)*;*
 
-    4.  *Canada Greenhouse Gas Reporting Program (Can-GHGRP)* (Government of Canada, Environment and Climate Change Canada, 2024);
+4.  *Canada Greenhouse Gas Reporting Program (Can-GHGRP)* (Government of Canada, Environment and Climate Change Canada, 2024);
 
-    5.  *Open-Supply Hub* (2024), a curated registry of global float glass plants, a North American slaughter-facility registry, and other government websites.
+5.  *Open-Supply Hub* (2024), a curated registry of global float glass plants, a North American slaughter-facility registry, and other government websites.
 
-    6.  Capacity data for lime facilities (including facilities in China) was obtained from LLM research; slaughter capacities (head per year) were obtained from the slaughter-facility registry and converted to carcass tonnage.
+6.  Capacity data for lime facilities (including facilities in China) was obtained from LLM research; slaughter capacities (head per year) were obtained from the slaughter-facility registry and converted to carcass tonnage.
 
-    7.  Country-level national establishment counts were obtained from the *Industrial Statistics Revision 4* (UNIDO, 2025)*,* which was used as the completeness denominator (the expected number of facilities per country and sector).
+7.  Country-level national establishment counts were obtained from the *Industrial Statistics Revision 4* (UNIDO, 2025)*,* which was used as the completeness denominator (the expected number of facilities per country and sector).
 
-    8.  Annual lime production data were obtained from the Lime Statistics and Information (USGS, 2025); These production statistics anchor the lime activity estimates.
+8.  Annual lime production data were obtained from the Lime Statistics and Information (USGS, 2025); These production statistics anchor the lime activity estimates.
 
-    9.  Sector-specific emissions factors (EFs) and country-level production estimates were obtained from a partnership between ODE ([<span class="underline">https://ode.partners/en</span>](https://ode.partners/en)) and Climate TRACE, where LLMs were used to provide detailed breakdowns for emissions factors of different scopes and greenhouse gases. Each EF is compiled at the component level (combustion, process, and electricity) per product; the library used here retains only the Scope 1 (on-site combustion plus process) components (see Section 2.1.3.2.2).
+9.  Sector-specific emissions factors (EFs) and country-level production estimates were obtained from a partnership between ODE ([<span class="underline">https://ode.partners/en</span>](https://ode.partners/en)) and Climate TRACE, where LLMs were used to provide detailed breakdowns for emissions factors of different scopes and greenhouse gases. Each EF is compiled at the component level (combustion, process, and electricity) per product; the library used here retains only the Scope 1 (on-site combustion plus process) components (see Section 2.1.3.2.2).
 
 Where multiple vintages of the same registry were available (datasets a through f above), all vintages were combined and de-duplicated so that the full reporting history of each facility (back to 2007 for E-PRTR) is retained.
 
-**2.1.2 Model development**
+#### 2.1.2 Model development
 
 In general, the workflow for generating emissions estimates for sectors within *other-manufacturing* starts with the existing EDGAR and CEDS emissions inventories, which provide country-level emissions estimates for each gas, by ‘sector’ (Figure 1). While both of these inventories aim for sectoral completeness, the partitioning of the emissions into sectors varies slightly. This allows us to piece together all emissions estimates from a given sector in a logical manner using a combination of these two inventories, in addition to the UNFCCC emissions database. The specific equations for deriving individual sectors are presented in Section 2.3.1.1.
 
@@ -128,15 +130,15 @@ The country-level total then serves as the starting point for the asset-level es
 
 **Figure 1.** General process of creating country and asset-level emissions, along with associated metadata for each sector. The colors denote the type of information used in each step, with input data in blue, intermediate derived data in pink, and the final output data in green.
 
-**2.1.3 Methods**
+#### 2.1.3 Methods
 
 Country-level estimates exist for every sector, but only a subset contains information at the asset level. The method for estimating country-level emissions is described in Section 2.1.3.1, while the method for estimating asset-level emissions is described in Section 2.1.3.2.
 
-**2.1.3.1 Deriving country-level emissions**
+#### 2.1.3.1 Deriving country-level emissions
 
 The following sections outline the equations used to quantify country-level emissions for the following sectors: *food, beverage, and tobacco*, *glass*, *lime*, and *textiles, leather, and apparel*. The CEDS or EDGAR sector naming convention is kept for clarity and other Climate TRACE sectors not described in this document but are used to derive the sectors discussed here are denoted with ‘CT’. Country-level emissions from these two inventories are available through 2024 (EDGAR V2025) and 2023 (CEDS), respectively; years beyond the last available inventory year are forward filled from the most recent available year.
 
-**2.1.3.1.1 Food, beverage, and tobacco**
+#### 2.1.3.1.1 Food, beverage, and tobacco
 
 In both EDGAR and CEDS, direct emissions from food, beverage, tobacco and wood manufacturing were categorized together, while combustion related emissions from food, beverage, and tobacco are reported separately from those from wood and wood products. Therefore we needed some way of estimating direct emissions from the subset of food, beverage, and tobacco manufacturing since Climate TRACE already accounts for wood and wood product manufacturing. The UNFCCC provides estimates of both direct (2.H.2) and indirect (1.A.2.e) emissions from food, beverage, and tobacco manufacturing for Annex I countries. Using these, we calculated a country-specific scaling factor as either the slope between 2.H.2 and 1.A.2.e of all annual available values 1990-2021, where a positive (r &gt; 0) and statistically significant (*p* &lt; 0.1) relationship was calculated based on linear regression, or the median ratio across all years for a given country. A p-value threshold of 0.1 was chosen to retain as many country-specific sector linear relationships as possible, rather than relying on a single global relationship that could misrepresent individual countries’ sectors. We then applied this ratio to the CEDS 1.A.2.e emissions value for each Annex I country to estimate direct emissions from food, beverage and tobacco manufacturing.
 
@@ -160,7 +162,7 @@ The equation for estimating country-level food-beverage-tobacco CO<sub>2</sub> e
 >
 > Where, \[\[UNFCCC 2.H.2 / UNFCCC 1.A.2.e\]\] represents either the country-specific slope of the least squares line between the emissions from these two subsectors (where r &gt; 0, p &lt; 0.1), or the median ratio (else).
 
-**2.1.3.1.2 Glass**
+#### 2.1.3.1.2 Glass
 
 Glass manufacturing consists of both direct (2.A.3) and indirect (1.A.2.f) emissions. However, in CEDS, indirect emissions are aggregated together with indirect emissions from all non-metallic minerals (including cement, lime, and other carbonates). In order to disaggregate these indirect emissions, we estimated the contribution of glass combustion to CEDS 1.A.2.f by assuming that the ratio of direct to indirect emissions for each of these four mineral subsectors (i.e. glass, lime, cement, and other carbonates) were equal. With that assumption we calculated the relative contribution of glass direct emissions (2.A.3) to the sum of direct emissions from each individual subsector (i.e. 2.A.1 + 2.A.2 + 2.A.3 + 2.A.4), and multiplied that by the total indirect emissions (1.A.2.f). Therefore, the equation to estimate total glass manufacturing emissions is:
 
@@ -174,7 +176,7 @@ Glass manufacturing consists of both direct (2.A.3) and indirect (1.A.2.f) emiss
 >
 > *EDGAR 2.A.4 Other Process Uses of Carbonates)*
 
-**2.1.3.1.3 Lime**
+#### 2.1.3.1.3 Lime
 
 Similarly to glass manufacturing, lime manufacturing consists of both direct and indirect emissions, the latter of which needs to also be disaggregated for CEDS data. Following the same formulation described above for glass manufacturing, the equation for calculating emissions from lime manufacturing is:
 
@@ -184,7 +186,7 @@ Similarly to glass manufacturing, lime manufacturing consists of both direct and
 >
 > *lime-combustion = (CEDS 1A2f\_Ind-Comb-Non-metalic-minerals) × EDGAR 2.A.2 Lime / (EDGAR 2.A.1 Cement + EDGAR 2.A.2 Lime + EDGAR 2.A.3 Glass + EDGAR 2.A.4 Other Process Uses of Carbonates)*
 
-**2.1.3.1.4 Textiles, leather, and apparel**
+#### 2.1.3.1.4 Textiles, leather, and apparel
 
 Here, CEDS textile and leather combustion-related emissions is set to “*textiles-leather-apparel*” which can contain, including but not limited to, linen, polyester, and silk.
 
@@ -192,13 +194,13 @@ Here, CEDS textile and leather combustion-related emissions is set to “*textil
 
 Note, at the country-level, this sector is filled using the “Implicit estimation” technique, but is included here, as its asset-level data are estimated using the “data-informed disaggregation” technique.
 
-**2.1.3.2 Asset-level data**
+#### 2.1.3.2 Asset-level data
 
 Assets were obtained for the following sectors: *other-metals*, *other-chemicals*, *other-manufacturing*, *glass*, *lime*, *food-beverage-tobacco*, and *textiles-leather-apparel*. Emission quantities for each sector were obtained from their respective sources, where available. Due to a lack of production-level information, the metadata for *other-metals*, *other-chemicals*, and *other-manufacturing* were limited to: capacity = activity = 1 facility. Therefore, emission factors describe the emissions of a given gas, per facility. Emissions and emissions factors for assets with no available data were imputed using the default metamodeling methods, described in Moore et al. (2024).
 
 For assets in the remaining sectors, *glass, lime, food-beverage-tobacco,* and *textiles-leather-apparel*, the following sections describe the **Data-informed Emissions Disaggregation** approach. The delivery covers 2015 through the most recent complete year, one row per facility per year.
 
-**2.1.3.2.1 Facility assembly**
+#### 2.1.3.2.1 Facility assembly
 
 *Registry union and identifiers.* Available versions of each source registry are combined and de-duplicated, first on the publisher's own facility identifier and then on location, so that a facility's full reporting history is retained. Each facility carries one stable identifier across all of its years. Where a facility that Climate TRACE has already published moves to a new identifier in a refreshed registry pull, the previously published identifier is restored, so that the existing public asset is updated rather than duplicated.
 
@@ -210,7 +212,7 @@ For assets in the remaining sectors, *glass, lime, food-beverage-tobacco,* and *
 
 *Locations.* Redacted or placeholder coordinates (e.g. registry confidentiality) are withheld. Anything resolvable to the GADM 1 or GADM 2 level are published with their location as the centroid of the associated GADM 1 or GADM 2 boundary.
 
-**2.1.3.2.2 Emissions Factors**
+#### 2.1.3.2.2 Emissions Factors
 
 Emissions factors (EFs) are maintained in a single library, one factor per product (e.g. quicklime vs. hydrated lime; float glass vs. container glass; brewing vs. slaughter; weaving vs. garment assembly), compiled from LLM research and published industry sources at the component level: combustion and process components are summed into a direct (Scope 1) factor. Where no defensible EF exists for a product, none is invented; the global median factor across all products for that sector is employed.
 
@@ -222,7 +224,7 @@ Several physical-plausibility constraints are enforced on the factors and on the
 
 -   EF review. Emissions factors failing physical review are replaced with the emissions factor of a similar product.
 
-**2.1.3.2.3 Evidence tiers**
+#### 2.1.3.2.3 Evidence tiers
 
 Every facility-year is placed into an evidence tier that determines how its emissions are estimated and how they are graded for confidence:
 
@@ -238,7 +240,7 @@ Every facility-year is placed into an evidence tier that determines how its emis
 
 For facilities reporting in some years but not others, the previous release's blanket backward/forward filling of all metadata is replaced by the gated Tier Ac carry above, which applies to the facility's own reported CO<sub>2</sub> only.
 
-**2.1.3.2.4 Allocation of the residual**
+#### 2.1.3.2.4 Allocation of the residual
 
 Per country, sector, and year, the residual is the national total minus the sum of all anchored (Tier A/Ac/A′) facilities:
 
@@ -278,41 +280,41 @@ Additional constraints on the allocation:
 
 -   *No leveling*. Size evidence orders facilities but is never used to force them toward equality; where no evidence distinguishes facilities, the equal-share floor (Tier D0) is applied.
 
-**2.1.3.2.5 Activity, capacity, and capacity factor**
+#### 2.1.3.2.5 Activity, capacity, and capacity factor
 
 Activity is expressed in tonnes of product per year in all four sectors. Where a facility's activity cannot be anchored to a production statistic, it is derived as emissions divided by the EF. For lime, national production statistics from USGS anchor the activity totals.
 
 Capacity is defined as the facility's own peak activity across its delivered time series, unless a publisher-stated capacity exists and is consistent with the allocated activity. Under this definition the capacity factor (activity divided by capacity) equals 1 in the facility's peak year and is below 1 in all other years.
 
-**2.1.3.2.6 Non-CO<sub>2</sub> gases and non-GHG pollutants**
+#### 2.1.3.2.6 Non-CO<sub>2</sub> gases and non-GHG pollutants
 
 Facility-reported CH<sub>4</sub> and N<sub>2</sub>O are delivered as reported. Where a facility does not report a gas, its value is derived from the facility's CO<sub>2</sub> using the country-and-sector gas ratio implied by the national inventory. A gas is derived only where the national inventory reports that gas for the country and sector; where the national inventory carries no CH<sub>4</sub> (for example), no facility-level CH<sub>4</sub> is emitted rather than a zero.
 
 Reported non-GHG pollutants (NOx, SOx, NH<sub>3</sub>), available from the European registries, are delivered where reported and never modeled for other facilities, since presenting a registry-only population as globally representative would be misleading.
 
-**2.1.3.2.7 Reconciliation to the country total**
+#### 2.1.3.2.7 Reconciliation to the country total
 
 CO<sub>2</sub> is reconciled first. By construction, anchored plus allocated facility CO<sub>2</sub> cannot exceed the national total, because the allocation pool is bounded by the residual. Where reported facility values alone exceed the national total, the exceedance is accepted; a country total can genuinely be too small, and reported values are never modified. Conversely, where the facility sum falls short of the national total, the shortfall is real emissions the sector believes occurred but could not attribute to any known facility. CH<sub>4</sub> and N<sub>2</sub>O are then reconciled per gas: reported values are fixed, while derived values may be scaled down where a country's derived gas totals would otherwise exceed its national envelope for that gas.
 
-**2.1.3.2.8 Process, combustion, and biogenic CO<sub>2</sub>**
+#### 2.1.3.2.8 Process, combustion, and biogenic CO<sub>2</sub>
 
 Each delivered CO<sub>2</sub> value is split into a process percentage and a combustion percentage. Process CO<sub>2</sub> is the non-combustion chemistry term (calcination in lime, carbonate decomposition in glass); for fermentation products (brewing, winemaking), the process share is biogenic fermentation CO<sub>2</sub>. Slaughter wastewater CH<sub>4</sub> is excluded from these sectors, as it is accounted for in Climate TRACE's industrial wastewater sector.
 
-**2.1.3.3 Asset confidences**
+#### 2.1.3.3 Asset confidences
 
 Every value in the delivered asset files carries its own confidence rating, in a companion file that is row-for-row and column-for-column parallel to the asset file. Ratings use a five-point vocabulary (very high, high, medium, low, and very low); very high is deliberately never used, because high is reserved for the strongest evidence present in these sectors; nothing here is measured at the stack.
 
 The rating of each field reflects how that specific value was produced: a facility's reported CO<sub>2</sub> for the year is high; a carried-forward or gas-inferred CO2 is medium; an allocated CO<sub>2</sub> is low (with size evidence) or very low (equal share). A derived CH<sub>4</sub> or N<sub>2</sub>O is never better than low, because it comes from a national ratio applied to one plant, even on a facility whose CO<sub>2</sub> is reported. Activity and the emission-factor columns are never better than low, as quotients of an estimated quantity and a library factor.
 
-**2.1.3.4 Asset uncertainties**
+#### 2.1.3.4 Asset uncertainties
 
 Uncertainties are reported as one absolute 1-sigma uncertainty per value, in the same units as the value itself (tonnes for emissions, tonnes of product for activity). Uncertainties are derived from the same per-field confidence grades. The relative widths are: 10% for a facility's own verified filing for that year; 30% for the facility's own figure carried from another year or inferred from another gas; 40–50% for values built from reported production or capacity with library factors; 75% for allocated values sized by indirect evidence (a size proxy never checked against the plant's actual output); and 100% for equal-share allocations, whose 1-sigma interval reaches zero. The capacity factor, being bounded on \[0, 1\], carries an absolute rather than relative sigma.
 
-**2.2 Implicit Estimation of Other Subsectors**
+#### 2.2 Implicit Estimation of Other Subsectors
 
 For sectors where there was incomplete or no asset level data, the implicit estimation approach was used, which employed GHG inventories, projected emissions data to fill in missing years in GHG inventories, and developed sector specific equations to output implicit estimation for the sectoral “other” emissions. Sectors estimated using this method are directly equal to their source dataset.
 
-**2.2.1 Datasets employed**
+#### 2.2.1 Datasets employed
 
 **Climate TRACE GHG emissions inventory data** (Climate TRACE 2025; [<span class="underline">https://climatetrace.org/</span>](https://climatetrace.org/)): Climate TRACE is a global coalition of organizations with each organization focusing on measuring CO<sub>2</sub>, N<sub>2</sub>O, and CH<sub>4</sub> emissions from particular economic or land cover sectors.
 
@@ -346,13 +348,13 @@ For sectors where there was incomplete or no asset level data, the implicit esti
 
 *Geographic coverage*: CEDS data is globally comprehensive.
 
-**2.2.2 Methods**
+#### 2.2.2 Methods
 
-**2.2.2.1. Projection approach**
+#### 2.2.2.1. Projection approach
 
 Not all GHG inventories have the most recent emissions estimates. EDGAR v2025 currently provides data up through 2024, and FAOSTAT published data up through 2023. In order to utilize the FAOSTAT data for implicit estimation, the data was forward filled up to the final Climate TRACE release month . This method uses the last available estimate as the future projected values. This approach was adopted to ensure all GHG inventories described in section 2.1 match temporally.
 
-**2.2.2.2 Implicit Estimation approach - equations**
+#### 2.2.2.2 Implicit Estimation approach - equations
 
 An immediate practical challenge in implicit estimation is that different global emissions inventories do not use one consistent standardized hierarchy of definitions for emitting sectors and subsectors. Thus, Climate TRACE’s first step was to define a crosswalk of all emitting subsectors from all inventories it could find, to enable comparison between Climate TRACE sector lead results and those of existing publicly available global emissions inventories. This crosswalk can be found in Table S1 in the Supplementary section.
 
@@ -431,11 +433,11 @@ Compared to the v3.0.0 Climate TRACE release in 2023, the Other Manufacturing se
 
 The Other Manufacturing sector derived here contains the following subsectors: combustion related to construction, transportation equipment, machinery, non-metallic mineral production (excluding glass, lime, and cement), as well as all other combustion (1.A.2.g), and non-energy products (2.D).
 
-**3. Results**
+#### 3. Results
 
 The results below highlight the disaggregation and implicit estimation approaches outlined above. Unless otherwise noted, all CO<sub>2</sub> equivalent (CO<sub>2</sub>e) estimates are in the 100 year timescale (AR6 global warming potentials). These results are based on the V5.11.0 dataset delivered September 2026.
 
-**3.1 Data-informed Emissions Disaggregation**
+#### 3.1 Data-informed Emissions Disaggregation
 
 Table 1 summarizes the total global GHG emissions from the disaggregated manufacturing sectors, which were all previously (v3.0.0) combined into the *other-manufacturing* sector. Overall, more than 50% of emissions, or roughly 2 billion tonnes CO<sub>2</sub>e in 2024, previously categorized as *other-manufacturing* were disaggregated into these subsectors.
 
@@ -508,7 +510,7 @@ Finally, the top five highest emitting countries in each sector are presented in
 | Iran                    | 114.7                                       |
 | Saudi Arabia            | 106.1                                       |
 
-**3.2 Implicit Estimation of All Other Subsectors**
+#### 3.2 Implicit Estimation of All Other Subsectors
 
 The goal of the implicit estimation technique is to complement Climate TRACE’s estimates using techniques 1, 2, 3 and 4 with existing estimates. This serves two purposes:
 
@@ -548,13 +550,13 @@ Figure 5 shows EDGAR 2025 totals compared to Climate TRACE V5.11.0 totals for th
 
 <table><thead><tr class="header"><th><strong>Country</strong></th><th><strong>EDGAR Total (GT CO<sub>2</sub>e)</strong></th><th><p><strong>Climate TRACE Total</strong></p><p><strong>(GT CO<sub>2</sub>e)</strong></p></th><th><strong>Climate TRACE percent using techniques 1, 2,3 or 4</strong></th><th><strong>Climate TRACE percent implicitly estimated</strong></th></tr></thead><tbody><tr class="odd"><td>CHN</td><td>15.5</td><td>17.4</td><td>81</td><td>19</td></tr><tr class="even"><td>USA</td><td>5.9</td><td>6.7</td><td>89</td><td>11</td></tr><tr class="odd"><td>IND</td><td>4.3</td><td>4.3</td><td>83</td><td>17</td></tr><tr class="even"><td>RUS</td><td>2.6</td><td>3.0</td><td>77</td><td>23</td></tr><tr class="odd"><td>IDN</td><td>1.3</td><td>1.6</td><td>58</td><td>42</td></tr><tr class="even"><td>JPN</td><td>1.1</td><td>1.3</td><td>91</td><td>9</td></tr><tr class="odd"><td>BRA</td><td>1.3</td><td>1.3</td><td>91</td><td>9</td></tr><tr class="even"><td>IRN</td><td>1.0</td><td>1.2</td><td>83</td><td>17</td></tr><tr class="odd"><td>SAU</td><td>0.8</td><td>0.9</td><td>77</td><td>23</td></tr><tr class="even"><td>CAN</td><td>0.8</td><td>0.9</td><td>87</td><td>13</td></tr></tbody></table>
 
-**3.2.1 Verifying results**
+#### 3.2.1 Verifying results
 
 We went through several systematic audits of the results to ensure that the implicit estimation equations were properly applied using all available relevant data. For instance, due to differences in how inventories specify country names, we ensured that standardized International Organization for Standardization (ISO3) codes were used to match up data points for each implicit calculation.
 
 Results were not reported in cases where inventories define the actual emitting country differently. For example, EDGAR reported data for Serbia and Montenegro as one country. Climate TRACE and FAOSTAT report them separately since they have become separate legal entities since 2006. Therefore, results relying on EDGAR data for such countries were excluded from reported results. Similarly, results for some sectors are not included for countries in the Climate TRACE dataset where EDGAR and/or FAOSTAT do not provide emissions estimates.
 
-**3.2.2 Negative results from the implicit estimation approach**
+#### 3.2.2 Negative results from the implicit estimation approach
 
 In some cases, implicit estimation equations resulted in negative emissions estimates. We identified two main reasons for this:
 
@@ -572,7 +574,7 @@ Examining the causes of negative results can identify discrepancies that are rel
 
 <table><thead><tr class="header"><th><strong>Year</strong></th><th><strong>Other Chemicals</strong></th><th><strong>Other Energy Use</strong></th><th><strong>Other Manufacturing</strong></th><th><strong>Other Metals</strong></th><th><p><strong>Other Mining</strong></p><p><strong>Quarrying</strong></p></th><th><strong>Other Solid Fuels</strong></th></tr></thead><tbody><tr class="odd"><td>2015</td><td>14</td><td>142</td><td>3</td><td>86</td><td>78</td><td>39</td></tr><tr class="even"><td>2016</td><td>14</td><td>146</td><td>3</td><td>86</td><td>80</td><td>39</td></tr><tr class="odd"><td>2017</td><td>15</td><td>145</td><td>3</td><td>83</td><td>80</td><td>38</td></tr><tr class="even"><td>2018</td><td>14</td><td>141</td><td>3</td><td>83</td><td>77</td><td>37</td></tr><tr class="odd"><td>2019</td><td>14</td><td>143</td><td>3</td><td>84</td><td>75</td><td>37</td></tr><tr class="even"><td>2020</td><td>11</td><td>146</td><td>3</td><td>85</td><td>80</td><td>36</td></tr><tr class="odd"><td>2021</td><td>12</td><td>147</td><td>3</td><td>85</td><td>82</td><td>34</td></tr><tr class="even"><td>2022</td><td>13</td><td>144</td><td>3</td><td>84</td><td>83</td><td>37</td></tr><tr class="odd"><td>2023</td><td>13</td><td>142</td><td>3</td><td>85</td><td>83</td><td>37</td></tr></tbody></table>
 
-**4. Implications and future work**
+#### 4. Implications and future work
 
 The two methods outlined here have many strengths, namely:
 
@@ -584,7 +586,7 @@ The two methods outlined here have many strengths, namely:
 
 4.  **Combining multiple estimates increases trust**. Every technique for estimating GHGs, especially at a global level has pros and cons. Some are highly granular and accurate but can be expensive (such as ground-level monitoring from CEMS units) and not comprehensive. This implicit estimation approach created by Climate TRACE for the 2023 launch lays the groundwork for more extensive Bayesian metamodeling that combines many sources of information to improve emissions estimates.
 
-**4.1 Limitations of Data-informed Emissions Disaggregation**
+#### 4.1 Limitations of Data-informed Emissions Disaggregation
 
 The purpose of this work was to disaggregate, at multiple levels, existing emissions inventories: first from combined inventory categories into individual manufacturing subsectors (Section 2.1.3.1), and second from national totals down to individual facilities (Section 2.1.3.2). There are limitations to the framework presented:
 
@@ -600,7 +602,7 @@ The purpose of this work was to disaggregate, at multiple levels, existing emiss
 
 Addressing each of these limitations in future iterations of this dataset will be of primary interest to increasing its completeness and improving its accuracy.
 
-**4.2 Limitations of the implicit estimation approach**
+#### 4.2 Limitations of the implicit estimation approach
 
 1.  **Low confidence estimates.** This method makes use of estimates that are not based on direct observations. Climate TRACE’s roadmap will be to downweigh such estimates in future metamodeling and upweight estimates based on direct observations.
 
@@ -614,61 +616,61 @@ Addressing each of these limitations in future iterations of this dataset will b
 >
 > Thus, Climate TRACE’s priorities for future implicit estimation are to incorporate as many emissions inventories as possible, produce similar systems of equations to make them interoperable as possible, and produce parsimonious consensus results based on large numbers of independent cross-validations.
 
-**5. Emission Reduction Solutions**
+#### 5. Emission Reduction Solutions
 
 Identifying ways to reduce emissions is a key goal for Climate TRACE. Here potential emission reduction solutions (ERSs) are provided for each sector estimated in this methodology to understand how mitigation strategies can reduce emissions. *Note: Only rank 1 strategies are provided for assets on the Climate TRACE website and additional strategies will be made available in future releases.*
 
-**5.1 biological-treatment-of-solid-waste-and-biogenic - CH<sub>4</sub> Flaring**
+#### 5.1 biological-treatment-of-solid-waste-and-biogenic - CH<sub>4</sub> Flaring
 
 The proposed ERS involves collecting methane produced through anaerobic digestion and flaring it, thereby converting CH₄ into CO₂. Because methane has a higher global warming potential than CO₂, flaring reduces the overall climate impact of waste management. Of the waste diverted for biological treatment, around 40% could be anaerobically digested and captured for flaring. Flaring systems operate at approximately 90% efficiency, which translates to a potential total emissions reduction of roughly 36% from the treated waste stream. This methodology accounts for both the methane emissions reduction and the associated mitigation of greenhouse gas warming potential.
 
 Many countries and landfills already employ methane flaring to limit the warming impact of organic waste decomposition. While the approach is effective, technological and financial constraints may hinder global adoption, particularly in regions lacking infrastructure or funding for anaerobic digestion and flaring systems.
 
-**5.2 food-beverage-tobacco - Thermal management and waste heat recovery**
+#### 5.2 food-beverage-tobacco - Thermal management and waste heat recovery
 
 Thermal management and waste heat recovery in the food, beverage, and tobacco production sectors target emissions associated with process heat, which constitutes 60–70% of energy-related emissions in many facilities. These emissions arise from heat used in processing food materials, waste treatment, and fermentation, with the most energy-intensive processes including animal slaughter, grain milling, dairy production, fruit and vegetable preservation, and baked goods preparation. The strategy focuses on improving thermal efficiency through better insulation, enhanced waste heat recovery, and the application of pinch technology, which optimizes energy transfer where hot and cold utilities are closely matched.
 
 The mechanism of this approach reduces energy consumption and associated emissions, with potential reductions ranging from 5% to 95% depending on the process, and an average reduction of 30% was assumed for modeling purposes. Adoption is already occurring widely, driven primarily by the incentive to reduce energy costs. Industries that implement these measures benefit both economically and environmentally, as energy savings translate directly into lower greenhouse gas emissions.
 
-**5.3 glass - Convert production configuration**
+#### 5.3 glass - Convert production configuration
 
 In glass manufacturing, the majority of greenhouse gas and gaseous emissions result from melting raw materials in high-temperature furnaces, where fossil fuel combustion and the decomposition of carbonates release CO₂ and other pollutants. These emissions are generated directly within the glass furnace during the fusion of silica, soda ash, and other inputs into molten glass, contributing roughly 0.1% of global CO₂-equivalent emissions. The strategy of converting production configuration focuses on adopting oxyfiring with natural gas boilers and recovering waste heat to improve efficiency and reduce emissions from the manufacturing process.
 
 This ERS strategy achieves approximately an 11.5% emissions reduction compared to processes that rely solely on fossil fuel combustion. The increased efficiency also leads to co-benefits, including reductions in other pollutants such as NOx and SOx. The method has been widely tested and demonstrated with a technology readiness level of 8–9, indicating high maturity and readiness for industrial deployment.
 
-**5.4 incineration-and-open-burning-of-waste**
+#### 5.4 incineration-and-open-burning-of-waste
 
 The incineration-and-open-burning-of-waste produces GHGs and non-GHGs, contributing to global emissions and impacting local health. Here, two ERS strategies are proposed for this sector.
 
-**5.4.1 Divert organic waste from landfills and compost/capture**
+#### 5.4.1 Divert organic waste from landfills and compost/capture
 
 Open burning of waste is common in regions with limited waste management infrastructure, and waste incineration is both inefficient and a source of pollutants harmful to human health. A solution to reduce these emissions is to sort waste, diverting organic materials to composting or capturing methane, and separating recyclables from landfill streams. By diverting organic waste to composting, waste incineration emissions can be reduced by approximately 85%. Many communities have already implemented composting programs and methane capture initiatives, demonstrating the feasibility of this approach. However, technological and financial constraints may limit global adoption, particularly in regions lacking the necessary infrastructure or resources (Environment America, 2025).
 
-**5.4.2 Domestic waste management infrastructure**
+#### 5.4.2 Domestic waste management infrastructure
 
 Open burning of waste is prevalent in regions with inadequate waste management infrastructure, and waste incineration is inefficient while releasing pollutants that harm human health. A practical solution is the adoption of decentralized domestic waste management practices, including neighborhood-level composting and recycling projects, which can significantly reduce emissions from open burning. By implementing collection and processing programs for recycling and composting, waste incineration activity can be effectively eliminated. Many communities already operate such programs, demonstrating feasibility, but financial constraints may limit global adoption (Environment America, 2025).
 
-**5.5 lime - Energy from biomass**
+#### 5.5 lime - Energy from biomass
 
 Lime production generates greenhouse gas and other gaseous emissions primarily during the calcination of limestone, where heating in kilns releases CO2 both from fuel combustion and the chemical decomposition of calcium carbonate, contributing roughly 0.9% of global CO2-equivalent emissions. One effective strategy to reduce these emissions is the use of biomass for energy needs during production, replacing fossil fuel combustion, which is generally more emissions-intensive. By substituting fossil fuels with biomass, overall emissions from lime production can be reduced by approximately 30%. This approach has a high technology readiness level (TRL 8), indicating that fuel conversion to biomass is a mature and implementable method within the industry (Shen et al., 2024).
 
-**5.6 manure-management-other - Slurry removal system**
+#### 5.6 manure-management-other - Slurry removal system
 
 Methane and nitrous oxide emissions from manure management practices not included in other sub-sectors account for nearly 0.4% of global CO₂-equivalent emissions. A strategy to reduce these emissions is the implementation of improved slurry removal systems, where slurry is removed from animal housing more frequently. By employing this strategy, methane emissions can decrease by 65–80% and nitrous oxide emissions by 12–30%, with calculations for this methodology assuming reductions at the lower end of these ranges. Technologically, this approach is feasible as it does not require complex new systems, though adoption has so far been tested only in limited settings. The strategy can be integrated into existing manure management operations to reduce greenhouse gas emissions without significant infrastructural changes (Aneja et al., 2023; von Keyserlingk et al., 2023).
 
-**5.7 other-agricultural-soil-emissions - Enhanced rock weathering (ERW)**
+#### 5.7 other-agricultural-soil-emissions - Enhanced rock weathering (ERW)
 
 Agricultural soils, excluding fertilization and manure application, release CO₂, CH₄, and N₂O through microbial processes including the decomposition of organic matter and wetting-drying cycles. These emissions contribute approximately 2.2% of global CO₂-equivalent emissions. Enhanced rock weathering (ERW) is a strategy that applies finely ground silicate minerals to soils, where they react with CO₂ in the soil and atmosphere to form stable carbonates. This process lowers soil CO₂ levels and can indirectly improve soil pH and nutrient balance, potentially mitigating conditions favorable to greenhouse gas emissions, though reductions in N₂O are not considered here. Using the emission source curve provided in the literature, ERW is estimated to reduce annual emissions by roughly 35%; when accounting for emissions related to electricity used to produce the minerals, the net reduction is approximately 20% relative to the baseline. While ERW shows potential for substantial impact, it remains a promising but underexplored approach (Beerling et al., 2024).
 
-**5.8 other-chemicals - Alternative fuel use and cleaner production**
+#### 5.8 other-chemicals - Alternative fuel use and cleaner production
 
 Chemical production of hydrogen, nitric acid, titanium oxide, and other minor chemicals generates greenhouse gas emissions and other pollutants primarily through fuel combustion and process reactions involving oxidation or reforming steps. These processes release CO₂, N₂O, and small amounts of other pollutants directly from reactors, reformers, or kilns used in chemical conversion and purification. Emissions can be mitigated through the use of alternative energy sources such as waste heat recovery and renewable energy, alongside efficiency improvements, as well as cleaner production processes including methane leak reduction and carbon capture. Implementation of alternative energy sources reduces emissions by approximately 15%, while cleaner production processes further reduce emissions by over 15%, resulting in an overall estimated reduction of around 30%. These practices have been widely adopted and have demonstrated improvements in operational efficiency and emissions reductions (RMI, 2025).
 
-**5.9 railways - Electrification of railways**
+#### 5.9 railways - Electrification of railways
 
 Railways are a source of GHG emissions through fossil-fuel usage, accounting for approximately 0.2% of global CO₂-equivalent emissions. Emissions can be reduced by increasing railway electrification, leveraging historical trends of electrification and greater usage of electrified railways for freight. Implementing this strategy could decrease greenhouse gas emissions by roughly 40%, including the emissions associated with electricity generation. Electrification of railways has been widely adopted, particularly for passenger transport, and many countries plan to expand the use of electrified rail for freight as well (Drawdown, 2025).
 
-**5.10 fluorinated-gases - Replace HFCs and HCFCs with low GWP alternatives**
+#### 5.10 fluorinated-gases - Replace HFCs and HCFCs with low GWP alternatives
 
 Replacing hydrofluorocarbons (HFCs) and hydrochlorofluorocarbons (HCFCs) with low-global warming potential (GWP) alternatives targets fluorinated gases, which, although present in relatively small atmospheric concentrations, have extremely high GWPs and long atmospheric lifetimes, making them some of the most potent anthropogenic greenhouse gases. HFCs are predominantly used as refrigerants in residential, commercial, and industrial air conditioning and refrigeration systems, and are also found in foam production, aerosol sprays, fire suppression systems, and as solvents. The proposed solution involves substituting these high-GWP compounds with natural refrigerants or low-GWP synthetic alternatives, which significantly lowers emissions from these systems.
 
@@ -676,31 +678,31 @@ This strategy addresses approximately 90% of HFC usage in residential, commercia
 
 Adoption of low-GWP refrigerants is expanding globally, driven by regulations such as the Kigali Amendment and sector-specific emissions reduction targets. Implementation has been effective in commercial and industrial refrigeration, with innovations in recent years accelerating the deployment of these alternatives. Nonetheless, practical adoption requires careful assessment for each application due to variations in thermodynamic and safety properties. Local climate, regional conditions, and system-specific constraints can influence the choice of refrigerant, meaning there is no universal solution applicable to all contexts (European Commission, 2025; UNEP, 2015; EPA, 2025).
 
-**5.11 other-mining-quarrying - Electrification of mine equipment**
+#### 5.11 other-mining-quarrying - Electrification of mine equipment
 
 Greenhouse gas emissions from the mineral extraction sector are primarily generated by the combustion of fuels from mobile sources, such as vehicles and machinery, and fixed sources like generators, particularly at sites without access to electricity grids. Emissions can be significantly reduced by replacing diesel-powered mining vehicles and plant machinery with electric equivalents, and connecting sites to local grids to avoid onsite electricity generation. This approach has the potential to fully eliminate direct emissions at some mining sites where entire vehicle fleets can be electrified. Electrification is increasingly adopted across the sector, as documented by numerous mining companies. However, practical constraints—including the size of operations, the number of vehicles, charging capacity, costs, and limitations on vehicle range—may restrict the feasibility of complete adoption (Schmidt et al., 2025).
 
-**5.12 textiles-leather-apparel - Energy efficiency + heat pumps**
+#### 5.12 textiles-leather-apparel - Energy efficiency + heat pumps
 
 The textile, leather, and apparel manufacturing sector generates significant greenhouse gas emissions primarily from energy-intensive processes such as fiber processing, dyeing, and leather tanning, which rely heavily on fossil fuels for heat production. Heat production constitutes over two-thirds of global industrial energy demand, with only a small portion derived from renewable sources. Emissions can be mitigated by improving energy efficiency and electrifying heat generation through industrial heat pumps, which lower operational energy consumption and reduce GHG emissions. While the adoption of heat pumps entails an initial capital investment, efficiency gains and reduced operational costs make them cost-effective over time. A 50% reduction in emissions has been assumed for this strategy, accounting for any increased emissions from electricity generation. Industrial heat pumps are currently being adopted in Chinese and Indian markets on a limited scale, with broader adoption expected by 2030 (Apparel Impact, 2025; Squarespace, 2025).
 
-**5.13 wood-and-wood-products - Energy from biomass**
+#### 5.13 wood-and-wood-products - Energy from biomass
 
 The production of wood and wood products generates greenhouse gas emissions primarily from fuel combustion in mill equipment and rolling stock, accounting for approximately 0.03% of global CO2-equivalent emissions. A practical approach to reducing these emissions is the use of excess forest residuals as biomass to replace fossil fuels in the production process. By utilizing these residuals for heat energy in mills, net emissions can be reduced by up to 66%. Some mills have already implemented the use of forest residues for power or heating, demonstrating feasibility, though wider adoption may be influenced by financial and technological constraints globally (Brandeis, 2024; FPJ, 2024).
 
-**5.14 enteric-fermentation-other - Feed additives in ruminant diet**
+#### 5.14 enteric-fermentation-other - Feed additives in ruminant diet
 
 Feed additives in ruminant diets offer a strategy to reduce methane emissions from enteric fermentation in non-cattle livestock, including sheep, goats, and yaks, which together account for approximately 1.2% of global greenhouse gas emissions. These additives are methane-inhibiting, suppressing the bacteria responsible for methane production in the digestive system, and thereby lowering emissions. Using compounds, such as 3-NOP, have shown emissions reductions of around 20% in enteric fermentation methane emissions.
 
 Feed additives adoption has been implemented in various countries, including the EU, the U.S.A., and Brazil, primarily to enhance beef cattle weight gain or milk production, with reductions in methane emissions considered a secondary benefit. Despite this, global uptake remains limited due to regulatory restrictions in some regions, costs associated with implementation, potential impacts on product quality and prices, farmers’ unfamiliarity with the technology, and consumer skepticism.
 
-**5.15 cropland-fires - Residue removal without burning**
+#### 5.15 cropland-fires - Residue removal without burning
 
 Crop residues are the leftover crop biomass remaining after harvest, such as straw or stover. Rather than burning these residues, the recommended approach is to remove them without combustion, which eliminates emissions associated with burning. This practice avoids the release of carbon dioxide, methane, and nitrous oxide that would otherwise result from the combustion of leftover crop residues.
 
 In many agricultural contexts, crop residues have additional value as animal feed, bedding material, or organic soil amendments. In regions with diversified agricultural economies, established markets for these byproducts create economic incentives for adopting residue removal rather than burning. However, some farmers continue to burn crop residues due to time constraints associated with double cropping, as they need to clear fields quickly to plant the next crop. More mechanized agricultural systems are better equipped to manage residues efficiently, with the capacity to collect and transport them for alternative uses. The effectiveness of this approach therefore depends on the degree of mechanization, market access for residue byproducts, and timing pressures within local cropping systems.
 
-**Supplementary material**
+#### Supplementary material
 
 **Table S1** Climate TRACE, CEDS, EDGAR, and FAOSTAT Sector Names.
 
@@ -905,7 +907,7 @@ N2O</p></td><td><p>EDGAR</p><p>CEDS</p></td></tr></tbody></table>
 
 <table><thead><tr class="header"><th><strong>Sector</strong></th><th><strong>Subsector</strong></th><th><strong>IPCC Category</strong></th><th><strong>% of Global Emissions w/o LULUCF (Based on CT inventory)</strong></th><th><strong>Estimation Method</strong></th><th><strong>Data Source</strong></th></tr></thead><tbody><tr class="odd"><td>power</td><td>electricity-generation</td><td><p>1.A.1.a.i Electricity Generation</p><p>1.A.1.a.ii Combined Heat and Power Generation</p></td><td>23.44</td><td>1</td><td>WattTime, Transition Zero, Global Energy Monitor</td></tr><tr class="even"><td>power</td><td>heat-plants</td><td>1.A.1.a.iii Heat plants</td><td>0.10%</td><td>3</td><td>WattTime</td></tr><tr class="odd"><td>power</td><td>other-energy-use</td><td>1.A.1.a.iv Other</td><td>3.44%</td><td>5</td><td>EDGAR</td></tr><tr class="even"><td>buildings</td><td>residential-onsite-fuel-usage</td><td>1.A.4.b Residential Stationary Combustion</td><td>4.84%</td><td>2</td><td>Duke University</td></tr><tr class="odd"><td>buildings</td><td>non-residential-onsite-fuel-usage</td><td><p>1.A.4.a Commercial/institutional Stationary Combustion</p><p>1.A.4.c Agriculture/Forestry/Fishing</p></td><td>1.24%</td><td>2</td><td>Duke University</td></tr><tr class="even"><td>buildings</td><td>other-onsite-fuel-usage</td><td>1.A.5 Non-Specified</td><td>0.29%</td><td>5</td><td>EDGAR</td></tr><tr class="odd"><td>manufacturing</td><td>petrochemical-steam-cracking</td><td>2.B.8.b Ethylene</td><td>0.51%</td><td>3</td><td>RMI</td></tr><tr class="even"><td>manufacturing</td><td>iron-and-steel</td><td><p>1.A.2.a Iron and Steel</p><p>2.C.1 Iron and Steel Production</p></td><td>4.58%</td><td>1</td><td>Transition Zero</td></tr><tr class="odd"><td>manufacturing</td><td>cement</td><td><p>1.A.2.f Non-metallic Minerals</p><p>2.A.1 Cement Production</p></td><td>4.17%</td><td>1</td><td>Transition Zero</td></tr><tr class="even"><td>manufacturing</td><td>chemicals</td><td><p>1.A.2.c Chemicals</p><p>2.B.1 Ammonia Production</p><p>2.B.7 Soda Ash Production</p><p>2.B.8.a Methanol</p></td><td>1.07%</td><td>3</td><td>Transition Zero</td></tr><tr class="odd"><td>manufacturing</td><td>aluminum</td><td><p>1.A.2.b Non-Ferrous Metals</p><p>2.C.3 Aluminum Production</p></td><td>0.56%</td><td>3</td><td>Transition Zero</td></tr><tr class="even"><td>manufacturing</td><td>pulp-and-paper</td><td>1.A.2.d Pulp, Paper and Print</td><td>0.03%</td><td>3</td><td>Transition Zero</td></tr><tr class="odd"><td>manufacturing</td><td>glass</td><td><p>1.A.2.f Non-metallic Minerals</p><p>2.A.3 Glass production</p></td><td>0.05%</td><td>4</td><td>WattTime</td></tr><tr class="even"><td>manufacturing</td><td>lime</td><td><p>1.A.2.f Non-metallic Minerals</p><p>2.A.2 Lime Production</p></td><td>0.89%</td><td>4</td><td>WattTime</td></tr><tr class="odd"><td>manufacturing</td><td>food-beverage-tobacco</td><td><p>1.A.2.e Food Processing, Beverages and Tobacco</p><p>2.H.2 Food and Beverages Industry</p></td><td>0.44%</td><td>4</td><td>WattTime</td></tr><tr class="even"><td>manufacturing</td><td>wood-and-wood-products</td><td>1.A.2.g.iv Wood and Wood Products</td><td>0.02%</td><td>5</td><td>WattTime</td></tr><tr class="odd"><td>manufacturing</td><td>textiles-leather-apparel</td><td>1.A.2.g.vi Textile and Leather</td><td>0.08%</td><td>4</td><td>WattTime</td></tr><tr class="even"><td>manufacturing</td><td>other-metals</td><td><p>1.A.2.b Non-Ferrous Metals</p><p>2.C.2 Ferroalloys Production</p><p>2.C.4 Magnesium Production</p><p>2.C.5 Lead Production</p><p>2.C.6 Zinc Production</p><p>2.C.7 Other</p></td><td>0.14%</td><td>3,5</td><td>WattTime</td></tr><tr class="odd"><td>manufacturing</td><td>other-chemicals</td><td><p>1.A.2.c Chemicals</p><p>2.B.2 Nitric Acid Production</p><p>2.B.3 Adipic Acid Production</p><p>2.B.4 Caprolactam, Glyoxal and Glyoxylic Acid Production</p><p>2.B.5 Carbide Production</p><p>2.B.6 Titanium Dioxide Production</p><p>2.B.8.c Ethylene Dichloride and Vinyl Chloride Monomer</p><p>2.B.8.d Ethylene Oxide</p><p>2.B.8.e Acrylonitrile</p><p>2.B.8.f Carbon Black</p><p>2.B.8.g Other</p></td><td>1.34%</td><td>3,5</td><td>WattTime</td></tr><tr class="even"><td>manufacturing</td><td>other-manufacturing</td><td><p>1.A.2.g.i Manufacturing of Machinery</p><p>1.A.2.g.ii Manufacturing of Transport Equipment</p><p>1.A.2.g.v Construction</p><p>1.A.2.g.vii Off-road Vehicles and Other Machinery</p><p>1.A.2.g.viii Other</p><p>2.A.4 Other Process Uses of Carbonates</p><p>2.D Non-energy Products from Fuels and Solvent Use</p><p>2.G Other Product Manufacture and Use</p></td><td>3.23%</td><td>3,5</td><td>EDGAR</td></tr><tr class="odd"><td>fossil-fuel-operations</td><td>oil-and-gas-refining</td><td>1.A.1.b Petroleum Refining</td><td>1.67%</td><td>3</td><td>RMI</td></tr><tr class="even"><td>fossil-fuel-operations</td><td>oil-and-gas-production</td><td><p>1.A.1.c.ii Oil and Gas Extraction</p><p>1.B.2.a.i Exploration</p><p>1.B.2.a.ii Production</p><p>1.B.2.b.i Exploration</p><p>1.B.2.b.ii Production</p><p>1.B.2.b.iii Processing</p><p>1.B.2.c Venting and Flaring</p></td><td>5.72%</td><td>2</td><td>RMI</td></tr><tr class="odd"><td>fossil-fuel-operations</td><td>oil-and-gas-transport</td><td><p>1.B.2.a.iii Transport</p><p>1.B.2.b.iv Transmission and Storage</p></td><td>1.37%</td><td>2</td><td>RMI</td></tr><tr class="even"><td>fossil-fuel-operations</td><td>other-solid-fuels</td><td>1.B.1.b Solid Fuel Transformation</td><td>1.32%</td><td>5</td><td>EDGAR</td></tr><tr class="odd"><td>fossil-fuel-operations</td><td>coal-mining</td><td>1.B.1.a Coal Mining and Handling</td><td>4.01%</td><td>3</td><td>WattTime, Global Energy Monitor</td></tr><tr class="even"><td>mineral-extraction</td><td>copper-mining</td><td>1.A.2.g.iii Mining (Excluding Fuels) and Quarrying</td><td>0.15%</td><td>3</td><td>Hypervine</td></tr><tr class="odd"><td>mineral-extraction</td><td>iron-mining</td><td>1.A.2.g.iii Mining (Excluding Fuels) and Quarrying</td><td>0.11%</td><td>3</td><td>Hypervine</td></tr><tr class="even"><td>mineral-extraction</td><td>bauxite-mining</td><td>1.A.2.g.iii Mining (Excluding Fuels) and Quarrying</td><td>0.01%</td><td>3</td><td>Hypervine</td></tr><tr class="odd"><td>mineral-extraction</td><td>sand-quarrying</td><td>1.A.2.g.iii Mining (Excluding Fuels) and Quarrying</td><td>0.001%</td><td>3</td><td>Hypervine</td></tr><tr class="even"><td>mineral-extraction</td><td>rock-quarrying</td><td>1.A.2.g.iii Mining (Excluding Fuels) and Quarrying</td><td>0.002%</td><td>3</td><td>Hypervine</td></tr><tr class="odd"><td>mineral-extraction</td><td>other-mining-quarrying</td><td>1.A.2.g.iii Mining (Excluding Fuels) and Quarrying</td><td>0.07%</td><td>5</td><td>CEDS</td></tr><tr class="even"><td>transportation</td><td>domestic-aviation</td><td>1.A.3.a Domestic Aviation</td><td>0.54%</td><td>3</td><td>WattTime</td></tr><tr class="odd"><td>transportation</td><td>international-aviation</td><td>International Aviation</td><td>1.01%</td><td>3</td><td>WattTime</td></tr><tr class="even"><td>transportation</td><td>road-transportation</td><td>1.A.3.b Road Transportation</td><td>11.44%</td><td>1</td><td>Johns Hopkins University Applied Physics Laboratory</td></tr><tr class="odd"><td>transportation</td><td>domestic-shipping</td><td>1.A.3.d. Domestic Navigation</td><td>0.93%</td><td>2</td><td>OceanMind, Global Fishing Watch, UCSB emLab</td></tr><tr class="even"><td>transportation</td><td>international-shipping</td><td>International Navigation</td><td>0.96%</td><td>2</td><td>OceanMind, Global Fishing Watch, UCSB emLab</td></tr><tr class="odd"><td>transportation</td><td>non-broadcasting-vessels</td><td>N/a</td><td>0.70%</td><td>1</td><td>Global Fishing Watch, UCSB emLab</td></tr><tr class="even"><td>transportation</td><td>railways</td><td>1.A.3.c Railways</td><td>0.17%</td><td>5</td><td>EDGAR</td></tr><tr class="odd"><td>transportation</td><td>other-transport</td><td>1.A.3.e Other Transportation</td><td>0.32%</td><td>5</td><td>EDGAR</td></tr><tr class="even"><td>agriculture</td><td>rice-cultivation</td><td>3.C Rice Cultivation</td><td>1.32%</td><td>2</td><td>University of Malaysia Terengganu, Carbon Yield</td></tr><tr class="odd"><td>agriculture</td><td>cropland-fires</td><td>3.F Field Burning of Agricultural Residues</td><td>0.08%</td><td>2</td><td>Michigan State University, Carbon Yield</td></tr><tr class="even"><td>agriculture</td><td>enteric-fermentation-cattle-operation</td><td>3.A.1 Cattle</td><td>1.51%</td><td>2</td><td>WattTime, Saint Louis University, Earth Genome</td></tr><tr class="odd"><td>agriculture</td><td>enteric-fermentation-cattle-pasture</td><td>3.A.1 Cattle</td><td>0.99%</td><td>2</td><td>Saint Louis University</td></tr><tr class="even"><td>agriculture</td><td>enteric-fermentation-other</td><td>3.A.2 Sheep, 3.A.3 Swine, 3.A.4 Other</td><td>1.34%</td><td>5</td><td>WattTime analysis of FAOSTAT data</td></tr><tr class="odd"><td>agriculture</td><td>manure-management-cattle-operation</td><td>3.B.1 Cattle</td><td>0.40%</td><td>2</td><td>WattTime, Saint Louis University, Earth Genome</td></tr><tr class="even"><td>agriculture</td><td>manure-left-on-pasture-cattle</td><td>3.D.1.c. Urine and Dung Deposited by Grazing Animals</td><td>0.31%</td><td>2</td><td>Saint Louis University</td></tr><tr class="odd"><td>agriculture</td><td>manure-management-other</td><td>3.B.2 Sheep, 3.B.3 Swine, 3.B.3 Other</td><td>0.92%</td><td>5</td><td>WattTime analysis of FAOSTAT data</td></tr><tr class="even"><td>agriculture</td><td>synthetic-fertilizer-application</td><td>3.D.1.a Inorganic N Fertilizers, 3.D.2 Indirect N₂O Emissions From Managed Soils</td><td>0.93%</td><td>3</td><td>Michigan State University</td></tr><tr class="odd"><td>agriculture</td><td>crop-residues</td><td>3.D.1.d Crop Residues</td><td>0.21%</td><td>5</td><td>FAOSTAT</td></tr><tr class="even"><td>agriculture</td><td>manure-applied-to-soils</td><td>3.D.1.b.i Animal Manure Applied to Soils</td><td>0.25%</td><td>5</td><td>FAOSTAT</td></tr><tr class="odd"><td>agriculture</td><td>other-agricultural-soil-emissions</td><td><p>3.D.1.f Cultivation of Organic Soils</p><p>3.G Liming</p><p>3.H Urea Application</p></td><td>1.80%</td><td>5</td><td>FAOSTAT and EDGAR</td></tr><tr class="even"><td>waste</td><td>solid-waste-disposal</td><td>5.A Solid Waste Disposal</td><td>1.83%</td><td><p>2 (source)</p><p>5 (country)</p></td><td>RMI</td></tr><tr class="odd"><td>waste</td><td>biological-treatment-of-solid-waste-&amp;-biogenic</td><td>5.B Biological Treatment of Solid Waste</td><td>0.04%</td><td>5</td><td>EDGAR</td></tr><tr class="even"><td>waste</td><td>incineration-and-open-burning-of-waste</td><td>5.C Incineration and Open Burning of Waste</td><td>0.03%</td><td>5</td><td>EDGAR</td></tr><tr class="odd"><td>waste</td><td>domestic-wastewater-treatment-and-discharge</td><td>5.D.1 Domestic Wastewater Treatment and Discharge</td><td>1.34%</td><td>2</td><td>Johns Hopkins Applied Physics Laboratory</td></tr><tr class="even"><td>waste</td><td>industrial-wastewater-treatment-and-discharge</td><td>5.D.2 Industrial Wastewater Treatment and Discharge</td><td>0.28%</td><td>2</td><td>Johns Hopkins Applied Physics Laboratory</td></tr><tr class="odd"><td>fluorinated-gases</td><td>fluorinated-gases</td><td><p>2.B Chemical Industry (HFCs and PFCs)</p><p>2.C Metal Industry (HFCs and PFCs)</p><p>2.E Electronics Industry (HFCs and PFCs)</p><p>2.F Product Uses as Substitutes for Ozone Depleting Substances (HFCs and PFCs)</p><p>2.G Other Product Manufacture and Use (HFCs and PFCs)</p></td><td>2.93%</td><td>5</td><td>EDGAR</td></tr><tr class="even"><td>forestry-and-land-use</td><td>water-reservoirs</td><td>4.D.1.b Flooded Land Remaining Flooded Land</td><td>0.17%</td><td>2</td><td>Johns Hopkins Applied Physics Laboratory</td></tr><tr class="odd"><td>forestry-and-land-use</td><td>net-forest</td><td>4.A Forest Land</td><td>-1.17%</td><td>1</td><td>CTrees</td></tr><tr class="even"><td>forestry-and-land-use</td><td>net-shrubgrass</td><td>4.C Grassland</td><td>-2.60%</td><td>1</td><td>CTrees</td></tr><tr class="odd"><td>forestry-and-land-use</td><td>net-wetland</td><td>4.D.1.c Other Wetlands Remaining Other Wetlands, 4.D.2. Land Converted to Wetlands</td><td>-0.43%</td><td>1</td><td>CTrees</td></tr></tbody></table>
 
-**Acknowledgements**
+#### Acknowledgements
 
 The authors thank Dr. Aaron Davitt for his contribution in reviewing this document and Ms Meena Puram for her contributions to the data.
 
@@ -941,7 +943,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 > **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**References**
+#### References
 
 1.  2006 IPCC Guidelines for National Greenhouse Gas Inventories: https://www.ipcc-nggip.iges.or.jp/public/2006gl/ \[Accessed 2022-11-03\].
 

@@ -1,30 +1,28 @@
-**Manufacturing and Industrial Processes sector: Aluminum Production Emissions**
+### Manufacturing and Industrial Processes sector: Aluminum Production Emissions
 
 **Verity Crane, George Ebri, and Charlotte Underwood**
 
 *Authors are affiliated with TransitionZero and Climate TRACE*
 
-1. Introduction 
----------------
+#### 1. Introduction
 
-Aluminum is the second most produced metal in the world after steel, with primary production reaching 104 million tonnes (Mt) in 2025 (IAI, 2026). Its combination of low density, high conductivity, corrosion resistance, and formability makes it valuable across construction, transport, packaging, and power transmission. It is also difficult to produce: the metal does not occur in native form, and industrial-scale extraction by electrolysis only became possible in the late nineteenth century, with the large-scale deployment of electricity generation. About two-thirds of global aluminum comes from primary production derived from bauxite; the remainder is secondary (recycled) metal, which requires roughly 5% of the energy needed to make virgin aluminum and can be recycled repeatedly with little degradation (IAI, 2025b).  
-  
-Primary aluminum production accounts for around 2% of global human-caused greenhouse gas emissions once both direct emissions and indirect emissions from electricity generation are included (GEI, 2025). Beyond carbon dioxide (CO2), the sector is the largest global source of the perfluorocarbons (PFCs) carbon tetrafluoride (CF4) and hexafluoroethane (C2F6), produced during anode effects in electrolysis (Worton et al., 2007).  
-  
+Aluminum is the second most produced metal in the world after steel, with primary production reaching 104 million tonnes (Mt) in 2025 (IAI, 2026). Its combination of low density, high conductivity, corrosion resistance, and formability makes it valuable across construction, transport, packaging, and power transmission. It is also difficult to produce: the metal does not occur in native form, and industrial-scale extraction by electrolysis only became possible in the late nineteenth century, with the large-scale deployment of electricity generation. About two-thirds of global aluminum comes from primary production derived from bauxite; the remainder is secondary (recycled) metal, which requires roughly 5% of the energy needed to make virgin aluminum and can be recycled repeatedly with little degradation (IAI, 2025b).
+
+Primary aluminum production accounts for around 2% of global human-caused greenhouse gas emissions once both direct emissions and indirect emissions from electricity generation are included (GEI, 2025). Beyond carbon dioxide (CO2), the sector is the largest global source of the perfluorocarbons (PFCs) carbon tetrafluoride (CF4) and hexafluoroethane (C2F6), produced during anode effects in electrolysis (Worton et al., 2007).
+
 Point-source visibility for the sector is poor. Production is fiercely competitive, so facility-level data is rarely published; in most cases production is available only at the country or regional level and is released with delays of months to years (IAI, 2025a; NBSC, 2025). Only a few jurisdictions, such as the EU and the USA, publish facility-level emissions data (E-PRTR, 2024; US EPA, 2025). This methodology closes those spatial and temporal gaps by providing global, asset-level estimates of sector emissions on a monthly basis. Climate TRACE additionally provides asset-level emission reduction solutions (ERSs) to show how sector-specific mitigation could lower emissions.
 
-2. Scope and System Boundary
-----------------------------
+#### 2. Scope and System Boundary
 
 Figure 1 details the aluminium sector processes, from bauxite mining, through to manufacture and use. The emissions estimated in this study correspond only to the processes within the circle. A breakdown of the emissions within scope is described in Section 2.1.
 
-| <img src="figures/figure1.png" style="width:6.35417in;height:2.54167in" />                                                                                                                           |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Figure 1** High-level overview of the aluminum sector describing processes and sources of GHG emissions. The scope of this study, primary aluminum production emissions, is enclosed by a circle. |
+<img src="figures/figure1.png" style="width:6.35417in;height:2.54167in" />
+
+**Figure 1** High-level overview of the aluminum sector describing processes and sources of GHG emissions. The scope of this study, primary aluminum production emissions, is enclosed by a circle.
 
 Primary aluminum production begins with the extraction of bauxite, an oxidized ore of aluminum. Bauxite is refined into alumina through the Bayer process, and alumina is smelted into aluminum through the Hall-Héroult electrolysis process before being alloyed and cast. Electrolysis consumes a carbon anode continuously; anodes may be produced on-site or externally (Huglen and Kvande, 2016).
 
-### 2.1 Emissions in Scope
+#### 2.1 Emissions in Scope
 
 Following the process description in Huglen and Kvande (2016), this methodology estimates emissions related to alumina refining and aluminum smelting (Figure 1):
 
@@ -36,23 +34,23 @@ Following the process description in Huglen and Kvande (2016), this methodology 
 
 -   Indirect (Scope 2) CO<sub>2</sub> from purchased grid electricity for smelting and refining
 
-### 2.2 Emissions out of Scope
+#### 2.2 Emissions out of Scope
 
 Anode production — the CO<sub>2</sub> from baking carbon paste into anodes — is excluded. Anode-baking facilities are frequently owned and operated by third parties and may sit off-site, making these emissions Scope 3 for many smelters rather than Scope 1. As Light Metal Age noted in its 2023 decarbonization review, whether a smelter owns its carbon plant ‘determines whether these emissions would belong to Scope 1 or 3’, and the global split is not known (Light Metal Age, 2023a). Anode consumption during electrolysis is instead captured through the fixed anode base emission factor applied to all smelters (Section 4.2).
 
 PFC emissions from anode effects, casting, anode rodding, and bauxite mining are also excluded; each is individually small, and bauxite mining is reported in a separate Climate TRACE sector. Secondary (recycled) production, which accounts for under 2% of total sector emissions, is likewise outside scope.
 
-### 2.3 Technology routes
+#### 2.3 Technology routes
 
 Two routes dominate primary production: the pre-bake process, in which a solid carbon anode is baked before electrolysis, and the Søderberg process, in which a self-baking carbon paste feeds the cell continuously. Global production is dominated by the more efficient pre-bake route, with around 4% still from Søderberg plants. We do not distinguish technology type at the asset level, because the source data does not record each plant’s route; anode consumption is therefore represented by a single fixed factor across all smelters.
 
-### 2.4 Coverage
+#### 2.4 Coverage
 
 We benchmark the asset pipeline against the US Geological Survey Mineral Commodity Summaries (USGS, 2025, 2026). For primary smelting, the pipeline captures 64 Mt of annualized production, about 89% of the 72 Mt global benchmark (2024 estimate) (USGS, 2025). For alumina refining, it captures 114 Mt of 2024 production, about 80% of the 142 Mt global total (USGS, 2026).
 
 In emissions terms, the scope of study circled in Figure 1 captures approximately 80% of the cradle-to-gate carbon footprint of primary aluminum, based on IAI’s published 2025 global-average process breakdown (IAI, 2025a). This comprises electrolysis and direct process emissions (\~68% of the footprint) and refining electricity and thermal energy (\~12%). The remaining \~20% is spread across the excluded sources: anode production (\~7%), PFC emissions from anode effects (\~5%), ancillary materials and transport (\~7%), casting (\~1%), and bauxite mining (&lt;1%). Measured against the primary-production phase alone — rather than the full cradle-to-gate footprint — the in-scope processes represent more than 90% of emissions.
 
-**3. Datasets employed**
+#### 3. Datasets employed
 
 We use publicly available data sources and inventories to estimate primary aluminum production, including:
 
@@ -70,18 +68,16 @@ We use publicly available data sources and inventories to estimate primary alumi
 
 -   Captive weight derived from country grid strength.
 
-4. Method
----------
+#### 4. Method
 
 <img src="figures/figure2.png" style="width:5.26323in;height:7.28527in" />
--------------------------------------------------------------------------
 
 **Figure 2** Flowchart of the methodology to calculate facility-level emissions for aluminum smelters and alumina refineries.
 
 Total emissions for each asset are the sum of Scope 1 and Scope 2 CO<sub>2</sub>. Production is first disaggregated to the asset level (Section 4.1), then multiplied by the relevant Scope 1 and Scope 2 emission factors (Sections 4.2–4.5).
 
-**4.1 Production Estimates**  
-  
+#### 4.1 Production Estimates
+
 The foundation of our emissions estimates is monthly alumina and aluminum production data from IAI (2026). To estimate the production at the facility level, a disaggregation method was applied: for each facility, we computed its share of regional capacity to derive the facility’s contribution to the regional production for the given timeframe (Figure 2 Section 1) . See below for an illustrative example of a country with two plants A and B (of capacities $C_{A}\ $and $C_{B}$ respectively) and a total production $P_{\text{\ m}}$ for a region in a given month m. The production estimates for these two plants are respectively $P_{A,\ m}$ and $P_{B,\ m}$:
 
 -   $P_{A,\ m} = \ \frac{C_{A}}{C_{A}\  + \ C_{B}}\  \times \ P_{m}$
@@ -90,21 +86,21 @@ The foundation of our emissions estimates is monthly alumina and aluminum produc
 
 Asset capacity data is sourced from IIR (2026) and LMA (R. Pawlek, 2026). Facility-level production is then multiplied by the relevant Scope 1 and Scope 2 emissions factors to derive point source emissions estimates.
 
-| <img src="figures/figure3.png" style="width:6.35417in;height:3.75in" />                                                                                                                                                                                                                                                                                                                     |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Figure 3** Visual representation of the primary aluminum assets used in this work. Refinery assets are represented by blue circles, whilst smelting assets are represented by orange circles, and integrated assets are represented by dark blue circles. The circle size reflects the plant capacity as shown top left with the smallest circle = 250,000 and large circle = 5,000,000. |
+<img src="figures/figure3.png" style="width:6.35417in;height:3.75in" />
 
-### 4.2 Smelter Scope 1: Anode Consumption
+**Figure 3** Visual representation of the primary aluminum assets used in this work. Refinery assets are represented by blue circles, whilst smelting assets are represented by orange circles, and integrated assets are represented by dark blue circles. The circle size reflects the plant capacity as shown top left with the smallest circle = 250,000 and large circle = 5,000,000.
 
-A fixed anode base emissions factor of 1.5 tCO<sub>2</sub>/t-Al is applied to all smelters (Figure 2 Section 2). This represents the direct CO<sub>2</sub> from carbon anode consumption during electrolysis and is treated as a fixed process chemistry term: it does not vary with power source, so smelters powered entirely by renewable energy still generate these anode emissions.  
-  
+#### 4.2 Smelter Scope 1: Anode Consumption
+
+A fixed anode base emissions factor of 1.5 tCO<sub>2</sub>/t-Al is applied to all smelters (Figure 2 Section 2). This represents the direct CO<sub>2</sub> from carbon anode consumption during electrolysis and is treated as a fixed process chemistry term: it does not vary with power source, so smelters powered entirely by renewable energy still generate these anode emissions.
+
 This factor is consistent with the Ecofys (2009) EU ETS benchmark study and the IPCC 2006 guidance for aluminum production. The earlier Ecofys methodology reported electrolysis process emissions (\~2.025 tCO<sub>2</sub>/t-Al) and anode production (\~0.447 tCO<sub>2</sub>/t-Al) separately; our consolidated factor of 1.5 tCO<sub>2</sub>/t-Al reflects the anode consumption component only, with the remainder accounted for through the captive power methodology described in Section 4.3.
 
-### 4.3 Refinery Scope 1: Process thermal emissions
+#### 4.3 Refinery Scope 1: Process thermal emissions
 
 Refinery Scope 1 emissions arise primarily from fossil fuel combustion supplying thermal energy to the Bayer process (digestion at 150–200°C; calcination at \~1,050°C). These are estimated using IAI regional direct emissions factors (tCO<sub>2</sub>/t-alumina), which capture fleet-average thermal combustion intensity by region and year. Refineries with renewable primary fuel types (solar, wind, hydro) receive a process thermal EF of 0.0, on the basis that no fossil combustion is required for thermal energy.
 
-### 4.4 Scope 2: Indirect emissions from purchased electricity
+#### 4.4 Scope 2: Indirect emissions from purchased electricity
 
 Scope 2 emissions from purchased grid electricity are estimated as:
 
@@ -114,7 +110,7 @@ Electrical intensity (MWh/t product) × (1 − Captive weight)
 
 Grid emissions intensity is sourced from Ember's monthly electricity data (Ember, 2026a), using country-level intensity where available and falling back to the global average elsewhere (Figure 2 Section 3).
 
-### 4.5 Scope 2: Indirect emissions from captive power generation
+#### 4.5 Scope 2: Indirect emissions from captive power generation
 
 For smelters and refineries with on-site (captive) power generation, additional Scope 2 emissions arise from fossil fuel combustion in the captive power plant (Figure 2 Section 4). These emissions are often reported as Scope 1 emissions, as they take place on-site, but Climate TRACE reports all emissions from electricity generation for use within manufacturing under Scope 2.
 
@@ -146,8 +142,7 @@ Where an asset has both a primary and secondary captive fuel, an 80/20 weighted 
 
 **Total emissions =** Scope 1 CO<sub>2</sub> emissions + Scope 2 CO<sub>2</sub> emissions
 
-5. Results
-----------
+#### 5. Results
 
 China accounts for around 45% of the global primary aluminum production, with some of the largest smelting facilities. Tables 1 and 2 show the largest emitters in the aluminum sector at country and plant level; Tables 3 and 4 show the equivalent for alumina refining. See Section 2.1 for which scopes are categorized as direct and indirect emissions.
 
@@ -177,8 +172,7 @@ emissions (MtCO<sub>2</sub>)</strong></td><td><p><strong>Total</strong></p><p><s
 
 Regional fleet-average emission intensities are broadly consistent with IAI’s published figures (IAI, 2024).
 
-6. Comparisons to external data sources 
----------------------------------------
+#### 6. Comparisons to external data sources
 
 Evaluating the absolute accuracy of global, asset-level greenhouse gas emissions for primary aluminum smelting and alumina refining is a difficult task. To validate the operational integrity, directional accuracy, and physical baselines of the refined asset-level methodology developed in this work, our outputs are benchmarked against two of the most prominent external industrial reference systems:
 
@@ -188,7 +182,7 @@ Evaluating the absolute accuracy of global, asset-level greenhouse gas emissions
 
 Importantly, these comparisons are not intended to yield a flawless, one-to-one mathematical match: different regulatory bodies and research institutions utilize vastly different accounting boundaries, reporting scopes, and process thresholds. Instead, these comparative exercises serve as an essential "sanity check" to verify that our model is directionally robust, geographically accurate, and physically constrained.
 
-### 6.1 EU ETS Emissions Data
+#### 6.1 EU ETS Emissions Data
 
 The EU ETS is a highly regulated cap-and-trade market where industrial installations within Europe are legally required to report their emissions annually. When comparing our model's direct CO<sub>2</sub> emissions to the EU ETS verified emissions, both represent Scope 1 (direct) emissions, but define the emissions boundaries differently: Climate TRACE focuses on process-specific chemistry, while the EU ETS enforces a strict physical fence-line:
 
@@ -204,9 +198,9 @@ The EU ETS is a highly regulated cap-and-trade market where industrial installat
 
 -   Includes all combustion within the facility (electrolysis + casting + baking + 100% of on-site backup/combustion generation).
 
-| <img src="figures/figure4.png" style="width:5.98958in;height:4.75in" />                                                                                                                                                                                      |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Figure 4** Comparison of ETS and Climate TRACE Scope 1 and captive power emissions for 2025 (tonnes) for the countries reported by ETS with non-zero emissions. The dashed line indicates exact agreement and the shaded band ±20% of verified emissions. |
+<img src="figures/figure4.png" style="width:5.98958in;height:4.75in" />
+
+**Figure 4** Comparison of ETS and Climate TRACE Scope 1 and captive power emissions for 2025 (tonnes) for the countries reported by ETS with non-zero emissions. The dashed line indicates exact agreement and the shaded band ±20% of verified emissions.
 
 ETS therefore reports higher for most countries, except where smelters run on renewable power with little on-site combustion (Norway, Iceland), which match closely. The divergences elsewhere group into two causes:
 
@@ -216,7 +210,7 @@ ETS therefore reports higher for most countries, except where smelters run on re
 
 The ETS's inability to isolate primary metal also biases it upward, with the following acknowledgement in its methodology: “it is not possible to differentiate between the production of primary and secondary aluminium \[...\] leading to overestimation of primary aluminium”.
 
-### 6.2 GEI Primary Aluminum Rating System
+#### 6.2 GEI Primary Aluminum Rating System
 
 The Global Efficiency Intelligence (GEI) framework evaluates the national carbon intensity of the primary aluminum industry and assigns countries a letter-grade rating from A (cleanest) to G (most carbon-intensive).
 
@@ -228,18 +222,17 @@ To facilitate a comparative analysis, we have mapped our calculated asset-level 
 
 The Climate TRACE framework deliberately maintains the asset-gate boundary: forcing upstream alumina emissions into every smelting asset's footprint would require top-down regional trade assumptions, as alumina is a highly traded global commodity. By isolating the smelting stage, our model preserves the 'clean signal' of local decarbonization efforts - such as low-carbon PPAs and localized grid optimizations without diluting it with the fossil-thermal footprint of offshore alumina refining.
 
-| <img src="figures/figure5.png" style="width:5.98958in;height:4.88002in" />                                |
-|----------------------------------------------------------------------------------------------------------|
-| **Figure 5** Country-level comparison of Climate TRACE and GEI primary aluminum emissions ratings, 2023. |
+<img src="figures/figure5.png" style="width:5.98958in;height:4.88002in" />
+
+**Figure 5** Country-level comparison of Climate TRACE and GEI primary aluminum emissions ratings, 2023.
 
 This data comparison shows that GEI and Climate TRACE agree on the relative cleanliness of aluminum production across a number of geographies. The gate-boundary difference in scope drives all adjacent or mismatched categorisations; countries whose primary aluminium supply chain is largely domestic (raw materials and smelting co-located) tend to align closely across both frameworks, since the cradle-to-gate and asset-gate boundaries collapse to nearly the same footprint. Adjacent classifications generally reflect countries with a meaningful import share of upstream alumina, or with older smelting fleets where the omitted PFC contribution is large enough to shift a rating tier. The effect of these scope differences is most pronounced for France, and is discussed in more detail in Appendix 11.1.
 
-7. Emissions Reduction Solutions Overview and Application
----------------------------------------------------------
+#### 7. Emissions Reduction Solutions Overview and Application
 
 Emissions Reduction Solutions (ERSs) for this sector are two strategies: recycled feedstock for smelting and shut down refineries. *Note: Only rank 1 strategies are provided for assets on the Climate TRACE website and additional strategies will be made available in future releases.*
 
-### 7.1 Recycled feedstock for smelting
+#### 7.1 Recycled feedstock for smelting
 
 The use of recycled aluminum feedstock (secondary inputs) represents a major opportunity for emissions reduction. Recycling aluminum requires only a small fraction of the energy used in primary production and reduces the need for bauxite mining and alumina refining, both of which are highly carbon-intensive (The Aluminum Association, 2022). Electrifying some production processes can further decrease fossil fuel combustion emissions.
 
@@ -247,23 +240,21 @@ By employing recycled feedstock, the emission factor for aluminum production can
 
 There are potential caveats and limitations to employing this strategy. First, adoption includes maintaining product quality and managing impurities in recycled inputs. Second, in areas with fossil-fuel-dependent power grids, the emissions reductions from electrified recycling processes may be partially offset by higher indirect emissions from electricity use.
 
-### 7.2 Shut down refineries
+#### 7.2 Shut down refineries
 
-This strategy focuses on the retirement of inefficient or high-emitting aluminum refineries. Some refineries produce higher emissions per tonne of aluminum due to process or equipment type. By shutting down these facilities and reallocating production to other, more efficient refineries, overall sectoral emissions can be reduced while maintaining total production output.  
-  
+This strategy focuses on the retirement of inefficient or high-emitting aluminum refineries. Some refineries produce higher emissions per tonne of aluminum due to process or equipment type. By shutting down these facilities and reallocating production to other, more efficient refineries, overall sectoral emissions can be reduced while maintaining total production output.
+
 This strategy effectively eliminates 100% of activity and emissions at the decommissioned facility. The associated production activity is then induced at nearby facilities, which generally have a lower emissions factor (i.e., emit less CO₂ per tonne of aluminum produced). In practice, refineries operating above the national average emissions factor are candidates for closure, enabling emissions reductions by diverting activity to more efficient sites.
 
 In principle, this strategy can be implemented anywhere with sufficient capacity at other refineries to absorb the diverted production. Its feasibility depends on the availability of underutilized capacity and the efficiency of alternative facilities. The development of low-emitting, high-capacity aluminum refineries—including those using more efficient technologies or cleaner energy inputs—would enhance the viability of this approach, effectively “pushing out” less efficient plants.
 
-8. Discussion and Limitations
------------------------------
+#### 8. Discussion and Limitations
 
 We estimate point-source emissions for both alumina refineries and aluminum smelters by allocating a share of reported national production to each asset by capacity, then applying Scope 1 and Scope 2 emission factors. The sources covered are anode consumption, captive power generation, electricity consumption for electrolysis, and fuel combustion for alumina production.
 
 The main limitation is the assumption that all assets in a region operate at the same utilization rate, which is how production is allocated by proportional capacity. This will misstate output where an asset is mothballed or offline for part of the year. Estimates would improve with more granular production data; province-level data would be particularly valuable for China, where most production and emissions occur. The method also omits PFC emissions from anode effects and does not distinguish pre-bake from Søderberg technology at the asset level. Even so, it provides a robust foundation for estimating CO<sub>2</sub> emissions across the sector, with clear routes to refinement as more data becomes available.
 
-9. Data Availability and Metadata 
----------------------------------
+#### 9. Data Availability and Metadata
 
 Aluminum sector CO<sub>2</sub> emissions are reported for individual assets from January 2021. The emissions described here represent a subset of country-level emissions estimates from the Climate TRACE manufacturing sector. All data is freely available on the Climate TRACE website ([<span class="underline">https://climatetrace.org/</span>](https://climatetrace.org/)). A detailed description of what is available is described in Tables 7-9.
 
@@ -310,8 +301,7 @@ Aluminum sector CO<sub>2</sub> emissions are reported for individual assets from
 
 **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-10. References
---------------
+#### 10. References
 
 1.  Alcoa Corporation (2021). Alcoa Reaches Agreement on Future of San Ciprián Smelter. Press release, December 29, 2021. Available at: [<span class="underline">https://www.businesswire.com/news/home/20211229005367/en/Alcoa-Reaches-Agreement-on-Future-of-San-Ciprin-Smelter</span>](https://www.businesswire.com/news/home/20211229005367/en/Alcoa-Reaches-Agreement-on-Future-of-San-Ciprin-Smelter)
 
@@ -383,9 +373,9 @@ Aluminum sector CO<sub>2</sub> emissions are reported for individual assets from
 
 35. Worton, D.R., Sturges, W.T., Gohar, L.K., Shine, K.P., Martinerie, P., Oram, D.E., Humphrey, S.P., Begley, P., Gunn, L., Barnola, J.-M., Schwander, J., Mulvaney, R., 2007. Atmospheric Trends and Radiative Forcings of CF4 and C2F6 Inferred from Firn Air. Environ. Sci. Technol. 41, 2184–2189. Available at: [<span class="underline">https://doi.org/10.1021/es061710t</span>](https://doi.org/10.1021/es061710t)
 
-**11. Appendix**
+#### 11. Appendix
 
-**11.1 Supporting detail for the EU ETS and GEI comparisons**
+#### 11.1 Supporting detail for the EU ETS and GEI comparisons
 
 **Country-specific ETS divergences**
 

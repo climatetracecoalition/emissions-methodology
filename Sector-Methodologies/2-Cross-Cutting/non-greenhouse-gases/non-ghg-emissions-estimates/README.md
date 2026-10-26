@@ -1,13 +1,12 @@
-**Non-Greenhouse Gas Emissions Estimates Across Sectors**
+### Non-Greenhouse Gas Emissions Estimates Across Sectors
 
-***Gary Collins<sup>1,3</sup>, Luke Mullany<sup>1,3</sup>, Michael Robinette<sup>1,3</sup>, Lekha Sridhar<sup>2,3</sup>, Elizabeth Reilly<sup>1,3</sup>, and Jeff Maranchi<sup>1,3</sup>***
+**Gary Collins<sup>1,3</sup>, Luke Mullany<sup>1,3</sup>, Michael Robinette<sup>1,3</sup>, Lekha Sridhar<sup>2,3</sup>, Elizabeth Reilly<sup>1,3</sup>, and Jeff Maranchi<sup>1,3</sup>**
 
 1\) The Johns Hopkins University Applied Physics Laboratory (JHU/APL),
 
 2\) WattTime, 3) Climate TRACE
 
-Introduction
-============
+#### Introduction
 
 The World Health Organization (WHO) estimates that globally 6.7 million premature deaths annually are caused by poor air quality, with 4.2 million of those deaths caused by ambient outdoor air pollution \[1\]. Whereas the impacts from releasing greenhouse gases (GHGs) are long term, air pollution can have both long-term and immediate impacts on the health of individuals and communities. Further, anthropogenic sources of air pollutants are also an issue of climate justice as the impacts of air pollution are disproportionately felt by poorer, disadvantaged communities and the Global South.
 
@@ -15,11 +14,9 @@ Currently there are gaps in the knowledge of the sources and magnitude of ambien
 
 To that end, criteria pollutants – sulfur dioxide (SO<sub>2</sub>), nitrous oxides (NOx), non-methane volatile organic gases (NMVOC), ammonia (NH<sub>3</sub>), carbon monoxide (CO), particulate matter less than 2.5 micron in diameter (PM<sub>2.5</sub>) – and speciated PM<sub>2.5</sub> components black carbon (BC) and organic carbon (OC) are predicted for all sectors globally. Among these, the gap-filled predictions are arrived at by identifying pollution streams (e.g. combustion and fugitive) on which emissions factors or estimated co-pollutant ratios are applied. These emissions factors and ratios are based on country, sector, fuel, and asset-type, where available, and descriptions of how these are constructed is below.
 
-1.  Data and Methods
-    ================
+#### 1.  Data and Methods
 
-    1.  Overview
-        --------
+#### 1.  Overview
 
 Estimates of non-ghg emissions that take a bottom-up approach (where emissions are estimated by accounting for different consumption, energy-demand, and other activities) often lack facility-level specificity that is required for identifying polluters and holding them accountable. This includes the high-quality Emissions Dataset for Global Atmospheric Research (EDGAR) and the mosaic Community Emissions Data System (CEDS) which use sophisticated and granular approaches to estimating emissions and mitigation controls for country-level emissions estimates but rely on proxies for distributing emissions spatially \[2,3,4\]. The approach described here leverages these emissions inventories in order to provide conversion factors between greenhouse gas emissions and pollution emissions for a given facility.
 
@@ -37,8 +34,7 @@ Various improvements were made between Phase 7 and Phase 8 of Climate TRACE air 
 
 5.  Process emissions shared by pulp and paper, food, beverage and tobacco, and wood products are now disaggregated with Tier 1 emission factors.
 
-    1.  Data
-        ----
+#### 1.  Data
 
 CEDS and EDGAR air pollution emissions estimates are used for predicting the air pollution emissions for Climate TRACE assets. The EDGAR air pollutant (v8.1, 1970–2022) and GHG (EGDAR\_2026\_GHG) emissions \[5\] and the CEDS v\_2025\_03\_18 release, by country, sector and fuel \[6\], are used. A mapping of the sectors of these inventories (which are IPCC code-based) to Climate TRACE sectors is needed for making this estimate and is shown in Table 5 and Table 6 in Supplementary Materials. In addition, as CEDS and EDGAR only estimate emissions up to 2022, forward filling is used for any date after.
 
@@ -46,8 +42,7 @@ Climate TRACE GHG estimates exclude biomass CO<sub>2</sub>, which is accounted f
 
 Countries are matched according to ISO3 codes. Where a ratio is missing from one inventory for a country, the ratio from the other inventory is used. Ratios that are exactly zero, which arise for small-emitting countries, are treated as missing. Countries in the Climate TRACE country list that remain without a ratio, and any non-finite ratios, are assigned the median ratio across countries for the same sector, species and year.
 
-Emissions Model
----------------
+#### Emissions Model
 
 As Climate TRACE estimates emissions at the facility-level, multiple sources of emissions at a given facility are combined to form a single estimate. In Phase 8, the emissions of pollutant *g* from asset *a* are the sum of the emissions of the asset’s emission streams *k*, where $K_{s}$ is the set of streams (such as combustion, fugitive leakage, and dusting) defined for the asset’s sector *s* (Section 2.4):
 
@@ -63,8 +58,7 @@ $Em_{a,k}^{g} = A_{a,k} \cdot EF_{k}^{g}$ (Eq. 3)
 
 This formulation generalizes that of Phase 7, in which the emissions of each were divided into combustion-related and process-related components only. Combustion and process remain as stream types, alongside fugitive, flaring, fugitive-dust, agricultural and waste, and combined streams. The emissions formula of a sector follows from listing its streams and the model used for each (Section 2.6).
 
-Emission Stream Types
----------------------
+#### Emission Stream Types
 
 The total pollutant emissions at a given facility can be composed of multiple different emissions streams. For example, VOC emissions at a coal mining site can arise from a combustion stream (the combustion of diesel in heavy machinery) and from the fugitive release from newly exposed coal. Hence, modeling each stream is necessary for accurately modeling emissions. Each stream is characterized by its source type, the inventory categories from which its ratio is built, and its base gas (Table 1).
 
@@ -92,10 +86,9 @@ The total pollutant emissions at a given facility can be composed of multiple di
 
 **Combined.** A single ratio spanning more than one source type, used where the inventories or the Climate TRACE data do not support a split: *other-manufacturing* (industrial combustion and all industrial processes), *iron-and-steel*, *other-metals* (non-ferrous combustion and processes), *pulp-and-paper*, *food-beverage-and-tobacco*, and *wood-and-wood-products* (combustion and a Tier 1 disaggregated process share). A combined stream is a documented simplification rather than a physical source type.
 
-1.  Estimation Models
-    -----------------
+#### 1.  Estimation Models
 
-    1.  ### Co-Pollutant Ratio Model
+1.  ### Co-Pollutant Ratio Model
 
 For non-GHGs, emissions factors for a given emissions stream are dependent on asset-level pollution controls, and many sectors have asset-level pollution control data needed for determining these emissions factors. However, for other sectors and many regions globally, pollution control data is difficult to access; hence these emissions factors have to be estimated. To do so, national-level emissions factors are estimated using a fusion of emissions estimates from EDGAR and CEDS. Primarily, co-pollutant ratios are developed such that the dominant GHG estimates of a given sector $Em_{s,c,k}^{D_{k}}$ can be translated to pollution values. For a stream built from inventory data, the ratio for sector *s*, country *c* and stream *k* is,
 
@@ -133,7 +126,7 @@ For iron and steel, single global values are used, ρ<sub>BC</sub> = 14.59 and �
 
 After all emissions estimates are produced, gap-filling of zero and NaN emissions ratios is performed by replacing said values with the median of the non-zero/non-NaN values. At the time of this document, EDGAR’s latest year for emissions estimates is 2022, and hence all years thereafter are estimated with the ratio in 2022.
 
-### 2.5.1.1 Disaggregation of EDGAR and CEDS 2.H Emissions
+#### 2.5.1.1 Disaggregation of EDGAR and CEDS 2.H Emissions
 
 *Pulp-and-paper*, *food-beverage-and-tobacco*, and *wood-and-wood-products* share a single process sector in both inventories (EDGAR 2.H and CEDS 2H), which reports no process GHG, so a process ratio cannot be formed. The three industries also have different co-pollutant profiles. The shared process emissions are therefore disaggregated with the EMEP/EEA Tier 1 emission factors for *pulp-and-paper* \[7\] (CO 5.5, NMVOC 2, PM<sub>2.5</sub> 0.6 and PM<sub>10</sub> 0.8 kg per Mg air-dried pulp). *Pulp-and-paper* is taken as the sole process source of CO, NO<sub>x</sub>, SO<sub>2</sub> and BC in 2.H; its NMVOC, PM<sub>2.5</sub> and PM<sub>10</sub> are obtained by scaling the EDGAR 2.H CO by the Tier 1 ratios to CO. The remaining NMVOC is assigned to food, beverage and tobacco, and the remaining PM to wood products, with residuals bounded below by zero. OC and NH<sub>3</sub> are not reported in 2.H and are set to zero. EDGAR 1.A.2 combustion emissions are divided among the three sectors by each sector’s share of CEDS industrial combustion emissions of the same species. The combined ratio for sector *s* is then
 
@@ -141,7 +134,7 @@ $r_{s,c}^{g,CO_{2}} = \frac{w_{s,c}^{g}\, E_{c,1.A.2}^{g} + P_{s,c}^{g}}{w_{s,c}
 
 where *E* and *C* denote EDGAR and CEDS emissions and $P_{s,c}^{g}$ is the process emission assigned to sector *s* above.
 
-### 2.5.1.2 Flaring Ratio Derivation
+#### 2.5.1.2 Flaring Ratio Derivation
 
 The flaring streams of oil and gas refining and petrochemical steam cracking use a fixed ratio derived from the EMEP/EEA refinery flaring emission factors \[7\]. These are expressed per unit of energy, and converted to a ratio to CO<sub>2</sub> with the IPCC default CO<sub>2</sub> emission factor for refinery gas \[9\]:
 
@@ -149,7 +142,7 @@ $r_{\text{flare}}^{g,CO_{2}} = \frac{EF_{\text{flare}}^{g}\ \left\lbrack g/GJ \r
 
 SO<sub>2</sub> from flaring is computed from the flare-gas sulfur content, for which a default of 236 ppm by mass, based on the U.S. New Source Performance Standards limit for refinery fuel gas, is used \[10\].
 
-### 2.5.1.3 Fire Ratios
+#### 2.5.1.3 Fire Ratios
 
 Co-pollutant ratios for the fire sectors are derived from the GFED emission factors \[11\], which are given per vegetation class in grams per kilogram of dry matter burned. Because both factors refer to the same mass of dry matter, the ratio of pollutant *g* to CO<sub>2</sub> for vegetation class $v$ is
 
@@ -161,7 +154,7 @@ $r_{\text{forest}}^{g,CO_{2}}\left( x \right) = r_{v\left( Z\left( x \right) \ri
 
 Climate zones are assigned with the IPCC decision tree \[12\], as for Climate TRACE reservoir emissions \[13\] but at 0.1° rather than 0.5°. Mean annual temperature, mean annual precipitation and the test for all months below 10 °C are computed from ERA5-Land monthly means \[14\] over the 31 years ending in the target year. Frost days and potential evapotranspiration (PET) are taken from CRU TS 4.09 \[15\], averaged at 0.5° over the same period (ending in 2024, the last CRU year), and assigned to the 0.1° grid with bilinear interpolation; elevation is GMTED2010 \[16\] resampled to 0.1°.
 
-### 2.5.1.4 Harmonic Mean of Ratio Error Analysis for Co-Pollution Ratio Model
+#### 2.5.1.4 Harmonic Mean of Ratio Error Analysis for Co-Pollution Ratio Model
 
 The use of a harmonic average reduces the biases caused by either individual dataset. Consider only one emissions co-pollutant ratio which differs from the “true” conversion ratio ($\rho$) with some error $\epsilon$, such that
 
@@ -193,7 +186,7 @@ $\frac{\text{Em}_{\text{estimated}}^{\text{harmonic}} - E_{\text{true}}}{E_{\tex
 
 Hence using a harmonic mean of two inventories results in biases either canceling out, or the bias of the estimate lying between the biases of the two datasets. Because the magnitude and signs of the individual biases of CEDS and EDGAR are uncertain, the harmonic mean offers a more robust centralized estimate than choosing either inventory alone.
 
-### Activity-Based Emission Factor Model
+#### Activity-Based Emission Factor Model
 
 The co-pollutant ratio model (Equation 2) works well for most sectors, and even with sectors which lack either combustion or process emissions – e.g. the combustion-only textile industry or enteric fermentation, which has neither. However, the process streams of *aluminum* and *chemicals* and the dust stream of non-coal mining and quarrying, required special treatment related to the process component of the emissions due to the asset lacking GHG emissions from process-related activities (e.g. blasting of rock), or because the inventories report negligible process GHG for the sector, which leaves the process ratio undefined. Conveniently, emission factors from \[7\] (Table 7) can be used directly with the activities in these sectors to produce stream-related emissions, resulting in
 
@@ -201,8 +194,7 @@ $Em_{s}^{g} = A_{s}^{g} \cdot EF_{s}^{g}$(Eq. 17)
 
 which is used for the process or dust streams of these sectors. The emission factors are added to the combustion stream because the corresponding guidebook methods exclude fuel combustion.
 
-Application to Climate TRACE Sectors
-------------------------------------
+#### Application to Climate TRACE Sectors
 
 Table 2 lists, for each Climate TRACE sector, its streams and the model and ratio source used for each. The emissions formula of each sector, obtained by applying Equations 1–3 to its streams, is given in Table 4.
 
@@ -238,13 +230,11 @@ Table 2 lists, for each Climate TRACE sector, its streams and the model and rati
 | coal-mining                                                                                                                                | R         |                           | R (CH<sub>4</sub>) |             |          |                   |              | CH<sub>4</sub> |
 | other-fossil-fuel-operations (CO<sub>2</sub> only)                                                                                         | —         | —                         | —                  | —           | —        | —                 | —            | —              |
 
-Uncertainty & Confidence
-------------------------
+#### Uncertainty & Confidence
 
 Uncertainty analysis was not performed for this initial development of air quality datasets; however, as the dataset matures, uncertainty of activity for sectors will be incorporated with the uncertainty of emissions factors and mitigation controls. As uncertainty quantification was not performed and country-level mitigation and reduction technology is considered constant across facilities, the confidences of these estimates are considered *Very Low*.
 
-Results
-=======
+#### Results
 
 Climate TRACE Phase 8 non-GHG emissions for 2022 are compared with EDGAR and CEDS in Table 3 for aligned sectors and excluding forestry, land use and fire sectors. Biomass combustion is excluded from the inventories, consistent with the ratios (Section 2.2), except in buildings, where the Climate TRACE estimates include biofuel combustion that cannot be separated. The totals are therefore lower than full inventory totals and are not comparable with the Phase 7 totals, which included biomass and fires. Non-GHG emissions for eight sectors (electricity generation, residential and non-residential onsite fuel usage, road transportation, and domestic and international aviation and shipping) are estimated directly by the Climate TRACE sector teams. All other sectors are estimated with the models of Section 2 and are referred to as *ratio-filled* sectors.
 
@@ -265,8 +255,7 @@ Climate TRACE is within 1% of EDGAR for NMVOC, 12% to 34% lower for NH<sub>3</su
 
 Figures 3 to 5 compare the datasets by country and comparison sector. The Pearson correlation coefficient between Climate TRACE and EDGAR is 0.73 to 0.97 across species, and the normalized root-mean-square error (NRMSE; the root-mean-square error divided by the range of the reference inventory) is 0.01 to 0.05. Against CEDS, the correlation is 0.84 to 0.91 for SO<sub>2</sub>, NO<sub>x</sub>, CO and NH<sub>3</sub>, 0.63 for NMVOC, 0.55 for BC and 0.39 for OC. The correlation between EDGAR and CEDS themselves is 0.68 to 0.97. Both statistics are dominated by the largest emitters.
 
-3.1. Assessment by Sector
--------------------------
+#### 3.1. Assessment by Sector
 
 Table 8 gives the ratio of Climate TRACE to each inventory by comparison sector. Agriculture and the ratio-filled transport sectors (aviation, railroad, and other-transport) agree with both inventories within about 30%, as do buildings for CO, NMVOC, NO<sub>x</sub> and PM<sub>2.5</sub>.
 
@@ -276,20 +265,17 @@ With biomass excluded, the ratio-filled sectors are 0.64 to 0.97 of EDGAR for SO
 
 Three subsectors are of particular note. For other metals, smelting SO<sub>2</sub> and the fuel-combustion CO<sub>2</sub> used as the denominator occur in different countries, so country ratios are undefined or unstable; most countries receive a median ratio about 14 times below the global ratio. For iron and steel, Climate TRACE CO is high: 88.6 Mt, against 44.8 Mt in CEDS categories 1A2a and 2C1 combined, from which the iron and steel ratio is formed. NO<sub>x</sub> (4.7 against 2.6 Mt) and SO<sub>2</sub> (2.5 against 2.0 Mt) are also higher. Because the ratio is taken from CEDS, the difference arises mainly from the GHG emissions: Climate TRACE iron and steel CO<sub>2</sub> is 2,785 Mt, against 1,628 Mt in the same CEDS categories. Metal-industry CO is consequently 1.48 and 1.82 times EDGAR and CEDS, respectively. For solvent and product use, about 28 Mt of inventory NMVOC has no associated GHG emissions. Outside manufacturing, NMVOC from oil and gas refining is high, and waste emissions lie between two inventories that differ by one to two orders of magnitude.
 
-Conclusions
-===========
+#### Conclusions
 
 Identifying sources of air pollution is the first step towards managing and mitigating it, and improvements made in Phase 8 to the Climate TRACE non-GHG model advance this goal. These include aligning the sector mapping with the 2026 Climate TRACE sector crosswalk; excluding biomass so that ratios match the Climate TRACE GHG estimates; reporting ratios against each sector’s dominant GHG; estimating asset-level sectors from emission streams and activity-based emission factors; and disaggregating the shared pulp, food and wood process emissions. The results of these changes are an overall improvement in Climate TRACE’s global and country-level emissions estimates.
 
 In addition, several noted “remaining” gaps from Phase 7 have been closed, including aligning TRACE facilities with reported point-source data for validation and assimilating top-down constraints from inversion modeling. These results will be discussed in a forthcoming publication. As other improvements are introduced, Climate TRACE will provide an increasingly reliable inventory for decision-makers to mitigate air pollution, healthcare professionals to understand the impacts air pollution has on their patients, and scientists to analyze the impact of emissions on weather and the climate.
 
-Acknowledgements
-================
+#### Acknowledgements
 
 Thank you to Lekha Sridhar, Ting So, Marisa Hughes, Gavin McCormick for their guidance in this work, and the Carnegie Mellon CREATE Lab for pollution dispersion modeling. Thank you to Michael Pekala, Zoheyr Doctor, Dan Moore, and Krsna Raniga for their assistance in quality control.
 
-Supplementary Materials
-=======================
+#### Supplementary Materials
 
 **Table 4.** Asset emissions of pollutant *g* by Climate TRACE sector, obtained by applying Equations 1–3 to the streams in Table 2. All ratios *r* are country- and year-specific. *S* denotes a stream amount, *A* asset activity, *p* a reported fraction of asset CO<sub>2</sub>, and *EF* an emission factor (Table 7).
 
@@ -404,11 +390,11 @@ Supplementary Materials
 
 **Figure 1:** Non-ghg emissions broken down by sectors excluding forestry and land-use sectors.
 
-<img src="figures/figure2.png" style="width:7.4156in;height:6.76563in" />Figure 2: Top ten largest emitter sectors, their total emissions, and remaining emissions for the largest sector for each gas.
-======================================================================================================================================================================================================
+<img src="figures/figure2.png" style="width:7.4156in;height:6.76563in" />
+
+Figure 2: Top ten largest emitter sectors, their total emissions, and remaining emissions for the largest sector for each gas.
 
 <img src="figures/figure3.png" style="width:7.92708in;height:4.00375in" />
-=========================================================================
 
 **Figure 3:** A comparison between Climate TRACE (y-axis) and EDGAR (x-axis) across sectors and gases. The black solid-line is the unit line, with the black dashed-lines displaying one order of magnitude above and below the unit line. All emissions are measured in MT with each dot representing a single country. Normalized root mean squared error (NRMSE) was calculated with the range of the EDGAR emissions as reference. Each dot represents one country and comparison sector. Forestry, land use and fires are excluded, biomass is excluded from EDGAR except in buildings, and international bunkers are not shown.
 
@@ -442,8 +428,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 > **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-References 
-==========
+#### References
 
 \[1\] World Health Organization, 2021. *WHO global air quality guidelines: particulate matter (PM2. 5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide*. World Health Organization.
 

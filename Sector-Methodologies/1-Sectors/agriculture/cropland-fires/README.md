@@ -1,4 +1,6 @@
-**Agriculture sector: Cropland Fires – N<sub>2</sub>O, CH<sub>4</sub> and PM<sub>2.5</sub> Emissions**<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+
+### Agriculture sector: Cropland Fires – N<sub>2</sub>O, CH<sub>4</sub> and PM<sub>2.5</sub> Emissions
 
 *Greenhouse-gas and air-quality emissions from open burning of crop residue*
 
@@ -10,7 +12,7 @@
 
 *<sup>\*</sup>Corresponding Author: basso@msu,edu; sharm165@msu.edu*
 
-**1. Introduction**
+#### 1. Introduction
 
 Crop-residue burning remains a widespread post-harvest management practice in many agricultural regions because it provides a rapid and inexpensive means of clearing fields, controlling pests and weeds, and preparing land for subsequent crops (Beuchelt et al. 2015). Its persistence can also reflect local traditions, limited markets for alternative residue uses, constraints on labor and machinery, and changes in agricultural production systems that generate residue surpluses beyond local demand (Xu and You 2023; Oraby et al. 2025). Open-field burning therefore represents an important crop-residue management pathway alongside retention on the soil surface, incorporation into soil, livestock use, and other off-field uses.
 
@@ -26,9 +28,9 @@ The resulting Climate TRACE cropland-fire inventory provides annual and monthly 
 
 The primary objective of this study is to provide a globally consistent, crop-specific, and spatially explicit inventory of N₂O, CH₄, and primary PM₂.₅ emissions associated with open-field crop-residue burning. The inventory is designed to identify major crop- and region-specific sources of burning emissions and to characterize how emissions vary among crops, countries, continents, years, and months. Together, these outputs provide a consistent framework for assessing the magnitude, spatial distribution, and seasonal timing of emissions from crop-residue burning across global cropland.
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
-**2.1 Methodological overview and scope**
+#### 2.1 Methodological overview and scope
 
 We estimate emissions of nitrous oxide (N₂O), methane (CH₄), and primary fine particulate matter (PM₂.₅) from open-field burning of crop residues globally for 2015–2026. The inventory covers 40 harmonized crop groups and produces annual estimates at 5-arc-minute spatial resolution, which are subsequently disaggregated to monthly time steps. Emissions are calculated independently for each crop and grid cell and can subsequently be aggregated to country, continental, and global scales.
 
@@ -40,7 +42,7 @@ Annual emissions are subsequently distributed to monthly values using the tempor
 
 The final dataset therefore provides crop-specific annual and monthly estimates of N₂O, CH₄, and primary PM₂.₅ emissions from crop-residue burning across global cropland for 2015–2026. N₂O and CH₄ are reported both as emitted gas mass and as CO₂ equivalents using IPCC AR6 global warming potentials, whereas PM₂.₅ is reported as pollutant mass.
 
-**2.2 Crop production, harvested area, and spatial harmonization**
+#### 2.2 Crop production, harvested area, and spatial harmonization
 
 Annual crop production and harvested-area data were compiled at the country scale and harmonized with SPAM 2020 (IFPRI 2024) to generate spatially explicit crop activity data at 5-arc-minute resolution. This crop-production and harvested-area framework is common across the Climate TRACE agricultural methodologies, including synthetic N fertilizer, retained crop residue, and crop-residue burning, to ensure consistency among emission sources.
 
@@ -50,7 +52,7 @@ For 2015–2024, crop production and harvested area were based on FAOSTAT statis
 
 All crop-production and harvested-area layers were aligned to the same 5-arc-minute geographic grid before residue production was calculated. This common spatial framework provides the basis for combining crop activity with crop-specific residue-production relationships, residue-management fractions, dry-matter conversion factors, and subsequent emission calculations for open-field burning.
 
-**2.3 Aboveground crop-residue production**
+#### 2.3 Aboveground crop-residue production
 
 Aboveground crop-residue production was estimated independently for each crop, grid cell, and year using the same residue-production framework applied in the Climate TRACE retained-residue methodology. Crop yield was first calculated from gridded crop production and harvested area, and residue production was then estimated using crop-specific relationships according to crop type.
 
@@ -62,7 +64,7 @@ The resulting residue yield was multiplied by the corresponding harvested area t
 
 The resulting annual aboveground residue estimates provide the activity basis for determining the fraction of residue assigned to open-field burning in the subsequent step.
 
-**2.4 Partitioning crop residue to the open-field burning pathway**
+#### 2.4 Partitioning crop residue to the open-field burning pathway
 
 Not all aboveground crop residue produced in a grid cell is burned. We therefore used the spatially explicit crop-residue management dataset of Smerald et al. (2023) to determine the fraction of residue allocated to open-field burning. The dataset distinguishes among several residue-management pathways, including field burning, residue retained on agricultural land, livestock use, and other off-field uses.
 
@@ -74,7 +76,7 @@ Because the Smerald et al. (2023) residue-management data are available at a coa
 
 Annual residue-management information was used through 2021. For 2022–2026, the 2021 spatial pattern of residue burning was held constant because more recent globally consistent residue-management information was unavailable. Consequently, changes in modeled burning emissions after 2021 reflect changes in crop production and harvested areas rather than assumed changes in the fraction of residue burned. The resulting crop- and grid-specific burned-residue estimates provide the activity data for conversion to burned dry matter and subsequent calculation of N₂O, CH₄, and PM₂.₅ emissions.
 
-**2.5 Burned dry matter and emission calculation**
+#### 2.5 Burned dry matter and emission calculation
 
 The quantity of crop residue assigned to open-field burning was converted to a dry-matter basis before emissions were calculated because biomass-burning emission factors are expressed per unit of dry matter combusted. Crop-specific dry-matter fractions were the same as those used in the Climate TRACE retained-residue methodology, thereby maintaining consistency in residue characterization across the retained and burned pathways. Crop-specific values were used where available, with representative crop-group values or literature-based proxies applied where direct values were unavailable.
 
@@ -118,7 +120,7 @@ For the 20-year time horizon,
 
 PM₂.₅ was reported separately as pollutant mass and was not converted to CO₂ equivalents.
 
-**2.6 Monthly disaggregation of annual burning emissions**
+#### 2.6 Monthly disaggregation of annual burning emissions
 
 Annual N₂O, CH₄, and primary PM₂.₅ emissions from crop-residue burning were disaggregated to monthly estimates using the Global Cropland Area Burned dataset (GloCAB; Hall et al. 2024). GloCAB provides monthly cropland burned-area estimates at 0.25° spatial resolution from 2002 to 2020 and was used only to characterize the intra-annual timing of burning. The magnitude of annual emissions remained determined independently from the crop-residue burning calculations described above.
 
@@ -146,7 +148,7 @@ Where individual monthly GloCAB values were missing, the processing framework al
 
 The processed 2015 and 2018 GloCAB layers contained no burned-area values during September–December. Consequently, monthly estimates for these two years do not fully represent the expected seasonal distribution of cropland burning during those months. Annual emissions remain unaffected because the temporal disaggregation preserves the independently calculated annual totals, but the monthly distribution for 2015 and 2018 should be interpreted with caution.
 
-**2.7 Final crop-residue burning emission dataset**
+#### 2.7 Final crop-residue burning emission dataset
 
 The final Climate TRACE crop-residue burning dataset provides annual and monthly, spatially explicit estimates of N₂O, CH₄, and primary PM₂.₅ emissions from open-field burning of crop residues for global cropland from 2015 to 2026. The dataset covers 40 harmonized crop groups and is available at both 5-arc-minute gridded resolution and country scale.
 
@@ -160,8 +162,7 @@ Estimates for 2015–2024 are based on FAOSTAT crop-production and harvested-are
 
 The resulting dataset therefore includes, for 2015–2026: (1) crop residue allocated to open-field burning, (2) direct N₂O emissions, (3) direct CH₄ emissions, (4) primary PM₂.₅ emissions, and (5) annual and monthly emission estimates at crop, grid-cell, country, continental, and global scales.
 
-**3. Emission Reduction Solutions (ERS)**
-=========================================
+#### 3. Emission Reduction Solutions (ERS)
 
 The Emission Reduction Solution (ERS) for crop-residue burning is defined as the avoidance of open-field burning rather than the complete removal of crop residues from field. Residues that would otherwise be burned should remain on the field or managed differently than burning if removed. In-field alternatives to burning clearly include retaining residues on the soil surface and sowing through them with low-till or no-till equipment, mulching, and incorporating chopped residues into the soil surface. Off-field alternatives to burning include collection for livestock feed or bedding, composting, mushroom cultivation, bioenergy production (including electricity generation), biochar production, and other industrial uses where suitable infrastructure and markets are available (Dutta et al. 2022; Kaur et al. 2022; Singh et al. 2022).
 
@@ -179,11 +180,11 @@ The avoided emissions reported by this ERS should be interpreted as gross avoide
 
 Future iterations will aim to identify location-specific management pathways using a systems approach by distinguishing residue that should remain in the field to maintain soil functions from residue that could be sustainably collected for alternative uses. Such an assessment should account for crop residue characteristics, soil organic carbon status, erosion risk, nutrient requirements, machinery availability, transportation distance, processing infrastructure, local markets, and the emissions and potential carbon benefits associated with the final use of the residue. This location-specific systems approach is important because the technical feasibility, economic viability, and environmental performance of alternatives to burning vary substantially among cropping systems and regions (Dutta et al. 2022; Kaur et al. 2022; Krishna and Mkondiwa 2023).
 
-**4. Results**
+#### 4. Results
 
 This section presents emissions of N₂O, CH₄, and primary PM₂.₅ from open-field crop-residue burning for 2015–2026. Estimates for 2015–2024 are based on FAOSTAT crop-production and harvested-area statistics, whereas estimates for 2025 and 2026 are based on projected crop activity. Residue-burning fractions are held at their 2021 values from 2022 onward; therefore, changes during 2022–2026 reflect changes in crop production and harvested area rather than assumed changes in residue-burning behavior. National and crop-level distributions are described primarily for 2024, the most recent year based on FAOSTAT statistics, while projected changes are reported separately. Depending on the year, the inventory includes 153–158 countries.
 
-**4.1 Reporting of N₂O, CH₄, and PM₂.₅ emissions**
+#### 4.1 Reporting of N₂O, CH₄, and PM₂.₅ emissions
 
 N₂O, CH₄, and primary PM₂.₅ emissions were calculated by applying fixed, pollutant-specific emission factors to the same burned dry-matter activity. Consequently, the three emitted species have identical spatial distributions, temporal patterns, crop rankings, and country rankings, while differing in absolute magnitude according to their respective emission factors (Figure 1A).
 
@@ -193,11 +194,11 @@ Greenhouse-gas emissions are reported as the combined contribution of N₂O and 
 
 Using GWP₁₀₀, CH₄ accounted for 79.2% of combined N₂O + CH₄ CO₂-equivalent emissions, while N₂O accounted for 20.8% in every year (Table 1; Figure 1A).
 
-**4.2 Global emissions between 2015 and 2026**
+#### 4.2 Global emissions between 2015 and 2026
 
 Global greenhouse-gas emissions from open-field crop-residue burning were 41.8 Mt CO₂e yr⁻¹ in 2015 and 42.9 Mt CO₂e yr⁻¹ in 2024, representing an increase of 1.15 Mt CO₂e yr⁻¹, or 2.7% (Table 1; Figure 1A). The corresponding emissions were 0.032 and 0.033 Mt N₂O yr⁻¹, 1.23 and 1.26 Mt CH₄ yr⁻¹, and 2.45 and 2.52 Mt PM₂.₅ yr⁻¹, respectively. Over 2015–2024, however, emissions did not show a sustained monotonic trend. Annual GHG emissions ranged from 41.8 to 51.1 Mt CO₂e yr⁻¹ and averaged 45.9 Mt CO₂e yr⁻¹, with the highest value occurring in 2017 at 51.1 Mt CO₂e yr⁻¹, corresponding to 3.00 Mt PM₂.₅ yr⁻¹ (Table 1; Figure 1A).
 
-### 
+###
 
 Substantial interannual variability occurred throughout the historical period. Emissions increased in five of the nine year-to-year transitions between 2015 and 2024, with the largest increase occurring between 2015 and 2016 (+8.81 Mt CO₂e; +21.1%). A second pronounced increase occurred between 2020 and 2021 (+5.19 Mt CO₂e; +12.1%), while smaller increases occurred between 2016 and 2017, 2018 and 2019, and 2023 and 2024. Emissions declined between 2017 and 2018 (−8.5%), 2019 and 2020 (−8.3%), 2021 and 2022 (−5.3%), and 2022 and 2023 (−6.2%) (Table 1; Figure 1A).
 
@@ -217,9 +218,9 @@ For the projected period, global emissions increased to 47.6 Mt CO₂e yr⁻¹ i
 
 **Figure 1** Historical and projected emissions from cropland fires and their national and continental composition. (A) Global annual GHG emissions by gas, 2015–2026. (B) The ten largest national contributors in 2024; values in parentheses are shares of the global total. (C) Annual emissions by continent, 2015–2026; Russia and Cyprus are included in Europe, and Türkiye, Kazakhstan and the South Caucasus countries in Asia. (D) The five largest projected national increases and the five largest projected decreases between 2024 and 2026, ranked by absolute change; values in parentheses give the percentage change. In panels A and C, hatched bars and shading denote projected years (2025–2026). GHG emissions are the sum of N₂O and CH₄ expressed as CO₂e using GWP₁₀₀ (N₂O = 273; CH₄ = 27). The secondary axis gives the corresponding primary PM₂.₅ emissions; because all three species are calculated from the same burned dry matter, 1 Mt CO₂e corresponds to 0.0587 Mt PM₂.₅.
 
-### 
+###
 
-**4.3 Country-scale distribution and changes**
+#### 4.3 Country-scale distribution and changes
 
 Emissions from open-field crop-residue burning were concentrated in a relatively small number of countries (Table 2; Figure 1B). In 2024, India was the largest national contributor, with 7.77 Mt CO₂e yr⁻¹, representing 18.1% of the global total. Brazil was the second-largest contributor at 6.30 Mt CO₂e yr⁻¹ (14.7%), followed by Russia at 2.91 Mt CO₂e yr⁻¹ (6.8%), China at 2.50 Mt CO₂e yr⁻¹ (5.8%), and Nigeria at 2.39 Mt CO₂e yr⁻¹ (5.6%). India and Brazil together accounted for 32.8% of global emissions, while the five largest contributors accounted for 50.9%, the ten largest for 67.6%, and the twenty largest for 80.3% (Figure 2B). In contrast, 49 countries each emitted less than 0.01 Mt CO₂e yr⁻¹ and together accounted for only 0.3% of the global total.
 
@@ -246,7 +247,7 @@ share (%)</strong></th><th><strong>Change<br />
 
 **Figure 2** National trajectories and concentration of emissions from cropland fires. (A) Annual emissions, 2015–2026, for the ten largest national contributors in 2024; open symbols and shading denote projected years (2025–2026). (B) Cumulative share of global emissions by number of countries, ranked from largest to smallest emitter, in 2015 and 2024; the shares apply equally to N₂O, CH₄ and PM₂.₅. GHG emissions are the sum of N₂O and CH₄ expressed as CO₂e using GWP₁₀₀ (N₂O = 273; CH₄ = 27). The secondary axis in panel A gives the corresponding primary PM₂.₅ emissions; because all three species are calculated from the same burned dry matter, 1 Mt CO₂e corresponds to 0.0587 Mt PM₂.₅.
 
-**4.4 Crop contributions**
+#### 4.4 Crop contributions
 
 Emissions from open-field crop-residue burning were concentrated in a relatively small number of crops (Table 3; Figure 3A). In 2024, rice was the largest crop-specific source, contributing 6.59 Mt CO₂e yr⁻¹, or 15.3% of the global total, followed by maize at 6.31 Mt CO₂e yr⁻¹ (14.7%), sugarcane at 4.82 Mt CO₂e yr⁻¹ (11.2%), wheat at 4.65 Mt CO₂e yr⁻¹ (10.8%), and soybean at 3.46 Mt CO₂e yr⁻¹ (8.1%). Cassava, oil palm, banana, sorghum, and sugar beet completed the ten largest crop contributors. The three largest crops accounted for 41.2% of global emissions, the five largest for 60.1%, and the ten largest for 81.0%.
 
@@ -267,9 +268,11 @@ share (%)</strong></th><th><strong>Change<br />
 (projected)</strong></th><th><strong>Change<br />
 2024–2026 (%)</strong></th></tr></thead><tbody><tr class="odd"><td>Rice</td><td>6.10</td><td>6.59</td><td>15.3</td><td>+8.0</td><td>0.387</td><td>6.77</td><td>+2.7</td></tr><tr class="even"><td>Maize</td><td>6.79</td><td>6.31</td><td>14.7</td><td>−7.1</td><td>0.370</td><td>6.77</td><td>+7.3</td></tr><tr class="odd"><td>Sugarcane</td><td>4.81</td><td>4.82</td><td>11.2</td><td>+0.1</td><td>0.283</td><td>4.80</td><td>−0.3</td></tr><tr class="even"><td>Wheat</td><td>3.92</td><td>4.65</td><td>10.8</td><td>+18.5</td><td>0.273</td><td>4.79</td><td>+2.9</td></tr><tr class="odd"><td>Soybean</td><td>2.71</td><td>3.46</td><td>8.1</td><td>+27.8</td><td>0.203</td><td>3.67</td><td>+5.9</td></tr><tr class="even"><td>Cassava</td><td>2.45</td><td>2.54</td><td>5.9</td><td>+3.7</td><td>0.149</td><td>2.70</td><td>+6.3</td></tr><tr class="odd"><td>Oil palm</td><td>3.80</td><td>2.35</td><td>5.5</td><td>−38.2</td><td>0.138</td><td>2.39</td><td>+1.7</td></tr><tr class="even"><td>Banana</td><td>1.50</td><td>2.05</td><td>4.8</td><td>+36.6</td><td>0.120</td><td>2.08</td><td>+1.4</td></tr><tr class="odd"><td>Sorghum</td><td>0.91</td><td>1.03</td><td>2.4</td><td>+14.0</td><td>0.061</td><td>1.03</td><td>−0.4</td></tr><tr class="even"><td>Sugar beet</td><td>1.42</td><td>0.99</td><td>2.3</td><td>−30.2</td><td>0.058</td><td>0.95</td><td>−4.4</td></tr></tbody></table>
 
-<img src="figures/figure3.png" style="width:6.8in;height:5.34869in" />**Figure 3** Crop contributions to emissions from cropland fires. (A) The twelve largest crop contributors in 2024; values in parentheses are shares of the global total. (B) Emissions by crop group, 2015–2026; hatched bars and shading denote projected years (2025–2026). Soybean and groundnut are included in oil crops. (C) Crops with the largest absolute changes between 2015 and 2024 (solid bars; labels give the percentage change relative to 2015) and their projected changes between 2024 and 2026 (hatched bars). GHG emissions are the sum of N₂O and CH₄ expressed as CO₂e using GWP₁₀₀ (N₂O = 273; CH₄ = 27). The secondary axes give the corresponding primary PM₂.₅ emissions; because all three species are calculated from the same burned dry matter, 1 Mt CO₂e corresponds to 0.0587 Mt PM₂.₅.
+<img src="figures/figure3.png" style="width:6.8in;height:5.34869in" />
 
-**4.4.1 Crop–country distribution of emissions**
+**Figure 3** Crop contributions to emissions from cropland fires. (A) The twelve largest crop contributors in 2024; values in parentheses are shares of the global total. (B) Emissions by crop group, 2015–2026; hatched bars and shading denote projected years (2025–2026). Soybean and groundnut are included in oil crops. (C) Crops with the largest absolute changes between 2015 and 2024 (solid bars; labels give the percentage change relative to 2015) and their projected changes between 2024 and 2026 (hatched bars). GHG emissions are the sum of N₂O and CH₄ expressed as CO₂e using GWP₁₀₀ (N₂O = 273; CH₄ = 27). The secondary axes give the corresponding primary PM₂.₅ emissions; because all three species are calculated from the same burned dry matter, 1 Mt CO₂e corresponds to 0.0587 Mt PM₂.₅.
+
+#### 4.4.1 Crop–country distribution of emissions
 
 The leading national contributors differed substantially among crops, reflecting the geographic distribution of crop production and the spatial pattern of residue burning (Table 4). In 2024, rice emissions were dominated by India, which contributed 36.2% of the global rice-burning total, followed by Myanmar (11.0%), Thailand (10.0%), and China (10.0%). Maize emissions were more geographically distributed, with Brazil contributing 17.1%, China 15.7%, India 8.2%, and the USA 6.4%.
 
@@ -294,7 +297,7 @@ These results demonstrate that national burning emissions are determined not onl
 | Sorghum (1.03)        | Nigeria 16.3%  | India 11.2%     | South Sudan 10.6% | Sudan 9.6%     | Brazil 6.8%   |
 | Sugar beet (0.99)     | Russia 53.8%   | USA 16.0%       | Ukraine 4.8%      | Chile 3.2%     | China 3.2%    |
 
-**4.5 Continental distribution**
+#### 4.5 Continental distribution
 
 For regional comparison, country-level emissions were aggregated into six continental groups: Africa, Asia, Europe, North America, South America, and Oceania. Russia and Cyprus were included in Europe, whereas Türkiye, Kazakhstan, and the South Caucasus countries were included in Asia.
 
@@ -313,7 +316,7 @@ share (%)</strong></th><th><strong>Change<br />
 (projected)</strong></th><th><strong>Change<br />
 2024–2026 (%)</strong></th></tr></thead><tbody><tr class="odd"><td>Asia</td><td>15.28</td><td>16.59</td><td>38.6</td><td>+8.5</td><td>0.973</td><td>16.93</td><td>+2.1</td></tr><tr class="even"><td>Africa</td><td>8.98</td><td>9.45</td><td>22.0</td><td>+5.3</td><td>0.555</td><td>10.14</td><td>+7.3</td></tr><tr class="odd"><td>South America</td><td>8.14</td><td>8.26</td><td>19.2</td><td>+1.5</td><td>0.485</td><td>8.56</td><td>+3.6</td></tr><tr class="even"><td>Europe</td><td>5.18</td><td>4.26</td><td>9.9</td><td>−17.9</td><td>0.250</td><td>4.59</td><td>+7.9</td></tr><tr class="odd"><td>North America</td><td>3.73</td><td>3.72</td><td>8.7</td><td>−0.1</td><td>0.219</td><td>3.75</td><td>+0.7</td></tr><tr class="even"><td>Oceania</td><td>0.49</td><td>0.67</td><td>1.5</td><td>+36.3</td><td>0.039</td><td>0.71</td><td>+6.4</td></tr></tbody></table>
 
-**4.6 Monthly distribution**
+#### 4.6 Monthly distribution
 
 Emissions from open-field crop-residue burning showed pronounced seasonality, reflecting differences in crop calendars and post-harvest burning periods among regions (Figure 4A). Excluding 2015 and 2018 because of incomplete monthly burned-area coverage discussed below, April had the highest mean share of annual emissions at 14.8%, while June had the lowest at 3.7%. Across the years with complete monthly coverage, global April emissions ranged from 6.09 to 7.78 Mt CO₂e month⁻¹, compared with 1.54 to 2.05 Mt CO₂e month⁻¹ in June. The same seasonal structure was retained in the projected period, with 2026 monthly emissions ranging from 1.65 Mt CO₂e in June to 6.68 Mt CO₂e in April (Figure 4A).
 
@@ -327,7 +330,7 @@ The monthly distributions for 2015 and 2018 should be interpreted with caution b
 
 **Figure 4** Monthly distribution of emissions from cropland fires. (A) Global monthly GHG emissions from January 2015 to December 2026; shading denotes the projected period (January 2025 to December 2026). (B) Mean share of annual emissions allocated to each month for the ten largest national contributors in 2024, averaged over 2016–2026 excluding 2018. Shares apply equally to N₂O, CH₄ and PM₂.₅. GHG emissions are the sum of N₂O and CH₄ expressed as CO₂e using GWP₁₀₀ (N₂O = 273; CH₄ = 27). The secondary axis in panel A gives the corresponding PM₂.₅ emissions.
 
-**5. Discussion and conclusion**
+#### 5. Discussion and conclusion
 
 This study provides a globally consistent, crop-specific, and spatially explicit inventory of N₂O, CH₄, and primary PM₂.₅ emissions from open-field crop-residue burning for 2015–2026. By integrating national crop statistics, SPAM 2020 crop distributions, crop-specific residue-production relationships, spatial residue-burning fractions, pollutant-specific emission factors, and satellite-derived information on the seasonal timing of cropland fires, the framework links crop production directly to the quantity, location, and timing of emissions. The resulting dataset covers 40 crop groups across more than 150 countries at 5-arc-minute resolution and provides both annual and monthly estimates, allowing crop-residue burning to be assessed simultaneously as a greenhouse-gas source and an air-quality concern.
 
@@ -347,7 +350,7 @@ Despite these limitations, the inventory is useful because it combines global co
 
 Overall, the results demonstrate that crop-residue burning remains an important and highly unevenly distributed source of agricultural greenhouse gases and primary PM₂.₅. By explicitly linking crop production, residue generation, residue-burning practices, and seasonal fire activity, the Climate TRACE inventory provides a transparent and reproducible basis for tracking open-field crop-residue burning emissions and improving their representation in global agricultural emission assessments.
 
-**6. Metadata Information**
+#### 6. Metadata Information
 
 Emissions from crop-residue burning are provided on the Climate TRACE platform at country and asset (gridded) resolution and monthly timestep, covering 40 aggregated crop groups. N₂O and CH₄ are reported using both 20-year and 100-year global warming potentials (IPCC AR6); primary PM₂.₅ is reported as a mass air-quality pollutant and is not converted to CO₂e. The dataset covers 2015–2026. All data are freely available under the Creative Commons Attribution 4.0 International Public License. Metadata for this dataset is summarized in Table 6, and source-level confidence and uncertainty definitions are provided in Table S1.
 
@@ -385,7 +388,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models at all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [contact us](mailto:coalition@climatetrace.org) (<coalition@climatetrace.org>).
 
-**7. Supplementary Information**
+#### 7. Supplementary Information
 
 **Table S1** Source-level description, confidence, and uncertainty.
 
@@ -397,7 +400,7 @@ The above usage is not warranted to be error free and does not imply the express
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|--------------------------------------|----------------|
 | Avoid open-field crop-residue burning | Residues that would otherwise be burned are instead retained or incorporated in the field, or sustainably collected for alternative uses such as livestock feed, composting, bioenergy, biochar, mushroom cultivation, or other locally suitable uses. | Activity replacement | 0.0                                  | \-             |
 
-**References**
+#### References
 
 1.  Andreae, M.O. and Merlet, P., 2001. Emission of trace gases and aerosols from biomass burning. *Global Biogeochemical Cycles*, *15*(4), pp.955-966.. [DOI: <span class="underline">10.1029/2000GB001382</span>](https://doi.org/10.1029/2000GB001382).
 

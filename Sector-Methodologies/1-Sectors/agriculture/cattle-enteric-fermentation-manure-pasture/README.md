@@ -1,12 +1,12 @@
-**Agriculture sector-**<img src="figures/logo.png" style="width:2.77222in;height:1.19931in" />
+<img src="figures/logo.png" style="width:2.77222in;height:1.19931in" />
 
-**Cattle Emissions from Enteric Fermentation and Manure Left on Pasture**
+### Agriculture sector- Cattle Emissions from Enteric Fermentation and Manure Left on Pasture
 
 **Omar Al Akkad<sup>1,2,3</sup>, Vasit Sagan<sup>1,2,3</sup>, Derek Tesser<sup>1,2,3</sup>, Aaron Davitt<sup>3</sup>, Lekha Sridhar<sup>3</sup>, and Lauren Betz<sup>3</sup>**
 
 *1) Department of Earth, Environmental and Geospatial Science, Saint Louis University, St. Louis, MO 63108, USA, 2) Remote Sensing Lab, Saint Louis University, St. Louis, MO 63108, USA, 3) Climate TRACE*
 
-**1. Introduction**
+#### 1. Introduction
 
 The global cattle industry contributes significantly to greenhouse gas (GHG) emissions through enteric fermentation, a natural digestive process in cows that results in methane (CH<sub>4</sub>) release, and manure left on pastures, which produces both CH<sub>4</sub> and nitrous oxide (N<sub>2</sub>O) upon decomposition (Dong, 2006). The emissions of methane and nitrous oxide from the digestion of livestock and dung must be closely measured, tracked, and monitored. In order to reduce the negative impact that livestock farming has on the environment and climate, scientists, farmers, and policymakers can develop plans or take action (manage and mitigate) by understanding how much greenhouse gas is being generated. Emitted through natural sources and human activities like agriculture and landfills, methane is 25-30 times more potent than carbon dioxide (CO<sub>2</sub>) but doesn't stay as long in the atmosphere (US Environmental Protection Agency, 2023). However, nitrous oxide from manure on pasture is about 300 times more potent than CO<sub>2</sub>. The animal itself and the surface of the pasture are the two main places where these emissions take place. Microbes in the cattle's rumen use enteric fermentation to break down fibrous plant matter, producing CH₄, which is primarily released by belching (Lynch, J. 2019). Manure left behind by grazing cattle breaks down on pastures under different oxygen and moisture levels. Anaerobic decomposition generates CH₄ during this process, whereas soil nitrification and denitrification release N₂O (Lynch, J. 2019). Temperature, soil type, and moisture are examples of environmental conditions that have a significant impact on the amount of these emissions. Grazing systems are a significant source of CH₄ and N₂O in agricultural landscapes due to these combined processes (Rivera and Chara 2021).
 
@@ -16,19 +16,19 @@ The methodology developed in this study directly addresses these limitations by 
 
 This methodology describes the approach to estimate cattle emissions from enteric fermentation and manure left on pastures. We present a global 1km Tier 2-based assessment of enteric CH₄, manure CH₄, and manure N₂O emissions from pasture-supported cattle for years 2015–2025.
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
 We assemble country livestock statistics (FAOSTAT), Gridded Livestock Watch (GLW) cattle-density data, Global Pasture Watch (GPW) pasture-fraction layers, seasonal Gross Primary Production (GPP) layers, and administrative boundaries (GADM) to map pasture-supported cattle activity globally, as summarized in Figure 1. Using the IPCC 2019 Tier 2 methodology (Ch. 10–11), we compute pixel-level CH₄ (enteric, manure) and N₂O (manure on pasture) emissions at 1 km spatial resolution with region-specific parameters, then aggregate to country totals. Outputs include GeoTIFF rasters (EPSG:4326) and country-level CSV tables for 2015–2025, with accompanying uncertainty layers.
 
-| <img src="figures/figure1.jpg" style="width:3.98958in;height:2.72083in" alt="A diagram of a country AI-generated content may be incorrect." /> |
-|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| ***Figure 1** Methodology Flowchart to estimate emissions from cattle on pasture based on IPCC 2019 Tier 2.*                                  |
+<img src="figures/figure1.jpg" style="width:3.98958in;height:2.72083in" alt="A diagram of a country AI-generated content may be incorrect." />
+
+***Figure 1** Methodology Flowchart to estimate emissions from cattle on pasture based on IPCC 2019 Tier 2.*
 
 Our primary goal was to generate high-resolution 1 km GeoTIFF datasets in EPSG 4326 (WGS84, 2004) for CH₄ and N₂O emissions from manure on pasture and enteric fermentation, along with their corresponding global warming potentials (GWPs), for the years 2015–2025. These outputs were produced using the IPCC 2019 Tier 2 methodology with region-specific livestock parameters and spatial pasture-support inputs derived from GPW pasture fraction, GLW cattle density, and seasonal GPP. In addition to the raster outputs, country-level aggregated results were compiled into CSV tables, providing annual estimates for emissions, emission factors, capacities, and capacity factors. Uncertainty layers were also generated for each sector and gas in both raster and tabular formats.
 
 We utilized pandas, geopandas, and the rasterio library to create the GeoTIFFs and organize the data from various sources. It is important to note that our work was not inclusive of all enteric fermentation and manure management GHG emission estimation, but rather those that come from cattle on pasture only. This is different from FAOSTAT which reports all dairy and non-dairy populations in both domains “Emissions from Manure Management” and “Manure left on pasture”, creating overlap between the two. In this work, we seek to create a more representative cattle population that exists on pasture only. Annual FAOSTAT total cattle counts were used as the national candidate cattle pool, while GLW cattle density, GPW pasture fraction, and seasonal GPP were used to spatially constrain and scale pasture-supported cattle activity within each country. As such, Climate TRACE reports separately dairy and feedlot enteric fermentation and manure management emissions at the country level and for individually identified feedlots and dairies. These approaches can be found in the cattle methodologies in our [<span class="underline">GitHub repository</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2024/Agriculture/Cattle).
 
-**2.1 Datasets employed**
+#### 2.1 Datasets employed
 
 To generate the datasets, we used five primary data sources. These five were the following: Food and Agriculture Organization Corporate Statistical Database (FAOSTAT), Global Administrative Areas (GADM), Global Pasture Watch (GPW), Gridded Livestock Watch (GLW), and Gross Primary Production (GPP) data.
 
@@ -46,9 +46,9 @@ Finally, GADM data (GADM, 2024) was used to obtain country boundaries for mappin
 
 ***Figure 2** Global Pasture Watch (GPW) pasture fraction data used to represent pasture-supported areas in the updated 1 km workflow for the year 2025.*
 
-**2.2 Methods**
+#### 2.2 Methods
 
-**2.2.1 Cattle Disaggregation**
+#### 2.2.1 Cattle Disaggregation
 
 In order to establish a transparent and reproducible framework for estimating greenhouse gas emissions from cattle on pasture, it is necessary to introduce the concepts of capacity, capacity factor, and activity. These terms provide a structured link between national livestock statistics, spatial pasture-support data, cattle-density data, and the IPCC’s methodological requirement that emissions be calculated as the product of activity data and emission factors.
 
@@ -62,7 +62,9 @@ This three-part formulation is essential because it links national cattle statis
 
 For obtaining any emissions arising from cattle on pasture, the first necessity is to obtain pasture-supported cattle activity spatially. The goal is to distribute country-level cattle numbers from FAOSTAT to a global 1 km grid based on mapped pasture fraction, vegetation productivity, and cattle-density patterns. The updated workflow replaces the previous NASA SEDAC pasture allocation and “non-dairy cattle minus slaughtered cattle” logic with a spatial pasture-support approach based on GPW, GPP, GLW, and FAOSTAT total cattle stocks. Figure 3 shows the summary of the steps used to generate pasture-supported activity layers.
 
-***Figure 3** Workflow summary for estimating pasture-supported cattle activity*<img src="figures/figure3.png" style="width:2.77604in;height:3.32952in" />
+<img src="figures/figure3.png" style="width:2.77604in;height:3.32952in" />
+
+***Figure 3** Workflow summary for estimating pasture-supported cattle activity*
 
 Step 1: Annual FAOSTAT total cattle counts were obtained for each country and year. These totals were used as the national candidate cattle pool for the years 2015–2025. Unlike the previous method, slaughtered cattle were not subtracted from non-dairy cattle. Instead, the updated method uses total cattle counts and then spatially constrains the allocation using pasture fraction, cattle density, and vegetation productivity.
 
@@ -104,7 +106,7 @@ $\text{Activity}_{i,q,t}^{\text{annual}} = \frac{\text{Activity}_{i,Q1,t} + \tex
 
 Annual activity was calculated as a mean rather than a sum because cattle activity is treated as a stock or intensity measure rather than a cumulative flow. This updated approach avoids negative cattle-on-pasture estimates produced by the previous subtraction method and provides a spatially explicit estimate of cattle activity constrained by pasture availability, vegetation productivity, and observed cattle-density patterns.
 
-**2.2.2 Estimation of Emissions from Enteric Fermentation and Manure Left on Pasture**
+#### 2.2.2 Estimation of Emissions from Enteric Fermentation and Manure Left on Pasture
 
 Now that we have spatially distributed pasture-supported cattle activity, emission factors were applied using IPCC 2019 Chapter 10 and Chapter 11: Emissions from Livestock and Manure Management Tier 2 method equations. All CH₄ and N₂O emissions were first calculated at the 1 km pixel level using the quarterly activity layers described above. Each pixel contains an estimate of pasture-supported cattle head-equivalents derived from GPW pasture fraction, seasonal GPP, GLW cattle-density weighting, and annual FAOSTAT cattle totals. Emissions were estimated using the IPCC 2019 Refinement to the 2006 Guidelines (Volume 4: Agriculture, Forestry and Other Land Use), specifically Chapter 10 (Emissions from Livestock and Manure Management) and Chapter 11 (N₂O Emissions from Managed Soils and Livestock Manure Management).
 
@@ -138,17 +140,17 @@ $GWP100year = CH4Emissions \ast \left( 27.2 \pm 11 \right) + N2OEmissions \ast \
 
 We define capacity as the pasture-support potential of a grid cell. In the updated methodology, capacity is derived from the Global Pasture Watch (GPW) pasture fraction and seasonal Gross Primary Production (GPP), which together represent the ability of each 1 km grid cell to support grazing cattle. Capacity factor represents the cattle-pressure component within each grid cell and is derived from Gridded Livestock Watch (GLW) cattle-density data scaled using annual FAOSTAT total cattle counts. Emission factors have a 20% uncertainty, and capacity has a 20% uncertainty according to the IPCC (Dong, 2006). To obtain the capacity factor uncertainty, we use convolution to assess the amount of local spatial variation around each grid cell. The convolution-based local variance is used to calculate the capacity factor uncertainty, reflecting how stable or variable cattle pressure is around a given pixel. This is illustrated in Figure 4.
 
-| <img src="figures/figure4.png" style="width:3.13889in;height:1.61528in" /> |
-|---------------------------------------------------------------------------|
-| ***Figure 4** Capacity uncertainty calculation*                           |
+<img src="figures/figure4.png" style="width:3.13889in;height:1.61528in" />
 
-**2.3 Verifying modeled emissions estimates**
+***Figure 4** Capacity uncertainty calculation*
+
+#### 2.3 Verifying modeled emissions estimates
 
 The GeoTIFF outputs were verified by making sure the sums of the country-level tabular outputs matched the summed values from the corresponding GeoTIFF rasters. Pixel-level raster totals were compared with Pandas data frame totals for activity, CH₄ emissions, N₂O emissions, and CO₂e estimates to ensure consistency between raster and tabular outputs. The maximum values were also checked to ensure they were greater than the minimum values, and raster outputs were inspected for missing values, negative values, and unexpected NoData patterns.
 
 The annual global rasters were also checked against the quarterly raster outputs. Annual activity was verified as the mean of the four quarterly activity layers, while annual emissions were verified as the sum of the four quarterly emissions layers. Country-level totals were then compared across years to identify unusual year-over-year changes. The new datasets were also compared with previous Climate TRACE outputs to evaluate consistency, major methodological shifts, and expected changes caused by the updated GPW pasture fraction, GLW cattle-density weighting, GPP seasonal support, FAOSTAT cattle totals, and IPCC 2019 Tier 2 parameters.
 
-**2.4 Model Generated Outputs**
+#### 2.4 Model Generated Outputs
 
 The model outputs GeoTIFF files conforming to EPSG 4326 (WGS84, 2004) for manure left on pasture and enteric fermentation GHG emissions and global warming potentials for the years 2015–2025. These outputs include quarterly and annual spatial outputs for capacity, capacity factor, and activity, which are used to represent pasture support, cattle pressure, and pasture-supported cattle head-equivalents. To assess the uncertainty in emissions, emission factor, capacity, and capacity factor for both sectors’ GHGs, another set of GeoTIFFs was generated. Confidence files and country-level CSV tables were also generated. Table 1 provides an outline of the structure of the model-generated outputs.
 
@@ -177,7 +179,7 @@ The model outputs GeoTIFF files conforming to EPSG 4326 (WGS84, 2004) for manure
 | GWP, 100-year   | Upper bound for emissions uncertainty       | ✓                        | ✓                          |
 |                 | Lower bound for emissions uncertainty       | ✓                        | ✓                          |
 
-**3. Results**
+#### 3. Results
 
 We provide GeoTIFFs for pasture-supported cattle activity, uncertainties, and emission estimates for enteric fermentation and manure left on pasture. The spatially explicit maps of Tier 2 emission estimates for 2025 show the distribution of methane (CH₄) and nitrous oxide (N₂O) emissions across global pasture-supported cattle regions, as shown in Figures 5–7. These maps demonstrate clear regional differences in emission intensities. The results reported here refer to the updated data version using FAOSTAT cattle totals updated at the end of 2025, GLW4 2020, and the 2024 GPW layer carried forward for 2025. Higher values occur in areas where mapped pasture fraction, seasonal vegetation productivity, GLW cattle density, and FAOSTAT cattle totals overlap.
 
@@ -191,33 +193,35 @@ The CH₄ emissions from manure left on pasture are shown in Figure 5 and exhibi
 
 CH₄ emissions from enteric fermentation, which account for the majority of pasture-supported cattle emissions worldwide, are shown in Figure 6. The strongest hotspots occur in Brazil and other parts of South America, East Africa, parts of the Sahel, Australia, and selected pasture-supported regions of North America. Localized annual emissions reach more than 40 tons CH₄ yr⁻¹ per grid cell in the highest-emitting pixels. The spatial pattern reflects the updated activity model, where emissions are concentrated in areas where GPW pasture fraction, seasonal GPP, GLW cattle density, and FAOSTAT cattle totals overlap.
 
-| <img src="figures/figure6.png" style="width:7.65in;height:3.64382in" />                                                                                                |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ***Figure 6** Enteric Fermentation CH<sub>4</sub> Estimates 2025, reported as kg CH₄ yr⁻¹ per grid cell. The color scale is log transformed to improve visualization.* |
+<img src="figures/figure6.png" style="width:7.65in;height:3.64382in" />
+
+***Figure 6** Enteric Fermentation CH<sub>4</sub> Estimates 2025, reported as kg CH₄ yr⁻¹ per grid cell. The color scale is log transformed to improve visualization.*
 
 Figure 7 shows the spatial distribution of N₂O emissions from manure left on pasture. The highest values are concentrated in many of the same pasture-supported cattle regions identified for CH₄ emissions, including South America, East Africa, parts of Sub-Saharan Africa, and Australia. This similarity is expected because enteric CH₄, manure left on pasture CH₄, and manure left on pasture N₂O are all driven by the same pasture-supported cattle activity layer. Differences among gases reflect the Tier 2 emission-factor calculations and gas-specific pathways rather than a different spatial allocation of cattle.
 
-| <img src="figures/figure7.png" style="width:7.65in;height:3.64382in" />                                                                                                  |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ***Figure 7** Manure left on pasture N<sub>2</sub>O Estimates 2025, reported as g N₂O yr⁻¹ per grid cell. The color scale is log transformed to improve visualization.* |
+<img src="figures/figure7.png" style="width:7.65in;height:3.64382in" />
+
+***Figure 7** Manure left on pasture N<sub>2</sub>O Estimates 2025, reported as g N₂O yr⁻¹ per grid cell. The color scale is log transformed to improve visualization.*
 
 Under the Tier 2 methodology, the temporal trends of global emissions from enteric fermentation and manure left on pasture are shown in Figure 8. Global emissions generally increased from 2015 to 2024, followed by a slight decrease in 2025. Enteric fermentation CH₄ increased from approximately 19.85 Mt CH₄ yr⁻¹ in 2015 to 21.68 Mt CH₄ yr⁻¹ in 2024, then decreased slightly to 21.45 Mt CH₄ yr⁻¹ in 2025. Manure left on pasture CH₄ increased from approximately 0.383 Mt CH₄ yr⁻¹ in 2015 to 0.421 Mt CH₄ yr⁻¹ in 2024, then decreased to 0.416 Mt CH₄ yr⁻¹ in 2025. Manure left on pasture N₂O increased from approximately 0.580 Mt N₂O yr⁻¹ in 2015 to 0.628 Mt N₂O yr⁻¹ in 2024, then decreased to 0.622 Mt N₂O yr⁻¹ in 2025. These temporal patterns reflect the combined influence of the input datasets used to generate the emissions maps, including FAOSTAT cattle totals, GPW pasture fraction, GLW cattle-density weights, and seasonal GPP pasture-support scores. Because emissions are calculated from modeled pasture-supported cattle activity rather than from FAOSTAT cattle totals alone, changes in the ability of mapped pasture areas to support cattle can shift the emissions trend. The slight decrease in 2025 is therefore attributed to lower seasonal GPP-based pasture productivity, which reduced the modeled ability of mapped pasture areas to support cattle during that year.
 
-| <img src="figures/figure8.png" style="width:6.20833in;height:3.80208in" />                                                                                                                                                                   |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ***Figure 8** Global Tier 2 emission trends for pasture-supported cattle during 2015-2025. Emissions are reported in megatonnes per year (Mt yr⁻¹). a) Enteric Fermentation CH₄ emissions. b) Manure left on pasture CH₄ and N₂O emissions*. |
+<img src="figures/figure8.png" style="width:6.20833in;height:3.80208in" />
+
+***Figure 8** Global Tier 2 emission trends for pasture-supported cattle during 2015-2025. Emissions are reported in megatonnes per year (Mt yr⁻¹). a) Enteric Fermentation CH₄ emissions. b) Manure left on pasture CH₄ and N₂O emissions*.
 
 Regional dominance is evident in the national-level emission trends shown in Figure 9. The top five emitting countries were selected directly from the 2025 country-level results for each gas and sector. For enteric fermentation CH₄, the top five countries were Brazil, Ethiopia, the United States, Tanzania, and Australia. For manure left on pasture CH₄, the top five countries were also Brazil, Ethiopia, the United States, Tanzania, and Australia. For manure left on pasture N₂O, the top five countries were Brazil, Ethiopia, the United States, Tanzania, and Argentina. Brazil was the largest contributor across all three emission components, while Ethiopia consistently ranked second. This pattern reflects the combination of large cattle populations, pasture availability, and the spatial overlap between cattle density and pasture-supported areas.
 
-***Figure 9** Top five emitting countries from the Tier 2 pasture-supported cattle workflow during 2015-2025. Emissions are reported in megatonnes per year (Mt yr⁻¹). a) Enteric Fermentation CH₄ emissions. b) Manure left on pasture CH₄ emissions. c) Manure left on pasture N₂O emissions.*<img src="figures/figure9.png" style="width:6.5in;height:4.41667in" />
+<img src="figures/figure9.png" style="width:6.5in;height:4.41667in" />
 
-**4. Discussion**
+***Figure 9** Top five emitting countries from the Tier 2 pasture-supported cattle workflow during 2015-2025. Emissions are reported in megatonnes per year (Mt yr⁻¹). a) Enteric Fermentation CH₄ emissions. b) Manure left on pasture CH₄ emissions. c) Manure left on pasture N₂O emissions.*
+
+#### 4. Discussion
 
 Figure 9 presents the top ten countries ranked by absolute GPW pasture area and by GPW pasture %, based on the processed Global Pasture Watch (GPW) pasture-fraction inputs. Large land-rich countries such as Australia, Russia, Canada, the United States, Brazil, Kazakhstan, China, Argentina, Ethiopia, and South Africa dominate in terms of total GPW pasture area, while countries such as Botswana, Burkina Faso, South Sudan, Ethiopia, Kenya, Senegal, Kazakhstan, Lesotho, Australia, and Ireland appear more prominently when considering GPW pasture %. These rankings reflect the spatial distribution of the processed GPW pasture classes rather than actual livestock populations or official national pasture-area statistics. In this methodology, GPW classes 1, 2, and 3 were used to define pasture-supported land, including cultivated grassland, natural or semi-natural grassland, and open shrubland. Therefore, Figure 9 should be interpreted as a diagnostic of the GPW-derived pasture input layer used by the emissions model rather than as a replacement for official country-level pasture inventories. This distinction is important because countries such as Botswana can show very high GPW pasture % in the processed layer, likely due to the inclusion of extensive grazing-compatible grassland and open shrubland systems.
 
-| <img src="figures/figure10.png" style="width:4in;height:5.40139in" />                                                                                                         |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ***Figure 9** a) Top 10 Countries by GPW-Derived Pasture-Support Share (km²) and b) Top 10 Countries by GPW-Derived Pasture-Support Share (%), both are based on GPW data.* |
+<img src="figures/figure10.png" style="width:4in;height:5.40139in" />
+
+***Figure 9** a) Top 10 Countries by GPW-Derived Pasture-Support Share (km²) and b) Top 10 Countries by GPW-Derived Pasture-Support Share (%), both are based on GPW data.*
 
 To further interpret the difference between pasture extent and modeled cattle activity, pasture-use intensity was calculated as annual pasture-supported cattle activity divided by GPW pasture-support area. This metric identifies countries where modeled cattle activity is high relative to the amount of mapped pasture-support land, as shown in Table 2.
 
@@ -252,7 +256,7 @@ Confidence in the resulting emissions should therefore be interpreted in relatio
 
 Overall, the updated method provides a more spatially constrained estimate of cattle emissions from pasture-supported systems. By combining GPW pasture fraction, seasonal GPP, GLW cattle-density weights, FAOSTAT cattle totals, and Tier 2 emission factors, the workflow assigns emissions to areas where pasture-support land, vegetation productivity, and cattle-density patterns overlap. This produces a more defensible representation of cattle emissions from enteric fermentation and manure left on pasture than a method based only on national cattle totals or pasture extent.
 
-**5. Conclusion**
+#### 5. Conclusion
 
 Methane (CH₄) and nitrous oxide (N₂O) remain among the most important greenhouse gases associated with cattle production, and emissions from pasture-based cattle systems continue to represent a major challenge for climate monitoring and mitigation. This study developed an updated spatial workflow for estimating emissions from enteric fermentation and manure left on pasture by combining FAOSTAT total cattle populations, Gridded Livestock Watch (GLW) cattle-density weights, Global Pasture Watch (GPW) pasture-fraction data, seasonal Gross Primary Production (GPP), and IPCC 2019 Tier 2 emission factors.
 
@@ -264,9 +268,9 @@ However, the robustness of these results depends on the quality and interpretati
 
 Overall, the methodology presented in this study provides a reproducible framework for generating annual and quarterly GeoTIFF and CSV outputs for pasture-supported cattle emissions and associated uncertainty. By integrating GPW, GPP, GLW, FAOSTAT, and IPCC Tier 2 calculations, this workflow improves the spatial and temporal representation of emissions from enteric fermentation and manure left on pasture. These outputs can support Climate TRACE users, researchers, and decision-makers in identifying emission hotspots, evaluating regional patterns, and developing more targeted strategies for reducing the climate impact of pasture-based cattle systems.
 
-**Acknowledgments**
+#### Acknowledgments
 
-**6. Metadata section**
+#### 6. Metadata section
 
 Tables S1 and S2 summarize the metadata used to describe the pasture-supported cattle emissions outputs. Table S1 provides general dataset information, including sector definition, temporal coverage, temporal resolution, and data formats. Table S2 describes the confidence and uncertainty definitions for the main source level attributes, including capacity, capacity factor, and activity.
 
@@ -325,53 +329,51 @@ The above usage is not warranted to be error-free and does not imply the express
 
 > Disclaimer: The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [contact us](mailto:coalition@climatetrace.org).
 
-**Supplementary data**
+#### Supplementary data
 
 In this sector, detailed descriptions of emission calculations are provided in this section. Specifically, it outlines the step-by-step procedures used to estimate CH₄ and N₂O emissions from pasture-supported cattle activity following the IPCC 2019 Tier 2 methodology. This includes the equations, parameter sources, regional factors, and assumptions applied to compute enteric fermentation emissions and manure left on pasture emissions. In the updated workflow, annual FAOSTAT total cattle populations were used as the national cattle candidate pool and were spatially constrained using GPW pasture fraction, GPP seasonal productivity, and GLW cattle-density weights to estimate pasture-supported cattle activity.
 
-**6.1 Enteric-fermentation CH₄**
+#### 6.1 Enteric-fermentation CH₄
 
-Enteric-fermentation CH₄ emission was calculated using the energy balance Tier 2 approach an Enteric-fermentation CH₄ emission factor for each animal category following IPCC 2019 Equation 10.21: 
+Enteric-fermentation CH₄ emission was calculated using the energy balance Tier 2 approach an Enteric-fermentation CH₄ emission factor for each animal category following IPCC 2019 Equation 10.21:
 
 $C{H4}_{\text{enteric}}\left( \text{kgh}d^{- 1}\text{yr}d^{- 1} \right) = \frac{{\text{GEI} \ast Y}_{m}}{55.65} \ast 365\ IPCC\ Equation\ \left( 10.21 \right)$
 
-Where:  
+Where:
 
-EF = emission factor, kg CH4 head-1 yr-1  
+EF = emission factor, kg CH4 head-1 yr-1
 
-GE = gross energy intake, MJ head-1 day-1  
+GE = gross energy intake, MJ head-1 day-1
 
-Ym = methane conversion factor, per cent of gross energy in feed converted to methane  
+Ym = methane conversion factor, per cent of gross energy in feed converted to methane
 
-The factor 55.65 (MJ/kg CH4) is the energy content of methane 
+The factor 55.65 (MJ/kg CH4) is the energy content of methane
 
-We can measure GEI based on the Equation as shown below. Its requirement is derived based on the summed net energy requirements and the energy availability characteristics of the feed(s): 
+We can measure GEI based on the Equation as shown below. Its requirement is derived based on the summed net energy requirements and the energy availability characteristics of the feed(s):
 
 $\text{GEI}\  = \frac{\frac{NEm\  + \ NEa + NEl\  + \ NEwork\  + \ NEp}{\text{REM}}\  + \ \frac{NEg\  + \ NEwool}{\text{REG}}}{\text{DE}}\ $IPCC Equation (10.16)
 
-Where: 
+Where:
 
-NEm = net energy required by the animal for maintenance (Equation 10.3), MJ day-1  
+NEm = net energy required by the animal for maintenance (Equation 10.3), MJ day-1
 
-NEa = net energy for animal activity (Equations 10.4 and 10.5), MJ day-1  
+NEa = net energy for animal activity (Equations 10.4 and 10.5), MJ day-1
 
-NEl = net energy for lactation (Equations 10.8, 10.9, and 10.10), MJ day-1  
+NEl = net energy for lactation (Equations 10.8, 10.9, and 10.10), MJ day-1
 
-NEwork = net energy for work (Equation 10.11), MJ day-1 
+NEwork = net energy for work (Equation 10.11), MJ day-1
 
-NEp = net energy required for pregnancy (Equation 10.13), MJ day-1  
+NEp = net energy required for pregnancy (Equation 10.13), MJ day-1
 
-REM = ratio of net energy available in a diet for maintenance to digestible energy (Equation 10.14)  
+REM = ratio of net energy available in a diet for maintenance to digestible energy (Equation 10.14)
 
-NEg = net energy needed for growth (Equations 10.6 and 10.7), MJ day-1  
+NEg = net energy needed for growth (Equations 10.6 and 10.7), MJ day-1
 
-REG = ratio of net energy available for growth in a diet to digestible energy consumed (Equation 10.15)  
+REG = ratio of net energy available for growth in a diet to digestible energy consumed (Equation 10.15)
 
-NEwool = net energy required to produce a year of wool (Equation 10.12), MJ day-1  
+NEwool = net energy required to produce a year of wool (Equation 10.12), MJ day-1
 
-DE = digestibility of feed expressed as a fraction of gross energy (digestible energy/gross energy, i.e. DE%/100)  
-
- 
+DE = digestibility of feed expressed as a fraction of gross energy (digestible energy/gross energy, i.e. DE%/100)
 
 **Table S3** Regional parameters of Enteric-fermentation CH₄ emission for Tier 2 IPCC 2019. BW: Body weight; DE: Digestibility; Nex: Annual N excreted/head; MW: Mature weight; Ym: Fraction of GEI lost as CH₄
 
@@ -385,7 +387,7 @@ $\text{EntericCH}4_{i,q,t} = \text{Activity}_{i},q,t \times \frac{{EF\ CH4}_{\te
 
 $\text{EntericCH}4_{i,t} = \text{EntericCH}4_{i,q,t}$ (S2)
 
-**6.2 Manure Left On Pasture**
+#### 6.2 Manure Left On Pasture
 
 Manure left on pasture CH₄ and N₂O emissions were estimated using the IPCC 2019 Tier 2 approach, applying region-specific cattle parameters and pasture/range/paddock emission pathways. Because this study focuses on pasture-supported cattle activity, the manure pathway was restricted to manure deposited directly on pasture, range, and paddock systems. Confined manure systems, including liquid/slurry, solid storage, and dry-lot systems, were not included.
 
@@ -469,7 +471,7 @@ EF5​=0.011 kg N₂O-N per kg N leached/runoff
 
 44/28=Conversion factor from N₂O-N to N₂O (molecular weight ratio of N₂O to N₂)
 
-**References**
+#### References
 
 1.  Chapter, I.P.C.C., 2006a. 10: Emissions from livestock and manure management. Agriculture, Forestry and Other Land Use. Available at: <https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/4_Volume4/V4_10_Ch10_Livestock.pdf>
 

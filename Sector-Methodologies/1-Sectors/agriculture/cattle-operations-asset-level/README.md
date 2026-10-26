@@ -1,11 +1,12 @@
-**Agriculture sector: Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions**<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+
+### Agriculture sector: Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions
 
 **Aaron Davitt<sup>1,6</sup>, Kwin Keuter, Derek Tesser<sup>2,6</sup>, Edward Boyda<sup>3,6</sup>, Ashutosh Pawar<sup>2,6</sup>, Paul Tulloch<sup>4,6</sup>, Andrew Tulloch<sup>6</sup>, Sam Schiller<sup>5,6</sup>, Lekha Sridhar<sup>1,6</sup>, Lauren Betz<sup>,1,6</sup>, and Vasit Sagan<sup>2,6</sup>**
 
 *1) WattTime, 2) Dept. of Earth, Environmental and Geospatial Science, Saint Louis Univ., 3) Earth Genome, 4) Machine Learning and Env., Applied Research Consultant- Ottawa, Canada, 5) Carbon Yield, 6) Climate TRACE*
 
-**1. Introduction** 
-===================
+#### 1. Introduction
 
 Cattle are the largest contributors of greenhouse gas (GHG) emissions in the livestock sector. Overall, livestock agrifood systems accounted for approximately 6.2 Gt CO₂eq in 2015, around 12% of all anthropogenic GHG emissions, and cattle - meat and milk combined - account for roughly 62% of that total, or about 7% of anthropogenic emissions (FAO, 2023). Emissions from beef and dairy cattle arise from two sources. The first is enteric fermentation - methane (CH₄) produced during microbial digestion in the rumen. The second is manure management, which generates CH₄ through anaerobic decomposition and nitrous oxide (N₂O) through the microbially driven processes of nitrification and denitrification (Waldrip et al., 2016; Waldrip et al., 2020). Manure management emissions occur both within the storage facilities common to beef and dairy systems and in-field, where manure is applied as fertilizer or deposited directly by grazing animals. See the Supplemental Section in ‘Country-level Enteric Fermentation and Manure Management Emissions’ in the [<span class="underline">Climate TRACE GitHub repo</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture) for more information on how enteric fermentation and manure management systems generate emissions.
 
@@ -25,8 +26,7 @@ To better understand emissions from individual beef and dairy production systems
 
 Once individual operations were identified, the total head of cattle was estimated using reported cattle numbers, mean values, or, where the operation’s area footprint could be delineated, regression modelling. With each operation’s total head determined, the Intergovernmental Panel on Climate Change (IPCC) 2019 equations and emission factors (EFs) from Chapter 10 (Emissions from Livestock and Manure Management) and Chapter 11 (N₂O Emissions from Managed Soils, and CO₂ Emissions from Lime and Urea Application) were applied (IPCC, 2019a; IPCC, 2019b). The shift to the 2019 Refinement accounts for global shifts in commercial cattle breeding and production practices, which can affect both enteric fermentation and manure management emissions (IPCC, 2019a). We also applied emissions reduction solutions (ERS) - potential mitigation strategies that quantify how much emissions could be reduced at each operation - covering feed additives added to cattle diets and modifications to manure management systems, both of which lower CH₄ emissions. The result of this work is a set of individually identified cattle operations across 41 countries with emission estimates at quarterly resolution from 2015 through 2025, improving the resolution at which cattle emissions can be monitored globally.
 
-**2. Materials and Methods**
-============================
+#### 2. Materials and Methods
 
 <img src="figures/figure1.png" style="width:6.49732in;height:3.53078in" />
 
@@ -40,19 +40,15 @@ Figure 1 displays the current country coverage from Climate TRACE data release v
 
 To create the Climate TRACE cattle operations dataset, the data sources, model development, and the attribution of ancillary information and cattle-type-specific emission factors to individual locations are described below, based on the order of the boxes in Figure 2.
 
-**2.1 Seed data — reported and researched cattle operations**
+#### 2.1 Seed data — reported and researched cattle operations
 
 Reported cattle data formed the basis for the Climate TRACE cattle operation dataset, providing an initial set of records that included geolocation, cattle type, total head of cattle, and, in some cases, manure management type. This information served as the seed data used to train the AI detection models (Figure 2, box 1) and was obtained in two ways.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 First, for the U.S., reported data comprised individual state concentrated animal feeding operation (CAFO) databases (Table S1), with the U.S. Environmental Protection Agency (EPA) Enforcement and Compliance History Online (ECHO) database providing additional coverage (accessed February 2024; https://echo.epa.gov/). Depending on the state, some records also included total head of cattle by type — beef or dairy — and the manure management systems employed.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Second, for non-U.S. countries, country-specific research was performed to identify beef and dairy operations. Cattle operations vary substantially in appearance across countries, differing in size, infrastructure, management practice, building materials, and cultural context, which limits the transferability of AI models trained on one region, such as the United States, to others (Figure 3). Detecting operations globally therefore requires region-specific calibration and seed data generation.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This involved identifying high-confidence seed locations for both the Earth Index and TDX models. Publicly available high-resolution basemaps (Google Maps, Bing Maps, and Mapbox) and ancillary tools such as Google Street View were used to visually confirm cattle operations, including verifying publicly listed farm types where available. At sub-meter resolution, individual cattle are often directly visible and can typically be distinguished from other livestock such as horses, sheep, or poultry, whose operations may share similar structural features. Additional region-specific indicators were also used, including characteristic CAFO infrastructure, manure lagoons, anaerobic digesters, hay storage, feeding troughs, open shade structures, building skylights, cattle pathways from pens to pasture, and, in particular, the presence of dark, manure-rich soil surfaces (Figure 3).
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <img src="figures/figure3.png" style="width:5.625in;height:4.64962in" />
 
@@ -60,15 +56,17 @@ This involved identifying high-confidence seed locations for both the Earth Inde
 
 **Figure 3** Cattle operations identified in A) Pakistan, a cattle colony with B) a close-up (green box) where the cattle are housed. Note, the cattle colony has mixed buffalo and cows in this area. C) An Irish dairy farm, where cattle can be seen in the lower right corner. D) A dairy farm in China and E) in India. F) A feedlot in Paraguay with G) a close-up of the pens (purple box) where the cattle occupy the lower left corner of the pen.
 
-**2.2 AI detection models and remote sensing datasets**
+#### 2.2 AI detection models and remote sensing datasets
 
 Cattle operations were detected using two AI models - Earth Index and TerraDetect (TDX) - each paired with a different satellite imagery source and fed seed data (Figure 2, box 1). The subsections below describe each model with the remote sensing data it ingested.
 
-**2.2.1 Earth Index**
+#### 2.2.1 Earth Index
 
 The Earth Index model is a digital platform developed by Earth Genome (https://www.earthgenome.org/earth-index) for detecting objects on the Earth’s surface using AI foundation models and satellite imagery. It supports a human-in-the-loop workflow for building locally tuned models and datasets iteratively. The Earth Index system processes the satellite composites through an AI foundation computer vision model, yielding embedding vectors that encode numerical representations of the topography on each small patch of the Earth’s surface. These vector representations are then passed to a target-specific classifier, trained by a user with successively larger labeled datasets, which produces detections across a region with quantifiable accuracy metrics (Figure 4).
 
-<img src="figures/figure5.jpg" style="width:6.5in;height:1.90278in" />**Figure 4** Schematic Earth Index workflow for cattle facility detection.
+<img src="figures/figure5.jpg" style="width:6.5in;height:1.90278in" />
+
+**Figure 4** Schematic Earth Index workflow for cattle facility detection.
 
 The remote sensing ingested into Earth Index was The European Space Agency (ESA) Sentinel-2A (launched 2015) and Sentinel-2B (launched 2017) MultiSpectral Instrument (MSI) radiance measurements were used. Together the two satellites provide a revisit interval of approximately five days for most land locations on Earth. Each collects 13 spectral bands from blue to shortwave infrared (approximately 442 nm to 2,202 nm) at spatial resolutions ranging from 10 m to 60 m depending on the band. All bands were used as Earth Index model inputs. Sentinel-2A and -2B L1C data were downloaded from Google Earth Engine (GEE) and combined into cloud-free 2023 annual median composites per band for each region, which were then used to compute the embedding vectors. Further information is available from ESA (https://www.esa.int/Applications/Observing\_the\_Earth/Copernicus/Sentinel-2) and GEE (https://earthengine.google.com/).
 
@@ -82,7 +80,7 @@ Classification head. For the final classifiers, shallow fully connected neural n
 
 Cattle operation features vary from country to country, as does the background topography. The problem of detecting cattle operations globally was therefore decomposed into a series of loco-regional problems covering areas of up to a few million square kilometers. Each region required its own labeled training dataset, constructed iteratively through Earth Index training, inference, and validation of model outputs.
 
-**2.2.2 TerraDetect**
+#### 2.2.2 TerraDetect
 
 TerraDetect (TDX) is a proprietary AI model (Tulloch, 2024): a globally scalable, regionally adaptive pipeline for infrastructure detection using medium-resolution (3–5 m) satellite imagery. It combines an attention-based backbone, a multi-tiered inference cascade, and iterative domain adaptation to balance generalization against regional precision across heterogeneous geographies.
 
@@ -116,17 +114,17 @@ The backbone was pretrained on multiple sources for visual feature extraction. B
 
 Additional information on TDX can be found in the Supplement section S.2.
 
-**2.2.3 Previously detected operations (RAIC)**
+#### 2.2.3 Previously detected operations (RAIC)
 
 In earlier work for this sector, the Rapid Automatic Image Categorization (RAIC) tool developed by RAIC Labs, formerly Synthetaic ([<span class="underline">https://raiclabs.com/</span>](https://raiclabs.com/)) was used to identify locations. RAIC used PlanetScope basemap imagery from 2020 and 2024 to detect these operations. See this sector’s 2024 methodology in the Climate TRACE GitHub methodology repository for further information on the RAIC approach.
 
-### **2.3 Manure pond detection models**
+#### 2.3 Manure pond detection models
 
 After running Earth Index and TDX, the following models were deployed to identify operations with wet manure management systems — liquid/slurry and anaerobic lagoons, flagged as manure ponds (Figure 2, box 2). This information was used to assign high-productivity cattle and specific manure management emission factors.
 
 For description on pond model deployments can be found in supplementary section S.2.
 
-**2.3.1 SLU manure pond detection model**
+#### 2.3.1 SLU manure pond detection model
 
 The Dept. of Earth, Environmental and Geospatial Science, Saint Louis University (SLU) developed a convolutional neural network (CNN) approach for manure pond detection which used the Earth Index Model’s Vision Transformer embeddings, which served as compact representations of Sentinel-2 multispectral satellite imagery (Figure 5).
 
@@ -136,7 +134,7 @@ The CNN architecture consisted of successive convolutional layers to extract inc
 
 **Figure 5** CNN-Based Manure Pond Detection Workflow. Convolutional Neural Networks (CNNs), trained on Earth Index multispectral and Vision Transformer (ViT) embeddings, classify cattle operations as pond-present or pond-absent, indicating the presence of a manure lagoon management system. The workflow consists of: 1) Embedding Acquisition: Retrieve Earth Index embedding vectors for the country or region of interest. 2) Training Sample Preparation: Crop embeddings to the cattle operation boundaries previously identified in the feedlot detection stage. 3) Model Training: Train a custom CNN classifier to distinguish operations with and without manure ponds. 4) Visualization: Map model outputs using class-specific symbology—yellow boundaries denote operations with ponds; green boundaries indicate no pond.
 
-**2.3.2 TerraDetect manure pond detection model**
+#### 2.3.2 TerraDetect manure pond detection model
 
 TerraDetect implements a deep learning–based segmentation pipeline for detecting manure ponds in satellite imagery. The system supports transformer backbones from the Hugging Face ecosystem—SegFormer (MiT encoder with lightweight decoders) and Mask2Former (query-driven segmentation over multi-scale features)—and extends them with dataset mechanics for native negative-image training, balanced sampling, and geospatially aware post-processing. The end-to-end pipeline spans data curation and augmentation, model construction, loss design, validation with positive and negative metrics, and georeferenced inference leading to vectorized pond polygons in GeoJSON**.**
 
@@ -170,12 +168,11 @@ Negative examples were incorporated into the sampling loop at a configurable neg
 
 Per-epoch evaluation reports intersection over union (IoU; threshold 0.5) on positive samples alongside FPR and FP area on negatives. Together, these metrics balance localization quality with suppression of spurious detections.
 
-**2.4 Country and sub-country-level cattle data** 
--------------------------------------------------
+#### 2.4 Country and sub-country-level cattle data
 
 For most of the cattle operations identified by the AI models, only the location was returned; the additional information needed for emissions modeling was not available. This was also true for reported cattle operations where some were missing other required information for emissions modeling. To fill this gap, country- and sub-country-level cattle data were used for three purposes. First, each operation had to be assigned a cattle type — beef or dairy — so that the corresponding IPCC “Mature Dairy Cattle” and “Other Cattle” (beef) emission factors and equations could be applied to estimate enteric fermentation and manure management emissions (IPCC, 2019b; IPCC, 2019c; Figure 2, box 3). Second, because total head of cattle is required to estimate total emissions, and most identified operations were point locations without a footprint area suitable for regression modeling, mean head values by cattle type were applied, along with a common manure management system. Third, capacity and death and loss factors were applied to convert the potential head of cattle at an operation into an estimate of the head actually held. How each was handled varied with the level of detail available in a country’s reporting.
 
-**2.4.1 Country-level cattle data**
+#### 2.4.1 Country-level cattle data
 
 Many countries report only national beef and dairy information or, in some cases, lack usable information altogether, requiring default assumptions drawn from the literature. For Pakistan, European Union countries, the United Kingdom, and countries without clear information, all identified operations were assigned ‘MatureDairyCattle’, since beef production in these systems is largely a byproduct of dairy production (Steinfeld and Mäki-Hokkonen, 1995; Greenwood, 2021). For South American countries, the default assignment was ‘OtherBeefCattle’, covering non-dairy, other, and beef cattle (Greenwood, 2021).
 
@@ -183,7 +180,7 @@ Similarly, country-specific mean total head by cattle type was then applied to e
 
 Lastly, common manure management systems were researched in the same way, to determine the systems most widely used in each country. Where the manure pond detection model was not run in Section 2.3, or where no manure pond was detected, the operation was assigned its country’s common manure management system.
 
-**2.4.2 Sub-country-level cattle data**
+#### 2.4.2 Sub-country-level cattle data
 
 For countries reporting sub-country cattle information — the United States, Australia, Canada, Japan, and Indonesia — geospatial data by state, territory, or province were used to assign cattle types (Table 1). For example, an operation identified in the Canadian provinces of Alberta or Saskatchewan was assigned the beef cattle type, ‘OtherBeefCattle’. Many U.S. CAFO records were already designated as either dairy (‘MatureDairyCattle’) or beef (‘OtherBeefCattle’) and were used as reported., and if missing information, the U.S. Department of Agriculture (USDA) filled in missing information.
 
@@ -193,7 +190,7 @@ For countries reporting sub-country cattle information — the United States, Au
 
 Mean head of cattle was likewise assigned at the sub-country level, using the mean for the relevant cattle type within the jurisdiction in which each operation fell. The sub-country sources are listed alongside the national sources in Table S2; for the U.S., USDA state-level means were used for both dairy and beef.
 
-**2.4.3 Assigning capacity factors**
+#### 2.4.3 Assigning capacity factors
 
 To estimate the actual total head of cattle held at an operation, utilization factors (hereafter capacity factors) and death and loss rates were applied to the Climate TRACE identified cattle operations.
 
@@ -201,13 +198,13 @@ Cattle operations are designed to hold a maximum number of animals. Dairies gene
 
 Because dairy operations were assumed to run at full capacity, a fixed capacity factor was applied to all identified dairy operations. Beef operations generally do not have fixed capacity factors. For the majority of country (rest of world, ROW), capacity factors were estimated from USDA Foreign Agricultural Service slaughter and beginning beef stock data where available, described in Section S.1 ‘Deriving beef capacity factor (utilization rate)’; where those data were unavailable, the mean quarterly value across all sources in Table S3 was applied. Countries with detailed and sub-country information are shown in Table 1. Supplemental section S.3 and equations S1 and S2 provide more information on deriving these values.
 
-**2.5 Regression model development**
+#### 2.5 Regression model development
 
 The regression models relied on the hypothesis that a cattle operation’s area, in hectares, can serve as a predictor of the potential total head of cattle held there (Table S3; Figures S1 to S3). To develop these models, area footprints were delineated for AI-identified cattle operations in the U.S. and spatially joined to CAFO data for the relevant states. Additional training data came from two further sources: a subset of Australian operations was spatially joined to the Farm Transparency Project map dataset, an Australian nonprofit dataset (Farm Transparency Project, n.d.), and Fan et al. (2018), which provided area estimates and total head of cattle for Chinese dairy operations only.
 
 Cattle operations that had area footprints but were not used in regression model development had one of these models applied to estimate their potential total head of cattle.
 
-**2.6 IPCC 2019 Refinement — Equations and Emission Factors**
+#### 2.6 IPCC 2019 Refinement — Equations and Emission Factors
 
 Equations and emission factors (EFs) were drawn from Chapter 10 (Emissions from Livestock and Manure Management) and Chapter 11 (N₂O Emissions from Managed Soils, and CO₂ Emissions from Lime and Urea Application) of the 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories, and applied to each identified cattle operation (IPCC, 2019a; IPCC, 2019b). “Mature Dairy Cattle” and “Other Cattle” EFs, selected by region, climate zone, and manure management system, were applied according to the cattle type assigned to each operation in Section 2.4.
 
@@ -217,7 +214,7 @@ To better represent manure management at each individual cattle operation, emiss
 
 Section 3.2.2 describes the multiple MMS and approach to estimate manure emissions. Table 3 lists the multiple MMS applied to operations by region and cattle type, and Table 4 gives the values for each multiple MMS. Figure 8 illustrates how a dairy and beef operation are assigned each.
 
-**2.7 Climate Zones - Climatic Research Unit Gridded Time Series**
+#### 2.7 Climate Zones - Climatic Research Unit Gridded Time Series
 
 The updated 2019 IPCC guidelines require climate zones to estimate CH₄ emissions by manure management system, an update from the 2006 guidelines, which relied on temperature-based emission factors (Figure 7). To derive climate-zone-specific methane conversion factors (MCF) (Table 10.17) to estimate manure management emissions, we used the Climatic Research Unit gridded Time Series (CRU TS) v4.10 NetCDF files (version June 7, 2026) from the University of East Anglia (Harris et al., 2020).
 
@@ -229,7 +226,7 @@ CRU TS provides monthly climate data for global land areas, excluding Antarctica
 
 For the purpose of this work, monthly climate zones were generated for each operations’ latitude and longitude centroid and climate zones were used to derive the MCF values by livestock type per month, then averaged to quarterly MCF values for years 2015 to 2025 (Figure 2, Box 3).
 
-### **2.8 Emission Reduction Solutions (ERS)**
+#### 2.8 Emission Reduction Solutions (ERS)
 
 Beginning in fall 2025, Climate TRACE introduced ERS — potential mitigation strategies to reduce emissions, specific to individual sectors. For the cattle operation sector, ERS are produced for both enteric fermentation and manure management, and each strategy can be viewed on the Climate TRACE website (https://climatetrace.org/reduce/countries/all/Global). This section summarizes each strategy; full detail is given in the supplemental section below and in the ‘Cattle Supporting Information’ at [<span class="underline">GitHub Agriculture folder</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Agriculture).
 
@@ -237,23 +234,23 @@ Seven ERS strategies are provided for enteric fermentation. Six are feed additiv
 
 Three strategies are provided for manure management. The first is the same demand-side reduction in herd size, described above. The second replaces a single manure management system (MMS) within an operation’s multiple MMS with a lower-emitting system, classified as a retrofit (see Figure S5 in Section S.5.2). As described in Section 2.6, manure management CH₄ and N₂O emissions were estimated across multiple MMS rather than a single system, so the multiple MMS at each operation were first determined (Section 3.2.2), then one system was replaced and emissions compared before and after to give a new ratio factor. The last strategy are chemical treatments of manure effluent. These strategies addresses CH₄ only, since it accounts for the majority of manure management emissions relative to N₂O. See section S.5 for a description on how ERS was applied to cattle operations to reduce emissions.
 
-**3. Methods to estimate emissions**
+#### 3. Methods to estimate emissions
 
 This section describes the steps used to estimate CH₄ from enteric fermentation and CH₄ and N₂O from manure management, based the assigned cattle attributes at each identified cattle operation (Figure 2, box 4). Enteric fermentation CH₄ was estimated using the Tier 2 approach described in Chapter 10 of IPCC (2019a). Manure CH₄ and N₂O were estimated using the Tier 2 and Tier 1 approaches but modified to account for multiple manure management systems (MMS) and the fraction of manure ($\text{Mfrac}$) entering each system. Emissions were reported per operation in metric tonnes (t), at quarterly resolution from 2015 to 2025.
 
-### **3.1 From AI-detected operations and manure ponds to emissions inputs**
+#### 3.1 From AI-detected operations and manure ponds to emissions inputs
 
-### Sections 2.1 to 2.2 described the seed data - reported operations from state CAFO databases and EPA ECHO in the U.S., and country-specific research for the rest of the world (ROW) - used to train the Earth Index and TerraDetect (TDX) models. These models identified cattle operations in Sentinel-2 and PlanetScope imagery, returning the location of each. A subset of these locations had their area footprint delineated for regression modeling. The manure pond detection models were then run on the identified operations to find those with wet manure management systems, or ponds. 
+Sections 2.1 to 2.2 described the seed data - reported operations from state CAFO databases and EPA ECHO in the U.S., and country-specific research for the rest of the world (ROW) - used to train the Earth Index and TerraDetect (TDX) models. These models identified cattle operations in Sentinel-2 and PlanetScope imagery, returning the location of each. A subset of these locations had their area footprint delineated for regression modeling. The manure pond detection models were then run on the identified operations to find those with wet manure management systems, or ponds.
 
 AI model detections and their outputs were QC’ed visually with a subset of detected locations and the subset quantity varied by country. Locations that were QC’ed are marked “high” in the location and provided in the confidence files.
 
-**3.2 Assigning attributes for emissions**
+#### 3.2 Assigning attributes for emissions
 
 Estimating manure management and enteric fermentation emissions required different sets of attributes. Manure management emissions drew on the climate zone and the multiple manure management systems (MMS) assigned to each operation, from either a model-detected pond or a country default, which together with the cattle attributes described in Section 2.4 selected the methane conversion factors from Table 10.17 and the emission factors used to estimate CH₄ and N₂O at each individual operation (Figures 8 and 9). Enteric fermentation emissions required only the cattle attributes to estimate CH₄.
 
 The manure pond detection also determined which productivity system was assumed at an operation. For Latin America, Africa, the Middle East, Asia, and the Indian subcontinent, any operation with a detected manure pond was assigned the high-productivity dairy or beef cattle type, overriding the regional defaults for mean or low-productivity systems, such as those given in Table 10A.5 (Default values for live weight for animal categories, kg) and Table 10.13A (Default values for volatile solid excretion rates).
 
-**3.2.1 Assigning climate zones for manure management emissions**
+#### 3.2.1 Assigning climate zones for manure management emissions
 
 Manure management methane emissions are driven by the amount of manure produced, the system in which that manure is handled, and the climate conditions — particularly temperature and moisture — that determine whether emissions are produced under anaerobic or aerobic conditions (IPCC, 2019b; see Supplemental Section S.1 for further detail on anaerobic and aerobic conditions). The 2019 Refinement requires climate zones to estimate CH₄ emissions by manure management system, a departure from the 2006 Guidelines, which relied on annual-temperature-based emission factors.
 
@@ -265,7 +262,7 @@ Rather than applying a single static climate zone spanning 30 years, monthly cli
 
 For each cattle operation identified, the latitude and longitude centroid was used to assign the monthly climate zones for every year from 2015 to 2025. This, combined with multiple manure management systems (MMS) and country specific cattle attributes, were used to select the methane conversion factors (MCFs) for each system in a multiple MMS system.
 
-### **3.2.2 Assign cattle types for multiple MMS assignment**
+#### 3.2.2 Assign cattle types for multiple MMS assignment
 
 Most identified cattle operations lacked the attribute information needed to estimate emissions. The most important of these is cattle type — dairy or beef — because it determines which multiple MMS are assigned and, in conjunction with the climate zone, which MCFs are derived.
 
@@ -281,7 +278,7 @@ Reported cattle numbers were also used to assign multiple MMS along with if a ma
 
 **Figure 8** Assignment of multiple manure management systems (MMS) to two detected cattle operations: left, a dairy operation assigned the wet1 multiple MMS, and, right, a beef operation assigned dry1. The dairy operation was assigned wet1 because a manure pond was detected and the operation falls in a dry climate; the beef operation was assigned dry1 because a manure pond was detected. Each system in a multiple MMS is given a fraction of manure ($\text{Mfrac}$), which allocates the manure produced, and the resulting volatile solids and total nitrogen excreted, across systems and sums to 1. Multiple MMS assignments by region and cattle type are given in Table 3, and $\text{Mfrac}$ values in Table 4 (image modified from Owen and Silver, 2015).
 
-**3.2.3 Deriving MCFs**
+#### 3.2.3 Deriving MCFs
 
 The monthly climate zones, assigned cattle types, and multiple MMS were used to select each system's methane conversion factor (MCF) from Table 10.17 (IPCC 2019b). Operations with a detected pond were assigned the condition ‘pond’ and allocated across multiple MMS based on country research, while operations without a detected pond were assigned their country’s estimated common manure management system (Table 3). Each MMS assigned to an operation carries its own MCF. The resulting monthly MCF values by MMS were then averaged to quarterly values for 2015 through 2025. The same climate zones were used to select EF₄ from Table 11.3 — N volatilisation and re-deposition, in kg N₂O–N per kg (NH₃–N + NOₓ–N volatilised) — for wet or dry climate zones. For EF₅ (leaching and runoff, in kg N₂O–N per kg N leaching or running off), a default value was used, since IPCC does not distinguish between wet and dry climates for this factor. Figures 8 and 9 provide examples of this assignment.
 
@@ -289,7 +286,7 @@ The monthly climate zones, assigned cattle types, and multiple MMS were used to 
 
 **Figure 9** An example of deriving quarterly methane conversion factors (MCF) for a beef cattle operation, using an Australian feedlot in Q1 2021 as an example. (1) For an individual cattle operation identified by the AI detection models, the centroid per operation returned a (2) CRU TS climate zone for each month: warm temperate dry in January and February, cool temperate dry in March. (3) Cattle attributes assigned to the operation — beef, 1,000 head, manure pond detected — determine the multiple MMS assumed to be in use. (4) Cattle type, manure management system, and monthly climate zone together select an MCF from IPCC (2019) Table 10.17. (5) The three monthly values for each system were averaged to a quarterly MCF.
 
-**3.3 Estimating total head of cattle**
+#### 3.3 Estimating total head of cattle
 
 The actual head of cattle held at an operation in a given quarter was derived from the potential head, the maximum the operation can house, by applying a capacity factor,
 
@@ -333,11 +330,11 @@ Once the potential total head of cattle was derived, capacity factors were appli
 
 Beef operations used country-specific capacity factors, when available, or means when not available which range from 0% (no cattle present) to &gt;100% in some cases (overstocking). Australia, Canada, and the United States report cattle on feed directly, from which capacity factors were derived. For countries reporting slaughter and beginning beef stock data to the U.S. Department of Agriculture Foreign Agricultural Service (USDA FAS), those values were used to approximate cattle on feed, drawn from the Livestock and Poultry production, supply and distribution reports (USDA, 2024; accessed August 2024). Where neither was available, such as Russia and Argentina, the mean quarterly value across all sources in Table S3 was applied. Death and loss rates for beef herds were taken from Stehle (2016) and aggregated to quarterly means of 1.9% (Q1), 2.6% (Q2), 1.5% (Q3), and 1.4% (Q4). The beef capacity and death and loss value therefore vary by country and quarter. For example, a Q1 capacity factor of 0.80 with a Q1 death and loss rate of 1.9% gives 78.1%, which was applied to determine the actual head held at that operation in Equation 1.
 
-**3.4 Estimating emissions**
+#### 3.4 Estimating emissions
 
-### With a set of individually located cattle operations, each carrying a cattle type, a head count, and a manure management system, the IPCC 2019 equations and emission factors described in Section 2.6 could be applied to estimate emissions.
+With a set of individually located cattle operations, each carrying a cattle type, a head count, and a manure management system, the IPCC 2019 equations and emission factors described in Section 2.6 could be applied to estimate emissions.
 
-### **3.4.1 Manure management CH₄**
+#### 3.4.1 Manure management CH₄
 
 Manure management CH₄ was estimated using the Tier 2 approach described in IPCC (2019a) Chapter 10, Section 10.4. Equation 10.23 was applied, which requires that following variables: the daily volatile solids excreted by an animal; the maximum methane producing capacity for manure, B₀; and the methane conversion factor, MCF, for each manure management system for each system in a multiple MMS. Default volatile solids were derived from Table 10.13A for the productivity class assigned to each operation (Section 3.2.2). B₀ values were taken by cattle type and region from Table 10.16, and MCF values by system and climate zone from Table 10.17, as described in Section 3.2.3.
 
@@ -414,7 +411,7 @@ $EF_{\left( s,q,m \right)}$= CH₄ emission factor for cattle type *s* in quarte
 
 $m$ = manure management systems in the multiple MMS, shown in Table 4.
 
-**3.4.2 Manure management N₂O**
+#### 3.4.2 Manure management N₂O
 
 Manure management N₂O was estimated using the Tier 1 approach described in IPCC (2019a) Chapter 10, Section 10.5, together with the indirect emission factors in Chapter 11, Table 11.3. Three pathways were estimated for each manure management system: direct N₂O from nitrification and denitrification within the system, indirect N₂O from nitrogen volatilised as NH₃ and NOₓ and subsequently re-deposited, and indirect N₂O from nitrogen lost through leaching and runoff. The three were converted from an N basis to N₂O and summed to give total manure management N₂O at the operation.
 
@@ -502,7 +499,7 @@ $N_{2}O_{L\left( s,q,m \right)}$ = indirect N₂O emissions from leaching and ru
 
 $m$= manure management systems in the multiple MMS, shown in Table 4.
 
-**3.4.3 Enteric fermentation CH₄**
+#### 3.4.3 Enteric fermentation CH₄
 
 Enteric fermentation CH₄ was estimated using the Tier 2 approach described in IPCC (2019a) Chapter 10, Section 10.3. Equation 10.21A was applied, which requires two variables: the dry matter intake, , and the methane yield, , the amount of methane produced per kilogram of DMI during rumen digestion. DMI was estimated using equations 1 (dairy cows) and 4 (steers) in section 10B.4 (Feed intake estimates using a simplified Tier 2 method). The value was selected by cattle type and productivity class from Table 10.12. For example, a dairy farm in the USA used the mean value for ‘High-producing cows &gt;8500 kg/head/yr-1)’ and beef cattle at a feedlot used the mean value between ‘Feedlot (all other grains, 0-15% forage)’ and ‘Feedlot (steam-flaked corn - 0-10% forage)’.
 
@@ -538,7 +535,7 @@ $EF_{\left( s,q \right)}$ = enteric fermentation CH₄ emission factor for cattl
 
 Unlike manure management, enteric fermentation is not apportioned across systems: the emission factor depends only on the animal and its diet, so a single factor applies to all cattle of a given type at an operation regardless of how their manure is subsequently handled. Emissions were converted from kilograms to metric tonnes (t) for reporting.
 
-**3.5 Climate TRACE emissions data produced**
+#### 3.5 Climate TRACE emissions data produced
 
 In total, 285,824 cattle operations across 41 countries had their enteric fermentation and manure management emissions estimated per quarter for years 2015 to 2025 (Figure 1, Table 5). Post-processing was performed to convert quarterly emissions to monthly, using the methodology “Temporal Disaggregation of Emissions Data for the Climate TRACE Inventory”. For more information on how this was applied here and to all Climate TRACE sectors, refer to the document in the “Post Processing for Global Emissions and Metadata Completeness” directory on Climate TRACE GitHub methodology repository.
 
@@ -548,14 +545,13 @@ Section 6. Metadata provides an overall description of the emissions data create
 
 Lastly, Table M3 provides a description for other column data provided with enteric fermentation and/or manure management asset-level files. This includes an estimate for Total water consumption for all cattle at the operation, in liters (L) in the enteric fermentation asset file (column ‘other9’). The manure management other columns are more specific for estimating manure management emissions whereas the enteric fermentation other columns contain more general information related to the cattle operation.
 
-**4. Review of data outputs and estimates**
-===========================================
+#### 4. Review of data outputs and estimates
 
 This section summarizes the data products and estimates produced by the method described above. Interpretation of spatial and temporal patterns, comparison against national inventories, and attribution of trends are provided. Below we provide a review of data products and estimates based on version v5.11 release (September 2026).
 
 Future data releases may change the data products and estimates produced by this approach when updated with new information. This methodology will reflect those changes.
 
-**4.1 Cattle operations identified**
+#### 4.1 Cattle operations identified
 
 Table 5 displays the countries with estimated cattle operations, totaling 285,824. The breakdown of each country by cattle type is the result of designating cattle operations to a type. Countries with one identified operation were ‘spillover’ detections where the operations were detected close to the border of the primary searched country. This is the case for Azerbaijan, where the single identified operation resulted from a search targeting Russian cattle operations near the border. Below, we compare Climate TRACE coverage to country-reported figures for a select group of countries.
 
@@ -654,7 +650,7 @@ Exceeding 100% coverage for beef suggests two possibilities. First, the modeling
 | Nebraska    | Dairy           | 183            |     |                | Beef            | 407            |
 |             | Beef            | 2,557          |     |                |                 |                |
 
-**4.2 Emission estimates**
+#### 4.2 Emission estimates
 
 The resulting enteric fermentation and manure management emissions for 2025 are shown in Table 7. These results are based on Climate TRACE cattle operation coverage. As a result, the emissions shown largely reflects variability in spatial coverage along with regional differences in operation size, beef and dairy production intensity, estimated total head of cattle by type, and manure management systems. The ten highest-emitting countries in each subsector are given in Table 7.
 
@@ -680,7 +676,7 @@ Manure management emissions are more concentrated. The ten countries listed in T
 
 The three rankings do not align. Brazil, China and India rank second to fifth for manure methane but fall outside the top ten for nitrous oxide, while Denmark, the Netherlands, the United Kingdom and Italy appear only in the nitrous oxide ranking, and Pakistan only in the manure methane ranking, at sixth. This follows from assigning multiple manure management systems at the operation level rather than applying default AWMS distributions at the regional level. The two gases respond inversely to the same systems: uncovered anaerobic lagoons and uncovered liquid/slurry storage carry the highest methane conversion factors but a direct N₂O emission factor of zero or near zero, because the anaerobic conditions that generate methane suppress the nitrification and denitrification pathways that generate nitrous oxide. Countries where detected manure ponds place a large share of manure into wet systems therefore rank high for methane and low for nitrous oxide, while countries whose operations are dominated by dry lot and solid storage show the reverse, where solid storage and dry lot systems direct N<sub>2</sub>O EFs are relatively higher. Regional defaults cannot reproduce this pattern, since they distribute manure across systems by region rather than by what is observed at each operation.
 
-**4.3 Comparison to FAOSTAT**
+#### 4.3 Comparison to FAOSTAT
 
 Because FAOSTAT remains the only globally consistent source of cattle emissions estimates, we compare our results against it for three countries with large cattle sectors and report cattle data at the sub-country level: Australia, Canada, and the U.S. The two inventories are not directly comparable in scope. Climate TRACE estimates emissions from cattle in detected operations, whereas FAOSTAT covers the entire national herd of dairy and non-dairy cattle. FAOSTAT also applies the Tier 1 method and default emission factors of the 2006 IPCC Guidelines, while the estimates presented here apply the Tier 2 approach of the 2019 Refinement with manure management systems assigned at the operation level. The comparison in Table 8 is therefore not a validation exercise. It is intended to show where the two approaches diverge and to identify which differences follow from the change in scope, which follow from the change in method, and which require further investigation. We use the most recent FAOSTAT emissions data available at the time of writing, released 28 October 2025. FAOSTAT reports through 2023, so all comparisons in Table 8 use 2023 values from both inventories.
 
@@ -710,7 +706,7 @@ Nitrous oxide from manure management follows the same pattern as enteric ferment
 |                              | *Difference*     | *−60,485*    | *+15,208*  | *−85,630*    |
 |                              | *Difference (%)* | *−85%*       | *+74%*     | *−52%*       |
 
-**5. Discussion and Conclusion**
+#### 5. Discussion and Conclusion
 
 Climate TRACE's identification of cattle operations, and the enteric fermentation and manure management emissions estimated at each, provides insight into where and how much cattle emissions are generated from the operation to the country level. The AI models offer a scalable approach for spatially mapping individual operations and estimating their emissions, using reported data to estimate total head where no population data is publicly available and applying country mean values by cattle type where no footprint could be delineated. Paired with the IPCC 2019 emission factors, this top-down and bottom-up approach represents one of the first attempts to downscale emissions modeling to individual operations across entire states and countries. Additionally, the shift to the IPCC 2019 Refinement creates an emissions database that accounts for global changes in country cattle breeding and production practices, both of which affect enteric fermentation and manure management emissions.
 
@@ -724,11 +720,11 @@ Adjustment factors for total head of cattle may be incorporated if the estimates
 
 The next phase of this work will continue to expand AI model deployment globally, refining AI models to improve detection and increase current country coverage, along with improving manure pond identification. Future work may also integrate practice identification with remote sensing or top-down methane measurements from providers such as AVIRIS and GHGSat or apply revised emission factors that account for breed and practice changes.
 
-**Acknowledgements**
+#### Acknowledgements
 
 We would like to thank M. Stoerman for providing information on manure flow and management on dairy farms and the RAIC Lab team ([<span class="underline">https://raiclabs.com/</span>](https://raiclabs.com/)) for their contribution to this work in previous years.
 
-**6. Metadata**
+#### 6. Metadata
 
 Enteric fermentation and manure management emissions from individual cattle operations provides the following data on the Climate TRACE website:
 
@@ -784,8 +780,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 > **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**7. Supplementary information**
-================================
+#### 7. Supplementary information
 
 **S.1. Links and references to datasets.**
 
@@ -951,7 +946,7 @@ Lastly, the third strategy applies chemical amendments to treat manure effluent,
 
 <table><thead><tr class="header"><th><strong>ERS key</strong></th><th><strong>MMS</strong></th><th><strong>Strategy</strong></th><th><strong>Table 10.17 equivalent or reference</strong></th><th><strong>Mechanism</strong></th><th><strong>CH₄ Ratio</strong></th><th><strong>Description</strong></th></tr></thead><tbody><tr class="odd"><td>ss-ual1a+ss-ual1b</td><td>Liquid systems (solids separation)</td><td>Improve the solid/liquid separation by 10%</td><td>Mukhtar et al., 1999; Worley, 2009; and LPELC, 2019</td><td>Retrofit</td><td>Varies</td><td>Improve solids separation with mechanical equipment to reduce the amount of volatile solids in the anaerobic lagoon effluent.</td></tr><tr class="even"><td>lp1</td><td>Liquid/slurry and pit storage</td><td>Remove stored liquid manure every 9 months</td><td><p>Mean MCF of</p><p>Liquid/Slurry, and Pit storage below animal confinements 12 and 6 month</p></td><td>Retrofit</td><td>Varies</td><td>Remove liquid manure from liquid-slurry/pit systems every 9 months, instead of every 12 months, to reduce ch4 emissions.</td></tr><tr class="odd"><td>lp2</td><td>Liquid/slurry and pit storage</td><td>Add air pumps to liquid-slurry/pit storage system</td><td><p>CARB, 2020;</p><p>AgNext, n.d.;</p><p>Penner Farm Service, n.d.;</p><p>Williams, El-Mashad and Kaffka, 2020;</p><p>WRI, n.d.</p></td><td>Retrofit</td><td>Varies</td><td>Add aeration systems to stir and mix liquid manure in a liquid-slurry/pit system to reduce ch4 emissions.</td></tr><tr class="even"><td>dl1</td><td>Solid storage</td><td>Shift solids to daily spread if pasture and/or cropland is available</td><td>Daily spread</td><td>Retrofit</td><td>Varies</td><td>This assumes solid storage is replaced and the solid manure is directly spread onto available pasture and/or cropland.</td></tr><tr class="odd"><td>ss1</td><td>Solid storage</td><td>Add bulking material to solid storage</td><td>Solid storage – Bulking agent addition</td><td>Retrofit</td><td>Varies</td><td>Adding bulking agents (e.g., straw) to solid storage and mixing with manure can increase aeration and reduce ch4 emissions.</td></tr><tr class="even"><td>ss2</td><td>Solid storage</td><td>Include additives to solid storage</td><td>Solid storage – Additives</td><td>Retrofit</td><td>Varies</td><td>Adding additives (e.g., gypsum) to solid storage that inhibit microbial activity can reduce ch4 emissions.</td></tr><tr class="odd"><td>ss3</td><td>Solid storage</td><td>Switch solid storage to composting in a building</td><td>Composting - Static pile (Forced aeration)</td><td>Retrofit</td><td>Varies</td><td>Switching to composting in a building (e.g., a shed) with passive airflow creates aerobic conditions that can reduce ch4 emissions.</td></tr><tr class="even"><td>ss4</td><td>Solid storage</td><td>Switch solid storage to in-vessel composting with aeration</td><td>Composting - In-vessel</td><td>Retrofit</td><td>Varies</td><td>Switching to in-vessel composting with aeration (e.g., in a composter) creates aerobic conditions that can reduce ch4 emissions.</td></tr><tr class="odd"><td>ss5</td><td>Solid storage</td><td>Switch solid storage to intensive windrow composting</td><td>Composting - Intensive windrow</td><td>Retrofit</td><td>Varies</td><td>Switching to intensive windrow composting, where compost piles are turned periodically, can reduce ch4 emissions.</td></tr><tr class="even"><td>ual1</td><td>Uncovered anaerobic lagoon</td><td>Add polyferric sulfate to liquid manure</td><td>Cameron and Di, 2021</td><td>Retrofit</td><td>Varies</td><td>Add polyferric sulfate to anaerobic lagoon effluent to reduce ch4 emissions.</td></tr><tr class="odd"><td>ual2</td><td>Uncovered anaerobic lagoon</td><td>Add sulfuric acid to liquid manure</td><td>Sokolov et al., 2019</td><td>Retrofit</td><td>Varies</td><td>Add sulfuric acid to anaerobic lagoon effluent to reduce ch4 emissions.</td></tr><tr class="even"><td>demand1</td><td>All systems</td><td>Raise fewer beef and dairy cattle due to declining consumer demand for meat and dairy products.</td><td>Project Drawdown, 2026</td><td>Subtract</td><td>0.9000 for both beef and dairy</td><td>Consumers are eating fewer beef and dairy products due to shifting dietary habits.</td></tr></tbody></table>
 
-**References**
+#### References
 
 1.  Aboagye, I.A., Oba, M., Koenig, K.M., Zhao, G.Y. and Beauchemin, K.A. (2019) 'Use of gallic acid and hydrolyzable tannins to reduce methane emission and nitrogen excretion in beef cattle fed a diet containing alfalfa silage', Journal of Animal Science, 97(5), pp. 2230–2244. doi: 10.1093/jas/skz101.
 

@@ -1,12 +1,14 @@
-**Power sector: Emissions from Electricity Generation**<img src="figures/logo.png" style="width:2.94511in;height:1.27083in" />
+<img src="figures/logo.png" style="width:2.94511in;height:1.27083in" />
 
-***Jeremy Freeman<sup>1,4</sup>, Ali Rouzbeh Kargar<sup>1,4</sup>, Heather D. Couture<sup>2,4</sup>, Madison Alvara<sup>1,4</sup>, Pierre Christian<sup>1,4</sup>, Zoheyr Doctor<sup>1,4</sup>, Jeyavinoth Jeyaratnam<sup>1,4</sup>, Jordan Lewis<sup>1,4</sup>, Hannes Koenig<sup>1,4</sup>, Tiffany Nakano<sup>3,4</sup>, Aaron Davitt<sup>1,4</sup>, Christy Lewis<sup>1,4</sup>, and Gavin McCormick<sup>1,4</sup>***
+### Power sector: Emissions from Electricity Generation
+
+**Jeremy Freeman<sup>1,4</sup>, Ali Rouzbeh Kargar<sup>1,4</sup>, Heather D. Couture<sup>2,4</sup>, Madison Alvara<sup>1,4</sup>, Pierre Christian<sup>1,4</sup>, Zoheyr Doctor<sup>1,4</sup>, Jeyavinoth Jeyaratnam<sup>1,4</sup>, Jordan Lewis<sup>1,4</sup>, Hannes Koenig<sup>1,4</sup>, Tiffany Nakano<sup>3,4</sup>, Aaron Davitt<sup>1,4</sup>, Christy Lewis<sup>1,4</sup>, and Gavin McCormick<sup>1,4</sup>**
 
 1\) WattTime, 2) Pixel Scientia Labs, 3) Global Energy Monitor, 4) Climate TRACE
 
 *The methodology provides changes and updates since our February 2024 journal article by Couture et al. (2024): “[<span class="underline">Estimating Carbon Dioxide Emissions from Power Plant Water Vapor Plumes Using Satellite Imagery and Machine Learning</span>](https://www.mdpi.com/2072-4292/16/7/1290)” – please see this document for more detailed description of the method employed for this sector.*
 
-**1. Introduction**
+#### 1. Introduction
 
 The mission of Climate TRACE is to make meaningful climate action faster and easier. We do this by leveraging all tools at our disposal to track greenhouse gas (GHG) and, for the first time this year, non-GHG air pollutant emissions with high detail and speed, delivering information that is relevant to all parties working to reduce global emissions.
 
@@ -35,13 +37,13 @@ In addition to estimating power plant emissions, we also provide emission reduci
 
 Overall, Climate TRACE tracks power plant assets and provides monthly GHG (CO<sub>2</sub>) and non-GHG (SO<sub>2</sub>, NO<sub>X</sub>, and PM2.5) within 2-3 months of recorded activity. We then publish at both the country and the asset level. At the asset level, we publish electricity generation, capacity, capacity factor, emissions intensity, emissions, fuel type, geolocation, and plant names for over 9,000 individual power plant assets that represent 96% of total power plant GHG emissions. The country level totals are then the sum of these asset-level estimates plus estimates for the remaining set of plants based on the harmonized database of sources in Table 1 (but which lack metadata sufficient to publish at the facility-level).
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
-**2.1 Overview**
+#### 2.1 Overview
 
 Climate TRACE has published monthly electricity generation, carbon emissions, and non-GHG air pollutants - sulfur dioxide (SO<sub>2</sub>), nitrogen oxides (NO<sub>X</sub>) and particulate matter (PM 2.5)emissions at both the country level and at the asset level for global coverage of combustible power plants. We focus on combustible, also called thermal, power because this is the set of power plants that burn fuel to generate electricity and therefore directly generate emissions. Combustible power can be broken into three general categories: fossil (e.g. coal, gas, oil), waste (e.g. municipal garbage, tires) and biomass (e.g. trees, biogas). Burning biomass for power represents \~4% of carbon emissions for the power sector 2015-present, but since biomass carbon emissions are encompassed by Climate TRACE forestry and land use sectors, we subtract biomass-related carbon emissions out from our overall CO<sub>2</sub> emissions estimates to avoid double-counting. However, we continue to provide monthly biomass-related carbon emissions via the “other\_4” column of our published asset-level data, which can be summed with the CO<sub>2</sub> column to get total combustible CO<sub>2</sub> emissions. Note that our capacity, capacity factor, electricity generation and non-GHG air pollutant emissions estimates (SO<sub>2</sub>, NO<sub>X</sub>, and PM2.5) do include biomass, however, because these are not accounted for by the other Climate TRACE sectors.
 
-**2.2 Methods to Ascertain Electricity Generation**
+#### 2.2 Methods to Ascertain Electricity Generation
 
 We employ three types of methods to estimate electricity generation: reported electricity generation data, baseline country and fuel specific average capacity factor, and remote sensing machine learning derived inference. Each of these are described in the sections below. For any individual power plant asset and month, one or more of these methods may have an estimate and the final activity estimate is an ensemble combining the electricity generation activity estimates. A map of the power plants and the underlying model types is displayed below in Figure 1.
 
@@ -63,12 +65,12 @@ Table 2 reports the share of global asset-level CO<sub>2</sub> emissions attribu
 | **South America** | 0.4               | 0.0                            | 0.5                     | 0.1                                       |
 | **Global**        | 40.4              | 30.1                           | 17.1                    | 12.4                                      |
 
-**2.2.1 Reported Electricity Generation Data**
+#### 2.2.1 Reported Electricity Generation Data
 
 Climate TRACE uses electricity generation data from reporting entities (see Table 3 for the list); to inform power plant activity estimates where the data is available, we have linked it to the asset, and the data passes validation. The validation process runs at the linked entity facility - month level and evaluates the reported electricity data for completeness (e.g. missed hours or days of reporting), and consistency with other available data. For reporting entities that publish net generation (gross generation - station own use), we convert it to gross generation. Some reporting entities only provide data for a subset of the power plant, a common case is only units above a reporting threshold are reported. In other cases the reporting entity combines all power generated by a single fuel on a plant into one reported value. When the linked facility data only applies to a subset of the power plant, we use the data to estimate the applicable subset of the power plant and rely on the other methods described in section 2.2. to estimate the remaining subset where a reported data estimate is not available.
 
-The uncertainty of electricity generation is evaluated based on the estimated uncertainty of the net to gross correction combined with a constant uncertainty that reflects the unmeasured uncertainty of the reported generation process related to potential errors, omissions, miscategorization, and incorrect linkage to the asset.  
-  
+The uncertainty of electricity generation is evaluated based on the estimated uncertainty of the net to gross correction combined with a constant uncertainty that reflects the unmeasured uncertainty of the reported generation process related to potential errors, omissions, miscategorization, and incorrect linkage to the asset.
+
 Where a linked reporting facility has reported generation but data is not available for the month being estimated, a reported generation gap filling imputation is performed based on the average of the reported data in the same month for the prior three years and the following year where available. This most commonly occurs in the case where a reporting entity has a delay in reporting. The uncertainty of the gap-filled data is estimated based on the number of months of data available and the evaluated RMSE when compared to historical data.
 
 **Table 3** Reported activity data sources used
@@ -100,11 +102,11 @@ Where a linked reporting facility has reported generation but data is not availa
 | USA                | U.S. Environmental Protection Agency (EPA)                                     | [<span class="underline">Clean Air Markets Program Data (CAMPD)</span>](https://campd.epa.gov/data) \[22\]                                                                                                                                                                                                                               |
 | USA                | U.S. Energy Information Administration                                         | [<span class="underline">Form EIA-923 detailed data with previous form data (EIA-906/920)</span>](https://www.eia.gov/electricity/data/eia923/) \[47\]                                                                                                                                                                                   |
 
-**2.2.2 Baseline Method**
+#### 2.2.2 Baseline Method
 
 Climate TRACE’s baseline approach for estimating electricity generation at individual power plants is to synthesize the unit-level capacity, fuel, and prime mover information contained in our harmonized power plant inventory for each plant (see [<span class="underline">Couture et al 2024</span>](https://www.mdpi.com/2072-4292/16/7/1290), Appendix A.1) with [<span class="underline">EIA</span>](https://www.eia.gov/international/overview/world) and [<span class="underline">EMBER Yearly Electricity Data</span>](https://ember-climate.org/data-catalogue/yearly-electricity-data/) country-level annual estimates of capacity and generation by fuel type to calculate the annual average fuel-specific capacity factor in each year reported for each country in the world. We then assume the same capacity factors within each country for each part of the plant with the associated fuel-type. This baseline method lacks detail and is therefore reported with higher uncertainties; however, it is helpful as it is applicable to every power plant in the world.
 
-**2.2.3 Remote Sensing & Machine Learning Method (RS+ML)**
+#### 2.2.3 Remote Sensing & Machine Learning Method (RS+ML)
 
 Climate TRACE leverages remote sensing (RS) proxy signals to estimate power generation at the monthly level for individual power plants. By training machine learning (ML) models to understand the association between electricity generation and water vapor plumes from stacks (in layman’s terms, the exhaust pipes of a power plant) with flue gas desulfurization (a common pollution control for coal; Figure 3), wet natural draft cooling towers (the large hyperbolic structures commonly seen primarily at coal plants; Figure 3), and mechanical draft cooling towers (fan-like structures, common across coal and gas; Figure 4). Figure 2 provides an overview of the remote sensing and machine learning (RS+ML) proxy signal approach employed to estimate individual power plant emissions. Figure 3 provides an example of the RS+ML approach applied to two observations of a particular power plant - detecting vapor plumes from stacks and flue gas desulfurization. For more detailed explanations of this proxy signal approach, referred to as “RS+ML” in this document, please see [<span class="underline">Couture et al. (2024)</span>](https://www.mdpi.com/2072-4292/16/7/1290). Note however that the structures which produce water vapor plume proxy signals do not exist at every power plant in the world. Yet, the 4% of plants worldwide that do have these structures amount to nearly half (43%) of carbon dioxide emissions from all non-biomass combustion (fossil and waste) power generation 2015-2024.
 
@@ -116,7 +118,7 @@ Climate TRACE leverages remote sensing (RS) proxy signals to estimate power gene
 
 **Figure 3**: ML predictions on the James H. Miller Jr. power plant at low vs. high generation on two observation dates, using PlanetScope PSScene imagery. Separate natural draft cooling tower (NDT) and flue gas desulfurization (FGD) models predicted on NDT (blue) and FGD stacks (red) patches. These predictions were ingested by subsequent models to estimate generation, then CO<sub>2</sub>, SO<sub>2</sub>, NO<sub>X</sub>, and PM2.5, for the plant. © 2023 IEEE \[8\].
 
-**2.2.4 Ensemble Electricity Generation Estimate**
+#### 2.2.4 Ensemble Electricity Generation Estimate
 
 Our final published electricity generation estimates are an ensemble of the reported generation estimates (where available), the baseline method estimate, and the RS/ML-enabled proxy signal estimates (where possible). The ensemble process combines all available sources of reported generation, any applicable RS/ML model inference predictions, and the baseline model in a weighted ensemble. Each prediction has a point estimate, a root mean square error uncertainty converted to a mean squared error (MSE), and a confidence level. Each prediction is combined in a weighted ensemble, where each is weighted proportionally to its inverse mean squared error, normalized by the total inverse mean squared error of all available estimates, show with the two equations here:
 
@@ -126,13 +128,13 @@ The uncertainty and confidence of the final estimate are combined with the same 
 
 To enable the user to understand what models were used in each power plant emissions estimate, the Climate TRACE asset-level data provides a flag in the “other1” column to indicate if the estimate leveraged: the baseline model (denoted by “a”), the remote sensing and machine learning approach (denoted by “i”), reported generation (denoted by “r”), and/or gap filled reported generation (denoted by “g”). If the plant was non-operational in the period (e.g. the plant is retired or has not yet begun commercial operation), the estimated generation is reported as 0 (denoted in “other1” by “o”). These flags are presented in descending order of the model weight in the final ensemble.
 
-**2.3 Methodology Updates**
+#### 2.3 Methodology Updates
 
 Below we expand upon several updates to the methodology since our [<span class="underline">2024 journal article</span>](https://www.mdpi.com/2072-4292/16/7/1290) (based on 2023 Climate TRACE data).
 
-**2.3.1 September 2024 Updates**
+#### 2.3.1 September 2024 Updates
 
-**2.3.1.1 Add Non-GHG Air Pollutant Emissions Estimates**
+#### 2.3.1.1 Add Non-GHG Air Pollutant Emissions Estimates
 
 The combustion of fossil fuels, biomass, and waste to generate electricity emits air pollutants including sulfur dioxide (SO<sub>2</sub>), nitrogen oxides (NO<sub>X</sub>) and particulate matter (PM 2.5) which are linked to adverse health outcomes. We estimate SO<sub>2</sub>, NO<sub>X</sub>, and PM 2.5 emission factors at the power plant unit-level based on fuel type, boiler type, and pollution control technology. Emissions factors are sourced from the 2023 EMEP/EEA air pollutant emission inventory guidebook and 2023 EIA Electric Power Annual. We then multiply these emission factors with the Climate TRACE estimated power generation for each unit to obtain SO<sub>2</sub>, NO<sub>X</sub>, and PM 2.5 emissions estimates. Fuel, boiler type and pollution control technology are obtained from our harmonized power plant information inventory, while the pollution control technology efficiency is based on the US EPA’s AP-42 as a primary source.
 
@@ -140,7 +142,7 @@ Pollution control technology is relevant because emissions are reduced when a pl
 
 We assess uncertainty using the standard deviations of uncontrolled emissions factors across boiler types and assign confidence scores based on data availability. We validated against Europe’s Beyond Fossil Fuels data, US CAMPD-reported SO<sub>2</sub> and NO<sub>X</sub> and EGRID for PM2.5, and Australia’s National Pollutant Inventory, showing a moderate to strong correlation between reported and estimated emissions. Challenges include missing data, uncertainties in reported emissions factors and day-to-day plant operation, while future work could incorporate more specific fuel and boiler type information, regional variations in emissions factors, and extending validation to additional regions. For more information on non-GHG estimates, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**2.3.1.2 Introduce Monthly Resolution Emissions Estimates**
+#### 2.3.1.2 Introduce Monthly Resolution Emissions Estimates
 
 Whereas annual resolution was previously the only Climate TRACE deliverable, monthly power plant electricity generation and emissions (CO<sub>2</sub>, SO<sub>2</sub>, NO<sub>X</sub>, and PM2.5) for January 1, 2015 to present (with a 60-day lag) is now published. As opposed to simply assuming equal generation in each month (dividing annual values by 12), we scaled our monthly electricity generation (and thus emissions) estimates based on estimated monthly electricity demand. Monthly demand was estimated for each country, year, and month as the average between the following two approaches:
 
@@ -150,7 +152,7 @@ Whereas annual resolution was previously the only Climate TRACE deliverable, mon
 
 While this monthly data offers increased recency and understanding of seasonal patterns, it does come with the cost of higher uncertainty, driven both by fewer remote sensing observations (for the RS+ML method) and uncertainty in the estimate of monthly generation.
 
-**2.3.1.3 Add RS+ML Model for Mechanical Draft Cooling Plants**
+#### 2.3.1.3 Add RS+ML Model for Mechanical Draft Cooling Plants
 
 New to 2024, we added an additional proxy signal, mechanical draft cooling towers, to monitor power plants from satellite imagery. This is the first proxy signal that targets gas plants in addition to coal, given that our existing two proxy signals are largely coal-focused. Mechanical draft cooling towers, like natural draft cooling towers, are evaporative cooling structures used to dissipate heat resulting from the electricity generation process and release steam plumes into the atmosphere (Figure 4). Unlike natural draft cooling towers, mechanical draft is more discreet, simply appearing as large fans on the rooftops of industrial buildings, and the water vapor plume they release is often far fainter and harder to see. Because cooler and wetter ambient conditions produce larger, more visible water vapor plumes, we apply a restricted temperature and humidity filter (stricter than that applied to natural draft). This new signal poses a greater modeling challenge, with our mechanical draft models performing slightly worse than our existing models, yet still well above the country-/fuel-/prime-mover-specific averages model (baseline) described in section 2.2.2.
 
@@ -158,32 +160,32 @@ New to 2024, we added an additional proxy signal, mechanical draft cooling tower
 
 **Figure 4**: Examples of mechanical draft cooling structures (source: Google Maps).
 
-**2.3.2 March 2025 Updates**
+#### 2.3.2 March 2025 Updates
 
-**2.3.2.1 Begin Monthly Data Release Schedule**
+#### 2.3.2.1 Begin Monthly Data Release Schedule
 
 While the first monthly-resolution data was first produced in September 2024, now as of March 2025, Climate TRACE consistently publishes ongoing monthly releases of updated monthly-resolution data with a 60-day lag during the final week of each month.
 
-**2.3.3 August 2025 Updates**
+#### 2.3.3 August 2025 Updates
 
-**2.3.3.1 Introduce the use of Reported Electricity Generation Data (Brazil, Europe, US)**
+#### 2.3.3.1 Introduce the use of Reported Electricity Generation Data (Brazil, Europe, US)
 
 Climate TRACE now uses electricity generation data from reporting entities (currently ONS for Brazil, ENTSO-E for Europe, and CAMPD for the United States; see Table 3) to inform power plant activity estimates where the data is available and passes validation. The validation process evaluates the reported electricity data for completeness (e.g. missed hours or days of reporting, units failing or not required to report, unrealistic values), availability for the entire power plant, and consistency with other available data.
 
 **  
 2.3.4 October 2025 Updates**
 
-**2.3.4.1 Expand the Use of Reported Electricity Generation Data (India, Australia)**
+#### 2.3.4.1 Expand the Use of Reported Electricity Generation Data (India, Australia)
 
 Expanded the use of electricity generation data from reporting additional entities (added NPP for India and NEM for Australia; see Table 3) to inform power plant activity estimates where the data is available and passes validation. The validation process evaluates the reported electricity data for completeness (e.g. missed hours or days of reporting, units failing or not required to report, unrealistic values), availability for the entire power plant, and consistency with other available data.
 
-**2.3.5 November 2025 Updates**
+#### 2.3.5 November 2025 Updates
 
-**2.3.5.1 Emissions Reducing Solutions**
+#### 2.3.5.1 Emissions Reducing Solutions
 
 Climate TRACE now publishes emissions reducing solutions (ERSs) to suggest potentially impactful ways to use our data to reduce power plant emissions globally.
 
-**2.3.5.1.1 Model Description**
+#### 2.3.5.1.1 Model Description
 
 An emissions mitigation intervention, such as that employed by an emission reduction solution (ERS), can influence power grid emissions through two main pathways:
 
@@ -201,7 +203,7 @@ A key ERS in this sector is to build additional clean generators in the region. 
 
 Regardless of the ERS chosen, a CMER dataset for each region at a monthly cadence would be necessary. This dataset can be constructed through the GHGP formula from separate datasets of MOER and MBER models averaged with an ω parameter of ½.
 
-**2.3.5.1.2 Marginal Operating Emissions Rate (MOER) Model**
+#### 2.3.5.1.2 Marginal Operating Emissions Rate (MOER) Model
 
 The MOER dataset used to quantify the grid response in this ERS is obtained from the WattTime API at a 5-minutes cadence, which is then aggregated monthly (https://docs.watttime.org/). The main component of a MOER model is a regression estimator of the increase in emissions in a particular region due to a change in electrical load, assuming that no structural changes in the power grid occurs (Siler-Evans, Azevedo, & Morgan, 2012; Deetjen & Azevedo, 2019; Callaway, Fowlie, & McCormick, 2018). This component, which is referred to as the Short-Run Marginal Emissions Rate (*SRMER*), can be estimated by a regression model:
 
@@ -223,7 +225,7 @@ where $\Delta$*Generation<sub>fuel</sub>* is the change in generation for a part
 
 In regions where historical generation by fuel type datasets are not available, the MOER can still be produced by leveraging the principle that similar grids evolve similarly. The annual fuel mix percentages of electricity generation and the electricity demand can be used to group similar grids together. From each group, a representative data-rich power grid can then be chosen to serve as a proxy for the behavior of other grids in the group. In the WattTime implementation of this algorithm, this technique is used for Brazil, Chile, India, Japan, Korea, Malaysia, Nicaragua, Peru, The Philippines, Singapore and Turkey. For regions that lack electricity load data, the real-time load is modelled using weather data via the approach detailed in Mattsson et al (2021).
 
-**2.3.5.1.3 Marginal Build Emissions Rate (MBER) Model**
+#### 2.3.5.1.3 Marginal Build Emissions Rate (MBER) Model
 
 The MBER encapsulates the changes in emissions due to structural changes in the power grid (e.g., new renewable power generation being built) that is incentivized by changes in electrical load. Unlike the MOER, which measures emissions rates of currently existing power plants, the MBER estimates the emissions effect of future power plants. The GHGP proposes that the MBER can be estimated by the following algorithm (Broekhoff et al., 2007):
 
@@ -239,7 +241,7 @@ The MBER encapsulates the changes in emissions due to structural changes in the 
 
 This method can be modified from annual to hourly by changing the period in step 1 from annually to hourly to obtain the hourly MBER. In this ERS, this hourly implementation is further aggregated monthly to obtain monthly MBER values. In regions where generation or capacity factor by fuel types are not readily available at an hourly level, demand and weather data can be used to model these inputs and enable the calculation of hourly MBER. More information on specific data sources used and modeling details can be found in the Global Energy Monitor wiki ([<span class="underline">https://www.gem.wiki/MBERs\_methodology</span>](https://www.gem.wiki/MBERs_methodology)).
 
-**2.3.5.1.4 Incorporating CMERs into ERS**
+#### 2.3.5.1.4 Incorporating CMERs into ERS
 
 For the case where clean generation is added to the grid, we consider solar power generation sources and assume they are (a) co-located with the existing power plant, and (b) match the generation of the power plant. Here, the existing power plant is not retired, but the addition of non-fossil generation will lower the emissions in aggregate of the power grid. The net emissions reduction is:
 
@@ -247,7 +249,7 @@ $R_{\text{Solar}} = \ (CMER)\  \times LOAD\ ,\ $
 
 where $\text{LOAD}$ is again the existing load supplied by the power plant. Note that in principle, the amount of clean generation to be added to the grid is independent of the parameters of the existing power plant, and could be an arbitrary fraction of the load of the highly-emitting asset in question. The hourly CMER is aggregated monthly using typical solar generation profiles. In regions where historical renewable profiles are not available, these are generated by physics-informed simulations with weather data reanalysis as inputs (see implementation at [<span class="underline">renewables.ninja</span>](https://www.renewables.ninja/) for simulations of solar power generation globally). Future work may include ERS other than solar such as wind or shutting down fossil-fuel plants.
 
-**2.3.5.1.5 Applying ERS to Power Plants to Estimate Emissions Reduction**
+#### 2.3.5.1.5 Applying ERS to Power Plants to Estimate Emissions Reduction
 
 We apply the solar power generation ERS and the associated CMERs to individual power generation assets by the strategy parameters defined in the Table S4. The solar strategy adds load equal to the existing power generation by setting the “induced\_activity\_conversion\_rate parameter” to -1 so that net emissions are *reduced* by $R_{\text{Solar}}$. The distribution of emissions reduced for all assets is shown in Figure 5. We note one exception for an asset in Democratic Republic of the Congo where the solar CMER is low enough that the emissions reductions are negligible (&lt; 3%) when solar generation is added (see Section 5.1). In this single edge case, we suggest shutting down the plant, which zeroes out the plant’s direct emissions, but induces emissions according to a CMER that is weighted with a flat-in-time generation profile rather than a solar generation profile.
 
@@ -255,9 +257,9 @@ We apply the solar power generation ERS and the associated CMERs to individual p
 
 **Figure 5:** Histogram of CO<sub>2</sub> equivalent (100-year GWP) emissions reduced per year for electricity-generation assets under the solar-generation strategy.
 
-**2.3.6 September 2026 Updates**
+#### 2.3.6 September 2026 Updates
 
-**2.3.6.1 Expand the Use of Reported Electricity Generation Data**
+#### 2.3.6.1 Expand the Use of Reported Electricity Generation Data
 
 Expanded the use of electricity generation data from reporting additional entities to inform power plant activity where the data is available and usable. See Table 3 for a complete list. Added the following sources:
 
@@ -299,13 +301,13 @@ Expanded the use of electricity generation data from reporting additional entiti
 
 -   USA - U.S. Energy Information Administration Form EIA-923
 
-**2.3.6.2 Ensemble Multiple Generation Model Estimates**
+#### 2.3.6.2 Ensemble Multiple Generation Model Estimates
 
 Our final published electricity generation estimates are now an ensemble of the reported generation estimates (where available), the baseline method estimate, and the RS/ML-enabled proxy signal estimates (where available). The ensemble process combines all available sources of reported generation, any RS/ML model inference predictions applicable, and the baseline model in a weighted ensemble where each prediction is weighted proportional to its inverse mean squared error normalized to the total inverse mean squared error of all available estimates.
 
 The asset-level data flag in the “other1” column was updated to reflect the ensembling, See section 2.2.4 for more details.
 
-**2.3.6.3 Carbon Intensity Estimation**
+#### 2.3.6.3 Carbon Intensity Estimation
 
 For coal- and gas-fired units, we now apply linear regression models to estimate their average CO<sub>2</sub> emission factor (EF) (amount of CO<sub>2</sub> emitted per unit of electricity generated; CO<sub>2</sub> EF). We developed separate regression models for coal-fired units, for combined-cycle natural gas units, and for simple-cycle natural gas units. For all other units, we continue to use the CO<sub>2</sub> EF estimates based on their country, fuel type, and prime mover type. The final plant-level CO<sub>2</sub> EF estimate is derived from the combined unit level activity and CO<sub>2</sub> emissions.
 
@@ -317,11 +319,11 @@ In order to assess uncertainty, we fitted 4 linear regression models for each un
 
 We plan on publishing a more comprehensive description of the approach in the coming year.
 
-**3. Results**
+#### 3. Results
 
 Final monthly emissions estimates are generated for electricity generation CO<sub>2</sub>, SO<sub>2</sub>, NO<sub>X</sub>, and PM2.5 for over 35,500 unique power plants worldwide, published monthly within 2-3 months of recorded activity. At the asset level, we publish electricity generation, capacity, capacity factor, emissions intensity, emissions, fuel type, geolocation, and plant names for over 9,000 individual power plant assets that represent 96% of total power plant GHG emissions. The country level totals are then the sum of these asset-level estimates plus estimates for the remaining set of plants based on the harmonized database of sources in Table 1 (but lack metadata sufficient to publish at the facility-level).
 
-**3.1 Validation**
+#### 3.1 Validation
 
 In Table 4, we compared our modeled emissions against reported emissions CO<sub>2</sub>, SO<sub>2</sub>, NO<sub>x</sub>, and PM 2.5. For CO<sub>2</sub>, we compared annual Climate TRACE estimates against reported CO<sub>2</sub> emissions from the USA (CAMPD, also used for monthly comparisons; and EGRID), India (CEA), Australia (NGER), Europe (EU ETS), Brazil, Canada, Chile, Israel, Malaysia, Mexico, South Africa, South Korea, and Taiwan. For non-GHG air pollutants, we compared Climate TRACE estimates against annual reported SO2 and NOx data from Australia (National Pollutant Inventory), the USA (CAMPD and EGRID), and Canada (GHGRP), as well as PM2.5 reported data from Australia (National Pollutant Inventory), the USA (EGRID), and Canada (GHGRP). A Pearson correlation and root mean squared error was used to compare across all plants successfully matched against the reported data sources mentioned above. All comparisons show a positive correlation with statistically significant p-values (alpha=0.01). Monthly estimates, while more challenging, also do not show any major loss in performance.
 
@@ -343,7 +345,7 @@ Since asset-level reporting mechanisms do not include power plants below a certa
 
 <table><thead><tr class="header"><th></th><th><p>Country-level CO<sub>2</sub> Climate TRACE vs.</p><p>EDGAR 1.A.1.a Main Activity Electricity and Heat Production</p></th></tr></thead><tbody><tr class="odd"><td><p>Annual</p><p>n=2048</p></td><td><p>RMSE: 64.03 MtCO<sub>2</sub></p><p>r: 1</p><p>range of abs. differences: 0 - 1254.62 MtCO<sub>2</sub></p></td></tr><tr class="even"><td><p>Monthly</p><p>n=24576</p></td><td><p>RMSE: 6.07 MtCO<sub>2</sub></p><p>r: 0.99</p><p>range of abs. differences: 0 - 164.6 MtCO<sub>2</sub></p></td></tr></tbody></table>
 
-**3.1.1 Verifying modeled ERS emissions estimates**
+#### 3.1.1 Verifying modeled ERS emissions estimates
 
 The CMER used in the emissions estimates has been demonstrated to be consistent with direct observations of emissions changes obtained from natural experiments. The MOER was validated in ERCOT using changes in the potential of wind generation in Steinsultz et al. (2024). As wind output fluctuates, the other fuel types in the region adjust to maintain the balance between load and generation, producing a net effect comparable to random variations in load. By treating wind fluctuations as exogenous shocks, the MOER can be estimated empirically without the need of a true randomized controlled trial on the power grid. In this case, the estimation was performed by the following regression:
 
@@ -371,20 +373,19 @@ The CMER constructed using the GHGP weighting parameter method has been validate
 
 **Figure 9**: The error on the measured CMER signal (compared to an empirical validation baseline) for different weighting parameters (Christian et al., 2025b). Blue bar: weight = 1/2 (LRMER Error 29.73 lbs/MWh); Orange bar: weight = 0 (LRMER Error -249.72 lbs/MWh); Green bar: weight = 1 (LRMER Error 309.18 lbs/MWh).
 
-**4. Conclusion**
+#### 4. Conclusion
 
 Climate TRACE provides the data that makes it possible to answer questions that drive impactful, precise climate action. Whether the priority is to reduce greenhouse gas emissions or air pollution, or both, this question can be directly answered by plots above and the data continually updated on [<span class="underline">climatetrace.org</span>](http://climatetrace.org). Coupled with Climate TRACE data on other sectors - manufacturing, shipping and aviation, etc. - a life cycle analysis is possible along the entire supply chain, of which power generation is just one piece. This enables businesses, investors, governments, and even consumers to quantify the greenhouse gas and/or air pollution footprint(s) of products and compare the trade-offs between one supply chain vs. another. With this information and the lines of thinking enabled by it, we can make climate action faster and easier by uncovering how to slash the maximum total emissions on a global scale with the fastest and easiest actions possible.
 
 Future work includes improving electricity generation, and thus emissions, estimates by incorporating additional data sources and alternate modeling approaches to improve the baseline model as well as expand the set of plants to which we can apply remote sensing and machine learning via additional proxy signals (e.g. heat signatures via thermal satellite imagery). Non-GHG air pollutant emissions estimates, while new and carrying high uncertainties given technology differences across the world, offer an additional lens to explore the intersections between industry, climate change, and environmental justice at high spatial and temporal resolution. We look forward to collaborating to drive increased accuracy and actionable insights.
 
-**4.1 Discussion on ERS**
+#### 4.1 Discussion on ERS
 
 Retiring highly-emitting power generators would be the optimal method to reduce the emissions in this sector, especially in regions where the CMER is relatively low. However, several practical barriers limit the widespread implementation of this ERS. The power grid must continuously balance load and generation, meaning that any loss of generation must be compensated by increased output from other generators. In regions with sufficient unused capacity, this can be achieved by raising the capacity factors of existing generators. In contrast, if available capacity is insufficient, new generation assets must be developed to replace the retired capacity. Retiring highly-emitting but serviceable generators is also unattractive from a cost perspective. Consequently, this strategy is likely only viable in regions with ambitious clean energy targets and either ample unused clean capacity or a strong commitment to rapidly building new clean generators.
 
 On the other hand, matching highly-emitting generators with new clean generation is a more broadly applicable strategy. While this generation matching requirement is novel, the underlying concept builds on prior discussions of clean energy matching in the context of *load* matching, where new clean generation is built to match specific loads or emissions associated with those loads. Moreover, numerous power grids are rapidly increasing clean energy investments even in the absence of explicit matching requirements, reflecting a broader commitment to clean energy investments. In some regions, policy measures (e.g., renewable energy targets) and market forces (e.g., the lower operating costs of clean energy) can drive the construction of clean generators, even without this ERS. In such cases, this ERS can be rendered *non-additional*, as it would not produce further emissions reductions beyond those that would have occurred anyway. However, it should be noted that additionality is not a binary. Even in regions where *some* of the emissions avoidance of this ERS is non-additional, its adoption might still drive some incremental emissions avoidance.
 
-**5. Supplementary materials metadata**
-=======================================
+#### 5. Supplementary materials metadata
 
 Country-level emissions estimates for electricity generation are available for download at ClimateTRACE.org, and the following table summarizes this data.
 
@@ -461,7 +462,7 @@ Source-level emissions estimates for electricity generation are available for do
 
 <table><thead><tr class="header"><th><strong>Data attribute</strong></th><th><strong>Confidence Definition</strong></th><th><strong>Uncertainty Definition</strong></th></tr></thead><tbody><tr class="odd"><td><strong>type</strong></td><td>Confidence in fuel type reported. Set to 4 = High for all plants because data is sourced from the harmonized power plant inventory as described in Table 1</td><td>N/A</td></tr><tr class="even"><td><strong>capacity_description</strong></td><td>Confidence in capacity reported. Set to 4 = High for all plants because data is sourced from the harmonized power plant inventory as described in Table 1</td><td>Uncertainty in capacity reported. Estimated at 3% for all plants</td></tr><tr class="odd"><td><strong>capacity_units</strong></td><td>megawatts (MW)</td><td>megawatts (MW)</td></tr><tr class="even"><td><strong>capacity_factor_description</strong></td><td><p>Capacity factor is electricity generation divided by power plant capacity. The confidence is the weighted ensemble of the confidence where the underlying models take the following confidence:</p><p>5 = Very high (reported generation)</p><p>4 = High (NDT model inference and gap-filled reported generation)</p><p>3 = Medium (FGD and MDT model inference)</p><p>2 = Low (baseline model)</p><p>1 = Very Low (not used)</p></td><td>For reported data: uncertainty is the weighted ensample RMSE from the underlying uncertainty from each model in the ensemble</td></tr><tr class="odd"><td><strong>capacity_factor_units</strong></td><td>on a scale from 0 to 1 (proportion)</td><td>on a scale from 0 to 1 (proportion)</td></tr><tr class="even"><td><strong>activity_description</strong></td><td>uncertainty was calculated as the square root of the sum of the squared fractional uncertainties for capacity and capacity factor, assuming independent random errors. Thus, for electricity generation <span class="math inline"><em>g</em> = <em>c</em><em>f</em></span> for capacity <span class="math inline"><em>c</em></span> and capacity factor <span class="math inline"><em>f</em></span> with independent random errors <span class="math inline"><em>ϵ</em><sub><em>c</em></sub></span> and <span class="math inline"><em>ϵ</em><sub><em>f</em></sub></span> respectively, the electricity generation uncertainty <span class="math inline"><em>ϵ</em><sub><em>g</em></sub> = <em>g</em>.</span></td><td>average between capacity and capacity factor confidences, resulting in some set to 4=“high” (those modeled with ML+satellites and with some amount of NDT) and the remaining majority set to 3=“medium.”</td></tr><tr class="odd"><td><strong>activity_units</strong></td><td> Megawatt-hour (MWh)</td><td>Megawatt-hour (MWh)</td></tr><tr class="even"><td><strong>CO2_emissions_factor</strong></td><td><p>3 = “medium” for units where the linear regression model is applicable</p><p>2 = “low” for units where country-fuel-prime mover average models are used.</p></td><td>Model specific uncertainty from cross validation results for the linear regression models and 25% of the CO<sub>2</sub> emissions factor, for units where country-fuel-prime mover average models are used.</td></tr><tr class="odd"><td><strong>CH4_emissions_factor</strong></td><td> N/A</td><td> N/A</td></tr><tr class="even"><td><strong>N2O_emissions_factor</strong></td><td> N/A</td><td> N/A</td></tr><tr class="odd"><td><strong>SO2_emissions_factor</strong></td><td>We assign the confidence score based on the data availability and our fallback approach. If we are able to match the data attributes required for both, uncontrolled EF and pollution control efficiency, without applying our fallback strategy described above, we assign a confidence score of 3 (“medium”). If we have to rely on other fuel types to obtain control efficiencies or average across all boiler types of the unit’s fuel to obtain the uncontrolled EF, we assign a confidence score of 2 (“low”). In all other cases, we assign a confidence score of 1 (“very low”).</td><td>To obtain the uncertainty value, we calculate the standard deviation across a boiler type’s uncontrolled EFs associated with a fuel that belongs to the unit’s fuel type class. For example, we calculate the standard deviation across the EFs of all coals, e.g., lignite, subbituminous, etc. per boiler type. If we are able to match the boiler type from our database to a boiler type available in the source data, we report this standard deviation as the uncertainty. If that match is not available, we calculate the standard deviation across all EFs associated with the fuel type class and report this standard deviation as the uncertainty.</td></tr><tr class="even"><td><strong>NOX_emissions_factor</strong></td><td></td><td></td></tr><tr class="odd"><td><strong>PM2_5_emissions_factor</strong></td><td></td><td></td></tr><tr class="even"><td><strong>CO2_emissions</strong></td><td>taken as the average between the confidence scores for capacity, capacity factor, and CO<sub>2</sub> emissions factor.</td><td>For capacity <span class="math inline"><em>c</em></span>, capacity factor <span class="math inline"><em>f</em></span>, and CO<sub>2</sub> emissions factor <span class="math inline"><em>e</em></span>, with uncertainties <span class="math inline"><em>ϵ</em><sub><em>c</em></sub> </span>,<span class="math inline"><em>ϵ</em><sub><em>f</em></sub> </span>,<span class="math inline"><em>ϵ</em><sub><em>e</em></sub> </span>respectively, CO<sub>2</sub> emissions uncertainty <span class="math inline"><em>ϵ</em><sub><em>m</em></sub></span> for CO<sub>2</sub> emissions <span class="math inline"><em>m</em></span> are propagated as the square root of the sum of the squared fractional uncertainties of each of these three factors: <span class="math inline"><em>ϵ</em><sub><em>m</em></sub> </span>= <span class="math inline"><em>m</em></span></td></tr><tr class="odd"><td><strong>CH4_emissions</strong></td><td> N/A </td><td> N/A</td></tr><tr class="even"><td><strong>N2O_emissions</strong></td><td> N/A  </td><td> N/A</td></tr><tr class="odd"><td><strong>SO2_emissions</strong></td><td>taken as the average between the confidence scores for capacity, capacity factor, and CO<sub>2</sub> emissions factor</td><td>For capacity <span class="math inline"><em>c</em></span>, capacity factor <span class="math inline"><em>f</em></span>, and emissions factor <span class="math inline"><em>e</em></span>, with uncertainties <span class="math inline"><em>ϵ</em><sub><em>c</em></sub> </span>,<span class="math inline"><em>ϵ</em><sub><em>f</em></sub> </span>,<span class="math inline"><em>ϵ</em><sub><em>e</em></sub> </span>respectively, emissions uncertainty <span class="math inline"><em>ϵ</em><sub><em>m</em></sub></span> for emissions <span class="math inline"><em>m</em></span> are propagated as the square root of the sum of the squared fractional uncertainties of each of these three factors: <span class="math inline"><em>ϵ</em><sub><em>m</em></sub> </span>= <span class="math inline"><em>m</em></span></td></tr><tr class="even"><td><strong>NOX_emissions</strong></td><td></td><td></td></tr><tr class="odd"><td><strong>PM2_5_emissions</strong></td><td></td><td></td></tr><tr class="even"><td><strong>total_CO2e_100yrGWP</strong></td><td>same as CO<sub>2</sub> emissions, since the GWP factor for CO<sub>2</sub> is 1</td><td>same as CO<sub>2</sub> emissions, since the GWP factor for CO<sub>2</sub> is 1</td></tr><tr class="odd"><td><strong>total_CO2e_20yrGWP</strong></td><td>same as CO<sub>2</sub> emissions, since the GWP factor for CO<sub>2</sub> is 1</td><td>same as CO<sub>2</sub> emissions, since the GWP factor for CO<sub>2</sub> is 1</td></tr></tbody></table>
 
-**5.1 Emission Reduction Solutions Information**
+#### 5.1 Emission Reduction Solutions Information
 
 With electricity generation, the majority of assets received the ERS “Replace activity with solar generation” strategy while one asset received the ERS “Shut down electricity generation” strategy.*Note: Only rank 1 strategies are provided for assets on the Climate TRACE website and additional strategies will be made available in future releases.*
 
@@ -501,11 +502,11 @@ The above usage is not warranted to be error free and does not imply the express
 
 **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**6. Errata**
+#### 6. Errata
 
 See the “Known Issues” section of the changelog for each release for information on errata and known issues for each monthly data update published.
 
-**7. References**
+#### 7. References
 
 1.  Ge, M.; Friedrich, J. 4 Charts Explain Greenhouse Gas Emissions by Countries and Sectors; World Resources Institute: Washington, DC, USA, 2020. Available online: [<span class="underline">https://www.wri.org/blog/2020/02/greenhouse-gas-emissions-by-country-sector</span>](https://www.wri.org/blog/2020/02/greenhouse-gas-emissions-by-country-sector) (accessed on 6 June 2023).
 

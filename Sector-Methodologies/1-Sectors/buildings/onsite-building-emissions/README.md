@@ -1,27 +1,22 @@
-**Building sector:**<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
 
-**Estimating Global, High-resolution Onsite Building Emissions**
+### Building sector: Estimating Global, High-resolution Onsite Building Emissions
 
-Brittany Lancellotti<sup>1,4</sup>, Trey M. Gowdy<sup>1,4</sup>, Paul Markakis<sup>1,2,4</sup>, Saad Lahrichi<sup>3,4</sup>, Zion Sheng<sup>3,4</sup>, Jordan M. Malof<sup>3,4</sup>, and Kyle Bradbury<sup>1,2,4</sup>
-=======================================================================================================================================================================================================================
+**Brittany Lancellotti<sup>1,4</sup>, Trey M. Gowdy<sup>1,4</sup>, Paul Markakis<sup>1,2,4</sup>, Saad Lahrichi<sup>3,4</sup>, Zion Sheng<sup>3,4</sup>, Jordan M. Malof<sup>3,4</sup>, and Kyle Bradbury<sup>1,2,4</sup>**
 
 *1. Nicholas Institute for Energy, Environment & Sustainability, Duke University; 2. Dept. of Electrical & Computer Engineering, Duke University; 3. Dept. of Electrical Engineering and Computer Science, University of Missouri; 4. Climate TRACE*
 
-Abstract
-========
+#### Abstract
 
 Globally, buildings account for approximately 26% of energy sector greenhouse gas (GHG) emissions by end-use and 8% of all direct emissions (International Energy Agency). Yet, the building sector lacks high spatial and temporal resolution emissions estimates which could help drive action by informing planning at the local and subnational level through emissions inventories. We present a methodology that super-resolves the gridded EDGAR dataset’s building emissions estimates from a spatial resolution of approximately 11km-by-11km down to a 1km-by-1km resolution: a level that enables building data to be included in comprehensive municipal-level emissions inventories. We perform this disaggregation of the higher resolution EDGAR emissions data using building floor area as a spatial proxy and subdivide emissions data into residential and non-residential subsectors, based on satellite-derived data products from Microsoft's TEMPO and PlanetScope satellite data as well as the European Commission’s Global Human Settlement Layer. Lastly, these data are provided monthly using heating degree days to allocate the time-varying portion of emissions. These data are provided from 2015 through 2026. We also estimate the potential reduction of building emissions based on building envelope improvements and the replacement of fossil-based heating and cooking systems with higher-efficiency technologies.
 
-1. Introduction
-===============
+#### 1. Introduction
 
-1.1 Existing emissions inventories are inadequate
--------------------------------------------------
+#### 1.1 Existing emissions inventories are inadequate
 
 Accurate and up-to-date greenhouse gas (GHG) emissions inventories are a valuable tool for climate change mitigation and emissions reduction goal-setting; for example, such inventories underpin the effectiveness of the Paris Agreement (Umemiya and White 2024). However, multiple studies have found the state of emissions inventories at the national and subnational levels to be wanting (Umemiya and White 2024, Luers et al. 2022). Luers et al. went as far as to state that the “existing patchwork of greenhouse-gas inventories is woefully inadequate. From governments to businesses, information on these emissions is inconsistent, incomplete, and unreliable” (Luers et al. 2022). In many cases, emissions inventories at the national level are outdated, with a gap of 10 years not being uncommon (Pearce 2024). In other cases, the reliability of those inventories has come under scrutiny, and in a study evaluating promptness, accuracy, and consistency, 69 countries were deemed to be struggling in one or more of those three categories, representing roughly half of developing countries (Umemiya and White 2024).
 
-1.2 The buildings sector GHG share is substantial and hard to estimate accurately
----------------------------------------------------------------------------------
+#### 1.2 The buildings sector GHG share is substantial and hard to estimate accurately
 
 For a GHG emissions inventory to be valuable, each sector included needs to be accurately represented so that priorities for GHG emissions reduction targets can be accurately set. Additionally, the resolution of the information has to be sufficiently high for establishing actionable emissions mitigation plans. The buildings sector accounts for approximately 8% of direct global emissions and an additional 18% of indirect emissions from the production of electricity and heat used in buildings (International Energy Agency n.d.); a substantial component, globally. This sector’s emissions are perniciously difficult to estimate accurately, however, due to the highly distributed nature of building energy consumption and the general lack of ground truth for model calibration.
 
@@ -54,17 +49,15 @@ Some activity-based approaches use spatial disaggregation techniques to realloca
 
 Here, we present a methodology for increasing the spatial and temporal resolution and sectoral detail of existing building emissions data to enhance its actionability. Furthermore, we describe a method for estimating potential building emissions reductions under high-efficiency technology and building envelope retrofit scenarios.
 
-2. Materials and Methods 
-========================
+#### 2. Materials and Methods
 
 Our approach increases the spatial and temporal resolution and sectoral detail of building emissions data by: (1) disaggregating each \~11km-by-11km EDGAR grid cell for each GHG (CO<sub>2</sub>, CH<sub>4</sub>, and N<sub>2</sub>O) into \~1km-by-1km grid cells by using an estimate of building energy consumption, (2) further decomposing each grid cell into residential and non-residential emissions using a combination of TEMPO building volume data and Global Human Settlement Layer building type classifications, and (3) allocating the time-varying component of annual GHG emissions to 12 months of the year based on heating degree days derived from Copernicus ERA5 globally gridded temperature data. At the time of publication, EDGAR country-level and gridded GHG emissions data are available through 2024. EDGAR country-level and gridded emissions data for most air pollutants are available through 2022. We therefore use backed-out emissions factors from the most recently available year for each emissions data type combined with extrapolated building area data to estimate emissions covering periods beginning in 2025 for the GHGs, NO<sub>x</sub> and PM<sub>2.5</sub>, and 2023 for the other pollutants.
 
 In this section, we introduce the datasets used for both building emissions estimation and the high-efficiency energy system retrofits approach, and then describe the steps of each process in detail.
 
-2.1 Datasets employed for building emissions estimation 
--------------------------------------------------------
+#### 2.1 Datasets employed for building emissions estimation
 
-### 2.1.1 Energy and emissions datasets 
+#### 2.1.1 Energy and emissions datasets
 
 **EDGAR:** EDGAR 2025 uses spatial data on global human presence and air temperature to allocate country-level residential and non-residential building emissions estimates to a 0.1° by 0.1° resolution global grid. These datasets include the GHSL and data on heating degree days from the ERA5 climate reanalysis (Crippa et al., 2023). In this work, we super-resolve the EDGAR building emissions dataset from the provided resolution of 0.1-degree-by-0.1-degree which near the equator is close to 11km by 11km onto a 30 arc second (\~1km-by-1km) grid using the TEMPO building volume dataset. To accomplish this, for every nonzero EDGAR estimate of CO<sub>2</sub>, CH<sub>4</sub>, and N<sub>2</sub>O, we allocate those emissions proportional to the fraction of activity data in each 1km-by-1km grid cell region (which is building floor area times energy use intensity). This ensures the sum of the original EDGAR data is nearly equivalent to the super-resolved dataset at a global and national level, while providing additional resolution to enable municipal-level inventories more effectively.
 
@@ -82,7 +75,7 @@ Two conventions govern the edge cases. Where the building area layer detects no 
 
 EUI is derived independently for each year from 2015 to 2023, the period the energy datasets cover. For 2024 to 2026 we hold the 2023 EUI constant and pair it with each year's own building area, so that energy in those years fluctuates only with the building stock.
 
-### 2.1.2 Remote sensing datasets
+#### 2.1.2 Remote sensing datasets
 
 **Building Area:** We use two datasets relevant for building area: the TEMPO dataset (for building volume) and the Global Human Settlement Layer (GHSL) for building type classification as residential or nonresidential.
 
@@ -96,18 +89,17 @@ Using the built-up volume area data product, BUILT-V (Pesaresi et al. 2013), at 
 
 **Copernicus ERA5 2m temperature data:** The European Commission’s Copernicus program provides gridded climate reanalysis data through its suite of ERA5 data products (Hersbach et al. 2023). We use ERA5 2m temperature data as our primary source of hourly temperature for computing heating degree days to allocate emissions monthly and assume a thermal setpoint of 18.33 degrees C (65 degrees F) for computing heating degree days. These data provide a highly accurate temperature estimate at an hourly cadence, globally. The data are available on a lat-lon grid with 0.25deg x 0.25deg spatial resolution.
 
-### 2.1.3 Comparison data 
+#### 2.1.3 Comparison data
 
 True ground truth of building emissions data would be measurements of the emissions emitted from individual buildings or groups of buildings. While there are measurements of *energy* consumed by individual buildings, there are not, to our knowledge, any known measurements of actual emissions from individual buildings or neighborhoods of buildings, and certainly none that we are aware of at a wider scale. At the national level, there are emissions inventories from the United Nations Framework Convention on Climate Change (UNFCCC) (UNFCCC, 2024) and the latest version of the Climate Action Indicators Tool (CAIT) curated by the World Resources Institute (World Resources Institute 2024). However, these two data sources both rely upon member nations to respond to surveys related to energy consumption and emissions so we do not treat them as empirical ground truth. At the municipality level, we rely upon region-specific estimates of building sector emissions data at the municipality level from the Data Portal for Cities (DPFC) tool as aggregated by the Global Covenant of Mayors for Climate & Energy (Global Covenant of Mayors for Climate & Energy 2019). While also not empirically measured ground truth, since these estimates are performed at the municipality-level, we use the DPFC data as a source of local comparison and evaluation for our estimates at a high spatial resolution. These comparisons are further described in Section 2.4.
 
-### 2.1.4 Emissions reducing solutions: High-efficiency building energy system retrofits data
+#### 2.1.4 Emissions reducing solutions: High-efficiency building energy system retrofits data
 
 In addition to providing emissions data with enhanced resolution and sectoral detail, we estimate potential building emissions reductions from implementing technology or building envelope retrofits. These include replacing inefficient building envelopes and carbon-intensive space heating, water heating, and cooking technologies with newer, more efficient alternatives. There are numerous examples from homes to large commercial buildings installing the high efficiency building technologies outlined in our emission reduction solutions. This includes a library in Alaska installing a heat pump water heater (National Renewable Energy Laboratory 2024). In the United States alone, 4.2 million heat pumps were sold in a 12-month span between 2023-2024 (RMI 2025). The European Commission calls heat pumps “key to enabling the clean energy transition” (European Commission n.d.). The International Energy Agency notes that in some countries (such as Norway), a majority of buildings have heat pumps installed (IEA 2025) and that “China continues to be the largest market for new sales” (IEA 2022). Electric cookstoves (i.e. stove) are a common cooking appliance, installed in homes and commercial buildings for well over a century (National MagLab, n.d.). Electrification of cooking, such as from gas to electric stoves, is a well-established emission reduction solution - such as in Ecuador, where more than 750,000 households made the transition from gas to electric cooking (in this case induction stoves) between 2015 and 2021 (Gould et al. 2023).
 
 We use EUI from the CURB Tool dataset and Eurostat (Eurostat 2026) to estimate the share of total building energy demand attributable to space heating, water heating, and cooking, separately for residential (houses and apartments/flats) and non-residential buildings (hotels, retail spaces, offices, hospitals, and warehouses). We use the World Health Organization Household Energy Database (WHO n.d.) to estimate the share of traditional cooking technologies that are eligible for retrofit. We do this by calculating the proportion of the population with primary reliance on fossil-based cooking technologies.
 
-2.2 Models
-----------
+#### 2.2 Models
 
 Activity-based approaches for estimating building emissions generally follow the 2006 Intergovernmental Panel on Climate Change (IPCC) guidelines, which combine information on energy consumption and emissions factors for a given region (IPCC, 2006). Of course, neither energy consumption nor emissions at the individual or neighborhood level are directly observable at scale. What is observable, however, are buildings themselves, and we leverage this to create a three-part activity based model which combines building floor area (in square meters), or $A$; building energy use intensity (Joules per square meter), or $\text{EUI}$; and emissions factors (tonnes of gas per Joule), or $\text{EF}$. If each of these quantities is accurate in a given region, we can estimate tonnes of emissions, $E,$ as $E = (A)(EUI)(EF)$.
 
@@ -121,10 +113,9 @@ While an explicit definition of non-residential is not provided, we define it as
 
 One challenge with the definition of residential is that it will encompass some commercial building activity by including mixed-use and other building types that happen to exist within an area of predominantly residential buildings. This will lead to an overestimation of residential building emissions and an underestimation of non-residential emissions.
 
-2.3 Methods 
------------
+#### 2.3 Methods
 
-### 2.3.1 Building emissions estimation 
+#### 2.3.1 Building emissions estimation
 
 The process we use for generating the emissions estimates involves estimating activity data (energy consumption), disaggregating EDGAR emissions to a higher spatial resolution using the activity data, allocating emissions into residential and non-residential categories, extrapolating data to estimate future year emissions, and generating higher temporal estimates of the data by allocating the variable component of emissions using heating degree days.
 
@@ -191,7 +182,7 @@ Here, $\alpha = 0.378$, which is the fraction of variable load. This concept is 
 
 Regions for which there are few HDDs per year may result in unrealistic estimates. For example, if a region only has 1 HDD per year, 37.8% of annual emissions would be shifted in full to the month containing that HDD. To prevent this outcome, we linearly scale up $\alpha$ from 0 to 0.378 based on the total number of HDDs. The value of 0.378 results if there are 1000 HDDs or more for a given region.
 
-### 2.3.2 Emissions Reductions Solutions: High-efficiency building energy system retrofits 
+#### 2.3.2 Emissions Reductions Solutions: High-efficiency building energy system retrofits
 
 We estimate the potential reduction in building emissions achievable through energy system retrofits through fuel/technology switching and/or weatherization. Because space heating, water heating, and cooking are among the largest sources of direct building emissions, the scenario we model focuses on reducing emissions intensity for these three end uses at the regional level. The retrofit strategies involve replacing fossil-based systems with more efficient technologies:
 
@@ -237,10 +228,9 @@ Our approach makes several assumptions to conduct this approach globally, severa
 
 *Note: Emissions reducing strategies that reduce less than 5% of a country’s end use-specific emissions are excluded. Additionally, if a country allocates zero energy to a particular end use, the corresponding emissions reducing strategy is excluded.*
 
-2.4 Evaluating modeled emissions estimates
-------------------------------------------
+#### 2.4 Evaluating modeled emissions estimates
 
-### 2.4.1 Building emissions estimates 
+#### 2.4.1 Building emissions estimates
 
 A major contribution of this work is the ability to provide sufficiently finely-resolved data to be useful not only at the national level, which several existing datasets accomplish, but particularly at the subnational and municipal level (Markakis et al., 2026). In this section, we describe the process used to conduct evaluation of our super-resolved emissions estimates and original EDGAR data compared with independent municipal-level emissions estimates.
 
@@ -252,21 +242,19 @@ One challenge is that both the EDGAR data and our super-resolved data are gridde
 
 At the country level we compare our super-resolved EDGAR emissions against both UNFCCC and CAIT for “total” buildings (i.e., aggregated residential and non-residential buildings). Figure 4 maps the presence of building-related emissions data at the country level for UNFCCC and CAIT, respectively, in the year 2020. Here we compare to CAIT and UNFCCC data acquired in 2023, newer data may be available for those resources.
 
-| <img src="figures/figure8.png" style="width:6.35417in;height:3.09722in" />                                                         |
-|-----------------------------------------------------------------------------------------------------------------------------------|
-| **Figure 4***. The two maps above show the countries containing 2020 onsite direct building emissions data from UNFCCC and CAIT.* |
+<img src="figures/figure8.png" style="width:6.35417in;height:3.09722in" />
 
-3. Results 
-==========
+**Figure 4***. The two maps above show the countries containing 2020 onsite direct building emissions data from UNFCCC and CAIT.*
 
-3.1 Emissions Comparison Results 
---------------------------------
+#### 3. Results
+
+#### 3.1 Emissions Comparison Results
 
 At the country level, we are able to compare all three primary GHGs (CO<sub>2</sub>, N<sub>2</sub>O, and CH<sub>4</sub>) as well as for two different years (2015 and 2020) at the country-level. It is important to note that while the original EDGAR and our super-resolved EDGAR data are generally identical at the country-level, there are some smaller countries (e.g., Monaco) for which the original EDGAR data and the super-resolved variant differ due to aggregation artifacts. The comparisons for 2020 are shown in Figure 5.
 
-| <img src="figures/figure9.png" style="width:6.35417in;height:5.875in" />                                                                                                                                                                                                                                                                                                                                                    |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Figure 5***. We compare the quantity of direct onsite building emissions (in tonnes) across each of the countries included in the UNFCCC inventory for 2020. We include emissions inventory data from UNFCCC and CAIT for each such country, as well as emissions estimates from our model’s super-resolved version of EDGAR. We show this emissions comparison for CO<sub>2</sub>, N<sub>2</sub>O, and CH<sub>4</sub>.* |
+<img src="figures/figure9.png" style="width:6.35417in;height:5.875in" />
+
+**Figure 5***. We compare the quantity of direct onsite building emissions (in tonnes) across each of the countries included in the UNFCCC inventory for 2020. We include emissions inventory data from UNFCCC and CAIT for each such country, as well as emissions estimates from our model’s super-resolved version of EDGAR. We show this emissions comparison for CO<sub>2</sub>, N<sub>2</sub>O, and CH<sub>4</sub>.*
 
 For municipality-level model comparison as compared to the DPFC data, we focus on measuring the quality of our modeled emissions estimates using the Weighted Absolute Percentage Error (WAPE) and Mean Absolute Percentage Error (MAPE) metrics. While the WAPE metric weights error in regions that have a greater magnitude of emissions more heavily than in regions with fewer emissions (e.g., percentage error estimating municipality-level emissions in New York City would be weighted more heavily than error estimating municipality-level emissions in a small, low-emitting town), MAPE considers error across all comparisons as equally important (and will be subject to small municipalities that are outliers in the data skewing the results). These two metrics each consider error differently, and collectively provide a more comprehensive understanding of estimation model error than by using either metric on its own.
 
@@ -278,12 +266,11 @@ Because DPFC does not contain data related to biofuels, we are unable to evaluat
 
 The DPFC data are themselves, estimates, and therefore should be considered uncertain. When comparing the approaches above across all DPFC validation municipalities for CO<sub>2</sub> emissions, we observe that the super-resolved EDGAR data generally results in lower error than the lower-spatial-resolution EDGAR data for a given municipality. This summary is shown in Figure 6 below.
 
-| <img src="figures/figure10.png" style="width:6.35417in;height:4.16667in" />                                                                                                                                                                                                                                             |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Figure 6***. We summarize the Weighted Absolute Percentage Error (WAPE), top, and Mean Absolute Percentage Error (MAPE), bottom, across all municipalities in DPFC for CO<sub>2</sub> emissions. Our comparison contains both gridded emissions datasets under consideration (EDGAR and our Super-Resolved EDGAR).* |
+<img src="figures/figure10.png" style="width:6.35417in;height:4.16667in" />
 
-3.2 Visualization of emissions
-------------------------------
+**Figure 6***. We summarize the Weighted Absolute Percentage Error (WAPE), top, and Mean Absolute Percentage Error (MAPE), bottom, across all municipalities in DPFC for CO<sub>2</sub> emissions. Our comparison contains both gridded emissions datasets under consideration (EDGAR and our Super-Resolved EDGAR).*
+
+#### 3.2 Visualization of emissions
 
 <img src="figures/figure11.png" style="width:6.5in;height:7.5in" />
 
@@ -293,8 +280,7 @@ The approach presented here, which super-resolves EDGAR using high resolution bu
 
 The global plots show, as expected, the density of building emissions in some of the most populated regions of the world including the eastern United States, Europe, China, and India. What is new and different about this dataset is the ability to show differences within cities themselves. Emissions from Manhattan stick out clearly in New York, while the coastal regions of Cape Town clearly show a higher concentration of emissions. This level of spatial granularity enables prioritization in local and regional planning and decision-making when paired with other emissions sectors.
 
-3.3 Results of the high-efficiency retrofit analysis 
-----------------------------------------------------
+#### 3.3 Results of the high-efficiency retrofit analysis
 
 Here, we include results from our high-efficiency retrofit analysis (see section 2.1.4), which estimates potential emissions reductions resulting from a variety of building envelope and energy system retrofits.
 
@@ -314,18 +300,15 @@ Here, we include results from our high-efficiency retrofit analysis (see section
 
 **Figure 9***. Global maps of country-level potential emissions reductions from separately implementing each **non-residential** building retrofit: (a) space heating, (b) water heating, (c) cooking, and (d) building envelope improvements.*
 
-4. Discussion
-=============
+#### 4. Discussion
 
-4.1 Contributions
------------------
+#### 4.1 Contributions
 
 The model presented here produces high-spatial-resolution global emissions for CO<sub>2</sub>, N<sub>2</sub>O, and CH<sub>4</sub>. These emissions from our model are further disaggregated into residential and non-residential building subsectors and each year’s emissions are reflected monthly. Using activity data to spatially super-resolve the data from EDGAR into 30-arcsec grid cells (roughly 1km x 1km grid cells) not only provides a two-order-of-magnitude increase in the information content for each 0.1 deg x 0.1 deg (roughly 11km x 11km) grid cell from the original EDGAR data, but it proportionally allocates the EDGAR emissions based on the underlying activity data most representative of where emissions are concentrated within each region. This work also provides gridded data disaggregated into residential and non-residential subsectors. Finally, using temperature data, this work provides gridded data monthly enabling the EDGAR emissions to be allocated temporally based on changing space heating needs.
 
 While the resulting emissions at the national level are the same as EDGAR at the national level, there were municipal-level improvements in the resolution of CO<sub>2</sub> estimates for the municipal level.
 
-4.2 Limitations
----------------
+#### 4.2 Limitations
 
 *Comparison rather than validation*. Although there are clear benefits to our model’s temporal and spatial resolution improvements as compared to existing models, a significant challenge is the limited data available for validation to quantify model performance. In fact, there is no true ground truth data for building emissions, so we rely on comparisons to other inventories at the national and municipal level. UNFCCC and CAIT emissions data are both only available with annual values at a country level; these are insufficient to fully measure performance at subnational levels. While DPFC emissions estimate data are available at the municipality-level and thus can be used for sub-country-level analysis, they are only included in the source data for a subset of municipalities represented by eight countries in the world and only exist for a single year and annual set of emissions.
 
@@ -339,8 +322,7 @@ While the resulting emissions at the national level are the same as EDGAR at the
 
 Each of these limitations has led to areas of active research to overcome these challenges in future iterations of this work.
 
-4.3 High-efficiency retrofit analysis 
--------------------------------------
+#### 4.3 High-efficiency retrofit analysis
 
 Our high-efficiency building retrofit analysis provides insight into potential emissions reductions from global adoption of higher-efficiency technologies targeting the most energy-intensive building activities. While these retrofits are infeasible to occur all at once, due to the long lifespans of building heating and cooking systems, our analysis estimates potential reductions as older systems are replaced and/or with efforts to accelerate retrofits (e.g. increased financial incentives or policies).
 
@@ -350,15 +332,13 @@ We estimate the change in direct building emissions that would result from heati
 
 Our higher-efficiency retrofit scenarios are grounded in real-world adoption trends, such as the marked increase in global heat pump sales from 2020-2022 (IEA, 2025). Although heat pump sales have decreased since 2023, likely due to household budget constraints resulting from higher borrowing costs and inflation (IEA, 2025), this trend demonstrates both the practicality of our retrofit scenario and the economic and policy challenges that may shape its implementation.
 
-**4.4 Confidence** 
-------------------
+#### 4.4 Confidence
 
 For our primary emissions estimates, our confidence is very low (for emissions factors and other quantities) to low (for emissions estimates). Following Climate TRACE standards on confidence, low confidence is assigned to estimates generated from a disaggregation model and very low when it is estimated with a lack of verification options.
 
 We have medium confidence in our emission reduction strategies. While the systems we suggest to transition to are existing products on the market, there is variability in regional end use activity, existing technology market share, and specific efficiency improvements that partially depend on building characteristics and occupant behavior. While the technology readiness is high, these variable regional factors require several assumptions that are necessary to make to estimate the emissions reductions.
 
-4.5 Uncertainty
----------------
+#### 4.5 Uncertainty
 
 Our uncertainty estimation procedure utilizes a two-step strategy. In step 1 we rely upon available measurement data to estimate the uncertainty of several key quantities: E, A, and EUI at the grid cell level. Following IPCC 2006 guidelines, we assume normality of each quantity of interest, and we quantify its uncertainty using a standard deviation, which we denote as $u_{X}$ for variable $X$ (e.g., $X$ may be E, A, or EUI). In step 2 we then utilize the uncertainty of these quantities to deduce the uncertainty of remaining needed quantities: EN and EF. We describe these two steps in more detail next.
 
@@ -366,8 +346,7 @@ In Step 1 we assign all grid cell estimates of E, A, and EUI to the *county (or 
 
 In Step 2 the uncertainty estimates obtained from Step 1 can then be used to deduce the uncertainty of the remaining quantities of interest: namely EF and E, at a grid cell level. This can be done using the equations from Sec. 2.3 that we utilize to compute the values of EF and E (i.e., their values, not their uncertainty) from E, A, and EUI. The uncertainty of E, A, and EUI can be “propagated” through these equations, using well-established properties of random variables (e.g., see IPCC 2006 guidelines), and yielding the uncertainty of EF and E.
 
-5. Conclusion 
-=============
+#### 5. Conclusion
 
 This work introduced a methodology that builds on EDGAR by using high-resolution building data derived from satellite imagery to create the highest resolution estimates of building emissions presently available. This work also provides subsector disaggregation for residential and non-residential buildings and monthly emissions estimates. The data are compared at the national level to other global emissions inventories and, for the first time, to municipal-level estimates.
 
@@ -379,8 +358,7 @@ We estimated potential reductions in building emissions from retrofitting energy
 
 Our results show that cooking system retrofits have the potential to reduce a country’s residential and non-residential cooking-related emissions by an average of 23% and 20%, respectively. These estimates only take into account the energy efficiency gains, additional emissions benefits are expected when factoring in reduced emission factors of the fuel switching. Though higher-efficiency technologies are being adopted, our modeled emissions reductions would realistically take several years, as these technologies have long lifespans. Their adoption also depends on current policies, economics, technology awareness, and likely other building-specific considerations.
 
-6. Acknowledgments
-==================
+#### 6. Acknowledgments
 
 The authors would like to thank the Climate TRACE coalition for its organizational support, and Climate TRACE's funders for their financial support. For a full list of funders, please visit the Climate TRACE website: [<span class="underline">https://climatetrace.org/team</span>](https://climatetrace.org/team).
 
@@ -389,29 +367,22 @@ We thank Microsoft and Planet for sharing public versions of the TEMPO building 
 **Statement on AI use**
 
 Generative AI tools were used to assist with code development, figure preparation, data searches, literature reviews, and the exploration and critical evaluation of methodological ideas. All outputs were independently reviewed and validated by the authors.
-================================================================================================================================================================================================================================================================
 
-Published methodology
-=====================
+#### Published methodology
 
-A previous iteration of the methods described here has been peer reviewed:
-==========================================================================
+#### A previous iteration of the methods described here has been peer reviewed:
 
-Markakis, P.J., Gowdy, T.M., Malof, J.M., Sheng, Z., Lancellotti, B., Collins, L., Davitt, A. and Bradbury, K., 2026. Estimating global, high-resolution onsite building greenhouse gas emissions. *npj Urban Sustainability*. https://doi.org/10.1038/s42949-026-00433-x 
-=========================================================================================================================================================================================================================================================================
+Markakis, P.J., Gowdy, T.M., Malof, J.M., Sheng, Z., Lancellotti, B., Collins, L., Davitt, A. and Bradbury, K., 2026. Estimating global, high-resolution onsite building greenhouse gas emissions. *npj Urban Sustainability*. https://doi.org/10.1038/s42949-026-00433-x
 
-S. Supplementary materials 
-==========================
+#### S. Supplementary materials
 
-S.1. End use proportion data used for emissions reducing solutions 
-------------------------------------------------------------------
+#### S.1. End use proportion data used for emissions reducing solutions
 
 We also use data from the World Bank CURB Tool, a climate action planning model, to estimate the proportion of building energy allocated to different end uses (i.e., space heating, cooking, and water heating) (CURB Tool 2019). The CURB Tool was released in 2016 and provides building-level energy consumption data by building type (13 types) and end use (14 types) for 490 cities in 159 countries. We calculate end-use shares as averages across building types and cities, weighted by each one's combined space heating, water heating and cooking energy use intensity (kWh/m²/yr). Inputs to the CURB Tool include the United States Energy Information Administration’s Commercial Building Energy Consumption Survey (CBECS) (U.S. Energy Information Administration 2022) and the Residential Energy Consumption Survey (RECS) (U.S. Energy Information Administration 2023). For residential buildings in the 38 European countries covered by Eurostat (Eurostat 2026), we instead calculate end-use shares as each end use’s proportion of national household fossil fuel consumption, excluding electricity and biomass. Countries without data from either source are assigned the end-use shares of a climate-matched donor country.
 
-S.2. Other known issues
------------------------
+#### S.2. Other known issues
 
-### S.2.1. Final Estimates
+#### S.2.1. Final Estimates
 
 In the Democratic Republic of the Congo, we are aware of possible missing data from the EDGAR data that impacts our estimates and may lead to underestimation in this location in the EDGAR super-resolved version of the model.
 
@@ -426,11 +397,11 @@ Where possible, we use the EDGAR gridded data (with 0.1degree-by-0.1degree spati
 <table><thead><tr class="header"><th><em><strong>GHG</strong></em></th><th><em><strong>All Onsite Combusted Fuels<br />
 </strong>(fossil + biomass)</em></th><th><em><strong>Onsite Fossil Fuels</strong></em></th><th><em><strong>Onsite Biofuels</strong></em></th></tr></thead><tbody><tr class="odd"><td>CO<sub>2</sub></td><td>*Computed</td><td>EDGAR Gridded Data (0.1degree-by-0.1degree)</td><td>EDGAR Gridded Data (0.1degree-by-0.1degree)</td></tr><tr class="even"><td>N<sub>2</sub>O</td><td>EDGAR Gridded Data (0.1degree-by-0.1degree)</td><td><em>**Computed</em></td><td>EDGAR Country Data</td></tr><tr class="odd"><td>CH<sub>4</sub></td><td>EDGAR Gridded Data (0.1degree-by-0.1degree)</td><td><em>**Computed</em></td><td>EDGAR Country Data</td></tr><tr class="even"><td>NO<sub>x</sub></td><td>EDGAR Country Data</td><td><em>N/A</em></td><td><em>N/A</em></td></tr><tr class="odd"><td>PM<sub>2.5</sub></td><td>EDGAR Country Data</td><td><em>**Computed</em></td><td>EDGAR Country Data</td></tr><tr class="even"><td>PM<sub>10</sub></td><td>EDGAR Country Data</td><td><em>N/A</em></td><td><em>N/A</em></td></tr><tr class="odd"><td>NMVOC</td><td>EDGAR Country Data</td><td><em>N/A</em></td><td><em>N/A</em></td></tr><tr class="even"><td>CO</td><td>EDGAR Country Data</td><td><em>N/A</em></td><td><em>N/A</em></td></tr><tr class="odd"><td>SO<sub>2</sub></td><td>EDGAR Country Data</td><td><em>N/A</em></td><td><em>N/A</em></td></tr><tr class="even"><td><p><em>*Computed as the sum of the fossil and biofuel components</em></p><p><em>**Computed as the difference between super-resolved gridded data for all onsite combusted fuels and super-resolved country-level data for onsite country-level biofuels.</em></p></td><td></td><td></td><td></td></tr></tbody></table>
 
-### S.3. Verifying modeled emissions estimates 
+#### S.3. Verifying modeled emissions estimates
 
 EDGAR’s buildings data includes not only residential and commercial buildings. As EDGAR’s Energy for Buildings data uses data from the IPCC’s 1996 (1A4) and 2006 codes (1A4+1A5) on ‘Other Sectors,’ this includes agricultural off-road vehicles (1.A.4.c.ii), fishing (1.A.4.c.iii), and marine vessels (1.A.5.b) that do not exactly align with our data estimates. From our review, these are small values that have a minor impact on estimates, but are noteworthy as we compare our model to EDGAR.
 
-### S.3.1. Municipal-Level ComparisonBoundary Summary
+#### S.3.1. Municipal-Level ComparisonBoundary Summary
 
 For municipal-level comparison, we discovered that there is not a consistent set of geospatial boundaries from a common source at a corresponding municipality level. GADM is an open-source project that “wants to map the administrative areas of all countries, at all levels of sub-division” (GADM, 2024) and our primary source for country-level boundaries represented by GADM Level 0. While GADM tends to have near-complete global coverage within their data at the Level 0 administrative subdivision representing each nation, their data was not globally comprehensive at the municipality level. For example, the GADM Level 2 boundaries for the United States were not consistent with the size of each municipality contained within the United States DPFC data, and GADM does not contain municipality-level boundaries for the United States at a level corresponding to a more detailed subdivision.
 
@@ -449,7 +420,7 @@ To conduct our model comparison at the municipal level, we identified distinct g
 | Denmark       | Level 2                      | GADM                        |
 | United States | N/A                          | State Government Boundaries |
 
-### S.4. Strategy ERS Table
+#### S.4. Strategy ERS Table
 
 We provide emissions estimates for four distinct retrofit strategies (replacing fossil fuel space heating with heat pumps, improving the thermal envelope, heat-pump water heating, and high-efficiency electric cooking), as well as every combination of them, as a separate strategy for residential and non-residential buildings. All together, we provide 15 different strategies (four single strategies (space heating, water heating, cooking, and building envelope retrofits), six paired strategies (e.g., space heating + water heating retrofits), four triplets (e.g., space heating + building envelope + water heating retrofits), and one strategy combining all four retrofits. We exclude retrofits that do not result in meaningful emissions reductions (&lt; 5% reduction).
 
@@ -503,8 +474,7 @@ This section provides the metadata for the buildings sector as of September 2026
 
 <table><thead><tr class="header"><th><strong>Data attributes</strong></th><th><strong>Confidence Definitions</strong></th><th><strong>Uncertainty Definitions</strong></th></tr></thead><tbody><tr class="odd"><td><p><strong>capacity</strong></p><p><em>Building area (m²)</em></p></td><td><p>Low: Relies on data derived from a computer vision model applied to satellite imagery data. Building floor area is derived from remotely sensed building volume (Microsoft TEMPO) divided by an assumed floor height. This has been validated (Lahrichi et al. 2026). The floor area data is then split between residential and non-residential buildings using the Global Human Settlement Layer (GHSL) classification, and extrapolated using GHSL growth rates for years TEMPO does not observe.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="even"><td><p><strong>capacity_factor</strong></p><p><em>Energy intensity (J/m²)</em></p></td><td><p>Very low: Based on regional statistics. Energy use intensity (EUI) is a country-level annual average for each subsector and fuel (fossil and biomass), computed from national energy statistics (EIA, UNSD, AFREC, FAOSTAT) divided by national floor area, and applied uniformly to every grid cell in the country.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="odd"><td><p><strong>activity</strong></p><p><em>Total onsite fuel combustion energy (MJ)</em></p></td><td><p>Very low: Activity is the product of the two modeled quantities above (Capacity × Capacity factor) and inherits the strengths and limitations of both; it is not based on metered fuel consumption. The delivered activity covers fossil fuels only; biomass energy is delivered separately as other8.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="even"><td><p><strong>CO2_EF</strong></p><p><em>Emissions factor (tonnes CO₂ / MJ)</em></p></td><td><p>Very low: Back-calculated quantities. An effective emissions factor back-calculated as disaggregated EDGAR fossil CO₂ emissions divided by modeled fossil fuel energy, rather than a fuel-specific measured factor.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="odd"><td><p><strong>CH4_EF, N2O_EF</strong></p><p><em>Emissions factors (tonnes / MJ)</em></p></td><td><p>Very low: Back-calculated quantities. Same conditions as for CO2_EF, with one addition: following IPCC convention the numerator includes emissions from all fuel types (fossil and biomass) while the denominator is fossil fuel energy only, so values can substantially exceed fossil fuel specific factors where the biomass share of building energy is large (common in the residential subsector). The biomass factors (other5, other6) together with biomass activity (other8) can be used to separate the fossil and biomass contributions.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="even"><td><p><strong>CO2_emissions</strong></p><p><em>Emissions from fossil fuels only (tonnes)</em></p></td><td><p>Low: Disaggregated emissions. EDGAR building emissions (0.1° gridded and country-level) are disaggregated to the ~1 km grid in proportion to modeled building energy, so national totals track EDGAR while sub-national placement depends on the activity model. Years after the most recent EDGAR release (2023 for greenhouse gases) are extrapolated by carrying the latest emissions factors forward onto modeled building activity.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="odd"><td><p><strong>CH4_emissions, N2O_emissions</strong></p><p><em>Emissions from all fuel types (tonnes)</em></p></td><td><p>Low: Disaggregated emissions. Same conditions as for CO2_emissions, and per IPCC convention these totals include both fossil and biomass combustion. The biomass contribution is isolated by super-resolving the EDGAR country-level biofuel (bio) emissions with the same method used for the gridded data.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="even"><td><p><strong>CO2e_20yr_emissions, CO2e_100yr_emissions</strong></p><p><em>Emissions (tonnes CO₂e)</em></p></td><td><p>Low: Combines fossil CO₂ with CH₄ and N₂O from all fuel types using IPCC AR6 global warming potentials (GWPs) and inherits their confidence.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="odd"><td><p><strong>VOCS_emissions, CO_emissions, NOX_emissions, PM10_emissions, PM2_5_emissions, SO2_emissions</strong></p><p><em>NMVOC, CO, NOₓ, PM₁₀, PM₂.₅, and SO₂ emissions from all fuel types (tonnes)</em></p></td><td><p>Low: Disaggregated emissions. Estimated with the same disaggregation approach applied to the EDGAR air pollutant data, which extend through 2022; later years are extrapolated by carrying the 2022 emissions factors forward onto modeled building activity. Totals include both fossil and biomass combustion.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="even"><td><p><strong>other4, other5, other6</strong></p><p><em>Biomass CO₂ / CH₄ / N₂O emissions factors (tonnes / MJ)</em></p></td><td><p>Very low: Back-calculated quantities. Disaggregated EDGAR biofuel (bio) emissions divided by modeled biomass energy. Only the emissions factors are delivered for the biomass gases; biomass emissions can be reconstructed as the factor × biomass activity (other8).</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="odd"><td><p><strong>other7</strong></p><p><em>Biomass PM₂.₅ emissions factor (tonnes / MJ)</em></p></td><td><p>Very low: Back-calculated quantities. As for other4–other6, using the EDGAR air pollutant biofuel data, which extend through 2022 with later years extrapolated.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr><tr class="even"><td><p><strong>other8</strong></p><p><em>Biomass activity (MJ)</em></p></td><td><p>Very low: Product of two quantities, inherits the lower confidence. Modeled as Capacity × biomass EUI, exactly as the fossil activity, with the additional assumption that national biomass statistics (UNSD, FAOSTAT, and related sources) fully capture informal fuel use such as gathered fuelwood.</p><p>Please see Section 4.4 Confidence for more information.</p></td><td>Please see Section 4.5 Uncertainty</td></tr></tbody></table>
 
-References 
-==========
+#### References
 
 1.  African Energy Commission (AFREC). *Africa Energy Balance 2025*. Algiers: African Union / AFREC, 2026. [<span class="underline">https://au-afrec.org/sites/default/files/2026-02/1%20-%20Energy%20Balance%202025%20(EN).pdf</span>](https://au-afrec.org/sites/default/files/2026-02/1%20-%20Energy%20Balance%202025%20(EN).pdf)
 

@@ -1,4 +1,6 @@
-<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />**Agriculture sector: Manure Applied to Soil**
+<img src="figures/logo.png" style="width:2.77257in;height:1.19921in" />
+
+### Agriculture sector: Manure Applied to Soil
 
 *Nitrous oxide emissions from animal manure applied to croplands*
 
@@ -10,7 +12,7 @@
 
 *<sup>\*</sup>Corresponding Author: basso@msu,edu; sharm165@msu.edu*
 
-**1. Introduction**
+#### 1. Introduction
 
 Agricultural soils are a major anthropogenic source of nitrous oxide (N₂O), a long-lived greenhouse gas that also contributes to stratospheric ozone depletion (Ravishankara et al. 2009; Prather et al. 2012; IPCC 2021). Soil N₂O is produced primarily through microbial nitrification and denitrification, and emissions are strongly influenced by the amount and availability of reactive nitrogen (N) in soil (Robertson and Groffman 2024). In addition to synthetic fertilizer and crop residues, animal manure applied to agricultural land represents an important source of N entering managed soils and can therefore contribute substantially to agricultural N₂O emissions.
 
@@ -26,9 +28,9 @@ Climate TRACE addresses this gap by developing annual and monthly estimates of N
 
 The primary objective of this study is to provide a globally consistent, crop-specific, and spatially explicit inventory of N₂O emissions associated with manure applied to cropland. The resulting dataset provides annual and monthly estimates for 2015–2026 and enables manure-related emissions to be evaluated across crops, grid cells, countries, and years. The scope is limited to manure intentionally applied to cropland; emissions from manure deposited directly on pasture, range, and paddock by grazing animals, as well as emissions occurring during livestock housing, manure storage, and other stages of the manure-management chain before field application, are treated separately and are outside the scope of this methodology.
 
-**2 Materials and Methods**
+#### 2 Materials and Methods
 
-**2.1 Methodological overview and scope**
+#### 2.1 Methodological overview and scope
 
 We estimate direct and indirect N₂O emissions from animal manure applied to cropland globally for 2015–2026. The inventory covers 40 harmonized crop groups and produces annual estimates at 5-arc-minute spatial resolution, which are subsequently disaggregated to monthly time steps. Emissions are calculated for individual crop and grid-cell combinations and can be aggregated to countries, continental, and global scales.
 
@@ -42,7 +44,7 @@ Annual direct and indirect emissions are calculated independently for each crop 
 
 The final dataset therefore provides crop-specific annual and monthly estimates of manure N applied to cropland and associated direct, indirect, and total N₂O emissions for 2015–2026 at both 5-arcminute and country scales.
 
-**2.2 Crop production, harvested area, and spatial harmonization**
+#### 2.2 Crop production, harvested area, and spatial harmonization
 
 Annual crop production and harvested-area data were compiled at the country scale from FAOSTAT and harmonized with SPAM 2020 to generate spatially explicit crop activity data at 5-arc-minute resolution (FAO 2026; IFPRI 2026). This crop-production and harvested-area framework is common across the Climate TRACE agricultural methodologies, including synthetic N fertilizer, retained crop residue, crop-residue burning, and manure applied to cropland, to ensure consistency among emission sources.
 
@@ -52,7 +54,7 @@ For 2015–2024, crop production and harvested area were based on FAOSTAT Crops 
 
 All crop-production and harvested-area layers were aligned to the same 5-arc-minute geographic grid before manure N was spatially allocated. This common spatial framework provides the basis for distributing country-level manure N among grid cells and subsequently among crops while preserving the corresponding national manure-N totals.
 
-**2.3 Country-level manure N applied to soils**
+#### 2.3 Country-level manure N applied to soils
 
 National manure nitrogen applied to soils was obtained from FAOSTAT and used as the country-level activity constraint for the manure-application inventory (Tubiello et al. 2021). FAOSTAT reports manure applied to agricultural soils as the nitrogen content of manure applied, expressed as mass of N per country and year. Reported FAOSTAT values were used through the most recent years for which observations were available.
 
@@ -60,7 +62,7 @@ For 2024–2026, country-level manure N applied to soils was extended independen
 
 Observed and projected values were combined to produce a continuous annual country-level manure-N dataset for 2015–2026. These national totals were retained as the primary constraint during subsequent spatial allocation so that the sum of gridded manure-N estimates within each country remained consistent with the corresponding FAOSTAT-based or projected national total.
 
-**2.4 Spatial and crop allocation of manure N**
+#### 2.4 Spatial and crop allocation of manure N
 
 Country-level manure N applied to soils was spatially distributed across cropland using the same country-to-grid and grid-to-crop allocation framework described in the Climate TRACE Synthetic N Fertilizer Methodology. The harmonized annual crop-production and harvested-area layers described in Section 2.2 were used as the spatial activity data for this allocation.
 
@@ -68,7 +70,7 @@ Within each country, the national manure-N total from FAOSTAT, or the correspond
 
 The detailed equations, normalization procedure, and treatment of country boundaries are therefore not repeated here. As in the synthetic N fertilizer inventory, the allocation preserves the annual country-level activity total so that the sum of crop- and grid-specific manure-N estimates within each country equals the corresponding national manure-N value.
 
-**2.5 Direct and indirect N₂O emission calculation**
+#### 2.5 Direct and indirect N₂O emission calculation
 
 Direct and indirect N₂O emissions from manure N applied to cropland were calculated using the same emission-factor framework described in the Climate TRACE Synthetic N Fertilizer Methodology. Because the equations and emission-factor assignment procedures are identical between the two inventories, they are not repeated here.
 
@@ -78,7 +80,7 @@ Indirect N₂O emissions associated with nitrogen losses through leaching and ru
 
 Direct and indirect emissions were calculated separately for each crop and grid cell and then summed to obtain total N₂O emissions associated with manure N applied to cropland. Conversion from N₂O–N to N₂O and from N₂O to CO₂-equivalent emissions followed the same procedures described in the [Synthetic N Fertilizer Methodology](https://drive.google.com/drive/folders/1jGBzeAw04vhVlT2HbWQUnuLv1EQFvkra).
 
-**2.6 Temporal disaggregation**
+#### 2.6 Temporal disaggregation
 
 Annual manure-application N₂O emissions were distributed to monthly time steps using the same temporal-disaggregation framework described in the Climate TRACE Synthetic N Fertilizer Methodology. Monthly fractions derived from the Emissions Database for Global Atmospheric Research (EDGAR) soil N₂O emissions were used to represent the seasonal distribution of emissions within each year.
 
@@ -86,7 +88,7 @@ For each grid cell, the annual direct and indirect N₂O emissions estimated in 
 
 Because the detailed derivation of the monthly fractions, spatial matching procedure, and normalization steps are identical to those used for synthetic N fertilizer, these procedures are not repeated here, and readers are referred to the Climate TRACE [Synthetic N Fertilizer Methodology](https://drive.google.com/drive/folders/1jGBzeAw04vhVlT2HbWQUnuLv1EQFvkra).
 
-**2.7 Final manure-applied-to-soils N₂O dataset**
+#### 2.7 Final manure-applied-to-soils N₂O dataset
 
 The final inventory combines the crop- and grid-specific manure-N activity data with the direct and indirect N₂O emission estimates described above. Estimates are produced annually for 2015–2026 at 5-arc-minute spatial resolution for the 40 harmonized crop groups used across the Climate TRACE agricultural inventories. Monthly emissions are generated from the annual estimates using the temporal-disaggregation procedure described in Section 2.6.
 
@@ -96,7 +98,7 @@ N₂O emissions are reported both as N₂O mass and as CO₂-equivalent emission
 
 The resulting dataset provides a spatially and temporally consistent representation of N₂O emissions from manure intentionally applied to cropland. It excludes emissions from manure deposited directly by grazing animals and emissions occurring during manure housing, storage, treatment, or other stages of the manure-management chain prior to field application.
 
-**3. Emission Reduction Solutions (ERS)**
+#### 3. Emission Reduction Solutions (ERS)
 
 Beginning in 2025, Climate TRACE introduced Emission Reduction Solutions (ERS) to estimate how alternative management practices could modify emissions relative to the baseline inventory. For manure applied to cropland, ERS scenarios were developed from paired manure-management comparisons reported in the global meta-analysis of Hou et al. (2015), which synthesized results from 126 published studies examining NH₃, CH₄, and N₂O emissions across the manure-management chain.
 
@@ -108,9 +110,9 @@ For each ERS, the N₂O response was represented by a new-to-reference emission 
 
 The ERS estimates are counterfactual scenarios rather than estimates of current practice adoption. The baseline inventory does not explicitly identify manure-application technology at each grid cell; therefore, the ERS results indicate the potential change in N₂O emissions associated with applying the literature-derived relative response rather than a measured transition from an observed local management practice. In addition, manure-management practices can produce trade-offs among gases. Hou et al. (2015), for example, found that injection substantially reduced NH₃ losses but could increase N₂O emissions, emphasizing that a practice that mitigates one emission pathway does not necessarily reduce all emissions.
 
-**4. Results**
+#### 4. Results
 
-**4.1 Global trends in manure N application and N₂O emissions**
+#### 4.1 Global trends in manure N application and N₂O emissions
 
 Global N₂O emissions from manure applied to soils increased modestly over the historical period, from approximately 0.518 Mt N₂O in 2015 to 0.541 Mt N₂O in 2023, representing an increase of about 4.4% (Figure 1A). Emissions increased from 2015 to 2017, declined slightly during 2018–2019, and subsequently increased each year through 2023. Projected emissions for 2024–2026 remained close to the most recent historical level but continued to increase gradually, reaching approximately 0.55 Mt N₂O by 2026. Overall, the projections indicate continued but relatively modest growth relative to the 2023 historical estimate.
 
@@ -124,7 +126,7 @@ Crop-level emissions were more concentrated than national emissions. In 2023, ma
 
 **Figure 1** Historical and projected global N₂O emissions from manure applied to soils and their national and crop-specific composition. (A) Global manure-applied-to-soils N₂O emissions for the historical period 2015–2023 and projected emissions for 2024–2026. (B) Ten largest national contributors in 2023. (C) Ten largest crop contributors in 2023. (D) Countries with the largest projected absolute increases and decreases in N₂O emissions between 2023 and 2026. Percentage labels in panel D indicate the relative change between 2023 and 2026.
 
-**4.2 National contributions within major crops**
+#### 4.2 National contributions within major crops
 
 The geographic distribution of manure-associated N₂O emissions differed substantially among major crops in 2023 (Table 1). Maize emissions were concentrated in the United States (20.0%), China (19.0%), and Brazil (17.2%), which together accounted for 56.2% of global maize-related N₂O emissions. Mexico contributed a further 9.9%, followed by Argentina at 3.3%.
 
@@ -188,7 +190,7 @@ Other crops also exhibited distinct geographic patterns. China was the largest c
 12.7%</td><td>United States<br />
 12.0%</td></tr></tbody></table>
 
-**4.3 Spatial distribution of manure-applied-to-soils N₂O emissions**
+#### 4.3 Spatial distribution of manure-applied-to-soils N₂O emissions
 
 The global distribution of N₂O emissions from manure applied to soils was highly heterogeneous in 2023, with distinct emission hotspots embedded within much larger areas of lower-intensity agricultural emissions (Figure 2). The highest grid-cell emissions were concentrated in several major agricultural regions, particularly eastern China, northern India, Europe, the central and eastern United States, southern and southeastern Brazil, and parts of Southeast Asia. These regions correspond to areas where substantial manure N inputs coincide with intensive crop production and, in some cases, relatively high country-specific N₂O emission factors.
 
@@ -216,7 +218,7 @@ The maize map also illustrates an important feature of the allocation framework.
 
 **Figure 3** Global distribution of manure N applied to maize cropland in 2023 at 5-arc-minute spatial resolution. A total of 5.648 Mt N yr⁻¹ of manure N was allocated to maize globally. Display values were capped at 50 tonnes N pixel⁻¹ yr⁻¹ to improve visualization of spatial variation.
 
-**5. Discussion and Conclusion**
+#### 5. Discussion and Conclusion
 
 This methodology provides a globally consistent and spatially explicit estimate of N₂O emissions from manure applied to cropland, addressing several limitations of national-scale inventories. National manure-N statistics provide an essential constraint on total activity, but by themselves do not resolve where manure is applied within countries, which crops receive it, or how emissions are distributed through the year. By combining FAOSTAT manure-N totals with harmonized crop production and harvested-area data, the present framework distributes national manure inputs across a 5-arc-minute grid while preserving the country-level activity totals. The resulting inventory therefore complements conventional national reporting by resolving emissions across crops, locations, and monthly time steps.
 
@@ -238,7 +240,7 @@ The ERS analysis extends the inventory by evaluating how alternative manure plac
 
 Manure application should also be considered within the broader agricultural nitrogen cycle. Synthetic fertilizer, manure, crop residues, and biological nitrogen inputs jointly determine the amount and timing of reactive N entering agricultural soils. Changes in one input or management practice can consequently affect the need for or response to another. The manure-applied-to-soils inventory is therefore designed to be interpreted alongside the companion Climate TRACE methodologies for synthetic N fertilizer, crop residues, and soil carbon rather than as an isolated component of cropland greenhouse-gas emissions.
 
-**6. Metadata Information**
+#### 6. Metadata Information
 
 Direct and indirect N₂O emissions from animal manure applied to cropland are reported by Climate TRACE at country and gridded spatial scales for 40 harmonized crop groups. The dataset covers 2015–2026 at annual and monthly temporal resolution and 5-arc-minute spatial resolution. Estimates for 2015–2023 are based on historical FAOSTAT manure-N activity data, whereas country-level manure N for 2024–2026 is projected from the historical FAOSTAT time series as described in Section 2.3. Crop production and harvested area data are used to spatially distribute national manure-N totals while preserving the corresponding country-level activity constraint.
 
@@ -308,7 +310,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [contact us](mailto:coalition@climatetrace.org) (<coalition@climatetrace.org>).
 
-**7. Supplementary information**
+#### 7. Supplementary information
 
 **Table S1** Main ERSs employed for this sector. Strategies include injection/incorporation of manure, application of digestate instead of raw slurry, and separation or composting of solids before application. The "Relative N₂O emission factor" values are derived from meta-analyses (Hou et al., 2015) and represent global mean ratios if the respective strategy were employed across cropland systems.
 
@@ -319,7 +321,7 @@ The above usage is not warranted to be error free and does not imply the express
 | c                | Liquid fraction vs. raw slurry                | Liquid fraction has lower organic matter, reducing N₂O formation. Smaller effect than digestate but still beneficial.                                                                        | retrofit      | 0.8148                                          | medium         |
 | d                | Solid fraction vs. raw slurry                 | Solid fraction effects vary; sometimes reduces N₂O, but risk of increase exists. Prefer composting or digesting before use.                                                                  | retrofit      | 0.8979                                          | medium         |
 
-**References**
+#### References
 
 Bouwman, A.F., Beusen, A.H.W., Griffioen, J., Van Groenigen, J.W., Hefting, M.M., Oenema, O., Van Puijenbroek, P.J.T.M., Seitzinger, S., Slomp, C.P. and Stehfest, E., 2013. Global trends and uncertainties in terrestrial denitrification and N2O emissions. *Philosophical Transactions of the Royal Society B: Biological Sciences*, *368*(1621), p.20130112. DOI:10.1098/rstb.2013.0112.
 

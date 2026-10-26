@@ -1,10 +1,10 @@
-**Transportation sector: Domestic and International Aviation Emissions**
+### Transportation sector: Domestic and International Aviation Emissions
 
 **Ishan Saraswat**
 
 *Author affiliated with WattTime and Climate TRACE*
 
-**1. Introduction**
+#### 1. Introduction
 
 The aviation sector is considered to be part of the top ten global emitting sectors and emissions are expected to climb due to increased demand for aviation fuel (Perlman, 2018; IEA, 2019). Unfortunately, aviation, along with other transportation sectors, was exempted from the Paris treaty and not considered on track to decrease emissions (Twidale and Saul, 2015; Edie, 2020, Climate Action Tracker, 2020). As a result, current efforts to reduce aviation emissions have proven woefully inadequate (Perlman, 2018).
 
@@ -12,7 +12,7 @@ To improve the monitoring and measuring of global aviation greenhouse gas (GHG) 
 
 Furthermore, beginning November 2025, Climate TRACE is providing potential emission reduction solutions (ERSs) to understand how sector specific mitigation strategies can reduce emissions for this sector. For aviation, the use of sustainable aviation fuels offers a practical way to reduce the aviation sector’s climate impact. By replacing conventional jet fuel with Sustainable Aviation Fuel (SAF) blends provides an alternative jet fuel made from non-petroleum, renewable sources (e.g. waste cooking oil, agricultural waste, or synthetic fuels from captured carbon). This can be blended with standard jet fuel and used in existing aircraft without engine modifications (DOE, 2023). A second solution is fleet renewal: replacing previous-generation aircraft with current-generation successors — the A320neo family, 737 MAX, A350, 787 and Embraer E2 — which burn about 13% less fuel per flight.
 
-**2. Materials and Methods**
+#### 2. Materials and Methods
 
 Climate TRACE used ICAO Carbon Emissions Calculator Methodology, Version 13.1, ICAO CO2 Estimate Models (CEMs) (ICAO CERT, 2019) along with Official Airline Guides (OAG) Historical Flight Status Data for all domestic and international passenger, commercial, private flights and general aviation starting from January 1, 2015, to September 30, 2025. The emissions estimates, based on fuel consumption, include direct GHG emissions: carbon dioxide (CO<sub>2</sub>), methane (CH<sub>4</sub>) and nitrous oxide (N<sub>2</sub>O) and non-GHG emissions of nitrogen oxides (NOx)
 
@@ -24,11 +24,11 @@ This sector does not include the following:
 
 -   The calculations are made for each flight between a origin and destination pair for all national aerodromes, except those referring to helicopters, military aircraft and agricultural aircrafts.
 
-**2.1 Datasets employed**
+#### 2.1 Datasets employed
 
 The Official Airline Guides (OAG) historical flight status database provides the main source of information for the ICAO method. Additional information was used, such as fuel consumption rates for specific aircraft types and great circle distances, provided by ICAO, and airport data including geographic coordinates of aerodromes from OurAirports.com ([<span class="underline">https://ourairports.com/</span>](https://ourairports.com/)) and the Aviation Stack API ([<span class="underline">https://aviationstack.com/</span>](https://aviationstack.com/)).
 
-**2.1.1 Activity data: aircraft movement**
+#### 2.1.1 Activity data: aircraft movement
 
 Historical flight records were obtained from OAG ([<span class="underline">https://www.oag.com/</span>](https://www.oag.com/)). The data (covering historical flight departures and arrivals) was available on a monthly time scale from Jan 2015 - Sep 2025 allowing for the creation of a database containing flights from 2015 to 2025. The following attributes were available:
 
@@ -42,11 +42,11 @@ Historical flight records were obtained from OAG ([<span class="underline">https
 
 -   Flight origin and destination country codes which can be used to classify into domestic or international trips
 
-**2.1.2 ERS Data on Sustainable Aviation Fuels**
+#### 2.1.2 ERS Data on Sustainable Aviation Fuels
 
 Since SAF usage is not directly measured in our original datasets, we rely on industry and government reports to characterize SAF supply and adoption. Key sources include U.S. Department of Energy (DOE) and Environmental Protection Agency (EPA) data on SAF production and consumption. For example, U.S. EPA data indicate that approximately 24.5 million gallons of SAF were consumed in 2023 (DOE, 2023). Commercial SAF production is still small but growing. Leading airlines and airports are beginning to use SAF: for instance, United Airlines announced it will procure 1 million gallons of SAF from Neste for use at Chicago O’Hare in 2024, and JetBlue secured a multi-year supply of about 5 million gallons for New York JFK airport (Mok, 2024). Policies are also driving SAF uptake - like the EU’s ReFuelEU Aviation regulation mandates that jet fuel contain increasing SAF blends (e.g. 2% by 2025, rising to 6% by 2030) (Directorate-General for Mobility and Transport, 2025).
 
-**2.2 Model**
+#### 2.2 Model
 
 Figure 1 provides an overview of the model applied by Climate TRACE along with the main data sources to calculate GHG emissions by domestic and international aviation.
 
@@ -54,11 +54,11 @@ Figure 1 provides an overview of the model applied by Climate TRACE along with t
 
 **Figure 1** Flow of inputs and outputs to generate aviation emissions. Steps are described in section 2.3.
 
-**2.2.1 ERS Modeling**
+#### 2.2.1 ERS Modeling
 
 To incorporate SAF as an ERS in our model, we calculated the estimated emissions reductions based on the assumed SAF fraction and its emissions factor. In our estimates we assume SAF yields about 75% less life-cycle CO<sub>2</sub> than fossil jet fuel. Some SAF feedstocks can achieve up to 80% lifecycle CO<sub>2</sub> reductions (IATA, 2025). Thus, each kilogram of SAF contributes only 25% of the CO<sub>2</sub> of the same mass of fossil fuel. We also assume a 10% SAF blend with conventional jet fuel. This assumption is aggressive but realistic and aligns with current SAF adoption examples. For instance, Airbus reports that for its internal operations—including delivery flights and employee shuttles—it has been using Sustainable Aviation Fuel blends of around 34 % on the Hamburg–Toulouse route since 2022 (Airbus, 2025). Similar high-blend demonstrations indicate that 10 % SAF scenarios are well within current operational feasibility.
 
-**2.3 Methodology**
+#### 2.3 Methodology
 
 The aviation stack API, open source aerodrome database and OAG historical flight status data were used to calculate the Great Circle Distance (GCD) between every origin and destination pair using airport location data (latitude and longitude) from these sources. The specific aircraft type IATA code was then used to match the ICAO CO2 Estimation Models (CEMs) based on the great circle distance. (Table A-1.2.a: ICAO CERT 2019). These fuel consumption rates are based on actual airline operational data from the CORSIA CERT Group (CCG) Operations and Fuel Database (COFdb). Those aircraft types which did not find a match in the CEMs fuel tables, were mapped to an equivalent aircraft type using ICAO’s Equivalent Aircraft Mapping (Appendix B: ICAO Carbon Emissions Calculator Methodology) and matched to the respective entry in the ICAO fuel consumption table. (Appendix C: ICAO Carbon Emissions Calculator Methodology). A correction factor was applied to the GCD for these aircraft types to account for distance flown in excess of the GCD due to stacking, traffic and weather-driven factors as per the ICAO methodology.
 
@@ -70,7 +70,7 @@ Finally, the resulting GHG emissions were either attributed fully to a country, 
 
 **Figure 2:** Visualization of global airport coverage. Size of circle represents annual total CO<sub>2</sub>e 100-year Global Warming Potential (GWP<sub>100</sub>) emissions in 2024.
 
-**2.3.1 Landing and Take Off (LTO) Cycle emissions**
+#### 2.3.1 Landing and Take Off (LTO) Cycle emissions
 
 For each airport we also report the share of emissions produced during the landing and take-off (LTO) cycle — taxi, take-off, climb-out, approach and taxi-in, all below roughly 3,000 feet. These are the emissions relevant to local air quality, as distinct from the cruise emissions spread along the route.
 
@@ -78,15 +78,15 @@ Since our fuel burn figures are gate-to-gate (they already include the LTO cycle
 
 The origin and destination airports split the LTO emissions by the standard half-cycle convention (ICAO Doc 9889): the departure airport takes taxi-out, take-off and climb-out (about 70% of LTO CO₂, 80% of LTO NOx), the arrival airport takes approach and taxi-in. Per-airport LTO CO₂ and NOx appear in the ‘other1’ and ‘other2’ fields. Across the fleet, LTO accounts for about 12% of aviation CO₂.
 
-**2.3.2 Incorporating SAF as an emissions reducing solution**
+#### 2.3.2 Incorporating SAF as an emissions reducing solution
 
 We incorporate SAF into the emissions model by applying a reduction factor to the calculated fuel burn for each flight. Concretely, if a flight burns *F* kg of fuel and a fraction *f* of that fuel is SAF, we reduce the CO2 emissions by f × Δ, where Δ is the fractional reduction in life-cycle CO2 intensity of SAF relative to conventional fuel. This linear blending approach transparently reflects how incremental SAF use cuts emissions. Our method is illustrative – it uses theoretical assumptions from literature and industry (e.g. assuming Δ=0.75 and a 10% blend) and scales emissions accordingly.
 
-**2.3.3 Fleet Renewal as emissions reducing solution**
+#### 2.3.3 Fleet Renewal as emissions reducing solution
 
 The second emissions-reducing solution models replacing previous-generation aircraft with current-generation, in-production successors — the A320neo family, 737 MAX, A350, 787 and Embraer E2. These burn about 13% less fuel per flight, a deliberately conservative figure (industry sources report 15–20% per seat). For each airport we estimate the share of activity flown by previous-generation aircraft and apply the reduction to that share.
 
-**2.4 Uncertainty in measurements**
+#### 2.4 Uncertainty in measurements
 
 There is uncertainty connected to all computed data attributes as part of the modeling process. The uncertainty is defined in terms of standard deviation for each data attribute and provided as *data\_attribute\_value +/- uncertainty\_value*.
 
@@ -106,7 +106,7 @@ There is uncertainty connected to all computed data attributes as part of the mo
 | **CO2e 20 yr Emissions**  | Propagated from CO2, CH4 and N2O emissions uncertainties                                                                                                                                                                                                                                                                                                                                                                                                              |
 | **CO2e 100 yr Emissions** | Propagated from CO2, CH4 and N2O emissions uncertainties                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-**3. Supplemental data**
+#### 3. Supplemental data
 
 **Table S1** Metadata for *Domestic and International Aviation Emissions.* For users, these terms translate to the following: Capacity = total number of flights between two aerodromes; Capacity factor = fuel burnt per flight in tonnes; Activity = total fuel consumption on a route monthly or annually. Note, Capacity *x* Capacity factor = Activity.
 
@@ -158,7 +158,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 > **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**References**
+#### References
 
 1.  Airbus, 2025. *Deploying SAF in our operations.* Airbus. Available at: [<span class="underline">https://www.airbus.com/en/newsroom/stories/2025-03-deploying-saf-in-our-operations</span>](https://www.airbus.com/en/newsroom/stories/2025-03-deploying-saf-in-our-operations?utm_source=chatgpt.com) \[Accessed 7 Nov. 2025\].
 

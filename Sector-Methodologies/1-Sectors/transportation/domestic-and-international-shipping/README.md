@@ -1,11 +1,12 @@
-**Transportation sector: Domestic and International Shipping Emissions**<img src="figures/logo.png" style="width:2.57292in;height:1.11458in" />
+<img src="figures/logo.png" style="width:2.57292in;height:1.11458in" />
 
-Brett Mayes<sup>1,3</sup>, Trevor Thomas<sup>1,3</sup>, Martina Masanova<sup>1,3</sup>, Melanie Tuckerman<sup>1,3</sup>, Mark Powell<sup>1,3</sup>, Dan Knights<sup>2,3</sup>, Max Schofield<sup>1,3</sup> and Ted Mackereth<sup>1,3</sup>
+### Transportation sector: Domestic and International Shipping Emissions
+
+**Brett Mayes<sup>1,3</sup>, Trevor Thomas<sup>1,3</sup>, Martina Masanova<sup>1,3</sup>, Melanie Tuckerman<sup>1,3</sup>, Mark Powell<sup>1,3</sup>, Dan Knights<sup>2,3</sup>, Max Schofield<sup>1,3</sup> and Ted Mackereth<sup>1,3</sup>**
 
 *1) OceanMind, 2) University of Minnesota, 3) Climate TRACE*
 
-Introduction
-============
+#### Introduction
 
 In the IMO’s 2021 4<sup>th</sup> greenhouse gas (GHG) study, GHG emissions from global shipping are estimated to be just below 3% of total anthropogenic GHG emissions (IMO 2021). Despite the significance of this level of emissions, international shipping, along with international aviation, is not explicitly mentioned as part of the Nationally Determined Contributions that countries must submit as part of the Paris Climate Agreement (UNFCCC 2016). This means that, at the moment, other authorities are taking responsibility for decarbonizing shipping. The International Maritime Organization (IMO) is the United Nations (UN) body with authority to regulate international shipping. Positive progress has been made by the IMO to encourage decarbonisation, with adoption of their revised decarbonation strategy in July 2023 (IMO 2023).However, there is contention as to whether this strategy will be sufficient to achieve the level of decarbonisation required to meet the Paris agreement temperature goals, with projections that shipping emissions could account for 17% of global emissions by 2050 (Halim et al. 2018).
 
@@ -21,8 +22,7 @@ From the descriptions above, it is evident that there is a lot of momentum curre
 
 Together, these techniques were used to estimate emissions for CO<sub>2</sub>, CH<sub>4,</sub> N<sub>2</sub>O, and six different non-GHGs per vessel for over 58,000 vessels. This data is reported on the Climate TRACE website as individual trips, as well as aggregated data by ports for over 12,000 ports and at the country level. Alongside this, emissions reductions data is available aggregated to the port level ([<span class="underline">https://climatetrace.org/</span>](https://climatetrace.org/)).
 
-Methodology
-===========
+#### Methodology
 
 The following section describes the datasets employed and the methodology used by OceanMind to develop a model for estimating GHG emissions from the shipping industry. The model was developed in three stages:
 
@@ -32,32 +32,31 @@ The following section describes the datasets employed and the methodology used b
 
 3.  **Fuel and emissions estimates** - Taking the amount of energy required and the specific fuel consumption values for various fuels, the amount of fuel and therefore the amount of emissions can be estimated based on known emissions factors.
 
-    1.  Datasets employed
-        -----------------
+#### 1.  Datasets employed
 
 OceanMind used a variety of data sources for various tasks throughout the process of developing the model. Data was needed not only to train the ML model, but as a validation tool to ensure the emissions estimates were realistic and sensible. Each of the data sources will be described below, as well as how the data was used in the development process.
 
-### IMO GHG Reports and Committee Documentation
+#### IMO GHG Reports and Committee Documentation
 
 The IMO produced models which combine vessel characteristics with their activity to understand the physical processes that affect the output of emissions for vessels, in what they refer to as a ‘bottom up’ approach. In their GHG reports the IMO published the aggregated results of this methodology, showing the trends across different vessel types and shipping sectors (IMO 2015, 2021).From these studies, OceanMind used the auxiliary engine power demand by ship type, size, and operational phase to inform the emissions of vessels when they are in port and running on auxiliary engine power. Specific fuel oil consumption values and emissions factors for various gases were also taken from the IMO GHG reports as well as various documentation from the IMO Marine Environment Protection Committee (MEPC) meetings. Where these documents have been used will be specified throughout this document.
 
-### Lloyd’s List Intelligence Data
+#### Lloyd’s List Intelligence Data
 
 Lloyd’s List Intelligence provides a multitude of vessel characteristics such as their size, maximum engine power and age ([<span class="underline">Data and Analytics \| Lloyd's List Intelligence (lloydslistintelligence.com)</span>](https://www.lloydslistintelligence.com/services/data-and-analytics)). This data was the primary source of input data for the ML models used by OceanMind. The full list of characteristics used in the model can be found in Table 1.
 
-### S&P Global IHS Markit Maritime Database
+#### S&P Global IHS Markit Maritime Database
 
 The IHS Markit database provides characteristics data equivalent to that found in the Lloyd’s List Intelligence data. This data source was used in the same way as the Lloyd’s List Intelligence data to collect characteristics information on new vessels which were added to our available tracked vessels in the 2024 release. This data source helped to fill gaps for vessels that are smaller than 500 GT as well as including newer vessels that have been commissioned since the last refresh of Lloyd’s List Intelligence data.
 
-### Ship GHG emissions data from the European Union’s Monitoring, Reporting, and Validation (EU MRV) dataset
+#### Ship GHG emissions data from the European Union’s Monitoring, Reporting, and Validation (EU MRV) dataset
 
-As mentioned previously, the EU MRV dataset is the largest publicly available set of emissions data for individual vessels ([<span class="underline">THETIS-MRV (europa.eu)</span>](https://mrv.emsa.europa.eu/#public/emission-report)). This dataset provides self-reported vessel emissions, as well as the time spent at sea and amount of cargo transported for individual vessels available. The emissions factors, given in units of kgCO<sub>2</sub>/nautical mile (nmi) travelled, from this dataset were used as a target label for development of the ML aspect of this model, which were then converted to cruising engine power using the carbon content of the known fuel types of the vessels. The full dataset also served as useful validation data for confirming estimates.  
-  
-The detailed information is limited to vessels that made port calls in ports within the economic area (EEA) and involved the loading or unloading of cargo or passengers. This means that estimating emissions for vessels outside of this subset would have to include some form of extrapolation without further data. Also, this dataset only contains a subset of the trips a vessel undergoes, making the identification of a vessel’s activity slightly more difficult to cross reference with other data sources.  
-  
+As mentioned previously, the EU MRV dataset is the largest publicly available set of emissions data for individual vessels ([<span class="underline">THETIS-MRV (europa.eu)</span>](https://mrv.emsa.europa.eu/#public/emission-report)). This dataset provides self-reported vessel emissions, as well as the time spent at sea and amount of cargo transported for individual vessels available. The emissions factors, given in units of kgCO<sub>2</sub>/nautical mile (nmi) travelled, from this dataset were used as a target label for development of the ML aspect of this model, which were then converted to cruising engine power using the carbon content of the known fuel types of the vessels. The full dataset also served as useful validation data for confirming estimates.
+
+The detailed information is limited to vessels that made port calls in ports within the economic area (EEA) and involved the loading or unloading of cargo or passengers. This means that estimating emissions for vessels outside of this subset would have to include some form of extrapolation without further data. Also, this dataset only contains a subset of the trips a vessel undergoes, making the identification of a vessel’s activity slightly more difficult to cross reference with other data sources.
+
 The EU MRV dataset has yearly releases of data but also has continuous updates to the data, resulting in multiple versions of the same year of data. Where this data has been used, the version numbers will be notated.
 
-### Vessel activity and characteristics data from Automatic Identification System (AIS)
+#### Vessel activity and characteristics data from Automatic Identification System (AIS)
 
 <img src="figures/figure1.jpg" style="width:3.25574in;height:2.47436in" alt="A boat on the water Description automatically generated with medium confidence" />
 
@@ -65,7 +64,7 @@ The EU MRV dataset has yearly releases of data but also has continuous updates t
 
 AIS is a system that collects positional data from thousands of ships, originally for the purpose of ship safety, to avoid collisions at sea. Figure 1 shows a representation of vessels relaying the positional data that they get from onboard equipment to each other and to a relay tower in-land. OceanMind has been using this technology to track vessels’ activity for many different purposes, in this case to estimate the distance travelled by vessels to inform emissions estimates. AIS systems generally report a vessel's position, speed and heading very frequently, ranging from several times per minute, to several times per day. Using a combination of data from Orbcomm and Spire, a total of over 58,000 unique vessels are tracked using AIS for the purpose of estimating their emissions. Other messages transmitted on the AIS system not only tell the position of the vessel but also include some information about the characteristics of the vessel. This data was used to validate and fill gaps in the characteristics data we had on vessels.
 
-### Vessel operational data from ship owners and other sources
+#### Vessel operational data from ship owners and other sources
 
 Validation data for individual vessel emissions is not widely available, but several sources were used in the development process, these included:
 
@@ -77,13 +76,13 @@ Validation data for individual vessel emissions is not widely available, but sev
 
 -   Various online sources of vessel characteristics data were used to fill gaps and validate vessel characteristics where appropriate.
 
-    1.  ### Global Fishing Watch (GFW) Emissions Data
+1.  ### Global Fishing Watch (GFW) Emissions Data
 
 Global Fishing Watch, working with the Environmental Markets Lab (emLab) at the University of California, Santa Barbara, is a contributing data provider to the Climate TRACE shipping inventory. GFW's models cover two vessel populations that fall outside the scope of OceanMind's model: AIS-broadcasting vessels for which insufficient characteristics data is available to support OM's approach, and 'dark' vessels that are detected by satellite synthetic aperture radar but are not broadcasting on AIS. The GFW methodology is documented separately ("[<span class="underline">Emissions From Non-Broadcasting Vessels</span>](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/Transportation)"), with further detail available at [<span class="underline">https://emlab-ucsb.github.io/ocean-ghg/</span>](https://emlab-ucsb.github.io/ocean-ghg/).
 
 The collaboration began as a pilot project during 2024. GFW estimates are now delivered on a continuing basis and merged with the OceanMind dataset ahead of each release, producing the combined inventory described in Section 2.5.
 
-### Shipping sector inventory data
+#### Shipping sector inventory data
 
 Another method used for verification of OceanMind’s modelled emissions estimates was to compare to other emissions inventories. Where possible, the emissions estimates were adjusted to match the coverage of the relevant inventory, with this process described in section 3.1.2. The following inventories were included for comparison:
 
@@ -91,7 +90,7 @@ Another method used for verification of OceanMind’s modelled emissions estimat
 
 -   Emissions Database for Global Atmospheric Research (EDGAR) (European Commission. Joint Research Centre. 2023) compared emissions from all shipping.
 
-    1.  ### Data on port locations
+1.  ### Data on port locations
 
 In addition to estimating vessel emissions, port emissions were estimated by aggregating emissions from vessel trips and port stays. The locations of ports were taken from a multitude of sources. These include the World Port Index (‘Maritime Safety Information’, n.d.), Pew Charitable Trusts (‘The Pew Charitable Trusts’, n.d.), along with a ports database that OceanMind has been building for many years. OceanMind’s Port database is constantly growing and adapting based on new information gained from satellite imagery as well as clustering analysis being carried out on vessel behaviour. An example of port locations and attributions is shown in Figure 2. As of September 2026, OceanMind provides aggregated emissions data for over 12,000 ports globally.
 
@@ -99,12 +98,11 @@ In addition to estimating vessel emissions, port emissions were estimated by agg
 
 *Figure 2 - A) Climate TRACE UI displaying the attribution of 2025 emissions to ports, where each circle represents a port and the size of the circle is dependent on the relative emissions of that port. Red box indicates B) the River Thames with known ports highlighted.*
 
-Data preparation
-----------------
+#### Data preparation
 
 With data coming from various sources, and some of the sources relying on self-reported data, several stages of data preparation were required to make sure the data was reliable and fit for the purpose of training a ML algorithm. Primarily the EU MRV and Lloyd’s List Intelligence datasets were used in this stage of development.
 
-### Data Cleaning
+#### Data Cleaning
 
 To assemble a set of vessels that were suitable for training the ML model, the vessels available in the EU MRV’s datasets for 2018 (v261), 2019 (v193) and 2020 (v67) reports were collected. This comprises 16,665 unique vessels, with a total of 36,180 unique entries across the three years of reports. Of those 16,665 vessels, 16,516 had data on vessel characteristics available in Lloyd's List Intelligence, reducing the unique entries to 35,981. The AIS data for these vessels was then obtained, for the purpose of removing vessels from the training set that had poor quality tracking data available, as they would be impossible to validate. Ship entries were removed if they fell into the following categories where annual time at sea of less than 1 week of greater than 1 year and/or annual distance travelled of less than 1000 km, removing 1,799 unique entries.
 
@@ -118,7 +116,7 @@ The final stage of data cleaning was to add three engineered variables to aid in
 
 -   **Length**: Vessel length taken as the maximum value of the LengthOverallLOA or LengthRegistered in the metadata files.
 
-    1.  ### Imputation of missing information
+1.  ### Imputation of missing information
 
 Once the data had been cleaned and engineered to be fit for purpose, there was another barrier before model development could be carried out. This was that the vessel characteristics metadata was not complete for all vessels. To rectify this, models were trained on vessels with complete records, to be able to predict and impute the values for vessels that had information missing.
 
@@ -141,12 +139,11 @@ The *R* (R Core Team, n.d.) package for Multivariate Imputation by Chained Equat
 | PowerKwMax          | Maximum power of main engines                          | 1,491 Kw       | 20.1 %         |
 | PowerKwAux          | Power of auxiliary engines                             | 830.8 Kw       | 65.3 %         |
 
-Model Development
------------------
+#### Model Development
 
 After preparing the data sufficiently, development of the model could commence. The first stage was selecting a ML algorithm that would be capable of predicting a vessel's emissions factor (kg CO<sub>2</sub> /nmi) and converting that to a power required at cruising speed. Using this power requirement along with the vessel activity the amount of energy, and therefore the amount of fuel, required to carry out activities can be estimated. The following sections describe the process carried out to achieve both steps.
 
-### ML Model
+#### ML Model
 
 Several ML algorithms were tested with the dataset, to determine which was the best suited to the problem. These algorithms were random forests, extreme gradient boosting, ridge-penalised regression on continuous variables, and linear regression using the PowerKwMax variable. The RStudio packages used to implement these were randomForest, xgboost, caret, and base, respectively.
 
@@ -169,7 +166,7 @@ The final model used to estimate the emissions factor after the entire testing p
 | Methanol (for ERS)          | 10000<sup>a</sup> | 1.375<sup>b</sup>                   | 0<sup>h</sup>      | 0<sup>h</sup>       | \-             | \-            | \-             | \-               | \-                 | \-            |
 | Bio-LNG (for ERS)           | 18000<sup>a</sup> | 2.621<sup>g</sup>                   | 0.0002<sup>g</sup> | 0.00005<sup>g</sup> | \-             | \-            | \-             | \-               | \-                 | \-            |
 
-### Energy and Emissions Estimation
+#### Energy and Emissions Estimation
 
 Once the power required to propel the vessel as cruising speed is known, the next stage was to then estimate the relationship between the speed of the vessel and the required power at that speed. A study carried out to investigate the power relationship between the speed of a vessel and the power required to overcome the frictional resistance of the vessel travelling through the water found that the power relationship fell somewhere between 2 and 3.5 dependent on vessel type and the draught of the vessel at the time (Berthelsen and Nielsen 2021). Based on these values, a basic comparison between the speed of a vessel at various exponents and the amount of fuel consumed as reported in the EU MRV dataset was done for the set of vessels described above. The exponent that minimised the error on this comparison was 2.8, so that was the value used in this first version of the model. A more in-depth investigation into this relationship, as well as additional dependencies on the draught of the vessel is something that will be investigated deeper going forward, as outlined in Section 0.
 
@@ -183,24 +180,23 @@ Using the combined energy consumption from the above sources, the total energy c
 
 *Figure 3 - Flowchart of the model development process, showing the datasets employed in this stage.*
 
-Model Deployment
-----------------
+#### Model Deployment
 
 Using vessel data from Lloyd's List Intelligence as well as new vessel information gathered from the IHS Markit database and other sources, any vessels that had sufficient AIS data could be inserted into the model to estimate their emissions. This resulted in emissions estimates on a per trip/port stay basis for over 58,000 unique vessels spanning the period 2015-2026, an improvement of over 10,000 vessels since our 2023 data release. This data will continue to be updated on a monthly basis as more AIS data is processed by our model. As part of the reporting process, these emissions were attributed to ports as described below in section 2.4.1, followed by aggregation to the country level described in section 2.4.2. Figure 4 shows a flowchart of how the data passes through various layers of the pipeline to arrive at the Climate TRACE website. For a visualisation of the emissions, as well as the option to download the data, please visit the [<span class="underline">Climate TRACE website</span>](https://www.climatetrace.org/). A description of the column definitions can be found in the tables provided in Appendix B: Metadata descriptions.
 
-### Port Attribution
+#### Port Attribution
 
-To improve the visualisation of geographical emissions estimates, two terms were used to define a monitoring period, relating to whether a vessel has been travelling between ports (trip) or staying at a singular port (port stay):  
-  
-**Trip: **A journey that starts with the vessel within one port and ends with a vessel in another port. The emissions from a trip are divided equally between the origin and destination ports.  
-  
-**Port Stay: **A period that a vessel spends within a single port region. All emissions from a port stay are attributed to the holding port.  
-  
+To improve the visualisation of geographical emissions estimates, two terms were used to define a monitoring period, relating to whether a vessel has been travelling between ports (trip) or staying at a singular port (port stay):
+
+**Trip: **A journey that starts with the vessel within one port and ends with a vessel in another port. The emissions from a trip are divided equally between the origin and destination ports.
+
+**Port Stay: **A period that a vessel spends within a single port region. All emissions from a port stay are attributed to the holding port.
+
 To determine when a vessel visits a port, OceanMind developed a novel model referred to henceforth as the ‘berthing algorithm’. This model uses clustering techniques to determine the navigational status of a vessel, i.e. at berth, at anchor, in transit. Using these operational modes, along with the location of berthing or anchorage events allows for the identification of beginning and end points of trips. This model update was paramount to being able to also identify activities where a vessel is loitering before and after stopping at port, which is necessary for the calculation of the ERS strategy. Another benefit of this approach is that events where a vessel has on/offloaded cargo using offshore infrastructure/techniques is still captured as a port stay and can be adequately attributed to the port/country that is nearest to the offshore area.
 
 If a vessel was seen to exhibit behaviour consistent with a port stay in an area where OceanMind currently has no labelled port then a port stay is still generated, and the emissions are instead attributed to the nearest Global Data Lab (GDL) region (GlobalDataLab, n.d.) to the event location for the purpose of country level aggregation.
 
-### Country aggregation
+#### Country aggregation
 
 The final level of aggregation available for vessel emissions is at the country level. To achieve this, all emissions that were assigned to ports were also assigned to the country associated with that port. It should be noted that the temporal aggregation is done based on the end time of a trip, so monthly totals are based on trips that ended within that month.
 
@@ -208,8 +204,7 @@ The final level of aggregation available for vessel emissions is at the country 
 
 *Figure 4 - Flowchart showing the model deployment process, with the datasets employed at the top and the output reports at the bottom.*
 
-Combined dataset with Global Fishing Watch (GFW) data
------------------------------------------------------
+#### Combined dataset with Global Fishing Watch (GFW) data
 
 In 2024 GFW completed a pilot project with Climate TRACE to attempt to capture emissions from lower information and dark vessels that aren’t captured by OM’s model. The details of the GFW methodology can be found on their website ([<span class="underline">https://emlab-ucsb.github.io/ocean-ghg/</span>](https://emlab-ucsb.github.io/ocean-ghg/)) or a summary is available from the ClimateTRACE website. To integrate their dataset with the OM dataset, first each trip entry was checked to see if its IMO or MMSI number matched any which were already covered in the OM dataset, to minimise the risk of double counting emissions across both datasets. Once the dataset had been deduplicated the start and end points of each trip was then attributed to the closest port in the OM ports database. This combined dataset aims to have increased coverage, covering over 570,000 unique vessels across the 2015-2026 period. Many of these vessels are small, low information vessels which have had their type and characteristics estimated using GFW’s algorithms.
 
@@ -217,12 +212,11 @@ Section 2.6.1 discusses the OM methodology for uncertainty and confidence. For c
 
 As part of the pilot project, GFW also attempted to estimate the emissions of the ‘dark’ fleet globally, with their methods described in the document linked above. ‘Dark’ in this context refers to the vessels which are active on the ocean but are not seen to be transmitting on AIS for any given reason. These emissions have been assigned to the iso3 code ‘UNK’ as they cannot be attributed to any specific country.
 
-Uncertainty and Confidence
---------------------------
+#### Uncertainty and Confidence
 
 Part of the most recent Climate TRACE data release was to provide uncertainty and confidence estimates for the asset level emissions data. The following sections describe the process used by OceanMind to provide this information.
 
-### Uncertainty and Confidence Methodology
+#### Uncertainty and Confidence Methodology
 
 For a first pass at estimating uncertainty on emissions data, each variable for vessels is assumed to be normally distributed and the provided values for uncertainty are the calculated standard deviation of the distributions. In future, more time is needed to explore the distributions of each variable in depth to improve the uncertainty estimates, which will be discussed in section 4.1. At the port level, standard error propagation was used to combine the uncertainty values of vessels that contributed to the port’s emissions for that reporting period.
 
@@ -242,14 +236,13 @@ Using this basis, confidence values were assigned to the data for each asset ind
 
 For confidence on ports, a similar ethos was used, with ports that lie within countries that are in the European Economic Area (EEA) being assigned slightly higher confidence values. This is because of the higher volume of vessels visiting these ports that are within the EU MRV dataset. The overall confidence levels for ports are lower, as the port level data is an aggregation of a vast number of trips and port stays for thousands of vessels, where the distribution of which vessels visit certain ports is not entirely understood.
 
-Emissions Reduction Solutions
------------------------------
+#### Emissions Reduction Solutions
 
 Emissions Reduction Solutions (ERSs) for this sector include three base strategies: just in time arrivals, alternative fuel and energy sources, and slow steaming. There are also combinations of these strategies which will be processed to understand how combining these strategies could impact the overall emissions saved.
 
 *Note: Only rank 1 strategies are provided for assets on the Climate TRACE website and additional strategies will be made available in future releases. Rank 1 strategies favour the highest emissions reduction solution strategy possible.*
 
-### Just in Time Arrivals
+#### Just in Time Arrivals
 
 Vessels can spend a lot of time loitering outside ports, often waiting for a berth to be free to unload or onload cargo. Sometimes this is done at anchor, where a vessel’s auxiliary engines are required to power onboard systems. In other cases, the vessel will cyclically steam some distance and then drift back, with some ports even having designated areas for this activity. The emissions from these loitering activities are essentially ‘wasted’ emissions as the vessels are not doing anything productive but still emitting GHGs and other pollutants. Improving port to port logistics to ensure that vessels undertake trips that arrive at a port at a time where a berth is already open for them to dock means that these activities can be reduced.
 
@@ -259,7 +252,7 @@ GFW data provides trip and port-visit information separately. Therefore, trips a
 
 Ports which currently have observable loitering activities could see emissions reductions of around 8% on average. This is estimated by assuming that any identified loitering activities are avoided, so these portions of a trip are removed from the emissions of the trip. If every port which has loitering activities were to eradicate all emissions from loitering it could reduce global shipping emissions by around 2%. It should be noted that a large impact from this strategy is not only the overall emissions reduction but the focus on reducing emissions nearer to ports, where the public health concern from air pollutants is most prevalent, with some ports being able to reduce the emissions significantly this could help drive change at these ports.
 
-### Alternative fuel and energy sources
+#### Alternative fuel and energy sources
 
 Over 90% of the fuels burned in the shipping sector are still marine diesel or heavy fuel oils, which are highly polluting fossil fuels. Replacing these fuels with alternatives which are less polluting and have more sustainable supply chains could help reduce the fleet’s emissions significantly.
 
@@ -267,32 +260,29 @@ Extensive research was carried out on the major factors to be considered when ch
 
 Applying this technique has the potential to reduce emissions by \~35% fleet wide, with the Methanol switch being the more impactful swap (see Table 2 for emissions factors of the fuels for comparison). These fuels were chosen based on their emissions savings, availability and ease of retrofitting. Bio-diesel was considered but not recommended due to uncertainty around well to wake emissions being potentially higher than regular MDO. Note that the shipping sector data is made up of a combination of OceanMind (OM) and GlobalFishingWatch (GFW) data, only OM data is affected by this ERS.
 
-### Slow Steaming
+#### Slow Steaming
 
 A potentially effective solution for reducing the emissions of the shipping sector is to reduce the speed of vessels, known as slow steaming. Because of the roughly cubic relationship between speed and fuel usage, a 20% reduction in speed could save up to 50% of emissions on an hourly basis. The reduction in speed means that for a given distance you would see emissions savings of 30-40% given the time to travel would be longer.
 
 We have decided to firstly target vessels that spend a lot of their time loitering upon entrance/exit of ports to understand how much they could slow down by whilst still carrying out the same trips in the same amount of time. This is achieved by taking the overall trip a vessel has undertaken and simulating what the emissions could have been if the vessel had reduced its speed such that it still arrives at the destination port at the same time. Applying this technique has the potential to reduce emissions by at least 17% globally, with individual vessels potentially saving much more depending on the amount of loitering they engage in. A lower speed limit of 70% of the top speed of a vessel has been applied as low load conditions can affect the emissions profile and maintenance cycle of the engine.
 
-Summary of Dataset
-------------------
+#### Summary of Dataset
 
 To summarise, OceanMind, in collaboration with GFW delivers a comprehensive dataset of the emissions data from over 500,000 vessels in the global fleet, including vessels with readily available data, lower information vessels as well as the so called ‘dark fleet’. This data includes estimates for CO<sub>2,</sub> CH<sub>4</sub>, N<sub>2</sub>O, as well as several non-GHGs like NO<sub>x</sub>, SO<sub>x</sub> and particulate matter. The trips that vessels carry out are documented on a trip by trip basis, and are also aggregated up to the port and country level, documenting the emissions attributable to over 12,000 ports.
 
 Additional to the emissions dataset, emissions reduction solutions are provided for the strategies of just in time arrivals, alternative fuel sources, and slow steaming. This provides some insight into ways that vessel operators and ports could be working to reduce the emissions impact of shipping.
 
-Results and Validation
-======================
+#### Results and Validation
 
 The output achieved by the model can be found in section 2.4, which explains the various levels of aggregated data that are published by Climate TRACE. Another dataset delivered is the uncertainty and confidence on the reported values of each asset’s emissions data, described in section 2.6. Several techniques were then used to validate the results of the model against other data sources, described in section 3.1.
 
 *Note: These results are based on the OceanMind and GFW shipping data in Climate TRACE release 5.11*
 
-Validation
-----------
+#### Validation
 
 To validate the emissions estimates, a few different techniques were used. Firstly, a comparison to measured values from ship owners (section 3.1.1) was used to test if there was sufficient agreement between the estimated emissions and those measured from highly granular data collected directly from vessels. Secondly, using time series analysis (section 3.1.1) shows that trends in the data match expected results from known events. Finally, the data in the combined OM and GFW dataset is compared to other inventories (section 3.1.2).
 
-### Comparison to measured values
+#### Comparison to measured values
 
 The measured emissions values described in section 2.1.6 were obtained for the purpose of validating emissions estimates from the model. Siglar provided a sample of 12 vessels for this study, which were compared to the previous versions of the OceanMind model (2021 and 2022) as well as the model version developed in 2025 (v310725).
 
@@ -327,7 +317,7 @@ Figure 5 shows a box and whisker plot made using the data from Table 3, with 0 o
 
 *Figure 5 - Box and whisker plot showing the distribution of the differences between measured emissions values for 12 vessels from Siglar and the emissions estimates of the same vessels from OceanMind mode with versions from 2021, 2022, and 2025 (v310725).*
 
-### Comparison to Other Inventories
+#### Comparison to Other Inventories
 
 Table 5 shows the total estimated global emissions from the Climate TRACE emissions database, including international and domestic emissions, based on the combined dataset supplied in collaboration between OM and GFW (as described in Section 2.5). To compare similar emission estimates from other sources (Table 6), most recent years available for several inventories were used.
 
@@ -353,7 +343,7 @@ Table 5 shows the total estimated global emissions from the Climate TRACE emissi
 
 This comparison shows that the CT dataset has a closer agreement with the dataset from EDGAR than the data from the IMO for the years where both are available. Both comparisons however show that the agreement was at its worst in 2015-2016 which is likely due to lower AIS coverage in that period. The agreement between IMO and CT for the 4 years of overlap was steadily improving, with the 2022-2025 years of CT data being within 5% of the last year of IMO estimates. The CT database seems to be growing faster than EDGAR estimates the emissions from shipping are growing, the cause for this is not currently known, but it could be that the growth of the fleet is underestimated in EDGAR’s dataset. Note that EDGAR has not released data for the 2025 period as of August 2026, and the IMO are not set to release another GHG study until 2028.
 
-### Time Series Analysis
+#### Time Series Analysis
 
 An important aspect of validating the emissions estimates is not only to understand the accuracy of individual voyages’ estimates but to show that larger scale trends can be observed in the data. For this purpose, OceanMind carried out a study on cruise shipping during the COVID-19 pandemic. The World Health Organisation (WHO) declared COVID-19 an international pandemic in the week of March 16<sup>th</sup>, 2020, which coincided with greatly reduced activity from cruise ships (Sampson 2020; March et al. 2021). Figure 6 shows the observed trend of the CO<sub>2</sub> emissions estimates for cruise ships that appear in the Climate TRACE database. The Climate TRACE emissions estimates follow the expected trend, with emissions dropping significantly from March 2020, reaching a low point in August 2020, and approaching pre-COVID levels again by the end of 2021. Over the period of March 2020 to December 2021 an estimated 22.5 million tonnes of CO<sub>2</sub> was saved compared to the monthly average emissions outside of this time period.
 
@@ -367,8 +357,7 @@ A more recent example of these trends being visible in the emissions data is sho
 
 *Figure 7 - Monthly emissions totals for the port of Baltimore, Maryland from January 2020 to July 2024 based on the OM emissions model. The black dashed line represents the date of the Francis Scott Key Bridge Collapse (March 26th, 2024).*
 
-Country Emissions Results
--------------------------
+#### Country Emissions Results
 
 Table 7 shows the table of the top 10 countries ordered by their CO<sub>2</sub>e emissions in 2025. The top 10 countries emit a total of 585 million tonnes of CO<sub>2</sub>e, which accounts for 54% of all shipping emissions in that period. This shows that targeting certain areas of the world could help to drive significant impact in reducing global shipping emissions.
 
@@ -387,13 +376,11 @@ Table 7 shows the table of the top 10 countries ordered by their CO<sub>2</sub>e
 | **Singapore**         | 25.8                                                          |
 | **India**             | 23.8                                                          |
 
-Discussion and Conclusion 
-=========================
+#### Discussion and Conclusion
 
 Climate TRACE provides emissions data at a lower latency compared to other GHG inventories. As a result, the OceanMind model for estimating shipping emissions changes, sometimes quite significantly. The underlying ML model has not yet changed but the way in which the output is used is now very different, with the transition to estimating emissions using energy and fuel-based calculations. The port attribution algorithm has also been fully replaced with the berthing algorithm, which has greatly improved the reliability of identifying port visit events. The aim with these changes is to more accurately represent shipping emissions, as well as improving the attribution of emissions to the respective ports that a vessel visits. These changes help us to lay the groundwork for additional adjustment factors based on the effect on the amount of power required by a vessel.
 
-Model Limitations and Improvements
-----------------------------------
+#### Model Limitations and Improvements
 
 An important part of developing any estimation model is to be able to reflect on the work carried out and realise where it could have been done differently. There are many factors that could contribute to uncertainties in emissions estimation, and this section aims to highlight and summarise those that are known to OceanMind at the time of writing. Where possible and applicable, improvements that could mitigate or eliminate these limitations are also discussed.
 
@@ -413,12 +400,11 @@ An important part of developing any estimation model is to be able to reflect on
 
 -   For the new calculations of capacity factor and emissions factor as outlined by CT (described in the tables in Appendix A) vessels that were staying in ports with an activity value of 0 caused issues in the calculations due to dividing by 0. Because of this, activity in ports is set to 1 nautical mile if it is less than 1 nautical mile. This does not affect the emissions.
 
-    1.  ERS Discussion
-        --------------
+#### 1.  ERS Discussion
 
 The ERS presented in Section 2.7 are theoretical strategies that could reduce the emissions from the shipping sector. Below is a discussion of examples where these strategies have been tested or implemented successfully as well as consideration of some of the factors that could affect the widespread adoption of the strategies.
 
-### Just in Time Arrivals
+#### Just in Time Arrivals
 
 There have been trials and examples of attempts at implementation of ‘Just in Time’ arrivals, notably at the ports of Rotterdam and Singapore. In a trial done in 2020 by the port of Rotterdam, their Just-In-Time arrival system saved 8-9% of fuel burned on average for the ships (Port Technology Team 2020). Following this, in October 2024 the port of Rotterdam implemented a strategy to encourage just in time arrivals by giving vessels a designated berth time when they enter the geo-fenced area (Port of Rotterdam 2024). As of January 2024 Singapore has also implemented Just-In-Time arrivals strategies for various terminals in the port, giving vessels 72 hours of notice on their specific berthing (UK P&I 2024).
 
@@ -426,18 +412,17 @@ In the CT ERS data delivered for 2024, an estimated 2% of emissions at the port 
 
 There is potential for this ERS strategy, however there are some barriers to wider adoption of the strategy including; visibility to the vessel operators of terminal availability in a port, data sharing and standardisation between port authorities and vessel operators, contractual obligations for vessel operators (PortXchange, 2023; IMO GreenVoyage2050, no date). For full adoption of this ERS to be possible, a global port network would need to be established, where all major ports and vessel operators communicate their intentions in real time to establish scheduled arrival times for all vessels.
 
-### Alternative Fuels and Energy Sources
+#### Alternative Fuels and Energy Sources
 
 There are already some vessels in the dataset using fuels like methanol and hydrogen, which is a great step towards these fuels being more widely adopted. However, according to the predicted fuel type in the OceanMind database, this currently amounts to fewer than 10 vessels using these fuels thus far. The key factors in the adoption of future fuels for the shipping sector is their cost, availability, and the infrastructure needed to get the fuels onboard vessels. This is where bio-fuels tend to win out as existing infrastructure can be almost reused with minimal cost, however the production cost of the fuels is much higher (‘Low-Carbon Fuels for Shipping and Maritime Transport’, n.d.). However, fuels like ammonia, methanol and hydrogen have interest in them, and thus the infrastructure is being developed but it may be up to the first mover to cause a shift towards one of those alternatives (‘How Infrastructure Will Lay the Foundations for Alternative Fuels \| Marine & Offshore’, n.d.).
 
 Methanol, ammonia and hydrogen also hold the flag for true net zero fuels, but that depends on the supply chain to produce them (‘Enhanced Modelling of Maritime’s Future Fuel Mix’, n.d.). For the fuels to be truly net zero, sustainable supply chains need to be established using renewable energy, producing so called ‘green’ fuels.
 
-### Slow Steaming
+#### Slow Steaming
 
 Slow steaming has been discussed in shipping since at least 2007, when some operators implemented the strategy following high oil prices (Maersk 2012). However, one of the major concerns with slow steaming is the reduction of the fleet capacity, i.e. if vessels move slower then fewer journeys can be completed per year. By applying this ERS on journeys where loitering occurs only, this shows how slow steaming can be applied and save emissions without reducing fleet capacity as all trips can be carried out in at least the same time frame as they originally were.
 
-Conclusions 
------------
+#### Conclusions
 
 OceanMind has developed a model using a combination of ML and empirical techniques to estimate emissions for over 58,000 vessels over 10.5 years of activity, with monthly updates to continue through 2026 and into 2027. The dataset is the first of its kind to offer free, publicly available emissions data that is granular down to the individual vessel trips. Another unique aspect of our model is that it provides flexible attribution to individual vessels, vessel owners, flag states, areas of operation, or other aspects of shipping. This allows data users to customise emissions estimates to suit their purpose. Climate TRACE aims to be able to produce an inventory that can give a global picture of GHG emissions from the entire shipping sector. Work is being carried out to improve estimations of the uncertainty and coverage gaps so the emissions data can be as reliable as possible. Additionally, Climate TRACE aims to be able to provide up to date information that is consistently updated so that worrying trends can be addressed promptly. A combined dataset of OM and GFW estimations has also been gathered, covering over 570,000 vessels globally. This is a step towards 100% coverage which will hopefully be achievable with model progressions from both parties.
 
@@ -447,8 +432,7 @@ To improve our model, next steps include improved accuracy in estimates for indi
 
 The Climate TRACE dataset is available freely so that users can leverage the dataset to directly make impacts within the shipping sector. Table 5 shows the emissions increases by year for the Climate TRACE dataset, with roughly a 90% increase in emissions from 2015-2025. This large increase could also be related to the increase in AIS coverage over the years, but even in the last few years (2021-2025) an increase of around 10% has been seen. There has been an observed downturn in emissions for the year of 2025, but it is unknown at this stage whether this is caused by reflagging or if global events like tariff tensions and regional instability around the Red Sea may have had a noticeable impact on the shipping sector. Organisations like the IMO are turning their focus towards implementing regulations on shipping emissions to bring them into line with the Paris Accord, with their net-zero framework to come into effect in 2027. The hope is that our dataset can be used to help inform and drive conversation on this topic, highlighting the rapid increase in the emissions from global shipping to encourage policy change.
 
-Appendix A: Data Summary
-========================
+#### Appendix A: Data Summary
 
 OceanMind and GFW’s combined dataset provides the following data on the Climate TRACE website:
 
@@ -474,8 +458,7 @@ Emissions estimates were generated monthly for years 2015 to 2026 with the Clima
 | **What is the difference between a “NULL / none / nan” versus “0” data field?** | “0” values are for true non-existent emissions. If we know that the sector has emissions for that specific gas, but the gas was not modelled, this is represented by “NULL/none/nan”       |
 | **total\_CO2e\_100yrGWP and total\_CO2e\_20yrGWP conversions**                  | Climate TRACE uses IPCC AR6 CO<sub>2</sub>e GWPs. CO<sub>2</sub>e conversion guidelines are here:https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC\_AR6\_WGI\_FullReport\_small.pdf |
 
-Appendix B: Metadata descriptions
-=================================
+#### Appendix B: Metadata descriptions
 
 *Table B.1 - Asset level metadata description for asset-climate\_trace\_domestic (international)-shipping-ship\_MMDDYY*
 
@@ -611,8 +594,7 @@ Appendix B: Metadata descriptions
 | **induced\_sector\_3\_activity\_conversion\_rate** | N/A                                                                                                                |
 | **benchmark\_asset\_id**                           | N/A                                                                                                                |
 
-Appendix C: Confidence and Uncertainty
-======================================
+#### Appendix C: Confidence and Uncertainty
 
 *Table C.1 - Describing the confidence and uncertainty for each attribute for vessels in the Climate TRACE dataset. “other\_gas” refers to any other gases reported by OM that aren’t explicitly listed.*
 
@@ -644,7 +626,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 **Disclaimer:** The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
 
-**References**
+#### References
 
 1.  ‘AIS Transponders’. n.d. Accessed 1 November 2023. https://www.imo.org/en/OurWork/Safety/Pages/AIS.aspx.
 
