@@ -37,8 +37,9 @@ OpenAI’s ChatGPT and Anthropic’s Claude assisted with methodology documentat
 | I want to… | Go to |
 |---|---|
 | Understand how one sector is estimated | [Sector methodologies](./Sector-Methodologies/1-Sectors/) |
-| See what changed in the latest release | [Changelogs](./Changelogs/) |
-| See the publications, peer-reviewed articles, and mentions of the Climate TRACE research and sectors | [Publications and references](./Publications-and-References/) |
+| See what changed in the latest data release | [Changelogs](./Changelogs/) |
+| I want to access previous data releases | [Go to the Climate TRACE Zenodo repository](https://zenodo.org/records/22919723) |
+| Find publications and articles about Climate TRACE | [Publications and references](./Publications-and-References/) |
 | Understand why our numbers differ from national inventories | [How Climate TRACE compares to other inventories](https://climatetrace.org/faqs#how-does-climate-trace-compare-to-other-emissions-inventories) |
 | Get my questions answered | [Climate TRACE FAQ](https://climatetrace.org/faqs) |
 
