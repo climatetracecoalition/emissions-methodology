@@ -7,6 +7,7 @@ Release folders are named `YYYY-MM_vX.Y.Z` (release month, then version) so they
 | Version | Date | Changelog |
 |---|---|---|
 | v4.8.0 | Oct 2025 | [README](./2025-10_v4.8.0/) · [PDF](./2025-10_v4.8.0/4.8.0_combined-changelog-climate-trace.docx.pdf) |
+| v4.7.1 | Sep 2025 | [Data guide (README xlsx)](./2025-09_v4.7.1/READ_ME_Climate_TRACE_v4.7.1_Sept2025.xlsx) — no separate changelog for this patch |
 | v4.7.0 | Sep 2025 | [README](./2025-09_v4.7.0/) · [PDF](./2025-09_v4.7.0/4.7.0_combined-changelog-climate-trace.docx.pdf) |
 | v4.6.0 | Aug 2025 | [README](./2025-08_v4.6.0/) · [PDF](./2025-08_v4.6.0/4.6.0_combined-changelog-climate-trace_2025-08-21.docx.pdf) |
 | v4.5.0 | Jul 2025 | [README](./2025-07_v4.5.0/) · [PDF](./2025-07_v4.5.0/4.5.0_combined-changelog-climate-trace_2025-07-25.pdf) |

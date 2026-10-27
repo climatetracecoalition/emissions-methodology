@@ -326,7 +326,7 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 8.  BEE (2022) Energy and Resource Mapping of MSMEs in India: Paper Sector Report. New Delhi: Bureau of Energy Efficiency. Available at: <span class="underline">https://beeindia.gov.in/WriteReadData/RTF1984/RTF-PDF-090b95dfac330902\_1776169393.pdf</span> (Accessed: 20 October 2026).
 
-9.  Biond (2026) Boletim Estatístico 2024. Lisbon: Biond – Associação das Bioindústrias de Base Florestal (formerly CELPA). Available at: <span class="underline">https://www.biond.pt/publicacoes/boletim-estatistico-2024</span>/ (Accessed: 20 October 2026).
+9.  Biond (2026) Boletim Estatístico 2024. Lisbon: Biond – Associação das Bioindústrias de Base Florestal (formerly CELPA). Available at: [<span class="underline">https://www.biond.pt/publicacoes/boletim-estatistico-2024/</span>](https://www.biond.pt/publicacoes/boletim-estatistico-2024/) (Accessed: 20 October 2026).
 
 10. CEPI (2023) Key Statistics 2022: European pulp & paper industry. Brussels: Confederation of European Paper Industries. Available at: [<span class="underline">https://www.cepi.org/wp-content/uploads/2023/07/2022-Key-Statistics-FINAL.pdf</span>](https://www.cepi.org/wp-content/uploads/2023/07/2022-Key-Statistics-FINAL.pdf)
 
@@ -336,7 +336,7 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 13. CER (2019) Market Snapshot: Pulp and paper sector uses less energy, produces less material than it did 20 years ago, 20 November. Calgary: Canada Energy Regulator. Available at: <span class="underline">https://www.cer-rec.gc.ca/en/data-analysis/energy-markets/market-snapshots/2019/market-snapshot-pulp-paper-sector-uses-less-energy-produces-less-material-than-it-did-20-years-ago.html</span> (Accessed: 20 October 2026).
 
-14. CMPC (2026) Reporte Integrado 2025. Santiago: Empresas CMPC S.A. Available at: <span class="underline">https://storage.googleapis.com/assets-wordpress-cmpc/assets/uploads/pdf/reporte-integrado/REPORTE-INTEGRADO-CMPC-2025-WEB-v4.pd</span>f (Accessed: 20 October 2026).
+14. CMPC (2026) Reporte Integrado 2025. Santiago: Empresas CMPC S.A. Available at: [<span class="underline">https://storage.googleapis.com/assets-wordpress-cmpc/assets/uploads/pdf/reporte-integrado/REPORTE-INTEGRADO-CMPC-2025-WEB-v4.pdf</span>](https://storage.googleapis.com/assets-wordpress-cmpc/assets/uploads/pdf/reporte-integrado/REPORTE-INTEGRADO-CMPC-2025-WEB-v4.pdf) (Accessed: 20 October 2026).
 
 15. COPACEL (2026) Rapport statistique 2025 de l’industrie papetière française. Paris: COPACEL. Available at: [<span class="underline">https://copacel.fr/wp-content/uploads/2026/05/Rapport-Statistique-COPACEL-2025.pdf</span>](https://copacel.fr/wp-content/uploads/2026/05/Rapport-Statistique-COPACEL-2025.pdf)
 
@@ -380,7 +380,7 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 35. Favero, A., Thomas, V.M. and Luettgen, C. (2017) *Life Cycle and Market Review of the Major Alternative Fibers for Paper Production*. Atlanta, GA: Georgia Institute of Technology, for Green Seal. Available at: [<span class="underline">https://greenseal.org/wp-content/uploads/Life-Cycle-Alternative-Fibers-for-Paper-Production.-April-2017\_.pdf</span>](https://greenseal.org/wp-content/uploads/Life-Cycle-Alternative-Fibers-for-Paper-Production.-April-2017_.pdf)
 
-36. Francis, D.W., Towers, M.T. and Browne, T.C. (2002) Energy Cost Reduction in the Pulp and Paper Industry: An Energy Benchmarking Perspective. Ottawa: Natural Resources Canada / CIPEC. Available at: <span class="underline">https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/publications/infosource/pub/cipec/pulp-paper-industry/pdf/pulp-paper-industry.pd</span>f (Accessed: 20 October 2026).
+36. Francis, D.W., Towers, M.T. and Browne, T.C. (2002) Energy Cost Reduction in the Pulp and Paper Industry: An Energy Benchmarking Perspective. Ottawa: Natural Resources Canada / CIPEC. Available at: [<span class="underline">https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/publications/infosource/pub/cipec/pulp-paper-industry/pdf/pulp-paper-industry.pdf</span>](https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/publications/infosource/pub/cipec/pulp-paper-industry/pdf/pulp-paper-industry.pdf) (Accessed: 20 October 2026).
 
 37. Furszyfer Del Rio, D.D., Sovacool, B.K., Griffiths, S., Bazilian, M., Kim, J., Foley, A.M. and Rooney, D. (2022) 'Decarbonizing the pulp and paper industry: A critical and systematic review of sociotechnical developments and policy options', *Renewable and Sustainable Energy Reviews*, 167, 112706. Available at: [<span class="underline">https://doi.org/10.1016/j.rser.2022.112706</span>](https://doi.org/10.1016/j.rser.2022.112706)
 
@@ -392,13 +392,13 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 41. IFC (2025) *World Bank Group’s IFC and XSD Partner to Boost Jobs and Sustainability in Malaysia’s Paper Industry*. International Finance Corporation, 18 December. Available at: [<span class="underline">https://www.ifc.org/en/pressroom/2025/world-bank-group-s-ifc-and-xsd-partner-to-boost-jobs-and-sustainability-in-malaysi</span>](https://www.ifc.org/en/pressroom/2025/world-bank-group-s-ifc-and-xsd-partner-to-boost-jobs-and-sustainability-in-malaysi) (Accessed: 7 October 2026).
 
-42. Ilim Group (2022) Отчет об устойчивом развитии 2021 \[Sustainability Report 2021\]. St Petersburg: Ilim Group. Available at: <span class="underline">https://www.ilimgroup.ru/upload/iblock/334/egzsxl60xneepek74aq5v3st7p33oth7/sustainability-report.pd</span>f (Accessed: 20 October 2026).
+42. Ilim Group (2022) Отчет об устойчивом развитии 2021 \[Sustainability Report 2021\]. St Petersburg: Ilim Group. Available at: [<span class="underline">https://www.ilimgroup.ru/upload/iblock/334/egzsxl60xneepek74aq5v3st7p33oth7/sustainability-report.pdf</span>](https://www.ilimgroup.ru/upload/iblock/334/egzsxl60xneepek74aq5v3st7p33oth7/sustainability-report.pdf) (Accessed: 20 October 2026).
 
 43. Industrial Information Resources (IIR) (2026) Global Pulp, Paper and Wood Database. Available at: [<span class="underline">https://www.industrialinfo.com/</span>](https://www.industrialinfo.com/)
 
 44. IPCC (2006) *2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 2: Energy, Chapter 1: Introduction.* Eggleston, H.S., Buendia, L., Miwa, K., Ngara, T. and Tanabe, K. (eds). Prepared by the National Greenhouse Gas Inventories Programme. Hayama: Institute for Global Environmental Strategies (IGES). Available at: <span class="underline">https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/2\_Volume2/V2\_1\_Ch1\_Introduction.pdf</span> (Accessed: 20 October 2026)
 
-45. Japan Paper Association (2025) 製紙業界 ベンチマーク検討にあたっての留意点 \[Paper industry: considerations for benchmark design\], Benchmark Working Group hearing material 6, 24 July. Tokyo: Ministry of Economy, Trade and Industry. Available at: <span class="underline">https://www.meti.go.jp/shingikai/sankoshin/sangyo\_gijutsu/emissions\_trading/benchmark\_wg/pdf/001\_06\_00.pd</span>f (Accessed: 20 October 2026).
+45. Japan Paper Association (2025) 製紙業界 ベンチマーク検討にあたっての留意点 \[Paper industry: considerations for benchmark design\], Benchmark Working Group hearing material 6, 24 July. Tokyo: Ministry of Economy, Trade and Industry. Available at: [<span class="underline">https://www.meti.go.jp/shingikai/sankoshin/sangyo\_gijutsu/emissions\_trading/benchmark\_wg/pdf/001\_06\_00.pdf</span>](https://www.meti.go.jp/shingikai/sankoshin/sangyo_gijutsu/emissions_trading/benchmark_wg/pdf/001_06_00.pdf) (Accessed: 20 October 2026).
 
 46. Jingxing Holdings (M) Sdn. Bhd. (2026) *Parent company*. Available at: [<span class="underline">https://www.jingxing.com.my/parent-company/</span>](https://www.jingxing.com.my/parent-company/) (Accessed: 20 October 2026).
 
@@ -420,7 +420,7 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 55. Metsä Board (2024) Metsä Board Sustainability Review 2023. Espoo: Metsä Board Corporation. Available at: [<span class="underline">https://metsaboardannualreport.metsagroup.com/view/1004087459/24-25</span>](https://metsaboardannualreport.metsagroup.com/view/1004087459/24-25)
 
-56. MIEM (2025) Uruguay vuelve a registrar niveles récord de fuentes renovables en la matriz de generación, 25 April. Montevideo: Ministerio de Industria, Energía y Minería. Available at: <span class="underline">https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/uruguay-vuelve-registrar-niveles-record-fuentes-renovables-matriz-generacio</span>n (Accessed: 20 October 2026).
+56. MIEM (2025) Uruguay vuelve a registrar niveles récord de fuentes renovables en la matriz de generación, 25 April. Montevideo: Ministerio de Industria, Energía y Minería. Available at: [<span class="underline">https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/uruguay-vuelve-registrar-niveles-record-fuentes-renovables-matriz-generacion</span>](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/uruguay-vuelve-registrar-niveles-record-fuentes-renovables-matriz-generacion) (Accessed: 20 October 2026).
 
 57. Mondi Group (2025) Mondi Group ESRS & Performance Index 2024. Weybridge: Mondi plc. Available at: <span class="underline">https://www.mondigroup.com/globalassets/mondigroup.com/sustainability/reports-and-publications/2024/mondi-group-esrs-and-performance-index-2024.pdf</span> (Accessed: 20 October 2026).
 
@@ -440,11 +440,11 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 65. Pan Pac (2025) A Sustainable Future Together. Napier: Pan Pac Forest Products Ltd. Available at: <span class="underline">https://www.panpac.co.nz/wp-content/uploads/2025/06/2025-A-Sustainable-Future-Together-1.pdf</span> (Accessed: 20 October 2026).
 
-66. PAMSA (2025) 'Mondi South Africa drives energy self-sufficiency and climate resilience with new turbine and flood-proofing projects', The Paper Story, 3 October. Johannesburg: Paper Manufacturers Association of South Africa. Available at: <span class="underline">https://thepaperstory.co.za/mondi-south-africa-drives-energy-self-sufficiency-and-climate-resilience-with-new-turbine-and-flood-proofing-projects</span>/ (Accessed: 20 October 2026).
+66. PAMSA (2025) 'Mondi South Africa drives energy self-sufficiency and climate resilience with new turbine and flood-proofing projects', The Paper Story, 3 October. Johannesburg: Paper Manufacturers Association of South Africa. Available at: [<span class="underline">https://thepaperstory.co.za/mondi-south-africa-drives-energy-self-sufficiency-and-climate-resilience-with-new-turbine-and-flood-proofing-projects/</span>](https://thepaperstory.co.za/mondi-south-africa-drives-energy-self-sufficiency-and-climate-resilience-with-new-turbine-and-flood-proofing-projects/) (Accessed: 20 October 2026).
 
 67. Pulp and Paper Canada (2026) 'Millar Western to curtail Quesnel River Pulp's operations'. Available at: [<span class="underline">https://www.pulpandpapercanada.com/millar-western-to-curtail-quesnel-river-pulps-operations/</span>](https://www.pulpandpapercanada.com/millar-western-to-curtail-quesnel-river-pulps-operations/)
 
-68. Rattanapanyapan, K. and Kaewrawang, A. (2015) 'The study of a power system in a pulp and paper plant in Thailand', Energy Procedia, 79, pp. 341–347. Available at: <span class="underline">https://doi.org/10.1016/j.egypro.2015.11.50</span>0 (Accessed: 20 October 2026).
+68. Rattanapanyapan, K. and Kaewrawang, A. (2015) 'The study of a power system in a pulp and paper plant in Thailand', Energy Procedia, 79, pp. 341–347. Available at: [<span class="underline">https://doi.org/10.1016/j.egypro.2015.11.500</span>](https://doi.org/10.1016/j.egypro.2015.11.500) (Accessed: 20 October 2026).
 
 69. SFI (2024) *Global Pulp and Paper Mill Database*. Spatial Finance Initiative, Centre for Greening Finance and Investment (CGFI). Available at: [<span class="underline">https://cgfi.ac.uk/spatial-finance-initiative/geoasset-project/pulp-and-paper-database/</span>](https://cgfi.ac.uk/spatial-finance-initiative/geoasset-project/pulp-and-paper-database/)
 
