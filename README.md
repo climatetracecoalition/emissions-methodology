@@ -3,7 +3,7 @@
 </p>
 
 <h2 align="center">
-  <a href="./Changelogs/V5.X">Current data release: v5.11.0 (September 2026)</a>
+  <a href="./Changelogs/V5.X">Current data release: v5.12.0 (October 2026)</a>
 </h2>
 <h3 align="center">
   <a href="https://climatetrace.org">Explore the data</a> |
