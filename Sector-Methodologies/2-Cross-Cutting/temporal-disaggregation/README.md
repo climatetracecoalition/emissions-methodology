@@ -6,6 +6,8 @@
 
 *1) WattTime, 2) Johns Hopkins University Applied Physics Laboratory, 3) Climate TRACE*
 
+V5.2.0, Dec. 2025
+
 #### 1 Introduction
 
 Greenhouse gas (GHG) emissions reporting inventories typically publish estimates at temporal granularities best suited to their specific expected use cases, with distinctions often made between scientific applications and regulatory accounting needs. For example, the Intergovernmental Panel on Climate Change (IPCC) 2006 guidelines establish emissions reporting at the annual level as good-practice, consistent with its policy-driven objectives (IPCC, 2006). On the other hand, atmospheric and climate modeling use cases, supported by sources such as Emissions Database for Global Atmospheric Research (EDGAR), require data at finer timescales to capture sub-annual variability (Janssens-Maenhout et. al., 2019).

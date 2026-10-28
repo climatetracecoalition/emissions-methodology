@@ -4,6 +4,8 @@
 
 *Authors are affiliated with TransitionZero and Climate TRACE*
 
+V5.12.0, Oct. 2026
+
 #### 1. Introduction
 
 Pulp is the fibrous raw material behind paper, packaging, tissue and a range of textile and specialty products. Producing it is energy-intensive. The pulp and paper industry is the fourth-largest industrial energy consumer globally, using around 5% of industrial final energy, and accounts for roughly 2% of direct industrial CO<sub>2</sub> emissions (Kong et al., 2012; Furszyfer Del Rio et al., 2022). Global pulp and paper production has grown by roughly a quarter since 2000 (FAO, 2024a). Efficiency has improved over that period, but sector emissions have still risen alongside demand.

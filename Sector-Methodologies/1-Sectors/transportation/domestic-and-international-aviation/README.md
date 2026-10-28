@@ -4,6 +4,8 @@
 
 *Author affiliated with WattTime and Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### 1. Introduction
 
 The aviation sector is considered to be part of the top ten global emitting sectors and emissions are expected to climb due to increased demand for aviation fuel (Perlman, 2018; IEA, 2019). Unfortunately, aviation, along with other transportation sectors, was exempted from the Paris treaty and not considered on track to decrease emissions (Twidale and Saul, 2015; Edie, 2020, Climate Action Tracker, 2020). As a result, current efforts to reduce aviation emissions have proven woefully inadequate (Perlman, 2018).

@@ -6,6 +6,8 @@
 
 *1) WattTime, 2) Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### 1. Introduction
 
 Cattle are the largest contributors of greenhouse gas (GHG) emissions in the livestock sector. Overall, livestock agrifood systems accounted for approximately 6.2 Gt CO₂eq in 2015, around 12% of all anthropogenic GHG emissions, and cattle — meat and milk combined — account for roughly 62% of that total, or about 7% of anthropogenic emissions (FAO, 2023). Emissions from beef and dairy cattle arise from two sources. The first is enteric fermentation - methane (CH<sub>4</sub>) produced during microbial digestion in the rumen. The second is manure management, which generates CH₄ through anaerobic decomposition and nitrous oxide (N<sub>2</sub>O) through the microbially driven processes of nitrification and denitrification (Waldrip et al., 2016; Waldrip et al., 2020). Manure management emissions occur both within the storage facilities common to beef and dairy systems and in-field, where manure is applied as fertilizer or deposited directly by grazing animals. See the ‘Supporting Information on Enteric Fermentation and Manure Management’ supplement in the [<span class="underline">GitHub Agriculture folder</span>](https://github.com/climatetracecoalition/emissions-methodology/tree/main/Sector-Methodologies/1-Sectors/agriculture) for more information on how enteric fermentation and manure management systems generate emissions.

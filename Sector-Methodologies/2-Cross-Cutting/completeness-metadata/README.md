@@ -6,6 +6,8 @@
 
 *1) WattTime, 2) Johns Hopkins University Applied Physics Laboratory, 3) Climate TRACE*
 
+V5.0.0, Nov. 2025
+
 #### 1. Introduction
 
 Spatial, temporal, and sectoral completeness of the Climate TRACE emissions inventory is critical to reducing greenhouse gas and pollutant emissions: A complete and bottom-up accounting of emissions provides a full view of when and where emissions *could* be reduced. Furthermore, metadata for these emissions – from the magnitude of emissions-causing activity to the confidence level of estimates – provide insight into *how* emissions can be reduced and how effective those changes might be. However, the raw measurements and inferences performed for each sub-sector may not be complete, meaning that missing values or other minor inconsistencies must be addressed post-hoc. In this document, we describe the suite of imputation techniques we use to ensure every reported source of emissions has estimates for all reported times in the Climate TRACE inventory, and that each of these estimates has associated metadata.

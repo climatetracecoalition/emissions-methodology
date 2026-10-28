@@ -6,6 +6,8 @@
 
 *All authors affiliated with Global Fishing Watch, emLab, and Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### 1. Introduction
 
 Shipping is a large and growing source of greenhouse gases and air pollutants. The Fourth IMO GHG Study estimated that total shipping—international, domestic and fishing—emitted 1,076 million tonnes of CO₂e in 2018, or about 2.9% of global anthropogenic GHG emissions, up from 2.76% in 2012 (Faber et al., 2020). Every global inventory behind figures like these, including Climate TRACE's, ultimately rests on the Automatic Identification System (AIS): a vessel is counted because it broadcasts its position. This makes the inventory only as complete as the broadcast, and satellite imagery shows the shortfall is substantial. Mapping coastal waters with Sentinel-1 (S1) Synthetic Aperture Radar (SAR) from 2017 to 2021, Paolo et al. (2024) found that 72-76% of industrial fishing vessels and 21-30% of transport and energy vessel activity did not appear in public tracking systems. These "dark" vessels burn fuel and emit in the same way as any other ship, but because they are invisible to AIS their emissions have been absent from published shipping inventories. The magnitude of that omission is unknown, and so is its trend: if the dark fleet is changing at a different rate than the tracked fleet, an inventory built on AIS alone will misstate not only the level of global shipping emissions but the direction they are moving. Closing this gap requires a detection source that does not depend on a vessel choosing to be seen.

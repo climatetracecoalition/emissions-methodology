@@ -6,6 +6,8 @@
 
 2\) WattTime, 3) Climate TRACE
 
+V5.12.0, Oct. 2026
+
 #### Introduction
 
 The World Health Organization (WHO) estimates that globally 6.7 million premature deaths annually are caused by poor air quality, with 4.2 million of those deaths caused by ambient outdoor air pollution \[1\]. Whereas the impacts from releasing greenhouse gases (GHGs) are long term, air pollution can have both long-term and immediate impacts on the health of individuals and communities. Further, anthropogenic sources of air pollutants are also an issue of climate justice as the impacts of air pollution are disproportionately felt by poorer, disadvantaged communities and the Global South.

@@ -6,6 +6,8 @@
 
 *1) WattTime, 2) Global Energy Monitor, 3) Climate TRACE*
 
+V5.12.0, Oct. 2026
+
 #### 1. Introduction
 
 The geological processes that produce coal also produce the potent greenhouse gas (GHG), methane (CH<sub>4</sub>), which remains trapped in underground coal seams until the coal is mined. During coal mining, methane is released into the atmosphere, and it may continue to diffuse from abandoned mines long after mining operations have ceased \[1\]. Carbon dioxide (CO<sub>2</sub>) is also emitted during mining when coal seams containing sulfide minerals yield sulfuric acid that then reacts with carbonate rocks. As such, coal mine emissions are classified by the Intergovernmental Panel on Climate Change (IPCC) under *1.B Fugitive Emissions from Fuels.*

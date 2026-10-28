@@ -4,6 +4,8 @@
 
 *Authors affiliated with TransitionZero and Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### 1. Introduction
 
 Steel production is a major industrial source of energy demand and carbon emissions, accounting for roughly 8% of global energy use and 7% of energy-sector CO₂ emissions (IEA, 2020). These emissions stem largely from the sector’s reliance on coal, particularly in primary steelmaking. Global demand for steel is expected to grow beyond two billion tonnes per year by 2030 (GEM, 2025), with production concentrated in a few countries: China (over 50%), India (7.4%), Japan (4.6%), and the U.S. (4.3%) (WSA, 2024).

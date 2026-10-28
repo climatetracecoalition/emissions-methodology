@@ -6,6 +6,8 @@
 
 *1) OceanMind, 2) University of Minnesota, 3) Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### Introduction
 
 In the IMO’s 2021 4<sup>th</sup> greenhouse gas (GHG) study, GHG emissions from global shipping are estimated to be just below 3% of total anthropogenic GHG emissions (IMO 2021). Despite the significance of this level of emissions, international shipping, along with international aviation, is not explicitly mentioned as part of the Nationally Determined Contributions that countries must submit as part of the Paris Climate Agreement (UNFCCC 2016). This means that, at the moment, other authorities are taking responsibility for decarbonizing shipping. The International Maritime Organization (IMO) is the United Nations (UN) body with authority to regulate international shipping. Positive progress has been made by the IMO to encourage decarbonisation, with adoption of their revised decarbonation strategy in July 2023 (IMO 2023).However, there is contention as to whether this strategy will be sufficient to achieve the level of decarbonisation required to meet the Paris agreement temperature goals, with projections that shipping emissions could account for 17% of global emissions by 2050 (Halim et al. 2018).

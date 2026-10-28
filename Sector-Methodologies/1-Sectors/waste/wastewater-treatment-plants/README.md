@@ -6,6 +6,8 @@
 
 *1) The Johns Hopkins University Applied Physics Laboratory, 2) Machine Learning and Env., Applied Research Consultant - Ottawa, Canada, 3) WattTime, 4) Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### 1. Introduction
 
 Wastewater is water that has been used for domestic or industrial purposes. In domestic settings, wastewater contains human waste, food scraps and residue, and household chemicals. In industrial settings, wastewater may contain a broad range of contaminants resulting from activities such as mining, oil and gas extraction, steelmaking, pulp and paper production, food processing, textile manufacturing, and chemical and pharmaceutical manufacturing (UNESCO, 2017). For the purposes of this analysis, a wastewater treatment plant (WWTP) is defined as a centralized wastewater treatment system used to treat either domestic or industrial wastewater. WWTPs may include any or all treatment processes (primary, secondary, and advanced) that occur onsite between inflow of untreated wastewater and outflow of treated wastewater (i.e., effluent). WWTPs that conduct primary treatment utilize mechanical processes, such as screening, grit removal, and sedimentation, to remove larger solids from the wastewater. Secondary treatment harnesses biological processes to break down contaminants with the help of microorganisms. Advanced wastewater treatment builds upon the biological processes used in secondary treatment to further purify the water through enhanced biological nutrient removal (nitrification and denitrification) or through advanced physical and chemical processes. Untreated wastewater or raw sewage must be treated before release to the environment in order to mitigate the spread of disease (UNICEF, 2022) and environmental pollutants.

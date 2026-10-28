@@ -4,6 +4,8 @@
 
 1\) RMI, 2) WattTime, 3) Climate TRACE
 
+V5.12.0, Oct. 2026
+
 \* Email address: rwang@rmi.org
 
 #### 1. Introduction

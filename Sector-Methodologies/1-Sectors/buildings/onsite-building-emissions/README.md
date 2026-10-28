@@ -6,6 +6,8 @@
 
 *1. Nicholas Institute for Energy, Environment & Sustainability, Duke University; 2. Dept. of Electrical & Computer Engineering, Duke University; 3. Dept. of Electrical Engineering and Computer Science, University of Missouri; 4. Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### Abstract
 
 Globally, buildings account for approximately 26% of energy sector greenhouse gas (GHG) emissions by end-use and 8% of all direct emissions (International Energy Agency). Yet, the building sector lacks high spatial and temporal resolution emissions estimates which could help drive action by informing planning at the local and subnational level through emissions inventories. We present a methodology that super-resolves the gridded EDGAR dataset’s building emissions estimates from a spatial resolution of approximately 11km-by-11km down to a 1km-by-1km resolution: a level that enables building data to be included in comprehensive municipal-level emissions inventories. We perform this disaggregation of the higher resolution EDGAR emissions data using building floor area as a spatial proxy and subdivide emissions data into residential and non-residential subsectors, based on satellite-derived data products from Microsoft's TEMPO and PlanetScope satellite data as well as the European Commission’s Global Human Settlement Layer. Lastly, these data are provided monthly using heating degree days to allocate the time-varying portion of emissions. These data are provided from 2015 through 2026. We also estimate the potential reduction of building emissions based on building envelope improvements and the replacement of fossil-based heating and cooking systems with higher-efficiency technologies.

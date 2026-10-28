@@ -6,6 +6,8 @@
 
 *1) The Johns Hopkins University Applied Physics Laboratory, 2) WattTime, 3) Climate TRACE*
 
+V5.0.0, Nov. 2025
+
 #### Introduction
 
 For many bottom-up inventories, emissions are estimated at a regional level then distributed spatially in proportion with some proxy. For example, the Open-source Data Inventory for Anthropogenic CO2 (ODIAC) dataset estimates and distributes fossil fuel emissions in proportion to nightlight intensity as measured by the satellite remote sensing (Oda et al. 2018) and the Emissions Database for Global Atmospheric Research (EDGAR) supplements its bottom-up inventory with sector-specific proxies such as built-up nonresidential surface area (Crippa et al. 2024). A distinguishing characteristic of Climate TRACE data is that it is typically generated in a different order: asset-level locations are identified first then emissions are estimated upon them. This approach produces higher spatial accuracy of emissions estimates and allows for better attribution of responsibility of sources of emissions.

@@ -6,6 +6,8 @@
 
 *All authors are affiliated with WattTime and Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### 1. Introduction
 
 Greenhouse gas (GHG) emissions inventories are crucial tools for setting mitigation targets, measuring progress toward goals and for accountability within the context of national and international commitments. There are several organizations – governments, academia and commercial entities – that are involved in data collection and preparation of inventories.

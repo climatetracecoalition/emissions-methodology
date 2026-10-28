@@ -4,6 +4,8 @@
 
 *Author affiliated with TransitionZero and Climate TRACE*
 
+V5.11.0, Sept. 2026
+
 #### 1. Introduction
 
 The cement industry plays a critical role in both global infrastructure and global emissions. It accounts for roughly 7% of industrial energy use and an equal share of global carbon dioxide emissions, making it the second-largest source of direct industrial CO₂ emissions after steel (IEA, 2018). Cement is the principal ingredient used to make concrete, the most widely used manufactured material in the world owing to its versatility across housing, sanitation, transportation, and energy infrastructure. Meeting future cement demand while cutting CO₂ emissions poses a major challenge: although China’s construction sector has cooled in recent years, rising demand in other regions is set to drive global consumption upward.

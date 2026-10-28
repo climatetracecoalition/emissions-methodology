@@ -6,6 +6,8 @@
 
 *1) WattTime, 2) Climate TRACE*
 
+V5.0.0, Nov. 2025
+
 #### 1 Introduction
 
 The ultimate goal of Climate TRACE is to empower climate action to reach net-zero anthropogenic greenhouse gas emissions. The detailed asset-level emissions estimates synthesized by Climate TRACE thus far have provided a baseline from which to assess impacts of specific emissions-mitigating actions. Here we describe a crucial addition to the Climate TRACE data set: a catalog of emissions-reduction solutions (ERSs) and corresponding estimates of emissions reduction potential if these solutions were applied to any asset, in any sector, globally. The ERS framework accounts for both direct effects on activity and emissions factors at the target asset as well as consequential induced effects on other dependent sectors (e.g., electricity).

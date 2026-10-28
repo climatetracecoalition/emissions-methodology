@@ -6,6 +6,8 @@
 
 1\) WattTime, 2) Pixel Scientia Labs, 3) Global Energy Monitor, 4) Climate TRACE
 
+V5.11.0, Sept. 2026
+
 *The methodology provides changes and updates since our February 2024 journal article by Couture et al. (2024): “[<span class="underline">Estimating Carbon Dioxide Emissions from Power Plant Water Vapor Plumes Using Satellite Imagery and Machine Learning</span>](https://www.mdpi.com/2072-4292/16/7/1290)” – please see this document for more detailed description of the method employed for this sector.*
 
 #### 1. Introduction

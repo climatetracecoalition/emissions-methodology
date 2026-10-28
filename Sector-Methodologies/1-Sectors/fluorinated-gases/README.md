@@ -15,7 +15,7 @@ and the API. Each links to the methodology that documents it.
 
 | Subsector | Description | Organization |
 |---|---|---|
-| [`fluorinated-gases_fluorinated-gases`](«methodology.pdf») | Refrigerants and industrial gases with very high warming potential | WattTime |
+| [`fluorinated-gases_fluorinated-gases`](../../2-Cross-Cutting/other-sectors/README.md) | Refrigerants and industrial gases with very high warming potential | WattTime |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
 [data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).

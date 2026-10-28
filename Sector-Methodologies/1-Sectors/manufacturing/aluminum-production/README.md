@@ -4,6 +4,8 @@
 
 *Authors are affiliated with TransitionZero and Climate TRACE*
 
+V5.10.0, Aug. 2026
+
 #### 1. Introduction
 
 Aluminum is the second most produced metal in the world after steel, with primary production reaching 104 million tonnes (Mt) in 2025 (IAI, 2026). Its combination of low density, high conductivity, corrosion resistance, and formability makes it valuable across construction, transport, packaging, and power transmission. It is also difficult to produce: the metal does not occur in native form, and industrial-scale extraction by electrolysis only became possible in the late nineteenth century, with the large-scale deployment of electricity generation. About two-thirds of global aluminum comes from primary production derived from bauxite; the remainder is secondary (recycled) metal, which requires roughly 5% of the energy needed to make virgin aluminum and can be recycled repeatedly with little degradation (IAI, 2025b).

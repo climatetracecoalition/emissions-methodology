@@ -10,6 +10,8 @@
 
 *Michigan State University, 2) Carbon Yield, 3) Climate TRACE*
 
+V5.12.0, Oct. 2026
+
 *<sup>\*</sup>Corresponding Author: basso@msu,edu; sharm165@msu.edu*
 
 #### 1. Introduction
