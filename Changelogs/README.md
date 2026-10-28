@@ -2,7 +2,7 @@
 
 What changed in each Climate TRACE data release. The database updates at the end of every month.
 
-Included within each changelog folder are the monthly (version) data licensing and schema update. 
+Included within each changelog folder are the monthly (version) data licensing and schema update. If a release has no updates from the previous month, use last release's  schema.
 
 **Current release: v5.11.0 (September 2026)** — see [V5.X](./V5.X/).
 
