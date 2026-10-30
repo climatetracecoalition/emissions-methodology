@@ -1,6 +1,6 @@
 # Power
 
-Electricity and heat generation, estimated plant by plant from satellite observations.
+Electricity and heat generation emissions. Power plants are estimated individually from reported generation, plant capacity data and satellite observations. Heat plants are estimated by country from reported fuel use and IPCC emission factors.
 
 | | |
 |---|---|
