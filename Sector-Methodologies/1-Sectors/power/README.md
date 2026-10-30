@@ -16,7 +16,7 @@ and the API. Each links to the methodology that documents it.
 | Subsector | Description | Organization |
 |---|---|---|
 | [`power_electricity-generation`](./electricity-generation/README.md) | Power plants generating electricity for the grid | WattTime |
-| [`power_heat-plants`](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/Power/Emissions%20from%20Heat%20Plants-PowerSector-030226.docx.pdf) | Plants producing heat for district heating and industry | WattTime |
+| [`power_heat-plants`](./heat-plants/README.md) | Plants producing heat for district heating and industry | WattTime |
 | [`power_other-energy-use`](../../2-Cross-Cutting/other-sectors/README.md) | Remaining energy industry own-use and fuel conversion | WattTime |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by

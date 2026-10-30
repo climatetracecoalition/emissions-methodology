@@ -29,7 +29,7 @@ just one link — that's the case for the two cattle-operation subsectors below.
 | `manure-management-cattle-operation` | Emissions from stored and treated manure at cattle operations | [View Asset-level methodology](./cattle-operations-asset-level/README.md) · [View Country-level methodology](./cattle-operations-country-level/README.md) | WattTime; Earth Genome; Remote Sensing Lab at Saint Louis University |
 | `manure-management-other` | Emissions from stored and treated manure for other livestock | [View methodology](../../2-Cross-Cutting/other-sectors/README.md) | WattTime |
 | `other-agricultural-soil-emissions` | Remaining nitrous oxide emissions from managed soils | [View methodology](../../2-Cross-Cutting/other-sectors/README.md) | WattTime |
-| `rice-cultivation` | Methane from flooded rice paddies | [View methodology](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/Agriculture/Rice%20Cultivation%20Emission%20Estimates%20Using%20Sentinel-1%20and%20-2-AgricultureSector-112025.docx.pdf) | Paddy Watch / UMT |
+| `rice-cultivation` | Methane from flooded rice paddies | [View methodology](./rice-cultivation/README.md) | Universiti Malaysia Terengganu; Carbon Yield |
 | `synthetic-fertilizer-application` | Nitrous oxide from manufactured fertilizer applied to cropland | [View methodology](./synthetic-fertilizer-n2o/README.md) | Michigan State University, Dept. of Earth and Environmental Sciences |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
