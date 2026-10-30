@@ -11,7 +11,7 @@ These apply across every sector rather than to one in particular.
 | [Temporal Disaggregation](./temporal-disaggregation/) | WattTime; The Johns Hopkins University Applied Physics Laboratory | Converting annual and quarterly estimates into monthly emissions |
 | [Completeness and Metadata](./completeness-metadata/) | WattTime; The Johns Hopkins University Applied Physics Laboratory | Completeness of bottom-up emissions estimates and their associated metadata |
 | [Emissions-Reducing Solutions](./emissions-reducing-solutions/) | WattTime | The framework for estimating emissions-reduction potential of solutions applied to assets |
-
+| [Visualization of PM2.5 Plumes](./pm2.5-pollution/) | Carnegie Mellon University CREATE Lab | High resolution visualization of PM2.5 impacts on surrounding population |
 ---
 
 [← Sector Methodologies](../) · [Home](../../)
