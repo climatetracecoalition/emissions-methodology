@@ -14,7 +14,7 @@ Pulp differs from most heavy industry subsectors because much of its energy is a
 
 Public data largely hides this variation. Few mills report emissions. Those that do usually report for integrated pulp-and-paper sites, which makes it hard to isolate pulp production, and national statistics generally cover the sector as a whole. Without facility-level estimates, policymakers, investors and companies struggle to see where abatement potential is concentrated or to track progress at individual sites.
 
-This paper sets out the methodology used to estimate plant-level CO<sub>2</sub> emissions from pulp production worldwide within the Climate TRACE emissions inventory (Lancellotti et al., 2025). It covers 782 pulp assets in 56 countries from 2015 to 2026. It estimates Scope 1 process emissions and Scope 2 emissions from purchased electricity and captive power generation (Sections 4.2–4.4). Estimates are compared against government-verified facility data from the EU ETS, US EPA, Canada and New Zealand, and against European sector statistics from CEPI (Section 6.2). Climate TRACE also identifies emissions reduction solutions for each asset (Section 7).
+This paper sets out the methodology used to estimate plant-level CO<sub>2</sub> emissions from pulp production worldwide within the Climate TRACE emissions inventory (Lancellotti et al., 2025). It covers 782 pulp assets in 56 countries from 2015 to 2026. It estimates Scope 1 process emissions and Scope 2 emissions from purchased electricity and captive power generation (Sections 4.2–4.4). Estimates are compared against government-verified facility data from the EU ETS, US EPA, Canada and New Zealand, and against European sector statistics from CEPI (Section 6.2). Climate TRACE also identifies emissions reduction solutions (ERS) for each asset (Section 7), which consists of converting to biomass fuels and optimizing equipment to increase the use of paper and cardboard recycling.
 
 #### 2. Scope and System Boundary
 
@@ -244,7 +244,7 @@ CEPI publishes direct and indirect CO₂ emissions for the pulp and paper sector
 
 Direct emissions per tonne of pulp agree within 2–4% in 2020–2022, and total direct emissions are within 14% of the benchmark in every year (Figure 6). The difference per tonne widens to 23% by 2025 because CEPI's reported intensity falls, while Climate TRACE emission factors do not change over time.
 
-Climate TRACE indirect emissions are 81–141% above the benchmark in 2020–2024. Most of this difference comes from kraft and chemical mills: CEPI reports net purchased electricity, after deducting the electricity mills sell, much of it surplus from kraft pulp mills, whereas Climate TRACE counts each mill’s gross grid purchases, as in facility-level Scope 2 reporting. This approach is consistent with mill-level data for Swedish and Finnish kraft mills (Lipiäinen et al., 2022). Excluding kraft and chemical mills, Climate TRACE indirect emissions are within 26% of the benchmark in every year and within 6% in 2023–2024 (Appendix 11.2).
+Climate TRACE indirect emissions are 81–141% above the benchmark in 2020–2024. Most of this difference comes from kraft and chemical mills: CEPI reports net purchased electricity, after deducting the electricity mills sell, much of it surplus from kraft pulp mills, whereas Climate TRACE counts each mill’s gross grid purchases, as in facility-level Scope 2 reporting. This approach is consistent with mill-level data for Swedish and Finnish kraft mills (Lipiäinen et al., 2022). Excluding kraft and chemical mills, Climate TRACE indirect emissions are within 26% of the benchmark for every year and within 6% in 2023–2024 (Appendix 11.2).
 
 <img src="figures/figure7.png" width="551" />
 
@@ -260,17 +260,27 @@ As an additional check, Mercer International reports emissions intensity for fou
 
 Divergence at individual mills has no consistent direction. Most comes from applying fleet-average emission factors and captive fuel splits to mills that differ from the average in kiln efficiency, fuel mix or utilization. Divergence tends to be larger where site data is outdated or a mill has been curtailed. There is one systematic pattern: at several US kraft mills, operators report that 17–32% of total mill energy comes from fossil fuels. This is a different measure from the model’s 5% fossil share of captive fuel, but it suggests that share may be too low for this type of mill. US survey data also show a higher fossil share of fuel at pulp mills (EIA, 2021a), although this includes lime kiln fuel, which Climate TRACE counts separately as Scope 1 process emissions. Individual cases are discussed in Appendix 11.3.
 
-<img src="figures/figure8.png" width="610" />
+<img src="figures/figure8.png" width="603" />
 
 **Figure 7** Comparison of asset-level pulp emissions for 39 pulp mills across the EU (2025), Canada (2024), the USA (2023) and New Zealand (2025) against Climate TRACE emissions. Point numbers correspond to the mill list in Table 11 (Appendix 11.3).
 
-#### 7. Emissions Reduction Strategies: Overview and Application
+#### 7. Emissions Reduction Solutions: Overview and Application
 
-For each pulp asset, Climate TRACE identifies the emissions reduction strategy with the greatest potential. One strategy is currently modeled for the sector: switching from fossil to biomass fuels, combined with equipment optimization. Further strategies will be added in future releases.
+For each pulp asset, Climate TRACE identifies individual strategies for emission reduction solutions (ERSs) with the greatest potential.
 
-This strategy targets the main sources of direct fossil emissions at pulp mills: lime kiln fuel and fossil-fired captive power. Lime kilns can run on biomass or on mill byproducts such as gasified black liquor, lignin, tall oil and methanol. Several Nordic and Brazilian kraft mills already operate this way (Kuparinen and Vakkilainen, 2017; Hart, 2020). Fossil-fired captive boilers can similarly be converted to wood residues or other biomass. Improving equipment efficiency further reduces the fuel needed per tonne of pulp. Together, these measures are estimated to reduce plant-level emissions by around 40%, consistent with recent sector decarbonization reviews (Sciencedirect, 2025).
+#### 7.1 Convert to biomass fuels and optimize equipment
+
+This strategy targets the main sources of direct fossil emissions at pulp mills: lime kiln fuel and fossil-fired captive power. Lime kilns can run on biomass or on mill byproducts such as gasified black liquor, lignin, tall oil, and methanol. Several Nordic and Brazilian kraft mills already operate this way (Kuparinen and Vakkilainen, 2017; Hart, 2020). Fossil-fired captive boilers can similarly be converted to wood residues or other biomass. Improving equipment efficiency further reduces the fuel needed per tonne of pulp. Together, these measures are estimated to reduce plant-level emissions by around 40%, consistent with recent sector decarbonization reviews.
 
 This strategy does not address emissions from purchased electricity, which make up the majority of emissions in several of the largest producing countries (Section 5). For mills that rely on the grid, particularly electricity-intensive mechanical pulp mills, grid decarbonization or renewable power procurement will matter more than fuel switching.
+
+#### 7.2 Increase paper and cardboard recycling
+
+Pulp production is the main source of emissions in this sector: pulp-making accounts for about 62% of the energy used and 45% of the emissions in paper production (Project Drawdown, 2026). Using recycled paper and cardboard in place of primary pulp reduces demand for virgin pulp and the energy needed to make it, and higher recycling rates lower life-cycle energy use and CO₂ emissions across paper grades (Laurijssen et al., 2010).
+
+Because Climate TRACE tracks pulp, not paper, facilities at the asset level, the strategy is modeled as a reduction in pulp activity rather than in the emissions factor. Increased recycling is assumed to displace 20% of pulp production, represented by removing 20% of pulp-and-paper activity, with low confidence. Diverting paper and cardboard from landfills also reduces methane from solid-waste disposal sites, where these materials decompose. This is captured as an induced reduction in the solid-waste-disposal sector, assuming 0.5 t of paper and cardboard is diverted from landfill per tonne of pulp avoided (induced activity conversion rate of −0.5), informed by landfill decay rates for paper and cardboard (US EPA, 2023).
+
+Most countries now have paper and cardboard recycling programs, run either formally by municipalities or through informal networks of collectors. About 48% of paper worldwide is already made from recycled material (Project Drawdown, 2026), and Europe recycled 75.1% of paper products in 2024 (European Paper Recycling Council, 2025). Because rates are already high in many regions, the largest remaining gains lie where recycling rates are low.
 
 #### 8. Discussion and Limitations
 
@@ -328,7 +338,7 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 8.  BEE (2022) Energy and Resource Mapping of MSMEs in India: Paper Sector Report. New Delhi: Bureau of Energy Efficiency. Available at: <span class="underline">https://beeindia.gov.in/WriteReadData/RTF1984/RTF-PDF-090b95dfac330902\_1776169393.pdf</span> (Accessed: 20 October 2026).
 
-9.  Biond (2026) Boletim Estatístico 2024. Lisbon: Biond – Associação das Bioindústrias de Base Florestal (formerly CELPA). Available at: [<span class="underline">https://www.biond.pt/publicacoes/boletim-estatistico-2024/</span>](https://www.biond.pt/publicacoes/boletim-estatistico-2024/) (Accessed: 20 October 2026).
+9.  Biond (2026) Boletim Estatístico 2024. Lisbon: Biond – Associação das Bioindústrias de Base Florestal (formerly CELPA). Available at: <span class="underline">https://www.biond.pt/publicacoes/boletim-estatistico-2024</span>/ (Accessed: 20 October 2026).
 
 10. CEPI (2023) Key Statistics 2022: European pulp & paper industry. Brussels: Confederation of European Paper Industries. Available at: [<span class="underline">https://www.cepi.org/wp-content/uploads/2023/07/2022-Key-Statistics-FINAL.pdf</span>](https://www.cepi.org/wp-content/uploads/2023/07/2022-Key-Statistics-FINAL.pdf)
 
@@ -338,7 +348,7 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 13. CER (2019) Market Snapshot: Pulp and paper sector uses less energy, produces less material than it did 20 years ago, 20 November. Calgary: Canada Energy Regulator. Available at: <span class="underline">https://www.cer-rec.gc.ca/en/data-analysis/energy-markets/market-snapshots/2019/market-snapshot-pulp-paper-sector-uses-less-energy-produces-less-material-than-it-did-20-years-ago.html</span> (Accessed: 20 October 2026).
 
-14. CMPC (2026) Reporte Integrado 2025. Santiago: Empresas CMPC S.A. Available at: [<span class="underline">https://storage.googleapis.com/assets-wordpress-cmpc/assets/uploads/pdf/reporte-integrado/REPORTE-INTEGRADO-CMPC-2025-WEB-v4.pdf</span>](https://storage.googleapis.com/assets-wordpress-cmpc/assets/uploads/pdf/reporte-integrado/REPORTE-INTEGRADO-CMPC-2025-WEB-v4.pdf) (Accessed: 20 October 2026).
+14. CMPC (2026) Reporte Integrado 2025. Santiago: Empresas CMPC S.A. Available at: <span class="underline">https://storage.googleapis.com/assets-wordpress-cmpc/assets/uploads/pdf/reporte-integrado/REPORTE-INTEGRADO-CMPC-2025-WEB-v4.pd</span>f (Accessed: 20 October 2026).
 
 15. COPACEL (2026) Rapport statistique 2025 de l’industrie papetière française. Paris: COPACEL. Available at: [<span class="underline">https://copacel.fr/wp-content/uploads/2026/05/Rapport-Statistique-COPACEL-2025.pdf</span>](https://copacel.fr/wp-content/uploads/2026/05/Rapport-Statistique-COPACEL-2025.pdf)
 
@@ -382,7 +392,7 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 35. Favero, A., Thomas, V.M. and Luettgen, C. (2017) *Life Cycle and Market Review of the Major Alternative Fibers for Paper Production*. Atlanta, GA: Georgia Institute of Technology, for Green Seal. Available at: [<span class="underline">https://greenseal.org/wp-content/uploads/Life-Cycle-Alternative-Fibers-for-Paper-Production.-April-2017\_.pdf</span>](https://greenseal.org/wp-content/uploads/Life-Cycle-Alternative-Fibers-for-Paper-Production.-April-2017_.pdf)
 
-36. Francis, D.W., Towers, M.T. and Browne, T.C. (2002) Energy Cost Reduction in the Pulp and Paper Industry: An Energy Benchmarking Perspective. Ottawa: Natural Resources Canada / CIPEC. Available at: [<span class="underline">https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/publications/infosource/pub/cipec/pulp-paper-industry/pdf/pulp-paper-industry.pdf</span>](https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/publications/infosource/pub/cipec/pulp-paper-industry/pdf/pulp-paper-industry.pdf) (Accessed: 20 October 2026).
+36. Francis, D.W., Towers, M.T. and Browne, T.C. (2002) Energy Cost Reduction in the Pulp and Paper Industry: An Energy Benchmarking Perspective. Ottawa: Natural Resources Canada / CIPEC. Available at: <span class="underline">https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/publications/infosource/pub/cipec/pulp-paper-industry/pdf/pulp-paper-industry.pd</span>f (Accessed: 20 October 2026).
 
 37. Furszyfer Del Rio, D.D., Sovacool, B.K., Griffiths, S., Bazilian, M., Kim, J., Foley, A.M. and Rooney, D. (2022) 'Decarbonizing the pulp and paper industry: A critical and systematic review of sociotechnical developments and policy options', *Renewable and Sustainable Energy Reviews*, 167, 112706. Available at: [<span class="underline">https://doi.org/10.1016/j.rser.2022.112706</span>](https://doi.org/10.1016/j.rser.2022.112706)
 
@@ -394,13 +404,13 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 41. IFC (2025) *World Bank Group’s IFC and XSD Partner to Boost Jobs and Sustainability in Malaysia’s Paper Industry*. International Finance Corporation, 18 December. Available at: [<span class="underline">https://www.ifc.org/en/pressroom/2025/world-bank-group-s-ifc-and-xsd-partner-to-boost-jobs-and-sustainability-in-malaysi</span>](https://www.ifc.org/en/pressroom/2025/world-bank-group-s-ifc-and-xsd-partner-to-boost-jobs-and-sustainability-in-malaysi) (Accessed: 7 October 2026).
 
-42. Ilim Group (2022) Отчет об устойчивом развитии 2021 \[Sustainability Report 2021\]. St Petersburg: Ilim Group. Available at: [<span class="underline">https://www.ilimgroup.ru/upload/iblock/334/egzsxl60xneepek74aq5v3st7p33oth7/sustainability-report.pdf</span>](https://www.ilimgroup.ru/upload/iblock/334/egzsxl60xneepek74aq5v3st7p33oth7/sustainability-report.pdf) (Accessed: 20 October 2026).
+42. Ilim Group (2022) Отчет об устойчивом развитии 2021 \[Sustainability Report 2021\]. St Petersburg: Ilim Group. Available at: <span class="underline">https://www.ilimgroup.ru/upload/iblock/334/egzsxl60xneepek74aq5v3st7p33oth7/sustainability-report.pd</span>f (Accessed: 20 October 2026).
 
 43. Industrial Information Resources (IIR) (2026) Global Pulp, Paper and Wood Database. Available at: [<span class="underline">https://www.industrialinfo.com/</span>](https://www.industrialinfo.com/)
 
 44. IPCC (2006) *2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 2: Energy, Chapter 1: Introduction.* Eggleston, H.S., Buendia, L., Miwa, K., Ngara, T. and Tanabe, K. (eds). Prepared by the National Greenhouse Gas Inventories Programme. Hayama: Institute for Global Environmental Strategies (IGES). Available at: <span class="underline">https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/2\_Volume2/V2\_1\_Ch1\_Introduction.pdf</span> (Accessed: 20 October 2026)
 
-45. Japan Paper Association (2025) 製紙業界 ベンチマーク検討にあたっての留意点 \[Paper industry: considerations for benchmark design\], Benchmark Working Group hearing material 6, 24 July. Tokyo: Ministry of Economy, Trade and Industry. Available at: [<span class="underline">https://www.meti.go.jp/shingikai/sankoshin/sangyo\_gijutsu/emissions\_trading/benchmark\_wg/pdf/001\_06\_00.pdf</span>](https://www.meti.go.jp/shingikai/sankoshin/sangyo_gijutsu/emissions_trading/benchmark_wg/pdf/001_06_00.pdf) (Accessed: 20 October 2026).
+45. Japan Paper Association (2025) 製紙業界 ベンチマーク検討にあたっての留意点 \[Paper industry: considerations for benchmark design\], Benchmark Working Group hearing material 6, 24 July. Tokyo: Ministry of Economy, Trade and Industry. Available at: <span class="underline">https://www.meti.go.jp/shingikai/sankoshin/sangyo\_gijutsu/emissions\_trading/benchmark\_wg/pdf/001\_06\_00.pd</span>f (Accessed: 20 October 2026).
 
 46. Jingxing Holdings (M) Sdn. Bhd. (2026) *Parent company*. Available at: [<span class="underline">https://www.jingxing.com.my/parent-company/</span>](https://www.jingxing.com.my/parent-company/) (Accessed: 20 October 2026).
 
@@ -422,7 +432,7 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 55. Metsä Board (2024) Metsä Board Sustainability Review 2023. Espoo: Metsä Board Corporation. Available at: [<span class="underline">https://metsaboardannualreport.metsagroup.com/view/1004087459/24-25</span>](https://metsaboardannualreport.metsagroup.com/view/1004087459/24-25)
 
-56. MIEM (2025) Uruguay vuelve a registrar niveles récord de fuentes renovables en la matriz de generación, 25 April. Montevideo: Ministerio de Industria, Energía y Minería. Available at: [<span class="underline">https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/uruguay-vuelve-registrar-niveles-record-fuentes-renovables-matriz-generacion</span>](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/uruguay-vuelve-registrar-niveles-record-fuentes-renovables-matriz-generacion) (Accessed: 20 October 2026).
+56. MIEM (2025) Uruguay vuelve a registrar niveles récord de fuentes renovables en la matriz de generación, 25 April. Montevideo: Ministerio de Industria, Energía y Minería. Available at: <span class="underline">https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/uruguay-vuelve-registrar-niveles-record-fuentes-renovables-matriz-generacio</span>n (Accessed: 20 October 2026).
 
 57. Mondi Group (2025) Mondi Group ESRS & Performance Index 2024. Weybridge: Mondi plc. Available at: <span class="underline">https://www.mondigroup.com/globalassets/mondigroup.com/sustainability/reports-and-publications/2024/mondi-group-esrs-and-performance-index-2024.pdf</span> (Accessed: 20 October 2026).
 
@@ -442,11 +452,11 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 
 65. Pan Pac (2025) A Sustainable Future Together. Napier: Pan Pac Forest Products Ltd. Available at: <span class="underline">https://www.panpac.co.nz/wp-content/uploads/2025/06/2025-A-Sustainable-Future-Together-1.pdf</span> (Accessed: 20 October 2026).
 
-66. PAMSA (2025) 'Mondi South Africa drives energy self-sufficiency and climate resilience with new turbine and flood-proofing projects', The Paper Story, 3 October. Johannesburg: Paper Manufacturers Association of South Africa. Available at: [<span class="underline">https://thepaperstory.co.za/mondi-south-africa-drives-energy-self-sufficiency-and-climate-resilience-with-new-turbine-and-flood-proofing-projects/</span>](https://thepaperstory.co.za/mondi-south-africa-drives-energy-self-sufficiency-and-climate-resilience-with-new-turbine-and-flood-proofing-projects/) (Accessed: 20 October 2026).
+66. PAMSA (2025) 'Mondi South Africa drives energy self-sufficiency and climate resilience with new turbine and flood-proofing projects', The Paper Story, 3 October. Johannesburg: Paper Manufacturers Association of South Africa. Available at: <span class="underline">https://thepaperstory.co.za/mondi-south-africa-drives-energy-self-sufficiency-and-climate-resilience-with-new-turbine-and-flood-proofing-projects</span>/ (Accessed: 20 October 2026).
 
 67. Pulp and Paper Canada (2026) 'Millar Western to curtail Quesnel River Pulp's operations'. Available at: [<span class="underline">https://www.pulpandpapercanada.com/millar-western-to-curtail-quesnel-river-pulps-operations/</span>](https://www.pulpandpapercanada.com/millar-western-to-curtail-quesnel-river-pulps-operations/)
 
-68. Rattanapanyapan, K. and Kaewrawang, A. (2015) 'The study of a power system in a pulp and paper plant in Thailand', Energy Procedia, 79, pp. 341–347. Available at: [<span class="underline">https://doi.org/10.1016/j.egypro.2015.11.500</span>](https://doi.org/10.1016/j.egypro.2015.11.500) (Accessed: 20 October 2026).
+68. Rattanapanyapan, K. and Kaewrawang, A. (2015) 'The study of a power system in a pulp and paper plant in Thailand', Energy Procedia, 79, pp. 341–347. Available at: <span class="underline">https://doi.org/10.1016/j.egypro.2015.11.50</span>0 (Accessed: 20 October 2026).
 
 69. SFI (2024) *Global Pulp and Paper Mill Database*. Spatial Finance Initiative, Centre for Greening Finance and Investment (CGFI). Available at: [<span class="underline">https://cgfi.ac.uk/spatial-finance-initiative/geoasset-project/pulp-and-paper-database/</span>](https://cgfi.ac.uk/spatial-finance-initiative/geoasset-project/pulp-and-paper-database/)
 
@@ -471,6 +481,14 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 79. Worrell, E., Price, L., Neelis, M., Galitsky, C. and Zhou, N. (2008) *World Best Practice Energy Intensity Values for Selected Industrial Sectors*. Lawrence Berkeley National Laboratory, LBNL-62806. Available at: [<span class="underline">https://www.osti.gov/servlets/purl/927032</span>](https://www.osti.gov/servlets/purl/927032)
 
 80. 850 Business Magazine (2019) 'Model of Efficiency'. Available at: [<span class="underline">https://www.850businessmagazine.com/model-of-efficiency/</span>](https://www.850businessmagazine.com/model-of-efficiency/)
+
+81. European Paper Recycling Council (2025) ‘European Paper Recycling Council reports strong recycling rates for 2024’, press release, Confederation of European Paper Industries, 11 July. Available at: [<span class="underline">https://www.cepi.org/?p=10973</span>](https://www.cepi.org/?p=10973) (Accessed: 19 October 2026).
+
+82. Laurijssen, J., Marsidi, M., Westenbroek, A., Worrell, E. and Faaij, A. (2010) ‘Paper and biomass for energy? The impact of paper recycling on energy and CO₂ emissions’, Resources, Conservation and Recycling, 54(12), pp. 1208–1218. Available at: [<span class="underline">https://doi.org/10.1016/j.resconrec.2010.03.016</span>](https://doi.org/10.1016/j.resconrec.2010.03.016) (Accessed: 19 October 2026).
+
+83. Project Drawdown (2026) Increase recycling. Drawdown Explorer. Available at: [<span class="underline">https://drawdown.org/explorer/increase-recycling</span>](https://drawdown.org/explorer/increase-recycling) (Accessed: 19 October 2026).
+
+84. US EPA (2023) Quantifying methane emissions from landfilled food waste. Washington, DC: United States Environmental Protection Agency. Available at: [<span class="underline">https://www.epa.gov/system/files/documents/2023-10/food-waste-landfill-methane-10-8-23-final\_508-compliant.pdf</span>](https://www.epa.gov/system/files/documents/2023-10/food-waste-landfill-methane-10-8-23-final_508-compliant.pdf) (Accessed: 19 October 2026).
 
 #### 11. Appendix
 
