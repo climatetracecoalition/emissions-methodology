@@ -33,11 +33,11 @@ Fuel consumption data in heat plants for the years 2015-2024 (2015 is the base y
 
 Default emission factors were obtained from the IPCC Emission Factors Database which provides default emission factors for fuel sub-type (IPCC n.d.), which is an update to previous years. Where multiple emission factors were available, an average was used.
 
-Emissions were calculated at country level annually and then were spatially and temporally disaggregated at the county/district level and monthly scale, respectively. In addition, emissions up to present were projected using 2024 emission estimates. To understand the methodology for the spatial and temporal disaggregation, refer to the following documents hosted in the Climate TRACE *[<span class="underline">Post Processing for Global Emissions and Metadata Completeness</span>](../../../2-Cross-Cutting/completeness-metadata/README.md)* folder in the GitHub methodology repository:
+Emissions were calculated at country level annually and then were spatially and temporally disaggregated at the county/district level and monthly scale, respectively. In addition, emissions up to present were projected using 2024 emission estimates. To understand the methodology for the spatial and temporal disaggregation, refer to the following documents hosted in the Climate TRACE [Cross-Cutting Methodologies](../../../2-Cross-Cutting/) folder:
 
--   Gary Collins, April Nellis, Krsna Raniga, Nicole Brown, Michael Pekala, Zoheyr Doctor, Dan Moore, Elizabeth Reilly, Marisa Hughes, Gavin McCormick (2024), *Spatial Disaggregation of Remainder Emissions*; and
+-   Collins, G., et al. (2025)- *[Spatial Disaggregation of Spatially Uncertain Emissions](../../../2-Cross-Cutting/spatial-disaggregation/README.md)*.
 
--   Krsna Raniga, Dan Moore, Zoheyr Doctor, Peter Thomas, Ishan Saraswat, Gary Collins, April Nellis, Nicole Brown, Michael Pekala, Justin Rokisky, Christy Lewis, Elizabeth Reilly, Marisa Hughes, Gavin McCormick (2024), *Temporal Allocation of Emissions Estimates*.
+-   Raniga, K. et al. (2025)- *[Temporal Disaggregation of Emissions Data for the Climate TRACE Inventory](../../../2-Cross-Cutting/temporal-disaggregation/README.md)*.
 
 #### 3. Result Highlights
 The global emission total from heat plants for 2025 is 56.7 million tonnes CO<sub>2</sub> from 35 countries.
