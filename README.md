@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/climatetracecoalition/methodology-documents/assets/69821731/3199680a-cf8e-4768-8c09-32db52e4be70" alt="Climate TRACE" width="650">
+  <img src="images/climate-trace-logo.png" alt="Climate TRACE" width="650">
 </p>
 
 <h2 align="center">
