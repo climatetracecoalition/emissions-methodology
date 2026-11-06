@@ -17,7 +17,7 @@ and the API. Each links to the methodology that documents it.
 |---|---|---|
 | [`manufacturing_aluminum`](./aluminum-production/README.md) | Smelting and refining of aluminum | TransitionZero |
 | [`manufacturing_cement`](./cement-manufacturing/README.md) | Clinker production, including CO2 released chemically from limestone | TransitionZero |
-| [`manufacturing_chemicals`](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/Manufacturing%20and%20Industrial%20Processes/Chemicals%20and%20Pulp-Paper%20Emissions-ManufacturingandIndustrialProcessesSector-112025.docx.pdf) | Production of industrial chemicals | TransitionZero |
+| [`manufacturing_chemicals`](./chemicals-production/README.md) | Production of industrial chemicals | TransitionZero |
 | [`manufacturing_food-beverage-tobacco`](../../2-Cross-Cutting/other-sectors/README.md) | Processing of food, drink and tobacco products | WattTime |
 | [`manufacturing_glass`](../../2-Cross-Cutting/other-sectors/README.md) | Melting and forming of glass | WattTime |
 | [`manufacturing_iron-and-steel`](./iron-and-steel-manufacturing/README.md) | Blast furnaces, electric arc furnaces and steelmaking | TransitionZero |
@@ -25,7 +25,7 @@ and the API. Each links to the methodology that documents it.
 | [`manufacturing_other-chemicals`](../../2-Cross-Cutting/other-sectors/README.md) | Chemical production not covered by a dedicated category | WattTime |
 | [`manufacturing_other-manufacturing`](../../2-Cross-Cutting/other-sectors/README.md) | Remaining industrial production | WattTime |
 | [`manufacturing_other-metals`](../../2-Cross-Cutting/other-sectors/README.md) | Production of metals other than iron, steel and aluminum | WattTime |
-| [`manufacturing_petrochemical-steam-cracking`](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/Manufacturing%20and%20Industrial%20Processes/Petrochemical%20Steam%20Cracker%20Emissions-ManufacturingandIndustrialProcessesSector-072426.docx.pdf) | Cracking of hydrocarbons to produce ethylene and related products | RMI |
+| [`manufacturing_petrochemical-steam-cracking`](./petrochemical-steam-cracking/README.md) | Cracking of hydrocarbons to produce ethylene and related products | RMI |
 | [`manufacturing_pulp-and-paper`](./pulp-and-paper/README.md) | Pulping, paper making and the heat used in both | TransitionZero |
 | [`manufacturing_textiles-leather-apparel`](../../2-Cross-Cutting/other-sectors/README.md) | Textile, leather and garment production | WattTime |
 | [`manufacturing_wood-and-wood-products`](../../2-Cross-Cutting/other-sectors/README.md) | Sawmilling and wood product manufacturing | WattTime |
