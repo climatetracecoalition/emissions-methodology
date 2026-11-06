@@ -10,12 +10,12 @@ _**<h6>Last updated: November 5, 2026</h6>**_
 
 ## 1. Articles Authored or Co-Authored by Climate TRACE Members
 
-### Agriculture: Cattle Emissions (Harvard University)
+### Agriculture: Cattle Emissions (Remote Sensing Lab at Saint Louis University)
 - Pawar, A., Sagan, V., Tesser, D., Farbo, A., Boyda, E. and Davitt, A., 2026.  
   **The Bovine Slurry Index (BSI): An integrated framework for manure pond mapping using GeoFM-derived cattle-operation detection and Sentinel-2 spectral formulation.**  
   *International Journal of Applied Earth Observation and Geoinformation*, 154, p.105656.  
   [https://doi.org/10.1016/j.jag.2026.105656](https://doi.org/10.1016/j.jag.2026.105656)
-  
+### Agriculture: Cattle Emissions (Harvard University)
 - Hancock, S.E., Jacob, D.J., Chen, Z., Nesser, H., Davitt, A., Varon, D.J., Sulprizio, M.P., Balasus, N., Estrada, L.A., Cazorla, M. and Dawidowski, L., 2025.  
   **Satellite quantification of methane emissions from South American countries: a high-resolution inversion of TROPOMI and GOSAT observations.**  
   *Atmospheric Chemistry and Physics*, 25(2), pp.797–817.  
