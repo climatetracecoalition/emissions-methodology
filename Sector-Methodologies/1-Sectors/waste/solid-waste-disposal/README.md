@@ -140,7 +140,7 @@ Where landfill closure dates were available, site-specific exponential decay rat
 
 First-order decay methane emissions models predict, given some input waste, how much of that incoming mass will break down into methane gas and over what time scale. Unfortunately, the source datasets did not contain incoming waste mass values for all SWDS. Where possible, we estimated these values from more widely available landfill surface area data using a hierarchical Bayesian regression model. This framework relates incoming waste to area while accounting for variability across World Bank income groups, which serve as a proxy for differences in waste management intensity and density.
 
-The model was implemented in PyMC and sampled with the No-U-Turn Sampler (NUTS)**.** Model performance was evaluated through leave-one-out cross-validation (LOO-CV), which showed that the hierarchical model modestly outperformed a simpler linear alternative. Posterior predictive simulations were then used to estimate annual incoming waste for landfills lacking reported values, with credible intervals converted to approximate coefficients of variation to summarize uncertainty.
+The model was implemented in PyMC and sampled with the No-U-Turn Sampler (NUTS). Model performance was evaluated through leave-one-out cross-validation (LOO-CV), which showed that the hierarchical model modestly outperformed a simpler linear alternative. Posterior predictive simulations were then used to estimate annual incoming waste for landfills lacking reported values, with credible intervals converted to approximate coefficients of variation to summarize uncertainty.
 
 Full model equations, priors, likelihood structure, validation results, and diagnostic plots are provided in the Supplemental Information (Section SI.2).
 
@@ -497,7 +497,7 @@ and Φ is the standard normal CDF (Amemiya, 1984).
 
 **Total negative log posterior.** Combining the priors and likelihood contributions across all observation months, the negative log posterior is:
 
-<table><tbody><tr class="odd"><td><p><span class="math inline">$`\text{NLP}\left( \Theta \right) = \frac{1}{2}\frac{\left( \log\ K\  - m_{0} \right)^{2}}{s_{0}^{2}} + \log\ s_{0}\  + \frac{1}{2}\log\ 2\pi\  + \ \lbrack l_{\text{𝖽𝖾𝗍𝖾𝖼𝗍}}\left( \Theta \right)\rbrack`$</span></p><blockquote><p><span class="math inline">$`\ \  + \lbrack l_{\mathsf{n}\mathsf{o}\mathsf{n} - \mathsf{d}\mathsf{e}\mathsf{t}\mathsf{e}\mathsf{c}\mathsf{t}}\left( \Theta \right)\rbrack\ \ \  + \frac{1}{2}\left( \frac{s}{\sigma_{\text{prior}}} \right)^{2} - \log\text{s\ }`$</span></p></blockquote></td><td>(S14)</td></tr></tbody></table>
+<table><tbody><tr class="odd"><td><p>NLP(Θ) = ½ (log K − m<sub>0</sub>)<sup>2</sup> / s<sub>0</sub><sup>2</sup> + log s<sub>0</sub> + ½ log 2π + [ l<sub>detect</sub>(Θ) ]</p><blockquote><p>+ [ l<sub>non-detect</sub>(Θ) ] + ½ (s / σ<sub>prior</sub>)<sup>2</sup> − log s</p></blockquote></td><td>(S14)</td></tr></tbody></table>
 
 The final −log *s* term arises because the optimization is carried out over log *s* rather than *s*.
 

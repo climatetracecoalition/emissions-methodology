@@ -463,7 +463,7 @@ The Emissions Reduction Strategies described in this document represent a data-d
 
 Table S2 describes the source-level data for WWTPs. These data are in the form of comma separated values files with names “source-climate-trace\_waste-water-treatment\_MMDDYY.csv” where MMDDYY is the month-day-year of the starting date of the annual emissions estimate for centralized WWTPs. For example, “010122” is the annual emissions estimate for centralized WWTPs for 2022. Table S3 describes how confidence and uncertainty data is provided. Appendix 1.e describes the methodology used to produce uncertainty and confidence values. These files are named “confidence/uncertainty-climate-trace\_waste-water-treatment\_MMDDYY.csv” where MMDDYY is the date when the files were created.
 
-**Table S1** General dataset information for domestic wastewater treatment plants**.**
+**Table S1** General dataset information for domestic wastewater treatment plants.
 
 | **General Description**                                                         | **Definition**                                                                                                                                                                                                               |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -479,7 +479,7 @@ Table S2 describes the source-level data for WWTPs. These data are in the form o
 | **What is the difference between a “NULL / none / nan” versus “0” data field?** | *“0” values are for true non-existent emissions. If we know that the sector has emissions for that specific gas, but the gas was not modeled, this is represented by “NULL/none/nan”*                                        |
 | **total\_CO2e\_100yrGWP and total\_CO2e\_20yrGWP conversions**                  | *Climate TRACE uses IPCC AR6 CO<sub>2</sub>e GWPs. CO<sub>2</sub>e conversion guidelines are here: <span class="underline">https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC\_AR6\_WGI\_FullReport\_small.pdf</span>* |
 
-**Table S2** Source-level metadata description for “asset-climate-trace\_domestic-wastewater-treatment\_MMDDYY.csv”**.**
+**Table S2** Source-level metadata description for “asset-climate-trace\_domestic-wastewater-treatment\_MMDDYY.csv”.
 
 | **Data attribute**                | **Definition**                                                                          |
 |-----------------------------------|-----------------------------------------------------------------------------------------|
@@ -520,7 +520,7 @@ Table S2 describes the source-level data for WWTPs. These data are in the form o
 | **other5\_description**           | Lagoon Surface Area                                                                     |
 | **other5\_units**                 | Square meters                                                                           |
 
-**Table S3** Source level metadata description confidence and uncertainty for confidence/uncertainty-climate-trace\_domestic-wastewater-treatment\_MMDDYY.csv**.**
+**Table S3** Source level metadata description confidence and uncertainty for confidence/uncertainty-climate-trace\_domestic-wastewater-treatment\_MMDDYY.csv.
 
 | **Data attribute**                | **Confidence Definition**                                                                          | **Uncertainty Definition**             |
 |-----------------------------------|----------------------------------------------------------------------------------------------------|----------------------------------------|
@@ -540,7 +540,7 @@ Table S2 describes the source-level data for WWTPs. These data are in the form o
 | **total\_CO2e\_100yrGWP**         | Low                                                                                                | Standard deviation from Monte Carlo    |
 | **total\_CO2e\_20yrGWP**          | Low                                                                                                | Standard deviation from Monte Carlo    |
 
-**Table S4** General dataset information for industrial wastewater treatment plants**.**
+**Table S4** General dataset information for industrial wastewater treatment plants.
 
 | **General Description**                                                         | **Definition**                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -556,7 +556,7 @@ Table S2 describes the source-level data for WWTPs. These data are in the form o
 | **What is the difference between a “NULL / none / nan” versus “0” data field?** | *“0” values are for true non-existent emissions. If we know that the sector has emissions for that specific gas, but the gas was not modeled, this is represented by “NULL/none/nan”*                                      |
 | **total\_CO2e\_100yrGWP and total\_CO2e\_20yrGWP conversions**                  | Climate TRACE uses IPCC AR6 CO<sub>2</sub>e GWPs. CO<sub>2</sub>e conversion guidelines are here: <span class="underline">https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC\_AR6\_WGI\_FullReport\_small.pdf</span> |
 
-**Table S5** Source level metadata description for “source-climate-trace\_industrial-wastewater-treatment\_MMDDYY.csv”**.**
+**Table S5** Source level metadata description for “source-climate-trace\_industrial-wastewater-treatment\_MMDDYY.csv”.
 
 | **Data attribute**                | **Definition**                                                                                                                |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|

@@ -75,7 +75,7 @@ Where B\# refers to the band number for the specific satellite. This ratio was u
 
 <img src="figures/figure4.png" width="327" />
 
-**Figure 3** Left**:** Identified hotspots at POSCO’s Gwangyang steel plant, South Korea, during different quarters in 2023. Right: Identified sub-assets within the facility based on thermal anomalies. Sources: modified Copernicus and USGS data, ESRI base map.
+**Figure 3** Left: Identified hotspots at POSCO’s Gwangyang steel plant, South Korea, during different quarters in 2023. Right: Identified sub-assets within the facility based on thermal anomalies. Sources: modified Copernicus and USGS data, ESRI base map.
 
 #### 2.1.3. Production datasets
 
