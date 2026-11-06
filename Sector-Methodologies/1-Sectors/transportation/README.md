@@ -22,7 +22,7 @@ and the API. Each links to the methodology that documents it.
 | [`transportation_non-broadcasting-vessels`](./non-broadcasting-vessels/README.md) | Ships not transmitting AIS transponder data, estimated by other means | Global Fishing Watch |
 | [`transportation_other-transport`](../../2-Cross-Cutting/other-sectors/README.md) | Remaining transport not covered by the categories above | WattTime |
 | [`transportation_railways`](../../2-Cross-Cutting/other-sectors/README.md) | Freight and passenger rail | WattTime |
-| [`transportation_road-transportation`](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/Transportation/Global%20Road%20Emissions-TransportationSector-112025.pdf) | Cars, trucks, buses and motorcycles | The Johns Hopkins University Applied Physics Laboratory |
+| [`transportation_road-transportation`](./global-road-emissions/README.md) | Cars, trucks, buses and motorcycles | The Johns Hopkins University Applied Physics Laboratory |
 
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
 [data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).
