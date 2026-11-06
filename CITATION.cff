@@ -19,8 +19,12 @@ license: CC-BY-4.0
 version: no version number since sector version varies. Use access date instead. 
 keywords:
   - greenhouse gas emissions
+  - greenhouse gas emissions monitoring
+  - mitgation strategies and solutions
   - emissions methodology
   - remote sensing
+  - machine learning
+  - artificial intelligence
   - MRV
   - climate data
   - open data
