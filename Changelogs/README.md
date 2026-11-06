@@ -8,7 +8,7 @@ Included within each changelog folder are the monthly (version) data licensing a
 
 | Folder | Releases |
 |---|---|
-| [V5.X](./V5.X/) | v5.0.0 – v5.11.0 |
+| [V5.X](./V5.X/) | v5.0.0 – v5.12.0 |
 | [V4.X](./V4.X/) | v4.1.0 – v4.8.0 |
 
 Sectors with no changes in a given month/version do not appear in that month/version's changelog. A sector with
