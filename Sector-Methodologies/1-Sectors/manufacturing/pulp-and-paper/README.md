@@ -106,9 +106,7 @@ The process emission factor captures fossil fuel combustion in the pulping proce
 
 *Sources: chemical and kraft pulp, Kuparinen et al. (2019), from lime kiln combustion. Mechanical and recycled fiber pulp, derived from US EPA (2013) stationary-combustion data for the Other Paper Producers subsector and Kong et al. (2012). Semi-chemical pulp, a midpoint between mechanical and kraft (European Commission (2015)). Non-wood pulp, an assumption of about 40% above kraft (high uncertainty; informed by Favero et al., 2017, and Sun et al., 2018). Pulp misc., a fallback weighted toward chemical pulp (FAO, 2024a).*
 
-**  
-4.3 Pulp Scope 2: Indirect emissions from purchased electricity**
-
+#### 4.3 Pulp Scope 2: Indirect emissions from purchased electricity
 Scope 2 emissions from purchased electricity are estimated as:
 
 **Scope 2 purchased electricity** = Grid emissions intensity (tCO<sub>2</sub>/MWh) ×
@@ -125,9 +123,7 @@ Grid emissions intensity is sourced from Ember's monthly electricity data (Ember
 
 *Sources: chemical and kraft pulp, US DOE Bandwidth Study (2015) and NRCan (2003), at 0.65 unbleached and 0.70 bleached (bleaching adds about 50–100 kWh/t). Recycled fiber pulp, Kong et al. (2012) and US DOE (2015). Mechanical pulp, a weighted average of TMP, SGW and CTMP (European Commission, 2015; NRCan, 2003). Semi-chemical pulp, estimated from Valmet (2026.) and European Commission, 2015. Non-wood pulp, wood kraft used as a proxy (Kong et al., 2012; Worrell et al., 2008), as no non-wood benchmark was found. Pulp misc., a fallback weighted toward chemical pulp (FAO, 2024a).*
 
-**  
-4.4 Pulp Scope 2: Indirect emissions from captive power generation**
-
+#### 4.4 Pulp Scope 2: Indirect emissions from captive power generation
 Many pulp mills generate some or all of their electricity on-site (captive power). The fossil CO<sub>2</sub> from this generation is estimated here. It covers the share of the mill's electricity demand not met by the grid (Section 4.3).
 
 Under the GHG Protocol, emissions from on-site power generation are normally reported as Scope 1. Climate TRACE instead reports all emissions from generating electricity used in manufacturing as Scope 2, whether the power is bought from the grid or generated on-site (Lancellotti et al., 2025). This keeps electricity-related emissions comparable between mills that generate their own power and those that buy it. Readers comparing these estimates with company or regulatory reporting should account for this difference. Section 6 does this by combining Scope 1 and Scope 2 captive power before comparison.
@@ -290,9 +286,7 @@ FAO’s ‘Pulp for paper’ statistics are available to 2024, so the national p
 
 Facility-level production is estimated by allocating national totals across assets in proportion to capacity rather than observed output, so estimates for any individual mill will diverge where its true utilization differs from this assumption — through curtailment, outages, or ownership transitions, as documented directly at Quesnel River Pulp (Section 6.3, Appendix 11.3). Both the process and captive-power emission factors are applied by broad product type rather than mill-specific data; Section 6.3 shows this produces roughly symmetric, not systematically biased, scatter, though it also surfaces a specific pattern worth flagging — for several US mills marketed by their operators as high-renewable-energy sites, operator-reported fossil shares of total mill energy (17–32%) suggest the default 95/5 captive split may understate fossil fuel use at some kraft mills, although the two measures are not directly comparable. At integrated pulp-and-paper sites, FAO national production includes pulp consumed on-site (FAO et al., n.d.), so the method allocates both market and integrated pulp. However, IIR and SFI do not consistently state whether reported capacity covers a mill’s total pulp output or only its market pulp, so the split between integrated and market mills is uncertain. This same ambiguity limits the external data sources used for validation (EU ETS activity-code assignment, CEPI's combined-sector reporting, and regulatory registries with their own boundary conventions), meaning divergence against any single comparison should not be read as model error in isolation. The uncertainty ranges in Table 7 (±19–27%) describe uncertainty in the inputs and factors used to estimate each asset’s emissions. They are not directly comparable with the differences from reported emissions in Section 6.3, which also reflect differences in reporting boundaries, such as integrated pulp and paper sites, separately permitted energy plants and activity-code classification. A difference of more than 27% at an individual mill therefore does not imply uncertainty of that size in the estimate. Despite these constraints, the methodology improves facility-level visibility for the sector and provides a foundation for more granular estimation as further asset-level fuel-mix and utilization data becomes available.
 
-**  
-9. Supplementary Metadata Section**
-
+#### 9. Supplementary Metadata Section
 Pulp sector CO<sub>2</sub> emissions were reported for the individual emitting sources for the years 2015 to 2026. The emissions described here represent a subset of specific country-level emissions estimates from the Climate TRACE manufacturing sector. All data is freely available on the Climate TRACE website ([<span class="underline">https://climatetrace.org/</span>](https://climatetrace.org/)). A detailed description of what is available is described in Tables 5 to 7.
 
 | **Table 5** Details on the pulp and paper assets metadata               |                                                                                                                                                                                                                              |
@@ -318,10 +312,8 @@ Permissions and Use: All Climate TRACE data is freely available under the Creati
 > **Data citation format**: Crane, V. and Underwood, C. (2026). *Manufacturing and Industrial Processes sector, Pulp and Paper Production Emissions*. TransitionZero, UK, Climate TRACE Emissions Inventory. [<span class="underline">https://climatetrace.org</span>](https://climatetrace.org)
 >
 > Disclaimer: The emissions provided for this sector are our current best estimates of emissions, and we are committed to continually increasing the accuracy of the models on all levels. Please review our terms of use and the sector-specific methodology documentation before using the data. If you identify an error or would like to participate in our data validation process, please [<span class="underline">contact us</span>](mailto:coalition@climatetrace.org).
->
-> **  
-> 10. References**
 
+#### 10. References
 1.  Ali, R.H., Abdel Samee, A.A., Attalla, M. and Maghrabie, H.M. (2023) 'Energy-exergy approach of a cogeneration system in pulp and paper industry with a chemical recovery of black liquor and soda', Case Studies in Thermal Engineering, 42, 102712. Available at: <span class="underline">https://doi.org/10.1016/j.csite.2023.102712</span> (Accessed: 20 October 2026).
 
 2.  American Forest & Paper Association (AF & PA) (2024) *Facts About Energy Use and the Paper Industry*, 20 February. Available at: [<span class="underline">https://afandpa.org/news/2024/facts-about-energy-use-and-paper-industry</span>](https://afandpa.org/news/2024/facts-about-energy-use-and-paper-industry) (Accessed: 13 May 2026).

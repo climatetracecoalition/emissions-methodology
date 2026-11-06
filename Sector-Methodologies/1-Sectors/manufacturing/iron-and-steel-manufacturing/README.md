@@ -40,8 +40,7 @@ GEM provides facility-level information such as location, owner, capacity, age, 
 
 <img src="figures/figure2.png" width="641" />
 
-**  
-Figure 2** Global map showing operating steel plants as of 2025. Satellite monitored facilities (shown in dark blue) and other facilities (shown in orange). The circle size represents plant production capacity, with reference scales shown at the top of the figure for 1,000 and 20,000 thousand tonnes per annum (ktpa).
+**Figure 2** Global map showing operating steel plants as of 2025. Satellite monitored facilities (shown in dark blue) and other facilities (shown in orange). The circle size represents plant production capacity, with reference scales shown at the top of the figure for 1,000 and 20,000 thousand tonnes per annum (ktpa).
 
 #### 2.1.2. Remote sensing datasets
 
