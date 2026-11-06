@@ -19,7 +19,7 @@
 | Folder | What's in it |
 |---|---|
 | **[Sector-Methodologies](./Sector-Methodologies/)** | How each sector is estimated. **Start here.**<br>[1-Sectors](./Sector-Methodologies/1-Sectors/) · [2-Cross-Cutting](./Sector-Methodologies/2-Cross-Cutting/) · [3-Archive](./Sector-Methodologies/3-Archive/) |
-| **[Changelogs](./Changelogs/)** | What changed in each data release<br>[Current Changelog in V5.X](./Changelogs/V5.X/) |
+| **[Changelogs](./Changelogs/)** | See what changed in each monthly data release<br>[Current Changelog in V5.X](./Changelogs/V5.X/) |
 | **[Publications-and-References](./Publications-and-References/)** | Publications, peer-reviewed articles, and mentions of Climate TRACE research and members |
 ---
 ## AI Use Disclosure
@@ -29,8 +29,7 @@ OpenAI’s ChatGPT and Anthropic’s Claude assisted with methodology documentat
 ## **New to Climate TRACE? Start here:**
 
 1. **[How we estimate emissions](https://climatetrace.org/approach)** — how we use models, satellites, other remote sensing techniques, and AI to deliver global emissions.
-2. **[About the data](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/README/READ%20ME_v5.0.0_Climate%20TRACE_About%20the%20data_Nov2025.pdf)** — what the dataset covers, licensing, and how to cite it.
-3. **[Sectors we cover and data schema](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/README/Detailed_data_schema_v5.0.0_Nov2025.csv)** — every field in the dataset, defined.
+2. **[Sectors we cover, about the data, and schema](https://github.com/climatetracecoalition/emissions-methodology/tree/main/Changelogs)** — see what the dataset covers, every field in the dataset defined, licensing, and how to cite it in the Changelogs.
 
 **Looking for something specific?**
 
