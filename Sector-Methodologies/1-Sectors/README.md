@@ -16,6 +16,20 @@ The complete list of all 68 subsectors is at the bottom of this page.
 | [Transportation](./transportation/) | Road, rail, aviation, shipping | 8 |
 | [Waste](./waste/) | Landfills, wastewater, incineration | 5 |
 
+Subsectors without a dedicated model, including each sector's "other" subsector, are estimated using
+[data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).
+These subsectors are:
+
+- **Agriculture:** `enteric-fermentation-other`, `manure-management-other`, `other-agricultural-soil-emissions`
+- **Buildings:** `other-onsite-fuel-usage`
+- **Fluorinated Gases:** `fluorinated-gases`
+- **Fossil Fuel Operations:** `other-solid-fuels`
+- **Manufacturing:** `food-beverage-tobacco`, `glass`, `lime`, `other-chemicals`, `other-manufacturing`, `other-metals`, `textiles-leather-apparel`, `wood-and-wood-products`
+- **Mineral Extraction:** `other-mining-quarrying`
+- **Power:** `other-energy-use`
+- **Transportation:** `other-transport`, `railways`
+- **Waste:** `biological-treatment-of-solid-waste-and-biogenic`, `incineration-and-open-burning-of-waste`
+
 Methods that apply across sectors live in [`2-Cross-Cutting/`](../2-Cross-Cutting/).
 
 ---
