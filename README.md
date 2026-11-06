@@ -8,6 +8,8 @@
 <h3 align="center">
   <a href="https://climatetrace.org">Explore the data</a> |
   <a href="https://climatetrace.org/data">Download the data</a>
+  <br><br>
+  <a href="https://climatetrace.org/reduce/countries/all/Global">Explore our decarbonization pathways</a>
 </h3>
 
 ---
