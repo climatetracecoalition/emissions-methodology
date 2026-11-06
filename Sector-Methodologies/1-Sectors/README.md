@@ -5,7 +5,7 @@ The complete list of all 68 subsectors is at the bottom of this page.
 
 | Sector | What it covers | Subsectors |
 |---|---|---|
-| [Agriculture](./agriculture/) | Livestock, rice, fertilizer, soil emissions | 12 |
+| [Agriculture](./agriculture/) | Livestock, rice, fertilizer, soil emissions | 13 |
 | [Buildings](./buildings/) | On-site fuel use in homes and commercial buildings | 3 |
 | [Fluorinated Gases](./fluorinated-gases/) | Refrigerants and industrial gases | 1 |
 | [Forestry and Land Use](./forestry-and-land-use/) | Forest clearing, degradation, fire, removals | 10 |
@@ -35,6 +35,7 @@ Every subsector across all ten sectors. Names match the [data downloads](https:/
 | [Agriculture](./agriculture/) | [`agriculture_manure-left-on-pasture-cattle`](./agriculture/cattle-enteric-fermentation-manure-pasture/README.md) | Emissions from manure deposited directly by grazing cattle | Remote Sensing Lab at Saint Louis University; WattTime |
 | [Agriculture](./agriculture/) | [`agriculture_manure-management-cattle-operation`](./agriculture/cattle-operations-asset-level/README.md) (asset-level) · [country-level](./agriculture/cattle-operations-country-level/README.md) | Emissions from stored and treated manure at cattle operations | WattTime; Earth Genome; Remote Sensing Lab at Saint Louis University |
 | [Agriculture](./agriculture/) | [`agriculture_manure-management-other`](../2-Cross-Cutting/other-sectors/README.md) | Emissions from stored and treated manure for other livestock | WattTime |
+| [Agriculture](./agriculture/) | [`agriculture_net-soil-organic-carbon`](./agriculture/net-soil-organic-carbon-change/README.md) | Net change in carbon stored in agricultural soils | Michigan State University, Dept. of Earth and Environmental Sciences; Carbon Yield |
 | [Agriculture](./agriculture/) | [`agriculture_other-agricultural-soil-emissions`](../2-Cross-Cutting/other-sectors/README.md) | Remaining nitrous oxide emissions from managed soils | WattTime |
 | [Agriculture](./agriculture/) | [`agriculture_rice-cultivation`](./agriculture/rice-cultivation/README.md) | Methane from flooded rice paddies | Universiti Malaysia Terengganu; Carbon Yield |
 | [Agriculture](./agriculture/) | [`agriculture_synthetic-fertilizer-application`](./agriculture/synthetic-fertilizer-n2o/README.md) | Nitrous oxide from manufactured fertilizer applied to cropland | Michigan State University, Dept. of Earth and Environmental Sciences |
