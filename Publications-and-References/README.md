@@ -5,12 +5,17 @@
 ### Refer to our most [up-to-date methodologies](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025) for specific sector approaches to estimate emissions. 
 ### To view and download Climate TRACE emissions data, visit the [Climate TRACE website](https://climatetrace.org/).
 
-_**<h6>Last updated: October 26, 2026</h6>**_
+_**<h6>Last updated: November 5, 2026</h6>**_
 ---
 
 ## 1. Articles Authored or Co-Authored by Climate TRACE Members
 
 ### Agriculture: Cattle Emissions (Harvard University)
+- Pawar, A., Sagan, V., Tesser, D., Farbo, A., Boyda, E. and Davitt, A., 2026.  
+  **The Bovine Slurry Index (BSI): An integrated framework for manure pond mapping using GeoFM-derived cattle-operation detection and Sentinel-2 spectral formulation.**  
+  *International Journal of Applied Earth Observation and Geoinformation*, 154, p.105656.  
+  [https://doi.org/10.1016/j.jag.2026.105656](https://doi.org/10.1016/j.jag.2026.105656)
+  
 - Hancock, S.E., Jacob, D.J., Chen, Z., Nesser, H., Davitt, A., Varon, D.J., Sulprizio, M.P., Balasus, N., Estrada, L.A., Cazorla, M. and Dawidowski, L., 2025.  
   **Satellite quantification of methane emissions from South American countries: a high-resolution inversion of TROPOMI and GOSAT observations.**  
   *Atmospheric Chemistry and Physics*, 25(2), pp.797–817.  
