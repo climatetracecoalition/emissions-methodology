@@ -436,6 +436,6 @@
 
 ---
 
-PDF: [5.8.0_combined-changelog-climate-trace.docx.pdf](./5.8.0_combined-changelog-climate-trace.docx.pdf) · Source: [methodology-documents/2026/CHANGELOG/06_Jun_V5.8.0/5.8.0_combined-changelog-climate-trace.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2026/CHANGELOG/06_Jun_V5.8.0/5.8.0_combined-changelog-climate-trace.docx.pdf)
+PDF: [5.8.0_combined-changelog-climate-trace.docx.pdf](./5.8.0_combined-changelog-climate-trace.docx.pdf)
 
 [← V5.X Changelogs](../)

@@ -6,9 +6,7 @@
 
 **Prateek Sharma<sup>\*1,3</sup>, Rajvi Trivedi<sup>1,3</sup>, Aditya Manuraj<sup>1,3</sup>, Mukta Sharma<sup>1,3</sup>, Neville Millar<sup>1,3</sup>, Sam Schiller<sup>2,3</sup>, Mike Hsu<sup>2,3</sup>, and Bruno Basso<sup>\*1,3</sup>**
 
-*1) Department of Earth and Environmental Sciences,*
-
-*Michigan State University, 2) Carbon Yield, 3) Climate TRACE*
+*1) Department of Earth and Environmental Sciences, Michigan State University, 2) Carbon Yield, 3) Climate TRACE*
 
 V5.12.0, Oct. 2026
 
@@ -416,7 +414,7 @@ The above usage is not warranted to be error free and does not imply the express
 
 6.  Forster, P., T. Storelvmo, K. Armour, W. Collins, J.-L. Dufresne, D. Frame, D.J. Lunt, T. Mauritsen, M.D. Palmer, M. Watanabe, M. Wild, and H. Zhang, 2021: The Earth’s Energy Budget, Climate Feedbacks, and Climate Sensitivity. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change \[Masson-Delmotte, V., P. Zhai, A. Pirani, S.L. Connors, C. Péan, S. Berger, N. Caud,
 
-7.  Y. Chen, L. Goldfarb, M.I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)\]. Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA, pp. 923–1054. DOI: [<span class="underline">10.1017/9781009157896.009</span>](about:blank).
+7.  Y. Chen, L. Goldfarb, M.I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)\]. Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA, pp. 923–1054. DOI: [<span class="underline">10.1017/9781009157896.009</span>](https://doi.org/10.1017/9781009157896.009).
 
 8.  GADM, 2022. *GADM database of Global Administrative Areas, version 4.1*. https://gadm.org \[2024\].
 

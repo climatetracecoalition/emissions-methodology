@@ -502,6 +502,6 @@ Uncertainty results have been updated too.
 
 ---
 
-PDF: [5.6.0_combined-changelog-climate-trace.docx.pdf](./5.6.0_combined-changelog-climate-trace.docx.pdf) · Source: [methodology-documents/2026/CHANGELOG/04_Apr_V5.6.0/5.6.0_combined-changelog-climate-trace.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2026/CHANGELOG/04_Apr_V5.6.0/5.6.0_combined-changelog-climate-trace.docx.pdf)
+PDF: [5.6.0_combined-changelog-climate-trace.docx.pdf](./5.6.0_combined-changelog-climate-trace.docx.pdf)
 
 [← V5.X Changelogs](../)

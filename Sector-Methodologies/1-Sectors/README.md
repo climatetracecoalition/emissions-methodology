@@ -17,7 +17,7 @@ The complete list of all 68 subsectors is at the bottom of this page.
 | [Waste](./waste/) | Landfills, wastewater, incineration | 5 |
 
 Subsectors without a dedicated model, including each sector's "other" subsector, are estimated using
-[data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).
+[data-informed disaggregation or implicit estimation](../2-Cross-Cutting/other-sectors/README.md).
 These subsectors are:
 
 - **Agriculture:** `enteric-fermentation-other`, `manure-management-other`, `other-agricultural-soil-emissions`

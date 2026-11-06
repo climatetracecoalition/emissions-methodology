@@ -210,7 +210,7 @@ For the current (V5.1.0) release, we are including the following Deprecation War
 
 ### Added
 
-- [Added] Data period extended for existing sources in North America and Europe. Start_date 2025-01-01 to end_date 2025-03-31. -[Added] Non-GHG emissions for existing sources in Europe and North America. CO, N2O, PM10, PM2.5, SO2, and VOC emissions are modeled. For methodology for non-ghg emissions please visit methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/M anufacturing%20and%20Industrial%20Processes/Petrochemical%20Ethylene%20Steam%20 Cracker%20Emissions-ManufacturingandIndustrialProcessesSector-112025.docx.pdf
+- [Added] Data period extended for existing sources in North America and Europe. Start_date 2025-01-01 to end_date 2025-03-31. -[Added] Non-GHG emissions for existing sources in Europe and North America. CO, N2O, PM10, PM2.5, SO2, and VOC emissions are modeled. For methodology for non-ghg emissions please visit methodology: [Petrochemical Steam Cracking methodology](../../../Sector-Methodologies/1-Sectors/manufacturing/petrochemical-steam-cracking/README.md)
 
 ### Changed
 
@@ -446,6 +446,6 @@ For the current (V5.1.0) release, we are including the following Deprecation War
 
 ---
 
-PDF: [5.1.0_combined-changelog-climate-trace.docx.pdf](./5.1.0_combined-changelog-climate-trace.docx.pdf) · Source: [methodology-documents/2025/CHANGELOG/12_Dec_V5.1.0/5.1.0_combined-changelog-climate-trace.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/12_Dec_V5.1.0/5.1.0_combined-changelog-climate-trace.docx.pdf)
+PDF: [5.1.0_combined-changelog-climate-trace.docx.pdf](./5.1.0_combined-changelog-climate-trace.docx.pdf)
 
 [← V5.X Changelogs](../)

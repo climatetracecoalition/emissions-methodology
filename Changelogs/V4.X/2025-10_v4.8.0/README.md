@@ -822,6 +822,6 @@ The following Deprecation Warnings were announced in V4.7.0 and is now active in
 
 ---
 
-PDF: [4.8.0_combined-changelog-climate-trace.docx.pdf](./4.8.0_combined-changelog-climate-trace.docx.pdf) · Source: [methodology-documents/2025/CHANGELOG/10_Oct_V4.8.0/4.8.0_combined-changelog-climate-trace.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/10_Oct_V4.8.0/4.8.0_combined-changelog-climate-trace.docx.pdf)
+PDF: [4.8.0_combined-changelog-climate-trace.docx.pdf](./4.8.0_combined-changelog-climate-trace.docx.pdf)
 
 [← V4.X Changelogs](../)

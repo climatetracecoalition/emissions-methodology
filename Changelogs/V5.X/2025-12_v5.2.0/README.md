@@ -28,7 +28,7 @@ For the current (V5.2.0) release, the following Deprecation Warning is now in ef
 
 ### Added
 
-- [Added] Japan (JPN) coverage to the Climate TRACE database- an estimated 2,287 assets (cattle operations) have been identified. See methodology for more information: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Cattle%20Operations-%20Asset-level%20Enteric%20Fermentation%20and%20 Manure%20Management%20Emissions-AgricultureSector-112025.docx.pdf
+- [Added] Japan (JPN) coverage to the Climate TRACE database- an estimated 2,287 assets (cattle operations) have been identified. See methodology for more information: [Cattle Operations (asset level) methodology](../../../Sector-Methodologies/1-Sectors/agriculture/cattle-operations-asset-level/README.md)
 
 ### Changed
 
@@ -48,7 +48,7 @@ For the current (V5.2.0) release, the following Deprecation Warning is now in ef
 
 ### Added
 
-- [Added] Japan (JPN) coverage to the Climate TRACE database- an estimated 2,287 assets (cattle operations) have been identified. See methodology for more information: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Cattle%20Operations-%20Asset-level%20Enteric%20Fermentation%20and%20 Manure%20Management%20Emissions-AgricultureSector-112025.docx.pdf
+- [Added] Japan (JPN) coverage to the Climate TRACE database- an estimated 2,287 assets (cattle operations) have been identified. See methodology for more information: [Cattle Operations (asset level) methodology](../../../Sector-Methodologies/1-Sectors/agriculture/cattle-operations-asset-level/README.md)
 
 - [Added] JPN cattle operations wet manure management (i.e., lagoon ponds) were identified using a preliminary beta manure pond detection model.
 
@@ -174,7 +174,7 @@ For the current (V5.2.0) release, the following Deprecation Warning is now in ef
 
 - [Added] Data period extended for existing sources in Asia Pacific and Middle East. Start_date 2025-01-01 to end_date 2025-03-31
 
-- [Added] Non-GHG emissions for existing sources in Asia Pacific and Middle East. CO, N2O, PM10, PM2.5, SO2, and VOC emissions are modeled. For methodology for non-ghg emissions please visit methodology page: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/M anufacturing%20and%20Industrial%20Processes/Petrochemical%20Ethylene%20Steam%20 Cracker%20Emissions-ManufacturingandIndustrialProcessesSector-112025.docx.pdf
+- [Added] Non-GHG emissions for existing sources in Asia Pacific and Middle East. CO, N2O, PM10, PM2.5, SO2, and VOC emissions are modeled. For methodology for non-ghg emissions please visit methodology page: [Petrochemical Steam Cracking methodology](../../../Sector-Methodologies/1-Sectors/manufacturing/petrochemical-steam-cracking/README.md)
 
 - [Added] Asset ID 239 Long Son Petrochemicals in Vietnam.
 
@@ -396,6 +396,6 @@ For the current (V5.2.0) release, the following Deprecation Warning is now in ef
 
 ---
 
-PDF: [5.2.0_combined-changelog-climate-trace.docx.pdf](./5.2.0_combined-changelog-climate-trace.docx.pdf) · Source: [methodology-documents/2025/CHANGELOG/12_Dec_V5.2.0/5.2.0_combined-changelog-climate-trace.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/12_Dec_V5.2.0/5.2.0_combined-changelog-climate-trace.docx.pdf)
+PDF: [5.2.0_combined-changelog-climate-trace.docx.pdf](./5.2.0_combined-changelog-climate-trace.docx.pdf)
 
 [← V5.X Changelogs](../)

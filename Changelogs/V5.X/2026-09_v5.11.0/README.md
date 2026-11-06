@@ -1601,6 +1601,6 @@ HydroWASTE values and will remain blank for non-HydroWASTE assets.
 
 ---
 
-PDF: [5.11.0_combined-changelog-climate-trace.docx.pdf](./5.11.0_combined-changelog-climate-trace.docx.pdf) · Source: [methodology-documents/2026/CHANGELOG/09_Sep_V5.11.0/5.11.0_combined-changelog-climate-trace.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2026/CHANGELOG/09_Sep_V5.11.0/5.11.0_combined-changelog-climate-trace.docx.pdf)
+PDF: [5.11.0_combined-changelog-climate-trace.docx.pdf](./5.11.0_combined-changelog-climate-trace.docx.pdf)
 
 [← V5.X Changelogs](../)

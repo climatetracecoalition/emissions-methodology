@@ -2,7 +2,7 @@
      alt="Climate TRACE logo"
      width="400">
 ## This document provides references and links to publications, peer-reviewed articles, and mentions of the Climate TRACE sector leads and members.
-### Refer to our most [up-to-date methodologies](https://github.com/climatetracecoalition/methodology-documents/tree/main/2025) for specific sector approaches to estimate emissions. 
+### Refer to our most [up-to-date methodologies](../Sector-Methodologies/) for specific sector approaches to estimate emissions. 
 ### To view and download Climate TRACE emissions data, visit the [Climate TRACE website](https://climatetrace.org/).
 
 _**<h6>Last updated: November 5, 2026</h6>**_

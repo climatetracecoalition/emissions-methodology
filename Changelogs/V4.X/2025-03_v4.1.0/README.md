@@ -56,7 +56,7 @@
 
 ### Added
 
-- [Added] U.S. Department of Agriculture (USDA) cattle data to U.S. country-level emissions estimates. (See methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Agriculture%20sector-Country-level%20Enteric%20fermentation%20and%20 Manure%20Management%20Emissions%20Estimates%20from%20Cattle%20Operations.docx.p df)
+- [Added] U.S. Department of Agriculture (USDA) cattle data to U.S. country-level emissions estimates. (See methodology: [Cattle Operations (country level) methodology](../../../Sector-Methodologies/1-Sectors/agriculture/cattle-operations-country-level/README.md))
 
 - [Added] Data period projected forward. Start_date 2024-01-01 to end_date 2025-01-31.
 
@@ -138,7 +138,7 @@
 
 ### Added
 
-- [Added] U.S. Department of Agriculture (USDA) cattle data to U.S. country-level emissions estimates. (See methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Agriculture%20sector-Country-level%20Enteric%20fermentation%20and%20 Manure%20Management%20Emissions%20Estimates%20from%20Cattle%20Operations.docx.p df)
+- [Added] U.S. Department of Agriculture (USDA) cattle data to U.S. country-level emissions estimates. (See methodology: [Cattle Operations (country level) methodology](../../../Sector-Methodologies/1-Sectors/agriculture/cattle-operations-country-level/README.md))
 
 - [Added] Data period projected forward. Start_date 2024-01-01 to end_date 2025-01-31.
 
@@ -680,7 +680,7 @@
 
 ### Changed
 
-- [Changed] Updated model for all data. Activity quantification method updated to take global average output per facility, rather than the median of country-level output per facility. (Methodology update: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/O ther%20Sectors/Other%20Sectors-Data%20informed%20disaggregation%20and%20Implici t%20Estimation%20Methodology.docx.pdf)
+- [Changed] Updated model for all data. Activity quantification method updated to take global average output per facility, rather than the median of country-level output per facility. (Methodology update: [Other Sectors methodology](../../../Sector-Methodologies/2-Cross-Cutting/other-sectors/README.md))
 
 - [Changed] Updated metadata. Capacity, activity and related emissions_factors values updated due to change in model (see previous bullet).
 
@@ -728,7 +728,7 @@
 
 ### Changed
 
-- [Changed] Updated model for all data. Activity quantification method updated to take global average output per facility, rather than the median of country-level output per facility. (Methodology update: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/O ther%20Sectors/Other%20Sectors-Data%20informed%20disaggregation%20and%20Implici t%20Estimation%20Methodology.docx.pdf)
+- [Changed] Updated model for all data. Activity quantification method updated to take global average output per facility, rather than the median of country-level output per facility. (Methodology update: [Other Sectors methodology](../../../Sector-Methodologies/2-Cross-Cutting/other-sectors/README.md))
 
 - [Changed] Updated metadata. Capacity, activity and related emissions_factors values updated due to change in model (see previous bullet).
 
@@ -764,7 +764,7 @@
 
 ### Changed
 
-- [Changed] Updated model for all data. Activity quantification method updated to take global average output per facility, rather than the median of country-level output per facility (Methodology update: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/O ther%20Sectors/Other%20Sectors-Data%20informed%20disaggregation%20and%20Implici t%20Estimation%20Methodology.docx.pdf).
+- [Changed] Updated model for all data. Activity quantification method updated to take global average output per facility, rather than the median of country-level output per facility (Methodology update: [Other Sectors methodology](../../../Sector-Methodologies/2-Cross-Cutting/other-sectors/README.md)).
 
 - [Changed] Updated metadata. Capacity, activity and related emissions_factors values updated due to change in model (see previous bullet).
 
@@ -894,7 +894,7 @@
 
 ### Changed
 
-- [Changed] Updated biomass unit information using updated Global Biomass Project Tracker from GEM (See updated methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/P ower/Power%20sector-Emissions%20from%20Electricity%20Generation.docx.pdf).
+- [Changed] Updated biomass unit information using updated Global Biomass Project Tracker from GEM (See updated methodology: [Electricity Generation methodology](../../../Sector-Methodologies/1-Sectors/power/electricity-generation/README.md)).
 
 - [Changed] Updated gas unit information using updated Global Gas Project Tracker from GEM.
 
@@ -1208,6 +1208,6 @@
 
 ---
 
-PDF: [4.1.0_combined-changelog-climate-trace.pdf](./4.1.0_combined-changelog-climate-trace.pdf) · Source: [methodology-documents/2025/CHANGELOG/03_March_v4.1.0/4.1.0_combined-changelog-climate-trace.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/03_March_v4.1.0/4.1.0_combined-changelog-climate-trace.pdf)
+PDF: [4.1.0_combined-changelog-climate-trace.pdf](./4.1.0_combined-changelog-climate-trace.pdf)
 
 [← V4.X Changelogs](../)

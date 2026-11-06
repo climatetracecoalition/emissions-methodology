@@ -910,6 +910,6 @@
 
 ---
 
-PDF: [4.2.0_combined-changelog-climate-trace.pdf](./4.2.0_combined-changelog-climate-trace.pdf) · Source: [methodology-documents/2025/CHANGELOG/04_April_v4.2.0/4.2.0_combined-changelog-climate-trace.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/04_April_v4.2.0/4.2.0_combined-changelog-climate-trace.pdf)
+PDF: [4.2.0_combined-changelog-climate-trace.pdf](./4.2.0_combined-changelog-climate-trace.pdf)
 
 [← V4.X Changelogs](../)

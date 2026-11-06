@@ -296,7 +296,7 @@
 
 ### Added
 
-- [Added] Data period extended for existing sources in Asia Pacific and Middle East. Start_date 2025-01-01 to end_date 2025-03-31. -[Added] Asset ID 239 Long Son Petrochemicals in Vietnam. -[Added] Non-GHG emissions for existing sources in Asia Pacific and Middle East. CO, N2O, PM10, PM2.5, SO2, and VOC emissions are modeled. For methodology for non-ghg emissions please visit the methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/M anufacturing%20and%20Industrial%20Processes/Petrochemical%20Ethylene%20Steam%20 Cracker%20Emissions-ManufacturingandIndustrialProcessesSector-112025.docx.pdf
+- [Added] Data period extended for existing sources in Asia Pacific and Middle East. Start_date 2025-01-01 to end_date 2025-03-31. -[Added] Asset ID 239 Long Son Petrochemicals in Vietnam. -[Added] Non-GHG emissions for existing sources in Asia Pacific and Middle East. CO, N2O, PM10, PM2.5, SO2, and VOC emissions are modeled. For methodology for non-ghg emissions please visit the methodology: [Petrochemical Steam Cracking methodology](../../../Sector-Methodologies/1-Sectors/manufacturing/petrochemical-steam-cracking/README.md)
 
 ### Changed
 
@@ -492,6 +492,6 @@
 
 ---
 
-PDF: [5.3.0_combined-changelog-climate-trace.docx.pdf](./5.3.0_combined-changelog-climate-trace.docx.pdf) · Source: [methodology-documents/2026/CHANGELOG/01_Jan_V5.3.0/5.3.0_combined-changelog-climate-trace.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2026/CHANGELOG/01_Jan_V5.3.0/5.3.0_combined-changelog-climate-trace.docx.pdf)
+PDF: [5.3.0_combined-changelog-climate-trace.docx.pdf](./5.3.0_combined-changelog-climate-trace.docx.pdf)
 
 [← V5.X Changelogs](../)

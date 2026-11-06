@@ -584,6 +584,6 @@
 
 ---
 
-PDF: [5.5.0_combined-changelog_2026.docx.pdf](./5.5.0_combined-changelog_2026.docx.pdf) · Source: [methodology-documents/2026/CHANGELOG/03_Mar_V5.5.0/5.5.0_combined-changelog_2026.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2026/CHANGELOG/03_Mar_V5.5.0/5.5.0_combined-changelog_2026.docx.pdf)
+PDF: [5.5.0_combined-changelog_2026.docx.pdf](./5.5.0_combined-changelog_2026.docx.pdf)
 
 [← V5.X Changelogs](../)

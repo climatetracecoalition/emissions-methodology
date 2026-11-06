@@ -322,7 +322,7 @@
 
 - [Changed] The number of cattle operations identified in each country may have changed due to further deduplication processing.
 
-- [Changed] The cattle operation manure management sector now applies IPCC 2019 Tier 2 approach to estimate CH4 and N2O emissions for multiple manure management systems (MMS) assumed at an operation. This replaces the single-system assumption in previous releases. See ‘Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions’ methodology at https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/A griculture
+- [Changed] The cattle operation manure management sector now applies IPCC 2019 Tier 2 approach to estimate CH4 and N2O emissions for multiple manure management systems (MMS) assumed at an operation. This replaces the single-system assumption in previous releases. See ‘Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions’ methodology at [Agriculture methodologies](../../../Sector-Methodologies/1-Sectors/agriculture/)
 
 - [Changed] Previous releases assumed 100% of manure entered the single MMS at each cattle operation. For v5.10- multiple MMS at each cattle operation were assigned a fraction of manure entering each system. This will change CH4 and N2O emission estimates in v5.10.
 
@@ -334,7 +334,7 @@
 
 - [Changed] Compared to previous releases, the new country approach used in v5.10 manure management overall has decreased CH4 emissions and increased N2O emissions due to combining asset-level and country-level emissions data.
 
-- [Changed] Each asset (cattle operations) has new emissions reduction solutions (ERS) based on changing a single MMS in multiple MMS. See ‘Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions’ methodology at https://github.com/climatetracecoalition/methodology-documents/tree/main/2025/A griculture
+- [Changed] Each asset (cattle operations) has new emissions reduction solutions (ERS) based on changing a single MMS in multiple MMS. See ‘Cattle Operations- Asset-level Enteric Fermentation and Manure Management Emissions’ methodology at [Agriculture methodologies](../../../Sector-Methodologies/1-Sectors/agriculture/)
 
 - [Changed] The new manure management emissions reduction solutions (ERS) in v5.10 are ranked based on a weighted approach that includes cost and emission reduction potential when retrofitting a single MMS in the multiple MMS at each cattle operation.
 
@@ -1072,6 +1072,6 @@
 
 ---
 
-PDF: [5.10.0_combined-changelog-climate-trace.docx.pdf](./5.10.0_combined-changelog-climate-trace.docx.pdf) · Source: [methodology-documents/2026/CHANGELOG/08_Aug_V5.10.0/5.10.0_combined-changelog-climate-trace.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2026/CHANGELOG/08_Aug_V5.10.0/5.10.0_combined-changelog-climate-trace.docx.pdf)
+PDF: [5.10.0_combined-changelog-climate-trace.docx.pdf](./5.10.0_combined-changelog-climate-trace.docx.pdf)
 
 [← V5.X Changelogs](../)

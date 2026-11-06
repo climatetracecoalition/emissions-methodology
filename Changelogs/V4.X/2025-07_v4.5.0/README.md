@@ -10,7 +10,7 @@
 
 - [Changed] Fluorinated-gases CO2e values are calculated independently of EDGAR, using IPCC AR6 values from Table 7.SM.7.See document: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.p df
 
-- [Changed] Updated country-level extrapolation method now performed on entire sub-sector where external inventory data are unavailable. Previously, external inventory subsector estimates were extrapolated prior to gap-fill calculations. See methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/O ther%20Sectors/Other%20Sectors-Data%20informed%20disaggregation%20and%20Implici t%20Estimation%20Methodology.docx.pdf
+- [Changed] Updated country-level extrapolation method now performed on entire sub-sector where external inventory data are unavailable. Previously, external inventory subsector estimates were extrapolated prior to gap-fill calculations. See methodology: [Other Sectors methodology](../../../Sector-Methodologies/2-Cross-Cutting/other-sectors/README.md)
 
 - [Changed] Emissions estimates from 2023 onward are affected by country-level extrapolation method for the following Manufacturing sectors: food-beverage-tobacco, glass, lime, other-chemicals,  other-manufacturing, other-metals, textiles-leather-apparel, and wood-and-wood-products.
 
@@ -46,7 +46,7 @@
 
 ### Added
 
-- Added monthly country-level data from 2015-2024 for crop residue for 251 countries. See methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Agriculture%20sector-Emissions%20from%20Synthetic%20Fertilizer%2C%20 Crop%20Residue%2C%20and%20Manure%20Application%20Methodology.pdf
+- Added monthly country-level data from 2015-2024 for crop residue for 251 countries. See methodology: [Agriculture methodologies (synthetic fertilizer, crop residue and manure application)](../../../Sector-Methodologies/1-Sectors/agriculture/)
 
 ### Changed
 
@@ -188,7 +188,7 @@
 
 ### Changed
 
-- [Changed] This sector’s methodology name has been changed to “Emissions from Synthetic Fertilizer, Crop Residue, and Manure Application”. See updated methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Agriculture%20sector-Emissions%20from%20Synthetic%20Fertilizer%2C%20 Crop%20Residue%2C%20and%20Manure%20Application%20Methodology.pdf
+- [Changed] This sector’s methodology name has been changed to “Emissions from Synthetic Fertilizer, Crop Residue, and Manure Application”. See updated methodology: [Agriculture methodologies (synthetic fertilizer, crop residue and manure application)](../../../Sector-Methodologies/1-Sectors/agriculture/)
 
 ### Deprecated
 
@@ -364,7 +364,7 @@
 
 ### Changed
 
-- [Changed] Reservoir surface areas were previously calculated using Normalized Difference Water Index (NDWI) derived from Landsat or Sentinel-2's green and near-infrared bands. For this model version, and going forward, this sector is leveraging Sentinel-2's Scene Classification Layer (SCL), produced by the European Space Agency (ESA). See methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/F orestry%20and%20Land%20Use%20Change/Forestry%20and%20Land%20Use%20Change%20sect or-Emissions%20from%20Reservoirs.docx.pdf
+- [Changed] Reservoir surface areas were previously calculated using Normalized Difference Water Index (NDWI) derived from Landsat or Sentinel-2's green and near-infrared bands. For this model version, and going forward, this sector is leveraging Sentinel-2's Scene Classification Layer (SCL), produced by the European Space Agency (ESA). See methodology: [Reservoirs methodology](../../../Sector-Methodologies/1-Sectors/forestry-and-land-use/reservoirs/README.md)
 
 - [Changed] Due to the switch to Sentinel-2's SCL, this release’s emissions will be different compared to last release.
 
@@ -416,7 +416,7 @@
 
 - [Changed] Updated model for all data. OPGEE3c revamp, see: [https://github.com/RMI/ogsi_OPGEE_excel/tree/main]
 
-- [Changed] Input data sources have changed and are fully employed in this release, which has changed model outputs and estimates. See methodology sections 3.1 to 3.3 for more information: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/F ossil%20Fuel%20Operations/Fossil%20Fuel%20Operations%20Sector-Production%20and% 20Transport%20Emissions.docx.pdf
+- [Changed] Input data sources have changed and are fully employed in this release, which has changed model outputs and estimates. See methodology sections 3.1 to 3.3 for more information: [Oil and Gas Production and Transport methodology](../../../Sector-Methodologies/1-Sectors/fossil-fuel-operations/oil-and-gas-production-and-transport/README.md)
 
 - [Changed] Updated metadata confidence, emissions to reflect model changes and new post-processing.
 
@@ -470,7 +470,7 @@
 
 - [Changed] Updated model for all data. OPGEE3c revamp, see [https://github.com/RMI/ogsi_OPGEE_excel/tree/main]
 
-- [Changed] Input data sources have changed and are fully employed in this release, which has changed model outputs and estimates. See methodology sections 3.1 to 3.3 for more information: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/F ossil%20Fuel%20Operations/Fossil%20Fuel%20Operations%20Sector-Production%20and% 20Transport%20Emissions.docx.pdf
+- [Changed] Input data sources have changed and are fully employed in this release, which has changed model outputs and estimates. See methodology sections 3.1 to 3.3 for more information: [Oil and Gas Production and Transport methodology](../../../Sector-Methodologies/1-Sectors/fossil-fuel-operations/oil-and-gas-production-and-transport/README.md)
 
 - [Changed] Updated metadata confidence and emissions to reflect model changes and new post-processing.
 
@@ -536,7 +536,7 @@
 
 ### Changed
 
-- [Changed] Updated metadata [ownership, capacity, coordinates, emissions_factor]: our primary asset metadata source is no longer Spatial Finance Initiative but Global Energy Monitor's new Global Cement and Concrete Tracker. See methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/M anufacturing%20and%20Industrial%20Processes/Manufacturing%20and%20Industrial%20 Processes%20sector-Cement%20Manufacturing%20Emissions.docx.pdf
+- [Changed] Updated metadata [ownership, capacity, coordinates, emissions_factor]: our primary asset metadata source is no longer Spatial Finance Initiative but Global Energy Monitor's new Global Cement and Concrete Tracker. See methodology: [Cement Manufacturing methodology](../../../Sector-Methodologies/1-Sectors/manufacturing/cement-manufacturing/README.md)
 
 - [Changed] Due to metadata source change, the emissions for this release will overall increase compared to last release.
 
@@ -1006,6 +1006,6 @@
 
 ---
 
-PDF: [4.5.0_combined-changelog-climate-trace_2025-07-25.pdf](./4.5.0_combined-changelog-climate-trace_2025-07-25.pdf) · Source: [methodology-documents/2025/CHANGELOG/07_July_V4.5.0/4.5.0_combined-changelog-climate-trace_2025-07-25.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/07_July_V4.5.0/4.5.0_combined-changelog-climate-trace_2025-07-25.pdf)
+PDF: [4.5.0_combined-changelog-climate-trace_2025-07-25.pdf](./4.5.0_combined-changelog-climate-trace_2025-07-25.pdf)
 
 [← V4.X Changelogs](../)

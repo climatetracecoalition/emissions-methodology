@@ -30,7 +30,7 @@
 
 ### Changed
 
-- [Changed] methodology edited to include updates to emissions factors: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Agriculture%20sector-Emissions%20from%20Synthetic%20Fertilizer%2C%20 Crop%20Residue%2C%20and%20Manure%20Application%20Methodology.pdf
+- [Changed] methodology edited to include updates to emissions factors: [Agriculture methodologies (synthetic fertilizer, crop residue and manure application)](../../../Sector-Methodologies/1-Sectors/agriculture/)
 
 ### Deprecated
 
@@ -46,7 +46,7 @@
 
 ### Changed
 
-- [Changed] methodology edited to include updates to emissions factors: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Agriculture%20sector-Emissions%20from%20Synthetic%20Fertilizer%2C%20 Crop%20Residue%2C%20and%20Manure%20Application%20Methodology.pdf
+- [Changed] methodology edited to include updates to emissions factors: [Agriculture methodologies (synthetic fertilizer, crop residue and manure application)](../../../Sector-Methodologies/1-Sectors/agriculture/)
 
 ### Deprecated
 
@@ -74,7 +74,7 @@
 
 ### Changed
 
-- [Changed] methodology edited to include updates to emissions factors: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/A griculture/Agriculture%20sector-Emissions%20from%20Synthetic%20Fertilizer%2C%20 Crop%20Residue%2C%20and%20Manure%20Application%20Methodology.pdf
+- [Changed] methodology edited to include updates to emissions factors: [Agriculture methodologies (synthetic fertilizer, crop residue and manure application)](../../../Sector-Methodologies/1-Sectors/agriculture/)
 
 ### Deprecated
 
@@ -158,7 +158,7 @@
 
 ### Changed
 
-- [Changed] Updated metadata (emissions factors): Ground Granulated Blast Furnace Slag (GGBS) cement clinker ratio reduced to 50% to be more realistic across all monitored geographies; fuel emissions reduced to 0.59 for wet process and increased to 0.39 for semidry. Link to updated methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/M anufacturing%20and%20Industrial%20Processes/Manufacturing%20and%20Industrial%20 Processes%20sector-Cement%20Manufacturing%20Emissions.docx.pdf
+- [Changed] Updated metadata (emissions factors): Ground Granulated Blast Furnace Slag (GGBS) cement clinker ratio reduced to 50% to be more realistic across all monitored geographies; fuel emissions reduced to 0.59 for wet process and increased to 0.39 for semidry. Link to updated methodology: [Cement Manufacturing methodology](../../../Sector-Methodologies/1-Sectors/manufacturing/cement-manufacturing/README.md)
 
 - [Changed] Historical rerun to reflect impact of changed emissions factors above. Start_date 2021-01-01 to end_date 2025-04-30.
 
@@ -196,7 +196,7 @@
 
 ### Changed
 
-- [Changed] Improved the estimation of direct CO2 emissions for EAF and DRI-EAF routes by incorporating scrap and feedstock percentage data. This adjustment led to a slight increase in estimated emissions for those technologies. See https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/M anufacturing%20and%20Industrial%20Processes/Manufacturing%20and%20Industrial%20 Processes%20sector-Iron%20%26%20Steel%20Manufacturing%20Emissions.docx.pdf
+- [Changed] Improved the estimation of direct CO2 emissions for EAF and DRI-EAF routes by incorporating scrap and feedstock percentage data. This adjustment led to a slight increase in estimated emissions for those technologies. See [Iron and Steel Manufacturing methodology](../../../Sector-Methodologies/1-Sectors/manufacturing/iron-and-steel-manufacturing/README.md)
 
 - [Changed] Expanded the number of satellite-monitored assets from 334 to 362. The number of BF/BOF was increased from 262 to 313.
 
@@ -212,7 +212,7 @@
 
 ### Added
 
-- [Added] Updated content in “Data informed disaggregation and Implicit Estimation in Other Sectors” Methodology, see: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/O ther%20Sectors/Other%20Sectors-Data%20informed%20disaggregation%20and%20Implici t%20Estimation%20in%20Other%20Sectors.pdf
+- [Added] Updated content in “Data informed disaggregation and Implicit Estimation in Other Sectors” Methodology, see: [Other Sectors methodology](../../../Sector-Methodologies/2-Cross-Cutting/other-sectors/README.md)
 
 ### Changed
 
@@ -234,7 +234,7 @@
 
 ### Added
 
-- [Added] Updated content in “Data informed disaggregation and Implicit Estimation in Other Sectors” Methodology, see: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/O ther%20Sectors/Other%20Sectors-Data%20informed%20disaggregation%20and%20Implici t%20Estimation%20in%20Other%20Sectors.pdf
+- [Added] Updated content in “Data informed disaggregation and Implicit Estimation in Other Sectors” Methodology, see: [Other Sectors methodology](../../../Sector-Methodologies/2-Cross-Cutting/other-sectors/README.md)
 
 ### Changed
 
@@ -254,7 +254,7 @@
 
 ### Added
 
-- [Added] Updated content in “Data informed disaggregation and Implicit Estimation in Other Sectors” Methodology, see: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/O ther%20Sectors/Other%20Sectors-Data%20informed%20disaggregation%20and%20Implici t%20Estimation%20in%20Other%20Sectors.pdf
+- [Added] Updated content in “Data informed disaggregation and Implicit Estimation in Other Sectors” Methodology, see: [Other Sectors methodology](../../../Sector-Methodologies/2-Cross-Cutting/other-sectors/README.md)
 
 ### Changed
 
@@ -276,7 +276,7 @@
 
 ### Added
 
-- [Added] Updated content in “Data informed disaggregation and Implicit Estimation in Other Sectors” Methodology, see: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/O ther%20Sectors/Other%20Sectors-Data%20informed%20disaggregation%20and%20Implici t%20Estimation%20in%20Other%20Sectors.pdf
+- [Added] Updated content in “Data informed disaggregation and Implicit Estimation in Other Sectors” Methodology, see: [Other Sectors methodology](../../../Sector-Methodologies/2-Cross-Cutting/other-sectors/README.md)
 
 ### Changed
 
@@ -302,7 +302,7 @@
 
 - [Changed] Fixed a few plant/unit level information. These can reflect changes in our estimates.
 
-- [Changed] Database and underlying improvements for source generation data. See methodology: https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/P ower/Power%20sector-Emissions%20from%20Electricity%20Generation.docx.pdf
+- [Changed] Database and underlying improvements for source generation data. See methodology: [Electricity Generation methodology](../../../Sector-Methodologies/1-Sectors/power/electricity-generation/README.md)
 
 - [Changed] For the subset of plants in USA, BRA, ESP, NLD, POL, BEL, FIN, AUT, ITA, DEU that pass a set of validation checks, we report the activity based on reported generation data (CAMD, ENTSO-E, and ONS.
 
@@ -408,6 +408,6 @@
 
 ---
 
-PDF: [4.6.0_combined-changelog-climate-trace_2025-08-21.docx.pdf](./4.6.0_combined-changelog-climate-trace_2025-08-21.docx.pdf) · Source: [methodology-documents/2025/CHANGELOG/08_Aug_V4.6.0/4.6.0_combined-changelog-climate-trace_2025-08-21.docx.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/08_Aug_V4.6.0/4.6.0_combined-changelog-climate-trace_2025-08-21.docx.pdf)
+PDF: [4.6.0_combined-changelog-climate-trace_2025-08-21.docx.pdf](./4.6.0_combined-changelog-climate-trace_2025-08-21.docx.pdf)
 
 [← V4.X Changelogs](../)

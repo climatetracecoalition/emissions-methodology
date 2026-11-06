@@ -916,6 +916,6 @@
 
 ---
 
-PDF: [4.4.0_combined-changelog-climate-trace_2025-06-23-19.pdf](./4.4.0_combined-changelog-climate-trace_2025-06-23-19.pdf) · Source: [methodology-documents/2025/CHANGELOG/06_June_V4.4.0/4.4.0_combined-changelog-climate-trace_2025-06-23-19.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/06_June_V4.4.0/4.4.0_combined-changelog-climate-trace_2025-06-23-19.pdf)
+PDF: [4.4.0_combined-changelog-climate-trace_2025-06-23-19.pdf](./4.4.0_combined-changelog-climate-trace_2025-06-23-19.pdf)
 
 [← V4.X Changelogs](../)

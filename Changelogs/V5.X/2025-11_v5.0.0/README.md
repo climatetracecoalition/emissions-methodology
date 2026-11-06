@@ -32,6 +32,6 @@
 
 ---
 
-PDF: [5.0.0_combined-changelog-climate-trace.pdf](./5.0.0_combined-changelog-climate-trace.pdf) · Source: [methodology-documents/2025/CHANGELOG/11_Nov_V5.0.0/5.0.0_combined-changelog-climate-trace.pdf](https://github.com/climatetracecoalition/methodology-documents/blob/main/2025/CHANGELOG/11_Nov_V5.0.0/5.0.0_combined-changelog-climate-trace.pdf)
+PDF: [5.0.0_combined-changelog-climate-trace.pdf](./5.0.0_combined-changelog-climate-trace.pdf)
 
 [← V5.X Changelogs](../)
