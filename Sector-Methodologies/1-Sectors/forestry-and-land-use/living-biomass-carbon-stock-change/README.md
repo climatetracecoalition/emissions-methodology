@@ -28,9 +28,7 @@ Each section below provides an overview on the approach to generate each dataset
 
 #### 2.1 Estimates of Live Biomass Carbon Stocks and Changes
 
-This dataset provides annual estimates of live above-ground biomass (AGB), below-ground
-
-biomass (BGB), and total carbon (TLC) as the combined AGB and BGB across global vegetation (**Figure 2**). AGB estimates were derived from measurements of vegetation vertical structure using data from two satellite lidar sensors: the Global Ecosystem Dynamics Investigation (GEDI) mission aboard the International Space Station (ISS) and the ICESat-2 (Ice, Cloud, and land Elevation Satellite). These lidar-derived waveform metrics enabled the development of global vegetation structure (height metrics) maps across forested and non-forested areas, including savanna woodlands and shrublands, using machine learning (ML) algorithms. The number of GEDI and ICESAT-2 samples used in each 1-km grid cell was set to be greater than 50 to allow reliable estimates of vegetation structure and later AGB across different ecoregions globally. The valid number of samples increased significantly away from tropical regions thanks to the unique satellite orbit of the International Space Station hosting the GEDI sensor. A comprehensive set of airborne lidar data collected across the tropics was used to calibrate and validate the ML models. To create these structural maps, we developed over 700 ML models tailored to different ecoregions worldwide, improving height estimates and reducing large-scale overfitting and potential systematic errors.
+This dataset provides annual estimates of live above-ground biomass (AGB), below-ground biomass (BGB), and total carbon (TLC) as the combined AGB and BGB across global vegetation (**Figure 2**). AGB estimates were derived from measurements of vegetation vertical structure using data from two satellite lidar sensors: the Global Ecosystem Dynamics Investigation (GEDI) mission aboard the International Space Station (ISS) and the ICESat-2 (Ice, Cloud, and land Elevation Satellite). These lidar-derived waveform metrics enabled the development of global vegetation structure (height metrics) maps across forested and non-forested areas, including savanna woodlands and shrublands, using machine learning (ML) algorithms. The number of GEDI and ICESAT-2 samples used in each 1-km grid cell was set to be greater than 50 to allow reliable estimates of vegetation structure and later AGB across different ecoregions globally. The valid number of samples increased significantly away from tropical regions thanks to the unique satellite orbit of the International Space Station hosting the GEDI sensor. A comprehensive set of airborne lidar data collected across the tropics was used to calibrate and validate the ML models. To create these structural maps, we developed over 700 ML models tailored to different ecoregions worldwide, improving height estimates and reducing large-scale overfitting and potential systematic errors.
 
 <img src="figures/figure2.jpg" width="674" alt="figure2.019.jpeg" />
 
@@ -46,25 +44,11 @@ AGB values were used to estimate BGB using existing models developed for differe
 
 𝑇𝐿𝐶 = (𝐴𝐺𝐵 + 𝐵𝐺𝐵) × 𝐶𝐹
 
-Where TLC is total live carbon in vegetation, and CF is the carbon fraction of vegetation ranging
+Where TLC is total live carbon in vegetation, and CF is the carbon fraction of vegetation ranging from 0.47-0.51 depending on different forest types with the average value of about 0.5. Live biomass carbon stocks are converted to tons (Mg) of CO2e per hectare (tCO2e/ha) before delivering to Climate Trace.
 
-from 0.47-0.51 depending on different forest types with the average value of about 0.5. Live
+As part of the change-detection approach, we further enhance AGB estimates using a productivity model developed by the CTrees team. This model employs a space-for-time approach, combining global disturbance data with AGB estimates to improve carbon removal estimates across all ecoregions with stable vegetation over the complete disturbance history
 
-biomass carbon stocks are converted to tons (Mg) of CO2e per hectare (tCO2e/ha) before
-
-delivering to Climate Trace.
-
-As part of the change-detection approach, we further enhance AGB estimates using a productivity model developed by the CTrees team. This model employs a space-for-time approach, combining global disturbance data with AGB estimates to improve carbon removal
-
-estimates across all ecoregions with stable vegetation over the complete disturbance history
-
-Heinrich et al. 2023). The productivity model enables annual adjustments in areas of dense forest
-
-biomass where AGB values remain stable but may have high uncertainty, capturing biomass
-
-increases from gradual vegetation recovery. Biomass increases are applied to different biomass
-
-levels, representing local vegetation growth stages as a proxy.
+Heinrich et al. 2023). The productivity model enables annual adjustments in areas of dense forest biomass where AGB values remain stable but may have high uncertainty, capturing biomass increases from gradual vegetation recovery. Biomass increases are applied to different biomass levels, representing local vegetation growth stages as a proxy.
 
 Datasets used for mapping vegetation structure and biomass includes:
 
@@ -82,9 +66,7 @@ Datasets used for mapping vegetation structure and biomass includes:
 
 #### 2.2 Estimates of LULUCF Emissions
 
-To calculate the committed carbon emissions from deforestation, fire, and degradation events, we
-
-utilized a combination of satellite-derived products on forest cover change, fire disturbances, and
+To calculate the committed carbon emissions from deforestation, fire, and degradation events, we utilized a combination of satellite-derived products on forest cover change, fire disturbances, and
 
 CTrees' monitoring of land use change activities. The methodology includes three main steps (**Figure 3**):
 
@@ -94,11 +76,7 @@ CTrees' monitoring of land use change activities. The methodology includes three
 
 3.  Integrate and calibrate CTrees' land use change activity alert (LUCA) data with global deforestation, degradation, and fire data to provide quarterly LULUCF emission estimates starting in 2023. These quarterly estimates enable sub-annual emission assessments, supporting emission reduction policy enforcement and harmonization with emissions from other sectors reported by Climate TRACE.
 
-To calculate emissions, we used estimates of area of land use change and burned areas in forests,
-
-and wetlands, with emission factors derived by the biomass change, and an emission efficiency
-
-factor (*fD*) as given below:
+To calculate emissions, we used estimates of area of land use change and burned areas in forests, and wetlands, with emission factors derived by the biomass change, and an emission efficiency factor (*fD*) as given below:
 
 $`E_{\text{DF}} = C_{i}\  \times \ PDA_{i}\  \times \ f_{D}`$
 
@@ -106,21 +84,11 @@ $`E_{\text{Fire}} = C_{i}\  \times \ PBA_{i}\  \times \ f_{B}`$
 
 $`E_{\text{DG}} = C_{i}\  \times \ PDgA_{i}\  \times \ f_{\text{Dg}}`$
 
-Where 𝐶𝑖 is the total live carbon derived from annual TLC mapping for pixel 𝑖, and *E<sub>DF</sub>* (or *E<sub>Fire</sub>*, *E<sub>DG</sub>*) represents emissions from deforestation, fire, and degradation respectively for the corresponding year. $`\text{PDA}`$, $`\text{PBA}`$, and $`\text{PDgA}`$ represent the percent deforested areas, percent burnt
+Where 𝐶𝑖 is the total live carbon derived from annual TLC mapping for pixel 𝑖, and *E<sub>DF</sub>* (or *E<sub>Fire</sub>*, *E<sub>DG</sub>*) represents emissions from deforestation, fire, and degradation respectively for the corresponding year. $`\text{PDA}`$, $`\text{PBA}`$, and $`\text{PDgA}`$ represent the percent deforested areas, percent burnt area, and percent degraded area, respectively within the 1-km grid cells.
 
-area, and percent degraded area, respectively within the 1-km grid cells.
+The emission efficiency factor for deforestation was assumed $`f_{D} = 1`$ to allow total clearing of forest with a nonforest land use such as agriculture or pasture. Depending on the type of clearing, there may be variations for deforestation $`f_{D}`$ that can be used for uncertainty estimates. For fire burned areas the efficiency factor or combustion factor $`f_{B}`$ vary with land cover types, suggesting different factors used for forest types and shrub and grasslands in boreal, temperate, and tropical wet and dry ecoregions (Xu et al. 2021). For degradation in tropical forests, we assume a fixed factor ($`f_{\text{Dg}}`$ = 0.15) in our analysis, which is an average number derived from various publications (e.g. Pearson et al. 2014). The total emissions from deforestation (*E<sub>DF</sub>*), fire (*E<sub>Fire</sub>*), and degradation (*E<sub>DG</sub>*) were then estimated using the bottom-up modeling approximation (Xu et al., 2021).
 
-The emission efficiency factor for deforestation was assumed $`f_{D} = 1`$ to allow total clearing of
-
-forest with a nonforest land use such as agriculture or pasture. Depending on the type of clearing,
-
-there may be variations for deforestation $`f_{D}`$ that can be used for uncertainty estimates. For fire
-
-burned areas the efficiency factor or combustion factor $`f_{B}`$ vary with land cover types, suggesting different factors used for forest types and shrub and grasslands in boreal, temperate, and tropical wet and dry ecoregions (Xu et al. 2021). For degradation in tropical forests, we assume a fixed factor ($`f_{\text{Dg}}`$ = 0.15) in our analysis, which is an average number derived from various publications (e.g. Pearson et al. 2014). The total emissions from deforestation (*E<sub>DF</sub>*), fire (*E<sub>Fire</sub>*), and degradation (*E<sub>DG</sub>*) were then estimated using the bottom-up modeling approximation (Xu et al., 2021).
-
-Fire events at 1-km resolution can occur in both forest and non-forest regions, which may introduce a mixed-pixel effect when calculating emissions. To address this, each 1-km pixel was
-
-divided into two fractions—forest and non-forest—based on annual forest cover maps. The carbon in each fraction was designated as forest TLC CFCF (forest) or non-forest TLC CNFCNF (non-forest). The annual forest cover maps were created using Global Forest Change (GFC) tree cover datasets, with the data averaged at a 100-m resolution and then aggregated to 1-km resolution using a 20% threshold to generate annual forest cover classifications. Degradation events additionally accounted for forest edge emissions. The choice of a 20% threshold for global calculations was informed by a review of national reporting practices, which vary between 10-30% tree or canopy cover in defining forests and reflects the significant uncertainties in data types used for country-level estimations.
+Fire events at 1-km resolution can occur in both forest and non-forest regions, which may introduce a mixed-pixel effect when calculating emissions. To address this, each 1-km pixel was divided into two fractions—forest and non-forest—based on annual forest cover maps. The carbon in each fraction was designated as forest TLC CFCF (forest) or non-forest TLC CNFCNF (non-forest). The annual forest cover maps were created using Global Forest Change (GFC) tree cover datasets, with the data averaged at a 100-m resolution and then aggregated to 1-km resolution using a 20% threshold to generate annual forest cover classifications. Degradation events additionally accounted for forest edge emissions. The choice of a 20% threshold for global calculations was informed by a review of national reporting practices, which vary between 10-30% tree or canopy cover in defining forests and reflects the significant uncertainties in data types used for country-level estimations.
 
 <img src="figures/figure3.jpg" width="667" alt="figure01.018.jpeg" />
 
@@ -134,14 +102,13 @@ The datasets used to develop emissions for land use change activities include:
 
 -   Ancillary data including tree cover estimates from Landsat and land cover types separating forests, nonforests, and wetlands.
 
-Emissions for land cover types will only include fire in forest, grass/shrubland, and wetlands that
-
-were calculated by using the proportion of the burned area in each land cover type and the emission factor. The emission factor for fires is the biomass multiplied by the combustion factors in each land cover category. Emission estimates are provided in total tons of CO2e per 1-km resolution, globally for years 2015 to 2025.
+Emissions for land cover types will only include fire in forest, grass/shrubland, and wetlands that were calculated by using the proportion of the burned area in each land cover type and the emission factor. The emission factor for fires is the biomass multiplied by the combustion factors in each land cover category. Emission estimates are provided in total tons of CO2e per 1-km resolution, globally for years 2015 to 2025.
 
 The net annual carbon flux at each pixel (*C<sub>ne</sub>*<sub>t</sub>) in the 1-km grid cells denotes the difference between the potential vegetation carbon uptake (*C<sub>removal</sub>*) and the emissions from deforestation (*E<sub>DF</sub>*), fire (*E<sub>Fire</sub>*) and degradation (*E<sub>DG</sub>*). Therefore, the removal term is the residual of the estimated carbon stock change, and emissions from deforestation, fire and degradation terms in equation:
 
-$$ $`C_{\text{removal}} = \Delta C_{\text{net}} - E_{\text{DF}} - E_{\text{Fire}} - E_{\text{DG}}`$
-
+```math
+C_{\text{removal}} = \Delta C_{\text{net}} - E_{\text{DF}} - E_{\text{Fire}} - E_{\text{DG}}
+```
 For more details on the overall methodology, refer to Xu et al. (2021) for the overall framework of data processing and spatio-temporal machine learning model implementations.
 
 #### 2.3 Estimates of Emissions from Land Cover Type
@@ -465,13 +432,7 @@ The depiction and use of boundaries, geographic names and related data shown on 
 
 -   The borders between India, Pakistan and China have been assigned to these countries based on GADM codes Z01 to Z09.
 
-The above usage is not warranted to be error free and does not imply the expression of any
-
-opinion whatsoever on the part of Climate TRACE Coalition and its partners concerning the
-
-legal status of any country, area or territory or of its authorities, or concerning the delimitation of
-
-its borders.
+The above usage is not warranted to be error free and does not imply the expression of any opinion whatsoever on the part of Climate TRACE Coalition and its partners concerning the legal status of any country, area or territory or of its authorities, or concerning the delimitation of its borders.
 
 #### Disclaimer
 
