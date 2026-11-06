@@ -1,4 +1,4 @@
-<img src="https://github.com/climatetracecoalition/methodology-documents/assets/69821731/3199680a-cf8e-4768-8c09-32db52e4be70"
+<img src="../images/climate-trace-logo.png"
      alt="Climate TRACE logo"
      width="400">
 ## This document provides references and links to publications, peer-reviewed articles, and mentions of the Climate TRACE sector leads and members.

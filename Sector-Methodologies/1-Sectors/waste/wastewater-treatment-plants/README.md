@@ -587,7 +587,7 @@ Table S2 describes the source-level data for WWTPs. These data are in the form o
 | **total\_CO2e\_100yrGWP**         | CO<sub>2</sub> Equivalent for 100 year Global Warming Potential (Tonnes)                                                      |
 | **total\_CO2e\_20yrGWP**          | CO<sub>2</sub> Equivalent for 20 year Global Warming Potential (Tonnes)                                                       |
 
-**Table S6** Source level metadata description confidence and uncertainty for “confidence/uncertainty-climate-trace\_industrial-wastewater-treatment\_MMDDYY.csv**”.**
+**Table S6** Source level metadata description confidence and uncertainty for “confidence/uncertainty-climate-trace\_industrial-wastewater-treatment\_MMDDYY.csv”.
 
 | **Data attribute**                | **Confidence Definition**                             | **Uncertainty Definition**             |
 |-----------------------------------|-------------------------------------------------------|----------------------------------------|

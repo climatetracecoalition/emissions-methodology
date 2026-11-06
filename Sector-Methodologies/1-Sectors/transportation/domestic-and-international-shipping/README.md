@@ -126,7 +126,7 @@ The *R* (R Core Team, n.d.) package for Multivariate Imputation by Chained Equat
 
 *Table 1 - List of input variables used for training the ML models, along with the percentage of vessels for which each variable was imputed.*
 
-| **Predictor Name ** | **Description **                                       | **Example **   | **% imputed ** |
+| **Predictor Name** | **Description**                                       | **Example**   | **% imputed** |
 |---------------------|--------------------------------------------------------|----------------|----------------|
 | FlagName            | Flag State (Country which the vessel is registered to) | Japan          |                |
 | FlagNameBin         | Top 15 flags, with remainder grouped as OTH (other)    | JPN            |                |
@@ -190,9 +190,9 @@ Using vessel data from Lloyd's List Intelligence as well as new vessel informati
 
 To improve the visualization of geographical emissions estimates, two terms were used to define a monitoring period, relating to whether a vessel has been travelling between ports (trip) or staying at a singular port (port stay):
 
-**Trip: **A journey that starts with the vessel within one port and ends with a vessel in another port. The emissions from a trip are divided equally between the origin and destination ports.
+**Trip:** A journey that starts with the vessel within one port and ends with a vessel in another port. The emissions from a trip are divided equally between the origin and destination ports.
 
-**Port Stay: **A period that a vessel spends within a single port region. All emissions from a port stay are attributed to the holding port.
+**Port Stay:** A period that a vessel spends within a single port region. All emissions from a port stay are attributed to the holding port.
 
 To determine when a vessel visits a port, OceanMind developed a novel model referred to henceforth as the ‘berthing algorithm’. This model uses clustering techniques to determine the navigational status of a vessel, i.e. at berth, at anchor, in transit. Using these operational modes, along with the location of berthing or anchorage events allows for the identification of beginning and end points of trips. This model update was paramount to being able to also identify activities where a vessel is loitering before and after stopping at port, which is necessary for the calculation of the ERS strategy. Another benefit of this approach is that events where a vessel has on/offloaded cargo using offshore infrastructure/techniques is still captured as a port stay and can be adequately attributed to the port/country that is nearest to the offshore area.
 
@@ -606,7 +606,7 @@ Emissions estimates were generated monthly for years 2015 to 2026 with the Clima
 
 **Permissions and Use:** All Climate TRACE data is freely available under the Creative Commons Attribution 4.0 International Public License, unless otherwise noted below.
 
-**Data citation format:** Brett Mayes, Trevor Thomas, Martina Masanova, Melanie Tuckerman, Mark Powell, Dan Knights, Max Schofield and Ted Mackereth (2026). *Transportation sector - Domestic and International Shipping Emissions.* OceanMind, UK and the University of Minnesota, USA, Climate TRACE Emissions Inventory. https://climatetrace.org \[Accessed date\]***. ***
+**Data citation format:** Brett Mayes, Trevor Thomas, Martina Masanova, Melanie Tuckerman, Mark Powell, Dan Knights, Max Schofield and Ted Mackereth (2026). *Transportation sector - Domestic and International Shipping Emissions.* OceanMind, UK and the University of Minnesota, USA, Climate TRACE Emissions Inventory. https://climatetrace.org \[Accessed date\]***.***
 
 **Geographic boundaries and names (iso3\_country data attribute):** The depiction and use of boundaries, geographic names and related data shown on maps and included in lists, tables, documents, and databases on Climate TRACE are generated from the Global Administrative Areas (GADM) project (Version 4.1 released on 16 July 2022) along with their corresponding ISO3 codes, and with the following adaptations:
 

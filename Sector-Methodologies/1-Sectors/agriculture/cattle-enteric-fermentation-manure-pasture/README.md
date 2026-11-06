@@ -22,7 +22,7 @@ This methodology describes the approach to estimate cattle emissions from enteri
 
 We assemble country livestock statistics (FAOSTAT), Gridded Livestock Watch (GLW) cattle-density data, Global Pasture Watch (GPW) pasture-fraction layers, seasonal Gross Primary Production (GPP) layers, and administrative boundaries (GADM) to map pasture-supported cattle activity globally, as summarized in Figure 1. Using the IPCC 2019 Tier 2 methodology (Ch. 10–11), we compute pixel-level CH₄ (enteric, manure) and N₂O (manure on pasture) emissions at 1 km spatial resolution with region-specific parameters, then aggregate to country totals. Outputs include GeoTIFF rasters (EPSG:4326) and country-level CSV tables for 2015–2025, with accompanying uncertainty layers.
 
-<img src="figures/figure1.jpg" width="383" alt="A diagram of a country AI-generated content may be incorrect." />
+<img src="figures/figure1.jpg" width="383" />
 
 ***Figure 1** Methodology Flowchart to estimate emissions from cattle on pasture based on IPCC 2019 Tier 2.*
 
