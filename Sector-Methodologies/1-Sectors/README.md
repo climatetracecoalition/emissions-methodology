@@ -5,10 +5,10 @@ The complete list of all 68 subsectors is at the bottom of this page.
 
 | Sector | What it covers | Subsectors |
 |---|---|---|
-| [Agriculture](./agriculture/) | Livestock, rice, fertilizer, soil emissions | 13 |
+| [Agriculture](./agriculture/) | Livestock, rice, fertilizer, soil emissions | 12 |
 | [Buildings](./buildings/) | On-site fuel use in homes and commercial buildings | 3 |
 | [Fluorinated Gases](./fluorinated-gases/) | Refrigerants and industrial gases | 1 |
-| [Forestry and Land Use](./forestry-and-land-use/) | Forest clearing, degradation, fire, removals | 10 |
+| [Forestry and Land Use](./forestry-and-land-use/) | Forest clearing, degradation, fire, removals, agricultural soils | 11 |
 | [Fossil Fuel Operations](./fossil-fuel-operations/) | Coal, oil, and gas extraction and transport | 6 |
 | [Manufacturing](./manufacturing/) | Cement, steel, aluminum, chemicals, paper | 14 |
 | [Mineral Extraction](./mineral-extraction/) | Mining and quarrying | 6 |
@@ -49,7 +49,6 @@ Every subsector across all ten sectors. Names match the [data downloads](https:/
 | [Agriculture](./agriculture/) | [`agriculture_manure-left-on-pasture-cattle`](./agriculture/cattle-enteric-fermentation-manure-pasture/README.md) | Emissions from manure deposited directly by grazing cattle | Remote Sensing Lab at Saint Louis University; WattTime |
 | [Agriculture](./agriculture/) | [`agriculture_manure-management-cattle-operation`](./agriculture/cattle-operations-asset-level/README.md) (asset-level) · [country-level](./agriculture/cattle-operations-country-level/README.md) | Emissions from stored and treated manure at cattle operations | WattTime; Earth Genome; Remote Sensing Lab at Saint Louis University |
 | [Agriculture](./agriculture/) | [`agriculture_manure-management-other`](../2-Cross-Cutting/other-sectors/README.md) | Emissions from stored and treated manure for other livestock | WattTime |
-| [Agriculture](./agriculture/) | [`agriculture_net-soil-organic-carbon`](./agriculture/net-soil-organic-carbon-change/README.md) | Net change in carbon stored in agricultural soils | Michigan State University, Dept. of Earth and Environmental Sciences; Carbon Yield |
 | [Agriculture](./agriculture/) | [`agriculture_other-agricultural-soil-emissions`](../2-Cross-Cutting/other-sectors/README.md) | Remaining nitrous oxide emissions from managed soils | WattTime |
 | [Agriculture](./agriculture/) | [`agriculture_rice-cultivation`](./agriculture/rice-cultivation/README.md) | Methane from flooded rice paddies | Universiti Malaysia Terengganu; Carbon Yield |
 | [Agriculture](./agriculture/) | [`agriculture_synthetic-fertilizer-application`](./agriculture/synthetic-fertilizer-n2o/README.md) | Nitrous oxide from manufactured fertilizer applied to cropland | Michigan State University, Dept. of Earth and Environmental Sciences |
@@ -62,6 +61,7 @@ Every subsector across all ten sectors. Names match the [data downloads](https:/
 | [Forestry and Land Use](./forestry-and-land-use/) | [`forestry-and-land-use_forest-land-fires`](./forestry-and-land-use/living-biomass-carbon-stock-change/README.md) | Emissions from fires burning in forested land | CTrees |
 | [Forestry and Land Use](./forestry-and-land-use/) | [`forestry-and-land-use_net-forest-land`](./forestry-and-land-use/living-biomass-carbon-stock-change/README.md) | Net balance of emissions and removals on land remaining forest | CTrees |
 | [Forestry and Land Use](./forestry-and-land-use/) | [`forestry-and-land-use_net-shrubgrass`](./forestry-and-land-use/living-biomass-carbon-stock-change/README.md) | Net balance of emissions and removals on shrubland and grassland | CTrees |
+| [Forestry and Land Use](./forestry-and-land-use/) | [`forestry-and-land-use_net-soil-organic-carbon`](./forestry-and-land-use/net-soil-organic-carbon/README.md) | Net change in carbon stored in agricultural soils | Michigan State University, Dept. of Earth and Environmental Sciences; Carbon Yield |
 | [Forestry and Land Use](./forestry-and-land-use/) | [`forestry-and-land-use_net-wetland`](./forestry-and-land-use/living-biomass-carbon-stock-change/README.md) | Net balance of emissions and removals on wetlands | CTrees |
 | [Forestry and Land Use](./forestry-and-land-use/) | [`forestry-and-land-use_removals`](./forestry-and-land-use/living-biomass-carbon-stock-change/README.md) | Carbon drawn out of the atmosphere and stored in vegetation and soil | CTrees |
 | [Forestry and Land Use](./forestry-and-land-use/) | [`forestry-and-land-use_shrubgrass-fires`](./forestry-and-land-use/living-biomass-carbon-stock-change/README.md) | Emissions from fires on shrubland and grassland | CTrees |

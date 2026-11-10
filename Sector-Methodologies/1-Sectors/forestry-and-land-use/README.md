@@ -1,11 +1,11 @@
 # Forestry and Land Use
 
-Emissions and removals from forests, shrubland, wetlands, and reservoirs, including clearing, degradation, and fire.
+Emissions and removals from forests, shrubland, wetlands, agricultural soils, and reservoirs, including clearing, degradation, and fire.
 
 | | |
 |---|---|
 | **Full methodology** | pdf and readme provided |
-| **Subsectors covered** | 10 |
+| **Subsectors covered** | 11 |
 | **See the data** | [Explore on the map](https://climatetrace.org/explore#admin=&gas=co2e&year=2025&timeframe=100&sector=forestry-and-land-use&asset=) |
 
 ## Subsectors
@@ -20,6 +20,7 @@ and the API. Each links to the methodology that documents it.
 | [`forestry-and-land-use_forest-land-fires`](./living-biomass-carbon-stock-change/README.md) | Emissions from fires burning in forested land | CTrees |
 | [`forestry-and-land-use_net-forest-land`](./living-biomass-carbon-stock-change/README.md) | Net balance of emissions and removals on land remaining forest | CTrees |
 | [`forestry-and-land-use_net-shrubgrass`](./living-biomass-carbon-stock-change/README.md) | Net balance of emissions and removals on shrubland and grassland | CTrees |
+| [`forestry-and-land-use_net-soil-organic-carbon`](./net-soil-organic-carbon/README.md) | Net change in carbon stored in agricultural soils | Michigan State University, Dept. of Earth and Environmental Sciences; Carbon Yield |
 | [`forestry-and-land-use_net-wetland`](./living-biomass-carbon-stock-change/README.md) | Net balance of emissions and removals on wetlands | CTrees |
 | [`forestry-and-land-use_removals`](./living-biomass-carbon-stock-change/README.md) | Carbon drawn out of the atmosphere and stored in vegetation and soil | CTrees |
 | [`forestry-and-land-use_shrubgrass-fires`](./living-biomass-carbon-stock-change/README.md) | Emissions from fires on shrubland and grassland | CTrees |

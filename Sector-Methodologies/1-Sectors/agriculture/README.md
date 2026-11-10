@@ -5,7 +5,7 @@ Livestock, rice, fertilizer, and soil emissions, estimated from satellite imager
 | | |
 |---|---|
 | **Full methodology** | pdf and readme provided |
-| **Subsectors covered** | 13 |
+| **Subsectors covered** | 12 |
 | **See the data** | [Explore on the map](https://climatetrace.org/explore#admin=&gas=co2e&year=2025&timeframe=100&sector=agriculture&asset=) |
 
 ## Subsectors
@@ -28,7 +28,6 @@ just one link — that's the case for the two cattle-operation subsectors below.
 | `manure-left-on-pasture-cattle` | Emissions from manure deposited directly by grazing cattle | [View methodology](./cattle-enteric-fermentation-manure-pasture/README.md) | Remote Sensing Lab at Saint Louis University; WattTime |
 | `manure-management-cattle-operation` | Emissions from stored and treated manure at cattle operations | [View Asset-level methodology](./cattle-operations-asset-level/README.md) <br> [View Country-level methodology](./cattle-operations-country-level/README.md) | WattTime; Earth Genome; Remote Sensing Lab at Saint Louis University |
 | `manure-management-other` | Emissions from stored and treated manure for other livestock | [View methodology](../../2-Cross-Cutting/other-sectors/README.md) | WattTime |
-| `net-soil-organic-carbon` | Net change in carbon stored in agricultural soils | [View methodology](./net-soil-organic-carbon-change/README.md) | Michigan State University, Dept. of Earth and Environmental Sciences; Carbon Yield |
 | `other-agricultural-soil-emissions` | Remaining nitrous oxide emissions from managed soils | [View methodology](../../2-Cross-Cutting/other-sectors/README.md) | WattTime |
 | `rice-cultivation` | Methane from flooded rice paddies | [View methodology](./rice-cultivation/README.md) | Universiti Malaysia Terengganu; Carbon Yield |
 | `synthetic-fertilizer-application` | Nitrous oxide from manufactured fertilizer applied to cropland | [View methodology](./synthetic-fertilizer-n2o/README.md) | Michigan State University, Dept. of Earth and Environmental Sciences |
