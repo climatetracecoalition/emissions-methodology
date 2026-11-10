@@ -32,6 +32,8 @@ just one link — that's the case for the two cattle-operation subsectors below.
 | `rice-cultivation` | Methane from flooded rice paddies | [View methodology](./rice-cultivation/README.md) | Universiti Malaysia Terengganu; Carbon Yield |
 | `synthetic-fertilizer-application` | Nitrous oxide from manufactured fertilizer applied to cropland | [View methodology](./synthetic-fertilizer-n2o/README.md) | Michigan State University, Dept. of Earth and Environmental Sciences |
 
+The [Net Soil Organic Carbon Change methodology](https://github.com/climatetracecoalition/emissions-methodology/tree/main/Sector-Methodologies/1-Sectors/forestry-and-land-use) has been moved to to Forestry and Land Use Sector.
+
 Subsectors marked *Other Sectors* have no dedicated model. They are estimated by
 [data-informed disaggregation or implicit estimation](../../2-Cross-Cutting/other-sectors/).
 
