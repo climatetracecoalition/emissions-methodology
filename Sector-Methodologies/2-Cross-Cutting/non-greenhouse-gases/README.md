@@ -2,9 +2,7 @@
 
 **Gary Collins<sup>1,3</sup>, Luke Mullany<sup>1,3</sup>, Michael Robinette<sup>1,3</sup>, Lekha Sridhar<sup>2,3</sup>, Elizabeth Reilly<sup>1,3</sup>, and Jeff Maranchi<sup>1,3</sup>**
 
-1\) The Johns Hopkins University Applied Physics Laboratory (JHU/APL),
-
-2\) WattTime, 3) Climate TRACE
+1\) The Johns Hopkins University Applied Physics Laboratory (JHU/APL), 2) WattTime, 3) Climate TRACE
 
 V5.12.0, Oct. 2026
 

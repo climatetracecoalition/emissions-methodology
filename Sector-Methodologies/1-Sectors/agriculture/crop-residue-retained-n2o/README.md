@@ -4,9 +4,7 @@
 
 **Prateek Sharma<sup>\*1</sup>, Rajvi Trivedi<sup>1</sup>, Adity Manuraj<sup>1</sup>, Mukta Sharma<sup>1</sup>, Neville Millar<sup>1</sup>, Sam Schiller<sup>2</sup>, Mike Hsu<sup>2</sup> and Bruno Basso<sup>\*1</sup>**
 
-*1) Department of Earth and Environmental Sciences,*
-
-*Michigan State University, 2) Carbon Yield, 3) all affiliated with Climate TRACE*
+*1) Department of Earth and Environmental Sciences, Michigan State University, 2) Carbon Yield, 3) all affiliated with Climate TRACE*
 
 V5.11.0, Sept. 2026
 
