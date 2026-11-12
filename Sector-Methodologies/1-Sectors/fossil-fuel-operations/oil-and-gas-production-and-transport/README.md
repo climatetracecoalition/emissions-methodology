@@ -476,20 +476,16 @@ The above usage is not warranted to be error free and does not imply the express
 
 15. International Energy Agency. (2025). Methane Tracker Database, IEA, Paris. License: Creative Commons Attribution CC BY 4.0. <https://www.iea.org/data-and-statistics/data-tools/methane-tracker>
 
-16.
+16. Masnadi, M. S., El-Houjeiri, H. M., Schunack, D., Li, Y., Englander, J. G., Badahdah, A., Monfort, J. C., Anderson, J. E., Wallington, T. J., Bergerson, J. A., Gordon, D., Koomey, J., Przesmitzki, S., Azevedo, I. L., Bi, X. T., Duffy, J. E., Heath, G. A., Keoleian, G. A., McGlade, C., . . . Brandt, A. R. (2018). Global carbon intensity of crude oil production. *Science*, *361*(6405), 851–853. [<span class="underline"> </span> https://doi.org/10.1126/science.aar6859](https://doi.org/10.1126/science.aar6859)
 
-17. Masnadi, M. S., El-Houjeiri, H. M., Schunack, D., Li, Y., Englander, J. G., Badahdah, A., Monfort, J. C., Anderson, J. E., Wallington, T. J., Bergerson, J. A., Gordon, D., Koomey, J., Przesmitzki, S., Azevedo, I. L., Bi, X. T., Duffy, J. E., Heath, G. A., Keoleian, G. A., McGlade, C., . . . Brandt, A. R. (2018). Global carbon intensity of crude oil production. *Science*, *361*(6405), 851–853. [<span class="underline"> </span> https://doi.org/10.1126/science.aar6859](https://doi.org/10.1126/science.aar6859)
+17. Plant, G., et al. (2022). Inefficient and unlit natural gas flares both emit large quantities of methane. *Science, 377(6614)*, 1566-1571. <https://doi.org/10.1126/science.abq0385>
 
-18. Plant, G., et al. (2022). Inefficient and unlit natural gas flares both emit large quantities of methane. *Science, 377(6614)*, 1566-1571. <https://doi.org/10.1126/science.abq0385>
+18. RMI. (2022). Oil Climate Index + Gas. <https://ociplus.rmi.org/>
 
-19. RMI. (2022). Oil Climate Index + Gas. <https://ociplus.rmi.org/>
+19. Rutherford, J. S., et al. (2021). Closing the gap: Explaining persistent underestimation of US oil and natural gas production methane inventories. *Nature Communications,* 12(4715). <https://www.nature.com/articles/s41467-021-25017-4>
 
-20. Rutherford, J. S., et al. (2021). Closing the gap: Explaining persistent underestimation of US oil and natural gas production methane inventories. *Nature Communications,* 12(4715). <https://www.nature.com/articles/s41467-021-25017-4>
+20. United Nations Climate Change (2021). GHG data from the UNFCCC. [<span class="underline"> </span> https://unfccc.int/process-and-meetings/transparency-and-reporting/greenhouse-gas-data/ghg-data-unfccc/ghg-data-from-unfccc](https://unfccc.int/process-and-meetings/transparency-and-reporting/greenhouse-gas-data/ghg-data-unfccc/ghg-data-from-unfccc)
 
-21. United Nations Climate Change (2021). GHG data from the UNFCCC. [<span class="underline"> </span> https://unfccc.int/process-and-meetings/transparency-and-reporting/greenhouse-gas-data/ghg-data-unfccc/ghg-data-from-unfccc](https://unfccc.int/process-and-meetings/transparency-and-reporting/greenhouse-gas-data/ghg-data-unfccc/ghg-data-from-unfccc)
+21. World Bank Global Flaring and Methane Reduction Partnership. (2026). Global Gas Flaring Tracker. <https://www.worldbank.org/en/programs/gasflaringreduction/global-flaring-data>
 
-22. World Bank Global Flaring and Methane Reduction Partnership. (2026). Global Gas Flaring Tracker. <https://www.worldbank.org/en/programs/gasflaringreduction/global-flaring-data>
-
-23.
-
-24. Yu, J., Hmiel, B., Lyon, D., Warren, J., Cusworth, D., Duren, R., Chen, Y., Murphy, E., and Brandt, A. (2022). Methane Emissions from Natural Gas Gathering Pipelines in the Permian Basin. *Environmental Science & Technology Letters,* [<span class="underline"> </span> *https://doi.org/10.1021/acs.estlett.2c00380*](https://doi.org/10.1021/acs.estlett.2c00380)
+22. Yu, J., Hmiel, B., Lyon, D., Warren, J., Cusworth, D., Duren, R., Chen, Y., Murphy, E., and Brandt, A. (2022). Methane Emissions from Natural Gas Gathering Pipelines in the Permian Basin. *Environmental Science & Technology Letters,* [<span class="underline"> </span> *https://doi.org/10.1021/acs.estlett.2c00380*](https://doi.org/10.1021/acs.estlett.2c00380)
