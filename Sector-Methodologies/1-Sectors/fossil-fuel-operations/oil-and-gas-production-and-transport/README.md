@@ -22,7 +22,7 @@ Given the significant share of emissions attributed to oil and gas production, t
 
 #### 2. Materials and Methods
 
-The oil and gas production and transport sectors estimate carbon dioxide (CO<sub>2</sub>), CH<sub>4</sub>, and nitrous oxide (N<sub>2</sub>O) for years 2015 through present at monthly temporal resolution. Estimates are produced for 711 assets globally, covering 103 countries, representing an estimated 100% of oil and gas production and transport globally
+The oil and gas production and transport sectors estimate carbon dioxide (CO<sub>2</sub>), CH<sub>4</sub>, and nitrous oxide (N<sub>2</sub>O) for years 2015 through present at monthly temporal resolution. Estimates are produced for 711 assets globally, covering 103 countries, representing an estimated 100% of oil and gas production and transport globally.
 
 #### 2.1 Oil Climate Index + Gas (OCI+) Tool
 
@@ -99,7 +99,7 @@ An important part of deriving the FOR variable was assigning the satellite-obser
 
 #### 2.3.2.2 Remote Sensing-Derived Methane Detections
 
-Methane-sensing satellites have advanced capabilities to detect, pinpoint, and quantify large releases of methane and super-emitter events at oil and gas sites. Climate TRACE emissions estimates incorporate satellite methane detections from Carbon Mapper’s open-access web portal, including data from the Tanager-1 and EMIT satellites, and soon to be Tanager-2 satellite once data from that are reported. Tanager-1 is the first satellite of the Carbon Mapper Coalition, which includes Planet Labs and NASA’s Jet Propulsion Laboratory. It launched in August 2024. It uses a JPL imaging spectrometer to detect methane and CO₂ super-emitters down to individual facilities. Tanager-2, a replica of Tanager-1, was launched on October 1, 2026, and is expected to roughly double how often observations are made. NASA’s EMIT, an imaging spectrometer on the International Space Station, was launched in July 2022 to map minerals in arid regions, but it also turned out to detect methane.
+Methane-sensing satellites have advanced capabilities to detect, pinpoint, and quantify large releases of methane and super-emitter events at oil and gas sites. Climate TRACE emissions estimates incorporate satellite methane detections from Carbon Mapper’s open-access web portal, including data from the Tanager-1 and EMIT satellites. Tanager-1 is the first satellite of the Carbon Mapper Coalition, which includes Planet Labs and NASA’s Jet Propulsion Laboratory. It launched in August 2024. It uses a JPL imaging spectrometer to detect methane and CO₂ super-emitters down to individual facilities. Tanager-2, a replica of Tanager-1, was launched on October 1, 2026, and is expected to roughly double how often observations are made. NASA’s EMIT, an imaging spectrometer on the International Space Station, was launched in July 2022 to map minerals in arid regions, but it also turned out to detect methane.
 
 Attributing satellite-detected methane plumes to assets follows a similar approach to that of incorporating flared gas volumes. Plume data from the Carbon Mapper web portal are overlaid with oil and gas field location data and matched based on proximity logic. Plumes are also compared to other neighboring plumes to discern if a location can be generalized as a single source.
 
@@ -271,7 +271,7 @@ Figure 8 compares Climate TRACE results for top methane-emitting countries with 
 
 **Figure 8.** Top 10 global methane emitters in 2025, comparison with IEA Global Methane Tracker. We used 2025 as it was the most recent year with complete data from both sources.
 
-<img src="figures/figure9.png" width="303" /><img src="figures/figure10.png" width="288" />
+<img src="figures/figure9.png" width="628" />
 
 **Figure 9.** Comparison of oil and gas carbon dioxide (left) and methane (right) estimates for UNFCCC Annex 1 countries.
 
