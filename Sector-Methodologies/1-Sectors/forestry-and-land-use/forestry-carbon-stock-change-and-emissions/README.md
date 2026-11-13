@@ -20,7 +20,7 @@ CTrees has developed a bottom-up approach to the global GHG inventory of the lan
 
 The following sections describe how each dataset is generated.
 
-<img src="figures/figure1.png" width="624" alt="Figure 1" />
+<img src="figures/figure1.png" width="624" />
 
 **Figure 1.** CTrees standardized framework for bottom-up estimates of land carbon fluxes from ground and remote sensing data and machine learning, for the Climate TRACE GHG inventory (2015–2025). The framework has three main components: annual 1-km maps of live biomass carbon stocks with pixel-level uncertainty (Section 2.1; Figure 2), annual 1-km LULUCF emissions split by deforestation, degradation, and fire (Section 2.2; Figures 3–4), and annual and quarterly jurisdictional LULUCF emissions and removals for 251 countries and special territories at GADM levels 0–2 (Section 3; Figure 5). Final geospatial products are at 1-km spatial resolution.
 
@@ -30,7 +30,7 @@ This dataset provides annual estimates of live above-ground biomass (AGB), below
 
 A separate ML model was developed for each ecoregion (more than 700 models in total) using the satellite layers listed in Table 1; the ecoregion-specific models improve height estimates and reduce large-scale overfitting and systematic errors. Airborne lidar data collected across the tropics were used to fine-tune and validate the models. Input layers were aggregated to 1 km using the median and the 25th and 75th percentiles to capture spatial variability, together with the growing-season temporal standard deviation to capture temporal variability. The relative-height metrics RH50, RH75, RH90, and RH98 were then used as predictors in the AGB models, providing the vertical-structure information that improves AGB prediction accuracy.
 
-<img src="figures/figure2.jpg" width="627" alt="figure2.019.jpeg" />
+<img src="figures/figure2.jpg" width="627" />
 
 **Figure 2.** Mapping of the spatial and temporal variation of global live biomass carbon stocks from satellite remote sensing, ground and airborne inventory samples, and machine learning for vegetation structure, biomass density, and change detection (Xu et al., 2021).
 
@@ -132,7 +132,7 @@ Because the disturbance layer and the AGB product can disagree by a year on the 
 
 Pure burned pixels are too scarce in open forest for this before/after approach. For open-forest fires, the drop ratio is calculated as the ratio of mean shrub/grassland AGB to mean open-forest AGB. GEDI showed that RH98 did not change while RH25 and RH50 decreased, which suggests that the fires mainly burned the understory, with biomass similar to shrub/grassland. Wetland and shrub/grassland fires use fixed drop ratios of 0.30 and 0.527, respectively, consistent with combustion completeness values reported for these vegetation types (Xu et al., 2021).
 
-<img src="figures/figure4.png" width="605" alt="Picture 26" />
+<img src="figures/figure4.png" width="605" />
 
 **Figure 4.** Breakdown of step 2. Estimation of the subsector emission factors (drop ratios). Deforestation, degradation, and closed-forest fire are estimated from pure disturbance pixels by comparing AGB before and after the event, and open-forest fire from the AGB contrast between open forest and shrub/grassland; both are averaged by country (GADM0). Wetland and shrub/grassland fires use fixed values.
 
@@ -221,7 +221,7 @@ where E<sub>q</sub> is the emissions (tCO<sub>2</sub>) in quarter q (q = 1, 2, 3
 
 Not every unit produces a usable monthly signal every year; heavy snow cover or very sparse forest, for example, can leave LUCA without detections despite non-zero annual emissions. Each unit’s quarterly fractions are therefore resolved in a fixed order of precedence (Figure 5): the unit’s own data at the deepest available level (district, then state, then country); the same country’s fractions in an adjacent year; the average of neighboring countries; and, as a last resort, zero. Over 2023–2025, 99.97% of annual emissions use the unit’s own data: 97.6% from the GADM2 unit itself, 0.8% from its GADM1 unit, and 1.6% from its GADM0 unit. The adjacent-year and neighboring-country branches cover only 0.03%, and the zero branch has zero annual emissions. The rule used is recorded in a provenance flag on every quarterly record, so users can filter by the strength of the seasonality evidence.
 
-<img src="figures/figure5.png" width="605" alt="Picture 27" />
+<img src="figures/figure5.png" width="605" />
 
 **Figure 5.** Quarterly disaggregation. Monthly MODIS burned area (fires) and LUCA detections (deforestation and degradation) provide within-year quarterly fractions; a four-step fallback sequence fills units that lack a usable signal of their own; the fractions are applied to the annual values, and the quarterly sums are checked against the annual totals.
 
@@ -231,11 +231,11 @@ For every product year and subsector, the pipeline checks that the four quarterl
 
 The product is also compared with published global estimates. Total emissions of about 15.03 GtCO₂ per year over 2015–2025 are within about 11% of the 16.82 GtCO₂ per year derived from the biomass-change analysis of Xu et al. (2021) for 2000–2019. The two are not directly comparable, because they cover different periods and use different spatial resolutions and forest definitions. Fire emissions track the Global Fire Emissions Database (GFED v5.1; van der Werf et al., 2025) from year to year, with a mean bias of +0.05 GtCO₂ (GFED minus CTrees), an RMSE of 0.61 GtCO₂, and an MAE of 0.50 GtCO₂ (Figure 6). National forest carbon stocks follow FAOSTAT (Tubiello et al., 2021) more closely for Annex I countries than for non-Annex I countries, where self-reported inventories vary widely in method and update frequency (Figure 7). CTrees carbon stocks are higher than FAOSTAT in both groups, with a mean bias of 1,286 MtCO₂ (14% of the mean FAOSTAT stock) for Annex I and 1,426 MtCO₂ (29%) for non-Annex I countries. Forest-land net change over the overlapping 2015–2020 period is consistent with published net carbon flux estimates (Grassi et al., 2022). When all land-cover types are included, the net change of –1.87 GtCO₂ per year over 2015–2025 is similar to the –1.83 GtCO₂ per year reported by Yang H. et al. (2023) for 2010–2019 from satellite microwave data.
 
-<img src="figures/figure6.png" width="624" alt="Image" />
+<img src="figures/figure6.png" width="624" />
 
 **Figure 6.** Annual global fire emissions from CTrees and the Global Fire Emissions Database (GFED v5.1), 2015–2025. CTrees estimates include only forest, shrubland/grassland, and wetland fires; fires on other land-cover types (e.g., cropland, urban, and bare land) are excluded. GFED values are total fire emissions, which cover all land-cover types and also include burning of peat and soil carbon.
 
-<img src="figures/figure7.png" width="624" alt="Image" />
+<img src="figures/figure7.png" width="624" />
 
 **Figure 7.** National forest carbon stocks from CTrees versus FAOSTAT (average 2015–2020) for (a) Annex I (AI) countries, such as RUS, USA, CAN, AUS, and JPN, and (b) non-Annex I (NAI) countries, such as BRA, COD, IDN, CHN, and PER.
 
@@ -378,7 +378,7 @@ The ERS baseline period is 2015–2025. Baseline emissions are quantified at GAD
 
 The analysis relies on two input layers covering 2015–2025, the global time series of emission maps and the disturbance datasets, which allow emissions to be attributed to specific disturbance types and land classes.
 
-<img src="figures/figure8.jpg" width="560" alt="Image" />
+<img src="figures/figure8.jpg" width="560" />
 
 **Figure 8.** ERS workflow. Green boxes are input and output datasets (the emission datasets produced by CTrees), gray boxes are ancillary inputs, and orange cylinders are the methods and strategies applied.
 
@@ -402,7 +402,7 @@ Forest restoration expands forest area, rebuilds carbon stocks, and removes CO�
 
 As Figure 9 illustrates, a typical successful transition from non-forest to forest can add approximately 150 Mg/ha of AGB, equivalent to roughly 350 tCO₂/ha sequestered over 25 years. Scaled over large suitable areas, restoration is a large carbon sink and also benefits biodiversity, water quality, soil protection, and local livelihoods.
 
-<img src="figures/figure9.jpg" width="487" alt="Image" />
+<img src="figures/figure9.jpg" width="487" />
 
 **Figure 9.** Two aspects of forest restoration: the upper panel shows the forest regrowth curve (red dashed line), and the lower panels show AGB change between 2001 and 2025 alongside satellite imagery. Lighter colors indicate lower AGB and darker colors higher AGB.
 
@@ -424,7 +424,7 @@ Conversely, disturbances (deforestation, forest degradation, and natural or anth
 
 As Figure 10 shows, these disturbances cause a marked drop in AGB between the years before and after the event, directly reducing forest carbon stocks and adding to GHG emissions.
 
-<img src="figures/figure10.jpg" width="517" alt="Image" />
+<img src="figures/figure10.jpg" width="517" />
 
 **Figure 10.** AGB loss caused by deforestation, fire, and degradation. For each disturbance, the panels show AGB before (left) and after (center) the event and the corresponding satellite imagery (right). Lighter colors indicate lower AGB and darker colors higher AGB.
 
@@ -464,7 +464,7 @@ Forest restoration complements disturbance reduction by removing CO₂ from the 
 
 In Brazil (Figure 12), natural regeneration could remove approximately 1,291 MtCO₂ per year across 315.0 Mha of restoration opportunity, an average of 4.1 tCO₂ per hectare per year. Plantation management could remove approximately 8,299 MtCO₂ per year across 222.7 Mha, an average of 37.3 tCO₂ per hectare per year. The plantation area is smaller for two reasons: it excludes remote restoration areas, which are sparsely populated and costly to restore (World Resources Institute, 2014), and it is limited to assets where the Spatial Database of Planted Trees records existing plantations. The much higher rate per hectare reflects the faster growth of managed species compared with unassisted regrowth. The Brazilian rate is about twice the global mean of 16.8 tCO₂ per hectare per year. The growth rates that the Spatial Database of Planted Trees assigns to planted forests in Brazil, which are mostly short-rotation eucalyptus, reach 11.1 t of aboveground carbon per hectare per year (about 41 tCO₂ per hectare per year; Richter et al., 2024), compared with the 8–18 tCO₂ per hectare per year of loblolly pine in the U.S. Southeast (Appendix B3.1). These estimates are technical potentials based on the assumed restoration area and accumulation rates. Actual removals will depend on land tenure, competing land uses, finance, species choice and management, and climate effects on growth and mortality.
 
-<img src="figures/figure12.png" width="653" alt="image6.png" />
+<img src="figures/figure12.png" width="653" />
 
 **Figure 12.** Annual carbon removal potential from forest restoration in Brazil by asset (GADM2). (a) Natural regeneration (b) Plantation management. Grey assets have no restoration area or no plantation growth data.
 
@@ -959,112 +959,100 @@ Malaysia has followed a similar trajectory: primary forest loss in 2020–2022 w
 
 7.  Copernicus Data Space Ecosystem. Copernicus DEM (COP-DEM) collection description. https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM
 
-8.
+8.  EROS Center. (2020). Landsat 8-9 Operational Land Imager/Thermal Infrared Sensor Level-2, Collection 2 \[Data set\]. U.S. Geological Survey. https://doi.org/10.5066/P9OGBGM6
 
-9.  EROS Center. (2020). Landsat 8-9 Operational Land Imager/Thermal Infrared Sensor Level-2, Collection 2 \[Data set\]. U.S. Geological Survey. https://doi.org/10.5066/P9OGBGM6
+9.  European Commission, Joint Research Centre. (2024, Feb 28). The Amazon region in 2022 and 2023: Deforestation, forest degradation and risk from growing soy production. [<span class="underline">JRC: EU Science Hub</span>](https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/amazon-region-2022-and-2023-deforestation-forest-degradation-and-risk-growing-soy-production-2024-02-28_en)
 
-10. European Commission, Joint Research Centre. (2024, Feb 28). The Amazon region in 2022 and 2023: Deforestation, forest degradation and risk from growing soy production. [<span class="underline">JRC: EU Science Hub</span>](https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/amazon-region-2022-and-2023-deforestation-forest-degradation-and-risk-growing-soy-production-2024-02-28_en)
+10. European Space Agency (ESA). Copernicus Sentinel-1. https://sentinels.copernicus.eu/copernicus/sentinel-1
 
-11. European Space Agency (ESA). Copernicus Sentinel-1. https://sentinels.copernicus.eu/copernicus/sentinel-1
+11. FAO. (2025). Global Forest Resources Assessment 2025. Rome: FAO. https://doi.org/10.4060/cd6709en
 
-12.
+12. Friedlingstein, P., Jones, M. W., O'Sullivan, M., Andrew, R. M., Bakker, D. C., Hauck, J., … & Zeng, J. (2022). Global carbon budget 2021. *Earth System Science Data*, 14(4), 1917–2005.
 
-13. FAO. (2025). Global Forest Resources Assessment 2025. Rome: FAO. https://doi.org/10.4060/cd6709en
+13. GFOI (2020). *Methods and Guidance Document (MGD 3.x)*: integrating remote sensing & ground data for MRV. [<span class="underline">reddcompass.org</span>](https://www.reddcompass.org/mgd/resources/GFOI-MGD-3.1-en.pdf)
 
-14. Friedlingstein, P., Jones, M. W., O'Sullivan, M., Andrew, R. M., Bakker, D. C., Hauck, J., … & Zeng, J. (2022). Global carbon budget 2021. *Earth System Science Data*, 14(4), 1917–2005.
+14. Giglio, L., Justice, C., Boschetti, L., & Roy, D. (2021). MODIS/Terra+Aqua Burned Area Monthly L3 Global 500m SIN Grid V061. NASA EOSDIS Land Processes DAAC.
 
-15. GFOI (2020). *Methods and Guidance Document (MGD 3.x)*: integrating remote sensing & ground data for MRV. [<span class="underline">reddcompass.org</span>](https://www.reddcompass.org/mgd/resources/GFOI-MGD-3.1-en.pdf)
+15. Global Forest Watch. (2023, Jun 27). *Tropical primary forest loss worsened in 2022.* (contains Indonesia/Malaysia multi-year comparisons). [<span class="underline">Global Forest Watch</span>](https://www.globalforestwatch.org/blog/forest-insights/global-tree-cover-loss-data-2022/)
 
-16. Giglio, L., Justice, C., Boschetti, L., & Roy, D. (2021). MODIS/Terra+Aqua Burned Area Monthly L3 Global 500m SIN Grid V061. NASA EOSDIS Land Processes DAAC.
+16. Gold Standard Foundation. (2024). Methodology for Afforestation/Reforestation (A/R) GHGs Emission Reduction & Sequestration, Version 2.1. https://globalgoals.goldstandard.org/standards/403\_V2.1\_LUF\_AR-Methodology-GHGs-emission-reduction-and-Sequestration-Methodology.pdf
 
-17. Global Forest Watch. (2023, Jun 27). *Tropical primary forest loss worsened in 2022.* (contains Indonesia/Malaysia multi-year comparisons). [<span class="underline">Global Forest Watch</span>](https://www.globalforestwatch.org/blog/forest-insights/global-tree-cover-loss-data-2022/)
+17. Grassi, G., House, J., Dentener, F., Federici, S., den Elzen, M., & Penman, J. (2017). The key role of forests in meeting climate targets requires science for credible mitigation. *Nature Climate Change*, 7(3), 220–226.
 
-18. Gold Standard Foundation. (2024). Methodology for Afforestation/Reforestation (A/R) GHGs Emission Reduction & Sequestration, Version 2.1. https://globalgoals.goldstandard.org/standards/403\_V2.1\_LUF\_AR-Methodology-GHGs-emission-reduction-and-Sequestration-Methodology.pdf
+18. Grassi, G., Conchedda, G., Federici, S., Abad Viñas, R., Korosuo, A., Melo, J., Rossi, S., Sandker, M., Somogyi, Z., Vizzarri, M., and Tubiello, F. N. (2022). Carbon fluxes from land 2000–2020: bringing clarity to countries’ reporting. *Earth System Science Data*, 14(10):4643–4666.
 
-19. Grassi, G., House, J., Dentener, F., Federici, S., den Elzen, M., & Penman, J. (2017). The key role of forests in meeting climate targets requires science for credible mitigation. *Nature Climate Change*, 7(3), 220–226.
+19. Griscom, B. W., Adams, J., Ellis, P. W., Houghton, R. A., Lomax, G., Miteva, D. A., … & Fargione, J. (2017). Natural climate solutions. Proceedings of the National Academy of Sciences, 114(44), 11645–11650.
 
-20. Grassi, G., Conchedda, G., Federici, S., Abad Viñas, R., Korosuo, A., Melo, J., Rossi, S., Sandker, M., Somogyi, Z., Vizzarri, M., and Tubiello, F. N. (2022). Carbon fluxes from land 2000–2020: bringing clarity to countries’ reporting. *Earth System Science Data*, 14(10):4643–4666.
+20. Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., … & Townshend, J. R. (2013). High-resolution global maps of 21st-century forest cover change. *Science*, 342(6160), 850–853.
 
-21. Griscom, B. W., Adams, J., Ellis, P. W., Houghton, R. A., Lomax, G., Miteva, D. A., … & Fargione, J. (2017). Natural climate solutions. Proceedings of the National Academy of Sciences, 114(44), 11645–11650.
+21. Heinrich, V. H., Vancutsem, C., Dalagnol, R., Rosan, T. M., Fawcett, D., Silva-Junior, C. H., ... & Aragão, L. E. (2023). The carbon sink of secondary and degraded humid tropical forests. *Nature*, 615(7952), 436–442.
 
-22. Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., … & Townshend, J. R. (2013). High-resolution global maps of 21st-century forest cover change. *Science*, 342(6160), 850–853.
+22. IPCC (2006). 2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 4: Agriculture, Forestry and Other Land Use. Eggleston, H. S., Buendia, L., Miwa, K., Ngara, T., & Tanabe, K. (eds.). IGES, Japan.
 
-23. Heinrich, V. H., Vancutsem, C., Dalagnol, R., Rosan, T. M., Fawcett, D., Silva-Junior, C. H., ... & Aragão, L. E. (2023). The carbon sink of secondary and degraded humid tropical forests. *Nature*, 615(7952), 436–442.
+23. IPCC (2019). *Refinement to the 2006 IPCC Guidelines for National GHG Inventories (AFOLU)*. Method updates, uncertainty, QA/QC. [<span class="underline">IPCC NGGIP</span>](https://www.ipcc-nggip.iges.or.jp/public/2019rf/index.html)
 
-24. IPCC (2006). 2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 4: Agriculture, Forestry and Other Land Use. Eggleston, H. S., Buendia, L., Miwa, K., Ngara, T., & Tanabe, K. (eds.). IGES, Japan.
+24. Japan Aerospace Exploration Agency (JAXA), Earth Observation Research Center (EORC). ALOS-2 data. https://www.eorc.jaxa.jp/ALOS/en/alos-2/a2\_data\_e.htm
 
-25. IPCC (2019). *Refinement to the 2006 IPCC Guidelines for National GHG Inventories (AFOLU)*. Method updates, uncertainty, QA/QC. [<span class="underline">IPCC NGGIP</span>](https://www.ipcc-nggip.iges.or.jp/public/2019rf/index.html)
+25. Long, T., Zhang, Z., He, G., Jiao, W., Tang, C., Wu, B., Zhang, X., Wang, G., & Yin, R. (2019). 30 m resolution global annual burned area mapping based on Landsat images and Google Earth Engine. Remote Sensing, 11(5), 489. https://doi.org/10.3390/rs11050489
 
-26. Japan Aerospace Exploration Agency (JAXA), Earth Observation Research Center (EORC). ALOS-2 data. https://www.eorc.jaxa.jp/ALOS/en/alos-2/a2\_data\_e.htm
+26. Luyssaert, S., Schulze, E. D., Börner, A., Knohl, A., Hessenmöller, D., Law, B. E., ... & Grace, J. (2008). Old-growth forests as global carbon sinks. *Nature*, 455(7210), 213–215.
 
-27. Long, T., Zhang, Z., He, G., Jiao, W., Tang, C., Wu, B., Zhang, X., Wang, G., & Yin, R. (2019). 30 m resolution global annual burned area mapping based on Landsat images and Google Earth Engine. Remote Sensing, 11(5), 489. https://doi.org/10.3390/rs11050489
+27. Maier, C. A., & Johnsen, K. H. (2010). Quantifying carbon sequestration in forest plantations by modeling the dynamics of above and below ground carbon pools. In J. A. Stanturf (Ed.), Proceedings of the 14th Biennial Southern Silvicultural Research Conference (Gen. Tech. Rep. SRS-121, pp. 3–8). Asheville, NC: USDA Forest Service, Southern Research Station.
 
-28. Luyssaert, S., Schulze, E. D., Börner, A., Knohl, A., Hessenmöller, D., Law, B. E., ... & Grace, J. (2008). Old-growth forests as global carbon sinks. *Nature*, 455(7210), 213–215.
+28. Malhi, Y., Saatchi, S., Girardin, C., & Aragão, L. E. (2009). The production, storage, and flow of carbon in Amazonian forests. *Amazonia and Global Change*, 186, 355–372.
 
-29. Maier, C. A., & Johnsen, K. H. (2010). Quantifying carbon sequestration in forest plantations by modeling the dynamics of above and below ground carbon pools. In J. A. Stanturf (Ed.), Proceedings of the 14th Biennial Southern Silvicultural Research Conference (Gen. Tech. Rep. SRS-121, pp. 3–8). Asheville, NC: USDA Forest Service, Southern Research Station.
+29. McMahon, S. M., Parker, G. G., & Miller, D. R. (2010). Evidence for a recent increase in forest growth. Proceedings of the National Academy of Sciences, 107(8), 3611–3615.
 
-30. Malhi, Y., Saatchi, S., Girardin, C., & Aragão, L. E. (2009). The production, storage, and flow of carbon in Amazonian forests. *Amazonia and Global Change*, 186, 355–372.
+30. Mongabay. (2023, Nov 11). *Deforestation in the Brazilian Amazon falls 22% in 2023.* (summarizes INPE/PRODES). [<span class="underline">Mongabay</span>](https://news.mongabay.com/2023/11/deforestation-in-the-brazilian-amazon-falls-22-in-2023/)
 
-31. McMahon, S. M., Parker, G. G., & Miller, D. R. (2010). Evidence for a recent increase in forest growth. Proceedings of the National Academy of Sciences, 107(8), 3611–3615.
+31. Mullissa, A., Saatchi, S., Dalagnol, R., Erickson, T., Provost, N., Osborn, F., Ashary, A., Moon, V., & Melling, D. (2024). LUCA: A Sentinel-1 SAR-based global forest land use change alert. *Remote Sensing*, 16(12), 2151. [<span class="underline">https://doi.org/10.3390/rs16122151</span>](https://doi.org/10.3390/rs16122151)
 
-32. Mongabay. (2023, Nov 11). *Deforestation in the Brazilian Amazon falls 22% in 2023.* (summarizes INPE/PRODES). [<span class="underline">Mongabay</span>](https://news.mongabay.com/2023/11/deforestation-in-the-brazilian-amazon-falls-22-in-2023/)
+32. NASA Earthdata. Global Ecosystem Dynamics Investigation (GEDI). https://www.earthdata.nasa.gov/data/projects/gedi
 
-33. Mullissa, A., Saatchi, S., Dalagnol, R., Erickson, T., Provost, N., Osborn, F., Ashary, A., Moon, V., & Melling, D. (2024). LUCA: A Sentinel-1 SAR-based global forest land use change alert. *Remote Sensing*, 16(12), 2151. [<span class="underline">https://doi.org/10.3390/rs16122151</span>](https://doi.org/10.3390/rs16122151)
+33. NASA ICESat-2 Mission. ICESat-2: Ice, Cloud and land Elevation Satellite-2. https://icesat-2.gsfc.nasa.gov/
 
-34. NASA Earthdata. Global Ecosystem Dynamics Investigation (GEDI). https://www.earthdata.nasa.gov/data/projects/gedi
+34. NASA LAADS DAAC. MCD64A1: MODIS/Terra+Aqua burned area monthly L3 global 500 m. https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/MCD64A1
 
-35. NASA ICESat-2 Mission. ICESat-2: Ice, Cloud and land Elevation Satellite-2. https://icesat-2.gsfc.nasa.gov/
+35. NASA LCLUC Program. Global Forest Change dataset metadata. https://lcluc.umd.edu/metadata/global-forest-change
 
-36. NASA LAADS DAAC. MCD64A1: MODIS/Terra+Aqua burned area monthly L3 global 500 m. https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/MCD64A1
+36. NASA MODIS Land Team. MODIS land surface reflectance. https://modis-land.gsfc.nasa.gov/surfrad.html
 
-37. NASA LCLUC Program. Global Forest Change dataset metadata. https://lcluc.umd.edu/metadata/global-forest-change
+37. Nepal, P., Grala, R. K., & Grebner, D. L. (2012). Financial feasibility of increasing carbon sequestration in harvested wood products in Mississippi. Forest Policy and Economics, 14(1), 99–106.
 
-38. NASA MODIS Land Team. MODIS land surface reflectance. https://modis-land.gsfc.nasa.gov/surfrad.html
+38. Pan, Y., Birdsey, R. A., Fang, J., Houghton, R., Kauppi, P. E., Kurz, W. A., ... & Hayes, D. (2011). A large and persistent carbon sink in the world’s forests. *Science*, 333(6045), 988–993.
 
-39. Nepal, P., Grala, R. K., & Grebner, D. L. (2012). Financial feasibility of increasing carbon sequestration in harvested wood products in Mississippi. Forest Policy and Economics, 14(1), 99–106.
+39. Potapov, P., Laestadius, L., & Minnemeyer, S. (2011). Global map of forest landscape restoration opportunities. World Resources Institute. [<span class="underline">www.wri.org/forest-restoration-atlas</span>](http://www.wri.org/forest-restoration-atlas)
 
-40.
+40. Richter, J., Goldman, E., Harris, N., Gibbs, D., Rose, M., Peyer, S., Richardson, S., & Velappan, H. (2024). Spatial Database of Planted Trees (SDPT Version 2.0). Technical Note. Washington, DC: World Resources Institute. https://doi.org/10.46830/writn.23.00073
 
-41. Pan, Y., Birdsey, R. A., Fang, J., Houghton, R., Kauppi, P. E., Kurz, W. A., ... & Hayes, D. (2011). A large and persistent carbon sink in the world’s forests. *Science*, 333(6045), 988–993.
+41. Robinson, N., Drever, C. R., Gibbs, D. A., Lister, K., Esquivel-Muelbert, A., Heinrich, V., Ciais, P., Silva-Junior, C. H. L., Liu, Z., Pugh, T. A. M., & Saatchi, S. (2025). Protect young secondary forests for optimum carbon removal. Nature Climate Change, 15(7), 793–800. https://doi.org/10.1038/s41558-025-02355-5
 
-42. Potapov, P., Laestadius, L., & Minnemeyer, S. (2011). Global map of forest landscape restoration opportunities. World Resources Institute. [<span class="underline">www.wri.org/forest-restoration-atlas</span>](http://www.wri.org/forest-restoration-atlas)
+42. Saatchi, S. S., Harris, N. L., Brown, S., Lefsky, M., Mitchard, E. T., Salas, W., ... & Morel, A. (2011). Benchmark map of forest carbon stocks in tropical regions across three continents. *Proceedings of the National Academy of Sciences*, 108(24), 9899–9904.
 
-43. Richter, J., Goldman, E., Harris, N., Gibbs, D., Rose, M., Peyer, S., Richardson, S., & Velappan, H. (2024). Spatial Database of Planted Trees (SDPT Version 2.0). Technical Note. Washington, DC: World Resources Institute. https://doi.org/10.46830/writn.23.00073
+43. Seddon, N., Smith, A., Smith, P., Key, I., Chausson, A., Girardin, C., ... & Turner, B. (2021). Getting the message right on nature‐based solutions to climate change. *Global Change Biology*, 27(8), 1518–1546.
 
-44. Robinson, N., Drever, C. R., Gibbs, D. A., Lister, K., Esquivel-Muelbert, A., Heinrich, V., Ciais, P., Silva-Junior, C. H. L., Liu, Z., Pugh, T. A. M., & Saatchi, S. (2025). Protect young secondary forests for optimum carbon removal. Nature Climate Change, 15(7), 793–800. https://doi.org/10.1038/s41558-025-02355-5
+44. Tubiello, F. N., Conchedda, G., Wanner, N., Federici, S., Rossi, S., & Grassi, G. (2021). Carbon emissions and removals from forests: new estimates, 1990–2020. Earth System Science Data, 13(4), 1681–1691. https://doi.org/10.5194/essd-13-1681-2021
 
-45. Saatchi, S. S., Harris, N. L., Brown, S., Lefsky, M., Mitchard, E. T., Salas, W., ... & Morel, A. (2011). Benchmark map of forest carbon stocks in tropical regions across three continents. *Proceedings of the National Academy of Sciences*, 108(24), 9899–9904.
+45. Tyukavina, A., Potapov, P., Hansen, M. C., Pickens, A., Stehman, S., Turubanova, S., Parker, D., Zalles, V., Lima, A., Kommareddy, I., Song, X.-P., Wang, L., and Harris, N. (2022). Global trends of forest loss due to fire from 2001 to 2019. *Frontiers in Remote Sensing*, 3:825190.
 
-46. Seddon, N., Smith, A., Smith, P., Key, I., Chausson, A., Girardin, C., ... & Turner, B. (2021). Getting the message right on nature‐based solutions to climate change. *Global Change Biology*, 27(8), 1518–1546.
+46. University of Maryland GLAD. Global forest loss due to fire (GFL) dataset. https://glad.umd.edu/dataset/Fire\_GFL
 
-47.
+47. van der Werf, G. R., Randerson, J. T., van Wees, D., Chen, Y., Giglio, L., Hall, J., Vernooij, R., Mu, M., Binte Shahid, S., Barsanti, K. C., Yokelson, R., & Morton, D. C. (2025). Landscape fire emissions from the 5th version of the Global Fire Emissions Database (GFED5). Scientific Data, 12, 1870. https://doi.org/10.1038/s41597-025-06127-w
 
-48. Tubiello, F. N., Conchedda, G., Wanner, N., Federici, S., Rossi, S., & Grassi, G. (2021). Carbon emissions and removals from forests: new estimates, 1990–2020. Earth System Science Data, 13(4), 1681–1691. https://doi.org/10.5194/essd-13-1681-2021
+48. Vancutsem, C., Achard, F., Pekel, J.-F., Vieilledent, G., Carboni, S., Simonetti, D., Gallego, J., Aragão, L. E. O. C., & Nasi, R. (2021). Long-term (1990–2019) monitoring of forest cover changes in the humid tropics. *Science Advances*, 7(10), eabe1603. https://doi.org/10.1126/sciadv.abe1603
 
-49. Tyukavina, A., Potapov, P., Hansen, M. C., Pickens, A., Stehman, S., Turubanova, S., Parker, D., Zalles, V., Lima, A., Kommareddy, I., Song, X.-P., Wang, L., and Harris, N. (2022). Global trends of forest loss due to fire from 2001 to 2019. *Frontiers in Remote Sensing*, 3:825190.
+49. Verra. (2025a). VM0045 Improved Forest Management Using Dynamic Matched Baselines from National Forest Inventories, Version 1.2. Verified Carbon Standard. https://verra.org/methodologies/vm0045-improved-forest-management-using-dynamic-matched-baselines-from-national-forest-inventories-v1-2/
 
-50. University of Maryland GLAD. Global forest loss due to fire (GFL) dataset. https://glad.umd.edu/dataset/Fire\_GFL
+50. Verra. (2025b). VM0047 Afforestation, Reforestation, and Revegetation, Version 1.1. Verified Carbon Standard. https://verra.org/methodologies/vm0047-afforestation-reforestation-and-revegetation/
 
-51. van der Werf, G. R., Randerson, J. T., van Wees, D., Chen, Y., Giglio, L., Hall, J., Vernooij, R., Mu, M., Binte Shahid, S., Barsanti, K. C., Yokelson, R., & Morton, D. C. (2025). Landscape fire emissions from the 5th version of the Global Fire Emissions Database (GFED5). Scientific Data, 12, 1870. https://doi.org/10.1038/s41597-025-06127-w
+51. World Economic Forum. (2023, Jul 7). *Deforestation falls to near record lows in Indonesia and Malaysia*. [<span class="underline">World Economic Forum</span>](https://www.weforum.org/stories/2023/07/indonesia-malaysia-successfully-reducing-deforestation/)
 
-52. Vancutsem, C., Achard, F., Pekel, J.-F., Vieilledent, G., Carboni, S., Simonetti, D., Gallego, J., Aragão, L. E. O. C., & Nasi, R. (2021). Long-term (1990–2019) monitoring of forest cover changes in the humid tropics. *Science Advances*, 7(10), eabe1603. https://doi.org/10.1126/sciadv.abe1603
+52. World Resources Institute. (2014, May 12). Methodology & data: Atlas of forest landscape restoration opportunity. [<span class="underline">https://www.wri.org/data/methodology-data-atlas-forest-landscape-restoration-opportunity</span>](https://www.wri.org/data/methodology-data-atlas-forest-landscape-restoration-opportunity)
 
-53.
+53. Xu, L., Saatchi, S. S., Yang, Y., Yu, Y., Pongratz, J., Bloom, A. A., Bowman, K., Worden, J., Liu, J., Yin, Y., & Domke, G. (2021). Changes in global terrestrial live biomass over the 21st century. *Science Advances*, 7(27), eabe9829.
 
-54. Verra. (2025a). VM0045 Improved Forest Management Using Dynamic Matched Baselines from National Forest Inventories, Version 1.2. Verified Carbon Standard. https://verra.org/methodologies/vm0045-improved-forest-management-using-dynamic-matched-baselines-from-national-forest-inventories-v1-2/
+54. Yang, H., Ciais, P., Frappart, F., Li, X., Brandt, M., Fensholt, R., Fan, L., Saatchi, S., Besnard, S., Deng, Z., Bowring, S., and Wigneron, J.-P. (2023). Global increase in biomass carbon stock dominated by growth of northern young forests over past decade. *Nature Geoscience*, 16(10):886–892.
 
-55. Verra. (2025b). VM0047 Afforestation, Reforestation, and Revegetation, Version 1.1. Verified Carbon Standard. https://verra.org/methodologies/vm0047-afforestation-reforestation-and-revegetation/
+55. Yang, Y., Dalagnol, R., Lin, W., Kwon, N., Liu, Z., Saatchi, S., & Sagang, L. B. (2026). From snapshot maps to continuous monitoring of global forest carbon at 100 m resolution (2000–2025). EarthArXiv preprint. https://doi.org/10.31223/X5KJ4Q
 
-56. World Economic Forum. (2023, Jul 7). *Deforestation falls to near record lows in Indonesia and Malaysia*. [<span class="underline">World Economic Forum</span>](https://www.weforum.org/stories/2023/07/indonesia-malaysia-successfully-reducing-deforestation/)
-
-57. World Resources Institute. (2014, May 12). Methodology & data: Atlas of forest landscape restoration opportunity.
-
-[<span class="underline">https://www.wri.org/data/methodology-data-atlas-forest-landscape-restoration-opportunity</span>](https://www.wri.org/data/methodology-data-atlas-forest-landscape-restoration-opportunity)
-
-1.  Xu, L., Saatchi, S. S., Yang, Y., Yu, Y., Pongratz, J., Bloom, A. A., Bowman, K., Worden, J., Liu, J., Yin, Y., & Domke, G. (2021). Changes in global terrestrial live biomass over the 21st century. *Science Advances*, 7(27), eabe9829.
-
-2.  Yang, H., Ciais, P., Frappart, F., Li, X., Brandt, M., Fensholt, R., Fan, L., Saatchi, S., Besnard, S., Deng, Z., Bowring, S., and Wigneron, J.-P. (2023). Global increase in biomass carbon stock dominated by growth of northern young forests over past decade. *Nature Geoscience*, 16(10):886–892.
-
-3.  Yang, Y., Dalagnol, R., Lin, W., Kwon, N., Liu, Z., Saatchi, S., & Sagang, L. B. (2026). From snapshot maps to continuous monitoring of global forest carbon at 100 m resolution (2000–2025). EarthArXiv preprint. https://doi.org/10.31223/X5KJ4Q
-
-4.  Zhang, J., Fiddler, G. O., Young, D. H., Shestak, C., & Carlson, R. (2021). Allometry of tree biomass and carbon partitioning in ponderosa pine plantations grown under diverse conditions. Forest Ecology and Management, 497, 119526. https://doi.org/10.1016/j.foreco.2021.119526
+56. Zhang, J., Fiddler, G. O., Young, D. H., Shestak, C., & Carlson, R. (2021). Allometry of tree biomass and carbon partitioning in ponderosa pine plantations grown under diverse conditions. Forest Ecology and Management, 497, 119526. https://doi.org/10.1016/j.foreco.2021.119526
