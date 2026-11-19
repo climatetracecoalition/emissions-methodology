@@ -268,7 +268,7 @@ Taking sections 2.7.1 to 2.7.3, we apply them here with the example of replacing
 
 <img src="figures/figure2.png" width="674" />
 
-**Figure 2** Top image - Overall abatement curve showing all strategies for the transportation sector. The red box highlights the strategy ‘Upgrade motorcycles to EVs’. Bottom image - The ‘Upgrade motorcycles to EVs’ strategy which displays specific cities and the cost per tonnes of CO<sub>2</sub>e (\$/tCO<sub>2</sub>e) to transition to EV’s. Both images show net cost per tCO₂e at a 5% discount rate, cheapest first. X-axis = tonnes cut; Y-axis = Cost (\$tCO<sub>2</sub>e/).
+**Figure 2** Top image - Overall abatement curve showing all strategies for the transportation sector. The red box highlights the strategy ‘Upgrade motorcycles to EVs’. Bottom image - The ‘Upgrade motorcycles to EVs’ strategy which displays specific cities and the cost per tonnes of CO<sub>2</sub>e (\$/tCO<sub>2</sub>e) to transition to EV’s. Both images show net cost per tCO₂e at a 5% discount rate, cheapest first. X-axis = tonnes cut; Y-axis = Cost (\$/tCO<sub>2</sub>e).
 
 The unit scalar limits the cost to the share of road vehicle travel the ERS applies to. The NPV changes sign between the two discount rates because the up-front cost of electric motorcycles is paid immediately, while the fuel and maintenance savings arrive over the following decade: at 10%, those future savings are worth less today and no longer cover the investment. The net abatement cost is higher than the asset abatement cost because charging the motorcycles increases emissions from electricity generation, reducing the net emissions benefit.
 
