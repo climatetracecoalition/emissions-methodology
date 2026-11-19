@@ -48,7 +48,7 @@ Below we list the definition of each of these quantities and their corresponding
 
 -   $`A_{\text{affected}}`$ (max\_activity\_affected): Amount of the asset’s activity affected by the ERS, ranging from 0-100% of the annualized previous full calendar year activity. For example, if the ERS only applies to half of the activity at an asset, this would be 50% of the asset’s baseline activity
 
--   $`\epsilon_{\text{new}}`$ (\[GAS\]\_emissions*\_*factor\_new\_absolute): Emissions factor (tonnes of gas per unit activity) after the ERS intervention
+-   $`\epsilon_{\text{new}}`$: Emissions factor (tonnes of gas per unit activity) after the ERS intervention
 
 -   $`\epsilon_{\text{old}}`$: Annualized baseline emissions factor pre-intervention
 
@@ -166,7 +166,7 @@ Costs are given as a low–high range rather than a single value. The low end ty
 
 **Table 1** List of inputs and their field names, along with their cost descriptions.
 
-<table><thead><tr class="header"><th><strong>Input</strong></th><th><strong>Field</strong></th><th><strong>What it means</strong></th></tr></thead><tbody><tr class="odd"><td>Capital expenditure cost</td><td>capex_low, capex_high</td><td>Additional upfront investment required to implement the ERS relative to the baseline, per unit of output or capacity.</td></tr><tr class="even"><td>Operating expenditure cost</td><td>opex_low, opex_high</td><td>Change in annual operating costs relative to the baseline once the ERS is running. Negative values indicate savings (e.g., lower fuel use)</td></tr><tr class="odd"><td>Implementation time</td><td>implementation_year</td><td>Years needed to put the ERS in place before emissions reductions begin</td></tr><tr class="even"><td>Lifetime</td><td>life_year</td><td>Years the ERS is expected to operate, with routine maintenance, before major replacement</td></tr><tr class="odd"><td><p>Net present value</p><p>(Discount rates)</p></td><td>npv_discount_rate_1, npv_discount_rate_2</td><td>Rates used to value future costs and savings in today's dollars: 5% and 10%</td></tr><tr class="even"><td>Cost basis</td><td>unit_choice</td><td>Whether the cost scales with the asset's activity (e.g., tonnes produced) or its capacity (e.g., hectares)</td></tr><tr class="odd"><td>Unit scalar</td><td>unit_scalar</td><td>Adjusts for the share of activity or capacity the ERS affects, where subsector modeling requires it. Usually 1</td></tr></tbody></table>
+<table><tbody><tr class="odd"><td><strong>Input</strong></td><td><strong>Field</strong></td><td><strong>What it means</strong></td></tr><tr class="even"><td>Capital expenditure cost</td><td>capex_low, capex_high</td><td>Additional upfront investment required to implement the ERS relative to the baseline, per unit of output or capacity.</td></tr><tr class="odd"><td>Operating expenditure cost</td><td>opex_low, opex_high</td><td>Change in annual operating costs relative to the baseline once the ERS is running. Negative values indicate savings (e.g., lower fuel use)</td></tr><tr class="even"><td>Implementation time</td><td>implementation_year</td><td>Years needed to put the ERS in place before emissions reductions begin</td></tr><tr class="odd"><td>Lifetime</td><td>life_year</td><td>Years the ERS is expected to operate, with routine maintenance, before major replacement</td></tr><tr class="even"><td><p>Net present value</p><p>(Discount rates)</p></td><td>npv_discount_rate_1, npv_discount_rate_2</td><td>Rates used to value future costs and savings in today's dollars: 5% and 10%</td></tr><tr class="odd"><td>Cost basis</td><td>unit_choice</td><td>Whether the cost scales with the asset's activity (e.g., tonnes produced) or its capacity (e.g., hectares)</td></tr><tr class="even"><td>Unit scalar</td><td>unit_scalar</td><td>Adjusts for the share of activity or capacity the ERS affects, where subsector modeling requires it. Usually 1</td></tr></tbody></table>
 
 #### 2.7.2 Cost per unit of output
 
@@ -230,13 +230,13 @@ $`\text{Cos}t_{abatement,asset,net} = \frac{\text{Cos}t_{asset,avg}}{\text{Emiss
 
 Where:
 
--   $`\text{Cos}t_{abatement,asset}`$ (cost\_abatement\_asset) is the abatement cost at the asset, in USD per tonne of CO₂e avoided;
+-   $`\mathbf{\text{Cos}}\mathbf{t}_{\mathbf{abatement,asset}}`$ (cost\_abatement\_asset) is the abatement cost at the asset, in USD per tonne of CO₂e avoided;
 
 -   $`\text{Cos}t_{abatement,asset,net}`$ (cost\_abatement\_asset\_net) is the net abatement cost, in USD per tonne of CO₂e avoided;
 
--   $`\text{Cos}t_{asset,avg}`$ is the asset’s equivalent yearly cost of the ERS, in USD per year (Equation 5);
+-   $`\mathbf{\text{Cos}}\mathbf{t}_{\mathbf{asset,avg}}`$ is the asset’s equivalent yearly cost of the ERS, in USD per year (Equation 5);
 
--   $`\text{Cos}\text{t\ reduced}_{asset,avg}`$ is the emissions the ERS reduces at the asset each year, in tonnes CO₂e per year;
+-   $`\mathbf{\text{Cos}}\mathbf{\text{t\ reduced}}_{\mathbf{asset,avg}}`$ is the emissions the ERS reduces at the asset each year, in tonnes CO₂e per year;
 
 -   *Induced emissions* are the emissions the ERS adds in other sectors each year, in tonnes CO₂e per year (Section 2.3.1), for example from added electricity demand. The two versions are equal when induced emissions are zero.
 
@@ -256,8 +256,9 @@ Taking sections 2.7.1 to 2.7.3, we apply them here with the example of replacing
 
 **Table 2** Working steps to replace combustion-engine motorcycles with electric models in South America.
 
-| **Step**                                                                                   | **5% discount rate**                                                                                                                     | **10% discount rate**    |
+|                                                                                            |                                                                                                                                          |                          |
 |--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
+| **Step**                                                                                   | **5% discount rate**                                                                                                                     | **10% discount rate**    |
 | Inputs                                                                                     | CAPEX USD 0.082–0.253 per km; OPEX −USD −0.044 to −0.005 per km (fuel and maintenance savings); 2-year implementation; 10-year lifetime. | Same                     |
 | NPV per km, low to high (npv\_low, npv\_high)                                              | −USD 0.0293 to USD 0.0282                                                                                                                | −USD 0.023 to USD 0.037  |
 | NPV per km, average (npv\_avg)                                                             | −USD 0.0005 (a small net saving)                                                                                                         | USD 0.0070 (a net cost)  |
@@ -267,7 +268,7 @@ Taking sections 2.7.1 to 2.7.3, we apply them here with the example of replacing
 
 <img src="figures/figure2.png" width="674" />
 
-**Figure 3** Top image - Overall abatement curve showing all strategies for the transportation sector. The red box highlights the strategy ‘Upgrade motorcycles to EVs’. Bottom image - The ‘Upgrade motorcycles to EVs’ strategy which displays specific cities and the cost per tonnes of CO<sub>2</sub>e (\$/tCO<sub>2</sub>e) to transition to EV’s. Both images show net cost per tCO₂e at a 5% discount rate, cheapest first. X-axis = tonnes cut; Y-axis = Cost (\$tCO<sub>2</sub>e/).
+**Figure 2** Top image - Overall abatement curve showing all strategies for the transportation sector. The red box highlights the strategy ‘Upgrade motorcycles to EVs’. Bottom image - The ‘Upgrade motorcycles to EVs’ strategy which displays specific cities and the cost per tonnes of CO<sub>2</sub>e (\$/tCO<sub>2</sub>e) to transition to EV’s. Both images show net cost per tCO₂e at a 5% discount rate, cheapest first. X-axis = tonnes cut; Y-axis = Cost (\$tCO<sub>2</sub>e/).
 
 The unit scalar limits the cost to the share of road vehicle travel the ERS applies to. The NPV changes sign between the two discount rates because the up-front cost of electric motorcycles is paid immediately, while the fuel and maintenance savings arrive over the following decade: at 10%, those future savings are worth less today and no longer cover the investment. The net abatement cost is higher than the asset abatement cost because charging the motorcycles increases emissions from electricity generation, reducing the net emissions benefit.
 
