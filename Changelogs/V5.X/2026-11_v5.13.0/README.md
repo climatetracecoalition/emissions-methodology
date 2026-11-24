@@ -243,10 +243,10 @@
 ## transportation,road-transportation
 ### Added
 - [Added] Data period extended for existing sources. New end_date 2026-09-30.
+- [Added] Added spatial interpolation for EV inventories, using a nearest neighbor approach with ClimateTRACE GADM boundaries. When no neighbors are found, we default to using the average of the corresponding UN Region.
 ### Changed
 - [Changed] Emissions factors updated for various countries by updating data sources to include BEV/PHEV fuel type inventories. For all updated data sources, a larger proportion of BEV/PHEVs are reported, leading to a trend of emissions reductions across a number of countries. Notable affected countries include POL, THA, RUS, AUS, CHN, TWN, JPN, KOR.
 - [Changed] Replaced constant-value backfilling of historical BEV/PHEV inventory values with an exponential model. This approach better represents the rapid growth in EV adoption while reducing the risk of overestimating EV values in earlier years.
-- [Added] Added spatial interpolation for EV inventories, using a nearest neighbor approach with ClimateTRACE GADM boundaries. When no neighbors are found, we default to using the average of the corresponding UN Region.
 ### Deprecated
 - [Deprecated] None
 ### Fixed
